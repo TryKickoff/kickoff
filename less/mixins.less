@@ -1,0 +1,298 @@
+/* =================== */
+/* === MIXINS.less === */
+/* =================== */
+// CSS3
+// VARIOUS
+// BROWSER FIXES
+
+/* ============ */
+/* === CSS3 === */
+/* ============ */
+// BORDER RADIUS
+.border-radius(@radius: 5px) {
+-webkit-border-radius: @radius;
+   -moz-border-radius: @radius;
+	 -o-border-radius: @radius;
+		border-radius: @radius;
+}
+// DROP SHADOWS
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+-webkit-box-shadow: @shadow;
+   -moz-box-shadow: @shadow;
+	 -o-box-shadow: @shadow;
+		box-shadow: @shadow;
+}
+// TRANSITIONS
+.transition(@transition) {
+-webkit-transition: @transition;
+   -moz-transition: @transition;
+	 -o-transition: @transition;
+		transition: @transition;
+}
+// CSS3 CONTENT COLUMNS
+.content-columns(@columnCount, @columnGap: 20px) {
+-webkit-column-count: @columnCount;
+-webkit-column-gap:   @columnGap;
+   -moz-column-count: @columnCount;
+   -moz-column-gap:   @columnGap;
+		column-count: @columnCount;
+		column-gap:   @columnGap;
+}
+// BACKGROUND CLIPPING
+.background-clip(@clip) {
+-webkit-background-clip: @clip;
+   -moz-background-clip: @clip;
+	 -o-background-size: @clip;
+		background-clip: @clip;
+}
+// OPACITY
+.opacity(@opacity: 100) {
+		filter: e(%("alpha(opacity=%d)", @opacity));
+ -khtml-opacity: @opacity / 100;
+   -moz-opacity: @opacity / 100;
+		opacity: @opacity / 100;
+}
+// TRANSITIONS
+.transition(@transition) {
+-webkit-transition: @transition;
+   -moz-transition: @transition;
+	 -o-transition: @transition;
+		transition: @transition;
+}
+// TRANSFORMS
+.transform(@transform: scale(1.2)) {
+-webkit-transform: @transform;
+   -moz-transform: @transform;
+	 -o-transform: @transform;
+		transform: @transform;
+}
+.scale(@factor: 1.2) {
+-webkit-transform: scale(@factor);
+   -moz-transform: scale(@factor);
+	-ms-transform: scale(@factor);
+	 -o-transform: scale(@factor);
+		transform: scale(@factor);
+}
+.rotate(@deg) {
+-webkit-transform: rotate(@deg);
+   -moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	 -o-transform: rotate(@deg);
+		transform: rotate(@deg);
+}
+.skew(@deg, @deg2) {
+-webkit-transform: skew(@deg, @deg2);
+   -moz-transform: skew(@deg, @deg2);
+	-ms-transform: skew(@deg, @deg2);
+	 -o-transform: skew(@deg, @deg2);
+		transform: skew(@deg, @deg2);
+}
+.translate(@x, @y:0) {
+-webkit-transform: translate(@x, @y);
+   -moz-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	 -o-transform: translate(@x, @y);
+		transform: translate(@x, @y);
+}
+.translate3d(@x, @y: 0, @z: 0) {
+-webkit-transform: translate3d(@x, @y, @z);
+   -moz-transform: translate3d(@x, @y, @z);
+	-ms-transform: translate3d(@x, @y, @z);
+	 -o-transform: translate3d(@x, @y, @z);
+		transform: translate3d(@x, @y, @z);
+}
+.perspective(@value: 1000) {
+-webkit-perspective: @value;
+   -moz-perspective: @value;
+	-ms-perspective: @value;
+		perspective: @value;
+}
+.transform-origin(@x:center, @y:center) {
+-webkit-transform-origin: @x @y;
+   -moz-transform-origin: @x @y;
+	-ms-transform-origin: @x @y;
+	 -o-transform-origin: @x @y;
+		transform-origin: @x @y;
+}
+
+// ANIMATION
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+-webkit-animation: @name @duration @delay @ease;
+   -moz-animation: @name @duration @delay @ease;
+	-ms-animation: @name @duration @delay @ease;
+		animation: @name @duration @delay @ease;
+}
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+#translucent {
+	.background(@color: @white, @alpha: 1) {
+		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	}
+	.border(@color: @white, @alpha: 1) {
+		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+		background-clip: padding-box;
+	}
+}
+
+// Gradient Bar Colors for buttons and alerts
+.gradientBar(@primaryColor, @secondaryColor) {
+	#gradient > .vertical(@primaryColor, @secondaryColor);
+	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+
+// GRADIENTS
+#gradient {
+	.horizontal(@startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+		background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
+		background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(left, @startColor, @endColor); // Le standard
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+	}
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-color: mix(@startColor, @endColor, 60%);
+		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+		background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(top, @startColor, @endColor); // The standard
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+	}
+	.directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+		background-color: @endColor;
+		background-repeat: repeat-x;
+		background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+		background-image: -ms-linear-gradient(@deg, @startColor, @endColor); // IE10
+		background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(@deg, @startColor, @endColor); // The standard
+	}
+	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+		background-color: mix(@midColor, @endColor, 80%);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+		background-image: -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-repeat: no-repeat;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+	.radial(@innerColor: #555, @outerColor: #333) {
+		background-color: @outerColor;
+		background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+		background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+		background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+		background-image: -ms-radial-gradient(circle, @innerColor, @outerColor);
+		background-repeat: no-repeat;
+		// Opera cannot do radial gradients yet
+	}
+	.striped(@color, @angle: -45deg) {
+		background-color: @color;
+		background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+		background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+		background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+		background-image: -ms-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+		background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+	}
+}
+
+/* ====================== */
+/* === VARIOUS MIXINS === */
+/* ====================== */
+
+// CLEARFIX
+.group {
+	zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		zoom: 1;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// CENTRE-ALIGN A BLOCK LEVEL ELEMENT
+.center_block {
+	display: block;
+	margin: 0 auto;
+}
+
+// SIZING SHORTCUTS
+.size(@width: 5px, @height: 5px) {
+	height: @height;
+	width: @width;
+}
+.square(@size: 5px) {
+	.size(@size, @size);
+}
+
+// INPUT PLACEHOLDER TEXT
+.placeholder(@color: @grayLight) {
+	:-moz-placeholder {
+		color: @color;
+	}
+	::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+// USER SELECT
+.user-select(@select) {
+-webkit-user-select: @select;
+   -moz-user-select: @select;
+	 -o-user-select: @select;
+		user-select: @select;
+}
+// VERTICAL ALIGN
+.vertical-align(@argument) {
+	line-height: @argument;
+		 height: @argument;
+}
+// Make any element resizable for prototyping
+.resizable(@direction: both) {
+	resize: @direction; // Options are horizontal, vertical, both
+	overflow: auto; // Safari fix
+}
+
+
+/* ===================== */
+/* === BROWSER FIXES === */
+/* ===================== */
+// IE7 INLINE-BLOCK
+.ie7-inline-block() {
+	*display: inline; /* IE7 inline-block hack */
+	*zoom: 1;
+}
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+.ie7-restore-left-whitespace() {
+	*margin-left: .3em;
+	&:first-child {
+		*margin-left: 0;
+	}
+}
+.ie7-restore-right-whitespace() {
+	*margin-right: .3em;
+	&:last-child {
+		*margin-left: 0;
+	}
+}
+// Reset filters for IE
+.reset-filter() {
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}

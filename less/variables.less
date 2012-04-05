@@ -1,0 +1,67 @@
+/*==========================================*/
+/*=== VARIABLES.less ===*/
+/*=== TABLE OF CONTENTS ===*/
+/*==========================================*/
+// BASELINE GRID
+// COLOURS
+// LINKS
+// PATHS
+
+
+/*=== BASELINE GRID ===*/
+@baseFontSize:      16px;
+@baseLineHeight:    24px;
+
+
+/*==========================================*/
+/*=== COLOURS ===*/
+/*==========================================*/
+// GRAYS
+@black:             #000;
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 50%);
+@grayLight:         lighten(@black, 75%);
+@grayLighter:       lighten(@black, 90%);
+@offWhite:          lighten(@black, 97%);
+@white:             #fff;
+
+// COLOURS
+@blue:              #049CDB;
+@blueDark:          darken(@blue, 20%);
+@green:             #46a546;
+@red:               #9d261d;
+@yellow:            #ffc40d;
+@orange:            #f89406;
+@pink:              #c3325f;
+@purple:            #7a43b6;
+
+@accentColor:       @blue;
+@primaryButtonBackground:    @blue;
+
+// COLOR SCHEME
+@complement:        spin(@accentColor, 180);  // Determine a complementary color
+@split1:            spin(@accentColor, 158);  // Split complements
+@split2:            spin(@accentColor, -158);
+@triad1:            spin(@accentColor, 135);  // Triads colors
+@triad2:            spin(@accentColor, -135);
+@tetra1:            spin(@accentColor, 90);   // Tetra colors
+@tetra2:            spin(@accentColor, -90);
+@analog1:           spin(@accentColor, 22);   // Analogs colors
+@analog2:           spin(@accentColor, -22);
+
+
+// LINKS
+@linkColor:         @complement;
+@linkColorHover:    lighten(@linkColor, 40%);
+
+
+
+// PATHS
+@imgPath: "/img";
+@imgUIPath: "@{imgPath}/ui";
+@iconSpritePath: "@{imgUIPath}/glyphicons-halflings.png";
+@iconWhiteSpritePath: "@{imgUIPath}/glyphicons-halflings-white.png";
+
+
+
+
