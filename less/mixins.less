@@ -52,6 +52,7 @@
    -moz-opacity: @opacity / 100;
 		opacity: @opacity / 100;
 }
+
 // TRANSITIONS
 .transition(@transition) {
 -webkit-transition: @transition;
@@ -59,6 +60,7 @@
 	 -o-transition: @transition;
 		transition: @transition;
 }
+
 // TRANSFORMS
 .transform(@transform: scale(1.2)) {
 -webkit-transform: @transform;
@@ -66,6 +68,7 @@
 	 -o-transform: @transform;
 		transform: @transform;
 }
+
 .scale(@factor: 1.2) {
 -webkit-transform: scale(@factor);
    -moz-transform: scale(@factor);
@@ -73,6 +76,7 @@
 	 -o-transform: scale(@factor);
 		transform: scale(@factor);
 }
+
 .rotate(@deg) {
 -webkit-transform: rotate(@deg);
    -moz-transform: rotate(@deg);
@@ -80,6 +84,7 @@
 	 -o-transform: rotate(@deg);
 		transform: rotate(@deg);
 }
+
 .skew(@deg, @deg2) {
 -webkit-transform: skew(@deg, @deg2);
    -moz-transform: skew(@deg, @deg2);
@@ -87,6 +92,7 @@
 	 -o-transform: skew(@deg, @deg2);
 		transform: skew(@deg, @deg2);
 }
+
 .translate(@x, @y:0) {
 -webkit-transform: translate(@x, @y);
    -moz-transform: translate(@x, @y);
@@ -94,6 +100,7 @@
 	 -o-transform: translate(@x, @y);
 		transform: translate(@x, @y);
 }
+
 .translate3d(@x, @y: 0, @z: 0) {
 -webkit-transform: translate3d(@x, @y, @z);
    -moz-transform: translate3d(@x, @y, @z);
@@ -101,12 +108,14 @@
 	 -o-transform: translate3d(@x, @y, @z);
 		transform: translate3d(@x, @y, @z);
 }
+
 .perspective(@value: 1000) {
 -webkit-perspective: @value;
    -moz-perspective: @value;
 	-ms-perspective: @value;
 		perspective: @value;
 }
+
 .transform-origin(@x:center, @y:center) {
 -webkit-transform-origin: @x @y;
    -moz-transform-origin: @x @y;
@@ -206,11 +215,11 @@
 }
 
 /* ====================== */
-/* === VARIOUS MIXINS === */
+/* === UTILITY MIXINS === */
 /* ====================== */
 
 // CLEARFIX
-.group {
+.group, .clearfix {
 	zoom: 1;
 	&:before,
 	&:after {
@@ -247,6 +256,48 @@
 		color: @color;
 	}
 }
+
+.tab-focus() {
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+.text-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Background clipping
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+.background-clip(@clip) {
+  -webkit-background-clip: @clip;
+	 -moz-background-clip: @clip;
+		  background-clip: @clip;
+}
+
+// Background sizing
+.background-size(@size){
+  -webkit-background-size: @size;
+	 -moz-background-size: @size;
+	   -o-background-size: @size;
+		  background-size: @size;
+}
+
+
+// Box sizing
+.box-sizing(@boxmodel: border-box) {
+-webkit-box-sizing: @boxmodel;
+   -moz-box-sizing: @boxmodel;
+	-ms-box-sizing: @boxmodel;
+		box-sizing: @boxmodel;
+}
 // USER SELECT
 .user-select(@select) {
 -webkit-user-select: @select;
@@ -254,17 +305,216 @@
 	 -o-user-select: @select;
 		user-select: @select;
 }
+
 // VERTICAL ALIGN
 .vertical-align(@argument) {
 	line-height: @argument;
 		 height: @argument;
 }
+
 // Make any element resizable for prototyping
 .resizable(@direction: both) {
 	resize: @direction; // Options are horizontal, vertical, both
 	overflow: auto; // Safari fix
 }
 
+
+/* ============= */
+/* === FORMS === */
+/* ============= */
+// Block level inputs
+.input-block-level {
+	display: block;
+	width: 100%;
+	min-height: 28px; /* Make inputs at least the height of their button counterpart */
+	/* Makes inputs behave like true block-level elements */
+	.box-sizing(border-box);
+}
+
+// Mixin for form field states
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+	// Set the text color
+	> label,
+	.help-block,
+	.help-inline {
+		color: @textColor;
+	}
+	// Style inputs accordingly
+	input,
+	select,
+	textarea {
+		color: @textColor;
+		border-color: @borderColor;
+		&:focus {
+		border-color: darken(@borderColor, 10%);
+		.box-shadow(0 0 6px lighten(@borderColor, 20%));
+		}
+	}
+	// Give a small background color for input-prepend/-append
+	.input-prepend .add-on,
+	.input-append .add-on {
+		color: @textColor;
+		background-color: @backgroundColor;
+		border-color: @textColor;
+	}
+}
+
+
+/* ============ */
+/* === GRID === */
+/* ============ */
+// Grid System
+// -----------
+
+// Centered container element
+.container-fixed() {
+	margin-left: auto;
+	margin-right: auto;
+	.clearfix();
+}
+
+// Table columns
+.tableColumns(@columnSpan: 1) {
+	float: none; // undo default grid column styles
+	width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+	margin-left: 0; // undo default grid column styles
+}
+
+// Make a Grid
+// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
+.makeRow() {
+	margin-left: @gridGutterWidth * -1;
+	.clearfix();
+}
+.makeColumn(@columns: 1) {
+	float: left;
+	margin-left: @gridGutterWidth;
+	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+}
+
+// The Grid
+#grid {
+
+	.core (@gridColumnWidth, @gridGutterWidth) {
+
+	.spanX (@index) when (@index > 0) {
+		(~".span@{index}") { .span(@index); }
+		.spanX(@index - 1);
+	}
+	.spanX (0) {}
+
+	.offsetX (@index) when (@index > 0) {
+		(~".offset@{index}") { .offset(@index); }
+		.offsetX(@index - 1);
+	}
+	.offsetX (0) {}
+
+	.offset (@columns) {
+		margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
+	}
+
+	.span (@columns) {
+		width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+	}
+
+	.row {
+		margin-left: @gridGutterWidth * -1;
+		.clearfix();
+	}
+
+	[class*="span"] {
+		float: left;
+		margin-left: @gridGutterWidth;
+	}
+
+	// Set the container width, and override it for fixed navbars in media queries
+	.container,
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container { .span(@gridColumns); }
+
+	// generate .spanX and .offsetX
+	.spanX (@gridColumns);
+	.offsetX (@gridColumns);
+
+	}
+
+	.fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+
+	.spanX (@index) when (@index > 0) {
+		(~".span@{index}") { .span(@index); }
+		.spanX(@index - 1);
+	}
+	.spanX (0) {}
+
+	.span (@columns) {
+		width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+	}
+
+	.row-fluid {
+		width: 100%;
+		.clearfix();
+		[class*="span"] {
+		.input-block-level();
+		float: left;
+		margin-left: @fluidGridGutterWidth;
+		}
+		[class*="span"]:first-child {
+		margin-left: 0;
+		}
+
+		// generate .spanX
+		.spanX (@gridColumns);
+	}
+
+	}
+
+	.input(@gridColumnWidth, @gridGutterWidth) {
+
+	.spanX (@index) when (@index > 0) {
+		(~"input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index}") { .span(@index); }
+		.spanX(@index - 1);
+	}
+	.spanX (0) {}
+
+	.span(@columns) {
+		width: ((@gridColumnWidth) * @columns) + (@gridGutterWidth * (@columns - 1)) - 10;
+	}
+
+	input,
+	textarea,
+	.uneditable-input {
+		margin-left: 0; // override margin-left from core grid system
+	}
+
+	// generate .spanX
+	.spanX (@gridColumns);
+
+	}
+
+}
+
+
+/* ======================== */
+/* === COMPONENT MIXINS === */
+/* ======================== */
+.buttonBackground(@startColor, @endColor) {
+	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
+	.gradientBar(@startColor, @endColor);
+	.reset-filter();
+	*background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+	// in these cases the gradient won't cover the background, so we override
+	&:hover, &:active, &.active, &.disabled, &[disabled] {
+		background-color: @endColor;
+		*background-color: darken(@endColor, 5%);
+	}
+
+	// IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+	&:active,
+	&.active {
+		background-color: darken(@endColor, 10%) e("\9");
+	}
+}
 
 /* ===================== */
 /* === BROWSER FIXES === */
