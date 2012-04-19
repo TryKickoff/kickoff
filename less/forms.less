@@ -9,6 +9,8 @@
 // HORIZONTAL & VERTICAL FORMS
 // HORIZONTAL-SPECIFIC STYLES
 
+// Notes:
+
 /* ============ */
 /* === FORM === */
 /* ============ */
@@ -188,8 +190,8 @@ input[type="hidden"] {
 }
 
 // Move the options list down to align with labels
-.controls > .radio:first-child,
-.controls > .checkbox:first-child {
+.control-input > .radio:first-child,
+.control-input > .checkbox:first-child {
 	padding-top: 5px; // has to be padding because margin collaspes
 }
 
@@ -282,20 +284,20 @@ textarea[readonly] {
 /* === FORM FIELD FEEDBACK STATES === */
 /* ================================== */
 // Warning
-.control-group.warning {
+.control-item.warning {
 	.formFieldState(@warningText, @warningText, @warningBackground);
 }
 // Error
-.control-group.error {
+.control-item.error {
 	.formFieldState(@errorText, @errorText, @errorBackground);
 }
 // Success
-.control-group.success {
+.control-item.success {
 	.formFieldState(@successText, @successText, @successBackground);
 }
 
 // HTML5 invalid states
-// Shares styles with the .control-group.error above
+// Shares styles with the .control-item.error above
 input:focus:required:invalid,
 textarea:focus:required:invalid,
 select:focus:required:invalid {
@@ -445,7 +447,7 @@ select:focus:required:invalid {
 .search-query {
 	padding-left: 14px;
 	padding-right: 14px;
-	padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
+	padding-left: 4px \9; // IE7-8 doesn't have border-radius, so don't indent the padding
 	padding-right: 4px \9;
 	margin-bottom: 0; // remove the default margin on all inputs
 	.border-radius(14px);
@@ -458,7 +460,6 @@ select:focus:required:invalid {
 
 // Common properties
 // -----------------
-
 .form-search,
 .form-inline,
 .form-horizontal {
@@ -510,7 +511,7 @@ select:focus:required:invalid {
 
 
 // Margin to space out fieldsets
-.control-group {
+.control-item {
 	margin-bottom: @baseLineHeight / 2;
 }
 
@@ -525,21 +526,23 @@ legend + .control-group {
 /* ================================== */
 .form-horizontal {
 	// Increase spacing between groups
-	.control-group {
+	.control-item {
 		margin-bottom: @baseLineHeight;
 		.clearfix();
 	}
 	// Float the labels left
-	.control-label {
+	.control-label,
+	.control-item label {
 		float: left;
 		width: 140px;
 		padding-top: 5px;
 		text-align: right;
 	}
 	// Move over all input controls and content
-	.controls {
+	.control-input,
+	.control-item div {
 		margin-left: 160px;
-		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
+		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
 		*display: inline-block;
 		*margin-left: 0;
 		*padding-left: 20px;
@@ -547,12 +550,12 @@ legend + .control-group {
 			*padding-left: 160px;
 		}
 	}
-	// Remove bottom margin on block level help text since that's accounted for on .control-group
+	// Remove bottom margin on block level help text since that's accounted for on .control-item
 	.help-block {
 		margin-top: @baseLineHeight / 2;
 		margin-bottom: 0;
 	}
-	// Move over buttons in .form-actions to align with .controls
+	// Move over buttons in .form-actions to align with .control-input
 	.form-actions {
 		padding-left: 160px;
 	}
