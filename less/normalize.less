@@ -167,8 +167,15 @@ sub { bottom: -0.25em; }
 /* === LISTS === */
 /* ============= */
 
+// Remove default styling for lists
+ol,ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
 // Addresses margins set differently in IE6/7
-dl,menu,ol,ul {
+dl,menu,ol.normal,ul.normal {
 	margin: 1em 0;
 }
 
@@ -177,7 +184,7 @@ dd {
 }
 
 // Addresses paddings set differently in IE6/7
-menu,ol,ul {
+menu,ol.normal,ul.normal {
 	padding: 0 0 0 40px;
 }
 
