@@ -1,26 +1,22 @@
-/*==========================================*/
-/*=== VARIABLES.less ===*/
-/*=== TABLE OF CONTENTS ===*/
-/*==========================================*/
+// =========================
+// === VARIABLES.less ======
+// === TABLE OF CONTENTS ===
+// =========================
 // GLOBAL VALUES
 // COLOURS
 // PATHS
 
-/* ===================== */
-/* === GLOBAL VALUES === */
-/* ===================== */
+// =====================
+// === GLOBAL VALUES ===
+// =====================
 
 // SCAFFOLDING
 @bodyBackground:                     @white;
-@textColor:                          @grayDark;
+@textColor:                          @blue;
 
 // BASELINE GRID
 @baseFontSize:                       16px;
 @baseLineHeight:                     24px;
-
-// LINKS
-@linkColor:                          @blue;
-@linkColorHover:                     lighten(@linkColor, 40%);
 
 // TYPOGRAPHY
 @sansFontFamily:                     "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -33,6 +29,10 @@
 @headingsFontFamily:                 inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:                 bold;    // instead of browser default, bold
 @headingsColor:                      inherit; // empty to use BS default, @textColor
+
+// LINKS
+@linkColor:                          @blue;
+@linkColorHover:                     lighten(@linkColor, 40%);
 
 // FORMS
 @inputBackground:                    @white;
@@ -70,28 +70,26 @@
 @tableBorder:                       #ddd; // table and cell border
 
 
-/* ============ */
-/* === GRID === */
-/* ============ */
+// ============
+// === GRID ===
+// ============
 
 // Default 940px grid
-// -------------------------
-@gridColumns:             12;
-@gridColumnWidth:         60px;
-@gridGutterWidth:         20px;
-@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+@gridColumns:                       12;
+@gridColumnWidth:                   60px;
+@gridGutterWidth:                   20px;
+@gridRowWidth:                      (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 
 // Fluid grid
-// -------------------------
-@fluidGridColumnWidth:    6.382978723%;
-@fluidGridGutterWidth:    2.127659574%;
+@fluidGridColumnWidth:              6.382978723%;
+@fluidGridGutterWidth:              2.127659574%;
 
 
 
-/* =========================== */
-/* === COMPONENT VARIABLES === */
-/* =========================== */
+// ===========================
+// === COMPONENT VARIABLES ===
+// ===========================
 
 // FORM STATES AND ALERTS
 @warningText:                       #c09853;
@@ -117,12 +115,12 @@
 
 
 
-/*==========================================*/
-/*=== COLOURS ===*/
-/*==========================================*/
+// ===============
+// === COLOURS ===
+// ===============
 // GRAYS
 @black:                             #000;
-@grayDarker	:                       lighten(@black, 15%);
+@grayDarker:                        lighten(@black, 15%);
 @grayDark:                          lighten(@black, 25%);
 @gray:                              lighten(@black, 50%);
 @grayLight:                         lighten(@black, 75%);
@@ -156,9 +154,9 @@
 
 
 
-/* ============= */
-/* === PATHS === */
-/* ============= */
+// =============
+// === PATHS ===
+// =============
 @imgPath:                           "/img";
 @imgUIPath:                         "@{imgPath}/ui";
 @iconSpritePath:                    "@{imgUIPath}/glyphicons-halflings.png";
