@@ -12,11 +12,11 @@
 
 // SCAFFOLDING
 @bodyBackground:                     @white;
-@textColor:                          @blue;
+@textColor:                          @gray;
 
-// BASELINE GRID
-@baseFontSize:                       16px;
-@baseLineHeight:                     24px;
+// BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
+@baseFontSize:                       16;
+@baseLineHeight:                     @baseFontSize*1.5px;
 
 // TYPOGRAPHY
 @sansFontFamily:                     "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,7 +28,7 @@
 
 @headingsFontFamily:                 inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:                 bold;    // instead of browser default, bold
-@headingsColor:                      inherit; // empty to use BS default, @textColor
+@headingsColor:                      @grayDark; // empty to use BS default, @textColor
 
 // LINKS
 @linkColor:                          @blue;
@@ -82,8 +82,8 @@
 
 
 // Fluid grid
-@fluidGridColumnWidth:              6.382978723%;
-@fluidGridGutterWidth:              2.127659574%;
+@fluidGridColumnWidth:              4.3%;
+@fluidGridGutterWidth:              4.4%;
 
 
 
