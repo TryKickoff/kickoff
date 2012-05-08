@@ -1,16 +1,15 @@
-/*==========================================*/
-/*=== TYPOGRAPHY.less ===*/
-/*=== TABLE OF CONTENTS ===*/
-/*==========================================
-:: BODY TEXT
-:: BASE
-:: PARAGRAPHS
-:: HEADINGS
-:: LISTS
-:: QUOTES
-:: LINKS
-:: HELPER CLASSES
-*/
+// =========================
+// === TYPOGRAPHY.less =====
+// === TABLE OF CONTENTS ===
+// =========================
+// BODY TEXT
+// BASE
+// PARAGRAPHS
+// HEADINGS
+// LISTS
+// QUOTES
+// LINKS
+// HELPER CLASSES
 
 // Typography.less
 // Headings, body text, lists, code, and more for a versatile and durable typography system
@@ -18,12 +17,20 @@
 
 
 // BODY TEXT
-
-p {
-	margin: 0 0 @baseLineHeight / 2;
+body {
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize;
 	line-height: @baseLineHeight;
+	color: @textColor;
+	background-color: @bodyBackground;
+}
+
+p {
+	font-family: @baseFontFamily;
+	.font-size(16);
+	.line-height(@baseLineHeight);
+	margin-top: 0;
+	margin-bottom: @baseLineHeight;
 	small {
 		font-size: @baseFontSize - 2;
 		color: @grayLight;
@@ -50,40 +57,46 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 h1 {
-	font-size: 30px;
-	line-height: @baseLineHeight * 2;
+	.font-size(68);
+	.line-height(72);
+	margin-top: 24px;
+	margin-bottom: 48px;
 	small {
-		font-size: 18px;
+		.font-size(18);
 	}
 }
 h2 {
-	font-size: 24px;
-	line-height: @baseLineHeight * 2;
+	.font-size(42);
+	.line-height(48);
+	margin-top: 48px;
+	margin-bottom: 24px;
 	small {
-		font-size: 18px;
+		.font-size(18);
 	}
 }
 h3 {
-	line-height: @baseLineHeight * 1.5;
-	font-size: 18px;
+	.font-size(26);
+	.line-height(48);
+	margin-top: 24px;
+	margin-bottom: 0px;
 	small {
-		font-size: 14px;
+		.font-size(14);
 	}
 }
 h4, h5, h6 {
-	line-height: @baseLineHeight;
+	.line-height(48);
 }
 h4 {
-	font-size: 14px;
+	.font-size(14);
 	small {
-		font-size: 12px;
+		.font-size(12);
 	}
 }
 h5 {
-	font-size: 12px;
+	.font-size(12);
 }
 h6 {
-	font-size: 11px;
+	.font-size(11);
 	color: @grayLight;
 	text-transform: uppercase;
 }
