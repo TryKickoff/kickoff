@@ -24,7 +24,7 @@
 	<!--  === MAIN CONTENT ===  -->
 	<!--  ====================  -->
 	<div role="main" class="container">
-		<div class="row">
+		<div class="row-fluid">
 				<header>
 					<nav>
 						<ul class="navi horiz">
@@ -94,21 +94,22 @@
 
 				<h1>Grouping content</h1>
 
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-
-				<h3>pre</h3>
+				<h3>Pre</h3>
 
 				<pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
 
+				<h4>Pre > Code</h4>
 				<pre><code>&lt;html>
-				&lt;head>
-				&lt;/head>
-				&lt;body>
-					&lt;div class="main"> &lt;div>
-				&lt;/body>
-			&lt;/html></code></pre>
+	&lt;head>
+	&lt;/head>
+	&lt;body>
+		&lt;div class="main">
 
-				<h3>blockquote</h3>
+		&lt;div>
+	&lt;/body>
+&lt;/html></code></pre>
+
+				<h3>Blockquote</h3>
 
 				<blockquote>
 					<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
@@ -116,7 +117,7 @@
 
 				<blockquote>Even better philosophical quote marked up with just a &lt;blockquote> element.</blockquote>
 
-				<h3>ordered list</h3>
+				<h3>Ordered list</h3>
 
 				<ol class="normal">
 					<li>list item 1</li>
@@ -137,7 +138,7 @@
 					<li>list item 1</li>
 				</ol>
 
-				<h3>unordered list</h3>
+				<h3>Unordered list</h3>
 
 				<ul class="normal">
 					<li>list item 1</li>
@@ -158,7 +159,7 @@
 					<li>list item 1</li>
 				</ul>
 
-				<h3>description list</h3>
+				<h3>Description list</h3>
 
 				<dl>
 					<dt>Description name</dt>
@@ -178,11 +179,11 @@
 					<figcaption>Figcaption content</figcaption>
 				</figure>
 
-				<h1>Tablular data</h1>
+				<h1>Tabular data</h1>
 
-				<table summary="Jimi Hendrix albums">
+				<table summary="Jimi Hendrix albums" class="table table-bordered table-striped">
 					<caption>
-					Jimi Hendrix - albums
+						Jimi Hendrix - albums
 					</caption>
 					<thead>
 					<tr>
@@ -191,13 +192,6 @@
 						<th>Price</th>
 					</tr>
 					</thead>
-					<tfoot>
-					<tr>
-						<td>Album</td>
-						<td>Year</td>
-						<td>Price</td>
-					</tr>
-					</tfoot>
 					<tbody>
 					<tr>
 						<td>Are You Experienced</td>
@@ -224,7 +218,7 @@
 
 				<h1>Forms</h1>
 
-				<form>
+				<form class="well form-horizontal">
 					<fieldset>
 					<legend>Inputs as descendents of labels (form legend)</legend>
 					<ul class="form_items">
@@ -240,7 +234,7 @@
 						<li><label>File input</label> <input type="file"></li>
 						<li><label>Checkbox input</label> <input type="checkbox"></li>
 						<li><label>Select field</label> <select><option>Option 01</option><option>Option 02</option></select></li>
-						<li><label>Textarea</label> <textarea cols="30" rows="5" >Textarea text</textarea></li>
+						<li><label>Textarea</label> <textarea cols="30" rows="5" class="span6">Textarea text</textarea></li>
 					</ul>
 					</fieldset>
 
@@ -267,13 +261,13 @@
 					<fieldset>
 					<legend>Clickable inputs and buttons</legend>
 					<ul class="form_items">
-						<li><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></li>
-						<li><input type="reset" value="Reset (input)"></li>
-						<li><input type="button" value="Button (input)"></li>
-						<li><input type="submit" value="Submit (input)"></li>
-						<li><button type="reset">Reset (button)</button></li>
-						<li><button type="button">Button (button)</button></li>
-						<li><button type="submit">Submit (button)</button></li>
+						<li><input type="image" src="http://placekitten.com/120/124" alt="Image (input)"></li>
+						<li><input class="btn" type="reset" value="Reset (input)"></li>
+						<li><input class="btn" type="button" value="Button (input)"></li>
+						<li><input class="btn" type="submit" value="Submit (input)"></li>
+						<li><button class="btn" type="reset">Reset (button)</button></li>
+						<li><button class="btn" type="button">Button (button)</button></li>
+						<li><button class="btn" type="submit">Submit (button)</button></li>
 					</ul>
 					</fieldset>
 
@@ -297,13 +291,13 @@
 							<li><input type="checkbox"></li>
 							<li><select><option>Option 01</option><option>Option 02</option></select></li>
 							<li><textarea cols="30" rows="5" >Textarea text</textarea></li>
-							<li><input type="image" src="http://placehold.it/90x24" alt="Image (input)"></li>
-							<li><input type="reset" value="Reset (input)"></li>
-							<li><input type="button" value="Button (input)"></li>
-							<li><input type="submit" value="Submit (input)"></li>
-							<li><button type="reset">Reset (button)</button></li>
-							<li><button type="button">Button (button)</button></li>
-							<li><button type="submit">Submit (button)</button></li>
+							<li><input type="image" src="http://placehold.it/120x120" alt="Image (input)"></li>
+							<li><input class="btn" type="reset" value="Reset (input)"></li>
+							<li><input class="btn" type="button" value="Button (input)"></li>
+							<li><input class="btn" type="submit" value="Submit (input)"></li>
+							<li><button class="btn" type="reset">Reset (button)</button></li>
+							<li><button class="btn" type="button">Button (button)</button></li>
+							<li><button class="btn" type="submit">Submit (button)</button></li>
 						</ul>
 					</fieldset>
 				</form>
