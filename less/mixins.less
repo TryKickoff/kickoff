@@ -1,13 +1,13 @@
-/* =================== */
-/* === MIXINS.less === */
-/* =================== */
+// ===================
+// === MIXINS.less ===
+// ===================
 // CSS3
-// VARIOUS
-// BROWSER FIXES
+// UTILITY MIXINS
+// FORMS
 
-/* ============ */
-/* === CSS3 === */
-/* ============ */
+// ============
+// === CSS3 ===
+// ============
 // BORDER RADIUS
 .border-radius(@radius: 5px) {
 -webkit-border-radius: @radius;
@@ -214,9 +214,9 @@
 	}
 }
 
-/* ====================== */
-/* === UTILITY MIXINS === */
-/* ====================== */
+// ======================
+// === UTILITY MIXINS ===
+// ======================
 
 // CLEARFIX
 .group, .clearfix {
@@ -231,6 +231,52 @@
 		clear: both;
 	}
 }
+
+//  ============
+//  === REMS ===
+//  ============
+// FONT SIZE
+.font-size(@sizeValue: @baseFontSize){
+	@pxValue: @sizeValue;
+	@remValue: (@sizeValue / 16);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
+}
+
+// LINE HEIGHT
+.line-height(@sizeValue: @baseLineHeight){
+	@pxValue: @sizeValue;
+	@remValue: (@sizeValue / 16);
+	line-height: ~"@{pxValue}px";
+	line-height: ~"@{remValue}rem";
+}
+
+// GENERAL
+.rem(@property, @value) {
+	@remValue: (@value / 16);
+	-less-property: ~`'property;\n  @{property}: @{value}px'`;
+	-less-property: ~`'property;\n  @{property}: @{remValue}rem'`;
+}
+
+// .rem(@property, @sizeValue){
+// 	@remValue: (@sizeValue / 16);
+// 	@property: ~"@{sizeValue}px";
+// 	@property: ~"@{remValue}rem";
+// }
+
+// .rem(@property, @value) {
+// 	@rem: (@value / 16);
+// 	~"@{property}": @value * 1px;
+// 	~"@{property}": ~"@{rem}rem";
+// }
+
+
+// .rem(@property, @value, @prefixes) {
+// 	-less-property: ~`(function(){var a=@{prefixes}.split(" "),r="property";for(var i=0;i<a.length;i++)r=r+";\n  -"+a[i]+"-"+"@{property}: "+"@{value}";return r})()`;
+// }
+
+
+
 
 // CENTRE-ALIGN A BLOCK LEVEL ELEMENT
 .center_block {
@@ -319,9 +365,9 @@
 }
 
 
-/* ============= */
-/* === FORMS === */
-/* ============= */
+// =============
+// === FORMS ===
+// =============
 // Block level inputs
 .input-block-level {
 	display: block;
@@ -392,79 +438,79 @@
 	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
 }
 
-// The Grid
+//  ============
+//  === GRID ===
+//  ============
 #grid {
-
+	//  ===================
+	//  === Static grid ===
+	//  ===================
 	.core (@gridColumnWidth, @gridGutterWidth) {
 
-	.spanX (@index) when (@index > 0) {
-		(~".span@{index}") { .span(@index); }
-		.spanX(@index - 1);
-	}
-	.spanX (0) {}
+		.spanX (@index) when (@index > 0) {
+			(~".span@{index}") { .span(@index); }
+			.spanX(@index - 1);
+		}
+		.spanX (0) {}
 
-	.offsetX (@index) when (@index > 0) {
-		(~".offset@{index}") { .offset(@index); }
-		.offsetX(@index - 1);
-	}
-	.offsetX (0) {}
+		.offsetX (@index) when (@index > 0) {
+			(~".offset@{index}") { .offset(@index); }
+			.offsetX(@index - 1);
+		}
+		.offsetX (0) {}
 
-	.offset (@columns) {
-		margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
-	}
+		.offset (@columns) {
+			margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
+		}
 
-	.span (@columns) {
-		width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
-	}
+		.span (@columns) {
+			width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+		}
 
-	.row {
-		margin-left: @gridGutterWidth * -1;
-		.clearfix();
-	}
+		.row {
+			margin-left: @gridGutterWidth * -1;
+			.clearfix();
+		}
 
-	[class*="span"] {
-		float: left;
-		margin-left: @gridGutterWidth;
-	}
+		// Set the container width, and override it for fixed navbars in media queries
+		.container { .span(@gridColumns); }
 
-	// Set the container width, and override it for fixed navbars in media queries
-	.container,
-	.navbar-fixed-top .container,
-	.navbar-fixed-bottom .container { .span(@gridColumns); }
-
-	// generate .spanX and .offsetX
-	.spanX (@gridColumns);
-	.offsetX (@gridColumns);
+		// generate .spanX and .offsetX
+		.spanX (@gridColumns);
+		.offsetX (@gridColumns);
 
 	}
 
+	//  ================================
+	//  === Fluid, percentage widths ===
+	//  ================================
 	.fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
-	.spanX (@index) when (@index > 0) {
-		(~".span@{index}") { .span(@index); }
-		.spanX(@index - 1);
-	}
-	.spanX (0) {}
-
-	.span (@columns) {
-		width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
-	}
-
-	.row-fluid {
-		width: 100%;
-		.clearfix();
-		[class*="span"] {
-		.input-block-level();
-		float: left;
-		margin-left: @fluidGridGutterWidth;
+		.spanX (@index) when (@index > 0) {
+			(~".span@{index}") { .span(@index); }
+			.spanX(@index - 1);
 		}
-		[class*="span"]:first-child {
-		margin-left: 0;
+		.spanX (0) {}
+
+		.span (@columns) {
+			width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
 		}
 
-		// generate .spanX
-		.spanX (@gridColumns);
-	}
+		.row-fluid {
+			width: 100%;
+			.clearfix();
+			[class*="span"] {
+			.input-block-level();
+			float: left;
+			margin-left: @fluidGridGutterWidth;
+			}
+			[class*="span"]:first-child {
+			margin-left: 0;
+			}
+
+			// generate .spanX
+			.spanX (@gridColumns);
+		}
 
 	}
 
