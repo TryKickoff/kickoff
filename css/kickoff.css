@@ -1,3 +1,45 @@
+.group,
+.clearfix {
+  zoom: 1;
+}
+.group:before,
+.clearfix:before,
+.group:after,
+.clearfix:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+.group:after,
+.clearfix:after {
+  clear: both;
+}
+.center_block {
+  display: block;
+  margin: 0 auto;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+
+  /* Makes inputs behave like true block-level elements */
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* ============ */
+/* === GRID === */
+/* ============ */
+/* ======================== */
+/* === COMPONENT MIXINS === */
+/* ======================== */
+/* ===================== */
+/* === BROWSER FIXES === */
+/* ===================== */
 /* =============================================== */
 /* === NORMALIZE.less                          === */
 /* === http://github.com/necolas/normalize.css === */
@@ -187,60 +229,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* =================== */
-/* === MIXINS.less === */
-/* =================== */
-/* ============ */
-/* === CSS3 === */
-/* ============ */
-/* ====================== */
-/* === UTILITY MIXINS === */
-/* ====================== */
-.group,
-.clearfix {
-  zoom: 1;
-}
-.group:before,
-.clearfix:before,
-.group:after,
-.clearfix:after {
-  display: table;
-  content: "";
-  zoom: 1;
-}
-.group:after,
-.clearfix:after {
-  clear: both;
-}
-.center_block {
-  display: block;
-  margin: 0 auto;
-}
-/* ============= */
-/* === FORMS === */
-/* ============= */
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  /* Make inputs at least the height of their button counterpart */
-
-  /* Makes inputs behave like true block-level elements */
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* ============ */
-/* === GRID === */
-/* ============ */
-/* ======================== */
-/* === COMPONENT MIXINS === */
-/* ======================== */
-/* ===================== */
-/* === BROWSER FIXES === */
-/* ===================== */
 .row {
   margin-left: -20px;
   zoom: 1;
@@ -254,13 +242,7 @@ table {
 .row:after {
   clear: both;
 }
-[class*="span"] {
-  float: left;
-  margin-left: 20px;
-}
-.container,
-.navbar-fixed-top .container,
-.navbar-fixed-bottom .container {
+.container {
   width: 940px;
 }
 .span12 {
@@ -361,46 +343,46 @@ table {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  margin-left: 2.127659574%;
+  margin-left: 4.4%;
 }
 .row-fluid [class*="span"]:first-child {
   margin-left: 0;
 }
 .row-fluid .span12 {
-  width: 99.99999998999999%;
+  width: 100%;
 }
 .row-fluid .span11 {
-  width: 91.489361693%;
+  width: 91.3%;
 }
 .row-fluid .span10 {
-  width: 82.97872339599999%;
+  width: 82.6%;
 }
 .row-fluid .span9 {
-  width: 74.468085099%;
+  width: 73.9%;
 }
 .row-fluid .span8 {
-  width: 65.95744680199999%;
+  width: 65.2%;
 }
 .row-fluid .span7 {
-  width: 57.446808505%;
+  width: 56.5%;
 }
 .row-fluid .span6 {
-  width: 48.93617020799999%;
+  width: 47.8%;
 }
 .row-fluid .span5 {
-  width: 40.425531911%;
+  width: 39.1%;
 }
 .row-fluid .span4 {
-  width: 31.914893614%;
+  width: 30.4%;
 }
 .row-fluid .span3 {
-  width: 23.404255317%;
+  width: 21.7%;
 }
 .row-fluid .span2 {
-  width: 14.89361702%;
+  width: 13%;
 }
 .row-fluid .span1 {
-  width: 6.382978723%;
+  width: 4.3%;
 }
 /*==========================================*/
 /*=== BLOCK GRIDS ===*/
@@ -450,9 +432,15 @@ table {
   margin-left: 1.5%;
   width: 18.5%;
 }
-/* 	.block_grid.five_up>li:nth-child(5n+1) {clear: left;} */.container {
+/* 	.block_grid.five_up>li:nth-child(5n+1) {clear: left;} *//*===========================================*/
+/*=== Media queries for responsive design ===*/
+/*===========================================*/
+.container {
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
   zoom: 1;
 }
 .container:before,
@@ -464,41 +452,38 @@ table {
 .container:after {
   clear: both;
 }
-.container-fluid {
-  padding-left: 20px;
-  padding-right: 20px;
-  zoom: 1;
+[class*="span"] {
+  float: none;
+  margin-left: 0;
 }
-.container-fluid:before,
-.container-fluid:after {
-  display: table;
-  content: "";
-  zoom: 1;
+/*=== 768> ===*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 20px;
+  }
 }
-.container-fluid:after {
-  clear: both;
+/*=== end 768> ===*/body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16;
+  line-height: 24px;
+  color: #808080;
+  background-color: #ffffff;
 }
-/*==========================================*/
-/*=== TYPOGRAPHY.less ===*/
-/*=== TABLE OF CONTENTS ===*/
-/*==========================================
-:: BODY TEXT
-:: BASE
-:: PARAGRAPHS
-:: HEADINGS
-:: LISTS
-:: QUOTES
-:: LINKS
-:: HELPER CLASSES
-*/
 p {
-  margin: 0 0 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 p small {
-  font-size: 14px;
+  font-size: 14;
   color: #bfbfbf;
 }
 .lead {
@@ -516,7 +501,7 @@ h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
-  color: inherit;
+  color: #404040;
   text-rendering: optimizelegibility;
 }
 h1 small,
@@ -529,42 +514,62 @@ h6 small {
   color: #bfbfbf;
 }
 h1 {
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 68px;
+  font-size: 4.25rem;
+  line-height: 72px;
+  line-height: 4.5rem;
+  margin-top: 24px;
+  margin-bottom: 48px;
 }
 h1 small {
   font-size: 18px;
+  font-size: 1.125rem;
 }
 h2 {
-  font-size: 24px;
+  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 48px;
+  line-height: 3rem;
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 h2 small {
   font-size: 18px;
+  font-size: 1.125rem;
 }
 h3 {
-  line-height: 36px;
-  font-size: 18px;
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 48px;
+  line-height: 3rem;
+  margin-top: 24px;
+  margin-bottom: 0px;
 }
 h3 small {
   font-size: 14px;
+  font-size: 0.875rem;
 }
 h4,
 h5,
 h6 {
-  line-height: 24px;
+  line-height: 48px;
+  line-height: 3rem;
 }
 h4 {
   font-size: 14px;
+  font-size: 0.875rem;
 }
 h4 small {
   font-size: 12px;
+  font-size: 0.75rem;
 }
 h5 {
   font-size: 12px;
+  font-size: 0.75rem;
 }
 h6 {
   font-size: 11px;
+  font-size: 0.6875rem;
   color: #bfbfbf;
   text-transform: uppercase;
 }
@@ -580,7 +585,7 @@ ul.normal,
 ol.normal {
   padding: 0;
   margin: 0 0 12px 25px;
-  font-size: 16px;
+  font-size: 16;
 }
 ul.normal ul,
 ol.normal ul,
@@ -683,7 +688,7 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 16;
   font-weight: 300;
   line-height: 30px;
 }
@@ -764,7 +769,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 36px;
-  font-size: 24px;
+  font-size: 24;
   line-height: 48px;
   color: #404040;
   border: 0;
@@ -779,7 +784,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 16px;
+  font-size: 16;
   font-weight: normal;
   line-height: 24px;
 }
@@ -803,7 +808,7 @@ select,
   height: 24px;
   padding: 4px;
   margin-bottom: 9px;
-  font-size: 16px;
+  font-size: 16;
   line-height: 24px;
   color: #808080;
   border: 1px solid #cccccc;
@@ -894,6 +899,12 @@ textarea {
 }
 input[type="hidden"] {
   display: none;
+}
+input[type="color"] {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  padding: 2px;
 }
 .radio,
 .checkbox {
@@ -1395,7 +1406,8 @@ table {
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
-.table th {
+.table th,
+.table tfoot td {
   font-weight: bold;
 }
 .table thead th {
@@ -2069,7 +2081,7 @@ pre code {
   *zoom: 1;
   padding: 4px 10px 4px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 16;
   line-height: 24px;
   color: #404040;
   text-align: center;
@@ -2537,25 +2549,25 @@ ul.floated {
   margin-bottom: 0 !important;
 }
 .mb1 {
-  margin-bottom: 16px !important;
+  margin-bottom: 16 !important;
 }
 .mb2 {
-  margin-bottom: 24px !important;
+  margin-bottom: 24 !important;
 }
 .mb3 {
-  margin-bottom: 30px !important;
+  margin-bottom: 30 !important;
 }
 .mt0 {
   margin-top: 0 !important;
 }
 .mt1 {
-  margin-top: 16px !important;
+  margin-top: 16 !important;
 }
 .mt2 {
-  margin-top: 24px !important;
+  margin-top: 24 !important;
 }
 .mt3 {
-  margin-top: 30px !important;
+  margin-top: 30 !important;
 }
 /* ==================== */
 /* === PRINT STYLES === */
