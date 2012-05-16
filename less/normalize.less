@@ -1,7 +1,13 @@
-/* =============================================== */
-/* === NORMALIZE.less                          === */
-/* === http://github.com/necolas/normalize.css === */
-/* =============================================== */
+// ======================
+// === NORMALIZE.less ===
+// ======================
+// http://github.com/necolas/normalize.css
+// Kickoff uses an amended version of this file.
+
+* {
+	.box-sizing(border-box);
+	*behavior: url(/scripts/boxsizing.htc);
+}
 
 // HTML5 display definitions
 // Corrects block display not defined in IE6/7/8/9 & FF3
@@ -48,9 +54,9 @@ html,button,input,select,textarea {
 
 // Addresses margins handled incorrectly in IE6/7
 body { margin: 0; }
-/* ============= */
-/* === LINKS === */
-/* ============= */
+// =============
+// === LINKS ===
+// =============
 
 // Addresses outline displayed oddly in Chrome
 a:focus { outline: thin dotted; }
@@ -60,9 +66,9 @@ a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
 
-/* ============= */
-/* === LISTS === */
-/* ============= */
+// =============
+// === LISTS ===
+// =============
 
 // Remove default styling for lists
 ol,ul {
@@ -92,9 +98,9 @@ nav ol {
 	list-style-image: none;
 }
 
-/* ======================== */
-/* === EMBEDDED CONTENT === */
-/* ======================== */
+// ========================
+// === EMBEDDED CONTENT ===
+// ========================
 // 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
 // 2. Improves image quality when scaled in IE7
 //    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
@@ -110,17 +116,17 @@ svg:not(:root) {
 }
 
 
-/* =============== */
-/* === FIGURES === */
-/* =============== */
+// ===============
+// === FIGURES ===
+// ===============
 // Addresses margin not present in IE6/7/8/9, S5, O11
 figure {
 	margin: 0;
 }
 
-/* ============= */
-/* === FORMS === */
-/* ============= */
+// =============
+// === FORMS ===
+// =============
 // Corrects margin displayed oddly in IE6/7
 form { margin: 0; }
 
@@ -185,7 +191,7 @@ input[disabled] {
 //    Known issue: excess padding remains in IE6
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; // 1
+	.box-sizing(border-box); // 1
 	padding: 0; // 2
 	*height: 13px; // 3
 	*width: 13px; // 3
@@ -195,9 +201,7 @@ input[type="radio"] {
 // 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
 input[type="search"] {
 	-webkit-appearance: textfield; // 1
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box; // 2
-	box-sizing: content-box;
+	.box-sizing(content-box);//
 }
 
 // Removes inner padding and search cancel button in S5, Chrome on OS X
@@ -223,9 +227,9 @@ textarea {
 }
 
 
-/* ============== */
-/* === TABLES === */
-/* ============== */
+// ==============
+// === TABLES ===
+// ==============
 // Remove most spacing between table cells
 table {
 	border-collapse: collapse;
