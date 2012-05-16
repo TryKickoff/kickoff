@@ -2939,6 +2939,44 @@ input[type="submit"].btn.btn-mini {
   -moz-opacity: 0.75;
   opacity: 0.75;
 }
+.carousel-wrapper {
+  position: relative;
+  text-align: center;
+}
+.carousel {
+  overflow: hidden;
+  margin: 0 auto;
+  height: 300px;
+  width: 600px;
+}
+.carousel .carousel-item {
+  float: left;
+}
+.carousel .carousel-item img {
+  display: block;
+}
+.carousel-pagination a {
+  color: #049cdb;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  display: inline-block;
+  width: 30px;
+}
+.carousel-pagination a.selected,
+.carousel-pagination a:hover {
+  filter: alpha(opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  font-weight: bold;
+}
 /* ======================= */
 /* === APP.less        === */
 /* === Your app styles === */
