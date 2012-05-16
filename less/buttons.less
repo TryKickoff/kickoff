@@ -11,8 +11,8 @@
 	.ie7-inline-block();
 	padding: 4px 10px 4px;
 	margin-bottom: 0; // For input.btn
-	font-size: @baseFontSize;
-	line-height: @baseLineHeight;
+	.font-size(@baseFontSize);
+	.line-height(@baseLineHeight);
 	color: @grayDark;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255,255,255,.75);
@@ -37,7 +37,8 @@
 	color: @grayDark;
 	text-decoration: none;
 	background-color: darken(@white, 10%);
-	*background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+	*background-color: darken(@white, 15%); // Buttons in IE7 don't get borders, so darken on hover
+
 	background-position: 0 -15px;
 
 	// transition is only when going to hover, otherwise the background
@@ -70,6 +71,9 @@
 	.box-shadow(none);
 }
 
+.btn [class^="icon-"] {
+	margin-top: 2px;
+}
 
 // Button Sizes
 // --------------------------------------------------
@@ -77,29 +81,29 @@
 // Large
 .btn-large {
 	padding: 9px 14px;
-	font-size: @baseFontSize + 2px;
+	.font-size(@baseFontSize + 2);
 	line-height: normal;
 	.border-radius(5px);
 }
 .btn-large [class^="icon-"] {
-	margin-top: 1px;
+	margin-top: 4px;
 }
 
 // Small
 .btn-small {
 	padding: 5px 9px;
-	font-size: @baseFontSize - 2px;
-	line-height: @baseLineHeight - 2px;
+	.font-size(@baseFontSize - 2);
+	.line-height(@baseLineHeight - 2);
 }
 .btn-small [class^="icon-"] {
-	margin-top: -1px;
+	margin-top: 1px;
 }
 
 // Mini
 .btn-mini {
 	padding: 2px 6px;
-	font-size: @baseFontSize - 2px;
-	line-height: @baseLineHeight - 4px;
+	.font-size(@baseFontSize - 2);
+	.line-height(@baseLineHeight - 4);
 }
 
 
