@@ -1,7 +1,6 @@
-/*==========================================*/
-/*=== FORMS.less ===*/
-/*=== TABLE OF CONTENTS ===*/
-/*==========================================*/
+// ==================*/
+// === FORMS.less ===*/
+// ==================*/
 // FORM
 // INPUT SIZES
 // FORM FIELD FEEDBACK STATES
@@ -31,15 +30,15 @@ legend {
 	width: 100%;
 	padding: 0;
 	margin-bottom: @baseLineHeight * 1.5;
-	font-size: @baseFontSize * 1.5;
-	line-height: @baseLineHeight * 2;
+	.font-size(@baseFontSize * 1.5);
+	.line-height(@baseLineHeight * 2);
 	color: @grayDark;
 	border: 0;
 	border-bottom: 1px solid #eee;
 
 	// Small
 	small {
-		font-size: @baseLineHeight * .75;
+		.font-size(@baseFontSize * .75);
 		color: @grayLight;
 	}
 }
@@ -50,9 +49,9 @@ input,
 button,
 select,
 textarea {
-	font-size: @baseFontSize;
+	.font-size(@baseFontSize);
+	.line-height(@baseLineHeight);
 	font-weight: normal;
-	line-height: @baseLineHeight;
 }
 input,
 button,
@@ -75,11 +74,11 @@ select,
 .uneditable-input {
 	display: inline-block;
 	width: 210px;
-	height: @baseLineHeight;
+	height: @baseLineHeight * 1.5;
 	padding: 4px;
 	margin-bottom: 9px;
-	font-size: @baseFontSize;
-	line-height: @baseLineHeight;
+	.font-size(@baseFontSize);
+	.line-height(@baseLineHeight);
 	color: @gray;
 	border: 1px solid @inputBorder;
 	.border-radius(3px);
@@ -245,8 +244,8 @@ select:focus {
 /* === INPUT SIZES === */
 /* =================== */
 // General classes for quick sizes
-.input-mini       { width: 60px; }
-.input-small      { width: 90px; }
+.input-mini       { width: 60px;  }
+.input-small      { width: 90px;  }
 .input-medium     { width: 150px; }
 .input-large      { width: 210px; }
 .input-xlarge     { width: 270px; }
@@ -455,7 +454,7 @@ select:focus:required:invalid {
 	padding-left: 4px \9; // IE7-8 doesn't have border-radius, so don't indent the padding
 	padding-right: 4px \9;
 	margin-bottom: 0; // remove the default margin on all inputs
-	.border-radius(14px);
+	.border-radius(100px);
 }
 
 
