@@ -9,18 +9,26 @@
 //         _\///________\///___\///////////_________\/////////___\///________\///________\/////________\///_______________\///______________
 
 
+// 88      a8P   88    ,ad8888ba,   88      a8P   ,ad8888ba,    88888888888  88888888888
+// 88    ,88'    88   d8"'    `"8b  88    ,88'   d8"'    `"8b   88           88
+// 88  ,88"      88  d8'            88  ,88"    d8'        `8b  88           88
+// 88,d88'       88  88             88,d88'     88          88  88aaaaa      88aaaaa
+// 8888"88,      88  88             8888"88,    88          88  88"""""      88"""""
+// 88P   Y8b     88  Y8,            88P   Y8b   Y8,        ,8P  88           88
+// 88     "88,   88   Y8a.    .a8P  88     "88,  Y8a.    .a8P   88           88
+// 88       Y8b  88    `"Y8888Y"'   88       Y8b  `"Y8888Y"'    88           88
+
+
+// CSS RESET
+@import "normalize.less";
 
 // CORE VARIABLES AND MIXINS
 @import "mixins.less";
 @import "variables.less";
 
-// CSS RESET
-@import "normalize.less";
 
 // GRID SYSTEM AND PAGE STRUCTURE
-@import "grid.less";
-@import "grid-responsive-fluid.less";
-//@import "grid-responsive-snappy.less";
+@import "choreographic-grid.less";
 //@import "grid-static.less";
 //@import "layouts.less";
 
@@ -36,6 +44,7 @@
 
 // COMPONENTS: BUTTONS & ALERTS
 @import "buttons.less";
+@import "button-groups.less";
 
 // COMPONENTS: MISC
 //@import "carousel.less";
