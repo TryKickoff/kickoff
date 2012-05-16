@@ -36,9 +36,9 @@
 	<!--  === MAIN CONTENT ===  -->
 	<!--  ====================  -->
 	<div role="main" class="container">
-		<div class="row">
 			<h1>Forms</h1>
-			<div class="span6">
+		<div class="row">
+			<div class="span6 col">
 				<h3>Forms <small>with inline labels</small></h3>
 				<form action="#" class="well form-horizontal">
 					<fieldset>
@@ -65,7 +65,7 @@
 							<li class="control-item">
 								<label for="comments" class="control-label">Comments</label>
 								<div class="control-input">
-									<textarea id="comments" rows="3" cols="50" class="input-xxlarge"></textarea>
+									<textarea id="comments" rows="3" cols="50" class="input-xlarge"></textarea>
 								</div>
 							</li>
 						</ul>
@@ -80,7 +80,7 @@
 				</form>
 
 			</div>
-			<div class="span6">
+			<div class="span6 col">
 				<h3>&nbsp;</h3>
 				<pre>&lt;form action="#" class="well form-horizontal"&gt;
 	&lt;fieldset&gt;
@@ -122,61 +122,82 @@
 			</div>
 		</div>
 
-
 		<h3>Form <small>with labels above inputs</small></h3>
-		<form action="#" class="well">
+		<div class="row">
+			<div class="span6 col">
+				<form action="#" class="well">
 
-			<fieldset>
-				<legend>Your form</legend>
-				<ul>
-					<li class="control-group">
-						<label for="name" class="control-label">Name</label>
-						<div class="controls">
-							<input type="text" id="name" placeholder="Zander Martineau" />
-						</div>
-					</li>
-					<li class="control-group">
-						<label for="email" class="control-label">Email</label>
-						<div class="controls"><input type="email" id="email" placeholder="zander@martineau.tv" /></div>
-					</li>
-					<li class="control-group">
-						<label for="phone" class="control-label">Phone</label>
-						<div class="controls"><input type="number" id="phone" placeholder="020 123 4567" /></div>
-					</li>
-					<li class="control-group">
-						<label for="comments" class="control-label">Comments</label>
-						<div class="controls">
-							<textarea id="comments" rows="3" cols="50"></textarea>
-						</div>
-					</li>
-				</ul>
+					<fieldset>
+						<legend>Your form</legend>
+						<ul>
+							<li class="control-group">
+								<label for="name" class="control-label">Name</label>
+								<div class="controls">
+									<input type="text" id="name" placeholder="Zander Martineau" />
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="email" class="control-label">Email</label>
+								<div class="controls"><input type="email" id="email" placeholder="zander@martineau.tv" /></div>
+							</li>
+							<li class="control-group">
+								<label for="phone" class="control-label">Phone</label>
+								<div class="controls"><input type="number" id="phone" placeholder="020 123 4567" /></div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Comments</label>
+								<div class="controls">
+									<textarea id="comments" rows="3" cols="50"></textarea>
+								</div>
+							</li>
+						</ul>
 
-			</fieldset>
+					</fieldset>
 
-			<div class="form-actions text_centre">
-				<input type="submit" value="Submit" class="btn btn-primary" />
-				<button type="reset" class="btn  btn-inverse">Cancel</button>
+					<div class="form-actions text_centre">
+						<input type="submit" value="Submit" class="btn btn-primary" />
+						<button type="reset" class="btn  btn-inverse">Cancel</button>
+					</div>
+
+				</form>
 			</div>
+			<div class="span6 col">
 
-		</form>
+			</div>
+		</div>
+
 
 		<h3>Inline Form</h3>
-		<form class="well form-inline">
-			<input type="text" class="input-medium" placeholder="Email">
-			<input type="password" class="input-medium" placeholder="Password">
-			<label class="checkbox">
-				<input type="checkbox"> Remember me
-			</label>
-			<button type="submit" class="btn">Sign in</button>
-		</form>
+		<div class="row">
+			<div class="span6 col">
+				<form class="well form-inline">
+					<input type="text" class="input-medium" placeholder="Email">
+					<input type="password" class="input-medium" placeholder="Password">
+					<label class="checkbox">
+						<input type="checkbox"> Remember me
+					</label>
+					<button type="submit" class="btn">Sign in</button>
+				</form>
+			</div>
+			<div class="span6 col">
+
+			</div>
+		</div>
 
 
 		<h3>Search Form</h3>
-		<form class="well form-search">
-			<input type="text" class="input-medium search-query">
-			<button type="submit" class="btn">Search</button>
-		</form>
+		<div class="row">
+			<div class="span6 col">
+				<form class="well form-search">
+					<input type="text" class="input-medium search-query">
+					<button type="submit" class="btn">Search</button>
+				</form>
 
+			</div>
+			<div class="span6 col">
+
+			</div>
+		</div>
 
 
 	</div>
