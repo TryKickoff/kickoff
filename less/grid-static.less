@@ -1,12 +1,238 @@
-.container {
-	width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: @gridGutterWidth;
-	padding-right: @gridGutterWidth;
-	.clearfix();
+//  =============================
+//  === THE CHOROGRAPHIC GRID ===
+//  =============================
+//  GRID CALCULATIONS
+//  GRID SETUP
+//  MEDIA QUERIES
+//   - ALPHA
+//   - BETA
+//  GRID UTILITIES
+//  CENTRED COLUMNS
+//  BLOCK GRIDS
+
+
+//  =========================
+//  === GRID CALCULATIONS ===
+//  =========================
+.columns(@columnSpan: 1) {
+	width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
 }
-[class*="span"] {
-	float: left;
+.shunt(@shuntSpan: 1) {
+	margin-right: (@gridColumnWidth * @shuntSpan) + (@gridGutterWidth * (@shuntSpan - 1));
+}
+.offset(@columnOffset: 1) {
+	margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * @columnOffset) + @gridGutterWidth;
+}
+.offsetFirstChild(@columnOffset: 1) {
+	margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * @columnOffset);
+}
+.push(@pushOffset: 1) {
+	left: (@gridColumnWidth * @pushOffset) + (@gridGutterWidth * @pushOffset);
+}
+.pull(@pullOffset: 1) {
+	right: (@gridColumnWidth * @pullOffset) + (@gridGutterWidth * @pullOffset);
+}
+.gridColumn() {
 	margin-left: @gridGutterWidth;
+	float: left;
+	min-height: 1px;
+	position: relative;
+	clear: none;
+	&:first-child { margin-left: 0; }
 }
+
+//  ==================
+//  === GRID SETUP ===
+//  ==================
+@gridColumnWidth: 4.3%;
+@gridGutterWidth: 4.4%;
+@gridMaxWidth: 1200px;
+@gridMargin: 32px; /*=== Space outside the grid  ===*/
+
+.container {
+	padding-left: @gridMargin;
+	padding-right: @gridMargin;
+	width: 960px;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.row {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* To fix the grid into a certain size, set max-width to width */
+.row .row {
+	min-width: 0;
+}
+
+.col {
+	.gridColumn;
+}
+
+// HACK/FIX FOR WEBKIT'S INADEQUATE SUBPIXEL PERCENTAGE CALCULATIONS
+// In order to work around browsers' different rounding behaviours, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns you can tag the last column with class="end" in order to override that behaviour.
+[class*="col"] + [class*="col"]:last-child, .mq-alpha-end { float: right; }
+[class*="col"] + [class*="col"].end { float: left; }
+
+.span1  { .columns(1);  }
+.span2  { .columns(2);  }
+.span3  { .columns(3);  }
+.span4  { .columns(4);  }
+.span5  { .columns(5);  }
+.span6  { .columns(6);  }
+.span7  { .columns(7);  }
+.span8  { .columns(8);  }
+.span9  { .columns(9);  }
+.span10 { .columns(10); }
+.span11 { .columns(11); }
+.span12 { .columns(12); }
+
+//  ==============================================
+//  === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
+//  ==============================================
+.row {
+	> .offset1 {
+		.offset(1);
+		&:first-child {
+			.offsetFirstChild(1);
+		}
+	}
+	> .offset2 {
+		.offset(2);
+		&:first-child {
+			.offsetFirstChild(2);
+		}
+	}
+	> .offset3 {
+		.offset(3);
+		&:first-child {
+			.offsetFirstChild(3);
+		}
+	}
+	> .offset4 {
+		.offset(4);
+		&:first-child {
+			.offsetFirstChild(4);
+		}
+	}
+	> .offset5 {
+		.offset(5);
+		&:first-child {
+			.offsetFirstChild(5);
+		}
+	}
+	> .offset6 {
+		.offset(6);
+		&:first-child {
+			.offsetFirstChild(6);
+		}
+	}
+	> .offset7 {
+		.offset(7);
+		&:first-child {
+			.offsetFirstChild(7);
+		}
+	}
+	> .offset8 {
+		.offset(8);
+		&:first-child {
+			.offsetFirstChild(8);
+		}
+	}
+	> .offset9 {
+		.offset(9);
+		&:first-child {
+			.offsetFirstChild(9);
+		}
+	}
+	> .offset10 {
+		.offset(10);
+		&:first-child {
+			.offsetFirstChild(10);
+		}
+	}
+	> .offset11 {
+		.offset(11);
+		&:first-child {
+			.offsetFirstChild(11);
+		}
+	}
+	> .offset12 {
+		.offset(12);
+		&:first-child {
+			.offsetFirstChild(12);
+		}
+	}
+
+	> .push2    { .push(2); }
+	> .push3 	{ .push(3); }
+	> .push4 	{ .push(4); }
+	> .push5 	{ .push(5); }
+	> .push6 	{ .push(6); }
+	> .push7 	{ .push(7); }
+	> .push8 	{ .push(8); }
+	> .push9 	{ .push(9); }
+	> .push10 	{ .push(10); }
+
+	> .pull2 	{ .pull(2); }
+	> .pull3 	{ .pull(3); }
+	> .pull4 	{ .pull(4); }
+	> .pull5 	{ .pull(5); }
+	> .pull6 	{ .pull(6); }
+	> .pull7 	{ .pull(7); }
+	> .pull8 	{ .pull(8); }
+	> .pull9 	{ .pull(9); }
+	> .pull10 	{ .pull(10); }
+}
+
+
+img, object, embed { max-width: 100%; height: auto; }
+img { -ms-interpolation-mode: bicubic; }
+#map_canvas img, .map_canvas img {max-width: none!important;}
+
+
+
+
+
+//  ======================
+//  === GRID UTILITIES ===
+//  ======================
+/* Nicolas Gallagher's micro clearfix */
+.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+
+
+//  =======================
+//  === CENTRED COLUMNS ===
+//  =======================
+.centered.col, .centred.col { float: none; margin: 0 auto; }
+
+
+//  ===================
+//  === BLOCK GRIDS ===
+//  ===================
+//  These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility block-grid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
+
+.block-grid { display: block; overflow: hidden; list-style-type: none;}
+.block-grid>li { display: block; height: auto; float: left; }
+
+.block-grid.two-up { margin-left: -4% }
+.block-grid.two-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
+// .block-grid.two-up>li:nth-child(2n+1) {clear: left;}
+
+.block-grid.three-up { margin-left: -2% }
+.block-grid.three-up>li { margin-left: 2%; width: 31.3%; margin-bottom: 2%;}
+// .block-grid.three-up>li:nth-child(3n+1) {clear: left;}
+
+.block-grid.four-up { margin-left: -2% }
+.block-grid.four-up>li { margin-left: 2%; width: 23%; margin-bottom: 2%;}
+// .block-grid.four-up>li:nth-child(4n+1) {clear: left;}
+
+.block-grid.five-up { margin-left: -1.5% }
+.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; margin-bottom: 1.5%;}
+// .block-grid.five-up>li:nth-child(5n+1) {clear: left;}
+
+
