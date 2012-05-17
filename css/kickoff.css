@@ -2942,10 +2942,11 @@ input[type="submit"].btn.btn-mini {
 .carousel-wrapper {
   position: relative;
   text-align: center;
+  margin: 0 auto;
+  width: 600px;
 }
 .carousel {
   overflow: hidden;
-  margin: 0 auto;
   height: 300px;
   width: 600px;
 }
