@@ -4,6 +4,7 @@
 
 		$('.carousel').imagesLoaded( function() {
 			$('.carousel').carouFredSel({
+				align: 'center',
 				width: 600,
 				height: 300,
 				items: {
