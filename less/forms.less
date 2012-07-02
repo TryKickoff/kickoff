@@ -240,9 +240,9 @@ select:focus {
 }
 
 
-/* =================== */
-/* === INPUT SIZES === */
-/* =================== */
+// ===================
+// === INPUT SIZES ===
+// ===================
 // General classes for quick sizes
 .input-mini       { width: 60px;  }
 .input-small      { width: 90px;  }
@@ -284,9 +284,9 @@ textarea[readonly] {
 
 
 
-/* ================================== */
-/* === FORM FIELD FEEDBACK STATES === */
-/* ================================== */
+// ==================================
+// === FORM FIELD FEEDBACK STATES ===
+// ==================================
 // Warning
 .control-item.warning {
 	.formFieldState(@warningText, @warningText, @warningBackground);
@@ -356,9 +356,9 @@ select:focus:required:invalid {
 }
 
 
-/* ==================== */
-/* === INPUT GROUPS === */
-/* ==================== */
+// ====================
+// === INPUT GROUPS ===
+// ====================
 // Allow us to put symbols and text within the input field for a cleaner look
 .input-prepend,
 .input-append {
@@ -458,9 +458,9 @@ select:focus:required:invalid {
 }
 
 
-/* =================================== */
-/* === HORIZONTAL & VERTICAL FORMS === */
-/* =================================== */
+// ===================================
+// === HORIZONTAL & VERTICAL FORMS ===
+// ===================================
 
 // Common properties
 // -----------------
@@ -525,9 +525,19 @@ legend + .control-group {
 	-webkit-margin-top-collapse: separate;
 }
 
-/* ================================== */
-/* === HORIZONTAL-SPECIFIC STYLES === */
-/* ================================== */
+// ==================================
+// === HORIZONTAL-SPECIFIC STYLES ===
+// ==================================
+
+// <ul class="control-group">
+// 	<li class="control-item">
+// 		<label for="name" class="control-label">Name</label>
+// 		<div class="control-input">
+// 			<input type="text" id="name" placeholder="Zander Martineau" />
+// 		</div>
+// 	</li>
+// </ul>
+
 .form-horizontal {
 	// Increase spacing between groups
 	.control-item {
