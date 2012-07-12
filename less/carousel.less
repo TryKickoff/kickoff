@@ -1,0 +1,38 @@
+// =====================
+// === CAROUSEL.less ===
+// =====================
+// Use these basic styles with the carouFredSel plugin.
+// Find more code & examples at http://coolcarousels.frebsite.nl/
+
+.carousel-wrapper {
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	width: 600px;
+}
+.carousel {
+	overflow: hidden;
+	// Specify dimensions in app.less
+	.size(600px, 300px);
+	.carousel-item {
+		float: left;
+		img {
+			display: block;
+		}
+	}
+}
+
+.carousel-pagination {
+	a {
+		color: @blue;
+		.opacity(60);
+		.border-radius(40px);
+		background-color: #fff;
+		display: inline-block;
+		width: 30px;
+		&.selected, &:hover {
+			.opacity(100);
+			font-weight: bold;
+		}
+	}
+}

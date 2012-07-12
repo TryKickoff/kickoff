@@ -1,0 +1,305 @@
+// =========================
+// === TYPOGRAPHY.less =====
+// === TABLE OF CONTENTS ===
+// =========================
+// BODY TEXT
+// BASE
+// PARAGRAPHS
+// HEADINGS
+// LISTS
+// QUOTES
+// LINKS
+// HELPER CLASSES
+
+// Typography.less
+// Headings, body text, lists, code, and more for a versatile and durable typography system
+// ----------------------------------------------------------------------------------------
+
+
+// BODY TEXT
+body {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background-color: @bodyBackground;
+}
+
+p {
+	font-family: @baseFontFamily;
+	.font-size(16);
+	.line-height(@baseLineHeight);
+	margin-top: 0;
+	margin-bottom: @baseLineHeight;
+	small {
+		font-size: @baseFontSize - 2;
+		color: @grayLight;
+	}
+}
+.lead {
+	margin-bottom: @baseLineHeight;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: @baseLineHeight * 1.5;
+}
+
+// HEADINGS
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	color: @headingsColor;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	small {
+		font-weight: normal;
+		color: @grayLight;
+	}
+}
+h1 {
+	.font-size(68);
+	.line-height(72);
+	margin-top: 24px;
+	margin-bottom: 48px;
+	small {
+		.font-size(18);
+	}
+}
+h2 {
+	.font-size(42);
+	.line-height(48);
+	margin-top: 48px;
+	margin-bottom: 24px;
+	small {
+		.font-size(18);
+	}
+}
+h3 {
+	.font-size(26);
+	.line-height(48);
+	margin-top: 24px;
+	margin-bottom: 0px;
+	small {
+		.font-size(14);
+	}
+}
+h4, h5, h6 {
+	.line-height(48);
+}
+h4 {
+	.font-size(14);
+	small {
+		.font-size(12);
+	}
+}
+h5 {
+	.font-size(12);
+}
+h6 {
+	.font-size(11);
+	color: @grayLight;
+	text-transform: uppercase;
+}
+
+// Page header
+.page-header {
+	padding-bottom: @baseLineHeight - 1;
+	margin: @baseLineHeight 0;
+	border-bottom: 1px solid @grayLighter;
+}
+.page-header h1 {
+	line-height: 1;
+}
+
+// LINKS
+a {
+	color: @linkColor;
+	text-decoration: none;
+}
+a:hover {
+	color: @linkColorHover;
+	//text-decoration: underline;
+}
+
+
+// LISTS
+
+// Unordered and Ordered lists
+// Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
+ul.normal, ol.normal {
+	padding: 0;
+	margin: 0 0 @baseLineHeight / 2 25px;
+	font-size: @baseFontSize;
+	ul, ol {
+		margin: 0 0 0 45px;
+	}
+	ul {
+		list-style-type: circle;
+		ul {
+			list-style-type: square;
+		}
+	}
+	ol {
+		list-style-type: upper-roman;
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+	li {
+		line-height: @baseLineHeight;
+	}
+}
+ul.normal { list-style-type: disc }
+ol.normal { list-style-type: decimal }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+ul.unstyled,
+ol.unstyled {
+	margin-left: 0;
+	list-style: none;
+}
+
+// Description Lists
+dl {
+	margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+	line-height: @baseLineHeight;
+}
+dt {
+	font-weight: bold;
+	line-height: @baseLineHeight - 1; // fix jank Helvetica Neue font bug
+}
+dd {
+	margin-left: @baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+	dt {
+		.text-overflow();
+		float: left;
+		clear: left;
+		width: 120px;
+		text-align: right;
+	}
+	dd {
+		margin-left: 130px;
+	}
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+	margin: @baseLineHeight 0;
+	border: 0;
+	border-top: 1px solid @hrBorder;
+	border-bottom: 1px solid @white;
+}
+
+// Emphasis
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+.muted {
+	color: @grayLight;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+	border-bottom: 1px dotted #ddd;
+	cursor: help;
+}
+abbr.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+	padding: 0 0 0 15px;
+	margin: 0 0 @baseLineHeight;
+	border-left: 5px solid @grayLighter;
+	p {
+		margin-bottom: 0;
+		font-size: @baseFontSize;
+		font-weight: 300;
+		line-height: @baseLineHeight * 1.25;
+	}
+	small {
+		display: block;
+		line-height: @baseLineHeight;
+		color: @grayLight;
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+
+	// Float right with text-align: right
+	&.pull-right {
+		float: right;
+		padding-left: 0;
+		padding-right: 15px;
+		border-left: 0;
+		border-right: 5px solid @grayLighter;
+		p,
+		small {
+			text-align: right;
+		}
+	}
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+	content: "";
+}
+
+// Addresses
+address {
+	display: block;
+	margin-bottom: @baseLineHeight;
+	line-height: @baseLineHeight;
+	font-style: normal;
+}
+
+// Misc
+small {
+	font-size: 75%;
+}
+cite {
+	font-style: normal;
+}
+// Addresses styling not present in S5, Chrome
+dfn {
+	font-style: italic;
+}
+// Addresses styling not present in IE6/7/8/9
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+sub,sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
