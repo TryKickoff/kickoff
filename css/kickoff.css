@@ -209,7 +209,6 @@ table {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/*=== Space outside the grid  ===*/
 .container {
   padding-left: 32px;
   padding-right: 32px;
@@ -217,25 +216,10 @@ table {
   max-width: 1500px;
   margin: 0 auto;
 }
-body:before {
-  content: "mobile";
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 30px;
-  line-height: 30px;
-  background-color: rgba(255, 255, 0, 0.6);
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  z-index: 1000;
-}
 .row {
   width: 100%;
   margin: 0 auto;
 }
-/* To fix the grid into a certain size, set max-width to width */
 .row .row {
   min-width: 0;
 }
@@ -252,22 +236,7 @@ img {
 .map_canvas img {
   max-width: none!important;
 }
-/*=== 768> ===*/
 @media screen and (min-width: 768px) {
-  body:before {
-    content: "mq-alpha";
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 30px;
-    line-height: 30px;
-    background-color: rgba(0, 128, 0, 0.6);
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    z-index: 1000;
-  }
   .col {
     margin-left: 4.4%;
     float: left;
@@ -469,23 +438,7 @@ img {
     clear: both;
   }
 }
-/*=== end 768> ===*/
-/*=== 992> ===*/
 @media screen and (min-width: 992px) {
-  body:before {
-    content: "mq-beta";
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 30px;
-    line-height: 30px;
-    background-color: rgba(0, 128, 128, 0.6);
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    z-index: 1000;
-  }
   .split .col,
   .shunt {
     margin-left: 4.4%;
@@ -709,12 +662,9 @@ img {
     float: left;
   }
 }
-/*=== end 992> ===*/
-/*=== 1382> ===*/
 @media screen and (min-width: 1382px) {
   
 }
-/*=== end 1382> ===*/
 .row:before,
 .row:after,
 .clearfix:before,
@@ -737,10 +687,20 @@ img {
 }
 .block-grid {
   display: block;
-  overflow: hidden;
   list-style-type: none;
+  zoom: 1;
+  zoom: 1;
 }
-.block-grid > li {
+.block-grid:before,
+.block-grid:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+.block-grid:after {
+  clear: both;
+}
+.block-grid li {
   display: block;
   height: auto;
   float: left;
@@ -748,7 +708,7 @@ img {
 .block-grid.two-up {
   margin-left: -4%;
 }
-.block-grid.two-up > li {
+.block-grid.two-up li {
   margin-left: 4%;
   width: 46%;
   margin-bottom: 4%;
@@ -756,7 +716,7 @@ img {
 .block-grid.three-up {
   margin-left: -2%;
 }
-.block-grid.three-up > li {
+.block-grid.three-up li {
   margin-left: 2%;
   width: 31.3%;
   margin-bottom: 2%;
@@ -764,7 +724,7 @@ img {
 .block-grid.four-up {
   margin-left: -2%;
 }
-.block-grid.four-up > li {
+.block-grid.four-up li {
   margin-left: 2%;
   width: 23%;
   margin-bottom: 2%;
@@ -772,10 +732,32 @@ img {
 .block-grid.five-up {
   margin-left: -1.5%;
 }
-.block-grid.five-up > li {
+.block-grid.five-up li {
   margin-left: 1.5%;
   width: 18.5%;
   margin-bottom: 1.5%;
+}
+ul.centred,
+ul.centered {
+  text-align: center;
+  zoom: 1;
+  zoom: 1;
+}
+ul.centred:before,
+ul.centered:before,
+ul.centred:after,
+ul.centered:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+ul.centred:after,
+ul.centered:after {
+  clear: both;
+}
+ul.centred li,
+ul.centered li {
+  display: inline;
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -898,7 +880,6 @@ a {
 }
 a:hover {
   color: #ade6fe;
-  text-decoration: underline;
 }
 ul.normal,
 ol.normal {
@@ -1262,10 +1243,6 @@ textarea {
   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 input:focus,
 textarea:focus {
@@ -1289,9 +1266,6 @@ select:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-/* =================== */
-/* === INPUT SIZES === */
-/* =================== */
 .input-mini {
   width: 60px;
 }
@@ -1331,9 +1305,6 @@ textarea[readonly] {
   border-color: #ddd;
   cursor: not-allowed;
 }
-/* ================================== */
-/* === FORM FIELD FEEDBACK STATES === */
-/* ================================== */
 .control-item.warning > label,
 .control-item.warning .help-block,
 .control-item.warning .help-inline {
@@ -1477,9 +1448,6 @@ select:focus:required:invalid:focus {
   vertical-align: middle;
   padding-left: 5px;
 }
-/* ==================== */
-/* === INPUT GROUPS === */
-/* ==================== */
 .input-prepend,
 .input-append {
   margin-bottom: 5px;
@@ -1599,9 +1567,6 @@ select:focus:required:invalid:focus {
   -o-border-radius: 100px;
   border-radius: 100px;
 }
-/* =================================== */
-/* === HORIZONTAL & VERTICAL FORMS === */
-/* =================================== */
 .form-search input,
 .form-inline input,
 .form-horizontal input,
@@ -1668,9 +1633,6 @@ legend + .control-group {
   margin-top: 24px;
   -webkit-margin-top-collapse: separate;
 }
-/* ================================== */
-/* === HORIZONTAL-SPECIFIC STYLES === */
-/* ================================== */
 .form-horizontal .control-item {
   margin-bottom: 24px;
   zoom: 1;
@@ -1981,9 +1943,6 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-/* ================== */
-/* === WELLS.less === */
-/* ================== */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -2466,10 +2425,6 @@ pre code {
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
   background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
   -webkit-transition: background-position 0.1s linear;
   -moz-transition: background-position 0.1s linear;
   -o-transition: background-position 0.1s linear;
@@ -2978,49 +2933,18 @@ input[type="submit"].btn.btn-mini {
   opacity: 1;
   font-weight: bold;
 }
-/* ======================= */
-/* === APP.less        === */
-/* === Your app styles === */
-/* ======================= */
-/* ================ */
-/* === MASTHEAD === */
-/* ================ */
-/* ============== */
-/* === FOOTER === */
-/* ============== */
-/* ============ */
-/* === CSS3 === */
-/* ============ */
-/* ====================== */
-/* === HOME / LANDING === */
-/* ====================== */
-/*===========================================*/
-/*=== Media queries for responsive design ===*/
-/*===========================================*/
-/*=== 480> ===*/
 @media screen and (min-width: 480px) {
   
 }
-/*=== end 480> ===*/
-/*=== 768> ===*/
 @media screen and (min-width: 768px) {
   
 }
-/*=== end 768> ===*/
-/*=== 992> ===*/
 @media screen and (min-width: 992px) {
   
 }
-/*=== end 992> ===*/
-/*=== 1382> ===*/
 @media screen and (min-width: 1382px) {
   
 }
-/*=== end 1382> ===*//*==========================================*/
-/*=== UTILITIES.less ===*/
-/*=== Non-semantic helper classes ===*/
-/*==========================================*/
-/* For image replacement */
 .ir {
   display: block;
   border: 0;
@@ -3031,7 +2955,6 @@ input[type="submit"].btn.btn-mini {
   text-align: left;
   direction: ltr;
 }
-/* Hide from both screenreaders and browsers: h5bp.com/u */
 .is_hidden,
 .hide {
   display: none !important;
@@ -3040,7 +2963,6 @@ input[type="submit"].btn.btn-mini {
 .show {
   display: block;
 }
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -3051,7 +2973,6 @@ input[type="submit"].btn.btn-mini {
   position: absolute;
   width: 1px;
 }
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -3061,11 +2982,9 @@ input[type="submit"].btn.btn-mini {
   position: static;
   width: auto;
 }
-/* Hide visually and from screenreaders, but maintain layout */
 .invisible {
   visibility: hidden;
 }
-/* Contain floats: h5bp.com/q */
 .group:before,
 .group:after,
 .navi:before,
@@ -3119,9 +3038,6 @@ ul.floated {
 .mt3 {
   margin-top: 30 !important;
 }
-/* ==================== */
-/* === PRINT STYLES === */
-/* ==================== */
 @media print {
   * {
     background: #fff;
