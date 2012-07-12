@@ -40,3 +40,4 @@ Note that these plugins should be added into the `plugins.js` when they are need
 The polyfills directory includes `html5shiv.js` when modernizr is overload for your project and only basic HTML elements are required.
 
 ##Examples
+Coming soon (when Github pages gets its act together!)
