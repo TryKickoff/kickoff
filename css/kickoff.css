@@ -217,20 +217,6 @@ table {
   max-width: 1500px;
   margin: 0 auto;
 }
-body:before {
-  content: "mobile";
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 30px;
-  line-height: 30px;
-  background-color: rgba(255, 255, 0, 0.6);
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  z-index: 1000;
-}
 .row {
   width: 100%;
   margin: 0 auto;
@@ -254,20 +240,6 @@ img {
 }
 /*=== 768> ===*/
 @media screen and (min-width: 768px) {
-  body:before {
-    content: "mq-alpha";
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 30px;
-    line-height: 30px;
-    background-color: rgba(0, 128, 0, 0.6);
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    z-index: 1000;
-  }
   .col {
     margin-left: 4.4%;
     float: left;
@@ -472,20 +444,6 @@ img {
 /*=== end 768> ===*/
 /*=== 992> ===*/
 @media screen and (min-width: 992px) {
-  body:before {
-    content: "mq-beta";
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 30px;
-    line-height: 30px;
-    background-color: rgba(0, 128, 128, 0.6);
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    z-index: 1000;
-  }
   .split .col,
   .shunt {
     margin-left: 4.4%;
@@ -712,7 +670,7 @@ img {
 /*=== end 992> ===*/
 /*=== 1382> ===*/
 @media screen and (min-width: 1382px) {
-  
+
 }
 /*=== end 1382> ===*/
 .row:before,
@@ -2999,22 +2957,22 @@ input[type="submit"].btn.btn-mini {
 /*===========================================*/
 /*=== 480> ===*/
 @media screen and (min-width: 480px) {
-  
+
 }
 /*=== end 480> ===*/
 /*=== 768> ===*/
 @media screen and (min-width: 768px) {
-  
+
 }
 /*=== end 768> ===*/
 /*=== 992> ===*/
 @media screen and (min-width: 992px) {
-  
+
 }
 /*=== end 992> ===*/
 /*=== 1382> ===*/
 @media screen and (min-width: 1382px) {
-  
+
 }
 /*=== end 1382> ===*//*==========================================*/
 /*=== UTILITIES.less ===*/
@@ -3135,7 +3093,7 @@ ul.floated {
     margin: 0 auto;
     font-size: 0.75em;
     /* 12px (if base font-size was 16px) */
-  
+
   }
   /* A list of things you don’t want printing. */
   #nav,
