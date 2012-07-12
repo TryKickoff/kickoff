@@ -1,5 +1,5 @@
 /*	
- *	jQuery carouFredSel 5.5.5
+ *	jQuery carouFredSel 5.6.1
  *	Demo's and documentation:
  *	caroufredsel.frebsite.nl
  *	
@@ -35,23 +35,14 @@
 			$tt0 = this[0];
 
 		if ($cfs.data('cfs_isCarousel')) {
-			var starting_position = $cfs.triggerHandler('_cfs_currentPosition');
-			$cfs.trigger('_cfs_destroy', true);
+			var starting_position = $cfs.triggerHandler('_cfs_triggerEvent', 'currentPosition');
+			$cfs.trigger('_cfs_triggerEvent', ['destroy', true]);
 		} else {
 			var starting_position = false;
 		}
 
 		$cfs._cfs_init = function(o, setOrig, start) {
 			o = go_getObject($tt0, o);
-
-
-			//	DEPRECATED
-			if (o.debug) {
-				conf.debug = o.debug;
-				debug(conf, 'The "debug" option should be moved to the second configuration-object.');
-			}
-			//	/DEPRECATED
-
 
 			var obs = ['items', 'scroll', 'auto', 'prev', 'next', 'pagination'];
 			for (var a = 0, l = obs.length; a < l; a++) {
@@ -638,7 +629,7 @@ if (opts.responsive) {
 				}
 
 				tmrs.timePassed = 0;
-				$cfs.trigger('_cfs_slide_'+eType, [obj, num]);
+				$cfs.trigger('_cfs_triggerEvent', ['slide_'+eType, [obj, num]]);
 
 				//	synchronise
 				if (opts.synchronise) {
@@ -646,17 +637,18 @@ if (opts.responsive) {
 						c = [obj, num];
 					for (var j = 0, l = s.length; j < l; j++) {
 						var d = eType;
-						if (!s[j][1]) c[0] = s[j][0].triggerHandler('_cfs_configuration', eType);
+
+						if (!s[j][1]) c[0] = s[j][0].triggerHandler('_cfs_triggerEvent', ['configuration', d]);
 						if (!s[j][2]) d = (d == 'prev') ? 'next' : 'prev';
 						c[1] = num + s[j][3];
-						s[j][0].trigger('_cfs_slide_'+d, c);
+						s[j][0].trigger('_cfs_triggerEvent', ['slide_'+d, c]);
 					}
 				}
 				return true;
 			});
 
-			//	prev event, accessible from outside
-			$cfs.bind(cf_e('_cfs_slide_prev', conf, false), function(e, sO, nI) {
+			//	prev event
+			$cfs.bind(cf_e('slide_prev', conf), function(e, sO, nI) {
 				e.stopPropagation();
 				var a_itm = $cfs.children();
 
@@ -958,8 +950,8 @@ if (opts.responsive) {
 				return true;
 			});
 
-			//	next event, accessible from outside
-			$cfs.bind(cf_e('_cfs_slide_next', conf, false), function(e, sO, nI) {
+			//	next event
+			$cfs.bind(cf_e('slide_next', conf), function(e, sO, nI) {
 				e.stopPropagation();
 				var a_itm = $cfs.children();
 
@@ -1466,28 +1458,40 @@ if (opts.responsive) {
 					t = ['string/number/object', 'boolean', 'number'],
 					a = cf_sortParams(v, t);
 				
-				var num = a[0],
-					org = a[1],
-					dev = a[2];
+				num = a[0];
+				org = a[1];
+				dev = a[2];
+
+				var removed = false;
+				if (num instanceof $ && num.length > 1)
+				{
+					$removed = $();
+					num.each(function(i, el) {
+						var $rem = $cfs.trigger(cf_e('removeItem', conf), [$(this), org, dev]);
+						if ($rem) $removed = $removed.add($rem);
+					});
+					return $removed;
+				}
 
 				if (typeof num == 'undefined' || num == 'end') {
-					$cfs.children().last().remove();
+					$removed = $cfs.children().last();
 				} else {
 					num = gn_getItemIndex(num, dev, org, itms, $cfs);
-					var $cit = $cfs.children().eq(num);
-					if ($cit.length){
-						if (num < itms.first) itms.first -= $cit.length;
-						$cit.remove();
+					var $removed = $cfs.children().eq(num);
+					if ($removed.length){
+						if (num < itms.first) itms.first -= $removed.length;
 					}
 				}
-				itms.total = $cfs.children().length;
+				if ($removed && $removed.length) {
+					$removed.detach();
+					itms.total = $cfs.children().length;
+					var sz = $cfs.triggerHandler('updateSizes');
+					nv_showNavi(opts, itms.total, conf);
+					nv_enableNavi(opts, itms.first, conf);
+					$cfs.trigger(cf_e('updatePageStatus', conf), [true, sz]);
+				}			
 
-				var sz = $cfs.triggerHandler('updateSizes');
-				nv_showNavi(opts, itms.total, conf);
-				nv_enableNavi(opts, itms.first, conf);
-				$cfs.trigger(cf_e('updatePageStatus', conf), [true, sz]);
-
-				return true;
+				return $removed;
 			});
 
 			//	onBefore and onAfter event
@@ -1499,11 +1503,7 @@ if (opts.responsive) {
 				return clbk[eType];
 			});
 
-			//	currentPosition event, accessible from outside
-			$cfs.bind(cf_e('_cfs_currentPosition', conf, false), function(e, fn) {
-				e.stopPropagation();
-				return $cfs.triggerHandler(cf_e('currentPosition', conf), fn);
-			});
+			//	currentPosition event
 			$cfs.bind(cf_e('currentPosition', conf), function(e, fn) {
 				e.stopPropagation();
 				if (itms.first == 0) var val = 0;
@@ -1539,12 +1539,14 @@ if (opts.responsive) {
 			$cfs.bind(cf_e('slice', conf), function(e, f, l, fn) {
 				e.stopPropagation();
 
+				if (itms.total == 0) return false;
+
 				var v = [f, l, fn],
 					t = ['number', 'number', 'function'],
 					a = cf_sortParams(v, t);
 
-				f = (typeof a[0] == 'number') ? a[0] : 0,
-				l = (typeof a[1] == 'number') ? a[1] : itms.total,
+				f = (typeof a[0] == 'number') ? a[0] : 0;
+				l = (typeof a[1] == 'number') ? a[1] : itms.total;
 				fn = a[2];
 				
 				f += itms.first;
@@ -1575,11 +1577,7 @@ if (opts.responsive) {
 				return crsl[eType];
 			});
 
-			//	configuration event, accessible from outside
-			$cfs.bind(cf_e('_cfs_configuration', conf, false), function(e, a, b, c) {
-				e.stopPropagation();
-				return $cfs.triggerHandler(cf_e('configuration', conf), [a, b, c]);
-			});
+			//	configuration event
 			$cfs.bind(cf_e('configuration', conf), function(e, a, b, c) {
 				e.stopPropagation();
 				var reInit = false;
@@ -1699,12 +1697,7 @@ if (opts.responsive) {
 				return sz_setSizes($cfs, opts);
 			});
 
-			//	destroy event, accessible from outside
-			$cfs.bind(cf_e('_cfs_destroy', conf, false), function(e, orgOrder) {
-				e.stopPropagation();
-				$cfs.trigger(cf_e('destroy', conf), orgOrder);
-				return true;
-			});
+			//	destroy event
 			$cfs.bind(cf_e('destroy', conf), function(e, orgOrder) {
 				e.stopPropagation();
 				tmrs = sc_clearTimers(tmrs);
@@ -1724,6 +1717,12 @@ if (opts.responsive) {
 				$wrp.replaceWith($cfs);
 
 				return true;
+			});
+			
+			//	triggerEvent, making prefixed and namespaced events accessible from the outside
+			$cfs.bind('_cfs_triggerEvent', function(e, n, o) {
+				e.stopPropagation();
+				return $cfs.triggerHandler(cf_e(n, conf), o);
 			});
 		};	//	/bind_events
 
@@ -1872,15 +1871,24 @@ if (opts.responsive) {
 			}
 
 if (crsl.upDateOnWindowResize) {
-	$(window).bind(cf_e('resize', conf, false, true, true), function(e) {
-		$cfs.trigger(cf_e('finish', conf));
-		if (opts.auto.pauseOnResize && !crsl.isPaused) {
-			$cfs.trigger(cf_e('play', conf));
+	var $w = $(window),
+		_windowWidth = $w.width(),
+		_windowHeight = $w.height();
+
+	$w.bind(cf_e('resize', conf, false, true, true), function(e) {
+		if ($w.width() != _windowWidth || $w.height() != _windowHeight) {
+			$cfs.trigger(cf_e('finish', conf));
+			if (opts.auto.pauseOnResize && !crsl.isPaused) {
+				$cfs.trigger(cf_e('play', conf));
+			}
+			sz_resetMargin($cfs.children(), opts);
+			$cfs._cfs_init(opts_orig);
+			var siz = sz_setSizes($cfs, opts, false);
+			$cfs.trigger(cf_e('updatePageStatus', conf), [true, siz]);
+	
+			_windowWidth = $w.width();
+			_windowHeight = $w.height();
 		}
-		sz_resetMargin($cfs.children(), opts);
-		$cfs._cfs_init(opts_orig);
-		var siz = sz_setSizes($cfs, opts, false);
-		$cfs.trigger(cf_e('updatePageStatus', conf), [true, siz]);
 	});
 }
 
@@ -2278,16 +2286,16 @@ if (crsl.upDateOnWindowResize) {
 		var t = 0,
 			x = 0;
 	
-		for (var a = s, l = i.length-1; a >= 0; a--) {
+		for (var a = s, l = i.length; a >= 0; a--) {
 			x++;
 			if (x == l) return x;
-	
+
 			var j = i.eq(a);
 			if (j.is(f)) {
 				t++;
 				if (t == m) return x;
 			}
-			if (a == 0) a = i.length;
+			if (a == 0) a = l;
 		}
 	}
 
@@ -2307,7 +2315,7 @@ if (crsl.upDateOnWindowResize) {
 			if (t > o.maxDimention) return x;
 
 			x++;
-			if (x == l) return x;
+			if (x == l+1) return x;
 			if (a == l) a = -1;
 		}
 	}
