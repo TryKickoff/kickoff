@@ -23,14 +23,14 @@
 		box-shadow: @shadow;
 }
 // TRANSITIONS
-.transition(@transition) {
+.transition(@transition: all 0.2s ease-in-out) {
 -webkit-transition: @transition;
    -moz-transition: @transition;
 	 -o-transition: @transition;
 		transition: @transition;
 }
 // CSS3 CONTENT COLUMNS
-.content-columns(@columnCount, @columnGap: 20px) {
+.content-columns(@columnCount:2, @columnGap: 20px) {
 -webkit-column-count: @columnCount;
 -webkit-column-gap:   @columnGap;
    -moz-column-count: @columnCount;
@@ -39,7 +39,8 @@
 		column-gap:   @columnGap;
 }
 // BACKGROUND CLIPPING
-.background-clip(@clip) {
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+.background-clip(@clip: padding-box) {
 -webkit-background-clip: @clip;
    -moz-background-clip: @clip;
 	 -o-background-size: @clip;
@@ -53,12 +54,33 @@
 		opacity: @opacity / 100;
 }
 
-// TRANSITIONS
-.transition(@transition) {
--webkit-transition: @transition;
-   -moz-transition: @transition;
-	 -o-transition: @transition;
-		transition: @transition;
+// Background sizing
+.background-size(@size: contain){
+-webkit-background-size: @size;
+   -moz-background-size: @size;
+	 -o-background-size: @size;
+		background-size: @size;
+}
+
+// Box sizing
+.box-sizing(@boxmodel: border-box) {
+-webkit-box-sizing: @boxmodel;
+   -moz-box-sizing: @boxmodel;
+	-ms-box-sizing: @boxmodel;
+		box-sizing: @boxmodel;
+}
+// USER SELECT
+.user-select(@select: none) {
+-webkit-user-select: @select;
+   -moz-user-select: @select;
+	 -o-user-select: @select;
+		user-select: @select;
+}
+
+// VERTICAL ALIGN
+.vertical-align(@argument) {
+	line-height: @argument;
+	height: @argument;
 }
 
 // TRANSFORMS
@@ -318,44 +340,6 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-}
-
-// Background clipping
-// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
-.background-clip(@clip) {
-  -webkit-background-clip: @clip;
-	 -moz-background-clip: @clip;
-		  background-clip: @clip;
-}
-
-// Background sizing
-.background-size(@size){
-  -webkit-background-size: @size;
-	 -moz-background-size: @size;
-	   -o-background-size: @size;
-		  background-size: @size;
-}
-
-
-// Box sizing
-.box-sizing(@boxmodel: border-box) {
--webkit-box-sizing: @boxmodel;
-   -moz-box-sizing: @boxmodel;
-	-ms-box-sizing: @boxmodel;
-		box-sizing: @boxmodel;
-}
-// USER SELECT
-.user-select(@select) {
--webkit-user-select: @select;
-   -moz-user-select: @select;
-	 -o-user-select: @select;
-		user-select: @select;
-}
-
-// VERTICAL ALIGN
-.vertical-align(@argument) {
-	line-height: @argument;
-		 height: @argument;
 }
 
 // Make any element resizable for prototyping
