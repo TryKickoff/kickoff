@@ -8,6 +8,11 @@
   Twitter: @MrMartineau
   Location: London
 
+  Creative Technologist: Ashley Nolan
+  Site: http://dragongraphics.co.uk
+  Twitter: @dragongraphics
+  Location: London
+
 /* THANKS */
   Names (& URL):
 
