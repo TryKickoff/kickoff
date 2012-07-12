@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		 More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../css/kickoff.css">
+
+	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+	<!-- All JavaScript at the bottom, except this Modernizr build.
+		 Modernizr enables HTML5 elements & feature detects for optimal performance.
+		 Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<script src="../js/libs/modernizr.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!--  ==============  -->
+		<!--  === HEADER ===  -->
+		<!--  ==============  -->
+		<header id="masthead" role="banner">
+			<h1>Kickoff Carousel <small>using CarouFredSel</small></h1>
+		</header>
+
+
+		<!--  ====================  -->
+		<!--  === MAIN CONTENT ===  -->
+		<!--  ====================  -->
+		<div role="main">
+
+			<div class="carousel-wrapper">
+
+				<div class="carousel">
+					<div class="carousel-item">
+						<img src="http://placekitten.com/600/300" alt="place kitten">
+					</div>
+					<div class="carousel-item">
+						<img src="http://placekitten.com/g/600/300" alt="place kitten">
+					</div>
+					<div class="carousel-item">
+						<img src="http://placekitten.com/600/300" alt="place kitten">
+					</div>
+					<div class="carousel-item">
+						<img src="http://placekitten.com/g/600/300" alt="place kitten">
+					</div>
+				</div>
+
+				<a href="#" class="carousel-prev">Prev</a>
+				<span class="carousel-pagination"></span>
+				<a href="#" class="carousel-next">Next</a>
+
+			</div>
+		</div>
+
+
+		<!--  ==============  -->
+		<!--  === FOOTER ===  -->
+		<!--  ==============  -->
+		<footer id="footer" role="contentinfo">
+
+		</footer>
+	</div>
+
+	<!-- JavaScript at the bottom for fast page loading -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
+
+	<script src="../js/libs/plugins/jquery.imagesLoaded.min.js"></script>
+	<script src="../js/libs/plugins/carouFredSel/jquery.carouFredSel-5.6.1-packed.js"></script>
+	<script src="js/tests-carousel.js"></script>
+
+</body>
+</html>
