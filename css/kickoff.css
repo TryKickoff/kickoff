@@ -740,20 +740,6 @@ img {
 ul.centred,
 ul.centered {
   text-align: center;
-  zoom: 1;
-  zoom: 1;
-}
-ul.centred:before,
-ul.centered:before,
-ul.centred:after,
-ul.centered:after {
-  display: table;
-  content: "";
-  zoom: 1;
-}
-ul.centred:after,
-ul.centered:after {
-  clear: both;
 }
 ul.centred li,
 ul.centered li {
