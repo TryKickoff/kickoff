@@ -40,8 +40,6 @@ html {
   /* 1 */
 
   -webkit-text-size-adjust: 100%;
-  /* 2 */
-
   -ms-text-size-adjust: 100%;
   /* 2 */
 
@@ -663,7 +661,7 @@ img {
   }
 }
 @media screen and (min-width: 1382px) {
-
+  
 }
 .row:before,
 .row:after,
@@ -688,7 +686,6 @@ img {
 .block-grid {
   display: block;
   list-style-type: none;
-  zoom: 1;
   zoom: 1;
 }
 .block-grid:before,
@@ -1391,7 +1388,6 @@ select:focus:required:invalid:focus {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   zoom: 1;
-  zoom: 1;
 }
 .form-actions:before,
 .form-actions:after {
@@ -1621,7 +1617,6 @@ legend + .control-group {
 }
 .form-horizontal .control-item {
   margin-bottom: 24px;
-  zoom: 1;
   zoom: 1;
 }
 .form-horizontal .control-item:before,
@@ -1970,7 +1965,7 @@ pre code {
   height: 14px;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/ui/glyphicons-halflings.png");
+  background-image: url("/img/ui/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
   *margin-right: .3em;
@@ -1980,7 +1975,7 @@ pre code {
   *margin-left: 0;
 }
 .icon-white {
-  background-image: url("../img/ui/glyphicons-halflings-white.png");
+  background-image: url("/img/ui/glyphicons-halflings-white.png");
 }
 .icon-glass {
   background-position: 0      0;
@@ -2704,7 +2699,6 @@ input[type="submit"].btn.btn-mini {
 .btn-group {
   position: relative;
   zoom: 1;
-  zoom: 1;
   *margin-left: .3em;
 }
 .btn-group:before,
@@ -2920,16 +2914,16 @@ input[type="submit"].btn.btn-mini {
   font-weight: bold;
 }
 @media screen and (min-width: 480px) {
-
+  
 }
 @media screen and (min-width: 768px) {
-
+  
 }
 @media screen and (min-width: 992px) {
-
+  
 }
 @media screen and (min-width: 1382px) {
-
+  
 }
 .ir {
   display: block;
@@ -3037,7 +3031,7 @@ ul.floated {
     margin: 0 auto;
     font-size: 0.75em;
     /* 12px (if base font-size was 16px) */
-
+  
   }
   /* A list of things you don’t want printing. */
   #nav,
