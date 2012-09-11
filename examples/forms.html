@@ -1,5 +1,9 @@
 <!doctype html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -15,6 +19,18 @@
 
 </head>
 <body>
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+		 chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+
+	<!--  ==============  -->
+	<!--  === HEADER ===  -->
+	<!--  ==============  -->
+	<header id="masthead" role="banner">
+
+	</header>
+
 
 	<!--  ====================  -->
 	<!--  === MAIN CONTENT ===  -->
@@ -186,6 +202,7 @@
 
 	</div>
 
+
 	<!--  ==============  -->
 	<!--  === FOOTER ===  -->
 	<!--  ==============  -->
@@ -195,5 +212,7 @@
 	<!--[if lt IE 8]>
 		<script src="https://raw.github.com/scottjehl/Respond/master/respond.min.js"></script>
 	<![endif]-->
+
+
 </body>
 </html>

@@ -40,6 +40,8 @@ html {
   /* 1 */
 
   -webkit-text-size-adjust: 100%;
+  /* 2 */
+
   -ms-text-size-adjust: 100%;
   /* 2 */
 
@@ -686,6 +688,7 @@ img {
 .block-grid {
   display: block;
   list-style-type: none;
+  zoom: 1;
   zoom: 1;
 }
 .block-grid:before,
@@ -1388,6 +1391,7 @@ select:focus:required:invalid:focus {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   zoom: 1;
+  zoom: 1;
 }
 .form-actions:before,
 .form-actions:after {
@@ -1617,6 +1621,7 @@ legend + .control-group {
 }
 .form-horizontal .control-item {
   margin-bottom: 24px;
+  zoom: 1;
   zoom: 1;
 }
 .form-horizontal .control-item:before,
@@ -2698,6 +2703,7 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-group {
   position: relative;
+  zoom: 1;
   zoom: 1;
   *margin-left: .3em;
 }

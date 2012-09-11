@@ -1,108 +1,64 @@
 <!doctype html>
-<html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Kickoff by TMW</title>
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		 More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
 	<meta name="description" content="">
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="css/kickoff.css">
 
+	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+	<!-- All JavaScript at the bottom, except this Modernizr build.
+		 Modernizr enables HTML5 elements & feature detects for optimal performance.
+		 Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<script src="js/libs/modernizr.min.js"></script>
 </head>
 <body>
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+		 chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-	<div class="container">
 
-		<!--  ====================  -->
-		<!--  === MAIN CONTENT ===  -->
-		<!--  ====================  -->
-		<div role="main">
-			<article class="markdown-body entry-content" itemprop="mainContentOfPage">
-				<h1><a name="tmws-front-end-framework" class="anchor" href="#tmws-front-end-framework"><span class="mini-icon mini-icon-link"></span></a>TMW's front-end framework</h1>
+	<!--  ==============  -->
+	<!--  === HEADER ===  -->
+	<!--  ==============  -->
+	<header id="masthead" role="banner">
 
-				<p>Developed by <a href="https://github.com/dragongraphics">Ashley Nolan</a> &amp; <a href="https://github.com/mrmartineau">Zander Martineau</a></p>
+	</header>
 
-				<p><strong>This is a work in progress set of base templates, and as such will be changed quite regularly.  If using be sure to read the documentation to understand it fully before using</strong></p>
 
-				<h3>
-				<a name="browser-support" class="anchor" href="#browser-support"><span class="mini-icon mini-icon-link"></span></a>Browser support</h3>
-
-				<p>There are quite a few CSS &amp; Javascript fallbacks/polyfills to cater for older browser's lack of features - we're looking at you IE!</p>
-
-				<h2>
-				<a name="html-files" class="anchor" href="#html-files"><span class="mini-icon mini-icon-link"></span></a>HTML file(s)</h2>
-
-				<p><code>index.html</code></p>
-
-				<p>The base HTML file structure.  An include of modernizr is included but should be replaced to a minimal version with only required features before release.</p>
-
-				<h2>
-				<a name="css-folder" class="anchor" href="#css-folder"><span class="mini-icon mini-icon-link"></span></a>CSS folder</h2>
-
-				<p><code>kickoff.css</code></p>
-
-				<p>This is the compiled CSS from the project's LESS files (in the less folder), it should not be edited directly.</p>
-
-				<p><code>polyfills/box-sizing.htc</code></p>
-
-				<p>Polyfill for <code>box-sizing:border-box;</code> - either use this, or target individual cases using Modernizr.</p>
-
-				<h2>
-				<a name="img-folder" class="anchor" href="#img-folder"><span class="mini-icon mini-icon-link"></span></a>img folder</h2>
-
-				<p>Folder to store all images. Any specific commonalities in the images should be stored in separate folders (such as <code>img/ui</code>) but obviously not overused to the point of irrelevance.</p>
-
-				<h2>
-				<a name="js-folder" class="anchor" href="#js-folder"><span class="mini-icon mini-icon-link"></span></a>JS folder</h2>
-
-				<p><code>/js/plugins.js</code></p>
-
-				<p>File where all plugins are references.</p>
-
-				<p>At the top of the file, and index should be kept of all plugins included, in the order they are displayed in the code.</p>
-
-				<p>Out of the box, the file includes Paul Irish's <a href="http://paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/">lightweight console.log wrapper</a> and the 'make it safe always' console.log script from <a href="http://html5boilerplate.com/">HTMl5 Boilerplate</a>.</p>
-
-				<p><code>/js/script.js</code> Where any custom JS should be coded.</p>
-
-				<p>This can eventually be split into more specific files and built into one JS file at production.</p>
-
-				<p><code>/js/mobile-plugins.js</code></p>
-
-				<p>File where some plugins are used. These should go into one <code>plugins.js</code> file in production but kept seperately for development</p>
-
-				<p>A sample of how your JS should be structured is included.  All operations should be evoked from SiteSetup, so initialisations of objects and functions can be traced easily.</p>
-
-				<p><code>/js/libs/</code></p>
-
-				<p>Includes local versions of jQuery, modernizr &amp; folders for <code>polyfills</code> &amp; <code>plugins</code> - which should be replaced by later versions when released - as well as more commonly used plugins.</p>
-
-				<p>Note that these plugins should be added into the <code>plugins.js</code> when they are needed - do not add additional script tags into your HTML.</p>
-
-				<p><code>/js/libs/polyfills/</code></p>
-
-				<p>This directory includes <code>html5shiv.js</code> when modernizr is overload for your project and only basic HTML5 elements are required. Respond.min.js is also included.</p>
-
-				<h2>
-				<a name="examples" class="anchor" href="#examples"><span class="mini-icon mini-icon-link"></span></a>Examples</h2>
-
-				<ul>
-					<li><a href="examples/carousel.html" title="Carousel">Carousel</a></li>
-					<li><a href="examples/elements.html" title="Elements">Elements</a></li>
-					<li><a href="examples/forms.html" title="Forms">Forms</a></li>
-					<li><a href="examples/grids.html" title="Grids">Grids</a></li>
-					<li><a href="examples/sprites.html" title="Sprites">Sprites</a></li>
-				</ul>
-
-			</article>
-
-		</div>
+	<!--  ====================  -->
+	<!--  === MAIN CONTENT ===  -->
+	<!--  ====================  -->
+	<div role="main">
 
 	</div>
+
+
+	<!--  ==============  -->
+	<!--  === FOOTER ===  -->
+	<!--  ==============  -->
+	<footer id="footer" role="contentinfo">
+
+	</footer>
+
 
 	<!-- JavaScript at the bottom for fast page loading -->
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
 
 </body>
 </html>
