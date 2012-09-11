@@ -97,8 +97,7 @@ remove these placeholder Media Queries. One possibility would be to work from
 wide viewports down and use `max-width` MQs instead, e.g., `@media only screen
 and (max-width: 480px)`.
 
-Take a look into the [Mobile
-Boilerplate](https://github.com/h5bp/mobile-boilerplate) for features that are
+Take a look into the [Mobile Boilerplate](https://github.com/h5bp/mobile-boilerplate) for features that are
 useful when developing mobile wep apps.
 
 

@@ -1,4 +1,4 @@
-Kickoff | [Documentation table of contents](docs/README.md)
+Kickoff | [Documentation table of contents](README.md)
 
 # Usage
 
@@ -102,7 +102,7 @@ What follows is a general overview of each major part and how to use them.
 
 This directory should contain all your project's CSS files. It includes some
 initial CSS to help get you started from a solid foundation. [About the
-CSS](docs/css.md).
+CSS](css.md).
 
 ### docs
 
@@ -113,15 +113,15 @@ as the location and basis for your own project's documentation.
 
 This directory should contain all your project's JS files. Libraries, plugins,
 and custom code can all be included here. It includes some initial JS to help
-get you started. [About the JavaScript](docs/js.md).
+get you started. [About the JavaScript](js.md).
 
 ### .htaccess
 
-The default web server config is for Apache. [About the .htaccess](docs/htaccess.md).
+The default web server config is for Apache. [About the .htaccess](htaccess.md).
 
 Host your site on a server other than Apache? You're likely to find the
 corresponding configuration file in our [server configs
-repo](docs/https://github.com/h5bp/server-configs). If you cannot find a
+repo](https://github.com/h5bp/server-configs). If you cannot find a
 configuration file for your setup, please consider contributing one so that
 others can benefit too.
 
@@ -149,11 +149,11 @@ Edit this file to include any pages you need hidden from search engines.
 ### crossdomain.xml
 
 A template for working with cross-domain requests. [About
-crossdomain.xml](docs/crossdomain.md).
+crossdomain.xml](crossdomain.md).
 
 ### icons
 
 Replace the default `favicon.ico` and apple touch icons with your own. You
 might want to check out Hans Christian's handy [Kickoff Favicon and
 Apple Touch Icon
-PSD-Template](docs/http://drublic.de/blog/html5-boilerplate-favicons-psd-template/).
+PSD-Template](http://drublic.de/blog/html5-boilerplate-favicons-psd-template/).
