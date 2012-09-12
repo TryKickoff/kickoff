@@ -38,13 +38,6 @@ A basic Kickoff site initially looks something like this:
 │       ├── modernizr.min.js
 │       ├── zepto.min.js
 │       ├── plugins
-|           ├──
-|           ├──
-|           ├──
-|           ├──
-|           ├──
-│           └──
-│       └── polyfills
 |           ├── jquery.easie.min.js
 |           ├── jquery.imagesLoaded.min.js
 |           ├── jquery.validation.min.js
@@ -65,6 +58,11 @@ A basic Kickoff site initially looks something like this:
 |                   ├── jquery.fancybox-buttons.js
 |                   ├── jquery.fancybox-thumbs.css
 |                   └── jquery.fancybox-thumbs.js
+
+│       └── polyfills
+|           ├── html5printshiv.js
+|           ├── html5shiv.js
+|           ├── respond.min.js
 ├── less
 │   ├── app.less
 │   ├── button-groups.less
