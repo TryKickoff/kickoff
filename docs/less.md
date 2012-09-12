@@ -1,4 +1,4 @@
-[Documentation table of contents](README.md)
+[Documentation table of contents](readme.md)
 
 These docs are still incomplete. If you have any questions, please email zmartineau@tmw.co.uk
 

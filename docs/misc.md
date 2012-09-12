@@ -1,4 +1,4 @@
-[Documentation table of contents](README.md)
+[Documentation table of contents](readme.md)
 
 # Miscellaneous
 

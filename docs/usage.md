@@ -1,4 +1,4 @@
-Kickoff | [Documentation table of contents](README.md)
+Kickoff | [Documentation table of contents](readme.md)
 
 # Usage
 
