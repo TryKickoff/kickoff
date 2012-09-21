@@ -12,7 +12,7 @@ One of Twitter Bootstrap's creators wrote a [quick blog post](http://www.wordsby
 
 * Bootstrap compiles faster ~6x faster with Less compared to Sass
 * Less is written in JavaScript, making it easier to us to dive in and patch compared to Ruby with Sass.
-* Less is more; we want to feel like we're writing CSS and making Bootstrap approachable to all.
+* Less is more; we want to feel like we're writing CSS and making Kickoff approachable to all.
 
 ### What's included?
 
@@ -42,26 +42,24 @@ Created by the same guy as the [unofficial **Mac** app](http://incident57.com/le
 
 The four most important .less files in any Kickoff project are:
 
-#### 1. kickoff.less
+#### 1. [kickoff.less](https://github.com/tmwagency/kickoff/blob/master/less/kickoff.less)
 All roads lead to here. `Kickoff.less` is the starting point for any kickoff project. Here you choose which other `.less` files your project needs. The order of the imported files is the same order that the CSS is compiled to.
 
 Exclude any existing items by using a javascript comment `//` at the start of the line or remove that line completely.
 
-#### 2. variables.less
+#### 2. [variables.less](https://github.com/tmwagency/kickoff/blob/master/less/variables.less)
 This file contains all your app/site's global variables. For example, you can set your background colours, fonts, base text size etc here & use the variable names throughout the rest of your project.
 
-#### 3. mixins.less
+#### 3. [mixins.less](https://github.com/tmwagency/kickoff/blob/master/less/mixins.less)
 Mixins contains many useful items, but the most useful of which are the CSS3 mixins.
 
-#### 4. app.less
+#### 4. [app.less](https://github.com/tmwagency/kickoff/blob/master/less/app.less)
 Here you add all your app-specific css/less.
 
 ### Other useful LESS files
 
-#### typography.less
-You can use the brilliant [Gridlover](http://www.gridlover.net/) to work out your font sizings.
+#### [typography.less](https://github.com/tmwagency/kickoff/blob/master/less/typography.less)
+You can use the brilliant [Gridlover](http://www.gridlover.net/) to work out your font sizings & spacings
 
-#### choreographic-grid.less
+#### [choreographic-grid.less](https://github.com/tmwagency/kickoff/blob/master/less/choreographic-grid.less)
 View the [example page](http://mrmartineau.github.com/Choreographic-Grid/test.html) for a demo then view the source to understand how it works.
-
-#### forms.less
