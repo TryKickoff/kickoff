@@ -24,21 +24,14 @@
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 
-	<!--  ==============  -->
-	<!--  === HEADER ===  -->
-	<!--  ==============  -->
-	<header id="masthead" role="banner">
-
-	</header>
-
-
 	<!--  ====================  -->
 	<!--  === MAIN CONTENT ===  -->
 	<!--  ====================  -->
 	<div role="main" class="container">
-			<h1>Forms</h1>
+		<h1>Forms</h1>
+
 		<div class="row">
-			<div class="span6 col">
+			<div class="span8 col">
 				<h3>Forms <small>with inline labels</small></h3>
 				<form action="#" class="well form-horizontal">
 					<fieldset>
@@ -80,9 +73,16 @@
 				</form>
 
 			</div>
-			<div class="span6 col">
+
+			<div class="span4 col">
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12 col">
 				<h3>&nbsp;</h3>
-				<pre>&lt;form action="#" class="well form-horizontal"&gt;
+				<pre><code>&lt;form action="#" class="well form-horizontal"&gt;
 	&lt;fieldset&gt;
 		&lt;legend&gt;Your form&lt;/legend&gt;
 		&lt;ul&gt;
@@ -117,16 +117,16 @@
 		&lt;button type="reset" class="btn btn-inverse"&gt;Cancel&lt;/button&gt;
 	&lt;/div&gt;
 
-&lt;/form&gt;</pre>
-
+&lt;/form&gt;</code></pre>
 			</div>
 		</div>
 
+<hr>
+
 		<h3>Form <small>with labels above inputs</small></h3>
 		<div class="row">
-			<div class="span6 col">
+			<div class="span8 col">
 				<form action="#" class="well">
-
 					<fieldset>
 						<legend>Your form</legend>
 						<ul>
@@ -161,15 +161,57 @@
 
 				</form>
 			</div>
-			<div class="span6 col">
+
+			<div class="span4 col">
 
 			</div>
 		</div>
 
+		<div class="row">
+			<div class="span12 col">
+				<pre><code>&lt;form action=&quot;#&quot; class=&quot;well&quot;&gt;
+
+	&lt;fieldset&gt;
+		&lt;legend&gt;Your form&lt;/legend&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;name&quot; class=&quot;control-label&quot;&gt;Name&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;
+					&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Zander Martineau&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;email&quot; class=&quot;control-label&quot;&gt;Email&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;zander@martineau.tv&quot; /&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;phone&quot; class=&quot;control-label&quot;&gt;Phone&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;number&quot; id=&quot;phone&quot; placeholder=&quot;020 123 4567&quot; /&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;comments&quot; class=&quot;control-label&quot;&gt;Comments&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;
+					&lt;textarea id=&quot;comments&quot; rows=&quot;3&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+
+	&lt;/fieldset&gt;
+
+	&lt;div class=&quot;form-actions text_centre&quot;&gt;
+		&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn btn-primary&quot; /&gt;
+		&lt;button type=&quot;reset&quot; class=&quot;btn  btn-inverse&quot;&gt;Cancel&lt;/button&gt;
+	&lt;/div&gt;
+
+&lt;/form&gt;</code></pre>
+			</div>
+		</div>
+
+<hr>
 
 		<h3>Inline Form</h3>
 		<div class="row">
-			<div class="span6 col">
+			<div class="span8 col">
 				<form class="well form-inline">
 					<input type="text" class="input-medium" placeholder="Email">
 					<input type="password" class="input-medium" placeholder="Password">
@@ -179,23 +221,47 @@
 					<button type="submit" class="btn">Sign in</button>
 				</form>
 			</div>
-			<div class="span6 col">
 
+			<div class="span4 col">
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12 col">
+<pre><code>&lt;form class=&quot;well form-inline&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;input-medium&quot; placeholder=&quot;Email&quot;&gt;
+	&lt;input type=&quot;password&quot; class=&quot;input-medium&quot; placeholder=&quot;Password&quot;&gt;
+	&lt;label class=&quot;checkbox&quot;&gt;
+		&lt;input type=&quot;checkbox&quot;&gt; Remember me
+	&lt;/label&gt;
+	&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 			</div>
 		</div>
 
 
 		<h3>Search Form</h3>
 		<div class="row">
-			<div class="span6 col">
+			<div class="span8 col">
 				<form class="well form-search">
 					<input type="text" class="input-medium search-query">
 					<button type="submit" class="btn">Search</button>
 				</form>
 
 			</div>
-			<div class="span6 col">
 
+			<div class="span4 col">
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12 col">
+<pre><code>&lt;form class=&quot;well form-search&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;input-medium search-query&quot;&gt;
+	&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 			</div>
 		</div>
 
