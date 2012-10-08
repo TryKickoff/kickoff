@@ -19,15 +19,15 @@
 // BODY TEXT
 body {
 	font-family: @baseFontFamily;
-	font-size: @baseFontSize;
-	line-height: @baseLineHeight;
+	.font-size(@baseFontSize);
+	.line-height(@baseLineHeight);
 	color: @textColor;
 	background-color: @bodyBackground;
 }
 
 p {
 	font-family: @baseFontFamily;
-	.font-size(16);
+	.font-size(@baseFontSize);
 	.line-height(@baseLineHeight);
 	margin-top: 0;
 	margin-bottom: @baseLineHeight;
