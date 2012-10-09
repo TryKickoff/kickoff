@@ -1,0 +1,21 @@
+{
+	"name": "kickoff",
+	"description": "Front-end web development framework from the folks at TMW - http://tmw.co.uk",
+	"version": "0.5",
+	"keywords": [
+		"kickoff",
+		"css",
+		"less",
+		"jquery",
+		"html5"
+	],
+	"homepage": "https://github.com/tmwagency/kickoff",
+	"author": {
+		"name": "Zander Martineau & Ashley Nolan"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/tmwagency/kickoff.git"
+	},
+	"_id": "kickoff@0.5"
+}
