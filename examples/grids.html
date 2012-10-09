@@ -16,10 +16,10 @@
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="../css/kickoff.css">
-	<link rel="stylesheet" href="css/grid-tests.css">
+	<link rel="stylesheet" href="css/tests-grid.css">
 
 </head>
-<body>
+<body class="show-grid">
 
 
 	<div class="container">
@@ -51,6 +51,10 @@
 				<a href="#centred">Centred</a>
 			</li>
 		</ul>
+
+		<a id="show-grid-button" href="#">Hide Grid</a>
+
+
 		<ul class="tabs_content">
 			<li id="standard" class="active">
 
@@ -331,40 +335,40 @@
 				<h2>Choreographic Grid #5: Centred Columns</h2>
 					<p>Add a <code>.centred</code>  or <code>.centered</code> class to each column. This also means that you can only have one column per row.</p>
 					<div class="row">
-						<div class="col span1 centred"></div>
+						<div class="col span1 centred">1</div>
 					</div>
 					<div class="row">
-						<div class="col span2 centred"></div>
+						<div class="col span2 centred">2</div>
 					</div>
 					<div class="row">
-						<div class="col span3 centred"></div>
+						<div class="col span3 centred">3</div>
 					</div>
 					<div class="row">
-						<div class="col span4 centred"></div>
+						<div class="col span4 centred">4</div>
 					</div>
 					<div class="row">
-						<div class="col span5 centred"></div>
+						<div class="col span5 centred">5</div>
 					</div>
 					<div class="row">
-						<div class="col span6 centred"></div>
+						<div class="col span6 centred">6</div>
 					</div>
 					<div class="row">
-						<div class="col span7 centred"></div>
+						<div class="col span7 centred">7</div>
 					</div>
 					<div class="row">
-						<div class="col span8 centred"></div>
+						<div class="col span8 centred">8</div>
 					</div>
 					<div class="row">
-						<div class="col span9 centred"></div>
+						<div class="col span9 centred">9</div>
 					</div>
 					<div class="row">
-						<div class="col span10 centred"></div>
+						<div class="col span10 centred">10</div>
 					</div>
 					<div class="row">
-						<div class="col span11 centred"></div>
+						<div class="col span11 centred">11</div>
 					</div>
 					<div class="row">
-						<div class="col span12 centred"></div>
+						<div class="col span12 centred">12</div>
 					</div>
 
 
@@ -373,11 +377,10 @@
 
 	</div><!-- /container -->
 
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="js/tests-grid.js"></script>
 	<!--[if lt IE 8]>
-		<script src="https://raw.github.com/scottjehl/Respond/master/respond.min.js"></script>
+		<script src="/js/libs/polyfills/respond.min.js"></script>
 	<![endif]-->
 
 </body>
