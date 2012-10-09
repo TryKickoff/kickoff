@@ -217,22 +217,19 @@ table {
 .row {
   width: 100%;
   margin: 0 auto;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+  zoom: 1;
+}
+.row:after {
+  clear: both;
 }
 .row .row {
   min-width: 0;
-}
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-img {
-  -ms-interpolation-mode: bicubic;
-}
-#map_canvas img,
-.map_canvas img {
-  max-width: none!important;
 }
 @media screen and (min-width: 768px) {
   .col {
@@ -662,21 +659,6 @@ img {
 }
 @media screen and (min-width: 1382px) {
   
-}
-.row:before,
-.row:after,
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.row:after,
-.clearfix:after {
-  clear: both;
-}
-.row,
-.clearfix {
-  zoom: 1;
 }
 .centered.col,
 .centred.col {
@@ -1342,7 +1324,6 @@ select:focus:required:invalid:focus {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   *zoom: 1;
-  zoom: 1;
 }
 .form-actions:before,
 .form-actions:after {
@@ -1573,7 +1554,6 @@ legend + .control-group {
 .form-horizontal .control-item {
   margin-bottom: 24px;
   *zoom: 1;
-  zoom: 1;
 }
 .form-horizontal .control-item:before,
 .form-horizontal .control-item:after {
@@ -1880,6 +1860,31 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+img {
+  font-style: italic;
+  color: #c00;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+img.left {
+  margin: 0 20px 0 0;
+}
+img.right {
+  margin: 0 0 0 20px;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+#map_canvas img,
+.map_canvas img {
+  max-width: none!important;
+}
 .block-grid {
   display: block;
   list-style-type: none;
@@ -1938,6 +1943,22 @@ ul.centered {
 ul.centred li,
 ul.centered li {
   display: inline;
+}
+.floated {
+  *zoom: 1;
+}
+.floated:before,
+.floated:after {
+  display: table;
+  content: " ";
+  zoom: 1;
+}
+.floated:after {
+  clear: both;
+}
+.floated li {
+  float: left;
+  display: inline-block;
 }
 .well {
   min-height: 20px;

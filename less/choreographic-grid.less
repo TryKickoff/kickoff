@@ -8,8 +8,11 @@
 //   - BETA
 //  GRID UTILITIES
 //  CENTRED COLUMNS
-//  BLOCK GRIDS
 
+// Basic Usage
+// <div class="row">
+// 	<div class="col span12"></div>
+// </div>
 
 //  =========================
 //  === GRID CALCULATIONS ===
@@ -38,7 +41,9 @@
 	min-height: 1px;
 	position: relative;
 	clear: none;
-	&:first-child { margin-left: 0; }
+	&:first-child {
+		margin-left: 0;
+	}
 }
 .media-query(@mq-title, @bgcolor: fadeout(yellow, 40%)) {
 	content: @mq-title;
@@ -70,24 +75,23 @@
 	max-width: 1500px;
 	margin: 0 auto;
 }
-// body:before {
-// 	.media-query("mobile", fadeout(yellow, 40%));
-// }
 
 .row {
 	width: 100%;
 	margin: 0 auto;
+	.group;
 }
-
-//  To fix the grid into a certain size, set max-width to width
+// Nested rows
 .row .row {
 	min-width: 0;
 }
 
-img, object, embed { max-width: 100%; height: auto; }
-img { -ms-interpolation-mode: bicubic; }
-#map_canvas img, .map_canvas img {max-width: none!important;}
 
+
+
+// body:before {
+// 	.media-query("mobile", fadeout(yellow, 40%));
+// }
 
 // ===========================================
 // === Media queries for responsive design ===
@@ -374,15 +378,6 @@ img { -ms-interpolation-mode: bicubic; }
 
 }
 // === end 1382> ===
-
-
-//  ======================
-//  === GRID UTILITIES ===
-//  ======================
-// Nicolas Gallagher's micro clearfix
-.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
-.row:after, .clearfix:after { clear: both; }
-.row, .clearfix { zoom: 1; }
 
 
 //  =======================

@@ -3,12 +3,13 @@
 //  =============================
 //  GRID CALCULATIONS
 //  GRID SETUP
-//  MEDIA QUERIES
-//   - ALPHA
-//   - BETA
-//  GRID UTILITIES
 //  CENTRED COLUMNS
 //  BLOCK GRIDS
+
+// Basic Usage
+// <div class="row">
+// 	<div class="col span12"></div>
+// </div>
 
 
 //  =========================
@@ -60,6 +61,7 @@
 .row {
 	width: 100%;
 	margin: 0 auto;
+	.group;
 }
 
 /* To fix the grid into a certain size, set max-width to width */
@@ -188,29 +190,7 @@
 }
 
 
-img, object, embed { max-width: 100%; height: auto; }
-img { -ms-interpolation-mode: bicubic; }
-#map_canvas img, .map_canvas img {max-width: none!important;}
-
-
-
-
-
-//  ======================
-//  === GRID UTILITIES ===
-//  ======================
-/* Nicolas Gallagher's micro clearfix */
-.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
-.row:after, .clearfix:after { clear: both; }
-.row, .clearfix { zoom: 1; }
-
-
 //  =======================
 //  === CENTRED COLUMNS ===
 //  =======================
 .centered.col, .centred.col { float: none; margin: 0 auto; }
-
-
-
-
-
