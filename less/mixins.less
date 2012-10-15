@@ -9,26 +9,39 @@
 // === CSS3 ===
 // ============
 // BORDER RADIUS
-.border-radius(@radius: 5px) {
+// .border-radius(10px);
+// .border-radius(10px 10px 5px 20px);
+// .border-radius(TL TR BR BL);
+.border-radius(@radius: 5px) when (@support-FF36 = true) {
 -webkit-border-radius: @radius;
    -moz-border-radius: @radius;
 	 -o-border-radius: @radius;
 		border-radius: @radius;
 }
+.border-radius(@radius: 5px) when (@support-FF36 = false) {
+-webkit-border-radius: @radius;
+	 -o-border-radius: @radius;
+		border-radius: @radius;
+}
+
 // DROP SHADOWS
+// .box-shadow(0 1px 3px rgba(0,0,0,.25));
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
 -webkit-box-shadow: @shadow;
    -moz-box-shadow: @shadow;
 	 -o-box-shadow: @shadow;
 		box-shadow: @shadow;
 }
+
 // TRANSITIONS
+// .transition(all 0.2s ease-in-out)
 .transition(@transition: all 0.2s ease-in-out) {
 -webkit-transition: @transition;
    -moz-transition: @transition;
 	 -o-transition: @transition;
 		transition: @transition;
 }
+
 // CSS3 CONTENT COLUMNS
 .content-columns(@columnCount:2, @columnGap: 20px) {
 -webkit-column-count: @columnCount;
@@ -38,24 +51,34 @@
 		column-count: @columnCount;
 		column-gap:   @columnGap;
 }
+
 // BACKGROUND CLIPPING
 // Heads up: FF 3.6 and under need "padding" instead of "padding-box"
-.background-clip(@clip: padding-box) {
+// .background-clip(padding-box);
+.background-clip(@clip: padding-box) when (@support-FF36 = true) {
 -webkit-background-clip: @clip;
    -moz-background-clip: @clip;
 	 -o-background-size: @clip;
 		background-clip: @clip;
 }
+.background-clip(@clip: padding-box) when (@support-FF36 = false) {
+-webkit-background-clip: @clip;
+   -moz-background-clip: @clip;
+	 -o-background-size: @clip;
+		background-clip: @clip;
+}
+
 // OPACITY
+// .opacity(50);
 .opacity(@opacity: 100) {
-		filter: e(%("alpha(opacity=%d)", @opacity));
- -khtml-opacity: @opacity / 100;
-   -moz-opacity: @opacity / 100;
-		opacity: @opacity / 100;
+	zoom: 1;
+	filter: alpha(opacity=@opacity);
+	opacity: @opacity / 100;
 }
 
 // Background sizing
-.background-size(@size: contain){
+// .background-size(50px 40px);
+.background-size(@size: contain) {
 -webkit-background-size: @size;
    -moz-background-size: @size;
 	 -o-background-size: @size;
@@ -63,6 +86,7 @@
 }
 
 // Box sizing
+// .box-sizing(border-box);
 .box-sizing(@boxmodel: border-box) {
 -webkit-box-sizing: @boxmodel;
    -moz-box-sizing: @boxmodel;
@@ -70,6 +94,7 @@
 		box-sizing: @boxmodel;
 }
 // USER SELECT
+// .user-select(none)
 .user-select(@select: none) {
 -webkit-user-select: @select;
    -moz-user-select: @select;
@@ -78,12 +103,14 @@
 }
 
 // VERTICAL ALIGN
+// .vertical-align(50px);
 .vertical-align(@argument) {
 	line-height: @argument;
 	height: @argument;
 }
 
 // TRANSFORMS
+// .transform(scale(1.2));
 .transform(@transform: scale(1.2)) {
 -webkit-transform: @transform;
    -moz-transform: @transform;
@@ -91,6 +118,7 @@
 		transform: @transform;
 }
 
+// .scale(1.2);
 .scale(@factor: 1.2) {
 -webkit-transform: scale(@factor);
    -moz-transform: scale(@factor);
@@ -99,6 +127,7 @@
 		transform: scale(@factor);
 }
 
+// .rotate(10deg);
 .rotate(@deg) {
 -webkit-transform: rotate(@deg);
    -moz-transform: rotate(@deg);
@@ -107,6 +136,7 @@
 		transform: rotate(@deg);
 }
 
+// .skew(30deg, 20deg);
 .skew(@deg, @deg2) {
 -webkit-transform: skew(@deg, @deg2);
    -moz-transform: skew(@deg, @deg2);
@@ -115,7 +145,9 @@
 		transform: skew(@deg, @deg2);
 }
 
-.translate(@x, @y:0) {
+// .translate(100px, 20px);
+// .translate(x, y);
+.translate(@x:0, @y:0) {
 -webkit-transform: translate(@x, @y);
    -moz-transform: translate(@x, @y);
 	-ms-transform: translate(@x, @y);
@@ -123,6 +155,8 @@
 		transform: translate(@x, @y);
 }
 
+// .translate(100px, 20px, 10px);
+// .translate(x, y, z);
 .translate3d(@x, @y: 0, @z: 0) {
 -webkit-transform: translate3d(@x, @y, @z);
    -moz-transform: translate3d(@x, @y, @z);
@@ -131,6 +165,7 @@
 		transform: translate3d(@x, @y, @z);
 }
 
+// .perspective(100);
 .perspective(@value: 1000) {
 -webkit-perspective: @value;
    -moz-perspective: @value;
@@ -138,6 +173,7 @@
 		perspective: @value;
 }
 
+// .transform-origin(center, center);
 .transform-origin(@x:center, @y:center) {
 -webkit-transform-origin: @x @y;
    -moz-transform-origin: @x @y;
@@ -152,24 +188,6 @@
    -moz-animation: @name @duration @delay @ease;
 	-ms-animation: @name @duration @delay @ease;
 		animation: @name @duration @delay @ease;
-}
-
-// Add an alphatransparency value to any background or border color (via Elyse Holladay)
-#translucent {
-	.background(@color: @white, @alpha: 1) {
-		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-	}
-	.border(@color: @white, @alpha: 1) {
-		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-		background-clip: padding-box;
-	}
-}
-
-// Gradient Bar Colors for buttons and alerts
-.gradientBar(@primaryColor, @secondaryColor) {
-	#gradient > .vertical(@primaryColor, @secondaryColor);
-	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
-	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 
 // GRADIENTS
@@ -265,6 +283,13 @@
 	}
 }
 
+// Gradient Bar Colors for buttons and alerts
+.gradientBar(@primaryColor, @secondaryColor) {
+	#gradient > .vertical(@primaryColor, @secondaryColor);
+	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+
 // ======================
 // === UTILITY MIXINS ===
 // ======================
@@ -287,6 +312,7 @@
 // === FONT MIXINS ===
 // ===================
 // REM FONT SIZE
+// .font-size(16);
 .font-size(@sizeValue: @baseFontSize){
 	@remValue: (@sizeValue / @baseFontSize);
 	font-size: ~"@{sizeValue}px";
@@ -294,15 +320,50 @@
 }
 
 // REM LINE HEIGHT
+// .line-height(16);
 .line-height(@sizeValue: @baseLineHeight){
 	@remValue: (@sizeValue / @baseFontSize);
 	line-height: ~"@{sizeValue}px";
 	line-height: ~"@{remValue}rem";
 }
+
 // EM FONT SIZE
 .font-size-ems(@target-px-size, @context-px-size:@base-font-size) {
 	font-size: (@target-px-size / @context-px-size) * 1em;
 }
+
+// ==================
+// === REM MIXINS ===
+// ==================
+// .rem(font-size, 16);
+.rem(font-size, @sizeValue: @baseFontSize){
+	@remValue: (@sizeValue / @baseFontSize);
+	font-size: ~"@{sizeValue}px";
+	font-size: ~"@{remValue}rem";
+}
+
+// .rem(line-height, 16);
+.rem(line-height, @sizeValue: @baseFontSize){
+	@remValue: (@sizeValue / @baseFontSize);
+	line-height: ~"@{sizeValue}px";
+	line-height: ~"@{remValue}rem";
+}
+
+// .rem(margin, 16);
+.rem(margin, @sizeValue: @baseFontSize){
+	@remValue: (@sizeValue / @baseFontSize);
+	margin: ~"@{sizeValue}px";
+	margin: ~"@{remValue}rem";
+}
+
+// .rem(padding, 16);
+.rem(padding, @sizeValue: @baseFontSize){
+	@remValue: (@sizeValue / @baseFontSize);
+	padding: ~"@{sizeValue}px";
+	padding: ~"@{remValue}rem";
+}
+
+
 
 .font-face( @family-name, @font-path, @font-weight:normal, @font-style:normal, @include-svg:false ) when not (@include-svg) {
 	@font-face {
@@ -341,10 +402,13 @@
 }
 
 // SIZING SHORTCUTS
+// .size(10px, 30px);
 .size(@width: 5px, @height: 5px) {
 	height: @height;
 	width: @width;
 }
+
+// .square(50px);
 .square(@size: 5px) {
 	.size(@size, @size);
 }
