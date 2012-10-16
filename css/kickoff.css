@@ -978,11 +978,18 @@ fieldset {
   margin: 0;
   border: 0;
 }
+.control-group {
+  margin-top: 12px;
+}
+legend + .control-group {
+  margin-top: 24px;
+  -webkit-margin-top-collapse: separate;
+}
 legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 48px;
@@ -1017,12 +1024,21 @@ label {
   display: block;
   margin-bottom: 5px;
   color: #404040;
+  font-weight: bold;
+}
+label.checkbox,
+label.radio {
+  font-weight: normal;
 }
 input,
 textarea,
 select,
 .uneditable-input {
   display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
   width: 210px;
   height: 36px;
   padding: 4px;
@@ -1031,7 +1047,7 @@ select,
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
-  color: #808080;
+  color: #404040;
   border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -1131,20 +1147,26 @@ input[type="color"] {
   padding-left: 18px;
 }
 .radio input[type="radio"],
+.checkbox input[type="radio"],
+.radio input[type="checkbox"],
 .checkbox input[type="checkbox"] {
   float: left;
   margin-left: -18px;
 }
-.control-input > .radio:first-child,
-.control-input > .checkbox:first-child {
-  padding-top: 5px;
-}
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
   padding-top: 5px;
   margin-bottom: 0;
   vertical-align: middle;
+}
+.control-input > .radio:first-child,
+.control-input > .checkbox:first-child {
+  padding-top: 5px;
 }
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
@@ -1222,80 +1244,80 @@ textarea[readonly] {
   border-color: #ddd;
   cursor: not-allowed;
 }
-.control-item.warning > label,
-.control-item.warning .help-block,
-.control-item.warning .help-inline {
+.control-group.warning > label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
   color: #c09853;
 }
-.control-item.warning input,
-.control-item.warning select,
-.control-item.warning textarea {
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
   color: #c09853;
   border-color: #c09853;
 }
-.control-item.warning input:focus,
-.control-item.warning select:focus,
-.control-item.warning textarea:focus {
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
   border-color: #a47e3c;
   -webkit-box-shadow: 0 0 6px #dbc59e;
   -moz-box-shadow: 0 0 6px #dbc59e;
   -o-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
-.control-item.warning .input-prepend .add-on,
-.control-item.warning .input-append .add-on {
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853;
 }
-.control-item.error > label,
-.control-item.error .help-block,
-.control-item.error .help-inline {
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
   color: #b94a48;
 }
-.control-item.error input,
-.control-item.error select,
-.control-item.error textarea {
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
   color: #b94a48;
   border-color: #b94a48;
 }
-.control-item.error input:focus,
-.control-item.error select:focus,
-.control-item.error textarea:focus {
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
   border-color: #953b39;
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   -o-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
-.control-item.error .input-prepend .add-on,
-.control-item.error .input-append .add-on {
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
-.control-item.success > label,
-.control-item.success .help-block,
-.control-item.success .help-inline {
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
   color: #468847;
 }
-.control-item.success input,
-.control-item.success select,
-.control-item.success textarea {
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
   color: #468847;
   border-color: #468847;
 }
-.control-item.success input:focus,
-.control-item.success select:focus,
-.control-item.success textarea:focus {
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
   border-color: #356635;
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   -o-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
 }
-.control-item.success .input-prepend .add-on,
-.control-item.success .input-append .add-on {
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
   border-color: #468847;
@@ -1315,6 +1337,131 @@ select:focus:required:invalid:focus {
   -o-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
 }
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-bottom: 0;
+}
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+.form-horizontal .control-group {
+  margin-bottom: 24px;
+  *zoom: 1;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: " ";
+  zoom: 1;
+}
+.form-horizontal .control-group:after {
+  clear: both;
+}
+.form-horizontal .control-label,
+.form-horizontal .control-group label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: right;
+}
+.form-horizontal .control-input,
+.form-horizontal .control-group div {
+  margin-left: 160px;
+  /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
+
+  *display: inline-block;
+  *margin-left: 0;
+  *padding-left: 20px;
+}
+.form-horizontal .control-input:first-child,
+.form-horizontal .control-group div:first-child {
+  *padding-left: 160px;
+}
+.form-horizontal .help-block {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.form-horizontal .form-actions {
+  padding-left: 160px;
+}
+.form-search > *,
+.form-inline > * {
+  margin-right: 10px;
+}
+.form-search > *:last-child,
+.form-inline > *:last-child {
+  margin-right: 0;
+}
+.form-search label,
+.form-inline label {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+}
+.form-search .radio,
+.form-inline .radio,
+.form-search .checkbox,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-search .radio input[type="radio"],
+.form-inline .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .checkbox input[type="checkbox"],
+.form-search .radio input[type="radio"],
+.form-inline .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-search .input-append,
+.form-inline .input-append {
+  margin-bottom: 0;
+}
+.search-query {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-left: 4px \9;
+  padding-right: 4px \9;
+  margin-bottom: 0;
+  -webkit-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+}
 .form-actions {
   padding: 23px 20px 24px;
   margin-top: 24px;
@@ -1331,6 +1478,12 @@ select:focus:required:invalid:focus {
 }
 .form-actions:after {
   clear: both;
+}
+.form-actions .btn {
+  margin-right: 10px;
+}
+.form-actions .btn:last-child {
+  margin-right: 0;
 }
 .uneditable-input {
   background-color: #ffffff;
@@ -1397,6 +1550,10 @@ select:focus:required:invalid:focus {
 .input-prepend .add-on,
 .input-append .add-on {
   display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
   width: auto;
   min-width: 16px;
   height: 24px;
@@ -1464,122 +1621,6 @@ select:focus:required:invalid:focus {
   -webkit-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-}
-.search-query {
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-left: 4px \9;
-  padding-right: 4px \9;
-  margin-bottom: 0;
-  -webkit-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
-}
-.form-search input,
-.form-inline input,
-.form-horizontal input,
-.form-search textarea,
-.form-inline textarea,
-.form-horizontal textarea,
-.form-search select,
-.form-inline select,
-.form-horizontal select,
-.form-search .help-inline,
-.form-inline .help-inline,
-.form-horizontal .help-inline,
-.form-search .uneditable-input,
-.form-inline .uneditable-input,
-.form-horizontal .uneditable-input,
-.form-search .input-prepend,
-.form-inline .input-prepend,
-.form-horizontal .input-prepend,
-.form-search .input-append,
-.form-inline .input-append,
-.form-horizontal .input-append {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  margin-bottom: 0;
-}
-.form-search .hide,
-.form-inline .hide,
-.form-horizontal .hide {
-  display: none;
-}
-.form-search label,
-.form-inline label {
-  display: inline-block;
-}
-.form-search .input-append,
-.form-inline .input-append,
-.form-search .input-prepend,
-.form-inline .input-prepend {
-  margin-bottom: 0;
-}
-.form-search .radio,
-.form-search .checkbox,
-.form-inline .radio,
-.form-inline .checkbox {
-  padding-left: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-.form-search .radio input[type="radio"],
-.form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: 0;
-  margin-right: 3px;
-}
-.control-item {
-  margin-bottom: 12px;
-}
-legend + .control-group {
-  margin-top: 24px;
-  -webkit-margin-top-collapse: separate;
-}
-.form-horizontal .control-item {
-  margin-bottom: 24px;
-  *zoom: 1;
-}
-.form-horizontal .control-item:before,
-.form-horizontal .control-item:after {
-  display: table;
-  content: " ";
-  zoom: 1;
-}
-.form-horizontal .control-item:after {
-  clear: both;
-}
-.form-horizontal .control-label,
-.form-horizontal .control-item label {
-  float: left;
-  width: 140px;
-  padding-top: 5px;
-  text-align: right;
-}
-.form-horizontal .control-input,
-.form-horizontal .control-item div {
-  margin-left: 160px;
-  /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
-
-  *display: inline-block;
-  *margin-left: 0;
-  *padding-left: 20px;
-}
-.form-horizontal .control-input:first-child,
-.form-horizontal .control-item div:first-child {
-  *padding-left: 160px;
-}
-.form-horizontal .help-block {
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-.form-horizontal .form-actions {
-  padding-left: 160px;
 }
 table {
   max-width: 100%;
@@ -1807,7 +1848,7 @@ pre {
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  tab-size: 4;
+  tab-size: 3;
 }
 code {
   padding: 2px 4px;
@@ -1990,7 +2031,6 @@ ul.centered li {
   color: #404040;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  vertical-align: middle;
   background-color: #e6e6e6;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
