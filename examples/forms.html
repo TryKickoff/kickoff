@@ -16,46 +16,196 @@
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="../css/kickoff.css">
+	<link rel="stylesheet" href="js/google-code-prettify/prettify.css" />
+	<script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>
 
 </head>
-<body>
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-		 chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
+<body onload="prettyPrint()">
 
 	<!--  ====================  -->
 	<!--  === MAIN CONTENT ===  -->
 	<!--  ====================  -->
 	<div role="main" class="container">
-		<h1>Forms</h1>
+		<h1>Forms <small>styling</small></h1>
 
+		<h2>1. Form <small>with labels above inputs</small></h2>
 		<div class="row">
+			<div class="span4 col">
+				<p>Having forms styled like this depends on specific markup with specific class names. Please take the example code below as a guide.</p>
+				<p>Each of the examples presented on this page have an</p>
+
+				<a href="#code-example-labels-above" class="show-code btn btn-success">Show code example</a>
+			</div>
+
 			<div class="span8 col">
-				<h3>Forms <small>with inline labels</small></h3>
+				<form action="#" class="well">
+					<fieldset>
+						<legend>Your form</legend>
+						<ul>
+							<li class="control-group">
+								<label for="name" class="control-label">Name</label>
+								<div class="controls">
+									<input type="text" id="name" placeholder="Zander Martineau" class="input-xlarge" />
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="email" class="control-label">Email</label>
+								<div class="controls"><input type="email" id="email" placeholder="zander@martineau.tv" class="input-xlarge" /></div>
+							</li>
+							<li class="control-group">
+								<label for="phone" class="control-label">Phone</label>
+								<div class="controls"><input type="number" id="phone" placeholder="020 123 4567" class="input-xlarge" /></div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Textarea</label>
+								<div class="controls">
+									<textarea id="comments" rows="3" cols="50" class="input-xlarge"></textarea>
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Checkboxes &amp; Radio buttons</label>
+								<div class="controls">
+									<label class="checkbox">
+										<input type="checkbox" value="">
+										Option one is this and that—be sure to include why it's great
+									</label>
+
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										Option one is this and that—be sure to include why it's great
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										Option two can be something else and selecting it will deselect option one
+									</label>
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Inline checkboxes</label>
+								<div class="controls">
+									<label class="checkbox inline">
+										<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+									</label>
+									<label class="checkbox inline">
+										<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+									</label>
+									<label class="checkbox inline">
+										<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+									</label>
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Comments</label>
+								<div class="controls">
+									<select class="input-xlarge">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</li>
+							<li class="control-group">
+								<label for="comments" class="control-label">Comments</label>
+								<div class="controls">
+									<select multiple="multiple" class="input-xlarge">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+
+					</fieldset>
+
+					<div class="form-actions text_centre">
+						<input type="submit" value="Submit" class="btn btn-primary" />
+						<button type="reset" class="btn  btn-inverse">Cancel</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+		<div id="code-example-labels-above" class="row code-example">
+			<div class="span12 col">
+				<pre class="prettyprint lang-html linenums"><code>&lt;form action=&quot;#&quot; class=&quot;well&quot;&gt;
+
+	&lt;fieldset&gt;
+		&lt;legend&gt;Your form&lt;/legend&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;name&quot; class=&quot;control-label&quot;&gt;Name&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;
+					&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Zander Martineau&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;email&quot; class=&quot;control-label&quot;&gt;Email&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;zander@martineau.tv&quot; /&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;phone&quot; class=&quot;control-label&quot;&gt;Phone&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;number&quot; id=&quot;phone&quot; placeholder=&quot;020 123 4567&quot; /&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;control-group&quot;&gt;
+				&lt;label for=&quot;comments&quot; class=&quot;control-label&quot;&gt;Comments&lt;/label&gt;
+				&lt;div class=&quot;controls&quot;&gt;
+					&lt;textarea id=&quot;comments&quot; rows=&quot;3&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+
+	&lt;/fieldset&gt;
+
+	&lt;div class=&quot;form-actions text_centre&quot;&gt;
+		&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn btn-primary&quot; /&gt;
+		&lt;button type=&quot;reset&quot; class=&quot;btn  btn-inverse&quot;&gt;Cancel&lt;/button&gt;
+	&lt;/div&gt;
+
+&lt;/form&gt;</code></pre>
+			</div>
+		</div>
+
+<hr>
+
+		<h2>2. Forms <small>with inline labels</small></h2>
+		<div class="row">
+			<div class="span4 col">
+				<p>Assuming you use the same markup as above, all you have to do is simply add a <code>.form-horizontal</code> class to the <code>&lt;form&gt;</code> element &amp; you'll now have right aligned, inline form labels in an instant.</p>
+
+				<a href="#code-example-labels-inline" class="show-code btn btn-success">Show code example</a>
+			</div>
+
+			<div class="span8 col">
 				<form action="#" class="well form-horizontal">
 					<fieldset>
 						<legend>Your form</legend>
 						<ul class="control-group">
-							<li class="control-item">
+							<li class="control-group">
 								<label for="name" class="control-label">Name</label>
 								<div class="control-input">
-									<input type="text" id="name" placeholder="Zander Martineau" />
+									<input type="text" id="name" placeholder="Zander Martineau" class="input-xlarge" />
 								</div>
 							</li>
-							<li class="control-item">
+							<li class="control-group">
 								<label for="email" class="control-label">Email</label>
 								<div class="control-input">
-									<input type="email" id="email" placeholder="zmartineau@tmw.co.uk" />
+									<input type="email" id="email" placeholder="zmartineau@tmw.co.uk" class="input-xlarge" />
 								</div>
 							</li>
-							<li class="control-item">
+							<li class="control-group">
 								<label for="phone" class="control-label">Phone</label>
 								<div class="control-input">
-									<input type="number" id="phone" placeholder="020 123 4567" />
+									<input type="number" id="phone" placeholder="020 123 4567" class="input-xlarge" />
 								</div>
 							</li>
-							<li class="control-item">
+							<li class="control-group">
 								<label for="comments" class="control-label">Comments</label>
 								<div class="control-input">
 									<textarea id="comments" rows="3" cols="50" class="input-xlarge"></textarea>
@@ -71,18 +221,12 @@
 					</div>
 
 				</form>
-
-			</div>
-
-			<div class="span4 col">
-
 			</div>
 		</div>
 
-		<div class="row">
+		<div id="code-example-labels-inline" class="row code-example">
 			<div class="span12 col">
-				<h3>&nbsp;</h3>
-				<pre><code>&lt;form action="#" class="well form-horizontal"&gt;
+				<pre class="prettyprint lang-html linenums"><code>&lt;form action="#" class="well form-horizontal"&gt;
 	&lt;fieldset&gt;
 		&lt;legend&gt;Your form&lt;/legend&gt;
 		&lt;ul&gt;
@@ -123,94 +267,14 @@
 
 <hr>
 
-		<h3>Form <small>with labels above inputs</small></h3>
+		<h2>3. Inline Form</h2>
 		<div class="row">
-			<div class="span8 col">
-				<form action="#" class="well">
-					<fieldset>
-						<legend>Your form</legend>
-						<ul>
-							<li class="control-group">
-								<label for="name" class="control-label">Name</label>
-								<div class="controls">
-									<input type="text" id="name" placeholder="Zander Martineau" />
-								</div>
-							</li>
-							<li class="control-group">
-								<label for="email" class="control-label">Email</label>
-								<div class="controls"><input type="email" id="email" placeholder="zander@martineau.tv" /></div>
-							</li>
-							<li class="control-group">
-								<label for="phone" class="control-label">Phone</label>
-								<div class="controls"><input type="number" id="phone" placeholder="020 123 4567" /></div>
-							</li>
-							<li class="control-group">
-								<label for="comments" class="control-label">Comments</label>
-								<div class="controls">
-									<textarea id="comments" rows="3" cols="50"></textarea>
-								</div>
-							</li>
-						</ul>
-
-					</fieldset>
-
-					<div class="form-actions text_centre">
-						<input type="submit" value="Submit" class="btn btn-primary" />
-						<button type="reset" class="btn  btn-inverse">Cancel</button>
-					</div>
-
-				</form>
-			</div>
-
 			<div class="span4 col">
+				<p>This is a simplified form where everything is inline. It does not follow the same rules as the previous two examples but you will need to add a class of <code>.form-inline</code> to the <code>&lt;form&gt;</code> element so the inputs &amp; buttons play nicely.</p>
 
+				<a href="#code-example-form-inline" class="show-code btn btn-success">Show code example</a>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="span12 col">
-				<pre><code>&lt;form action=&quot;#&quot; class=&quot;well&quot;&gt;
-
-	&lt;fieldset&gt;
-		&lt;legend&gt;Your form&lt;/legend&gt;
-		&lt;ul&gt;
-			&lt;li class=&quot;control-group&quot;&gt;
-				&lt;label for=&quot;name&quot; class=&quot;control-label&quot;&gt;Name&lt;/label&gt;
-				&lt;div class=&quot;controls&quot;&gt;
-					&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Zander Martineau&quot; /&gt;
-				&lt;/div&gt;
-			&lt;/li&gt;
-			&lt;li class=&quot;control-group&quot;&gt;
-				&lt;label for=&quot;email&quot; class=&quot;control-label&quot;&gt;Email&lt;/label&gt;
-				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;zander@martineau.tv&quot; /&gt;&lt;/div&gt;
-			&lt;/li&gt;
-			&lt;li class=&quot;control-group&quot;&gt;
-				&lt;label for=&quot;phone&quot; class=&quot;control-label&quot;&gt;Phone&lt;/label&gt;
-				&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;number&quot; id=&quot;phone&quot; placeholder=&quot;020 123 4567&quot; /&gt;&lt;/div&gt;
-			&lt;/li&gt;
-			&lt;li class=&quot;control-group&quot;&gt;
-				&lt;label for=&quot;comments&quot; class=&quot;control-label&quot;&gt;Comments&lt;/label&gt;
-				&lt;div class=&quot;controls&quot;&gt;
-					&lt;textarea id=&quot;comments&quot; rows=&quot;3&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
-				&lt;/div&gt;
-			&lt;/li&gt;
-		&lt;/ul&gt;
-
-	&lt;/fieldset&gt;
-
-	&lt;div class=&quot;form-actions text_centre&quot;&gt;
-		&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn btn-primary&quot; /&gt;
-		&lt;button type=&quot;reset&quot; class=&quot;btn  btn-inverse&quot;&gt;Cancel&lt;/button&gt;
-	&lt;/div&gt;
-
-&lt;/form&gt;</code></pre>
-			</div>
-		</div>
-
-<hr>
-
-		<h3>Inline Form</h3>
-		<div class="row">
 			<div class="span8 col">
 				<form class="well form-inline">
 					<input type="text" class="input-medium" placeholder="Email">
@@ -221,15 +285,11 @@
 					<button type="submit" class="btn">Sign in</button>
 				</form>
 			</div>
-
-			<div class="span4 col">
-
-			</div>
 		</div>
 
-		<div class="row">
+		<div id="code-example-form-inline" class="row code-example">
 			<div class="span12 col">
-<pre><code>&lt;form class=&quot;well form-inline&quot;&gt;
+<pre class="prettyprint lang-html linenums"><code>&lt;form class=&quot;well form-inline&quot;&gt;
 	&lt;input type=&quot;text&quot; class=&quot;input-medium&quot; placeholder=&quot;Email&quot;&gt;
 	&lt;input type=&quot;password&quot; class=&quot;input-medium&quot; placeholder=&quot;Password&quot;&gt;
 	&lt;label class=&quot;checkbox&quot;&gt;
@@ -241,24 +301,23 @@
 		</div>
 
 
-		<h3>Search Form</h3>
+		<h2>Search Form</h2>
 		<div class="row">
+			<div class="span4 col">
+				This is similar to the inline form example above
+			</div>
 			<div class="span8 col">
 				<form class="well form-search">
-					<input type="text" class="input-medium search-query">
+					<input type="text" class="input-xlarge search-query">
 					<button type="submit" class="btn">Search</button>
 				</form>
 
 			</div>
-
-			<div class="span4 col">
-
-			</div>
 		</div>
 
-		<div class="row">
+		<div id="code-example-search-form" class="row code-example">
 			<div class="span12 col">
-<pre><code>&lt;form class=&quot;well form-search&quot;&gt;
+<pre class="prettyprint lang-html linenums"><code>&lt;form class=&quot;well form-search&quot;&gt;
 	&lt;input type=&quot;text&quot; class=&quot;input-medium search-query&quot;&gt;
 	&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Search&lt;/button&gt;
 &lt;/form&gt;</code></pre>
