@@ -1,7 +1,7 @@
 {
 	"name": "kickoff",
 	"description": "Front-end web development framework from the folks at TMW - http://tmw.co.uk",
-	"version": "0.5",
+	"version": "0.6",
 	"keywords": [
 		"kickoff",
 		"css",
@@ -17,5 +17,5 @@
 		"type": "git",
 		"url": "git://github.com/tmwagency/kickoff.git"
 	},
-	"_id": "kickoff@0.5"
+	"_id": "kickoff@0.6"
 }
