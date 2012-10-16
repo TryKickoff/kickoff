@@ -24,15 +24,28 @@ fieldset {
 	border: 0;
 }
 
+// Margin to space out fieldsets
+.control-group {
+	margin-top: @baseLineHeight / 2;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+	margin-top: @baseLineHeight;
+	-webkit-margin-top-collapse: separate;
+}
+
+
+
 // Groups of fields with labels on top (legends)
 legend {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: @baseLineHeight * 1.5;
+	margin-bottom: @baseLineHeight;
 	.font-size(@baseFontSize * 1.5);
 	.line-height(@baseLineHeight * 2);
-	color: @grayDark;
+	color: @labelColour;
 	border: 0;
 	border-bottom: 1px solid #eee;
 
@@ -53,18 +66,25 @@ textarea {
 	.line-height(@baseLineHeight);
 	font-weight: normal;
 }
+
+// And only set font-family here for those that need it (note the missing label element)
 input,
 button,
 select,
 textarea {
-	font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
+	font-family: @baseFontFamily;
 }
 
 // Identify controls by their labels
 label {
 	display: block;
 	margin-bottom: 5px;
-	color: @grayDark;
+	color: @labelColour;
+	font-weight: bold;
+}
+label.checkbox,
+label.radio {
+	font-weight: normal;
 }
 
 // Inputs, Textareas, Selects
@@ -73,13 +93,14 @@ textarea,
 select,
 .uneditable-input {
 	display: inline-block;
+	.ie7-inline-block();
 	width: 210px;
 	height: @baseLineHeight * 1.5;
 	padding: 4px;
 	margin-bottom: 9px;
 	.font-size(@baseFontSize);
 	.line-height(@baseLineHeight);
-	color: @gray;
+	color: @inputColour;
 	border: 1px solid @inputBorder;
 	.border-radius(3px);
 }
@@ -182,33 +203,44 @@ input[type="color"] {
 
 // CHECKBOXES & RADIOS
 // -------------------
-
-// Indent the labels to position radios/checkboxes as hanging
+// <label class="checkbox">
+// 	<input type="checkbox" value="">
+// 	label name
+// </label>
+//
+// <label class="radio">
+// 	<input type="radio" value="">
+// 	label name
+// </label>
 .radio,
 .checkbox {
 	padding-left: 18px;
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		float: left;
+		margin-left: -18px;
+	}
+
+	// Radios and checkboxes on same line
+	// TODO: Convert .inline to .control-inline
+	&.inline {
+		display: inline-block;
+		.ie7-inline-block();
+		padding-top: 5px;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
 }
-.radio input[type="radio"],
-.checkbox input[type="checkbox"] {
-	float: left;
-	margin-left: -18px;
-}
+
 
 // Move the options list down to align with labels
 .control-input > .radio:first-child,
 .control-input > .checkbox:first-child {
-	padding-top: 5px; // has to be padding because margin collaspes
+	padding-top: 5px; // has to be padding because margin collapses
 }
 
-// Radios and checkboxes on same line
-// TODO v3: Convert .inline to .control-inline
-.radio.inline,
-.checkbox.inline {
-	display: inline-block;
-	padding-top: 5px;
-	margin-bottom: 0;
-	vertical-align: middle;
-}
+
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
 	margin-left: 10px; // space out consecutive inline controls
@@ -289,20 +321,20 @@ textarea[readonly] {
 // === FORM FIELD FEEDBACK STATES ===
 // ==================================
 // Warning
-.control-item.warning {
+.control-group.warning {
 	.formFieldState(@warningText, @warningText, @warningBackground);
 }
 // Error
-.control-item.error {
+.control-group.error {
 	.formFieldState(@errorText, @errorText, @errorBackground);
 }
 // Success
-.control-item.success {
+.control-group.success {
 	.formFieldState(@successText, @successText, @successBackground);
 }
 
 // HTML5 invalid states
-// Shares styles with the .control-item.error above
+// Shares styles with the .control-group.error above
 input:focus:required:invalid,
 textarea:focus:required:invalid,
 select:focus:required:invalid {
@@ -314,6 +346,151 @@ select:focus:required:invalid {
 	}
 }
 
+
+// ===================================
+// === HORIZONTAL & VERTICAL FORMS ===
+// ===================================
+
+// Common properties
+// -----------------
+.form-search,
+.form-inline,
+.form-horizontal {
+
+	input,
+	textarea,
+	select,
+	.help-inline,
+	.uneditable-input,
+	.input-prepend,
+	.input-append {
+		display: inline-block;
+		.ie7-inline-block();
+		margin-bottom: 0;
+	}
+
+	// Re-hide hidden elements due to specifity
+	.hide {
+		display: none;
+	}
+}
+
+
+// ==================================
+// === HORIZONTAL-SPECIFIC STYLES ===
+// ==================================
+
+// <ul class="control-group">
+// 	<li class="control-group">
+// 		<label for="name" class="control-label">Name</label>
+// 		<div class="control-input">
+// 			<input type="text" id="name" placeholder="Zander Martineau" />
+// 		</div>
+// 	</li>
+// </ul>
+
+.form-horizontal {
+
+	// Increase spacing between groups
+	.control-group {
+		margin-bottom: @baseLineHeight;
+		.group();
+	}
+
+	// Float the labels left
+	.control-label,
+	.control-group label {
+		float: left;
+		width: 140px;
+		padding-top: 5px;
+		text-align: right;
+	}
+
+	// Move over all input controls and content
+	.control-input,
+	.control-group div {
+		margin-left: 160px;
+		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
+		*display: inline-block;
+		*margin-left: 0;
+		*padding-left: 20px;
+		&:first-child {
+			*padding-left: 160px;
+		}
+	}
+
+	// Remove bottom margin on block level help text since that's accounted for on .control-group
+	.help-block {
+		margin-top: @baseLineHeight / 2;
+		margin-bottom: 0;
+	}
+
+	// Move over buttons in .form-actions to align with .control-input
+	.form-actions {
+		padding-left: 160px;
+	}
+}
+
+
+// =============================================
+// === INLINE & SEARCH FORMS SPECIFIC STYLES ===
+// =============================================
+.form-search,
+.form-inline {
+
+	// Give all elements some space
+	> * {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	label {
+		display: inline-block;
+		.ie7-inline-block();
+	}
+
+	// Inline checkbox/radio labels (remove padding on left)
+	.radio,
+	.checkbox {
+		padding-left: 0;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	// Remove float and margin, set to inline-block
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"],
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"] {
+		float: left;
+		margin-left: 0;
+		margin-right: 3px;
+	}
+
+	// Remove margin for input-prepend/-append
+	.input-prepend,
+	.input-append {
+		margin-bottom: 0;
+	}
+}
+
+// SEARCH FORM
+// -----------
+
+.search-query {
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-left: 4px \9; // IE7-8 doesn't have border-radius, so don't indent the padding
+	padding-right: 4px \9;
+	margin-bottom: 0; // remove the default margin on all inputs
+	.border-radius(100px);
+}
+
+
+
 // FORM ACTIONS
 // ------------
 
@@ -323,7 +500,15 @@ select:focus:required:invalid {
 	margin-bottom: @baseLineHeight;
 	background-color: @formActionsBackground;
 	border-top: 1px solid #ddd;
-	.clearfix(); // Adding clearfix to allow for .pull-right button containers
+	.group(); // Adding clearfix to allow for .pull-right button containers
+
+	.btn {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 // For text that needs to appear as an input but should not be an input
@@ -335,7 +520,7 @@ select:focus:required:invalid {
 }
 
 // Placeholder text gets special styles; can't be bundled together though for some reason
-.placeholder(@grayLight);
+.placeholder(@placeholderText);
 
 // HELP TEXT
 // ---------
@@ -355,6 +540,7 @@ select:focus:required:invalid {
 	vertical-align: middle;
 	padding-left: 5px;
 }
+
 
 
 // ====================
@@ -382,6 +568,7 @@ select:focus:required:invalid {
 	}
 	.add-on {
 		display: inline-block;
+		.ie7-inline-block();
 		width: auto;
 		min-width: 16px;
 		height: @baseLineHeight;
@@ -441,137 +628,5 @@ select:focus:required:invalid {
 	.btn:last-child {
 		margin-left: -1px;
 		.border-radius(0 3px 3px 0);
-	}
-}
-
-
-
-// SEARCH FORM
-// -----------
-
-.search-query {
-	padding-left: 14px;
-	padding-right: 14px;
-	padding-left: 4px \9; // IE7-8 doesn't have border-radius, so don't indent the padding
-	padding-right: 4px \9;
-	margin-bottom: 0; // remove the default margin on all inputs
-	.border-radius(100px);
-}
-
-
-// ===================================
-// === HORIZONTAL & VERTICAL FORMS ===
-// ===================================
-
-// Common properties
-// -----------------
-.form-search,
-.form-inline,
-.form-horizontal {
-	input,
-	textarea,
-	select,
-	.help-inline,
-	.uneditable-input,
-	.input-prepend,
-	.input-append {
-		display: inline-block;
-		.ie7-inline-block();
-		margin-bottom: 0;
-	}
-	// Re-hide hidden elements due to specifity
-	.hide {
-		display: none;
-	}
-}
-.form-search label,
-.form-inline label {
-	display: inline-block;
-}
-// Remove margin for input-prepend/-append
-.form-search .input-append,
-.form-inline .input-append,
-.form-search .input-prepend,
-.form-inline .input-prepend {
-	margin-bottom: 0;
-}
-// Inline checkbox/radio labels (remove padding on left)
-.form-search .radio,
-.form-search .checkbox,
-.form-inline .radio,
-.form-inline .checkbox {
-	padding-left: 0;
-	margin-bottom: 0;
-	vertical-align: middle;
-}
-// Remove float and margin, set to inline-block
-.form-search .radio input[type="radio"],
-.form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-	float: left;
-	margin-left: 0;
-	margin-right: 3px;
-}
-
-
-// Margin to space out fieldsets
-.control-item {
-	margin-bottom: @baseLineHeight / 2;
-}
-
-// Legend collapses margin, so next element is responsible for spacing
-legend + .control-group {
-	margin-top: @baseLineHeight;
-	-webkit-margin-top-collapse: separate;
-}
-
-// ==================================
-// === HORIZONTAL-SPECIFIC STYLES ===
-// ==================================
-
-// <ul class="control-group">
-// 	<li class="control-item">
-// 		<label for="name" class="control-label">Name</label>
-// 		<div class="control-input">
-// 			<input type="text" id="name" placeholder="Zander Martineau" />
-// 		</div>
-// 	</li>
-// </ul>
-
-.form-horizontal {
-	// Increase spacing between groups
-	.control-item {
-		margin-bottom: @baseLineHeight;
-		.clearfix();
-	}
-	// Float the labels left
-	.control-label,
-	.control-item label {
-		float: left;
-		width: 140px;
-		padding-top: 5px;
-		text-align: right;
-	}
-	// Move over all input controls and content
-	.control-input,
-	.control-item div {
-		margin-left: 160px;
-		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
-		*display: inline-block;
-		*margin-left: 0;
-		*padding-left: 20px;
-		&:first-child {
-			*padding-left: 160px;
-		}
-	}
-	// Remove bottom margin on block level help text since that's accounted for on .control-item
-	.help-block {
-		margin-top: @baseLineHeight / 2;
-		margin-bottom: 0;
-	}
-	// Move over buttons in .form-actions to align with .control-input
-	.form-actions {
-		padding-left: 160px;
 	}
 }
