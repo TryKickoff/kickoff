@@ -81,7 +81,13 @@ label {
 	margin-bottom: 5px;
 	color: @labelColour;
 	font-weight: bold;
+
+	small {
+		font-weight: normal;
+		color: lighten(@labelColour, 30%);
+	}
 }
+
 label.checkbox,
 label.radio {
 	font-weight: normal;
@@ -91,7 +97,8 @@ label.radio {
 input,
 textarea,
 select,
-.uneditable-input {
+.uneditable-input,
+.file-wrapper {
 	display: inline-block;
 	.ie7-inline-block();
 	width: 210px;
@@ -101,6 +108,7 @@ select,
 	.font-size(@baseFontSize);
 	.line-height(@baseLineHeight);
 	color: @inputColour;
+	background-color: #FFF;
 	border: 1px solid @inputBorder;
 	.border-radius(3px);
 }
@@ -154,8 +162,7 @@ input[type="submit"] {
 }
 
 // Set the height of select and file controls to match text inputs
-select,
-input[type="file"] {
+select {
 	height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
 	*margin-top: 4px; /* For IE7, add top margin to align select with labels */
 	line-height: 28px;
@@ -163,7 +170,8 @@ input[type="file"] {
 
 // Reset line-height for IE
 input[type="file"] {
-	line-height: 18px \9;
+	height: 28px;
+	// .line-height(@baseLineHeight);
 }
 
 // Chrome on Linux and Mobile Safari need background-color
@@ -251,12 +259,14 @@ input[type="color"] {
 // FOCUS STATE
 // -----------
 input,
-textarea {
+textarea,
+.file-wrapper {
 	// Multiple arguments cannot be used inside a mixin if the mixin has not specified it, hence the need for a new @transtion var
 	.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 	@transition: border linear .2s, box-shadow linear .2s;
 	.transition(@transition);
 }
+
 input:focus,
 textarea:focus {
 	border-color: rgba(82,168,236,.8);
@@ -264,6 +274,7 @@ textarea:focus {
 	outline: 0;
 	outline: thin dotted \9; // IE6-9
 }
+
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
@@ -298,6 +309,10 @@ textarea[class*="span"],
 	margin-left: 0;
 }
 
+.file-wrapper input {
+	width: 90%;
+}
+
 // GRID SIZING FOR INPUTS
 //#grid > .input (@gridColumnWidth, @gridGutterWidth);
 
@@ -313,6 +328,10 @@ textarea[readonly] {
 	background-color: @inputDisabledBackground;
 	border-color: #ddd;
 	cursor: not-allowed;
+}
+
+.file-wrapper {
+
 }
 
 

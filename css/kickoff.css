@@ -1022,6 +1022,10 @@ label {
   color: #404040;
   font-weight: bold;
 }
+label small {
+  font-weight: normal;
+  color: #8c8c8c;
+}
 label.checkbox,
 label.radio {
   font-weight: normal;
@@ -1029,7 +1033,8 @@ label.radio {
 input,
 textarea,
 select,
-.uneditable-input {
+.uneditable-input,
+.file-wrapper {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -1044,6 +1049,7 @@ select,
   line-height: 24px;
   line-height: 1.5rem;
   color: #404040;
+  background-color: #FFF;
   border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -1098,8 +1104,7 @@ input[type="submit"] {
   width: auto;
   height: auto;
 }
-select,
-input[type="file"] {
+select {
   height: 28px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
 
@@ -1109,7 +1114,7 @@ input[type="file"] {
   line-height: 28px;
 }
 input[type="file"] {
-  line-height: 18px \9;
+  height: 28px;
 }
 select {
   width: 220px;
@@ -1169,7 +1174,8 @@ input[type="color"] {
   margin-left: 10px;
 }
 input,
-textarea {
+textarea,
+.file-wrapper {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1229,6 +1235,9 @@ textarea[class*="span"],
 .row-fluid .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0;
+}
+.file-wrapper input {
+  width: 90%;
 }
 input[disabled],
 select[disabled],
@@ -2018,7 +2027,7 @@ ul.centered li {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 4px 10px 4px;
+  padding: 5px 10px;
   margin-bottom: 0;
   font-size: 16px;
   font-size: 1rem;
