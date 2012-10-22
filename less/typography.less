@@ -23,6 +23,15 @@ body {
 	.line-height(@baseLineHeight);
 	color: @textColor;
 	background-color: @bodyBackground;
+
+	// Two ways to smoothen type, they are disabled by default. Enable only one of them if you need them.
+	// 1.
+	// -webkit-font-smoothing: antialiased;
+	//    -moz-font-smoothing: antialiased;
+	// font-smooth:always;
+
+	// 2.
+	// .opacity(99);
 }
 
 p {
@@ -36,6 +45,7 @@ p {
 		color: @grayLight;
 	}
 }
+
 .lead {
 	margin-bottom: @baseLineHeight;
 	font-size: 20px;
