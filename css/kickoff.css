@@ -2021,6 +2021,41 @@ ul.centered li {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
+.tabs {
+  *zoom: 1;
+  margin-bottom: 24px;
+}
+.tabs:before,
+.tabs:after {
+  display: table;
+  content: " ";
+  zoom: 1;
+}
+.tabs:after {
+  clear: both;
+}
+.tabs.is-right li {
+  float: right;
+}
+.tabs.is-centred,
+.tabs.is-centered {
+  text-align: center;
+}
+.tabs.is-centred > li,
+.tabs.is-centered > li {
+  display: inline;
+  float: none;
+}
+.tabs > li {
+  float: left;
+  margin: 0 5px;
+}
+.tabs-content > li {
+  display: none;
+}
+.tabs-content > li.is-active {
+  display: block;
+}
 .btn {
   display: inline-block;
   *display: inline;
@@ -2494,6 +2529,19 @@ button.btn.btn-mini,
 input[type="submit"].btn.btn-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
+}
+.pill {
+  display: inline-block;
+  padding: 3px 15px;
+  -webkit-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #ddd;
+  color: #000;
+}
+.pill.is-active {
+  background-color: #049cdb;
+  color: #fff;
 }
 .carousel-wrapper {
   position: relative;
