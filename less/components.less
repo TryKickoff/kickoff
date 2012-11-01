@@ -157,3 +157,44 @@ ul.centred, ul.centered {
 	padding: 9px;
 	.border-radius(3px);
 }
+
+
+// ============
+// === TABS ===
+// ============
+
+.tabs {
+	.group;
+	margin-bottom: @baseLineHeight;
+
+	&.is-right {
+		li {
+			float: right;
+		}
+	}
+
+	&.is-centred,
+	&.is-centered {
+		text-align: center;
+
+		> li {
+			display: inline;
+			float: none;
+		}
+	}
+
+	> li {
+		float: left;
+		margin: 0 5px;
+	}
+}
+
+.tabs-content {
+	> li {
+		display: none;
+	}
+
+	> li.is-active {
+		display: block;
+	}
+}
