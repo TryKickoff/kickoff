@@ -192,3 +192,21 @@ input[type="submit"].btn {
 		*padding-bottom: 1px;
 	}
 }
+
+
+// =============
+// === PILLS ===
+// =============
+.pill {
+	display: inline-block;
+	padding: 3px 15px;
+	.border-radius(30px);
+	background-color: #ddd;
+	color: #000;
+
+	&.is-active {
+		background-color: @blue;
+		color: #fff;
+	}
+}
+
