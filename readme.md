@@ -58,12 +58,10 @@ This directory includes `html5shiv.js` when modernizr is overload for your proje
 
 ##Examples
 <a href="http://tmwagency.github.com/kickoff/">Examples</a>
-
-
 <ul>
-	<li><a href="examples/carousel.html" title="Carousel">Carousel</a></li>
-	<li><a href="examples/elements.html" title="Elements">Elements</a></li>
-	<li><a href="examples/forms.html" title="Forms">Forms</a></li>
-	<li><a href="examples/grids.html" title="Grids">Grids</a></li>
-	<li><a href="examples/sprites.html" title="Sprites">Sprites</a></li>
+	<li><a href="http://tmwagency.github.com/kickoff/examples/carousel.html" title="Carousel">Carousel</a></li>
+	<li><a href="http://tmwagency.github.com/kickoff/examples/elements.html" title="Elements">Elements</a></li>
+	<li><a href="http://tmwagency.github.com/kickoff/examples/forms.html" title="Forms">Forms</a></li>
+	<li><a href="http://tmwagency.github.com/kickoff/examples/grids.html" title="Grids">Grids</a></li>
+	<li><a href="http://tmwagency.github.com/kickoff/examples/sprites.html" title="Sprites">Sprites</a></li>
 </ul>
