@@ -80,11 +80,13 @@ $gridMargin: 32px; // === Space outside the grid
 	width: 100%;
 	margin: 0 auto;
 	@include clearfix;
+
+	// Nested rows
+	& .row {
+		min-width: 0;
+	}
 }
-// Nested rows
-.row .row {
-	min-width: 0;
-}
+
 
 
 
@@ -98,7 +100,7 @@ $gridMargin: 32px; // === Space outside the grid
 // ===========================================
 
 // === 768> ===
-@media screen and (min-width: 768px) {
+@include respond-min(768px) {
 	// body:before {
 	// 	.media-query("mq-alpha", fadeout(green, 40%));
 	// }
@@ -129,98 +131,98 @@ $gridMargin: 32px; // === Space outside the grid
 	//  === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
 	//  ==============================================
 	.row {
-		> .offset1 {
+		& > .offset1 {
 			@include offset(1);
 			&:first-child {
 				@include offsetFirstChild(1);
 			}
 		}
-		> .offset2 {
+		& > .offset2 {
 			@include offset(2);
 			&:first-child {
 				@include offsetFirstChild(2);
 			}
 		}
-		> .offset3 {
+		& > .offset3 {
 			@include offset(3);
 			&:first-child {
 				@include offsetFirstChild(3);
 			}
 		}
-		> .offset4 {
+		& > .offset4 {
 			@include offset(4);
 			&:first-child {
 				@include offsetFirstChild(4);
 			}
 		}
-		> .offset5 {
+		& > .offset5 {
 			@include offset(5);
 			&:first-child {
 				@include offsetFirstChild(5);
 			}
 		}
-		> .offset6 {
+		& > .offset6 {
 			@include offset(6);
 			&:first-child {
 				@include offsetFirstChild(6);
 			}
 		}
-		> .offset7 {
+		& > .offset7 {
 			@include offset(7);
 			&:first-child {
 				@include offsetFirstChild(7);
 			}
 		}
-		> .offset8 {
+		& > .offset8 {
 			@include offset(8);
 			&:first-child {
 				@include offsetFirstChild(8);
 			}
 		}
-		> .offset9 {
+		& > .offset9 {
 			@include offset(9);
 			&:first-child {
 				@include offsetFirstChild(9);
 			}
 		}
-		> .offset10 {
+		& > .offset10 {
 			@include offset(10);
 			&:first-child {
 				@include offsetFirstChild(10);
 			}
 		}
-		> .offset11 {
+		& > .offset11 {
 			@include offset(11);
 			&:first-child {
 				@include offsetFirstChild(11);
 			}
 		}
-		> .offset12 {
+		& > .offset12 {
 			@include offset(12);
 			&:first-child {
 				@include offsetFirstChild(12);
 			}
 		}
 
-		> .push2    { @include push(2); }
-		> .push3 	{ @include push(3); }
-		> .push4 	{ @include push(4); }
-		> .push5 	{ @include push(5); }
-		> .push6 	{ @include push(6); }
-		> .push7 	{ @include push(7); }
-		> .push8 	{ @include push(8); }
-		> .push9 	{ @include push(9); }
-		> .push10 	{ @include push(10); }
+		& > .push2 	  	{ @include push(2); }
+		& > .push3 		{ @include push(3); }
+		& > .push4 		{ @include push(4); }
+		& > .push5 		{ @include push(5); }
+		& > .push6 		{ @include push(6); }
+		& > .push7 		{ @include push(7); }
+		& > .push8 		{ @include push(8); }
+		& > .push9 		{ @include push(9); }
+		& > .push10	 	{ @include push(10); }
 
-		> .pull2 	{ @include pull(2); }
-		> .pull3 	{ @include pull(3); }
-		> .pull4 	{ @include pull(4); }
-		> .pull5 	{ @include pull(5); }
-		> .pull6 	{ @include pull(6); }
-		> .pull7 	{ @include pull(7); }
-		> .pull8 	{ @include pull(8); }
-		> .pull9 	{ @include pull(9); }
-		> .pull10 	{ @include pull(10); }
+		& > .pull2 		{ @include pull(2); }
+		& > .pull3 		{ @include pull(3); }
+		& > .pull4 		{ @include pull(4); }
+		& > .pull5 		{ @include pull(5); }
+		& > .pull6 		{ @include pull(6); }
+		& > .pull7 		{ @include pull(7); }
+		& > .pull8 		{ @include pull(8); }
+		& > .pull9 		{ @include pull(9); }
+		& > .pull10	 	{ @include pull(10); }
 	}
 
 	//  ====================================
@@ -240,7 +242,7 @@ $gridMargin: 32px; // === Space outside the grid
 
 
 // === 992> ===
-@media screen and (min-width: 992px){
+@include respond-min(992px) {
 	// body:before {
 	// 	.media-query("mq-beta", fadeout(teal, 40%));
 	// }
@@ -271,98 +273,98 @@ $gridMargin: 32px; // === Space outside the grid
 	.span12, .mq-beta-resize-to12, .split .span12 { @include columns(12); }
 
 	.row {
-		> .offset1 {
+		& > .offset1 {
 			@include offset(1);
 			&:first-child {
 				@include offsetFirstChild(1);
 			}
 		}
-		> .offset2 {
+		& > .offset2 {
 			@include offset(2);
 			&:first-child {
 				@include offsetFirstChild(2);
 			}
 		}
-		> .offset3 {
+		& > .offset3 {
 			@include offset(3);
 			&:first-child {
 				@include offsetFirstChild(3);
 			}
 		}
-		> .offset4 {
+		& > .offset4 {
 			@include offset(4);
 			&:first-child {
 				@include offsetFirstChild(4);
 			}
 		}
-		> .offset5 {
+		& > .offset5 {
 			@include offset(5);
 			&:first-child {
 				@include offsetFirstChild(5);
 			}
 		}
-		> .offset6 {
+		& > .offset6 {
 			@include offset(6);
 			&:first-child {
 				@include offsetFirstChild(6);
 			}
 		}
-		> .offset7 {
+		& > .offset7 {
 			@include offset(7);
 			&:first-child {
 				@include offsetFirstChild(7);
 			}
 		}
-		> .offset8 {
+		& > .offset8 {
 			@include offset(8);
 			&:first-child {
 				@include offsetFirstChild(8);
 			}
 		}
-		> .offset9 {
+		& > .offset9 {
 			@include offset(9);
 			&:first-child {
 				@include offsetFirstChild(9);
 			}
 		}
-		> .offset10 {
+		& > .offset10 {
 			@include offset(10);
 			&:first-child {
 				@include offsetFirstChild(10);
 			}
 		}
-		> .offset11 {
+		& > .offset11 {
 			@include offset(11);
 			&:first-child {
 				@include offsetFirstChild(11);
 			}
 		}
-		> .offset12 {
+		& > .offset12 {
 			@include offset(12);
 			&:first-child {
 				@include offsetFirstChild(12);
 			}
 		}
 
-		> .mq-beta-push2, .push2    { @include push(2); }
-		> .mq-beta-push3, .push3 	{ @include push(3); }
-		> .mq-beta-push4, .push4 	{ @include push(4); }
-		> .mq-beta-push5, .push5 	{ @include push(5); }
-		> .mq-beta-push6, .push6 	{ @include push(6); }
-		> .mq-beta-push7, .push7 	{ @include push(7); }
-		> .mq-beta-push8, .push8 	{ @include push(8); }
-		> .mq-beta-push9, .push9 	{ @include push(9); }
-		> .mq-beta-push10, .push10 	{ @include push(10); }
+		& > .mq-beta-push2, .push2    	{ @include push(2); }
+		& > .mq-beta-push3, .push3 		{ @include push(3); }
+		& > .mq-beta-push4, .push4 		{ @include push(4); }
+		& > .mq-beta-push5, .push5 		{ @include push(5); }
+		& > .mq-beta-push6, .push6 		{ @include push(6); }
+		& > .mq-beta-push7, .push7 		{ @include push(7); }
+		& > .mq-beta-push8, .push8 		{ @include push(8); }
+		& > .mq-beta-push9, .push9 		{ @include push(9); }
+		& > .mq-beta-push10, .push10 	{ @include push(10); }
 
-		> .mq-beta-pull2, .pull2 	{ @include pull(2); }
-		> .mq-beta-pull3, .pull3 	{ @include pull(3); }
-		> .mq-beta-pull4, .pull4 	{ @include pull(4); }
-		> .mq-beta-pull5, .pull5 	{ @include pull(5); }
-		> .mq-beta-pull6, .pull6 	{ @include pull(6); }
-		> .mq-beta-pull7, .pull7 	{ @include pull(7); }
-		> .mq-beta-pull8, .pull8 	{ @include pull(8); }
-		> .mq-beta-pull9, .pull9 	{ @include pull(9); }
-		> .mq-beta-pull10, .pull10 	{ @include pull(10); }
+		& > .mq-beta-pull2, .pull2 		{ @include pull(2); }
+		& > .mq-beta-pull3, .pull3 		{ @include pull(3); }
+		& > .mq-beta-pull4, .pull4 		{ @include pull(4); }
+		& > .mq-beta-pull5, .pull5 		{ @include pull(5); }
+		& > .mq-beta-pull6, .pull6 		{ @include pull(6); }
+		& > .mq-beta-pull7, .pull7 		{ @include pull(7); }
+		& > .mq-beta-pull8, .pull8 		{ @include pull(8); }
+		& > .mq-beta-pull9, .pull9 		{ @include pull(9); }
+		& > .mq-beta-pull10, .pull10 	{ @include pull(10); }
 	}
 
 	.mq-beta-end { float: right; }
@@ -374,7 +376,7 @@ $gridMargin: 32px; // === Space outside the grid
 
 
 // === 1382> ===
-@media screen and (min-width: 1382px){
+@include respond-min(1382px) {
 
 }
 // === end 1382> ===

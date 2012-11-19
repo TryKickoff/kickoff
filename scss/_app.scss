@@ -46,7 +46,7 @@
 }
 
 // === 480> ===
-@media screen and (min-width: 480px) {
+@include respond-min(480px) {
 
 }
 // === end 480> ===
@@ -54,7 +54,7 @@
 
 
 // === 768> ===
-@media screen and (min-width: 768px) {
+@include respond-min(768px) {
 
 }
 // === end 768> ===
@@ -62,14 +62,14 @@
 
 
 // === 992> ===
-@media screen and (min-width: 992px){
+@include respond-min(992px) {
 
 }
 // === end 992> ===
 
 
 // === 1382> ===
-@media screen and (min-width: 1382px){
+@include respond-min(1382px) {
 
 }
 // === end 1382> ===

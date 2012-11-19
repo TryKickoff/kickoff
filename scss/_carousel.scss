@@ -23,7 +23,7 @@
 }
 
 .carousel-pagination {
-	a {
+	& a {
 		color: $blue;
 		@include opacity(60);
 		@include border-radius(40px);

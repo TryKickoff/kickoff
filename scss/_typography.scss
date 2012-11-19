@@ -133,10 +133,13 @@ a:hover {
 
 
 // LISTS
+//default list styles
+ul { list-style-type: disc }
+ol { list-style-type: decimal }
 
 // Unordered and Ordered lists
 // Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
-ul.normal, ol.normal {
+ul, ol {
 	padding: 0;
 	margin: 0 0 $baseLineHeight / 2 25px;
 	font-size: $baseFontSize;
@@ -159,21 +162,18 @@ ul.normal, ol.normal {
 	& li {
 		line-height: $baseLineHeight;
 	}
-}
-ul.normal { list-style-type: disc }
-ol.normal { list-style-type: decimal }
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-	margin-bottom: 0;
+	& ul,
+	& ol {
+		margin-bottom: 0;
+	}
+
+	&.unstyled {
+		margin-left: 0;
+		list-style: none;
+	}
 }
-ul.unstyled,
-ol.unstyled {
-	margin-left: 0;
-	list-style: none;
-}
+
 
 // Description Lists
 dl {
@@ -186,20 +186,20 @@ dd {
 dt {
 	font-weight: $boldFontWeight;
 	line-height: $baseLineHeight - 1; // fix jank Helvetica Neue font bug
-}
-dd {
-	margin-left: $baseLineHeight / 2;
-}
-// Horizontal layout (like forms)
-.dl-horizontal {
-	& dt {
+
+	// Horizontal layout (like forms)
+	.dl-horizontal & {
 		@include text-overflow();
 		float: left;
 		clear: left;
 		width: 120px;
 		text-align: right;
 	}
-	& dd {
+}
+dd {
+	margin-left: $baseLineHeight / 2;
+
+	.dl-horizontal & {
 		margin-left: 130px;
 	}
 }

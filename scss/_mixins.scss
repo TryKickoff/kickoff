@@ -32,7 +32,7 @@ $fix-mqs: false !default; //assign false if no value set already
     // If we're outputting for a fixed media query set...
     @if $fix-mqs {
         // ...and if we should apply these rules...
-        @if $fix-mqs >= $width {
+        @if $fix-mqs <= $width {
             // ...output the content the user gave us.
             @content;
         }
@@ -40,6 +40,22 @@ $fix-mqs: false !default; //assign false if no value set already
     @else {
         // Otherwise, output it using a regular media query
         @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+@mixin respond-min-max($minwidth, $maxwidth) {
+    // If we're outputting for a fixed media query set...
+    @if $fix-mqs {
+        // ...and if we should apply these rules...
+        @if $fix-mqs >= $minwidth and $fix-mqs <= $maxwidth {
+            // ...output the content the user gave us.
+            @content;
+        }
+    }
+    @else {
+        // Otherwise, output it using a regular media query
+        @media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
             @content;
         }
     }
@@ -336,16 +352,16 @@ $old-ie: false !default;
 // .font-size(16);
 @mixin font-size($sizeValue: $baseFontSize){
 	$remValue: ($sizeValue / $baseFontSize);
-	font-size: #{$sizeValue} + px;
-	font-size: #{$remValue} + rem;
+	font-size: $sizeValue + px;
+	font-size: $remValue + rem;
 }
 
 // REM LINE HEIGHT
 // .line-height(16);
 @mixin line-height($sizeValue: $baseLineHeight){
 	$remValue: ($sizeValue / $baseFontSize);
-	line-height: #{$sizeValue} + px;
-	line-height: #{$remValue} + rem;
+	line-height: $sizeValue + px;
+	line-height: $remValue + rem;
 }
 
 // EM FONT SIZE
@@ -354,35 +370,35 @@ $old-ie: false !default;
 }
 
 // ==================
-// === REM MIXINS ===
+// === REM MIXINS === NEED TO CHANGE TO IF STATEMENTS NOW
 // ==================
 // @mixin rem(font-size, 16);
-@mixin rem($sizeValue: $baseFontSize){
-	$remValue: ($sizeValue / $baseFontSize);
-	font-size: #{$sizeValue} + px;
-	font-size: #{$remValue} + rem;
-}
+// @mixin rem($sizeValue: $baseFontSize){
+// 	$remValue: ($sizeValue / $baseFontSize);
+// 	font-size: $sizeValue + px;
+// 	font-size: $remValue + rem;
+// }
 
-// .rem(line-height, 16);
-@mixin rem($sizeValue: $baseFontSize){
-	$remValue: ($sizeValue / $baseFontSize);
-	line-height: #{$sizeValue} + px;
-	line-height: #{$remValue} + rem;
-}
+// // .rem(line-height, 16);
+// @mixin rem($sizeValue: $baseFontSize){
+// 	$remValue: ($sizeValue / $baseFontSize);
+// 	line-height: $sizeValue + px;
+// 	line-height: $remValue + rem;
+// }
 
-// @mixin rem(margin, 16);
-@mixin rem($sizeValue: $baseFontSize){
-	$remValue: ($sizeValue / $baseFontSize);
-	margin: #{$sizeValue} + px;
-	margin: #{$remValue} + rem;
-}
+// // @mixin rem(margin, 16);
+// @mixin rem($sizeValue: $baseFontSize){
+// 	$remValue: ($sizeValue / $baseFontSize);
+// 	margin: $sizeValue + px;
+// 	margin: $remValue + rem;
+// }
 
-// @mixin rem(padding, 16);
-@mixin rem($sizeValue: $baseFontSize){
-	$remValue: ($sizeValue / $baseFontSize);
-	padding: #{$sizeValue} + px;
-	padding: #{$remValue} + rem;
-}
+// // @mixin rem(padding, 16);
+// @mixin rem($sizeValue: $baseFontSize){
+// 	$remValue: ($sizeValue / $baseFontSize);
+// 	padding: $sizeValue + px;
+// 	padding: $remValue + rem;
+// }
 
 
 

@@ -27,14 +27,13 @@ fieldset {
 // Margin to space out fieldsets
 .control-group {
 	margin-top: $baseLineHeight / 2;
-}
 
-// Legend collapses margin, so next element is responsible for spacing
-legend + .control-group {
-	margin-top: $baseLineHeight;
-	-webkit-margin-top-collapse: separate;
+	// Legend collapses margin, so next element is responsible for spacing
+	legend + & {
+		margin-top: $baseLineHeight;
+		-webkit-margin-top-collapse: separate;
+	}
 }
-
 
 
 // Groups of fields with labels on top (legends)
@@ -479,14 +478,14 @@ textarea {
 		padding-left: 0;
 		margin-bottom: 0;
 		vertical-align: middle;
-	}
 
-	// Remove float and margin, set to inline-block
-	& .radio input[type="radio"],
-	& .checkbox input[type="checkbox"] {
-		float: left;
-		margin-left: 0;
-		margin-right: 3px;
+		// Remove float and margin, set to inline-block
+		& input[type="radio"],
+		& input[type="checkbox"] {
+			float: left;
+			margin-left: 0;
+			margin-right: 3px;
+		}
 	}
 
 	// Remove margin for input-prepend/-append

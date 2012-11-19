@@ -22,7 +22,7 @@ img {
 .hidden-desktop    { display: none !important; }
 
 // Phones only
-@media (max-width: 767px) {
+@include respond-max(767px) {
 	// Show
 	.visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
 	// Hide
