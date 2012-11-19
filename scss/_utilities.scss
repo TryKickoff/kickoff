@@ -1,0 +1,66 @@
+// ===================================
+// === UTILITIES.less ================
+// === Non-semantic helper classes ===
+// ===================================
+// For image replacement
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+}
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 100%;
+}
+
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.is-hidden,
+.hide {
+	display: none !important;
+	visibility: hidden;
+}
+.show { display: block; }
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.is-invisible { visibility: hidden; }
+
+.left	{ float:left; }
+.right	{ float:right; }
+.clear	{ clear:both; float:none; }
+
+.mb0 { margin-bottom: 0 !important;}
+.mb1 { margin-bottom: $baseFontSize !important;}
+.mb2 { margin-bottom: $baseFontSize * 1.5 !important;}
+.mb3 { margin-bottom: $baseFontSize * 1.875 !important;}
+
+.mt0 { margin-top:    0 !important;}
+.mt1 { margin-top:    $baseFontSize !important;}
+.mt2 { margin-top:    $baseFontSize * 1.5 !important;}
+.mt3 { margin-top:    $baseFontSize * 1.875 !important;}

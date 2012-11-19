@@ -1,0 +1,75 @@
+// =======================
+// === APP.less        ===
+// === Your app styles ===
+// =======================
+
+
+// ================
+// === MASTHEAD ===
+// ================
+
+
+// ==============
+// === FOOTER ===
+// ==============
+
+
+// ============
+// === CSS3 ===
+// ============
+
+
+
+// ======================
+// === HOME / LANDING ===
+// ======================
+
+
+
+// ===========================================
+// === Media queries for responsive design ===
+// ===========================================
+//  NOTE: these will need to be adjusted, possibly moved into another file
+
+// Retina media Queries
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and ( min--moz-device-pixel-ratio: 2),
+	only screen and ( -o-min-device-pixel-ratio: 2/1),
+	only screen and ( min-device-pixel-ratio: 2),
+	only screen and ( min-resolution: 192dpi) {
+
+	// * {
+	// 	background-image: url(@imgSprite2x);
+	// 	background-size: @imgSpriteDimensions;
+	// }
+
+}
+
+// === 480> ===
+@media screen and (min-width: 480px) {
+
+}
+// === end 480> ===
+
+
+
+// === 768> ===
+@media screen and (min-width: 768px) {
+
+}
+// === end 768> ===
+
+
+
+// === 992> ===
+@media screen and (min-width: 992px){
+
+}
+// === end 992> ===
+
+
+// === 1382> ===
+@media screen and (min-width: 1382px){
+
+}
+// === end 1382> ===
