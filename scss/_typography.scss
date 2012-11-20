@@ -39,7 +39,7 @@ p {
 	@include font-size($baseFontSize);
 	@include line-height($baseLineHeight);
 	margin-top: 0;
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 	small {
 		font-size: $baseFontSize - 2;
 		color: $grayLight;
@@ -47,10 +47,10 @@ p {
 }
 
 .lead {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 	font-size: 20px;
 	font-weight: 200;
-	line-height: $baseLineHeight * 1.5;
+	@include line-height($baseLineHeight * 1.5);
 }
 
 // HEADINGS
@@ -113,8 +113,8 @@ h6 {
 
 // Page header
 .page-header {
-	padding-bottom: $baseLineHeight - 1;
-	margin: $baseLineHeight 0;
+	padding-bottom: $baseLineHeight - 1 + px;
+	margin: ($baseLineHeight + px) 0;
 	border-bottom: 1px solid $grayLighter;
 }
 .page-header h1 {
@@ -141,8 +141,8 @@ ol { list-style-type: decimal }
 // Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 $baseLineHeight / 2 25px;
-	font-size: $baseFontSize;
+	margin: 0 0 ($baseLineHeight / 2 + px) 25px;
+	@include font-size($baseFontSize);
 	& ul,
 	& ol {
 		margin: 0 0 0 45px;
@@ -160,7 +160,7 @@ ul, ol {
 		}
 	}
 	& li {
-		line-height: $baseLineHeight;
+		@include line-height($baseLineHeight);
 	}
 
 	& ul,
@@ -177,15 +177,15 @@ ul, ol {
 
 // Description Lists
 dl {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 }
 dt,
 dd {
-	line-height: $baseLineHeight;
+	@include line-height($baseLineHeight);
 }
 dt {
-	font-weight: $boldFontWeight;
-	line-height: $baseLineHeight - 1; // fix jank Helvetica Neue font bug
+	font-weight:$boldFontWeight;
+	@include line-height($baseLineHeight - 1); // fix jank Helvetica Neue font bug
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
@@ -197,7 +197,7 @@ dt {
 	}
 }
 dd {
-	margin-left: $baseLineHeight / 2;
+	margin-left: $baseLineHeight / 2 + px;
 
 	.dl-horizontal & {
 		margin-left: 130px;
@@ -209,7 +209,7 @@ dd {
 
 // Horizontal rules
 hr {
-	margin: $baseLineHeight 0;
+	margin: ($baseLineHeight + px) 0;
 	border: 0;
 	border-top: 1px solid $hrBorder;
 	border-bottom: 1px solid $white;
@@ -239,17 +239,17 @@ abbr.initialism {
 // Blockquotes
 blockquote {
 	padding: 0 0 0 15px;
-	margin: 0 0 $baseLineHeight;
+	margin: 0 0 ($baseLineHeight + px);
 	border-left: 5px solid $grayLighter;
 	& p {
 		margin-bottom: 0;
-		font-size: $baseFontSize;
+		@include font-size($baseFontSize);
 		font-weight: 300;
-		line-height: $baseLineHeight * 1.25;
+		@include line-height($baseLineHeight * 1.25);
 	}
 	& small {
 		display: block;
-		line-height: $baseLineHeight;
+		@include line-height($baseLineHeight);
 		color: $grayLight;
 		&:before {
 			content: '\2014 \00A0';
@@ -282,8 +282,8 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $baseLineHeight;
-	line-height: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
+	@include line-height($baseLineHeight);
 	font-style: normal;
 }
 
@@ -308,7 +308,7 @@ mark {
 // gist.github.com/413930
 sub, sup {
 	font-size: 75%;
-	line-height: 0;
+	@include line-height(0);
 	position: relative;
 	vertical-align: baseline;
 }

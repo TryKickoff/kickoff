@@ -52,7 +52,7 @@
 	right: 0;
 	left: 0;
 	height: 30px;
-	line-height: 30px;
+	@include line-height(30);
 	background-color: $bgcolor;
 	display: block;
 	text-align: center;

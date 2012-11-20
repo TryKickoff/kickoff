@@ -461,16 +461,17 @@ p {
   line-height: 24px;
   line-height: 1.5rem;
   margin-top: 0;
-  margin-bottom: 24; }
+  margin-bottom: 24px; }
   p small {
     font-size: 14;
     color: #bfbfbf; }
 
 .lead {
-  margin-bottom: 24;
+  margin-bottom: 24px;
   font-size: 20px;
   font-weight: 200;
-  line-height: 36; }
+  line-height: 36px;
+  line-height: 2.25rem; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -537,8 +538,8 @@ h6 {
   text-transform: uppercase; }
 
 .page-header {
-  padding-bottom: 23;
-  margin: 24 0;
+  padding-bottom: 23px;
+  margin: 24px 0;
   border-bottom: 1px solid #e6e6e6; }
 
 .page-header h1 {
@@ -559,8 +560,9 @@ ol {
 
 ul, ol {
   padding: 0;
-  margin: 0 0 12 25px;
-  font-size: 16; }
+  margin: 0 0 12px 25px;
+  font-size: 16px;
+  font-size: 1rem; }
   ul ul, ul ol, ol ul, ol ol {
     margin: 0 0 0 45px; }
   ul ul, ol ul {
@@ -572,7 +574,8 @@ ul, ol {
     ul ol ol, ol ol ol {
       list-style-type: lower-roman; }
   ul li, ol li {
-    line-height: 24; }
+    line-height: 24px;
+    line-height: 1.5rem; }
   ul ul, ul ol, ol ul, ol ol {
     margin-bottom: 0; }
   ul.unstyled, ol.unstyled {
@@ -580,15 +583,17 @@ ul, ol {
     list-style: none; }
 
 dl {
-  margin-bottom: 24; }
+  margin-bottom: 24px; }
 
 dt,
 dd {
-  line-height: 24; }
+  line-height: 24px;
+  line-height: 1.5rem; }
 
 dt {
   font-weight: bold;
-  line-height: 23; }
+  line-height: 23px;
+  line-height: 1.4375rem; }
   .dl-horizontal dt {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -599,12 +604,12 @@ dt {
     text-align: right; }
 
 dd {
-  margin-left: 12; }
+  margin-left: 12px; }
   .dl-horizontal dd {
     margin-left: 130px; }
 
 hr {
-  margin: 24 0;
+  margin: 24px 0;
   border: 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid white; }
@@ -628,16 +633,19 @@ abbr.initialism {
 
 blockquote {
   padding: 0 0 0 15px;
-  margin: 0 0 24;
+  margin: 0 0 24px;
   border-left: 5px solid #e6e6e6; }
   blockquote p {
     margin-bottom: 0;
-    font-size: 16;
+    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 30; }
+    line-height: 30px;
+    line-height: 1.875rem; }
   blockquote small {
     display: block;
-    line-height: 24;
+    line-height: 24px;
+    line-height: 1.5rem;
     color: #bfbfbf; }
     blockquote small:before {
       content: '\2014 \00A0'; }
@@ -657,8 +665,9 @@ blockquote:after {
 
 address {
   display: block;
-  margin-bottom: 24;
-  line-height: 24;
+  margin-bottom: 24px;
+  line-height: 24px;
+  line-height: 1.5rem;
   font-style: normal; }
 
 small {
@@ -676,7 +685,8 @@ mark {
 
 sub, sup {
   font-size: 75%;
-  line-height: 0;
+  line-height: 0px;
+  line-height: 0rem;
   position: relative;
   vertical-align: baseline; }
 
@@ -699,7 +709,7 @@ sub {
 /* === FORM === */
 /* ============ */
 form {
-  margin: 0 0 24; }
+  margin: 0 0 24px; }
 
 fieldset {
   padding: 0;
@@ -707,16 +717,16 @@ fieldset {
   border: 0; }
 
 .control-group {
-  margin-top: 12; }
+  margin-top: 12px; }
   legend + .control-group {
-    margin-top: 24;
+    margin-top: 24px;
     -webkit-margin-top-collapse: separate; }
 
 legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 24;
+  margin-bottom: 24px;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 48px;
@@ -769,7 +779,7 @@ select,
   /* IE7 inline-block hack */
   *zoom: 1;
   width: 210px;
-  height: 36;
+  height: 36px;
   padding: 4px;
   margin-bottom: 9px;
   font-size: 16px;
@@ -838,6 +848,7 @@ select {
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
   line-height: 28px;
+  line-height: 1.75rem;
   background-color: white; }
   select[multiple], select[size] {
     height: auto; }
@@ -1054,7 +1065,7 @@ textarea:focus:required:invalid {
   display: none; }
 
 .form-horizontal .control-group {
-  margin-bottom: 24;
+  margin-bottom: 24px;
   *zoom: 1; }
   .form-horizontal .control-group:before, .form-horizontal .control-group:after {
     display: table;
@@ -1076,7 +1087,7 @@ textarea:focus:required:invalid {
   .form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
     *padding-left: 160px; }
 .form-horizontal .help-block {
-  margin-top: 12;
+  margin-top: 12px;
   margin-bottom: 0; }
 .form-horizontal .form-actions {
   padding-left: 160px; }
@@ -1123,9 +1134,9 @@ textarea:focus:required:invalid {
   border-radius: 100px; }
 
 .form-actions {
-  padding: 23 20px 24;
-  margin-top: 24;
-  margin-bottom: 24;
+  padding: 23px 20px 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   background-color: whitesmoke;
   border-top: 1px solid #ddd;
   *zoom: 1; }
@@ -1161,7 +1172,7 @@ textarea:focus:required:invalid {
 
 .help-block {
   display: block;
-  margin-bottom: 12; }
+  margin-bottom: 12px; }
 
 .help-inline {
   display: inline-block;
@@ -1201,10 +1212,11 @@ textarea:focus:required:invalid {
     *zoom: 1;
     width: auto;
     min-width: 16px;
-    height: 24;
+    height: 24px;
     padding: 4px 5px;
     font-weight: normal;
-    line-height: 24;
+    line-height: 24px;
+    line-height: 1.5rem;
     text-align: center;
     text-shadow: 0 1px 0 white;
     vertical-align: middle;
@@ -1260,10 +1272,11 @@ table {
 
 .table {
   width: 100%;
-  margin-bottom: 24; }
+  margin-bottom: 24px; }
   .table th, .table td {
     padding: 8px;
-    line-height: 24;
+    line-height: 24px;
+    line-height: 1.5rem;
     text-align: left;
     vertical-align: top;
     border-top: 1px solid #dddddd; }
@@ -1417,6 +1430,7 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
   _font-family: 'courier new', monospace;
   font-size: 13px;
+  font-size: 0.8125rem;
   color: #404040;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -1431,9 +1445,10 @@ code {
 
 pre {
   display: block;
-  padding: 11.5;
-  margin: 0 0 12;
-  line-height: 24;
+  padding: 11.5px;
+  margin: 0 0 12px;
+  line-height: 24px;
+  line-height: 1.5rem;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -1445,7 +1460,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word; }
   pre.prettyprint {
-    margin-bottom: 24; }
+    margin-bottom: 24px; }
   pre code {
     padding: 0;
     color: inherit;
@@ -1563,7 +1578,7 @@ ul.centred, ul.centered {
 
 .tabs {
   *zoom: 1;
-  margin-bottom: 24; }
+  margin-bottom: 24px; }
   .tabs:before, .tabs:after {
     display: table;
     content: " ";
