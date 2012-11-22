@@ -1,20 +1,19 @@
-//  =============================
-//  === THE CHOROGRAPHIC GRID ===
-//  =============================
-//  GRID CALCULATIONS
-//  GRID SETUP
-//  CENTRED COLUMNS
-//  BLOCK GRIDS
+// ==============================
+// === THE CHOREOGRAPHIC GRID ===
+// ==============================
+// GRID CALCULATIONS
+// GRID SETUP
+// CENTRED COLUMNS
+// BLOCK GRIDS
 
 // Basic Usage
 // <div class="row">
 // 	<div class="col span12"></div>
 // </div>
 
-
-//  =========================
-//  === GRID CALCULATIONS ===
-//  =========================
+// =========================
+// === GRID CALCULATIONS ===
+// =========================
 @mixin columns($columnSpan: 1) {
 	width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
 }
@@ -42,9 +41,9 @@
 	&:first-child { margin-left: 0; }
 }
 
-//  ==================
-//  === GRID SETUP ===
-//  ==================
+// ==================
+// === GRID SETUP ===
+// ==================
 $gridColumnWidth: 4.3%;
 $gridGutterWidth: 4.4%;
 $gridMaxWidth: 1200px;
@@ -91,9 +90,9 @@ $gridMargin: 32px; /*=== Space outside the grid  ===*/
 .span11 { @include columns(11); }
 .span12 { @include columns(12); }
 
-//  ==============================================
-//  === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
-//  ==============================================
+// ==============================================
+// === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
+// ==============================================
 .row {
 	> .offset1 {
 		@include offset(1);
@@ -190,7 +189,7 @@ $gridMargin: 32px; /*=== Space outside the grid  ===*/
 }
 
 
-//  =======================
-//  === CENTRED COLUMNS ===
-//  =======================
+// =======================
+// === CENTRED COLUMNS ===
+// =======================
 .centered.col, .centred.col { float: none; margin: 0 auto; }

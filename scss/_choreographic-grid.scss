@@ -1,22 +1,21 @@
-//  ==============================
-//  === THE CHOREOGRAPHIC GRID ===
-//  ==============================
-//  GRID CALCULATIONS
-//  GRID SETUP
-//  MEDIA QUERIES
-//   - ALPHA
-//   - BETA
-//  GRID UTILITIES
-//  CENTRED COLUMNS
+// ==============================
+// === THE CHOREOGRAPHIC GRID ===
+// ==============================
+// GRID CALCULATIONS
+// GRID SETUP
+// MEDIA QUERIES
+//  - ALPHA
+//  - BETA
+// GRID UTILITIES//  CENTRED COLUMNS
 
 // Basic Usage
 // <div class="row">
 // 	<div class="col span12"></div>
 // </div>
 
-//  =========================
-//  === GRID CALCULATIONS ===
-//  =========================
+// =========================
+// === GRID CALCULATIONS ===
+// =========================
 @mixin columns($columnSpan: 1) {
 	width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
 }
@@ -60,9 +59,9 @@
 	z-index: 1000;
 }
 
-//  ==================
-//  === GRID SETUP ===
-//  ==================
+// ==================
+// === GRID SETUP ===
+// ==================
 $gridColumnWidth: 4.3%;
 $gridGutterWidth: 4.4%;
 $gridMaxWidth: 1200px;
@@ -127,9 +126,9 @@ $gridMargin: 32px; // === Space outside the grid
 	.span11, .mq-alpha-resize-to11 { @include columns(11); }
 	.span12, .mq-alpha-resize-to12 { @include columns(12); }
 
-	//  ==============================================
-	//  === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
-	//  ==============================================
+	// ==============================================
+	// === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
+	// ==============================================
 	.row {
 		& > .offset1 {
 			@include offset(1);
@@ -225,9 +224,9 @@ $gridMargin: 32px; // === Space outside the grid
 		& > .pull10	 	{ @include pull(10); }
 	}
 
-	//  ====================================
-	//  === SPLITTING COLUMNS & SHUNTING ===
-	//  ====================================
+	// ====================================
+	// === SPLITTING COLUMNS & SHUNTING ===
+	// ====================================
 	.split .col, .shunt {
 		float:none;
 		margin-left: 0;
@@ -247,16 +246,16 @@ $gridMargin: 32px; // === Space outside the grid
 	// 	.media-query("mq-beta", fadeout(teal, 40%));
 	// }
 
-	//  ====================
-	//  === CHOREOGRAPHY ===
-	//  ====================
+	// ====================
+	// === CHOREOGRAPHY ===
+	// ====================
 	.split .col, .shunt {
 		@include gridColumn;
 	}
 
-	//  ============
-	//  === INFO ===
-	//  ============
+	// ============
+	// === INFO ===
+	// ============
 	// I need to restate the grid widths & offsets in this media-query because of the cascade. For example, if I add .mq-alpha-resize-to8 to a column in mq-alpha & I need the the same column to return to it's 'natural' width (.span6 for example) in the wider media-query, there is no other way, that I can see, to do that. One thought I had was to add a body class, using javascript, stating which media-query is currently being viewed, then I can just use that to apply the relevant class. Not sure about this though.
 
 	.span1 , .mq-beta-resize-to1 , .split .span1  { @include columns(1);  }
@@ -382,9 +381,9 @@ $gridMargin: 32px; // === Space outside the grid
 // === end 1382> ===
 
 
-//  =======================
-//  === CENTRED COLUMNS ===
-//  =======================
+// =======================
+// === CENTRED COLUMNS ===
+// =======================
 .centered.col, .centred.col { float: none; margin: 0 auto; }
 
 

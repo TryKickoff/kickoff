@@ -1,73 +1,72 @@
 // ===================
-// === MIXINS.less ===
+// === MIXINS.scss ===
 // ===================
 // RESPONSIVE
 // CSS3
 // UTILITY MIXINS
 // FORMS
 
-//  =========================
-//  === RESPONSIVE MIXINS ===
-//  =========================
-
+// =========================
+// === RESPONSIVE MIXINS ===
+// =========================
 $fix-mqs: false !default; //assign false if no value set already
 
 @mixin respond-min($width) {
-    // If we're outputting for a fixed media query set...
-    @if $fix-mqs {
-        // ...and if we should apply these rules...
-        @if $fix-mqs >= $width {
-            // ...output the content the user gave us.
-            @content;
-        }
-    }
-    @else {
-        // Otherwise, output it using a regular media query
-        @media screen and (min-width: $width) {
-            @content;
-        }
-    }
+	// If we're outputting for a fixed media query set...
+	@if $fix-mqs {
+		// ...and if we should apply these rules...
+		@if $fix-mqs >= $width {
+			// ...output the content the user gave us.
+			@content;
+		}
+	}
+	@else {
+		// Otherwise, output it using a regular media query
+		@media screen and (min-width: $width) {
+			@content;
+		}
+	}
 }
 @mixin respond-max($width) {
-    // If we're outputting for a fixed media query set...
-    @if $fix-mqs {
-        // ...and if we should apply these rules...
-        @if $fix-mqs <= $width {
-            // ...output the content the user gave us.
-            @content;
-        }
-    }
-    @else {
-        // Otherwise, output it using a regular media query
-        @media screen and (max-width: $width) {
-            @content;
-        }
-    }
+	// If we're outputting for a fixed media query set...
+	@if $fix-mqs {
+		// ...and if we should apply these rules...
+		@if $fix-mqs <= $width {
+			// ...output the content the user gave us.
+			@content;
+		}
+	}
+	@else {
+		// Otherwise, output it using a regular media query
+		@media screen and (max-width: $width) {
+			@content;
+		}
+	}
 }
 @mixin respond-min-max($minwidth, $maxwidth) {
-    // If we're outputting for a fixed media query set...
-    @if $fix-mqs {
-        // ...and if we should apply these rules...
-        @if $fix-mqs >= $minwidth and $fix-mqs <= $maxwidth {
-            // ...output the content the user gave us.
-            @content;
-        }
-    }
-    @else {
-        // Otherwise, output it using a regular media query
-        @media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
-            @content;
-        }
-    }
+	// If we're outputting for a fixed media query set...
+	@if $fix-mqs {
+		// ...and if we should apply these rules...
+		@if $fix-mqs >= $minwidth and $fix-mqs <= $maxwidth {
+			// ...output the content the user gave us.
+			@content;
+		}
+	}
+	@else {
+		// Otherwise, output it using a regular media query
+		@media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
+			@content;
+		}
+	}
 }
 
 $old-ie: false !default;
 
 @mixin old-ie {
-    // Only use this content if we're dealing with old IE
-    @if $old-ie {
-        @content;
-    }
+	// Only use this content if we're dealing with old IE
+	@if $old-ie {
+		@content;
+	}
 }
 
 // ============
@@ -75,20 +74,20 @@ $old-ie: false !default;
 // ============
 
 // BORDER RADIUS
-// .border-radius(10px);
-// .border-radius(10px 10px 5px 20px);
-// .border-radius(TL TR BR BL);
+// @include border-radius(10px);
+// @include border-radius(10px 10px 5px 20px);
+// @include border-radius(TL TR BR BL);
 @mixin border-radius($radius: 5px) {
 -webkit-border-radius: $radius;
 	@if $support-FF36 == true {
-   		-moz-border-radius: $radius;
+		-moz-border-radius: $radius;
 	}
 	 -o-border-radius: $radius;
 		border-radius: $radius;
 }
 
 // DROP SHADOWS
-// @mixin box-shadow(0 1px 3px rgba(0,0,0,.25));
+// @include box-shadow(0 1px 3px rgba(0,0,0,.25));
 @mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
 -webkit-box-shadow: $shadow;
    -moz-box-shadow: $shadow;
@@ -97,7 +96,7 @@ $old-ie: false !default;
 }
 
 // TRANSITIONS
-// @mixin transition(all 0.2s ease-in-out)
+// @include transition(all 0.2s ease-in-out)
 @mixin transition($transition: all 0.2s ease-in-out) {
 -webkit-transition: $transition;
    -moz-transition: $transition;
@@ -117,18 +116,18 @@ $old-ie: false !default;
 
 // BACKGROUND CLIPPING
 // Heads up: FF 3.6 and under need "padding" instead of "padding-box"
-// @mixin background-clip(padding-box);
+// @include background-clip(padding-box);
 @mixin background-clip($clip: padding-box) {
 -webkit-background-clip: $clip;
 	@if $support-FF36 == true {
-   		-moz-background-clip: $clip;
-   	}
+		-moz-background-clip: $clip;
+	}
 	 -o-background-size: $clip;
 		background-clip: $clip;
 }
 
 // OPACITY
-// @mixin opacity(50);
+// @include opacity(50);
 @mixin opacity($opacity: 100) {
 	zoom: 1;
 	filter: alpha(opacity=$opacity);
@@ -136,7 +135,7 @@ $old-ie: false !default;
 }
 
 // Background sizing
-// @mixin background-size(50px 40px);
+// @include background-size(50px 40px);
 @mixin background-size($size: contain) {
 -webkit-background-size: $size;
    -moz-background-size: $size;
@@ -145,7 +144,7 @@ $old-ie: false !default;
 }
 
 // Box sizing
-// @mixin box-sizing(border-box);
+// @include box-sizing(border-box);
 @mixin box-sizing($boxmodel: border-box) {
 -webkit-box-sizing: $boxmodel;
    -moz-box-sizing: $boxmodel;
@@ -153,7 +152,7 @@ $old-ie: false !default;
 		box-sizing: $boxmodel;
 }
 // USER SELECT
-// @mixin user-select(none)
+// @include user-select(none)
 @mixin user-select($select: none) {
 -webkit-user-select: $select;
    -moz-user-select: $select;
@@ -162,14 +161,14 @@ $old-ie: false !default;
 }
 
 // VERTICAL ALIGN
-// @mixin vertical-align(50px);
+// @include vertical-align(50px);
 @mixin vertical-align($argument) {
 	line-height: $argument;
 	height: $argument;
 }
 
 // TRANSFORMS
-// @mixin transform(scale(1.2));
+// @include transform(scale(1.2));
 @mixin transform($transform: scale(1.2)) {
 -webkit-transform: $transform;
    -moz-transform: $transform;
@@ -177,7 +176,7 @@ $old-ie: false !default;
 		transform: $transform;
 }
 
-// @mixin scale(1.2);
+// @include scale(1.2);
 @mixin scale($factor: 1.2) {
 -webkit-transform: scale($factor);
    -moz-transform: scale($factor);
@@ -186,7 +185,7 @@ $old-ie: false !default;
 		transform: scale($factor);
 }
 
-// @mixin rotate(10deg);
+// @include rotate(10deg);
 @mixin rotate($deg) {
 -webkit-transform: rotate($deg);
    -moz-transform: rotate($deg);
@@ -195,7 +194,7 @@ $old-ie: false !default;
 		transform: rotate($deg);
 }
 
-// @mixin skew(30deg, 20deg);
+// @include skew(30deg, 20deg);
 @mixin skew($deg, $deg2) {
 -webkit-transform: skew($deg, $deg2);
    -moz-transform: skew($deg, $deg2);
@@ -204,8 +203,8 @@ $old-ie: false !default;
 		transform: skew($deg, $deg2);
 }
 
-// @mixin translate(100px, 20px);
-// @mixin translate(x, y);
+// @include translate(100px, 20px);
+// @include translate(x, y);
 @mixin translate($x:0, $y:0) {
 -webkit-transform: translate($x, $y);
    -moz-transform: translate($x, $y);
@@ -214,8 +213,8 @@ $old-ie: false !default;
 		transform: translate($x, $y);
 }
 
-// @mixin translate(100px, 20px, 10px);
-// @mixin translate(x, y, z);
+// @include translate(100px, 20px, 10px);
+// @include translate(x, y, z);
 @mixin translate3d($x, $y: 0, $z: 0) {
 -webkit-transform: translate3d($x, $y, $z);
    -moz-transform: translate3d($x, $y, $z);
@@ -224,7 +223,7 @@ $old-ie: false !default;
 		transform: translate3d($x, $y, $z);
 }
 
-// @mixin perspective(100);
+// @include perspective(100);
 @mixin perspective($value: 1000) {
 -webkit-perspective: $value;
    -moz-perspective: $value;
@@ -232,7 +231,7 @@ $old-ie: false !default;
 		perspective: $value;
 }
 
-// @mixin transform-origin(center, center);
+// @include transform-origin(center, center);
 @mixin transform-origin($x:center, $y:center) {
 -webkit-transform-origin: $x $y;
    -moz-transform-origin: $x $y;
@@ -242,7 +241,7 @@ $old-ie: false !default;
 }
 
 // ANIMATION
-@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+@mixin animation($name, $duration: 300ms, $delay: 0, $ease: ease) {
 -webkit-animation: $name $duration $delay $ease;
    -moz-animation: $name $duration $delay $ease;
 	-ms-animation: $name $duration $delay $ease;
@@ -250,7 +249,7 @@ $old-ie: false !default;
 }
 
 // GRADIENTS
-@mixin gradient-horizontal ($start-color, $end-color) {
+@mixin gradient-horizontal($start-color, $end-color) {
 	background-color: $end-color;
 	background-repeat: repeat-x;
 	background-image: -khtml-gradient(linear, left top, right top, from($start-color), to($end-color)); /* Konqueror */
@@ -266,7 +265,7 @@ $old-ie: false !default;
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1)"; /* IE8+ */
 	}
 }
-@mixin gradient-vertical ($start-color, $end-color) {
+@mixin gradient-vertical($start-color, $end-color) {
 	background-color: $end-color;
 	background-repeat: repeat-x;
 	background-image: -khtml-gradient(linear, left top, left bottom, from($start-color), to($end-color)); /* Konqueror */
@@ -277,7 +276,7 @@ $old-ie: false !default;
 	background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
 	background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%);  /* IE10+ */
 	background-image: linear-gradient($start-color, $end-color); /* the standard */
-		@if $disable-filters == false {
+	@if $disable-filters == false {
 		filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE6 & IE7 */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE8+ */
 	}
@@ -349,7 +348,7 @@ $old-ie: false !default;
 // === FONT MIXINS ===
 // ===================
 // REM FONT SIZE
-// .font-size(16);
+// @include font-size(16);
 @mixin font-size($sizeValue: $baseFontSize){
 	$remValue: ($sizeValue / $baseFontSize);
 	font-size: $sizeValue + px;
@@ -357,7 +356,7 @@ $old-ie: false !default;
 }
 
 // REM LINE HEIGHT
-// .line-height(16);
+// @include line-height(16);
 @mixin line-height($sizeValue: $baseLineHeight){
 	$remValue: ($sizeValue / $baseFontSize);
 	line-height: $sizeValue + px;
@@ -372,29 +371,29 @@ $old-ie: false !default;
 // ==================
 // === REM MIXINS === NEED TO CHANGE TO IF STATEMENTS NOW
 // ==================
-// @mixin rem(font-size, 16);
-// @mixin rem($sizeValue: $baseFontSize){
+// @include rem(font-size, 16);
+// @include rem($sizeValue: $baseFontSize){
 // 	$remValue: ($sizeValue / $baseFontSize);
 // 	font-size: $sizeValue + px;
 // 	font-size: $remValue + rem;
 // }
 
-// // .rem(line-height, 16);
-// @mixin rem($sizeValue: $baseFontSize){
+// @include rem(line-height, 16);
+// @include rem($sizeValue: $baseFontSize){
 // 	$remValue: ($sizeValue / $baseFontSize);
 // 	line-height: $sizeValue + px;
 // 	line-height: $remValue + rem;
 // }
 
-// // @mixin rem(margin, 16);
-// @mixin rem($sizeValue: $baseFontSize){
+// @include rem(margin, 16);
+// @include rem($sizeValue: $baseFontSize){
 // 	$remValue: ($sizeValue / $baseFontSize);
 // 	margin: $sizeValue + px;
 // 	margin: $remValue + rem;
 // }
 
-// // @mixin rem(padding, 16);
-// @mixin rem($sizeValue: $baseFontSize){
+// @include rem(padding, 16);
+// @include rem($sizeValue: $baseFontSize){
 // 	$remValue: ($sizeValue / $baseFontSize);
 // 	padding: $sizeValue + px;
 // 	padding: $remValue + rem;
@@ -417,23 +416,20 @@ $old-ie: false !default;
 
 
 
-
-
-
 // CENTRE-ALIGN A BLOCK LEVEL ELEMENT
-@mixin center_block {
+@mixin center-block {
 	display: block;
 	margin: 0 auto;
 }
 
 // SIZING SHORTCUTS
-// @mixin size(10px, 30px);
+// @include size(10px, 30px);
 @mixin size($width: 5px, $height: 5px) {
 	height: $height;
 	width: $width;
 }
 
-// @mixin square(50px);
+// @include square(50px);
 @mixin square($size: 5px) {
 	@include size($size, $size);
 }
