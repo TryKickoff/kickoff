@@ -167,6 +167,16 @@ $old-ie: false !default;
 	height: $argument;
 }
 
+// TEXT TRUNCATION
+// @include truncate(300px);
+// @include truncate(100%);
+@mixin truncate($truncation-boundary){
+	max-width:$truncation-boundary;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
 // TRANSFORMS
 // @include transform(scale(1.2));
 @mixin transform($transform: scale(1.2)) {
