@@ -427,7 +427,10 @@ $old-ie: false !default;
 
 
 // CENTRE-ALIGN A BLOCK LEVEL ELEMENT
-@mixin center-block {
+// @extend %center-block
+// #context a%center-block
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholders
+%center-block {
 	display: block;
 	margin: 0 auto;
 }
