@@ -2,18 +2,31 @@
 // === HELPERS.js ===
 // ==================
 
-// Array Remove - By John Resig (MIT Licensed)
-// http://ejohn.org/blog/javascript-array-remove/
-if ( !Array.prototype.remove ) {
-	Array.prototype.remove = function(from, to) {
-		var rest = this.slice((to || from) + 1 || this.length);
-		this.length = from < 0 ? this.length + from : from;
-		return this.push.apply(this, rest);
-	};
-}
-
-// Complete cookie reader/writer from https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+// JS Shims, helpers
+// =================
+// Consider using one of these libraries to provide support for
+// javascript's natives across browsers
 //
+// * https://github.com/kriskowal/es5-shim
+// * http://lodash.com/
+// * http://sugarjs.com/
+
+
+// Array Remove
+// ============
+// By John Resig (MIT Licensed)
+// http://ejohn.org/blog/javascript-array-remove/
+Array.prototype.remove = Array.prototype.remove ||  function(from, to) {
+	var rest = this.slice((to || from) + 1 || this.length);
+	this.length = from < 0 ? this.length + from : from;
+	return this.push.apply(this, rest);
+};
+
+// Complete cookie reader/writer
+// =============================
+// From https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+
+// Usage:
 // TMW.cookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 // TMW.cookies.getItem(name)
 // TMW.cookies.removeItem(name[, path])
@@ -56,5 +69,4 @@ TMW.cookies = {
 		for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = unescape(aKeys[nIdx]); }
 		return aKeys;
 	}
-
 };
