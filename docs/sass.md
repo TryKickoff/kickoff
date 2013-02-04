@@ -40,8 +40,11 @@ If you prefer to not use an app, you can use the command line.`cd` into your pro
 
 ### Apps
 
-#### [CodeKit](http://incident57.com/codekit/)
+#### [CodeKit](http://incident57.com/codekit/) - Mac
 CodeKit is a **Mac** app that compiles LESS, SASS, Stylus, CoffeeScript and many more. It can minify, concatinate & lint your code too.
+
+#### [Scout](http://mhs.github.com/scout-app/) - Mac & Windows
+Scout is a cross-platform app that delivers the power of Sass & Compass into the hands of web designers.
 
 
 ## Kickoff's default SASS files
