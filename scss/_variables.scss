@@ -2,193 +2,214 @@
 // === VARIABLES.scss ======
 // === TABLE OF CONTENTS ===
 // =========================
-// GLOBAL VALUES
-// COLOURS
-// COMPONENTS
-// PATHS
+// Settings
+// Global values
+// Breakpoints
+// Paths
+// Grid setup
+// Colour palette
+// Components
 
+// === Settings ===
 // ================
-// === SETTINGS ===
-// ================
-$using-ieclasses: true;		// whether or not the markup has html5-boilerplate style IE classes in it or not
-$disable-filters: true; 	// whether or not to disable MS-specific 'filter' properties (can make IE slow!)
 
-$support-ie7: true;
-$support-ie8: true;
-$support-FF36: false;
+// Whether or not the markup has html5-boilerplate style IE classes in it or not
+$using-ieclasses              : true;
 
-// ===============
-// === COLOURS ===
-// ===============
-// GRAYS
-$black:                             #000;
-$grayDarker:                        lighten($black, 15%);
-$grayDark:                          lighten($black, 25%);
-$gray:                              lighten($black, 50%);
-$grayLight:                         lighten($black, 75%);
-$grayLighter:                       lighten($black, 90%);
-$offWhite:                          lighten($black, 97%);
-$white:                             #fff;
+// whether or not to disable MS-specific 'filter' properties (can make IE slow!)
+$disable-filters              : true;
 
-// COLOURS
-$blue:                              #049CDB;
-$blueDark:                          darken($blue, 20%);
-$green:                             #46a546;
-$red:                               #9d261d;
-$yellow:                            #ffc40d;
-$orange:                            #f89406;
-$pink:                              #c3325f;
-$purple:                            #7a43b6;
+$support-ie7                  : true;
+$support-ie8                  : true;
+$support-FF36                 : false;
 
-$accentColor:                       $blue;
-$primaryButtonBackground:           $blue;
 
-// COLOUR SCHEME
-$complement:                        adjust-hue($accentColor, 180);  // Determine a complementary color
-$split1:                            adjust-hue($accentColor, 158);  // Split complements
-$split2:                            adjust-hue($accentColor, -158);
-$triad1:                            adjust-hue($accentColor, 135);  // Triads colors
-$triad2:                            adjust-hue($accentColor, -135);
-$tetra1:                            adjust-hue($accentColor, 90);   // Tetra colors
-$tetra2:                            adjust-hue($accentColor, -90);
-$analog1:                           adjust-hue($accentColor, 22);   // Analogs colors
-$analog2:                           adjust-hue($accentColor, -22);
-
+// === Global values ===
 // =====================
-// === GLOBAL VALUES ===
-// =====================
-// SCAFFOLDING
-$bodyBackground:                     $white;
-$textColor:                          $gray;
+$bodyBackground               : $white;
+$textColor                    : $gray;
 
-// LINKS
-$linkColor:                          $accentColor;
-$linkColorHover:                     darken($linkColor, 10%);
+// Links
+$linkColor                    : $accentColor;
+$linkColorHover               : darken($linkColor, 10%);
 
+// Base sizes
+// Set this in pixels, the font-size mixin will convert to REMS
+$baseFontSize                 : 16;
+$baseLineHeight               : $baseFontSize*1.5;
+$boldFontWeight               : bold;
 
-// BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
-$baseFontSize:                       16;
-$baseLineHeight:                     $baseFontSize*1.5;
-$boldFontWeight:                     bold;
+// Font stacks
+$sansFontFamily               : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily              : Georgia, "Times New Roman", Times, serif;
+$monoFontFamily               : Menlo, Monaco, "Courier New", monospace;
 
-// TYPOGRAPHY
-$sansFontFamily:                     "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:                    Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:                     Menlo, Monaco, "Courier New", monospace;
+$baseFontFamily               : $sansFontFamily;
+$altFontFamily                : $serifFontFamily;
 
-$baseFontFamily:                     $sansFontFamily;
-$altFontFamily:                      $serifFontFamily;
-
-$headingsFontFamily:                 inherit;   // empty to use BS default, $baseFontFamily
-$headingsFontWeight:                 bold;      // instead of browser default, bold
-$headingsColor:                      $grayDark; // empty to use BS default, $textColor
+$headingsFontFamily           : inherit;   // empty to use BS default, $baseFontFamily
+$headingsFontWeight           : bold;      // instead of browser default, bold
+$headingsColor                : $grayDark; // empty to use BS default, $textColor
 
 
+// === Breakpoints ===
+// ===================
+// There are no common breakpoints so these are just a suggestion
+// You'll need to define your own breakpoints to suit your design
+$breakpoint-narrow            : 30em;
+$breakpoint-mid               : 48em;
+$breakpoint-wide              : 60em;
+$breakpoint-huge              : 100em;
 
 
+// === Paths ===
+// =============
+$imgPath                      : "/img";
+$imgUIPath                    : "#{$imgPath}/ui";
+$iconSpritePath               : "#{$imgUIPath}/glyphicons-halflings.png";
+$iconWhiteSpritePath          : "#{$imgUIPath}/glyphicons-halflings-white.png";
+$imgSprite1x                  : "#{$imgUIPath}/sprites$1x.png";
+$imgSprite2x                  : "#{$imgUIPath}/sprites$2x.png";
+// $imgSpriteDimensions          : 50px 300px; // Used for retina sprites  - make these the same size as $imgSprite1x
 
 
+// === Grid setup ===
+// ==================
+// Settings here override & affect the output in choreographic-grid.scss
+
+// Choose your grid options
+$debugQueries                 : false ; // Show the media query debugger at the top of the viewport
+$usingPushPullColumns         : true  ; // Allow columns to be pushed & pulled
+$usingOffsetcolumns           : true  ; // Allow columns to be offset
+$usingSplitsAndShunts         : true  ; // Use Splits & Shunts for responsive web design
+
+// Setup grid defaults
+$gridColumnCount              : 12    ; // Total column count
+$gridGutterWidth              : 20    ; // [in pixels]
+$gridMaxWidth                 : 1000  ; // [in pixels]
+$gridMargin                   : 0     ; // [in pixels] Space outside the grid
+
+// Column Padding
+$gridColumnPadding            : 10     ; // [in pixels]
+$gridColumnPaddingUnit        : 'px'   ; // [in pixels or percent] Specify your unit of measurement for column padding
+$nestedColumnPadding          : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+
+// === Colour palette ===
+// ======================
+$color-primary                : #2b306a;
+$color-secondary              : #06c0db;
+$color-highlight              : #ff9600;
+$color-muted                  : #eef;
+$color-note                   : #666;
+
+$accentColor                  : $blue;
+$primaryButtonBackground      : $blue;
+$complement                   : adjust-hue($accentColor, 180);  // Determine a complementary color
+
+// Common colours
+$color-text                   : #242424;
+$color-background             : #fefefe;
+$color-border                 : #ddd;
+
+// Links
+$color-link-default           : #242424;
+$color-link-visited           : #444;
+$color-link-hover             : $pink;
+$color-link-active            : $yellow;
+
+// Code
+$color-code                   : #333;
+$color-code-background        : #f3f3f3;
+$color-pre                    : #d4d4d4;
+$color-pre-background         : #333;
+
+// Selections
+$color-selection              : #b3d4fc;
+
+// Messages
+$color-message                : #f4ecbb;
+$color-success                : #2cde2c;
+$color-warning                : #cf8600;
+$color-important              : #d00;
+$color-notice                 : #66b;
+
+// Colours
+$blue                         : #049CDB;
+$blueDark                     : darken($blue, 20%);
+$green                        : #46a546;
+$red                          : #9d261d;
+$yellow                       : #ffc40d;
+$orange                       : #f89406;
+$pink                         : #c3325f;
+$purple                       : #7a43b6;
+$gray                         : lighten($black, 50%);
+
+
+// === Component variables ===
 // ===========================
-// === COMPONENT VARIABLES ===
-// ===========================
-// FORMS
-$inputBackground:                    $white;
-$inputBorder:                        #ccc;
-$inputDisabledBackground:            $grayLighter;
-$formActionsBackground:              #f5f5f5;
-$labelColour:                        $grayDark;
-$inputColour:                        $grayDark;
+// Forms
+$inputBackground              : $white;
+$inputBorder                  : #ccc;
+$inputDisabledBackground      : $grayLighter;
+$formActionsBackground        : #f5f5f5;
+$labelColour                  : $grayDark;
+$inputColour                  : $grayDark;
 
-// INPUT PLACEHOLDER TEXT COLOR
-$placeholderText:                   $grayLight;
+// Input placeholder text color
+$placeholderText              : $grayLight;
 
-// BUTTONS
-$btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         darken($white, 20%);
+// Buttons
+$btnBackground                : $white;
+$btnBackgroundHighlight       : darken($white, 10%);
+$btnBorder                    : darken($white, 20%);
 
-$btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);
+$btnPrimaryBackground         : $linkColor;
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%);
 
-$btnInfoBackground:                 #5bc0de;
-$btnInfoBackgroundHighlight:        #2f96b4;
+$btnInfoBackground            : #5bc0de;
+$btnInfoBackgroundHighlight   : #2f96b4;
 
-$btnSuccessBackground:              #62c462;
-$btnSuccessBackgroundHighlight:     #51a351;
+$btnSuccessBackground         : #62c462;
+$btnSuccessBackgroundHighlight: #51a351;
 
-$btnWarningBackground:              lighten($orange, 15%);
-$btnWarningBackgroundHighlight:     $orange;
+$btnWarningBackground         : lighten($orange, 15%);
+$btnWarningBackgroundHighlight: $orange;
 
-$btnDangerBackground:               #ee5f5b;
-$btnDangerBackgroundHighlight:      #bd362f;
+$btnDangerBackground          : #ee5f5b;
+$btnDangerBackgroundHighlight : #bd362f;
 
-$btnInverseBackground:              $gray;
-$btnInverseBackgroundHighlight:     $grayDarker;
+$btnInverseBackground         : $gray;
+$btnInverseBackgroundHighlight: $grayDarker;
 
-// TABLES
-$tableBackground:                   transparent; // overall background-color
-$tableBackgroundAccent:             #f9f9f9; // for striping
-$tableBackgroundHover:              #f5f5f5; // for hover
-$tableBorder:                       #ddd; // table and cell border
+// Tables
+$tableBackground:               transparent; // overall background-color
+$tableBackgroundAccent:         #f9f9f9; // for striping
+$tableBackgroundHover:          #f5f5f5; // for hover
+$tableBorder:                   #ddd; // table and cell border
 
-// FORM STATES AND ALERTS
-$warningText:                       #c09853;
-$warningBackground:                 #fcf8e3;
-$warningBorder:                     darken(adjust-hue($warningBackground, -10), 3%);
+// Form states and alerts
+$warningText:                   #c09853;
+$warningBackground:             #fcf8e3;
+$warningBorder:                 darken(adjust-hue($warningBackground, -10), 3%);
 
-$errorText:                         #b94a48;
-$errorBackground:                   #f2dede;
-$errorBorder:                       darken(adjust-hue($errorBackground, -10), 3%);
+$errorText:                     #b94a48;
+$errorBackground:               #f2dede;
+$errorBorder:                   darken(adjust-hue($errorBackground, -10), 3%);
 
-$successText:                       #468847;
-$successBackground:                 #dff0d8;
-$successBorder:                     darken(adjust-hue($successBackground, -10), 5%);
+$successText:                   #468847;
+$successBackground:             #dff0d8;
+$successBorder:                 darken(adjust-hue($successBackground, -10), 5%);
 
-$infoText:                          #3a87ad;
-$infoBackground:                    #d9edf7;
+$infoText:                      #3a87ad;
+$infoBackground:                #d9edf7;
 $infoBorder:                        darken(adjust-hue($infoBackground, -10), 7%);
-
-
 
 // <hr> border colour
 $hrBorder:                          $grayLighter;
 
 
-
-// =============
-// === PATHS ===
-// =============
-$imgPath:                           "/img";
-$imgUIPath:                         "#{$imgPath}/ui";
-$iconSpritePath:                    "#{$imgUIPath}/glyphicons-halflings.png";
-$iconWhiteSpritePath:               "#{$imgUIPath}/glyphicons-halflings-white.png";
-$imgSprite1x:                       "#{$imgUIPath}/sprites$1x.png";
-$imgSprite2x:                       "#{$imgUIPath}/sprites$2x.png";
-// $imgSpriteDimensions:               50px 300px; // Used for retina sprites  - make these the same size as $imgSprite1x
-
-
-// ==================
-// === GRID SETUP ===
-// ==================
-
-// Choose your grid options
-$debugQueries         : false ; // Show the media query debugger at the top of the viewport
-$usingPushPullColumns : true  ; // Allow columns to be pushed & pulled
-$usingOffsetcolumns   : true  ; // Allow columns to be offset
-$usingSplitsAndShunts : true  ; // Use Splits & Shunts for responsive web design
-// Setup grid defaults
-$gridColumnCount      : 12    ; // Total column count
-$gridGutterWidth      : 20    ; // [in pixels]
-$gridMaxWidth         : 1000  ; // [in pixels]
-$gridMargin           : 0     ; // [in pixels] Space outside the grid
-// Column Padding
-$gridColumnPadding    : 10     ; // [in pixels]
-$gridColumnPaddingUnit: 'px'   ; // [in pixels or percent] Specify your unit of measurement for column padding
-$nestedColumnPadding  : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
-
-
-// ==============================
-// === APP-SPECIFIC VARIABLES ===
+// === App-specific variables ===
 // ==============================
 
 
