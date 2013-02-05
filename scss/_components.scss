@@ -1,11 +1,11 @@
 // =======================
 // === COMPONENTS.scss ===
 // =======================
-// EMBEDDED CONTENT
-// BLOCK GRIDS
-// CENTRED LIST
-// FLOATED LISTS
-// WELLS
+// * Embedded content
+// * Block grids
+// * Centred list
+// * Floated lists
+// * Wells
 // -----------------------
 
 // ========================
@@ -139,7 +139,7 @@ ul.centred, ul.centered {
 	min-height: 20px;
 	padding: 19px;
 	margin-bottom: 20px;
-	background-color: #f5f5f5;
+	// background-color: #f5f5f5;
 	border: 1px solid #eee;
 	border: 1px solid rgba(0,0,0,.05);
 	@include border-radius(4px);
@@ -169,6 +169,7 @@ ul.centred, ul.centered {
 .tabs {
 	@include clearfix;
 	margin-bottom: $baseLineHeight + px;
+	list-style: none;
 
 	&.is-right {
 		& li {
@@ -193,6 +194,7 @@ ul.centred, ul.centered {
 }
 
 .tabs-content {
+	list-style: none;
 	& > li {
 		display: none;
 	}

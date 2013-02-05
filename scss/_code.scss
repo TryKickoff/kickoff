@@ -1,17 +1,16 @@
 // =================
 // === CODE.scss ===
 // =================
-// Code typography styles for the <code> and <pre> elements
-// --------------------------------------------------------
+// * Code typography styles for the <code> and <pre> elements
+// ----------------------------------------------------------
 
 // Inline and block code styles
 code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $monoFontFamily;
-	_font-family: 'courier new', monospace;
 	@include font-size(13);
-	color: $grayDark;
+	color: $gray;
 	@include border-radius(3px);
 	tab-size: 3;
 }

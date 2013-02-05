@@ -2,45 +2,87 @@
 // === BUTTONS.scss ===
 // ====================
 
-// Core
-.btn {
+$kickoff-button-style         : 'stylish'; // 'flat' or 'stylish'
+$kickoff-button-border-radius : 5px; // Any value
+$kickoff-button-border-width  : 0px;
+
+// Usage
+// @include kickoff-button(text-color, gradient-start, gradient-end);
+// @include kickoff-button(2px, #000, $blue );
+@mixin kickoff-button(
+	$text-color     : lighten(#000, 30%),
+	$bg-color       : $btnBackground){
+
+	$text-color-lightness : lightness($text-color);
+	$bg-lightness         : lightness($bg-color);
+
+	// @debug $text-color-lightness;
+
 	display: inline-block;
 	@include ie7-inline-block();
 	padding: 5px 10px;
 	margin-bottom: 0; // For input.btn
 	@include font-size($baseFontSize);
 	@include line-height($baseLineHeight);
-	color: $grayDark;
+	color: $text-color;
 	text-align: center;
-	text-shadow: 0 1px 1px rgba(255,255,255,.75);
-	// vertical-align: middle;
-	@include buttonBackground($btnBackground, $btnBackgroundHighlight);
-	border: 1px solid $btnBorder;
-	border-bottom-color: darken($btnBorder, 10%);
-	@include border-radius(4px);
-	@include box-shadow("inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+	vertical-align: middle;
 	cursor: pointer;
+
+	// Button style 'flat'
+	@if $kickoff-button-style == 'flat' {
+		background-color: $bg-color;
+		border: 1px solid $bg-color;
+	}
+
+	// Button style 'stylish'
+	@if $kickoff-button-style == 'stylish' {
+		@debug $bg-lightness;
+
+		@if $bg-lightness < 80 {
+			// Darker
+			@include gradient-vertical($bg-color, darken(adjust-hue($bg-color, 10%), 10%));
+			border: 1px solid darken($bg-color, 9%);
+			border-bottom-color: darken($bg-color, 14%);
+			text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+		} @else {
+			// Lighter
+			@include gradient-vertical($bg-color, darken($bg-color, 15%));
+			border: 1px solid darken($bg-color, 30%);
+			border-bottom-color: darken($bg-color, 40%);
+			text-shadow: 0 1px 1px rgba(255,255,255,.75);
+		}
+		$shadow: inset 0 1px 1px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.05);
+		@include box-shadow($shadow);
+
+	}
+
+	// Only have border radius if the value is larger than zero
+	@if $kickoff-button-border-radius > 0 {
+		@include border-radius($kickoff-button-border-radius);
+	}
 
 	// Give IE7 some love
 	@include ie7-restore-left-whitespace();
+	@include reset-filter();
 
 	/* Remove the border to prevent IE7's black border on input:focus */
 	*border: 0;
 	*line-height: 20px;
 
-
 	// Hover state
 	&:hover {
-		color: $grayDark;
+		color: $text-color;
 		text-decoration: none;
-		background-color: darken($white, 10%);
-		*background-color: darken($white, 15%); // Buttons in IE7 don't get borders, so darken on hover
 
-		background-position: 0 -15px;
+		@if $kickoff-button-style == 'flat' {
+			border: 1px solid darken($bg-color, 10%);
+			background-color: darken($bg-color, 10%);
+		}
 
-		// transition is only when going to hover, otherwise the background
-		// behind the gradient (there for IE<=9 fallback) gets mismatched
-		@include transition(background-position .1s linear);
+		@if $kickoff-button-style == 'stylish' {
+			background-position: 0 -15px;
+		}
 	}
 
 	// Focus state for keyboard and accessibility
@@ -52,9 +94,15 @@
 	&.active,
 	&:active {
 		background-image: none;
-		@include box-shadow("inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
-		background-color: darken($white, 10%);
-		background-color: darken($white, 15%) e("\9");
+
+		@if $kickoff-button-style == 'stylish' {
+			$shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+			@include box-shadow($shadow);
+		}
+
+		@if $kickoff-button-style == 'flat' {
+			background-color: darken($bg-color, 10%);
+		}
 		outline: 0;
 	}
 
@@ -63,8 +111,9 @@
 	&[disabled] {
 		cursor: default;
 		background-image: none;
-		background-color: darken($white, 10%);
-		@include opacity(65);
+		background-color: darken(#fff, 20%);
+		border-color: darken(#fff, 20%);
+		@include opacity(75);
 		@include box-shadow(none);
 	}
 
@@ -73,6 +122,19 @@
 	}
 }
 
+// Core
+.btn {
+	@include kickoff-button;
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+	@include kickoff-button(#fff, $blue);
+}
+.btn-warning {
+	@include kickoff-button(#fff, #ee5f5b);
+}
 
 
 // Button Sizes
@@ -116,16 +178,11 @@
 
 // Set text color
 // -------------------------
-.btn-primary,
-.btn-warning,
-.btn-danger,
-.btn-success,
-.btn-info,
-.btn-inverse,{
+.btn-primary{
 	&,
 	&:hover {
 		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-		color: $white;
+		color: #fff;
 	}
 
 	// Provide *some* extra contrast for those who can get it
@@ -135,31 +192,8 @@
 }
 
 
-// Set the backgrounds
-// -------------------------
-.btn-primary {
-	@include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
-}
-// Warning appears are orange
-.btn-warning {
-	@include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
-}
-// Danger and error appear as red
-.btn-danger {
-	@include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
-}
-// Success appears as green
-.btn-success {
-	@include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
-}
-// Info appears as a neutral blue
-.btn-info {
-	@include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
-}
-// Inverse appears as dark gray
-.btn-inverse {
-	@include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
-}
+
+
 
 
 // Cross-browser Jank
@@ -197,14 +231,18 @@ input[type="submit"].btn {
 // === PILLS ===
 // =============
 .pill {
-	display: inline-block;
-	padding: 3px 15px;
-	@include border-radius(30px);
-	background-color: #ddd;
-	color: #000;
+	$kickoff-button-style         : 'flat';
+	$kickoff-button-border-radius : 30px;
+	// $kickoff-button-border-width : 0px;
+
+	@include kickoff-button(#000, #ddd);
+
+	padding-left: 15px;
+	padding-right: 15px;
 
 	&.is-active {
 		background-color: $blue;
+		border-color: $blue;
 		color: #fff;
 	}
 }

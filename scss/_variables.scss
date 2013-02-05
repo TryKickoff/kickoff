@@ -2,13 +2,13 @@
 // === VARIABLES.scss ======
 // === TABLE OF CONTENTS ===
 // =========================
-// Settings
-// Global values
-// Breakpoints
-// Paths
-// Grid setup
-// Colour palette
-// Components
+// * Settings
+// * Global values
+// * Breakpoints
+// * Paths
+// * Grid setup
+// * Colour palette
+// * Components
 
 // === Settings ===
 // ================
@@ -26,7 +26,7 @@ $support-FF36                 : false;
 
 // === Global values ===
 // =====================
-$bodyBackground               : $white;
+$bodyBackground               : #fff;
 $textColor                    : $gray;
 
 // Links
@@ -49,7 +49,7 @@ $altFontFamily                : $serifFontFamily;
 
 $headingsFontFamily           : inherit;   // empty to use BS default, $baseFontFamily
 $headingsFontWeight           : bold;      // instead of browser default, bold
-$headingsColor                : $grayDark; // empty to use BS default, $textColor
+$headingsColor                : lighten(#000, 30%); // empty to use BS default, $textColor
 
 
 // === Breakpoints ===
@@ -66,6 +66,7 @@ $breakpoint-huge              : 100em;
 // =============
 $imgPath                      : "/img";
 $imgUIPath                    : "#{$imgPath}/ui";
+$uiSprite                     : "#{$imgPath}/ui/kickoff-sprite.png";
 $iconSpritePath               : "#{$imgUIPath}/glyphicons-halflings.png";
 $iconWhiteSpritePath          : "#{$imgUIPath}/glyphicons-halflings-white.png";
 $imgSprite1x                  : "#{$imgUIPath}/sprites$1x.png";
@@ -94,119 +95,6 @@ $gridColumnPadding            : 10     ; // [in pixels]
 $gridColumnPaddingUnit        : 'px'   ; // [in pixels or percent] Specify your unit of measurement for column padding
 $nestedColumnPadding          : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
-
-// === Colour palette ===
-// ======================
-$color-primary                : #2b306a;
-$color-secondary              : #06c0db;
-$color-highlight              : #ff9600;
-$color-muted                  : #eef;
-$color-note                   : #666;
-
-$accentColor                  : $blue;
-$primaryButtonBackground      : $blue;
-$complement                   : adjust-hue($accentColor, 180);  // Determine a complementary color
-
-// Common colours
-$color-text                   : #242424;
-$color-background             : #fefefe;
-$color-border                 : #ddd;
-
-// Links
-$color-link-default           : #242424;
-$color-link-visited           : #444;
-$color-link-hover             : $pink;
-$color-link-active            : $yellow;
-
-// Code
-$color-code                   : #333;
-$color-code-background        : #f3f3f3;
-$color-pre                    : #d4d4d4;
-$color-pre-background         : #333;
-
-// Selections
-$color-selection              : #b3d4fc;
-
-// Messages
-$color-message                : #f4ecbb;
-$color-success                : #2cde2c;
-$color-warning                : #cf8600;
-$color-important              : #d00;
-$color-notice                 : #66b;
-
-// Colours
-$blue                         : #049CDB;
-$blueDark                     : darken($blue, 20%);
-$green                        : #46a546;
-$red                          : #9d261d;
-$yellow                       : #ffc40d;
-$orange                       : #f89406;
-$pink                         : #c3325f;
-$purple                       : #7a43b6;
-$gray                         : lighten($black, 50%);
-
-
-// === Component variables ===
-// ===========================
-// Forms
-$inputBackground              : $white;
-$inputBorder                  : #ccc;
-$inputDisabledBackground      : $grayLighter;
-$formActionsBackground        : #f5f5f5;
-$labelColour                  : $grayDark;
-$inputColour                  : $grayDark;
-
-// Input placeholder text color
-$placeholderText              : $grayLight;
-
-// Buttons
-$btnBackground                : $white;
-$btnBackgroundHighlight       : darken($white, 10%);
-$btnBorder                    : darken($white, 20%);
-
-$btnPrimaryBackground         : $linkColor;
-$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%);
-
-$btnInfoBackground            : #5bc0de;
-$btnInfoBackgroundHighlight   : #2f96b4;
-
-$btnSuccessBackground         : #62c462;
-$btnSuccessBackgroundHighlight: #51a351;
-
-$btnWarningBackground         : lighten($orange, 15%);
-$btnWarningBackgroundHighlight: $orange;
-
-$btnDangerBackground          : #ee5f5b;
-$btnDangerBackgroundHighlight : #bd362f;
-
-$btnInverseBackground         : $gray;
-$btnInverseBackgroundHighlight: $grayDarker;
-
-// Tables
-$tableBackground:               transparent; // overall background-color
-$tableBackgroundAccent:         #f9f9f9; // for striping
-$tableBackgroundHover:          #f5f5f5; // for hover
-$tableBorder:                   #ddd; // table and cell border
-
-// Form states and alerts
-$warningText:                   #c09853;
-$warningBackground:             #fcf8e3;
-$warningBorder:                 darken(adjust-hue($warningBackground, -10), 3%);
-
-$errorText:                     #b94a48;
-$errorBackground:               #f2dede;
-$errorBorder:                   darken(adjust-hue($errorBackground, -10), 3%);
-
-$successText:                   #468847;
-$successBackground:             #dff0d8;
-$successBorder:                 darken(adjust-hue($successBackground, -10), 5%);
-
-$infoText:                      #3a87ad;
-$infoBackground:                #d9edf7;
-$infoBorder:                        darken(adjust-hue($infoBackground, -10), 7%);
-
-// <hr> border colour
-$hrBorder:                          $grayLighter;
 
 
 // === App-specific variables ===
