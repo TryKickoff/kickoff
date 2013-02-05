@@ -1,12 +1,12 @@
 // ==================
 // === FORMS.scss ===
 // ==================
-// FORM
-// INPUT SIZES
-// FORM FIELD FEEDBACK STATES
-// INPUT GROUPS
-// HORIZONTAL & VERTICAL FORMS
-// HORIZONTAL-SPECIFIC STYLES
+// * Form
+// * Input sizes
+// * Form field feedback states
+// * Input groups
+// * Horizontal & vertical forms
+// * Horizontal-specific styles
 
 /* ============ */
 /* === FORM === */
@@ -14,6 +14,10 @@
 // Make all forms have space below them
 form {
 	margin: 0 0 ($baseLineHeight + px);
+
+	ul {
+		list-style-type: none !important;
+	}
 }
 
 fieldset {
@@ -25,6 +29,7 @@ fieldset {
 // Margin to space out fieldsets
 .control-group {
 	margin-top: ($baseLineHeight / 2 + px);
+	list-style-type: none;
 
 	// Legend collapses margin, so next element is responsible for spacing
 	legend + & {
@@ -49,7 +54,7 @@ legend {
 	// Small
 	& small {
 		@include font-size($baseFontSize * .75);
-		color: $grayLight;
+		color: lighten(#000, 70%);
 	}
 }
 
@@ -87,6 +92,7 @@ label {
 	&.checkbox,
 	&.radio {
 		font-weight: normal;
+		line-height: 1.4;
 	}
 
 	// Inputs within a label
@@ -262,15 +268,15 @@ textarea,
 .file-wrapper {
 	// Multiple arguments cannot be used inside a mixin if the mixin has not specified it, hence the need for a new $transtion var
 	@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-	$transition: border linear .2s, box-shadow linear .2s;
-	@include transition($transition);
+	@include transition;
 }
 
 input,
 textarea {
 	&:focus {
 		border-color: rgba(82,168,236,.8);
-		@include box-shadow("inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+		$shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(82,168,236,.6);
+		@include box-shadow($shadow);
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
@@ -287,7 +293,6 @@ select {
 }
 
 
-// ===================
 // === INPUT SIZES ===
 // ===================
 // General classes for quick sizes
@@ -593,9 +598,9 @@ textarea {
 		font-weight: normal;
 		@include line-height($baseLineHeight);
 		text-align: center;
-		text-shadow: 0 1px 0 $white;
+		text-shadow: 0 1px 0 #fff;
 		vertical-align: middle;
-		background-color: $grayLighter;
+		background-color: lighten(#000, 70%)er;
 		border: 1px solid #ccc;
 	}
 	& .add-on,

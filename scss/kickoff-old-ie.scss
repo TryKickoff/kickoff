@@ -19,6 +19,7 @@ $old-ie: true;
 $fix-mqs: 1024px; //could use ems too
 
 // CORE VARIABLES AND MIXINS
+@import "colour-palette";
 @import "variables";
 @import "mixins";
 
@@ -41,7 +42,6 @@ $fix-mqs: 1024px; //could use ems too
 
 // COMPONENTS: BUTTONS & ALERTS
 @import "buttons";
-// @import "button-groups";
 
 // COMPONENTS: MISC
 @import "carousel";

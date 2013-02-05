@@ -36,7 +36,7 @@ Since our CSS is written with Less and utilizes variables and mixins, it needs t
 
 ### Use the command line
 
-If you prefer to not use an app, you can use the command line.`cd` into your project directory, then run `sass --watch scss:css`. Kickoff usually compiles to two CSS files: kickoff.css & kickoff-old-ie.css
+If you prefer to not use an app, you can use the command line. `cd` into your project directory, then run `sass --watch scss:css`. Kickoff usually compiles to two CSS files: `kickoff.css` & `kickoff-old-ie.css`
 
 ### Apps
 

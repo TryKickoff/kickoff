@@ -10,42 +10,41 @@
 
 // By Zander Martineau & Ashley Nolan for TMW - http://tmw.co.uk
 
-// CORE VARIABLES AND MIXINS
+// Core variables and mixins
+@import "colour-palette";
 @import "variables";
 @import "mixins";
 
-// CSS RESET
+// CSS reset
 @import "normalize";
 
-// GRID SYSTEM AND PAGE STRUCTURE
+// Grid system and page structure
 @import "choreographic-grid";     // For responsive builds
-// @import "grid-static";          // For static width sites
 
-// BASE CSS
+// Base CSS
 @import "typography";
 @import "forms";
 @import "tables";
 @import "code";
 
-// COMPONENTS: COMMON
-@import "components";             // Generic components tools
+// Components: common
+@import "components";
 // @import "sprites";
 
-// COMPONENTS: BUTTONS & ALERTS
+// Components: buttons & alerts
 @import "buttons";
-// @import "button-groups";
 
-// COMPONENTS: MISC
-@import "carousel";
+// Components: misc
+// @import "carousel";
 
-// YOUR APP/SITE STYLES
-@import "app";
+// Your app/site styles
+// @import "app";
 
 
-// UTILITY CLASSES
+// Utility classes
 // Has to be last to override when necessary
-@import "utilities";
-@import "responsive-utilities";
+// @import "utilities";
+// @import "responsive-utilities";
 
-// PRINT STYLES
-@import "print";
+// Print styles
+// @import "print";
