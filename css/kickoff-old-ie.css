@@ -1,3 +1,4 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\000037}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5,24 +6,29 @@
   box-sizing: border-box;
   *behavior: url(polyfills/boxsizing.htc); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000314}}
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000319}}
 audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000327}}
 audio:not([controls]) {
   display: none;
   height: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000334}}
 [hidden] {
   display: none; }
 
 /* ============ */
 /* === BASE === */
 /* ============ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000344}}
 html {
   font-size: 100%;
   /* 1 */
@@ -31,74 +37,92 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000351}}
 html, button, input, select, textarea {
   font-family: sans-serif; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000356}}
 body {
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000363}}
 a:focus {
   outline: thin dotted; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000367}}
 a:hover, a:active {
   outline: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000375}}
 ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
   list-style-image: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000382}}
 dl, menu, ol.normal, ul.normal {
   margin: 1em 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000386}}
 dd {
   margin: 0 0 0 40px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000391}}
 menu, ol.normal, ul.normal {
   padding: 0 0 0 40px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\0000397}}
 nav ul,
 nav ol {
   list-style: none;
   list-style-image: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003109}}
 img {
   border: 0;
   /* 1 */
   -ms-interpolation-mode: bicubic;
   /* 2 */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003115}}
 svg:not(:root) {
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003124}}
 figure {
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003132}}
 form {
   margin: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003135}}
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003145}}
 legend {
   border: 0;
   padding: 0;
   white-space: normal;
   *margin-left: -7px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003156}}
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
   *vertical-align: middle; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003165}}
 button,
 input {
   line-height: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003177}}
 button,
 input[type="button"],
 input[type="reset"],
@@ -107,10 +131,12 @@ input[type="submit"] {
   -webkit-appearance: button;
   *overflow: visible; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003185}}
 button[disabled],
 input[disabled] {
   cursor: default; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003194}}
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -121,26 +147,32 @@ input[type="radio"] {
   *height: 13px;
   *width: 13px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003203}}
 input[type="search"] {
   -webkit-appearance: textfield; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003209}}
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003216}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003224}}
 textarea {
   overflow: auto;
   vertical-align: top; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_normalize\.scss}line{font-family:\00003234}}
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003161}}
 .container {
   padding-left: 0px;
   padding-right: 0px;
@@ -148,21 +180,27 @@ table {
   max-width: 1000px;
   margin: 0 auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003169}}
 .row {
   width: 100%;
   margin: 0 auto;
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .row:before, .row:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .row:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003175}}
   .row .row {
     min-width: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003179}}
     .row .row .col {
       padding: 0; }
 
 @media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003211}}
   .col {
     margin-left: 2%;
     padding: 10px;
@@ -174,184 +212,242 @@ table {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003120}}
     .col:first-child {
       margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003124}}
     .col + .col:last-child {
       float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003125}}
     .col + .col.end {
       float: left; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span1, .mq-alpha-resize-to1 {
     width: 6.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span2, .mq-alpha-resize-to2 {
     width: 15%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span3, .mq-alpha-resize-to3 {
     width: 23.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span4, .mq-alpha-resize-to4 {
     width: 32%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span5, .mq-alpha-resize-to5 {
     width: 40.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span6, .mq-alpha-resize-to6 {
     width: 49%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span7, .mq-alpha-resize-to7 {
     width: 57.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span8, .mq-alpha-resize-to8 {
     width: 66%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span9, .mq-alpha-resize-to9 {
     width: 74.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span10, .mq-alpha-resize-to10 {
     width: 83%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span11, .mq-alpha-resize-to11 {
     width: 91.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003218}}
   .span12, .mq-alpha-resize-to12 {
     width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 0.065%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 20.065; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 0.3%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 40.3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 0.705%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 60.705; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 1.28%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 81.28; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 2.025%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 102.025; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 2.94%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 122.94; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 4.025%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 144.025; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 5.28%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 165.28; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 6.705%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 186.705; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 8.3%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 208.3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003229}}
   .row > .offset1 {
     margin-left: 10.065%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003231}}
     .row > .offset1:first-child {
       margin-left: 230.065; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push2 {
     left: 17%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push3 {
     left: 25.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push4 {
     left: 34%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push5 {
     left: 42.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push6 {
     left: 51%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push7 {
     left: 59.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push8 {
     left: 68%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push9 {
     left: 76.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push10 {
     left: 85%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003239}}
   .row > .push11 {
     left: 93.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull2 {
     right: 17%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull3 {
     right: 25.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull4 {
     right: 34%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull5 {
     right: 42.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull6 {
     right: 51%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull7 {
     right: 59.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull8 {
     right: 68%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull9 {
     right: 76.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull10 {
     right: 85%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003242}}
   .row > .pull11 {
     right: 93.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003249}}
   .split .col, .shunt {
     float: none;
     margin-left: 0;
@@ -360,6 +456,7 @@ table {
     width: 100%;
     clear: both; } }
 @media screen and (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003277}}
   .split .col, .shunt {
     margin-left: 2%;
     padding: 10px;
@@ -371,177 +468,234 @@ table {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003120}}
     .split .col:first-child, .shunt:first-child {
       margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003124}}
     .split .col + .split .col:last-child, .shunt + .shunt:last-child {
       float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003125}}
     .split .col + .split .col.end, .shunt + .shunt.end {
       float: left; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span1, .mq-beta-resize-to1, .split .span1 {
     width: 6.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span2, .mq-beta-resize-to2, .split .span2 {
     width: 15%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span3, .mq-beta-resize-to3, .split .span3 {
     width: 23.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span4, .mq-beta-resize-to4, .split .span4 {
     width: 32%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span5, .mq-beta-resize-to5, .split .span5 {
     width: 40.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span6, .mq-beta-resize-to6, .split .span6 {
     width: 49%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span7, .mq-beta-resize-to7, .split .span7 {
     width: 57.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span8, .mq-beta-resize-to8, .split .span8 {
     width: 66%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span9, .mq-beta-resize-to9, .split .span9 {
     width: 74.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span10, .mq-beta-resize-to10, .split .span10 {
     width: 83%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003287}}
   .span11, .mq-beta-resize-to11, .split .span11 {
     width: 91.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 0.065%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 20.065; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 0.3%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 40.3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 0.705%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 60.705; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 1.28%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 81.28; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 2.025%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 102.025; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 2.94%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 122.94; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 4.025%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 144.025; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 5.28%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 165.28; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 6.705%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 186.705; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 8.3%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 208.3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003297}}
   .row > .offset1 {
     margin-left: 10.065%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003299}}
     .row > .offset1:first-child {
       margin-left: 230.065; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push2, .push2 {
     left: 17%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push3, .push3 {
     left: 25.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push4, .push4 {
     left: 34%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push5, .push5 {
     left: 42.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push6, .push6 {
     left: 51%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push7, .push7 {
     left: 59.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push8, .push8 {
     left: 68%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003309}}
   .row > .mq-beta-push9, .push9 {
     left: 76.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull2, .pull2 {
     right: 17%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull3, .pull3 {
     right: 25.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull4, .pull4 {
     right: 34%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull5, .pull5 {
     right: 42.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull6, .pull6 {
     right: 51%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull7, .pull7 {
     right: 59.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull8, .pull8 {
     right: 68%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003312}}
   .row > .mq-beta-pull9, .pull9 {
     right: 76.5%;
     position: relative; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003316}}
   .mq-beta-end {
     float: right; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003317}}
   .mq-beta-end {
     float: left; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003326}}
 .centered.col, .centred.col {
   float: none;
   margin: 0 auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003328}}
 img {
   max-width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000320}}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -551,6 +705,7 @@ body {
   color: gray;
   background-color: white; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000339}}
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -559,10 +714,12 @@ p {
   line-height: 1.5rem;
   margin-top: 0;
   margin-bottom: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000345}}
   p small {
     font-size: 14;
-    color: #bfbfbf; }
+    color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000351}}
 .lead {
   margin-bottom: 24px;
   font-size: 20px;
@@ -570,16 +727,19 @@ p {
   line-height: 36px;
   line-height: 2.25rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000360}}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
-  color: #404040;
+  color: #4d4d4d;
   text-rendering: optimizelegibility; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000366}}
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal;
-    color: #bfbfbf; }
+    color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000371}}
 h1 {
   font-size: 68px;
   font-size: 4.25rem;
@@ -587,10 +747,12 @@ h1 {
   line-height: 4.5rem;
   margin-top: 24px;
   margin-bottom: 48px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000376}}
   h1 small {
     font-size: 18px;
     font-size: 1.125rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000380}}
 h2 {
   font-size: 42px;
   font-size: 2.625rem;
@@ -598,10 +760,12 @@ h2 {
   line-height: 3rem;
   margin-top: 48px;
   margin-bottom: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000385}}
   h2 small {
     font-size: 18px;
     font-size: 1.125rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000389}}
 h3 {
   font-size: 26px;
   font-size: 1.625rem;
@@ -609,88 +773,117 @@ h3 {
   line-height: 3rem;
   margin-top: 24px;
   margin-bottom: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000394}}
   h3 small {
     font-size: 14px;
     font-size: 0.875rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\0000398}}
 h4, h5, h6 {
   line-height: 48px;
   line-height: 3rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003101}}
 h4 {
   font-size: 14px;
   font-size: 0.875rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003103}}
   h4 small {
     font-size: 12px;
     font-size: 0.75rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003107}}
 h5 {
   font-size: 12px;
   font-size: 0.75rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003110}}
 h6 {
   font-size: 11px;
   font-size: 0.6875rem;
-  color: #bfbfbf;
+  color: #b3b3b3;
   text-transform: uppercase; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003117}}
 .page-header {
   padding-bottom: 23px;
   margin: 24px 0;
-  border-bottom: 1px solid #e6e6e6; }
+  border-bottom: 1px solid #b3b3b3 er; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003122}}
 .page-header h1 {
   line-height: 1; }
 
-a {
-  color: #049cdb;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003128}}
+a, a:link {
+  color: #242424;
   text-decoration: none; }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003132}}
+a:visited {
+  color: #444444;
+  text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003136}}
 a:hover {
-  color: #0378a9; }
+  color: #c3325f; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003140}}
+a:active {
+  color: #ffc40d; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003149}}
 ul {
   list-style-type: disc; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003150}}
 ol {
   list-style-type: decimal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003154}}
 ul, ol {
   padding: 0;
-  margin: 0 0 12px 25px;
-  font-size: 16px;
-  font-size: 1rem; }
+  margin: 0 0 12px 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003158}}
   ul ul, ul ol, ol ul, ol ol {
     margin: 0 0 0 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003161}}
   ul ul, ol ul {
     list-style-type: circle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003163}}
     ul ul ul, ol ul ul {
       list-style-type: square; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003167}}
   ul ol, ol ol {
     list-style-type: upper-roman; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003169}}
     ul ol ol, ol ol ol {
       list-style-type: lower-roman; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003173}}
   ul li, ol li {
     line-height: 24px;
     line-height: 1.5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003178}}
   ul ul, ul ol, ol ul, ol ol {
     margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003182}}
   ul.unstyled, ol.unstyled {
     margin-left: 0;
     list-style: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003190}}
 dl {
   margin-bottom: 24px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003194}}
 dt,
 dd {
   line-height: 24px;
   line-height: 1.5rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003197}}
 dt {
   font-weight: bold;
   line-height: 23px;
   line-height: 1.4375rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003202}}
   .dl-horizontal dt {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -700,38 +893,48 @@ dt {
     width: 120px;
     text-align: right; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003210}}
 dd {
   margin-left: 12px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003213}}
   .dl-horizontal dd {
     margin-left: 130px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003222}}
 hr {
   margin: 24px 0;
   border: 0;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid white; }
+  border-top: 1px solid #b3b3b3 er;
+  border-bottom: 1px solid #fff; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003230}}
 strong, b {
   font-weight: bold; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003233}}
 em, i {
   font-style: italic; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003236}}
 .muted {
-  color: #bfbfbf; }
+  color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003241}}
 abbr[title] {
   border-bottom: 1px dotted #ddd;
   cursor: help; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003245}}
 abbr.initialism {
   font-size: 90%;
   text-transform: uppercase; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003251}}
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 24px;
-  border-left: 5px solid #e6e6e6; }
+  border-left: 5px solid #b3b3b3 er; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003255}}
   blockquote p {
     margin-bottom: 0;
     font-size: 16px;
@@ -739,27 +942,33 @@ blockquote {
     font-weight: 300;
     line-height: 30px;
     line-height: 1.875rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003261}}
   blockquote small {
     display: block;
     line-height: 24px;
     line-height: 1.5rem;
-    color: #bfbfbf; }
+    color: #b3b3b3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003265}}
     blockquote small:before {
       content: '\2014 \00A0'; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003271}}
   blockquote.pull-right {
     float: right;
     padding-left: 0;
     padding-right: 15px;
     border-left: 0;
-    border-right: 5px solid #e6e6e6; }
+    border-right: 5px solid #b3b3b3 er; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003278}}
     blockquote.pull-right p, blockquote.pull-right small {
       text-align: right; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003288}}
 q:before, q:after,
 blockquote:before,
 blockquote:after {
   content: ""; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003294}}
 address {
   display: block;
   margin-bottom: 24px;
@@ -767,19 +976,24 @@ address {
   line-height: 1.5rem;
   font-style: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003302}}
 small {
   font-size: 75%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003305}}
 cite {
   font-style: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003309}}
 dfn {
   font-style: italic; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003313}}
 mark {
   background: #ff0;
   color: #000; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003320}}
 sub, sup {
   font-size: 75%;
   line-height: 0px;
@@ -787,38 +1001,52 @@ sub, sup {
   position: relative;
   vertical-align: baseline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003327}}
 sup {
   top: -0.5em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003328}}
 sub {
   bottom: -0.25em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003335}}
 .text-centre, .text-center {
   text-align: center; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003336}}
 .text-left {
   text-align: left; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_typography\.scss}line{font-family:\00003337}}
 .text-right {
   text-align: right; }
 
 /* ============ */
 /* === FORM === */
 /* ============ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000315}}
 form {
   margin: 0 0 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000318}}
+  form ul {
+    list-style-type: none !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000323}}
 fieldset {
   padding: 0;
   margin: 0;
   border: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000330}}
 .control-group {
-  margin-top: 12px; }
+  margin-top: 12px;
+  list-style-type: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000335}}
   legend + .control-group {
     margin-top: 24px;
     -webkit-margin-top-collapse: separate; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000343}}
 legend {
   display: block;
   width: 100%;
@@ -828,14 +1056,16 @@ legend {
   font-size: 1.5rem;
   line-height: 48px;
   line-height: 3rem;
-  color: #404040;
+  color: #4d4d4d;
   border: 0;
   border-bottom: 1px solid #eee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000355}}
   legend small {
     font-size: 12px;
     font-size: 0.75rem;
-    color: #bfbfbf; }
+    color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000366}}
 label,
 input,
 button,
@@ -847,25 +1077,32 @@ textarea {
   line-height: 1.5rem;
   font-weight: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000376}}
 input,
 button,
 select,
 textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000381}}
 label {
   display: block;
   margin-bottom: 5px;
-  color: #404040;
+  color: #4d4d4d;
   font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000387}}
   label small {
     font-weight: normal;
-    color: #8c8c8c; }
+    color: #999999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\0000393}}
   label.checkbox, label.radio {
-    font-weight: normal; }
+    font-weight: normal;
+    line-height: 1.4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003101}}
   label input, label textarea, label select {
     display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003111}}
 input,
 textarea,
 select,
@@ -883,17 +1120,19 @@ select,
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
-  color: #404040;
+  color: #4d4d4d;
   background-color: #FFF;
   border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003125}}
 .uneditable-textarea {
   width: auto;
   height: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003136}}
 input[type="image"], input[type="checkbox"], input[type="radio"] {
   width: auto;
   height: auto;
@@ -908,8 +1147,10 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {
   border-radius: 0;
   border: 0 \9;
   /* IE9 and down */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003147}}
 input[type="image"] {
   border: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003151}}
 input[type="file"] {
   width: auto;
   height: 28px;
@@ -922,22 +1163,27 @@ input[type="file"] {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003165}}
 input[type="button"], input[type="reset"], input[type="submit"] {
   width: auto;
   height: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003171}}
 input[type="image"] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003176}}
 input[type="hidden"] {
   display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003180}}
 input[type="color"] {
   height: 40px;
   width: 40px;
   overflow: hidden;
   padding: 2px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003190}}
 select {
   width: 220px;
   height: 28px;
@@ -947,21 +1193,26 @@ select {
   line-height: 28px;
   line-height: 1.75rem;
   background-color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003201}}
   select[multiple], select[size] {
     height: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003209}}
 textarea {
   height: auto;
   resize: vertical; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003227}}
 .radio,
 .checkbox {
   padding-left: 18px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003231}}
   .radio input[type="radio"], .radio input[type="checkbox"],
   .checkbox input[type="radio"],
   .checkbox input[type="checkbox"] {
     float: left;
     margin-left: -18px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003238}}
   .radio.inline,
   .checkbox.inline {
     display: inline-block;
@@ -972,13 +1223,16 @@ textarea {
     margin-bottom: 0;
     vertical-align: middle; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003251}}
 .control-input > .radio:first-child, .control-input > .checkbox:first-child {
   padding-top: 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003258}}
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
   margin-left: 10px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003268}}
 input,
 textarea,
 .file-wrapper {
@@ -986,21 +1240,23 @@ textarea,
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s; }
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003276}}
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)";
-  -moz-box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)";
-  -o-box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)";
-  box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)";
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003289}}
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
@@ -1013,24 +1269,31 @@ select:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003299}}
 .input-mini {
   width: 60px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003300}}
 .input-small {
   width: 90px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003301}}
 .input-medium {
   width: 150px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003302}}
 .input-large {
   width: 210px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003303}}
 .input-xlarge {
   width: 270px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003304}}
 .input-xxlarge {
   width: 530px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003316}}
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
@@ -1042,22 +1305,26 @@ textarea[class*="span"],
   float: none;
   margin-left: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003322}}
 .file-wrapper input {
   width: 90%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003336}}
 input[disabled], input[readonly],
 select[disabled],
 select[readonly],
 textarea[disabled],
 textarea[readonly] {
-  background-color: #e6e6e6;
+  background-color: #b3b3b3;
   border-color: #ddd;
   cursor: not-allowed; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003344}}
 input:focus:required:invalid,
 select:focus:required:invalid,
 textarea:focus:required:invalid {
   color: #b94a48;
   border-color: #ee5f5b; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003347}}
   input:focus:required:invalid:focus,
   select:focus:required:invalid:focus,
   textarea:focus:required:invalid:focus {
@@ -1067,15 +1334,18 @@ textarea:focus:required:invalid {
     -o-box-shadow: 0 0 6px #f8b9b7;
     box-shadow: 0 0 6px #f8b9b7; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003501}}
 .control-group.warning > label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
   color: #c09853; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003507}}
 .control-group.warning input,
 .control-group.warning select,
 .control-group.warning textarea {
   color: #c09853;
   border-color: #c09853; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003510}}
   .control-group.warning input:focus,
   .control-group.warning select:focus,
   .control-group.warning textarea:focus {
@@ -1084,21 +1354,25 @@ textarea:focus:required:invalid {
     -moz-box-shadow: 0 0 6px #dbc59e;
     -o-box-shadow: 0 0 6px #dbc59e;
     box-shadow: 0 0 6px #dbc59e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003517}}
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003501}}
 .control-group.error > label,
 .control-group.error .help-block,
 .control-group.error .help-inline {
   color: #b94a48; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003507}}
 .control-group.error input,
 .control-group.error select,
 .control-group.error textarea {
   color: #b94a48;
   border-color: #b94a48; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003510}}
   .control-group.error input:focus,
   .control-group.error select:focus,
   .control-group.error textarea:focus {
@@ -1107,21 +1381,25 @@ textarea:focus:required:invalid {
     -moz-box-shadow: 0 0 6px #d59392;
     -o-box-shadow: 0 0 6px #d59392;
     box-shadow: 0 0 6px #d59392; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003517}}
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003501}}
 .control-group.success > label,
 .control-group.success .help-block,
 .control-group.success .help-inline {
   color: #468847; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003507}}
 .control-group.success input,
 .control-group.success select,
 .control-group.success textarea {
   color: #468847;
   border-color: #468847; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003510}}
   .control-group.success input:focus,
   .control-group.success select:focus,
   .control-group.success textarea:focus {
@@ -1130,12 +1408,14 @@ textarea:focus:required:invalid {
     -moz-box-shadow: 0 0 6px #7aba7b;
     -o-box-shadow: 0 0 6px #7aba7b;
     box-shadow: 0 0 6px #7aba7b; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003517}}
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
   border-color: #468847; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003389}}
 .form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
 .form-inline input,
 .form-inline textarea,
@@ -1156,56 +1436,70 @@ textarea:focus:required:invalid {
   /* IE7 inline-block hack */
   *zoom: 1;
   margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003396}}
 .form-search .hide,
 .form-inline .hide,
 .form-horizontal .hide {
   display: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003418}}
 .form-horizontal .control-group {
   margin-bottom: 24px;
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .form-horizontal .control-group:before, .form-horizontal .control-group:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .form-horizontal .control-group:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003425}}
 .form-horizontal .control-label, .form-horizontal .control-group label {
   float: left;
   width: 140px;
   padding-top: 5px;
   text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003434}}
 .form-horizontal .control-input, .form-horizontal .control-group div {
   margin-left: 160px;
   /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
   *display: inline-block;
   *margin-left: 0;
   *padding-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003440}}
   .form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
     *padding-left: 160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003446}}
 .form-horizontal .help-block {
   margin-top: 12px;
   margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003452}}
 .form-horizontal .form-actions {
   padding-left: 160px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003465}}
 .form-search > *,
 .form-inline > * {
   margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003468}}
   .form-search > *:last-child,
   .form-inline > *:last-child {
     margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003473}}
 .form-search label,
 .form-inline label {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003480}}
 .form-search .radio, .form-search .checkbox,
 .form-inline .radio,
 .form-inline .checkbox {
   padding-left: 0;
   margin-bottom: 0;
   vertical-align: middle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003487}}
   .form-search .radio input[type="radio"], .form-search .radio input[type="checkbox"], .form-search .checkbox input[type="radio"], .form-search .checkbox input[type="checkbox"],
   .form-inline .radio input[type="radio"],
   .form-inline .radio input[type="checkbox"],
@@ -1214,11 +1508,13 @@ textarea:focus:required:invalid {
     float: left;
     margin-left: 0;
     margin-right: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003496}}
 .form-search .input-prepend, .form-search .input-append,
 .form-inline .input-prepend,
 .form-inline .input-append {
   margin-bottom: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003504}}
 .search-query {
   padding-left: 14px;
   padding-right: 14px;
@@ -1229,6 +1525,7 @@ textarea:focus:required:invalid {
   -o-border-radius: 100px;
   border-radius: 100px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003518}}
 .form-actions {
   padding: 23px 20px 24px;
   margin-top: 24px;
@@ -1236,16 +1533,21 @@ textarea:focus:required:invalid {
   background-color: whitesmoke;
   border-top: 1px solid #ddd;
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .form-actions:before, .form-actions:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .form-actions:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003526}}
   .form-actions .btn {
     margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003529}}
     .form-actions .btn:last-child {
       margin-right: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003536}}
 .uneditable-input {
   background-color: white;
   border-color: #eee;
@@ -1255,20 +1557,25 @@ textarea:focus:required:invalid {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   cursor: not-allowed; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003452}}
 :-moz-placeholder {
-  color: #bfbfbf; }
+  color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003455}}
 ::-webkit-input-placeholder {
-  color: #bfbfbf; }
+  color: #b3b3b3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003549}}
 .help-block,
 .help-inline {
   color: gray; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003553}}
 .help-block {
   display: block;
   margin-bottom: 12px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003558}}
 .help-inline {
   display: inline-block;
   *display: inline;
@@ -1277,9 +1584,11 @@ textarea:focus:required:invalid {
   vertical-align: middle;
   padding-left: 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003572}}
 .input-prepend,
 .input-append {
   margin-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003577}}
   .input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
   .input-append input,
   .input-append select,
@@ -1291,14 +1600,17 @@ textarea:focus:required:invalid {
     -webkit-border-radius: 0 3px 3px 0;
     -o-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003584}}
     .input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
     .input-append input:focus,
     .input-append select:focus,
     .input-append .uneditable-input:focus {
       z-index: 2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003588}}
   .input-prepend .uneditable-input,
   .input-append .uneditable-input {
     border-left-color: #ccc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003591}}
   .input-prepend .add-on,
   .input-append .add-on {
     display: inline-block;
@@ -1313,61 +1625,73 @@ textarea:focus:required:invalid {
     line-height: 24px;
     line-height: 1.5rem;
     text-align: center;
-    text-shadow: 0 1px 0 white;
+    text-shadow: 0 1px 0 #fff;
     vertical-align: middle;
-    background-color: #e6e6e6;
+    background-color: #b3b3b3 er;
     border: 1px solid #ccc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003607}}
   .input-prepend .add-on, .input-prepend .btn,
   .input-append .add-on,
   .input-append .btn {
     -webkit-border-radius: 3px 0 0 3px;
     -o-border-radius: 3px 0 0 3px;
     border-radius: 3px 0 0 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003610}}
   .input-prepend .active,
   .input-append .active {
     background-color: #a9dba9;
     border-color: #46a546; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003617}}
 .input-prepend .add-on, .input-prepend .btn {
   margin-right: -1px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003624}}
 .input-append input, .input-append select, .input-append .uneditable-input {
   -webkit-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003627}}
 .input-append .uneditable-input {
   border-left-color: #eee;
   border-right-color: #ccc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003632}}
 .input-append .add-on, .input-append .btn {
   margin-left: -1px;
   -webkit-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003641}}
 .input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input {
   -webkit-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003645}}
 .input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
   -webkit-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_forms\.scss}line{font-family:\00003650}}
 .input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
   -webkit-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\000039}}
 table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   background-color: transparent; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000319}}
 .table {
   width: 100%;
   margin-bottom: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000324}}
   .table th, .table td {
     padding: 8px;
     line-height: 24px;
@@ -1375,18 +1699,24 @@ table {
     text-align: left;
     vertical-align: top;
     border-top: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000332}}
   .table th, .table tfoot td {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000336}}
   .table thead th {
     vertical-align: bottom; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000344}}
   .table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
     border-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000349}}
   .table tbody + tbody {
     border-top: 2px solid #dddddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000361}}
 .table-condensed th, .table-condensed td {
   padding: 4px 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000370}}
 .table-bordered {
   border: 1px solid #dddddd;
   border-left: 0;
@@ -1395,77 +1725,99 @@ table {
   -webkit-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000377}}
   .table-bordered th, .table-bordered td {
     border-left: 1px solid #dddddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000389}}
   .table-bordered caption + thead tr:first-child th, .table-bordered caption + tbody tr:first-child th, .table-bordered caption + tbody tr:first-child td, .table-bordered colgroup + thead tr:first-child th, .table-bordered colgroup + tbody tr:first-child th, .table-bordered colgroup + tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
     border-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000394}}
   .table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
     -webkit-border-radius: 4px 0 0 0;
     -o-border-radius: 4px 0 0 0;
     border-radius: 4px 0 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\0000398}}
   .table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
     -webkit-border-radius: 0 4px 0 0;
     -o-border-radius: 0 4px 0 0;
     border-radius: 0 4px 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003103}}
   .table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
     -webkit-border-radius: 0 0 0 4px;
     -o-border-radius: 0 0 0 4px;
     border-radius: 0 0 0 4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003107}}
   .table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
     -webkit-border-radius: 0 0 4px 0;
     -o-border-radius: 0 0 4px 0;
     border-radius: 0 0 4px 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003121}}
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
   background-color: #f9f9f9; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003135}}
 .table tbody tr:hover td, .table tbody tr:hover th {
   background-color: whitesmoke; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span1 {
   width: 6.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span2 {
   width: 15%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span3 {
   width: 23.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span4 {
   width: 32%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span5 {
   width: 40.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span6 {
   width: 49%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span7 {
   width: 57.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span8 {
   width: 66%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span9 {
   width: 74.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span10 {
   width: 83%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span11 {
   width: 91.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_tables\.scss}line{font-family:\00003148}}
 table .span12 {
   width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\000039}}
 code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  _font-family: 'courier new', monospace;
   font-size: 13px;
   font-size: 0.8125rem;
-  color: #404040;
+  color: gray;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
   tab-size: 3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\0000319}}
 code {
   padding: 2px 4px;
   color: #d14;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\0000327}}
 pre {
   display: block;
   padding: 11.5px;
@@ -1482,96 +1834,123 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\0000342}}
   pre.prettyprint {
     margin-bottom: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\0000347}}
   pre code {
     padding: 0;
     color: inherit;
     background-color: transparent;
     border: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_code\.scss}line{font-family:\0000356}}
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000314}}
 img {
   font-style: italic;
   color: #c00;
   border: 0;
   -ms-interpolation-mode: bicubic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000320}}
   img.left {
     margin: 0 20px 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000323}}
   img.right {
     margin: 0 0 0 20px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000328}}
 svg:not(:root) {
   overflow: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000331}}
 img, object, embed, video {
   max-width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000335}}
 #map_canvas img, .map_canvas img {
   max-width: none!important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000345}}
 .block-grid {
   display: block;
   list-style-type: none;
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .block-grid:before, .block-grid:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .block-grid:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000350}}
   .block-grid li {
     display: block;
     height: auto;
     float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000356}}
   .block-grid.two-up {
     margin-left: -4%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000359}}
     .block-grid.two-up li {
       margin-left: 4%;
       width: 46%;
       margin-bottom: 4%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000367}}
   .block-grid.three-up {
     margin-left: -2%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000370}}
     .block-grid.three-up li {
       margin-left: 2%;
       width: 31.3%;
       margin-bottom: 2%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000378}}
   .block-grid.four-up {
     margin-left: -2%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000381}}
     .block-grid.four-up li {
       margin-left: 2%;
       width: 23%;
       margin-bottom: 2%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000389}}
   .block-grid.five-up {
     margin-left: -1.5%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\0000392}}
     .block-grid.five-up li {
       margin-left: 1.5%;
       width: 18.5%;
       margin-bottom: 1.5%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003108}}
 ul.centred, ul.centered {
   text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003111}}
   ul.centred li, ul.centered li {
     display: inline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003123}}
 .floated {
   *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .floated:before, .floated:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .floated:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003126}}
   .floated li {
     float: left;
     display: inline-block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003138}}
 .well {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 4px;
@@ -1581,46 +1960,63 @@ ul.centred, ul.centered {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003148}}
   .well blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003155}}
 .well-large {
   padding: 24px;
   -webkit-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003159}}
 .well-small {
   padding: 9px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003169}}
 .tabs {
   *zoom: 1;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003132}}
   .tabs:before, .tabs:after {
     content: " ";
     display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_choreographic-grid\.scss}line{font-family:\00003137}}
   .tabs:after {
     clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003175}}
   .tabs.is-right li {
     float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003181}}
   .tabs.is-centred, .tabs.is-centered {
     text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003184}}
     .tabs.is-centred > li, .tabs.is-centered > li {
       display: inline;
       float: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003190}}
   .tabs > li {
     float: left;
     margin: 0 5px; }
 
-.tabs-content > li {
-  display: none; }
-.tabs-content > li.is-active {
-  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003196}}
+.tabs-content {
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003198}}
+  .tabs-content > li {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_components\.scss}line{font-family:\00003202}}
+  .tabs-content > li.is-active {
+    display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003126}}
 .btn {
   display: inline-block;
   *display: inline;
@@ -1632,90 +2028,256 @@ ul.centred, ul.centered {
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
-  color: #404040;
+  color: #4d4d4d;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: #e6e6e6;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(white), to(#e6e6e6));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(white, #e6e6e6);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(white, #e6e6e6);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e6e6e6));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(white, #e6e6e6);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(white, #e6e6e6);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, white 0%, #e6e6e6 100%);
-  /* IE10+ */
-  background-image: linear-gradient(white, #e6e6e6);
-  /* the standard */
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #e6e6e6;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  border: 1px solid #cccccc;
-  border-bottom-color: #b3b3b3;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: "inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)";
-  -moz-box-shadow: "inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)";
-  -o-box-shadow: "inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)";
-  box-shadow: "inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)";
+  vertical-align: middle;
   cursor: pointer;
+  background-color: #d9d9d9;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
+  /* Konqueror */
+  background-image: -moz-linear-gradient(white, #d9d9d9);
+  /* FF 3.6+ */
+  background-image: -ms-linear-gradient(white, #d9d9d9);
+  /* IE10 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #d9d9d9));
+  /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(white, #d9d9d9);
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(white, #d9d9d9);
+  /* Opera 11.10 */
+  background-image: -ms-linear-gradient(top, white 0%, #d9d9d9 100%);
+  /* IE10+ */
+  background-image: linear-gradient(white, #d9d9d9);
+  /* the standard */
+  border: 1px solid #b3b3b3;
+  border-bottom-color: #999999;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   *margin-left: .3em;
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
   /* Remove the border to prevent IE7's black border on input:focus */
   *border: 0;
   *line-height: 20px; }
-  .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9; }
-  .btn:active, .btn.active {
-    background-color: #cccccc e("\9"); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003578}}
   .btn:first-child {
     *margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000374}}
   .btn:hover {
-    color: #404040;
+    color: #4d4d4d;
     text-decoration: none;
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9;
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear; }
+    background-position: 0 -15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000389}}
   .btn:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000395}}
   .btn.active, .btn:active {
     background-image: none;
-    -webkit-box-shadow: "inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)";
-    -moz-box-shadow: "inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)";
-    -o-box-shadow: "inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)";
-    box-shadow: "inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)";
-    background-color: #e6e6e6;
-    background-color: #d9d9d9 e("\9");
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     outline: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003111}}
   .btn.disabled, .btn[disabled] {
     cursor: default;
     background-image: none;
-    background-color: #e6e6e6;
+    background-color: #cccccc;
+    border-color: #cccccc;
     zoom: 1;
-    filter: alpha(opacity=65);
-    opacity: 0.65;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003120}}
   .btn [class^="icon-"] {
     margin-top: 2px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003132}}
+.btn-primary {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #035da9;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#035da9));
+  /* Konqueror */
+  background-image: -moz-linear-gradient(#049cdb, #035da9);
+  /* FF 3.6+ */
+  background-image: -ms-linear-gradient(#049cdb, #035da9);
+  /* IE10 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #035da9));
+  /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(#049cdb, #035da9);
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(#049cdb, #035da9);
+  /* Opera 11.10 */
+  background-image: -ms-linear-gradient(top, #049cdb 0%, #035da9 100%);
+  /* IE10+ */
+  background-image: linear-gradient(#049cdb, #035da9);
+  /* the standard */
+  border: 1px solid #037cae;
+  border-bottom-color: #036a95;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  *margin-left: .3em;
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+  /* Remove the border to prevent IE7's black border on input:focus */
+  *border: 0;
+  *line-height: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003578}}
+  .btn-primary:first-child {
+    *margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000374}}
+  .btn-primary:hover {
+    color: white;
+    text-decoration: none;
+    background-position: 0 -15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000389}}
+  .btn-primary:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000395}}
+  .btn-primary.active, .btn-primary:active {
+    background-image: none;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003111}}
+  .btn-primary.disabled, .btn-primary[disabled] {
+    cursor: default;
+    background-image: none;
+    background-color: #cccccc;
+    border-color: #cccccc;
+    zoom: 1;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003120}}
+  .btn-primary [class^="icon-"] {
+    margin-top: 2px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003135}}
+.btn-warning {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #e9512d;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ee5f5b), to(#e9512d));
+  /* Konqueror */
+  background-image: -moz-linear-gradient(#ee5f5b, #e9512d);
+  /* FF 3.6+ */
+  background-image: -ms-linear-gradient(#ee5f5b, #e9512d);
+  /* IE10 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee5f5b), color-stop(100%, #e9512d));
+  /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(#ee5f5b, #e9512d);
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(#ee5f5b, #e9512d);
+  /* Opera 11.10 */
+  background-image: -ms-linear-gradient(top, #ee5f5b 0%, #e9512d 100%);
+  /* IE10+ */
+  background-image: linear-gradient(#ee5f5b, #e9512d);
+  /* the standard */
+  border: 1px solid #ea3631;
+  border-bottom-color: #e7201a;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  *margin-left: .3em;
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+  /* Remove the border to prevent IE7's black border on input:focus */
+  *border: 0;
+  *line-height: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003578}}
+  .btn-warning:first-child {
+    *margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000374}}
+  .btn-warning:hover {
+    color: white;
+    text-decoration: none;
+    background-position: 0 -15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000389}}
+  .btn-warning:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000395}}
+  .btn-warning.active, .btn-warning:active {
+    background-image: none;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003111}}
+  .btn-warning.disabled, .btn-warning[disabled] {
+    cursor: default;
+    background-image: none;
+    background-color: #cccccc;
+    border-color: #cccccc;
+    zoom: 1;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003120}}
+  .btn-warning [class^="icon-"] {
+    margin-top: 2px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003144}}
 .btn-large {
   padding: 9px 14px;
   font-size: 18px;
@@ -1724,18 +2286,22 @@ ul.centred, ul.centered {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003150}}
   .btn-large [class^="icon-"] {
     margin-top: 4px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003157}}
 .btn-small {
   padding: 5px 9px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 22px;
   line-height: 1.375rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003162}}
   .btn-small [class^="icon-"] {
     margin-top: 1px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003169}}
 .btn-mini {
   padding: 2px 6px;
   font-size: 14px;
@@ -1743,255 +2309,129 @@ ul.centred, ul.centered {
   line-height: 20px;
   line-height: 1.25rem; }
 
-.btn-primary, .btn-primary:hover,
-.btn-warning,
-.btn-warning:hover,
-.btn-danger,
-.btn-danger:hover,
-.btn-success,
-.btn-success:hover,
-.btn-info,
-.btn-info:hover,
-.btn-inverse,
-.btn-inverse:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003183}}
+.btn-primary, .btn-primary:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  color: white; }
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
+  color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003189}}
+.btn-primary.active {
   color: rgba(255, 255, 255, 0.75); }
 
-.btn-primary {
-  background-color: #0466db;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0466db));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(#049cdb, #0466db);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#049cdb, #0466db);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0466db));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#049cdb, #0466db);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#049cdb, #0466db);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #049cdb 0%, #0466db 100%);
-  /* IE10+ */
-  background-image: linear-gradient(#049cdb, #0466db);
-  /* the standard */
-  border-color: #0466db #0466db #034390;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #0466db;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-    background-color: #0466db;
-    *background-color: #045bc2; }
-  .btn-primary:active, .btn-primary.active {
-    background-color: #034fa9 e("\9"); }
-
-.btn-warning {
-  background-color: #f89406;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#fbb450), to(#f89406));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(#fbb450, #f89406);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#fbb450, #f89406);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbb450), color-stop(100%, #f89406));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#fbb450, #f89406);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#fbb450, #f89406);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #fbb450 0%, #f89406 100%);
-  /* IE10+ */
-  background-image: linear-gradient(#fbb450, #f89406);
-  /* the standard */
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #f89406;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-warning:hover, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
-    background-color: #f89406;
-    *background-color: #df8505; }
-  .btn-warning:active, .btn-warning.active {
-    background-color: #c67605 e("\9"); }
-
-.btn-danger {
-  background-color: #bd362f;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ee5f5b), to(#bd362f));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(#ee5f5b, #bd362f);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#ee5f5b, #bd362f);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee5f5b), color-stop(100%, #bd362f));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#ee5f5b, #bd362f);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#ee5f5b, #bd362f);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #ee5f5b 0%, #bd362f 100%);
-  /* IE10+ */
-  background-image: linear-gradient(#ee5f5b, #bd362f);
-  /* the standard */
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #bd362f;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
-    background-color: #bd362f;
-    *background-color: #a9302a; }
-  .btn-danger:active, .btn-danger.active {
-    background-color: #942a25 e("\9"); }
-
-.btn-success {
-  background-color: #51a351;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#51a351));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(#62c462, #51a351);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#62c462, #51a351);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62c462), color-stop(100%, #51a351));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#62c462, #51a351);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#62c462, #51a351);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #62c462 0%, #51a351 100%);
-  /* IE10+ */
-  background-image: linear-gradient(#62c462, #51a351);
-  /* the standard */
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #51a351;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-success:hover, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
-    background-color: #51a351;
-    *background-color: #499249; }
-  .btn-success:active, .btn-success.active {
-    background-color: #408140 e("\9"); }
-
-.btn-info {
-  background-color: #2f96b4;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#5bc0de), to(#2f96b4));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(#5bc0de, #2f96b4);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#5bc0de, #2f96b4);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5bc0de), color-stop(100%, #2f96b4));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#5bc0de, #2f96b4);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#5bc0de, #2f96b4);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #5bc0de 0%, #2f96b4 100%);
-  /* IE10+ */
-  background-image: linear-gradient(#5bc0de, #2f96b4);
-  /* the standard */
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #2f96b4;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
-    background-color: #2f96b4;
-    *background-color: #2a85a0; }
-  .btn-info:active, .btn-info.active {
-    background-color: #24748c e("\9"); }
-
-.btn-inverse {
-  background-color: #262626;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(gray), to(#262626));
-  /* Konqueror */
-  background-image: -moz-linear-gradient(gray, #262626);
-  /* FF 3.6+ */
-  background-image: -ms-linear-gradient(gray, #262626);
-  /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, gray), color-stop(100%, #262626));
-  /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(gray, #262626);
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(gray, #262626);
-  /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, gray 0%, #262626 100%);
-  /* IE10+ */
-  background-image: linear-gradient(gray, #262626);
-  /* the standard */
-  border-color: #262626 #262626 black;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #262626;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */ }
-  .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
-    background-color: #262626;
-    *background-color: #1a1a1a; }
-  .btn-inverse:active, .btn-inverse.active {
-    background-color: #0d0d0d e("\9"); }
-
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003203}}
 button.btn,
 input[type="submit"].btn {
   *padding-top: 2px;
   *padding-bottom: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003206}}
   button.btn::-moz-focus-inner,
   input[type="submit"].btn::-moz-focus-inner {
     padding: 0;
     border: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003215}}
   button.btn.btn-large,
   input[type="submit"].btn.btn-large {
     *padding-top: 7px;
     *padding-bottom: 7px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003219}}
   button.btn.btn-small,
   input[type="submit"].btn.btn-small {
     *padding-top: 3px;
     *padding-bottom: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003223}}
   button.btn.btn-mini,
   input[type="submit"].btn.btn-mini {
     *padding-top: 1px;
     *padding-bottom: 1px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003233}}
 .pill {
   display: inline-block;
-  padding: 3px 15px;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 30px;
   -o-border-radius: 30px;
   border-radius: 30px;
-  background-color: #ddd;
-  color: #000; }
+  *margin-left: .3em;
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+  /* Remove the border to prevent IE7's black border on input:focus */
+  *border: 0;
+  *line-height: 20px;
+  padding-left: 15px;
+  padding-right: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_mixins\.scss}line{font-family:\00003578}}
+  .pill:first-child {
+    *margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000374}}
+  .pill:hover {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #c4c4c4;
+    background-color: #c4c4c4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000389}}
+  .pill:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\0000395}}
+  .pill.active, .pill:active {
+    background-image: none;
+    background-color: #c4c4c4;
+    outline: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003111}}
+  .pill.disabled, .pill[disabled] {
+    cursor: default;
+    background-image: none;
+    background-color: #cccccc;
+    border-color: #cccccc;
+    zoom: 1;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003120}}
+  .pill [class^="icon-"] {
+    margin-top: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_buttons\.scss}line{font-family:\00003243}}
   .pill.is-active {
     background-color: #049cdb;
+    border-color: #049cdb;
     color: #fff; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\000037}}
 .carousel-wrapper {
   position: relative;
   text-align: center;
   margin: 0 auto;
   width: 600px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\0000313}}
 .carousel {
   overflow: hidden;
   height: 300px;
   width: 600px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\0000317}}
   .carousel .carousel-item {
     float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\0000319}}
     .carousel .carousel-item img {
       display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\0000326}}
 .carousel-pagination a {
   color: #049cdb;
   zoom: 1;
@@ -2003,12 +2443,14 @@ input[type="submit"].btn {
   background-color: #fff;
   display: inline-block;
   width: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_carousel\.scss}line{font-family:\0000333}}
   .carousel-pagination a.selected, .carousel-pagination a:hover {
     zoom: 1;
     filter: alpha(opacity=100);
     opacity: 1;
     font-weight: bold; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\000036}}
 .ir {
   background-color: transparent;
   border: 0;
@@ -2016,20 +2458,24 @@ input[type="submit"].btn {
   /* IE 6/7 fallback */
   *text-indent: -9999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000313}}
 .ir:before {
   content: "";
   display: block;
   width: 0;
   height: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000323}}
 .is-hidden,
 .hide {
   display: none !important;
   visibility: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000327}}
 .show {
   display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000329}}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2039,6 +2485,7 @@ input[type="submit"].btn {
   padding: 0;
   position: absolute;
   width: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000341}}
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
@@ -2047,44 +2494,57 @@ input[type="submit"].btn {
     position: static;
     width: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000352}}
 .is-invisible {
   visibility: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000354}}
 .left {
   float: left; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000355}}
 .right {
   float: right; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000356}}
 .clear {
   clear: both;
   float: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000358}}
 .mb0 {
   margin-bottom: 0 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000359}}
 .mb1 {
   margin-bottom: 16 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000360}}
 .mb2 {
   margin-bottom: 24 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000361}}
 .mb3 {
   margin-bottom: 30 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000363}}
 .mt0 {
   margin-top: 0 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000364}}
 .mt1 {
   margin-top: 16 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000365}}
 .mt2 {
   margin-top: 24 !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_utilities\.scss}line{font-family:\0000366}}
 .mt3 {
   margin-top: 30 !important; }
 
 @media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\000035}}
   * {
     background: transparent !important;
     color: #000 !important;
@@ -2092,44 +2552,54 @@ input[type="submit"].btn {
     box-shadow: none !important;
     text-shadow: none !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000312}}
   a:visited {
     text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000315}}
   a[href]:after {
     content: " (" attr(href) ")"; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000319}}
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
   /*
    * Don't show links for images, or javascript/internal links
    */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000327}}
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000331}}
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000335}}
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000339}}
   tr,
   img {
     page-break-inside: avoid; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000342}}
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000348}}
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zmartineau\/Dropbox\/dropbox-htdocs\/github\/tmw\/kickoff-develop\/scss\/_print\.scss}line{font-family:\0000352}}
   h2, h3 {
     page-break-after: avoid; } }
