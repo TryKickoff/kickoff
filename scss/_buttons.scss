@@ -7,27 +7,19 @@ $kickoff-button-border-radius : 5px; // Any value
 $kickoff-button-border-width  : 0px;
 
 // Usage
-// @include kickoff-button(text-color, gradient-start, gradient-end);
-// @include kickoff-button(2px, #000, $blue );
+// @include kickoff-button(text color, background color);
+// @include kickoff-button(#fff, $blue);
+
 @mixin kickoff-button(
 	$text-color     : lighten(#000, 30%),
-	$bg-color       : $btnBackground){
+	$bg-color       : $btnBackground
+	){
 
 	$text-color-lightness : lightness($text-color);
 	$bg-lightness         : lightness($bg-color);
 
-	// @debug $text-color-lightness;
-
-	display: inline-block;
-	@include ie7-inline-block();
-	padding: 5px 10px;
-	margin-bottom: 0; // For input.btn
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@extend %kickoff-button-base;
 	color: $text-color;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
 
 	// Button style 'flat'
 	@if $kickoff-button-style == 'flat' {
@@ -37,14 +29,14 @@ $kickoff-button-border-width  : 0px;
 
 	// Button style 'stylish'
 	@if $kickoff-button-style == 'stylish' {
-		@debug $bg-lightness;
+		// @debug $bg-lightness;
 
 		@if $bg-lightness < 80 {
 			// Darker
-			@include gradient-vertical($bg-color, darken(adjust-hue($bg-color, 10%), 10%));
+			@include gradient-vertical($bg-color, darken(adjust-hue($bg-color, 10%), 15%));
 			border: 1px solid darken($bg-color, 9%);
 			border-bottom-color: darken($bg-color, 14%);
-			text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+			text-shadow: 0 -1px 1px fade-out($bg-color, 0.1);
 		} @else {
 			// Lighter
 			@include gradient-vertical($bg-color, darken($bg-color, 15%));
@@ -62,18 +54,13 @@ $kickoff-button-border-width  : 0px;
 		@include border-radius($kickoff-button-border-radius);
 	}
 
-	// Give IE7 some love
-	@include ie7-restore-left-whitespace();
-	@include reset-filter();
-
-	/* Remove the border to prevent IE7's black border on input:focus */
-	*border: 0;
-	*line-height: 20px;
+	&:link, &:visited {
+		color: $text-color;
+	}
 
 	// Hover state
 	&:hover {
 		color: $text-color;
-		text-decoration: none;
 
 		@if $kickoff-button-style == 'flat' {
 			border: 1px solid darken($bg-color, 10%);
@@ -85,13 +72,8 @@ $kickoff-button-border-width  : 0px;
 		}
 	}
 
-	// Focus state for keyboard and accessibility
-	&:focus {
-		@include tab-focus();
-	}
-
 	// Active state
-	&.active,
+	&.is-active,
 	&:active {
 		background-image: none;
 
@@ -105,10 +87,39 @@ $kickoff-button-border-width  : 0px;
 		}
 		outline: 0;
 	}
+}
+
+%kickoff-button-base {
+	display: inline-block;
+	@include ie7-inline-block();
+	padding: 5px 10px;
+	margin-bottom: 0; // For input.btn
+	@include font-size($baseFontSize);
+	@include line-height($baseLineHeight);
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	// Give IE7 some love
+	@include ie7-restore-left-whitespace();
+	@include reset-filter();
+
+	/* Remove the border to prevent IE7's black border on input:focus */
+	*border: 0;
+	*line-height: 20px;
+
+	&:hover{
+		text-decoration: none;
+	}
+
+	// Focus state for keyboard and accessibility
+	&:focus {
+		@include tab-focus();
+	}
 
 	// Disabled state
 	&.disabled,
-	&[disabled] {
+	&[disabled],
+	&:hover[disabled] {
 		cursor: default;
 		background-image: none;
 		background-color: darken(#fff, 20%);
@@ -133,7 +144,11 @@ $kickoff-button-border-width  : 0px;
 	@include kickoff-button(#fff, $blue);
 }
 .btn-warning {
-	@include kickoff-button(#fff, #ee5f5b);
+	@include kickoff-button(#fff, lighten(#444, 10%));
+}
+.btn-flat {
+	$kickoff-button-style : 'flat';
+	@include kickoff-button(#fff, $blue);
 }
 
 
@@ -145,7 +160,6 @@ $kickoff-button-border-width  : 0px;
 	padding: 9px 14px;
 	@include font-size($baseFontSize + 2);
 	line-height: normal;
-	@include border-radius(5px);
 
 	& [class^="icon-"] {
 		margin-top: 4px;
@@ -170,6 +184,7 @@ $kickoff-button-border-width  : 0px;
 	padding: 2px 6px;
 	@include font-size($baseFontSize - 2);
 	@include line-height($baseLineHeight - 4);
+	@include border-radius(3px);
 }
 
 
@@ -178,18 +193,18 @@ $kickoff-button-border-width  : 0px;
 
 // Set text color
 // -------------------------
-.btn-primary{
-	&,
-	&:hover {
-		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-		color: #fff;
-	}
+// .btn-primary{
+// 	&,
+// 	&:hover {
+// 		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+// 		color: #fff;
+// 	}
 
-	// Provide *some* extra contrast for those who can get it
-	&.active {
-		color: rgba(255,255,255,.75);
-	}
-}
+// 	// Provide *some* extra contrast for those who can get it
+// 	&.active {
+// 		color: rgba(255,255,255,.75);
+// 	}
+// }
 
 
 
