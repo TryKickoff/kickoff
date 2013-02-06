@@ -26,114 +26,92 @@
 	<!--  === MAIN CONTENT ===  -->
 	<!--  ====================  -->
 	<div role="main" class="container">
-		<h1>Forms <small>styling</small></h1>
+		<h1>Components <small>styling</small></h1>
+		<ul>
+			<li>Buttons</li>
+			<li>Tabs</li>
+			<li>Wells</li>
+			<li>Block grids</li>
+			<li>Centered lists</li>
+		</ul>
 
-		<h2>1. Form <small>with labels above inputs</small></h2>
+		<h2>1. Default Buttons</h2>
 		<div class="row">
-			<div class="span4 col">
-				<p>Having forms styled like this depends on specific markup with specific class names. Please take the example code below as a guide.</p>
-				<!-- <p>Each of the examples presented on this page have an</p> -->
-			</div>
+			<div class="span12 col">
+				<p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a></code> and <code>&lt;button></code> elements for the best rendering.</p>
 
-			<div class="span8 col">
+				<h4>Button sizes</h4>
+				<p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+				<h4>Button styles</h4>
+				<p>There are two types of buttons styles included in Kickoff, 'Stylish' &amp; 'Flat'. There are a few global <code>.scss</code> vars that will determine the style for the buttons, these are:</p>
+				<ul class="unstyled">
+					<li><code>$kickoff-button-style         : 'stylish'; // 'flat' or 'stylish'</code></li>
+					<li><code>$kickoff-button-border-radius : 5px; // Any value</code></li>
+					<li><code>$kickoff-button-border-width  : 0px;</code></li>
+				</ul>
 				<ul class="tabs is-right">
-					<li><a href="#layout-example-labels-above" class="pill is-active">Example</a></li>
-					<li><a href="#code-example-labels-above" class="pill">Code</a></li>
+					<li><a href="#layout-example-default-buttons" class="pill is-active">Example</a></li>
+					<li><a href="#code-example-default-buttons" class="pill">Code</a></li>
 				</ul>
 				<ul class="tabs-content">
-					<li id="layout-example-labels-above" class="is-active">
-						<form action="#" class="well">
-							<fieldset>
-								<legend>Your form</legend>
-								<ul>
-									<li class="control-group">
-										<label for="name" class="control-label">Name</label>
-										<div class="controls">
-											<input type="text" id="name" placeholder="Zander Martineau" class="input-xlarge" />
-										</div>
-									</li>
-									<li class="control-group">
-										<label for="email" class="control-label">Email</label>
-										<div class="controls"><input type="email" id="email" placeholder="zander@martineau.tv" class="input-xlarge" /></div>
-									</li>
-									<li class="control-group">
-										<label for="phone" class="control-label">Phone</label>
-										<div class="controls"><input type="number" id="phone" placeholder="020 123 4567" class="input-xlarge" /></div>
-									</li>
-									<li class="control-group">
-										<label for="comments" class="control-label">Textarea <br>
-											<small>This is a description</small>
-										</label>
+					<li id="layout-example-default-buttons" class="is-active well">
+						<h4>Large buttons</h4>
+						<input type="submit" value="Submit" class="btn  btn-large btn-primary" />
+						<input type="submit" value="Disabled" class="btn btn-large" disabled />
+						<button type="reset" class="btn btn-large">Cancel</button>
 
-										<div class="controls">
-											<textarea id="comments" rows="3" cols="50" class="input-xlarge"></textarea>
-										</div>
-									</li>
-									<li class="control-group">
-										<label for="comments" class="control-label">Checkboxes &amp; Radio buttons</label>
-										<div class="controls">
-											<label class="checkbox">
-												<input type="checkbox" value="">
-												Option one is this and that—be sure to include why it's great
-											</label>
+						<h4>Normal buttons</h4>
+						<input type="submit" value="Submit" class="btn btn-primary" />
+						<input type="submit" value="Disabled" class="btn" disabled />
+						<button type="reset" class="btn">Cancel</button>
 
-											<label class="radio">
-												<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-												Option one is this and that—be sure to include why it's great
-											</label>
-											<label class="radio">
-												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-												Option two can be something else and selecting it will deselect option one
-											</label>
-										</div>
-									</li>
-								</ul>
+						<h4>Small buttons</h4>
+						<input type="submit" value="Submit" class="btn  btn-small btn-primary" />
+						<input type="submit" value="Disabled" class="btn btn-small" disabled />
+						<button type="reset" class="btn btn-small">Cancel</button>
 
-							</fieldset>
-
-							<div class="form-actions text_centre">
-								<input type="submit" value="Submit" class="btn btn-primary" />
-								<button type="reset" class="btn">Cancel</button>
-							</div>
-
-						</form>
+						<h4>Mini buttons</h4>
+						<input type="submit" value="Submit" class="btn  btn-mini btn-primary" />
+						<input type="submit" value="Disabled" class="btn btn-mini" disabled />
+						<button type="reset" class="btn btn-mini">Cancel</button>
 					</li>
 
-					<li id="code-example-labels-above">
-			<pre class="prettyprint lang-html linenums"><code>&lt;form action=&quot;#&quot; class=&quot;well&quot;&gt;
-		&lt;fieldset&gt;
-			&lt;legend&gt;Your form&lt;/legend&gt;
-			&lt;ul&gt;
-				&lt;li class=&quot;control-group&quot;&gt;
-					&lt;label for=&quot;name&quot; class=&quot;control-label&quot;&gt;Name&lt;/label&gt;
-					&lt;div class=&quot;controls&quot;&gt;
-						&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Zander Martineau&quot; /&gt;
-					&lt;/div&gt;
-				&lt;/li&gt;
-				&lt;li class=&quot;control-group&quot;&gt;
-					&lt;label for=&quot;email&quot; class=&quot;control-label&quot;&gt;Email&lt;/label&gt;
-					&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;zander@martineau.tv&quot; /&gt;&lt;/div&gt;
-				&lt;/li&gt;
-				&lt;li class=&quot;control-group&quot;&gt;
-					&lt;label for=&quot;phone&quot; class=&quot;control-label&quot;&gt;Phone&lt;/label&gt;
-					&lt;div class=&quot;controls&quot;&gt;&lt;input type=&quot;number&quot; id=&quot;phone&quot; placeholder=&quot;020 123 4567&quot; /&gt;&lt;/div&gt;
-				&lt;/li&gt;
-				&lt;li class=&quot;control-group&quot;&gt;
-					&lt;label for=&quot;comments&quot; class=&quot;control-label&quot;&gt;Comments&lt;/label&gt;
-					&lt;div class=&quot;controls&quot;&gt;
-						&lt;textarea id=&quot;comments&quot; rows=&quot;3&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
-					&lt;/div&gt;
-				&lt;/li&gt;
-			&lt;/ul&gt;
+					<li id="code-example-default-buttons">
+						<h3><code>HTML</code></h3>
+<pre class="prettyprint lang-html linenums"><code>&lt;h4>Large buttons&lt;/h4>
+&lt;input type="submit" value="Submit" class="btn  btn-large btn-primary" />
+&lt;input type="submit" value="Disabled" class="btn btn-large" disabled />
+&lt;button type="reset" class="btn btn-large">Cancel&lt;/button>
 
-		&lt;/fieldset&gt;
+&lt;h4>Normal buttons&lt;/h4>
+&lt;input type="submit" value="Submit" class="btn btn-primary" />
+&lt;input type="submit" value="Disabled" class="btn" disabled />
+&lt;button type="reset" class="btn">Cancel&lt;/button>
 
-		&lt;div class=&quot;form-actions text_centre&quot;&gt;
-			&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn btn-primary&quot; /&gt;
-			&lt;button type=&quot;reset&quot; class=&quot;btn  btn-inverse&quot;&gt;Cancel&lt;/button&gt;
-		&lt;/div&gt;
+&lt;h4>Small buttons&lt;/h4>
+&lt;input type="submit" value="Submit" class="btn  btn-small btn-primary" />
+&lt;input type="submit" value="Disabled" class="btn btn-small" disabled />
+&lt;button type="reset" class="btn btn-small">Cancel&lt;/button>
 
-	&lt;/form&gt;</code></pre>
+&lt;h4>Mini buttons&lt;/h4>
+&lt;input type="submit" value="Submit" class="btn  btn-mini btn-primary" />
+&lt;input type="submit" value="Disabled" class="btn btn-mini" disabled />
+&lt;button type="reset" class="btn btn-mini">Cancel&lt;/button></code></pre>
+			<h3><code>.SCSS</code></h3>
+			<pre class="prettyprint lang-css linenums"><code>.btn {
+	@include kickoff-button;
+}
+.btn-primary {
+	@include kickoff-button(#fff, $blue);
+}
+.btn-warning {
+	@include kickoff-button(#fff, lighten(#444, 10%));
+}
+.btn-flat {
+	// Button vars can be set on individual buttons
+	$kickoff-button-style : 'flat';
+	@include kickoff-button(#fff, $blue);
+}</code></pre>
 					</li>
 				</ul>
 
