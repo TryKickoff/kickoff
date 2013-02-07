@@ -13,6 +13,13 @@ if ( !Array.prototype.remove ) {
 }
 
 // Complete cookie reader/writer from https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+//
+// TMW.cookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+// TMW.cookies.getItem(name)
+// TMW.cookies.removeItem(name[, path])
+// TMW.cookies.hasItem(name)
+// TMW.cookies.keys()
+
 TMW.cookies = {
 	getItem: function(sKey) {
 		if (!sKey || !this.hasItem(sKey)) { return null; }
