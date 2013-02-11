@@ -36,7 +36,10 @@ $linkColorHover               : darken($linkColor, 10%);
 // Base sizes
 // Set this in pixels, the font-size mixin will convert to REMS
 $baseFontSize                 : 16;
-$baseLineHeight               : $baseFontSize*1.5;
+$baseLeading                  : 1.4;
+$baseLineHeight               : round($baseFontSize * $baseLeading);
+
+// Useful to set here when bold webfonts come as 400 font-weight.
 $boldFontWeight               : bold;
 
 // Font stacks
@@ -47,9 +50,9 @@ $monoFontFamily               : Menlo, Monaco, "Courier New", monospace;
 $baseFontFamily               : $sansFontFamily;
 $altFontFamily                : $serifFontFamily;
 
-$headingsFontFamily           : inherit;   // empty to use BS default, $baseFontFamily
-$headingsFontWeight           : bold;      // instead of browser default, bold
-$headingsColor                : lighten(#000, 30%); // empty to use BS default, $textColor
+$headingsFontFamily           : inherit; // empty to use Kickoff default $baseFontFamily
+$headingsFontWeight           : bold;    // instead of browser default, bold
+$headingsColor                : #000; // empty to use BS default, $textColor
 
 
 // === Breakpoints ===
