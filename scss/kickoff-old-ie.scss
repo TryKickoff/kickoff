@@ -27,8 +27,7 @@ $fix-mqs: 1024px; //could use ems too
 @import "normalize";
 
 // GRID SYSTEM AND PAGE STRUCTURE
-@import "choreographic-grid";     // For responsive builds
-// @import "grid-static";          // For static width sites
+@import "choreographic-grid"; // For responsive builds
 
 // BASE CSS
 @import "typography";
@@ -37,14 +36,14 @@ $fix-mqs: 1024px; //could use ems too
 @import "code";
 
 // COMPONENTS: COMMON
-@import "components";             // Generic components tools
+@import "components"; // Generic components tools
 // @import "sprites";
 
 // COMPONENTS: BUTTONS & ALERTS
 @import "buttons";
 
 // COMPONENTS: MISC
-@import "carousel";
+// @import "carousel";
 
 // YOUR APP/SITE STYLES
 @import "app";
