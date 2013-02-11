@@ -8,15 +8,15 @@
 // * Horizontal & vertical forms
 // * Horizontal-specific styles
 
-/* ============ */
-/* === FORM === */
-/* ============ */
+// ============
+// === Form ===
+// ============
 // Make all forms have space below them
 form {
 	margin: 0 0 ($baseLineHeight + px);
 
 	ul {
-		list-style-type: none !important;
+		@extend .unstyled;
 	}
 }
 

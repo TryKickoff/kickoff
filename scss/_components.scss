@@ -139,7 +139,7 @@ ul.centred, ul.centered {
 	min-height: 20px;
 	padding: 19px;
 	margin-bottom: 20px;
-	// background-color: #f5f5f5;
+	background-color: #f5f5f5;
 	border: 1px solid #eee;
 	border: 1px solid rgba(0,0,0,.05);
 	@include border-radius(4px);
@@ -168,8 +168,8 @@ ul.centred, ul.centered {
 
 .tabs {
 	@include clearfix;
+	@extend .unstyled;
 	margin-bottom: $baseLineHeight + px;
-	list-style: none;
 
 	&.is-right {
 		& li {
@@ -194,7 +194,7 @@ ul.centred, ul.centered {
 }
 
 .tabs-content {
-	list-style: none;
+	@extend .unstyled;
 	& > li {
 		display: none;
 	}
