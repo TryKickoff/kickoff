@@ -25,60 +25,26 @@
 	<!--  ====================  -->
 	<div role="main" class="container">
 		<h1>Elements <small>all the elements in one place</small></h1>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-
-		<h1>Text-level semantics</h1>
-
-		<p>
-		The <a href="#">a element</a> example<br>
-		The <abbr title="Title text">abbr element</abbr> example<br>
-		The <b>b element</b> example<br>
-		The <cite>cite element</cite> example<br>
-		The <code>code element</code> example<br>
-		The <del>del element</del> example<br>
-		The <dfn>dfn element</dfn> example<br>
-		The <em>em element</em> example<br>
-		The <i>i element</i> example<br>
-		The img element <img src="http://placekitten.com/16/16" alt=""> example<br>
-		The <ins>ins element</ins> example<br>
-		The <kbd>kbd element</kbd> example<br>
-		The <mark>mark element</mark> example<br>
-		The <q>q element <q>inside</q> a q element</q> example<br>
-		The <s>s element</s> example<br>
-		The <samp>samp element</samp> example<br>
-		The <small>small element</small> example<br>
-		The <span>span element</span> example<br>
-		The <strike>strike element</strike> example<br>
-		The <strong>strong element</strong> example<br>
-		The <sub>sub element</sub> example<br>
-		The <sup>sup element</sup> example<br>
-		The <var>var element</var> example<br>
-		The <u>u element</u> example
-		</p>
-
 		<h2>Embedded content</h2>
 
 		<h3>img</h3>
-
 		<img src="http://placekitten.com/100/100" alt="">
 		<a href="#"><img src="http://placekitten.com/100/100" alt=""></a>
 
 		<h3>svg</h3>
 
-		<svg style="width:100px; height:100px;"><circle cx="100" cy="100" r="100" fill="#ff0000"></svg>
+		<svg style="width:200px; height:200px;">
+			<circle cx="100" cy="100" r="80" fill="#00ff88"/>
+			<circle cx="100" cy="100" r="50" fill="#ff0088"/>
+			<circle cx="100" cy="100" r="25" fill="#fff"/>
+		</svg>
 
-		<h1>Grouping content</h1>
 
 		<h3>Pre</h3>
 
 		<pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
 
-		<h4>Pre > Code</h4>
+		<h3>Pre > Code</h3>
 		<pre><code>&lt;html>
 &lt;head>
 &lt;/head>
@@ -89,69 +55,6 @@
 &lt;/body>
 &lt;/html></code></pre>
 
-		<h3>Blockquote</h3>
-
-		<blockquote>
-			<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
-		</blockquote>
-
-		<blockquote>Even better philosophical quote marked up with just a &lt;blockquote> element.</blockquote>
-
-		<h3>Ordered list</h3>
-
-		<ol class="normal">
-			<li>list item 1</li>
-			<li>list item 1
-			<ol>
-				<li>list item 2</li>
-				<li>list item 2
-				<ol>
-					<li>list item 3</li>
-					<li>list item 3</li>
-				</ol>
-				</li>
-				<li>list item 2</li>
-				<li>list item 2</li>
-			</ol>
-			</li>
-			<li>list item 1</li>
-			<li>list item 1</li>
-		</ol>
-
-		<h3>Unordered list</h3>
-
-		<ul class="normal">
-			<li>list item 1</li>
-			<li>list item 1
-			<ul>
-				<li>list item 2</li>
-				<li>list item 2
-				<ul>
-					<li>list item 3</li>
-					<li>list item 3</li>
-				</ul>
-				</li>
-				<li>list item 2</li>
-				<li>list item 2</li>
-			</ul>
-			</li>
-			<li>list item 1</li>
-			<li>list item 1</li>
-		</ul>
-
-		<h3>Description list</h3>
-
-		<dl>
-			<dt>Description name</dt>
-			<dd>Description value</dd>
-			<dt>Description name</dt>
-			<dd>Description value</dd>
-			<dd>Description value</dd>
-			<dt>Description name</dt>
-			<dt>Description name</dt>
-			<dd>Description value</dd>
-		</dl>
-
 		<h3>figure</h3>
 
 		<figure>
@@ -159,7 +62,7 @@
 			<figcaption>Figcaption content</figcaption>
 		</figure>
 
-		<h1>Tabular data</h1>
+		<h2>Tabular data</h2>
 
 		<table summary="Jimi Hendrix albums" class="table table-bordered table-striped">
 			<caption>
@@ -196,7 +99,7 @@
 			</tbody>
 		</table>
 
-		<h1>Forms</h1>
+		<h2>Forms</h2>
 
 		<form class="well form-horizontal">
 			<fieldset>
@@ -288,7 +191,7 @@
 		 Your browser does not support these elements yet! Consider downloading a <a href="http://tools.peter.sh/download-latest-chromium.php">Chromium Nightly</a>.<br />
 		</p>
 
-		<h1>&lt;progress&gt;</h1>
+		<h2>&lt;progress&gt;</h2>
 
 		<p>
 		  The progress element (spec: <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element">4.10.16</a>) represents the completion progress of a task and can be both indeterminate as determinate.
@@ -316,7 +219,7 @@
 		  </li>
 		</ul>
 
-		<h1>&lt;meter&gt;</h1>
+		<h2>&lt;meter&gt;</h2>
 
 		<p>
 		  Displaying a scalar measurement within a known range, like hard drive usage, can be done using the meter element (spec: <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element">4.10.17</a>)
