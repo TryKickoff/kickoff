@@ -30,11 +30,11 @@
 
 // Body text
 body {
-	font-family: $baseFontFamily;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
-	color: $textColor;
-	background-color: $bodyBackground;
+	font-family: $base-font-family;
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
+	color: $color-text;
+	background-color: $color-background;
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
@@ -49,32 +49,32 @@ body {
 }
 
 p {
-	font-family: $baseFontFamily;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	font-family: $base-font-family;
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	margin-top: 0;
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $base-line-height + px;
 
 	// Measure - ideally about 65 chars per line
 	// =========================================
-	// max-width: $baseFontSize * 30 + px;
+	// max-width: $base-font-size * 30 + px;
 
-	& small {
-		color: lighten($textColor, 70%);
-	}
+	// & small {
+	// 	color: lighten($color-text, 10%);
+	// }
 }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font-family: $headingsFontFamily;
-	font-weight: $headingsFontWeight;
-	color: $headingsColor;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	color: $color-headings;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 
 	& small {
 		font-weight: normal;
-		color: lighten($headingsColor, 70%);
+		color: lighten($color-headings, 15%);
 	}
 }
 
@@ -83,35 +83,35 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1, .alpha {
 	@include font-size(51);
-	@include line-height($baseLineHeight * 2);
-	margin-top: $baseLineHeight + px;
-	margin-bottom: ($baseLineHeight * 2) + px;
+	@include line-height($base-line-height * 2);
+	margin-top: $base-line-height + px;
+	margin-bottom: ($base-line-height * 2) + px;
 }
 
 h2, .h2, .beta {
 	@include font-size(28);
-	@include line-height($baseLineHeight * 2);
-	margin-top: ($baseLineHeight * 2) + px;
-	margin-bottom: $baseLineHeight + px;
+	@include line-height($base-line-height * 2);
+	margin-top: ($base-line-height * 2) + px;
+	margin-bottom: $base-line-height + px;
 }
 
 h3, .h3, .gamma {
 	@include font-size(21);
-	@include line-height($baseLineHeight);
-	margin-top: $baseLineHeight + px;
+	@include line-height($base-line-height);
+	margin-top: $base-line-height + px;
 	margin-bottom: 0px;
 }
 
 h4, .h4,, .delta,
 h5, .h5, .epsilon,
 h6, .h6, .zeta {
-	@include line-height($baseLineHeight);
+	@include line-height($base-line-height);
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 h4, .h4, .delta {
-	@include font-size($baseFontSize);
+	@include font-size($base-font-size);
 }
 
 h5, .h5, .epsilon {
@@ -126,8 +126,8 @@ h6, .h6, .zeta {
 
 // Page header
 .page-header {
-	padding-bottom: $baseLineHeight - 1 + px;
-	margin: ($baseLineHeight + px) 0;
+	padding-bottom: $base-line-height - 1 + px;
+	margin: ($base-line-height + px) 0;
 	border-bottom: 1px solid lighten(#000, 70%)er;
 }
 
@@ -159,7 +159,7 @@ a {
 
 // Horizontal rules
 hr {
-	margin: ($baseLineHeight + px) 0;
+	margin: ($base-line-height + px) 0;
 	border: 0;
 	border-top: 1px solid $hrBorder;
 	border-bottom: 1px solid #fff;
@@ -167,7 +167,7 @@ hr {
 
 // Emphasis
 strong, b {
-	font-weight: $boldFontWeight;
+	font-weight: $bold-font-weight;
 }
 em, i {
 	font-style: italic;
@@ -189,17 +189,17 @@ abbr.initialism {
 // Blockquotes
 blockquote {
 	padding: 0 0 0 15px;
-	margin: 0 0 ($baseLineHeight + px);
+	margin: 0 0 ($base-line-height + px);
 	border-left: 5px solid lighten(#000, 70%)er;
 	& p {
 		margin-bottom: 0;
-		@include font-size($baseFontSize);
+		@include font-size($base-font-size);
 		font-weight: 300;
-		@include line-height($baseLineHeight * 1.25);
+		@include line-height($base-line-height * 1.25);
 	}
 	& small {
 		display: block;
-		@include line-height($baseLineHeight);
+		@include line-height($base-line-height);
 		color: lighten(#000, 70%);
 		&:before {
 			content: '\2014 \00A0';
@@ -232,8 +232,8 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $baseLineHeight + px;
-	@include line-height($baseLineHeight);
+	margin-bottom: $base-line-height + px;
+	@include line-height($base-line-height);
 	font-style: normal;
 }
 
@@ -278,7 +278,7 @@ ol { list-style-type: decimal }
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($baseLineHeight + px) 25px;
+	margin: 0 0 ($base-line-height + px) 25px;
 
 	& ul,
 	& ol {
@@ -300,7 +300,7 @@ ul, ol {
 	}
 
 	& li {
-		@include line-height($baseLineHeight);
+		@include line-height($base-line-height);
 	}
 
 	& ul,
@@ -317,17 +317,17 @@ ul, ol {
 
 // === Definition lists ===
 dl {
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $base-line-height + px;
 }
 
 dt,
 dd {
-	@include line-height($baseLineHeight);
+	@include line-height($base-line-height);
 }
 
 dt {
-	font-weight:$boldFontWeight;
-	@include line-height($baseLineHeight - 1); // fix jank Helvetica Neue font bug
+	font-weight:$bold-font-weight;
+	@include line-height($base-line-height - 1); // fix jank Helvetica Neue font bug
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
@@ -340,7 +340,7 @@ dt {
 }
 
 dd {
-	margin-left: $baseLineHeight / 2 + px;
+	margin-left: $base-line-height / 2 + px;
 
 	.dl-horizontal & {
 		margin-left: 130px;

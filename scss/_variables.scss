@@ -3,7 +3,7 @@
 // === TABLE OF CONTENTS ===
 // =========================
 // * Settings
-// * Global values
+// * Global valuesx
 // * Breakpoints
 // * Paths
 // * Grid setup
@@ -24,57 +24,52 @@ $support-ie8                  : true;
 $support-FF36                 : false;
 
 
-// === Global values ===
-// =====================
-$bodyBackground               : #fff;
-$textColor                    : $gray;
-
-// Links
-$linkColor                    : $accentColor;
-$linkColorHover               : darken($linkColor, 10%);
+// === Typography ===
+// ==================
 
 // Base sizes
 // Set this in pixels, the font-size mixin will convert to REMS
-$baseFontSize                 : 16;
-$baseLeading                  : 1.4;
-$baseLineHeight               : round($baseFontSize * $baseLeading);
+$base-font-size                : 16;
+$base-leading                  : 1.4;
+$base-line-height              : round($base-font-size * $base-leading);
 
 // Useful to set here when bold webfonts come as 400 font-weight.
-$boldFontWeight               : bold;
+$bold-font-weight             : bold;
 
 // Font stacks
-$sansFontFamily               : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily              : Georgia, "Times New Roman", Times, serif;
-$monoFontFamily               : Menlo, Monaco, "Courier New", monospace;
+$sans-font-family             : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-family            : Georgia, "Times New Roman", Times, serif;
+$mono-font-family             : Menlo, Monaco, "Courier New", monospace;
 
-$baseFontFamily               : $sansFontFamily;
-$altFontFamily                : $serifFontFamily;
+$base-font-family             : $sans-font-family;
+$alt-font-family              : $serif-font-family;
 
-$headingsFontFamily           : inherit; // empty to use Kickoff default $baseFontFamily
-$headingsFontWeight           : bold;    // instead of browser default, bold
-$headingsColor                : #000; // empty to use BS default, $textColor
+$headings-font-family         : inherit; // empty to use Kickoff default $base-font-family
+$headings-font-weight         : bold;    // instead of browser default, bold
 
 
 // === Breakpoints ===
 // ===================
 // There are no common breakpoints so these are just a suggestion
 // You'll need to define your own breakpoints to suit your design
-$breakpoint-narrow            : 30em;
-$breakpoint-mid               : 48em;
-$breakpoint-wide              : 60em;
-$breakpoint-huge              : 100em;
+$breakpoint-narrow            : 25em;  // 400px  @ 16px base
+$breakpoint-mid               : 48em;  // 768px  @ 16px base
+$breakpoint-wide              : 60em;  // 960px  @ 16px base
+$breakpoint-huge              : 100em; // 1600px @ 16px base
 
 
 // === Paths ===
 // =============
-$imgPath                      : "/img";
-$imgUIPath                    : "#{$imgPath}/ui";
-$uiSprite                     : "#{$imgPath}/ui/kickoff-sprite.png";
-$iconSpritePath               : "#{$imgUIPath}/glyphicons-halflings.png";
-$iconWhiteSpritePath          : "#{$imgUIPath}/glyphicons-halflings-white.png";
-$imgSprite1x                  : "#{$imgUIPath}/sprites$1x.png";
-$imgSprite2x                  : "#{$imgUIPath}/sprites$2x.png";
-// $imgSpriteDimensions          : 50px 300px; // Used for retina sprites  - make these the same size as $imgSprite1x
+// Usage
+// background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+
+$img-path                     : "/img";
+$img-ui-path                  : "#{$img-path}/ui";
+$img-ui-sprite                : "#{$img-ui-path}/ui/kickoff-sprite.png";
+// $img-ui-sprite-dimensions     : 50px 300px; // Used for hiDPI sprites  - make these the same size as $imgSprite1x
+$img-ui-sprite-2x             : "#{$img-ui-path}/kickoff-sprite-2x.png";
+$img-icon-sprite              : "#{$img-ui-path}/glyphicons-halflings.png";
+$img-icon-white-sprite        : "#{$img-ui-path}/glyphicons-halflings-white.png";
 
 
 // === Grid setup ===

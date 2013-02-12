@@ -11,35 +11,37 @@ $pink                         : #c3325f;
 $purple                       : #7a43b6;
 $gray                         : lighten(#000, 50%);
 
-$color-primary                : #2b306a;
+// Colour Scheme
+$color-primary                : $pink;
 $color-secondary              : #06c0db;
 $color-highlight              : #ff9600;
 $color-muted                  : #eef;
 $color-note                   : #666;
+$color-complement             : adjust-hue($color-primary, 180);
 
 $accentColor                  : $blue;
 $primaryButtonBackground      : $blue;
-$complement                   : adjust-hue($accentColor, 180);  // Determine a complementary color
 
 // Common colours
-$color-text                   : #242424;
-$color-background             : #fefefe;
+$color-text                   : #444;
+$color-headings               : $color-primary; // inherit to use default, $color-text
+$color-background             : #fff;
 $color-border                 : #ddd;
 
 // Links
-$color-link-default           : #242424;
-$color-link-visited           : #444;
-$color-link-hover             : $pink;
-$color-link-active            : $yellow;
+$color-link-default           : $color-primary;
+$color-link-visited           : $color-primary;
+$color-link-hover             : darken($color-primary, 15%);
+$color-link-active            : darken($color-primary, 15%);
 
 // Code
-$color-code                   : #333;
-$color-code-background        : #f3f3f3;
+$color-code                   : #d14;
+$color-code-background        : #f7f7f9;
 $color-pre                    : #d4d4d4;
 $color-pre-background         : #333;
 
 // Selections
-$color-selection              : #b3d4fc;
+$color-selection              : $color-primary;
 
 // Messages
 $color-message                : #f4ecbb;

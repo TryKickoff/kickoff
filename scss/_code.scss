@@ -8,7 +8,7 @@
 code,
 pre {
 	padding: 0 3px 2px;
-	font-family: $monoFontFamily;
+	font-family: $mono-font-family;
 	@include font-size(13);
 	color: $gray;
 	@include border-radius(3px);
@@ -18,18 +18,19 @@ pre {
 // Inline code
 code {
 	padding: 2px 4px;
-	color: #d14;
-	background-color: #f7f7f9;
+	color: $color-code;
+	background-color: $color-code-background;
 	border: 1px solid #e1e1e8;
 }
 
 // Blocks of code
 pre {
 	display: block;
-	padding: ($baseLineHeight - 1) / 2 + px;
-	margin: 0 0 ($baseLineHeight / 2 + px);
-	@include line-height($baseLineHeight);
-	background-color: #f5f5f5;
+	padding: ($base-line-height - 1) / 2 + px;
+	margin: 0 0 ($base-line-height / 2 + px);
+	@include line-height($base-line-height);
+	color: $color-pre;
+	background-color: $color-pre-background;
 	border: 1px solid #ccc; // fallback for IE7-8
 	border: 1px solid rgba(0,0,0,.15);
 	@include border-radius(4px);
@@ -40,7 +41,7 @@ pre {
 
 	// Make prettyprint styles more spaced out for readability
 	&.prettyprint {
-		margin-bottom: $baseLineHeight + px;
+		margin-bottom: $base-line-height + px;
 	}
 
 	// Account for some code outputs that place code tags in pre tags
@@ -56,4 +57,13 @@ pre {
 .pre-scrollable {
 	max-height: 340px;
 	overflow-y: scroll;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: $color-selection;
+}
+::selection {
+	color: #fff;
+	background: $color-selection;
 }

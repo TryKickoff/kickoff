@@ -359,16 +359,16 @@ $old-ie: false !default;
 // ===================
 // REM FONT SIZE
 // @include font-size(16);
-@mixin font-size($sizeValue: $baseFontSize){
-	$remValue: ($sizeValue / $baseFontSize);
+@mixin font-size($sizeValue: $base-font-size){
+	$remValue: ($sizeValue / $base-font-size);
 	font-size: $sizeValue + px;
 	font-size: $remValue + rem;
 }
 
 // REM LINE HEIGHT
 // @include line-height(16);
-@mixin line-height($sizeValue: $baseLineHeight){
-	$remValue: ($sizeValue / $baseFontSize);
+@mixin line-height($sizeValue: $base-line-height){
+	$remValue: ($sizeValue / $base-font-size);
 	line-height: $sizeValue + px;
 	line-height: $remValue + rem;
 }
@@ -382,29 +382,29 @@ $old-ie: false !default;
 // === REM MIXINS === NEED TO CHANGE TO IF STATEMENTS NOW
 // ==================
 // @include rem(font-size, 16);
-// @include rem($sizeValue: $baseFontSize){
-// 	$remValue: ($sizeValue / $baseFontSize);
+// @include rem($sizeValue: $base-font-size){
+// 	$remValue: ($sizeValue / $base-font-size);
 // 	font-size: $sizeValue + px;
 // 	font-size: $remValue + rem;
 // }
 
 // @include rem(line-height, 16);
-// @include rem($sizeValue: $baseFontSize){
-// 	$remValue: ($sizeValue / $baseFontSize);
+// @include rem($sizeValue: $base-font-size){
+// 	$remValue: ($sizeValue / $base-font-size);
 // 	line-height: $sizeValue + px;
 // 	line-height: $remValue + rem;
 // }
 
 // @include rem(margin, 16);
-// @include rem($sizeValue: $baseFontSize){
-// 	$remValue: ($sizeValue / $baseFontSize);
+// @include rem($sizeValue: $base-font-size){
+// 	$remValue: ($sizeValue / $base-font-size);
 // 	margin: $sizeValue + px;
 // 	margin: $remValue + rem;
 // }
 
 // @include rem(padding, 16);
-// @include rem($sizeValue: $baseFontSize){
-// 	$remValue: ($sizeValue / $baseFontSize);
+// @include rem($sizeValue: $base-font-size){
+// 	$remValue: ($sizeValue / $base-font-size);
 // 	padding: $sizeValue + px;
 // 	padding: $remValue + rem;
 // }
@@ -494,18 +494,18 @@ $old-ie: false !default;
 }
 
 // Mixin for form field states
-@mixin formFieldState($textColor: #555, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
+@mixin formFieldState($color-text: $color-text, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
 	// Set the text color
 	> label,
 	.help-block,
 	.help-inline {
-		color: $textColor;
+		color: $color-text;
 	}
 	// Style inputs accordingly
 	input,
 	select,
 	textarea {
-		color: $textColor;
+		color: $color-text;
 		border-color: $borderColor;
 		&:focus {
 		border-color: darken($borderColor, 10%);
@@ -515,9 +515,9 @@ $old-ie: false !default;
 	// Give a small background color for input-prepend/-append
 	.input-prepend .add-on,
 	.input-append .add-on {
-		color: $textColor;
+		color: $color-text;
 		background-color: $backgroundColor;
-		border-color: $textColor;
+		border-color: $color-text;
 	}
 }
 

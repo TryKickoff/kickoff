@@ -128,8 +128,8 @@ $kickoff-button-border-width  : 0px;
 	@include ie7-inline-block();
 	padding: 5px 10px;
 	margin-bottom: 0; // For input.btn
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
@@ -207,7 +207,7 @@ $kickoff-button-border-width  : 0px;
 // Large
 .btn-large {
 	padding: 9px 14px;
-	@include font-size($baseFontSize + 2);
+	@include font-size($base-font-size + 2);
 	line-height: normal;
 
 	& [class^="icon-"] {
@@ -219,8 +219,8 @@ $kickoff-button-border-width  : 0px;
 // Small
 .btn-small {
 	padding: 5px 9px;
-	@include font-size($baseFontSize - 2);
-	@include line-height($baseLineHeight - 2);
+	@include font-size($base-font-size - 2);
+	@include line-height($base-line-height - 2);
 
 	& [class^="icon-"] {
 		margin-top: 1px;
@@ -231,8 +231,8 @@ $kickoff-button-border-width  : 0px;
 // Mini
 .btn-mini {
 	padding: 2px 6px;
-	@include font-size($baseFontSize - 2);
-	@include line-height($baseLineHeight - 4);
+	@include font-size($base-font-size - 2);
+	@include line-height($base-line-height - 4);
 	@include border-radius(3px);
 }
 

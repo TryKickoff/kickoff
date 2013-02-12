@@ -169,7 +169,7 @@ ul.centred, ul.centered {
 .tabs {
 	@include clearfix;
 	@extend .unstyled;
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $base-line-height + px;
 
 	&.is-right {
 		& li {

@@ -8,12 +8,11 @@
 // * Horizontal & vertical forms
 // * Horizontal-specific styles
 
-// ============
 // === Form ===
 // ============
 // Make all forms have space below them
 form {
-	margin: 0 0 ($baseLineHeight + px);
+	margin: 0 0 ($base-line-height + px);
 
 	ul {
 		@extend .unstyled;
@@ -28,12 +27,12 @@ fieldset {
 
 // Margin to space out fieldsets
 .control-group {
-	margin-top: ($baseLineHeight / 2 + px);
+	margin-top: ($base-line-height / 2 + px);
 	list-style-type: none;
 
 	// Legend collapses margin, so next element is responsible for spacing
 	legend + & {
-		margin-top: $baseLineHeight + px;
+		margin-top: $base-line-height + px;
 		-webkit-margin-top-collapse: separate;
 	}
 }
@@ -44,16 +43,16 @@ legend {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: $baseLineHeight + px;
-	@include font-size($baseFontSize * 1.5);
-	@include line-height($baseLineHeight * 2);
+	margin-bottom: $base-line-height + px;
+	@include font-size($base-font-size * 1.5);
+	@include line-height($base-line-height * 2);
 	color: $labelColour;
 	border: 0;
 	border-bottom: 1px solid #eee;
 
 	// Small
 	& small {
-		@include font-size($baseFontSize * .75);
+		@include font-size($base-font-size * .75);
 		color: lighten(#000, 70%);
 	}
 }
@@ -64,8 +63,8 @@ input,
 button,
 select,
 textarea {
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	font-weight: normal;
 }
 
@@ -74,7 +73,7 @@ input,
 button,
 select,
 textarea {
-	font-family: $baseFontFamily;
+	font-family: $base-font-family;
 }
 
 // Identify controls by their labels
@@ -112,11 +111,11 @@ select,
 	display: inline-block;
 	@include ie7-inline-block();
 	width: 210px;
-	height: $baseLineHeight * 1.5 + px;
+	height: $base-line-height * 1.5 + px;
 	padding: 4px;
 	margin-bottom: 9px;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	color: $inputColour;
 	background-color: #FFF;
 	border: 1px solid $inputBorder;
@@ -416,7 +415,7 @@ textarea {
 
 	// Increase spacing between groups
 	& .control-group {
-		margin-bottom: $baseLineHeight + px;
+		margin-bottom: $base-line-height + px;
 		@include clearfix();
 	}
 
@@ -444,7 +443,7 @@ textarea {
 
 	// Remove bottom margin on block level help text since that's accounted for on .control-group
 	& .help-block {
-		margin-top: $baseLineHeight / 2 + px;
+		margin-top: $base-line-height / 2 + px;
 		margin-bottom: 0;
 	}
 
@@ -516,9 +515,9 @@ textarea {
 // ------------
 
 .form-actions {
-	padding: ($baseLineHeight - 1 + px) 20px ($baseLineHeight + px);
-	margin-top: $baseLineHeight + px;
-	margin-bottom: $baseLineHeight + px;
+	padding: ($base-line-height - 1 + px) 20px ($base-line-height + px);
+	margin-top: $base-line-height + px;
+	margin-bottom: $base-line-height + px;
 	background-color: $formActionsBackground;
 	border-top: 1px solid #ddd;
 	@include clearfix(); // Adding clearfix to allow for .pull-right button containers
@@ -552,7 +551,7 @@ textarea {
 
 .help-block {
 	display: block; // account for any element using help-block
-	margin-bottom: $baseLineHeight / 2 + px;
+	margin-bottom: $base-line-height / 2 + px;
 }
 
 .help-inline {
@@ -593,10 +592,10 @@ textarea {
 		@include ie7-inline-block();
 		width: auto;
 		min-width: 16px;
-		height: $baseLineHeight + px;
+		height: $base-line-height + px;
 		padding: 4px 5px;
 		font-weight: normal;
-		@include line-height($baseLineHeight);
+		@include line-height($base-line-height);
 		text-align: center;
 		text-shadow: 0 1px 0 #fff;
 		vertical-align: middle;
