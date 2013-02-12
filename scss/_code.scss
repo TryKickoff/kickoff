@@ -47,8 +47,8 @@ pre {
 	// Account for some code outputs that place code tags in pre tags
 	& code {
 		padding: 0;
-		color: inherit;
-		background-color: transparent;
+		color: $color-code;
+		background-color: $color-code-background;
 		border: 0;
 	}
 }
@@ -57,13 +57,4 @@ pre {
 .pre-scrollable {
 	max-height: 340px;
 	overflow-y: scroll;
-}
-
-::-moz-selection {
-	color: #fff;
-	background: $color-selection;
-}
-::selection {
-	color: #fff;
-	background: $color-selection;
 }
