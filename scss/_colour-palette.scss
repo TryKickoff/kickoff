@@ -12,14 +12,13 @@ $purple                       : #7a43b6;
 $gray                         : lighten(#000, 50%);
 
 // Colour Scheme
-$color-primary                : $pink;
-$color-secondary              : #06c0db;
+$color-primary                : $blue;
+$color-secondary              : $green;
 $color-highlight              : #ff9600;
 $color-muted                  : #eef;
 $color-note                   : #666;
 $color-complement             : adjust-hue($color-primary, 180);
 
-$accentColor                  : $blue;
 $primaryButtonBackground      : $blue;
 
 // Common colours
@@ -37,8 +36,8 @@ $color-link-active            : darken($color-primary, 15%);
 // Code
 $color-code                   : #d14;
 $color-code-background        : #f7f7f9;
-$color-pre                    : #d4d4d4;
-$color-pre-background         : #333;
+$color-pre                    : $color-code;
+$color-pre-background         : $color-code-background;
 
 // Selections
 $color-selection              : $color-primary;
