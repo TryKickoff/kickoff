@@ -278,11 +278,11 @@ ol { list-style-type: decimal }
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($base-line-height + px) 25px;
+	margin: 0 0 ($base-line-height + px) ($base-line-height + px);
 
 	& ul,
 	& ol {
-		margin: 0 0 0 45px;
+		margin-left: ($base-line-height * 2) + px;
 	}
 
 	& ul {
@@ -310,8 +310,10 @@ ul, ol {
 }
 
 .unstyled {
-	margin-left: 0;
+	margin: 0;
+	padding: 0;
 	list-style: none;
+	list-style-image: none;
 }
 
 
@@ -334,16 +336,16 @@ dt {
 		@include text-overflow();
 		float: left;
 		clear: left;
-		width: 120px;
+		width: 220px;
 		text-align: right;
 	}
 }
 
 dd {
-	margin-left: $base-line-height / 2 + px;
+	margin-left: $base-line-height + px;
 
 	.dl-horizontal & {
-		margin-left: 130px;
+		margin-left: 240px;
 	}
 }
 
@@ -351,3 +353,15 @@ dd {
 .text-centre, .text-center { text-align: center;}
 .text-left { text-align: left;}
 .text-right { text-align: right;}
+
+
+
+::-moz-selection {
+	color: lighten($color-selection, 55%);
+	background: $color-selection;
+}
+
+::selection {
+	color: lighten($color-selection, 55%);
+	background: $color-selection;
+}

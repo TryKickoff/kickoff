@@ -1,5 +1,5 @@
 // ======================
-// === NORMALIZE.less ===
+// === NORMALIZE.scss ===
 // ======================
 // http://github.com/necolas/normalize.css
 // Kickoff uses an amended version of this file.
@@ -18,8 +18,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 // Corrects inline-block display not defined in IE6/7/8/9 & FF3
 audio,canvas,video {
 	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	@if $support-ie7 == true {
+		*display: inline;
+		*zoom: 1;
+	}
 }
 
 // Prevents modern browsers from displaying 'audio' without controls
@@ -71,21 +73,12 @@ a:hover, a:active { outline: 0; }
 // === LISTS ===
 // =============
 
-// Remove default styling for lists
-ol, ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	list-style-image: none;
-}
 // Addresses margins set differently in IE6/7
 dl,menu,ol.normal,ul.normal {
 	margin: 1em 0;
 }
 
-dd {
-	margin: 0 0 0 40px;
-}
+
 
 // Addresses paddings set differently in IE6/7
 menu,ol.normal,ul.normal {
