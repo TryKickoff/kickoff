@@ -89,7 +89,7 @@ $kickoff-button-border-width  : 0px;
 
 	// Active state
 	&.is-active {
-		@if $bg-lightness < 20 {
+		@if $bg-lightness > 80 {
 			color: lighten($text-color, 80%);
 		} @else {
 			color: $text-color;
@@ -120,8 +120,6 @@ $kickoff-button-border-width  : 0px;
 				@include box-shadow($shadow);
 			}
 		}
-
-
 	}
 }
 
@@ -194,9 +192,10 @@ $kickoff-button-border-width  : 0px;
 
 // Pills
 .btn-pill {
-	$kickoff-button-style         : 'flat';
-	$kickoff-button-border-radius : 30px;
-	@include kickoff-button($text-color: #444, $bg-color: #fff, $active-color: #ddd);
+	// $kickoff-button-style         : 'flat';
+	// $kickoff-button-border-radius : 30px;
+	// @include kickoff-button($text-color: #555, $bg-color: #ddd, $active-color: $blue);
+	@include border-radius(30px);
 	padding-left: 15px;
 	padding-right: 15px;
 }

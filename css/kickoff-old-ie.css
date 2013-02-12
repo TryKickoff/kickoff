@@ -1606,7 +1606,7 @@ ul.centred, ul.centered {
 .tabs-content > li.is-active {
   display: block; }
 
-.btn, .btn-primary, .btn-warning, .btn-flat, .btn-pill {
+.btn, .btn-primary, .btn-warning, .btn-flat {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -1625,15 +1625,15 @@ ul.centred, ul.centered {
   /* Remove the border to prevent IE7's black border on input:focus */
   *border: 0;
   *line-height: 20px; }
-  .btn:first-child, .btn-primary:first-child, .btn-warning:first-child, .btn-flat:first-child, .btn-pill:first-child {
+  .btn:first-child, .btn-primary:first-child, .btn-warning:first-child, .btn-flat:first-child {
     *margin-left: 0; }
-  .btn:hover, .btn-primary:hover, .btn-warning:hover, .btn-flat:hover, .btn-pill:hover {
+  .btn:hover, .btn-primary:hover, .btn-warning:hover, .btn-flat:hover {
     text-decoration: none; }
-  .btn:focus, .btn-primary:focus, .btn-warning:focus, .btn-flat:focus, .btn-pill:focus {
+  .btn:focus, .btn-primary:focus, .btn-warning:focus, .btn-flat:focus {
     outline: thin dotted #333333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .disabled.btn, .disabled.btn-primary, .disabled.btn-warning, .disabled.btn-flat, .disabled.btn-pill, [disabled].btn, [disabled].btn-primary, [disabled].btn-warning, [disabled].btn-flat, [disabled].btn-pill, .btn:hover[disabled], .btn-primary:hover[disabled], .btn-warning:hover[disabled], .btn-flat:hover[disabled], .btn-pill:hover[disabled] {
+  .disabled.btn, .disabled.btn-primary, .disabled.btn-warning, .disabled.btn-flat, [disabled].btn, [disabled].btn-primary, [disabled].btn-warning, [disabled].btn-flat, .btn:hover[disabled], .btn-primary:hover[disabled], .btn-warning:hover[disabled], .btn-flat:hover[disabled] {
     cursor: default;
     background-image: none;
     background-color: #cccccc;
@@ -1645,9 +1645,9 @@ ul.centred, ul.centered {
     -moz-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none; }
-  .btn [class^="icon-"], .btn-primary [class^="icon-"], .btn-warning [class^="icon-"], .btn-flat [class^="icon-"], .btn-pill [class^="icon-"] {
+  .btn [class^="icon-"], .btn-primary [class^="icon-"], .btn-warning [class^="icon-"], .btn-flat [class^="icon-"] {
     margin-top: 2px; }
-  .btn:active, .btn-primary:active, .btn-warning:active, .btn-flat:active, .btn-pill:active {
+  .btn:active, .btn-primary:active, .btn-warning:active, .btn-flat:active {
     background-image: none;
     outline: 0; }
 
@@ -1692,7 +1692,7 @@ ul.centred, ul.centered {
     -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
   .btn.is-active {
-    color: #4d4d4d; }
+    color: white; }
 
 .btn-primary {
   color: white;
@@ -1851,26 +1851,11 @@ ul.centred, ul.centered {
     background-color: white; }
 
 .btn-pill {
-  color: #444444;
-  background-color: white;
-  border: 1px solid white;
   -webkit-border-radius: 30px;
   -o-border-radius: 30px;
   border-radius: 30px;
   padding-left: 15px;
   padding-right: 15px; }
-  .btn-pill:link, .btn-pill:visited {
-    color: #444444; }
-  .btn-pill:hover {
-    color: #444444;
-    border: 1px solid #e6e6e6;
-    background-color: #e6e6e6; }
-  .btn-pill:active {
-    background-color: #e6e6e6; }
-  .btn-pill.is-active {
-    color: #444444;
-    border: 1px solid #dddddd;
-    background-color: #dddddd; }
 
 .btn-large {
   padding: 9px 14px;

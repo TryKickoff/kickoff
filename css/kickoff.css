@@ -1987,8 +1987,8 @@ ul.centred, ul.centered {
 .tabs-content > li.is-active {
   display: block; }
 
-/* line 128, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-.btn, .btn-primary, .btn-warning, .btn-flat, .btn-pill {
+/* line 126, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+.btn, .btn-primary, .btn-warning, .btn-flat {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -2008,18 +2008,18 @@ ul.centred, ul.centered {
   *border: 0;
   *line-height: 20px; }
   /* line 578, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_mixins.scss */
-  .btn:first-child, .btn-primary:first-child, .btn-warning:first-child, .btn-flat:first-child, .btn-pill:first-child {
+  .btn:first-child, .btn-primary:first-child, .btn-warning:first-child, .btn-flat:first-child {
     *margin-left: 0; }
-  /* line 146, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn:hover, .btn-primary:hover, .btn-warning:hover, .btn-flat:hover, .btn-pill:hover {
+  /* line 144, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  .btn:hover, .btn-primary:hover, .btn-warning:hover, .btn-flat:hover {
     text-decoration: none; }
-  /* line 151, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn:focus, .btn-primary:focus, .btn-warning:focus, .btn-flat:focus, .btn-pill:focus {
+  /* line 149, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  .btn:focus, .btn-primary:focus, .btn-warning:focus, .btn-flat:focus {
     outline: thin dotted #333333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  /* line 158, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .disabled.btn, .disabled.btn-primary, .disabled.btn-warning, .disabled.btn-flat, .disabled.btn-pill, [disabled].btn, [disabled].btn-primary, [disabled].btn-warning, [disabled].btn-flat, [disabled].btn-pill, .btn:hover[disabled], .btn-primary:hover[disabled], .btn-warning:hover[disabled], .btn-flat:hover[disabled], .btn-pill:hover[disabled] {
+  /* line 156, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  .disabled.btn, .disabled.btn-primary, .disabled.btn-warning, .disabled.btn-flat, [disabled].btn, [disabled].btn-primary, [disabled].btn-warning, [disabled].btn-flat, .btn:hover[disabled], .btn-primary:hover[disabled], .btn-warning:hover[disabled], .btn-flat:hover[disabled] {
     cursor: default;
     background-image: none;
     background-color: #cccccc;
@@ -2031,15 +2031,15 @@ ul.centred, ul.centered {
     -moz-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none; }
-  /* line 167, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn [class^="icon-"], .btn-primary [class^="icon-"], .btn-warning [class^="icon-"], .btn-flat [class^="icon-"], .btn-pill [class^="icon-"] {
+  /* line 165, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  .btn [class^="icon-"], .btn-primary [class^="icon-"], .btn-warning [class^="icon-"], .btn-flat [class^="icon-"] {
     margin-top: 2px; }
-  /* line 171, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn:active, .btn-primary:active, .btn-warning:active, .btn-flat:active, .btn-pill:active {
+  /* line 169, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  .btn:active, .btn-primary:active, .btn-warning:active, .btn-flat:active {
     background-image: none;
     outline: 0; }
 
-/* line 178, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 176, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn {
   color: #4d4d4d;
   background-color: #d9d9d9;
@@ -2085,9 +2085,9 @@ ul.centred, ul.centered {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
   /* line 91, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   .btn.is-active {
-    color: #4d4d4d; }
+    color: white; }
 
-/* line 184, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 182, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-primary {
   color: white;
   background-color: #034f90;
@@ -2160,7 +2160,7 @@ ul.centred, ul.centered {
     -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05); }
 
-/* line 187, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 185, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-warning {
   color: white;
   background-color: #373737;
@@ -2233,7 +2233,7 @@ ul.centred, ul.centered {
     -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05); }
 
-/* line 190, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 188, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-flat {
   color: white;
   background-color: #049cdb;
@@ -2258,55 +2258,36 @@ ul.centred, ul.centered {
     border: 1px solid white;
     background-color: white; }
 
-/* line 196, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 194, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-pill {
-  color: #444444;
-  background-color: white;
-  border: 1px solid white;
   -webkit-border-radius: 30px;
   -o-border-radius: 30px;
   border-radius: 30px;
   padding-left: 15px;
   padding-right: 15px; }
-  /* line 60, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn-pill:link, .btn-pill:visited {
-    color: #444444; }
-  /* line 65, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn-pill:hover {
-    color: #444444;
-    border: 1px solid #e6e6e6;
-    background-color: #e6e6e6; }
-  /* line 79, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn-pill:active {
-    background-color: #e6e6e6; }
-  /* line 91, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-  .btn-pill.is-active {
-    color: #444444;
-    border: 1px solid #dddddd;
-    background-color: #dddddd; }
 
-/* line 209, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 208, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-large {
   padding: 9px 14px;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: normal; }
-  /* line 214, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 213, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   .btn-large [class^="icon-"] {
     margin-top: 4px; }
 
-/* line 221, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 220, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-small {
   padding: 5px 9px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 20px;
   line-height: 1.25rem; }
-  /* line 226, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 225, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   .btn-small [class^="icon-"] {
     margin-top: 1px; }
 
-/* line 233, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 232, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-mini {
   padding: 2px 6px;
   font-size: 14px;
@@ -2317,27 +2298,27 @@ ul.centred, ul.centered {
   -o-border-radius: 3px;
   border-radius: 3px; }
 
-/* line 268, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+/* line 267, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 button.btn,
 input[type="submit"].btn {
   *padding-top: 2px;
   *padding-bottom: 2px; }
-  /* line 271, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 270, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   button.btn::-moz-focus-inner,
   input[type="submit"].btn::-moz-focus-inner {
     padding: 0;
     border: 0; }
-  /* line 280, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 279, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   button.btn.btn-large,
   input[type="submit"].btn.btn-large {
     *padding-top: 7px;
     *padding-bottom: 7px; }
-  /* line 284, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 283, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   button.btn.btn-small,
   input[type="submit"].btn.btn-small {
     *padding-top: 3px;
     *padding-bottom: 3px; }
-  /* line 288, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+  /* line 287, /Users/zmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
   button.btn.btn-mini,
   input[type="submit"].btn.btn-mini {
     *padding-top: 1px;
