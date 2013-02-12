@@ -5,16 +5,17 @@
 // For image replacement
 .ir {
 	background-color: transparent;
+	background-repeat: no-repeat;
 	border: 0;
-	overflow: hidden;
-	/* IE 6/7 fallback */
-	*text-indent: -9999px;
-}
-.ir:before {
-	content: "";
+	direction: ltr;
 	display: block;
-	width: 0;
-	height: 100%;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+
+.ir br {
+	display: none;
 }
 
 
@@ -24,7 +25,9 @@
 	display: none !important;
 	visibility: hidden;
 }
+.is-shown,
 .show { display: block; }
+
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhidden {
 	border: 0;
