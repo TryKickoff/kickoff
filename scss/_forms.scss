@@ -108,8 +108,7 @@ textarea,
 select,
 .uneditable-input,
 .file-wrapper {
-	display: inline-block;
-	@include ie7-inline-block();
+
 	width: 210px;
 	height: $base-line-height * 1.5 + px;
 	padding: 4px;
@@ -235,8 +234,7 @@ textarea {
 	// Radios and checkboxes on same line
 	// TODO: Convert .inline to .control-inline
 	&.inline {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend inline-block;
 		padding-top: 5px;
 		margin-bottom: 0;
 		vertical-align: middle;
@@ -287,7 +285,7 @@ input[type="checkbox"],
 select {
 	&:focus {
 		@include box-shadow(none); // override for file inputs
-		@include tab-focus();
+		@extend %tab-focus;
 	}
 }
 
@@ -386,8 +384,7 @@ textarea {
 	& .uneditable-input,
 	& .input-prepend,
 	& .input-append {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend inline-block;
 		margin-bottom: 0;
 	}
 
@@ -470,8 +467,7 @@ textarea {
 	}
 
 	& label {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend inline-block;
 	}
 
 	// Inline checkbox/radio labels (remove padding on left)
@@ -555,8 +551,7 @@ textarea {
 }
 
 .help-inline {
-	display: inline-block;
-	@include ie7-inline-block();
+	@extend inline-block;
 	vertical-align: middle;
 	padding-left: 5px;
 }
@@ -588,8 +583,7 @@ textarea {
 		border-left-color: #ccc;
 	}
 	& .add-on {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend inline-block;
 		width: auto;
 		min-width: 16px;
 		height: $base-line-height + px;

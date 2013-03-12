@@ -124,8 +124,7 @@ $kickoff-button-border-width  : 0px;
 }
 
 %kickoff-button-base {
-	display: inline-block;
-	@include ie7-inline-block();
+	@extend inline-block;
 	padding: 5px 10px;
 	margin-bottom: 0; // For input.btn
 	@include font-size($base-font-size);
@@ -147,7 +146,7 @@ $kickoff-button-border-width  : 0px;
 
 	// Focus state for keyboard and accessibility
 	&:focus {
-		@include tab-focus();
+		@extend %tab-focus;
 	}
 
 	// Disabled state
