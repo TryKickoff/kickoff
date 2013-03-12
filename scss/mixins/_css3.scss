@@ -1,0 +1,161 @@
+// BORDER RADIUS
+// @include border-radius(10px);
+// @include border-radius(10px 10px 5px 20px);
+// @include border-radius(TL TR BR BL);
+@mixin border-radius($arg: 5px) {
+	@include prefixer(border-radius, $arg, webkit moz o spec);
+}
+
+// DROP SHADOWS
+// @include box-shadow(0 1px 3px rgba(0,0,0,.25));
+@mixin box-shadow($arg: 0 1px 3px rgba(0,0,0,.25)) {
+	@include prefixer(box-shadow, $arg, webkit moz o spec);
+}
+
+// TRANSITIONS
+// @include transition(all 0.2s ease-in-out)
+@mixin transition($arg: all 0.2s ease-in-out) {
+	@include prefixer(transition, $arg, webkit moz o spec);
+}
+
+// CSS3 CONTENT COLUMNS
+@mixin content-columns($columnCount:2, $columnGap: 20px) {
+	@include prefixer(column-count, $columnCount, moz webkit spec);
+	@include prefixer(column-gap, $columnGap, moz webkit spec);
+}
+
+// Background clipping
+// @include background-clip(padding-box);
+@mixin background-clip($arg: padding-box) {
+	@include prefixer(user-select, $arg, moz o spec);
+}
+
+// Opacity
+// @include opacity(50);
+@mixin opacity($opacity: 100) {
+	zoom: 1;
+	filter: alpha(opacity=$opacity);
+	opacity: $opacity / 100;
+}
+
+// Background sizing - IE9+
+// https://developer.mozilla.org/en-US/docs/CSS/background-size
+// http://caniuse.com/#feat=background-img-opts
+// @include background-size(50px 40px);
+@mixin background-size($arg: contain) {
+	@include prefixer(background-size, $arg, webkit moz ms spec);
+}
+
+// Box sizing
+// http://caniuse.com/#feat=css3-boxsizing
+// @include box-sizing(border-box);
+@mixin box-sizing($arg: border-box) {
+	@include prefixer(box-sizing, $arg, webkit moz ms spec);
+}
+// User select
+// http://caniuse.com/#feat=user-select-none
+// @include user-select(none)
+@mixin user-select($arg: none) {
+	@include prefixer(user-select, $arg, webkit moz ms spec);
+}
+
+// TRANSFORMS
+// @include transform(scale(1.2) rotate(30deg));
+@mixin transform($arg...) {
+	@include prefixer(transform, $arg, webkit moz o ms spec);
+}
+
+// @include scale(1.2);
+@mixin scale($arg: 1.2) {
+	@include prefixer(transform, scale($arg), webkit moz o ms spec);
+}
+
+// @include rotate(10deg);
+@mixin rotate($arg) {
+	@include prefixer(transform, rotate($arg), webkit moz o ms spec);
+}
+
+// @include skew(30deg, 20deg);
+@mixin skew($deg, $deg2) {
+	@include prefixer(transform, skew($deg, $deg2), webkit moz o ms spec);
+}
+
+// @include translate(100px, 20px);
+// @include translate(x, y);
+@mixin translate($x:0, $y:0) {
+	@include prefixer(transform, translate($x, $y), webkit moz o ms spec);
+}
+
+// @include translate3d(100px, 20px, 10px);
+// @include translate3d(x, y, z);
+@mixin translate3d($x:0, $y:0, $z:0) {
+	@include prefixer(transform, translate3d($x, $y, $z), webkit moz o ms spec);
+}
+
+// @include perspective(100);
+@mixin perspective($arg: 1000) {
+	@include prefixer(perspective, $arg, webkit moz o ms spec);
+}
+
+// @include transform-origin(center, center);
+@mixin transform-origin($args...) {
+		@include prefixer(transform-origin, $args, webkit moz o ms spec);
+}
+
+// ANIMATION
+@mixin animation($name, $duration: 300ms, $delay: 0, $ease: ease) {
+-webkit-animation: $name $duration $delay $ease;
+   -moz-animation: $name $duration $delay $ease;
+	-ms-animation: $name $duration $delay $ease;
+		animation: $name $duration $delay $ease;
+}
+
+
+// GRADIENTS
+
+
+// Linear gradients
+// ================
+// Usage: Gradient position is optional, default is top. Position can be a degree. Color stops are optional as well.
+// @include linear-gradient(#1e5799, #2989d8);
+// @include linear-gradient(#1e5799, #2989d8, $fallback:#2989d8);
+// @include linear-gradient(top, #1e5799 0%, #2989d8 50%);
+// @include linear-gradient(top, #1e5799 0%, #2989d8 50%, #1e5799 100%);
+// @include linear-gradient(50deg, rgba(10, 10, 10, 0.5) 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+
+// @include gradient-horizontal($blue, $red);
+@mixin gradient-horizontal($start-color, $end-color) {
+	@include linear-gradient(left, $start-color 0%, $end-color 100%, $fallback: $start-color);
+	@if $disable-filters == false {
+		filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1)"; /* IE6 & IE7 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1)"; /* IE8+ */
+	}
+}
+@mixin gradient-vertical($start-color, $end-color) {
+	@include linear-gradient(top, $start-color 0%, $end-color 100%, $fallback: $start-color);
+	@if $disable-filters == false {
+		filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE6 & IE7 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE8+ */
+	}
+}
+
+// @include gradient-directional($red, $blue, 45deg);
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+	@include linear-gradient($deg, $start-color 0%, $end-color 100%, $fallback: $start-color);
+}
+
+// Radial gradients
+// ================
+// @include gradient-radial($red, $blue);
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+	@include radial-gradient($inner-color 0%, $outer-color 100%, $fallback: $outer-color);
+	background-repeat: no-repeat;
+}
+
+// TODO: Is this needed?
+// Gradient Bar Colors for buttons and alerts
+@mixin gradientBar($primaryColor, $secondaryColor) {
+	@include gradient-vertical($primaryColor, $secondaryColor);
+	border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
