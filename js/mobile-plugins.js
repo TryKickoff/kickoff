@@ -1,5 +1,5 @@
-/*jslint sloppy: true, white: true, browser: true, devel: true */
-/*jshint forin:true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, curly:true, browser:true, indent:4, maxerr:50, white:false, smarttabs:false */
+/*jslint white: true, browser: true, devel: true, debug: true */
+/*jshint browser:true, camelcase: true, curly:true, forin:true, indent:4, latedef: true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, maxerr:50, white:false, smarttabs:false, quotmark: single, trailing: true, debug: true, laxcomma: true */
 
 /* MOBILE PLUGIN DIRECTORY
 What you can find in this file [listed in order they appear]
