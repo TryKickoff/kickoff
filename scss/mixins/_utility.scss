@@ -1,4 +1,5 @@
 // Clearfix
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/oocss-sass/components/utils/_clearfix-me.scss
 @mixin clearfix {
 	*zoom: 1;
 	&:before,
@@ -56,6 +57,14 @@
 		font-weight: $font-weight;
 		font-style: $font-style;
 	}
+}
+
+// Optional hyphenation
+// https://developer.mozilla.org/en-US/docs/CSS/hyphens
+// @include hyphens();
+@mixin hyphens($arg: auto) {
+	word-wrap: break-word;
+	@include prefixer(hyphens, $arg, webkit moz ms o spec);
 }
 
 

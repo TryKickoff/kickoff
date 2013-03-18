@@ -34,4 +34,5 @@
 	background-image:      -ms-linear-gradient($pos, $full);
 	background-image:       -o-linear-gradient($pos, $full);
 	background-image:          linear-gradient(#{$pos}, #{$full});
+	background-repeat: repeat-x;
 }

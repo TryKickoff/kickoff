@@ -19,15 +19,21 @@
 // right version is for icons, which come before. Applying both is ok, but it will
 // mean that space between those elements will be .6em (~2 space characters) in IE7,
 // instead of the 1 space in other browsers.
-@mixin ie7-restore-left-whitespace() {
+%ie7-restore-left-whitespace {
 	*margin-left: .3em;
 	&:first-child {
 		*margin-left: 0;
 	}
 }
-@mixin ie7-restore-right-whitespace() {
+%ie7-restore-right-whitespace {
 	*margin-right: .3em;
 	&:last-child {
 		*margin-left: 0;
 	}
+}
+
+// TODO: Check we need this
+// Reset filters for IE
+%reset-filter {
+	filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
 }
