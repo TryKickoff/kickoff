@@ -12,6 +12,8 @@
 $fix-mqs: false !default; //assign false if no value set already
 
 @mixin respond-min($width) {
+	$width-em: $width / $baseFontSize + em;
+
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
@@ -22,12 +24,14 @@ $fix-mqs: false !default; //assign false if no value set already
 	}
 	@else {
 		// Otherwise, output it using a regular media query
-		@media screen and (min-width: $width) {
+		@media screen and (min-width: $width-em) {
 			@content;
 		}
 	}
 }
 @mixin respond-max($width) {
+	$width-em: $width / $baseFontSize + em;
+
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
@@ -38,12 +42,15 @@ $fix-mqs: false !default; //assign false if no value set already
 	}
 	@else {
 		// Otherwise, output it using a regular media query
-		@media screen and (max-width: $width) {
+		@media screen and (max-width: $width-em) {
 			@content;
 		}
 	}
 }
 @mixin respond-min-max($minwidth, $maxwidth) {
+	$minwidth-em: $minwidth / $baseFontSize + em;
+	$maxwidth-em: $maxwidth / $baseFontSize + em;
+
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
@@ -54,7 +61,7 @@ $fix-mqs: false !default; //assign false if no value set already
 	}
 	@else {
 		// Otherwise, output it using a regular media query
-		@media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
+		@media screen and (min-width: $minwidth-em) and (max-width: $maxwidth-em) {
 			@content;
 		}
 	}
