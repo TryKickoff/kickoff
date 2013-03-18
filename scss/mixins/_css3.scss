@@ -132,7 +132,7 @@
 	}
 }
 @mixin gradient-vertical($start-color, $end-color) {
-	@include linear-gradient(top, $start-color 0%, $end-color 100%, $fallback: $start-color);
+	@include linear-gradient(top, $start-color 0%, $end-color 100%, $fallback: $end-color);
 	@if $disable-filters == false {
 		filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE6 & IE7 */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=0)"; /* IE8+ */
