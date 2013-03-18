@@ -234,7 +234,7 @@ textarea {
 	// Radios and checkboxes on same line
 	// TODO: Convert .inline to .control-inline
 	&.inline {
-		@extend inline-block;
+		@extend %inline-block;
 		padding-top: 5px;
 		margin-bottom: 0;
 		vertical-align: middle;
@@ -384,7 +384,7 @@ textarea {
 	& .uneditable-input,
 	& .input-prepend,
 	& .input-append {
-		@extend inline-block;
+		@extend %inline-block;
 		margin-bottom: 0;
 	}
 
@@ -467,7 +467,7 @@ textarea {
 	}
 
 	& label {
-		@extend inline-block;
+		@extend %inline-block;
 	}
 
 	// Inline checkbox/radio labels (remove padding on left)
@@ -551,7 +551,7 @@ textarea {
 }
 
 .help-inline {
-	@extend inline-block;
+	@extend %inline-block;
 	vertical-align: middle;
 	padding-left: 5px;
 }
@@ -583,7 +583,7 @@ textarea {
 		border-left-color: #ccc;
 	}
 	& .add-on {
-		@extend inline-block;
+		@extend %inline-block;
 		width: auto;
 		min-width: 16px;
 		height: $base-line-height + px;
