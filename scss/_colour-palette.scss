@@ -19,19 +19,42 @@ $color-muted                  : #eef;
 $color-note                   : #666;
 $color-complement             : adjust-hue($color-primary, 180);
 
-$primaryButtonBackground      : $blue;
-
 // Common colours
 $color-text                   : #444;
 $color-headings               : $color-primary; // inherit to use default, $color-text
 $color-background             : #fff;
 $color-border                 : #ddd;
 
+
 // Links
 $color-link-default           : $color-primary;
 $color-link-visited           : $color-primary;
 $color-link-hover             : darken($color-primary, 15%);
 $color-link-active            : darken($color-primary, 15%);
+
+
+// Buttons
+$btn-background               : #fff;
+$btn-background-highlight     : darken(#fff, 10%);
+$btn-border                   : #ccc;
+
+$btn-primary-background       : $color-link-default;
+$btn-primary-background-highlight: adjust-hue($btn-primary-background, 20%);
+
+$btn-info-background          : #5bc0de;
+$btn-info-background-highlight: #2f96b4;
+
+$btn-success-background       : #62c462;
+$btn-success-background-highlight: #51a351;
+
+$btn-warning-background       : lighten($orange, 15%);
+$btn-warning-background-highlight: $orange;
+
+$btn-danger-background        : #ee5f5b;
+$btn-danger-background-highlight: #bd362f;
+
+$btn-inverse-background       : #444;
+$btn-inverse-background-highlight: #222;
 
 // Code
 $color-code                   : #d14;
@@ -63,17 +86,6 @@ $inputColour                  : lighten(#000, 30%);
 
 // Input placeholder text color
 $placeholderText              : lighten(#000, 70%);
-
-// Buttons
-$btnBackground                : #fff;
-$btnBackgroundHighlight       : darken(#fff, 10%);
-$btnBorder                    : darken(#fff, 20%);
-
-$btnPrimaryBackground         : $blue;
-$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%);
-
-$btnInfoBackground            : #5bc0de;
-$btnInfoBackgroundHighlight   : #2f96b4;
 
 // Tables
 $tableBackground              : transparent; // overall background-color

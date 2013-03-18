@@ -1,147 +1,45 @@
 // ====================
 // === BUTTONS.scss ===
 // ====================
+// * Base Styles
+//
 
-$kickoff-button-style         : 'stylish'; // 'flat' or 'stylish'
-$kickoff-button-border-radius : 5px; // Any value
-$kickoff-button-border-width  : 0px;
+// Base styles
 
-// Usage
-// @include kickoff-button(text color, background color, active-color);
-// @include kickoff-button(#fff, $blue, $blue);
-
-@mixin kickoff-button(
-	$text-color     : lighten(#000, 30%),
-	$bg-color       : $btnBackground,
-	$active-color   : $btnBackground
-	){
-
-	$text-color-lightness : lightness($text-color);
-	$bg-lightness         : lightness($bg-color);
-	$active-lightness     : lightness($active-color);
-
-	@extend %kickoff-button-base;
-
-	color: $text-color;
-
-	// Button style 'flat'
-	@if $kickoff-button-style == 'flat' {
-		background-color: $bg-color;
-		border: 1px solid $bg-color;
-	}
-
-	// Button style 'stylish'
-	@if $kickoff-button-style == 'stylish' {
-		// @debug $bg-lightness;
-
-		@if $bg-lightness < 80 {
-			// Darker
-			@include gradient-vertical($bg-color, darken(adjust-hue($bg-color, 10%), 15%));
-			border: 1px solid darken($bg-color, 9%);
-			border-bottom-color: darken($bg-color, 14%);
-			text-shadow: 0 -1px 1px fade-out($bg-color, 0.1);
-		} @else {
-			// Lighter
-			@include gradient-vertical($bg-color, darken($bg-color, 15%));
-			border: 1px solid darken($bg-color, 30%);
-			border-bottom-color: darken($bg-color, 40%);
-			text-shadow: 0 1px 1px rgba(255,255,255,.75);
-		}
-		$shadow: inset 0 1px 1px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.05);
-		@include box-shadow($shadow);
-
-	}
-
-	// Only have border radius if the value is larger than zero
-	@if $kickoff-button-border-radius > 0 {
-		@include border-radius($kickoff-button-border-radius);
-	}
-
-	&:link, &:visited {
-		color: $text-color;
-	}
-
-	// Hover state
-	&:hover {
-		color: $text-color;
-
-		@if $kickoff-button-style == 'flat' {
-			border: 1px solid darken($bg-color, 10%);
-			background-color: darken($bg-color, 10%);
-		}
-
-		@if $kickoff-button-style == 'stylish' {
-			background-position: 0 -15px;
-		}
-	}
-
-	// Active state
-	&:active {
-		@if $kickoff-button-style == 'stylish' {
-			$shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-			@include box-shadow($shadow);
-		}
-
-		@if $kickoff-button-style == 'flat' {
-			background-color: darken($bg-color, 10%);
-		}
-	}
-
-	// Active state
-	&.is-active {
-		@if $bg-lightness > 80 {
-			color: lighten($text-color, 80%);
-		} @else {
-			color: $text-color;
-		}
-		@if $active-color != $bg-color {
-			@if $kickoff-button-style == 'flat' {
-				border: 1px solid $active-color;
-				background-color: $active-color;
-			}
-
-			@if $kickoff-button-style == 'stylish' {
-
-				// TODO: make text color much lighter if the bg color is dark & vice versa
-				@if $bg-lightness < 80 {
-					// Darker
-					@include gradient-vertical($active-color, darken(adjust-hue($active-color, 10%), 15%));
-					border: 1px solid darken($active-color, 9%);
-					border-bottom-color: darken($active-color, 14%);
-					text-shadow: 0 -1px 1px fade-out($active-color, 0.1);
-				} @else {
-					// Lighter
-					@include gradient-vertical($active-color, darken($active-color, 15%));
-					border: 1px solid darken($active-color, 30%);
-					border-bottom-color: darken($active-color, 40%);
-					text-shadow: 0 1px 1px rgba(255,255,255,.75);
-				}
-				$shadow: inset 0 1px 1px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.05);
-				@include box-shadow($shadow);
-			}
-		}
-	}
-}
-
-%kickoff-button-base {
-	@extend inline-block;
-	padding: 5px 10px;
+// Core
+.btn {
+	@extend %inline-block;
+	padding: 4px 12px;
 	margin-bottom: 0; // For input.btn
 	@include font-size($base-font-size);
 	@include line-height($base-line-height);
 	text-align: center;
-	vertical-align: middle;
+	// vertical-align: middle;
 	cursor: pointer;
+
+	@include button-background($btn-background, $btn-background-highlight, #333, 0 1px 1px rgba(255,255,255,.75));
+
+	border: 1px solid $btn-border;
+	*border: 0; // Remove the border to prevent IE7's black border on input:focus
+	border-bottom-color: darken($btn-border, 10%);
+	@include border-radius(4px);
+
 	// Give IE7 some love
-	@include ie7-restore-left-whitespace();
-	@include reset-filter();
+	@extend %ie7-restore-left-whitespace;
 
-	/* Remove the border to prevent IE7's black border on input:focus */
-	*border: 0;
-	*line-height: 20px;
+	$shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.05);
+	@include box-shadow($shadow);
 
-	&:hover{
+	// Hover/focus state
+	&:hover,
+	&:focus {
+		color: #333;
 		text-decoration: none;
+		background-position: 0 -15px;
+
+		// transition is only when going to hover/focus, otherwise the background
+		// behind the gradient (there for IE<=9 fallback) gets mismatched
+		@include transition(background-position .1s linear);
 	}
 
 	// Focus state for keyboard and accessibility
@@ -149,55 +47,26 @@ $kickoff-button-border-width  : 0px;
 		@extend %tab-focus;
 	}
 
-	// Disabled state
-	&.disabled,
-	&[disabled],
-	&:hover[disabled] {
-		cursor: default;
-		background-image: none;
-		background-color: darken(#fff, 20%);
-		border-color: darken(#fff, 20%);
-		@include opacity(75);
-		@include box-shadow(none);
-	}
-
-	& [class^="icon-"] {
-		margin-top: 2px;
-	}
-
+	// Active state
+	&.active,
 	&:active {
 		background-image: none;
 		outline: 0;
+		$shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+		@include box-shadow($shadow);
 	}
+
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		background-image: none;
+		@include opacity(65);
+		@include box-shadow(none);
+	}
+
 }
 
-// Core
-.btn {
-	@include kickoff-button;
-}
-
-// Set the backgrounds
-// -------------------------
-.btn-primary {
-	@include kickoff-button($text-color: #fff, $bg-color: $blue);
-}
-.btn-warning {
-	@include kickoff-button($text-color: #fff, $bg-color: lighten(#444, 10%));
-}
-.btn-flat {
-	$kickoff-button-style : 'flat';
-	@include kickoff-button($text-color: #fff, $bg-color: $blue);
-}
-
-// Pills
-.btn-pill {
-	// $kickoff-button-style         : 'flat';
-	// $kickoff-button-border-radius : 30px;
-	// @include kickoff-button($text-color: #555, $bg-color: #ddd, $active-color: $blue);
-	@include border-radius(30px);
-	padding-left: 15px;
-	padding-right: 15px;
-}
 
 
 // Button Sizes
@@ -205,58 +74,111 @@ $kickoff-button-border-width  : 0px;
 
 // Large
 .btn-large {
-	padding: 9px 14px;
+	padding: 11px 19px;
 	@include font-size($base-font-size + 2);
-	line-height: normal;
-
-	& [class^="icon-"] {
-		margin-top: 4px;
-	}
-
+	@include border-radius(6px);
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+	margin-top: 4px;
 }
 
 // Small
 .btn-small {
-	padding: 5px 9px;
+	padding: 2px 10px;
 	@include font-size($base-font-size - 2);
-	@include line-height($base-line-height - 2);
-
-	& [class^="icon-"] {
-		margin-top: 1px;
-	}
+	@include border-radius(3px);
 }
-
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+	margin-top: 0;
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+	margin-top: -1px;
+}
 
 // Mini
 .btn-mini {
-	padding: 2px 6px;
+	padding: 0 6px;
 	@include font-size($base-font-size - 2);
-	@include line-height($base-line-height - 4);
 	@include border-radius(3px);
 }
+
+.btn-pill {
+	@include border-radius(100em);
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.btn-flat {
+
+}
+
+// Block button
+// -------------------------
+.btn-block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	// @include box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn-block {
+		width: 100%;
+	}
+}
+
 
 
 // Alternate buttons
 // --------------------------------------------------
 
-// Set text color
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+	color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
 // -------------------------
-// .btn-primary{
-// 	&,
-// 	&:hover {
-// 		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-// 		color: #fff;
-// 	}
-
-// 	// Provide *some* extra contrast for those who can get it
-// 	&.active {
-// 		color: rgba(255,255,255,.75);
-// 	}
-// }
-
-
-
-
+.btn-primary {
+	@include button-background($btn-primary-background, $btn-primary-background-highlight);
+}
+// Warning appears are orange
+.btn-warning {
+	@include button-background($btn-warning-background, $btn-warning-background-highlight);
+}
+// Danger and error appear as red
+.btn-danger {
+	@include button-background($btn-danger-background, $btn-danger-background-highlight);
+}
+// Success appears as green
+.btn-success {
+	@include button-background($btn-success-background, $btn-success-background-highlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+	@include button-background($btn-info-background, $btn-info-background-highlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+	@include button-background($btn-inverse-background, $btn-inverse-background-highlight);
+}
 
 
 // Cross-browser Jank
@@ -272,8 +194,8 @@ input[type="submit"].btn {
 	}
 
 	// IE7 has some default padding on button controls
-	*padding-top: 2px;
-	*padding-bottom: 2px;
+	*padding-top: 3px;
+	*padding-bottom: 3px;
 
 	&.btn-large {
 		*padding-top: 7px;
@@ -290,5 +212,31 @@ input[type="submit"].btn {
 }
 
 
+// Link buttons
+// --------------------------------------------------
 
-
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+	background-color: transparent;
+	background-image: none;
+	@include box-shadow(none);
+}
+.btn-link {
+	border-color: transparent;
+	cursor: pointer;
+	color: $color-link-default;
+	@include border-radius(0);
+}
+.btn-link:hover,
+.btn-link:focus {
+	color: $color-link-hover;
+	text-decoration: underline;
+	background-color: transparent;
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
+	color: #333;
+	text-decoration: none;
+}
