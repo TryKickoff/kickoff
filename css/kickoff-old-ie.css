@@ -863,13 +863,13 @@ textarea {
     padding-top: 5px;
     margin-bottom: 0;
     vertical-align: middle; }
+  .radio.inline + .radio.inline,
+  .checkbox.inline +
+  .checkbox.inline {
+    margin-left: 10px; }
 
 .control-input > .radio:first-child, .control-input > .checkbox:first-child {
   padding-top: 5px; }
-
-.radio.inline + .radio.inline,
-.checkbox.inline + .checkbox.inline {
-  margin-left: 10px; }
 
 input,
 textarea,
@@ -1099,14 +1099,12 @@ textarea:focus:required:invalid {
   padding-left: 0;
   margin-bottom: 0;
   vertical-align: middle; }
-  .form-search .radio input[type="radio"], .form-search .radio input[type="checkbox"], .form-search .checkbox input[type="radio"], .form-search .checkbox input[type="checkbox"],
-  .form-inline .radio input[type="radio"],
-  .form-inline .radio input[type="checkbox"],
-  .form-inline .checkbox input[type="radio"],
-  .form-inline .checkbox input[type="checkbox"] {
-    float: left;
-    margin-left: 0;
-    margin-right: 3px; }
+.form-search .radio input[type="radio"], .form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px; }
 .form-search .input-prepend, .form-search .input-append,
 .form-inline .input-prepend,
 .form-inline .input-append {

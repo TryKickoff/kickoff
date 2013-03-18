@@ -238,6 +238,10 @@ textarea {
 		margin-bottom: 0;
 		vertical-align: middle;
 	}
+
+	&.inline + &.inline {
+		margin-left: 10px; // space out consecutive inline controls
+	}
 }
 
 
@@ -247,12 +251,6 @@ textarea {
 	& > .checkbox:first-child {
 		padding-top: 5px; // has to be padding because margin collapses
 	}
-}
-
-
-.radio.inline + .radio.inline,
-.checkbox.inline + .checkbox.inline {
-	margin-left: 10px; // space out consecutive inline controls
 }
 
 
@@ -478,14 +476,14 @@ textarea {
 		padding-left: 0;
 		margin-bottom: 0;
 		vertical-align: middle;
+	}
 
-		// Remove float and margin, set to inline-block
-		& input[type="radio"],
-		& input[type="checkbox"] {
-			float: left;
-			margin-left: 0;
-			margin-right: 3px;
-		}
+	// Remove float and margin, set to inline-block
+	& .radio input[type="radio"],
+	& .checkbox input[type="checkbox"] {
+		float: left;
+		margin-left: 0;
+		margin-right: 3px;
 	}
 
 	// Remove margin for input-prepend/-append
