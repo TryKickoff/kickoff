@@ -9,11 +9,61 @@ select:focus, .btn:focus {
 }
 
 /* line 2, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
-.btn {
+.radio.inline,
+.checkbox.inline, .form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
+.form-inline input,
+.form-inline textarea,
+.form-inline select,
+.form-inline .help-inline,
+.form-inline .uneditable-input,
+.form-inline .input-prepend,
+.form-inline .input-append,
+.form-horizontal input,
+.form-horizontal textarea,
+.form-horizontal select,
+.form-horizontal .help-inline,
+.form-horizontal .uneditable-input,
+.form-horizontal .input-prepend,
+.form-horizontal .input-append, .form-search label,
+.form-inline label, .help-inline, .input-prepend .add-on,
+.input-append .add-on, .btn {
   display: inline-block;
 }
 /* line 6, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
-.lt-ie8 .btn {
+.lt-ie8 .radio.inline,
+.lt-ie8 .checkbox.inline, .lt-ie8 .form-search input, .form-search .lt-ie8 input, .lt-ie8 .form-search textarea, .form-search .lt-ie8 textarea, .lt-ie8 .form-search select, .form-search .lt-ie8 select, .lt-ie8 .form-search .help-inline, .form-search .lt-ie8 .help-inline, .lt-ie8 .form-search .uneditable-input, .form-search .lt-ie8 .uneditable-input, .lt-ie8 .form-search .input-prepend, .form-search .lt-ie8 .input-prepend, .lt-ie8 .form-search .input-append, .form-search .lt-ie8 .input-append,
+.lt-ie8 .form-inline input,
+.form-inline .lt-ie8 input,
+.lt-ie8 .form-inline textarea,
+.form-inline .lt-ie8 textarea,
+.lt-ie8 .form-inline select,
+.form-inline .lt-ie8 select,
+.lt-ie8 .form-inline .help-inline,
+.form-inline .lt-ie8 .help-inline,
+.lt-ie8 .form-inline .uneditable-input,
+.form-inline .lt-ie8 .uneditable-input,
+.lt-ie8 .form-inline .input-prepend,
+.form-inline .lt-ie8 .input-prepend,
+.lt-ie8 .form-inline .input-append,
+.form-inline .lt-ie8 .input-append,
+.lt-ie8 .form-horizontal input,
+.form-horizontal .lt-ie8 input,
+.lt-ie8 .form-horizontal textarea,
+.form-horizontal .lt-ie8 textarea,
+.lt-ie8 .form-horizontal select,
+.form-horizontal .lt-ie8 select,
+.lt-ie8 .form-horizontal .help-inline,
+.form-horizontal .lt-ie8 .help-inline,
+.lt-ie8 .form-horizontal .uneditable-input,
+.form-horizontal .lt-ie8 .uneditable-input,
+.lt-ie8 .form-horizontal .input-prepend,
+.form-horizontal .lt-ie8 .input-prepend,
+.lt-ie8 .form-horizontal .input-append,
+.form-horizontal .lt-ie8 .input-append, .lt-ie8 .form-search label, .form-search .lt-ie8 label,
+.lt-ie8 .form-inline label,
+.form-inline .lt-ie8 label, .lt-ie8 .help-inline, .lt-ie8 .input-prepend .add-on, .input-prepend .lt-ie8 .add-on,
+.lt-ie8 .input-append .add-on,
+.input-append .lt-ie8 .add-on, .lt-ie8 .btn {
   display: inline;
   zoom: 1;
 }
