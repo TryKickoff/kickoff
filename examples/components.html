@@ -42,79 +42,68 @@
 
 				<h4>Button sizes</h4>
 				<p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
-				<h4>Button styles</h4>
-				<p>There are two types of buttons styles included in Kickoff, <b>'Stylish'</b> &amp; <b>'Flat'</b>. There are a few global <code>.scss</code> vars that will determine the style for the buttons, these are:</p>
-				<ul class="unstyled">
-					<li><code>// 'flat' or 'stylish'</code><br>
-							<code>$kickoff-button-style         : 'stylish'; </code></li>
-					<li><code>$kickoff-button-border-radius : 5px;</code></li>
-					<li><code>$kickoff-button-border-width  : 0px;</code></li>
-				</ul>
 
 			</div>
 			<div class="span7 col">
 				<ul class="tabs is-right">
-					<li><a href="#layout-example-default-buttons" class="btn-pill is-active">Example</a></li>
-					<li><a href="#code-example-default-buttons" class="btn-pill">Code</a></li>
+					<li><a href="#layout-example-default-buttons" class="btn btn-pill is-active">Example</a></li>
+					<li><a href="#code-example-default-buttons" class="btn btn-pill">Code</a></li>
 				</ul>
 				<ul class="tabs-content">
 					<li id="layout-example-default-buttons" class="is-active well">
 						<h4>Large buttons</h4>
+						<a href="" class="btn btn-large">Anchor</a>
 						<input type="submit" value="Submit" class="btn  btn-large btn-primary" />
 						<input type="submit" value="Disabled" class="btn btn-large" disabled />
-						<button type="reset" class="btn btn-large">Cancel</button>
+						<button type="reset" class="btn btn-large">Reset</button>
 
 						<h4>Normal buttons</h4>
+						<a href="" class="btn">Anchor</a>
 						<input type="submit" value="Submit" class="btn btn-primary" />
 						<input type="submit" value="Disabled" class="btn" disabled />
-						<button type="reset" class="btn">Cancel</button>
+						<button type="reset" class="btn">Reset</button>
 
 						<h4>Small buttons</h4>
+						<a href="" class="btn btn-small">Anchor</a>
 						<input type="submit" value="Submit" class="btn  btn-small btn-primary" />
 						<input type="submit" value="Disabled" class="btn btn-small" disabled />
-						<button type="reset" class="btn btn-small">Cancel</button>
+						<button type="reset" class="btn btn-small">Reset</button>
 
 						<h4>Mini buttons</h4>
+						<a href="" class="btn btn-mini">Anchor</a>
 						<input type="submit" value="Submit" class="btn  btn-mini btn-primary" />
 						<input type="submit" value="Disabled" class="btn btn-mini" disabled />
-						<button type="reset" class="btn btn-mini">Cancel</button>
+						<button type="reset" class="btn btn-mini">Reset</button>
 					</li>
 
 					<li id="code-example-default-buttons">
 						<b><code>HTML</code></b>
 <pre class="prettyprint lang-html linenums"><code>&lt;h4>Large buttons&lt;/h4>
+&lt;a href="" class="btn btn-large">Anchor&lt;/a>
 &lt;input type="submit" value="Submit" class="btn  btn-large btn-primary" />
 &lt;input type="submit" value="Disabled" class="btn btn-large" disabled />
 &lt;button type="reset" class="btn btn-large">Cancel&lt;/button>
 
 &lt;h4>Normal buttons&lt;/h4>
+&lt;a href="" class="btn">Anchor&lt;/a>
 &lt;input type="submit" value="Submit" class="btn btn-primary" />
 &lt;input type="submit" value="Disabled" class="btn" disabled />
 &lt;button type="reset" class="btn">Cancel&lt;/button>
 
 &lt;h4>Small buttons&lt;/h4>
+&lt;a href="" class="btn btn-small">Anchor&lt;/a>
 &lt;input type="submit" value="Submit" class="btn  btn-small btn-primary" />
 &lt;input type="submit" value="Disabled" class="btn btn-small" disabled />
 &lt;button type="reset" class="btn btn-small">Cancel&lt;/button>
 
 &lt;h4>Mini buttons&lt;/h4>
+&lt;a href="" class="btn btn-mini">Anchor&lt;/a>
 &lt;input type="submit" value="Submit" class="btn  btn-mini btn-primary" />
 &lt;input type="submit" value="Disabled" class="btn btn-mini" disabled />
 &lt;button type="reset" class="btn btn-mini">Cancel&lt;/button></code></pre>
 			<b><code>.SCSS</code></b>
-			<pre class="prettyprint lang-css linenums"><code>.btn {
-	@include kickoff-button;
-}
-.btn-primary {
-	@include kickoff-button(#fff, $blue);
-}
-.btn-warning {
-	@include kickoff-button(#fff, lighten(#444, 10%));
-}
-.btn-flat {
-	// Button vars can be set on individual buttons
-	$kickoff-button-style : 'flat';
-	@include kickoff-button(#fff, $blue);
+			<pre class="prettyprint lang-css linenums"><code>.btn-primary {
+	@include button-background($btn-primary-background, $btn-primary-background-highlight);
 }</code></pre>
 					</li>
 				</ul>
@@ -132,12 +121,12 @@
 			</div>
 			<div class="span7 col">
 				<ul class="tabs is-right">
-					<li><a href="#layout-example-pill-buttons" class="btn-pill is-active">Example</a></li>
-					<li><a href="#code-example-pill-buttons" class="btn-pill">Code</a></li>
+					<li><a href="#layout-example-pill-buttons" class="btn btn-pill is-active">Example</a></li>
+					<li><a href="#code-example-pill-buttons" class="btn btn-pill">Code</a></li>
 				</ul>
 				<ul class="tabs-content">
 					<li id="layout-example-pill-buttons" class="is-active well">
-						<h4>Large buttons</h4>
+						<h4>Pill buttons</h4>
 						<a href="#" class="btn btn-pill btn-primary">Pill</a>
 						<a href="#" class="btn btn-pill btn-warning">This is a Pill</a>
 					</li>
@@ -147,19 +136,76 @@
 <pre class="prettyprint lang-html linenums"><code>&lt;a href="#" class="btn btn-pill btn-primary">Pill&lt;/a>
 &lt;a href="#" class="btn btn-pill btn-warning">This is a Pill&lt;/a></code></pre>
 			<b><code>.SCSS</code></b>
-			<pre class="prettyprint lang-css linenums"><code>.btn {
-	@include kickoff-button;
-}
+			<pre class="prettyprint lang-css linenums"><code>.btn-pill {
+	@include border-radius(100px);
+	padding-left: 15px;
+	padding-right: 15px;
+}</code></pre>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- END EXAMPLE -->
+
+		<hr>
+
+		<h2>3. Button states</h2>
+		<div class="row">
+			<div class="span5 col">
+				<p>The default Kickoff button set has 7 states.</p>
+			</div>
+			<div class="span7 col">
+				<ul class="tabs is-right">
+					<li><a href="#layout-example-button-states" class="btn btn-pill is-active">Example</a></li>
+					<li><a href="#code-example-button-states" class="btn btn-pill">Code</a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li id="layout-example-button-states" class="is-active well">
+						<h4>Button colours</h4>
+						<a href="#" class="btn">Default</a>
+						<a href="#" class="btn btn-primary">Primary</a>
+						<a href="#" class="btn btn-warning">Warning</a>
+						<a href="#" class="btn btn-danger">Danger</a>
+						<a href="#" class="btn btn-success">Success</a>
+						<a href="#" class="btn btn-info">Info</a>
+						<a href="#" class="btn btn-inverse">Inverse</a>
+					</li>
+
+					<li id="code-example-button-states">
+						<b><code>HTML</code></b>
+<pre class="prettyprint lang-html linenums"><code>&lt;a href="#" class="btn">Default&lt;/a>
+&lt;a href="#" class="btn btn-primary">Primary&lt;/a>
+&lt;a href="#" class="btn btn-warning">Warning&lt;/a>
+&lt;a href="#" class="btn btn-danger">Danger&lt;/a>
+&lt;a href="#" class="btn btn-success">Success&lt;/a>
+&lt;a href="#" class="btn btn-info">Info&lt;/a>
+&lt;a href="#" class="btn btn-inverse">Inverse&lt;/a></code></pre>
+			<b><code>.SCSS</code></b>
+			<pre class="prettyprint lang-css linenums"><code>// Set the backgrounds
+// -------------------------
 .btn-primary {
-	@include kickoff-button(#fff, $blue);
+	@include button-background($btn-primary-background, $btn-primary-background-highlight);
 }
+// Warning appears are orange
 .btn-warning {
-	@include kickoff-button(#fff, lighten(#444, 10%));
+	@include button-background($btn-warning-background, $btn-warning-background-highlight);
 }
-.btn-flat {
-	// Button vars can be set on individual buttons
-	$kickoff-button-style : 'flat';
-	@include kickoff-button(#fff, $blue);
+// Danger and error appear as red
+.btn-danger {
+	@include button-background($btn-danger-background, $btn-danger-background-highlight);
+}
+// Success appears as green
+.btn-success {
+	@include button-background($btn-success-background, $btn-success-background-highlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+	@include button-background($btn-info-background, $btn-info-background-highlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+	@include button-background($btn-inverse-background, $btn-inverse-background-highlight);
 }</code></pre>
 					</li>
 				</ul>
