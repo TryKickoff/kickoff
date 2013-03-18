@@ -1,51 +1,145 @@
-//  ==============================
-//  === THE CHOREOGRAPHIC GRID ===
-//  ==============================
-//  GRID CALCULATIONS
-//  GRID SETUP
-//  MEDIA QUERIES
-//   - ALPHA
-//   - BETA
-//  GRID UTILITIES
-//  CENTRED COLUMNS
+// ==============================
+// === THE CHOREOGRAPHIC GRID ===
+// ==============================
+// GRID SETUP
+// GRID CALCULATIONS
+// GRID SETUP
+// MEDIA QUERIES
+//  - ALPHA
+//  - BETA
+// CENTRED COLUMNS
+// RESPONSIVE STYLES
 
 // Basic Usage
 // <div class="row">
-// 	<div class="col span12"></div>
+// 	<div class="col span4"></div>
+// 	<div class="col span8"></div>
 // </div>
 
-//  =========================
-//  === GRID CALCULATIONS ===
-//  =========================
-@mixin columns($columnSpan: 1) {
-	width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
+
+// ==================
+// === GRID SETUP ===
+// ==================
+
+// Choose your grid options
+$debugQueries         : false  !default; // Show the media query debugger at the top of the viewport
+$usingPushPullColumns : true   !default; // Allow columns to be pushed & pulled
+$usingOffsetcolumns   : true   !default; // Allow columns to be offset
+$usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive web design
+// Setup grid defaults
+$gridColumnCount      : 12     !default; // Total column count
+$gridGutterWidth      : 30     !default; // [in pixels]
+$gridMaxWidth         : 1000   !default; // [in pixels]
+$gridMargin           : 0      !default; // [in pixels] Space outside the grid
+// Column Padding
+$gridColumnPadding    : 0      !default; // [in pixels]
+$gridColumnPaddingUnit: '%'    !default; // [in pixels or percent] Specify your unit of measurement for column padding
+$nestedColumnPadding  : false  !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+// =========================
+// === GRID CALCULATIONS ===
+// =========================
+// CALCULATE COLUMNS WIDTHS
+@function gridColumnWidthCalc($columnSpan: 1, $showUnit: true) {
+	$numberOfBlocksInContainer: $gridColumnCount / $columnSpan;
+	$totalWidthOfAllGutters:    gutterCalc(false) * ($numberOfBlocksInContainer - 1);
+	$totalWidthOfAllBlocks:     1 - $totalWidthOfAllGutters;
+	$widthOfASingleBlock:       $totalWidthOfAllBlocks / $numberOfBlocksInContainer;
+
+	@if $showUnit == true {
+		@return percentage( $widthOfASingleBlock );
+	} @else {
+		@return $widthOfASingleBlock;
+	}
 }
+
+// COLUMN WIDTH MIXIN
+@mixin column($columnSpan: 1) {
+	width: gridColumnWidthCalc($columnSpan, true);
+}
+
+// GUTTERS
+// Default: percent
+// Usage: gutterCalc() or gutterCalc(false)
+@function gutterCalc($showUnit: true) {
+	@if $showUnit == true {
+		@return percentage( $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) ) );
+	} @else {
+		@return $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) );
+	}
+}
+
+// COLUMN PADDING (GUTTER)
+// Can be pixels or percent.
+// Default: percent
+// Usage: paddingCalc() or paddingCalc(px)
+@function paddingCalc() {
+	@if $gridColumnPaddingUnit == '%' {
+		@return percentage( $gridColumnPadding / $gridMaxWidth );
+	} @else if $gridColumnPaddingUnit == 'px' {
+		@return $gridColumnPadding + px;
+	}
+}
+
+// ================================================================
+// === SHUNTS, OFFSET COLUMNS, COLUMN SOURCE ORDER CALCULATIONS ===
+// ================================================================
 @mixin shunt($shuntSpan: 1) {
-	margin-right: ($gridColumnWidth * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
+	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
 }
 @mixin offset($columnOffset: 1) {
-	margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * $columnOffset) + $gridGutterWidth;
+	margin-left: percentage( gridColumnWidthCalc($columnOffset, false) * $columnOffset / 100 );
 }
 @mixin offsetFirstChild($columnOffset: 1) {
-	margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * $columnOffset);
+	margin-left: (gridColumnWidthCalc($columnOffset, false) * $columnOffset) + ($gridGutterWidth * $columnOffset);
 }
 @mixin push($pushOffset: 1) {
-	left: ($gridColumnWidth * $pushOffset) + ($gridGutterWidth * $pushOffset);
+	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
+	position: relative;
 }
 @mixin pull($pullOffset: 1) {
-	right: ($gridColumnWidth * $pullOffset) + ($gridGutterWidth * $pullOffset);
+	right: gridColumnWidthCalc($pullOffset, true) + gutterCalc();
+	position: relative;
 }
+
 @mixin gridColumn() {
-	margin-left: $gridGutterWidth;
+	@if $gridGutterWidth > 0 {
+		margin-left: gutterCalc();
+	}
+	@if $gridColumnPadding > 0 {
+		padding: paddingCalc();
+	}
 	float: left;
 	min-height: 1px;
 	position: relative;
 	clear: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 	&:first-child {
 		margin-left: 0;
 	}
+
+	& + &:last-child { float: right; }
+	& + &.end { float: left; }
 }
-@mixin media-query($mq-title, $bgcolor: fadeout(yellow, 40%)) {
+
+@mixin clearfix {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin media-query($mq-title: 'mobile', $bgcolor: transparentize(yellow, .4)) {
 	content: $mq-title;
 	position: fixed;
 	top: 0;
@@ -60,19 +154,15 @@
 	z-index: 1000;
 }
 
-//  ==================
-//  === GRID SETUP ===
-//  ==================
-$gridColumnWidth: 4.3%;
-$gridGutterWidth: 4.4%;
-$gridMaxWidth: 1200px;
-$gridMargin: 32px; // === Space outside the grid
 
+// ============
+// === GRID ===
+// ============
 .container {
-	padding-left: $gridMargin;
-	padding-right: $gridMargin;
+	padding-left: $gridMargin + px;
+	padding-right: $gridMargin + px;
 	width: 95%;
-	max-width: 1500px;
+	max-width: $gridMaxWidth + px;
 	margin: 0 auto;
 }
 
@@ -84,150 +174,78 @@ $gridMargin: 32px; // === Space outside the grid
 	// Nested rows
 	& .row {
 		min-width: 0;
+
+		@if $nestedColumnPadding == false {
+			.col {
+				padding: 0;
+			}
+		}
+	}
+}
+
+// MEDIA QUERY DEBUGGER
+@if $debugQueries == true {
+	body:before {
+		@include media-query("mobile", transparentize(green, .4));
 	}
 }
 
 
-
-
-
-// body:before {
-// 	.media-query("mobile", fadeout(yellow, 40%));
-// }
 
 // ===========================================
 // === Media queries for responsive design ===
 // ===========================================
 
 // === 768> ===
-@include respond-min(768px) {
-	// body:before {
-	// 	.media-query("mq-alpha", fadeout(green, 40%));
-	// }
+@media screen and (min-width: 768px) {
+	// NAME THIS MEDIA QUERY
+	$mediaQueryName : 'mq-alpha';
 
+	@if $debugQueries == true {
+		body:before {
+			@include media-query($mediaQueryName, transparentize(yellow, .4));
+		}
+	}
+
+	// COLUMNS ONLY START AT THIS VIEWPORT WIDTH
 	.col {
-		@include gridColumn;
+		@include gridColumn();
 	}
 
-	// HACK/FIX FOR WEBKIT'S INADEQUATE SUBPIXEL PERCENTAGE CALCULATIONS
-	// In order to work around browsers' different rounding behaviours, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns you can tag the last column with class="end" in order to override that behaviour.
-	[class*="col"] + [class*="col"]:last-child, .mq-alpha-end { float: right; }
-	[class*="col"] + [class*="col"].end { float: left; }
-
-	.span1 , .mq-alpha-resize-to1  { @include columns(1);  }
-	.span2 , .mq-alpha-resize-to2  { @include columns(2);  }
-	.span3 , .mq-alpha-resize-to3  { @include columns(3);  }
-	.span4 , .mq-alpha-resize-to4  { @include columns(4);  }
-	.span5 , .mq-alpha-resize-to5  { @include columns(5);  }
-	.span6 , .mq-alpha-resize-to6  { @include columns(6);  }
-	.span7 , .mq-alpha-resize-to7  { @include columns(7);  }
-	.span8 , .mq-alpha-resize-to8  { @include columns(8);  }
-	.span9 , .mq-alpha-resize-to9  { @include columns(9);  }
-	.span10, .mq-alpha-resize-to10 { @include columns(10); }
-	.span11, .mq-alpha-resize-to11 { @include columns(11); }
-	.span12, .mq-alpha-resize-to12 { @include columns(12); }
-
-	//  ==============================================
-	//  === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
-	//  ==============================================
-	.row {
-		& > .offset1 {
-			@include offset(1);
-			&:first-child {
-				@include offsetFirstChild(1);
-			}
+	// CREATE THE RELEVANT CLASSES
+	@for $i from 1 to $gridColumnCount + 1 {
+		@if $mediaQueryName {
+			.span#{$i}, .#{$mediaQueryName}-resize-to#{$i} { @include column($i); }
+		} @else {
+			.span#{$i} { @include column($i); }
 		}
-		& > .offset2 {
-			@include offset(2);
-			&:first-child {
-				@include offsetFirstChild(2);
-			}
-		}
-		& > .offset3 {
-			@include offset(3);
-			&:first-child {
-				@include offsetFirstChild(3);
-			}
-		}
-		& > .offset4 {
-			@include offset(4);
-			&:first-child {
-				@include offsetFirstChild(4);
-			}
-		}
-		& > .offset5 {
-			@include offset(5);
-			&:first-child {
-				@include offsetFirstChild(5);
-			}
-		}
-		& > .offset6 {
-			@include offset(6);
-			&:first-child {
-				@include offsetFirstChild(6);
-			}
-		}
-		& > .offset7 {
-			@include offset(7);
-			&:first-child {
-				@include offsetFirstChild(7);
-			}
-		}
-		& > .offset8 {
-			@include offset(8);
-			&:first-child {
-				@include offsetFirstChild(8);
-			}
-		}
-		& > .offset9 {
-			@include offset(9);
-			&:first-child {
-				@include offsetFirstChild(9);
-			}
-		}
-		& > .offset10 {
-			@include offset(10);
-			&:first-child {
-				@include offsetFirstChild(10);
-			}
-		}
-		& > .offset11 {
-			@include offset(11);
-			&:first-child {
-				@include offsetFirstChild(11);
-			}
-		}
-		& > .offset12 {
-			@include offset(12);
-			&:first-child {
-				@include offsetFirstChild(12);
-			}
-		}
-
-		& > .push2 	  	{ @include push(2); }
-		& > .push3 		{ @include push(3); }
-		& > .push4 		{ @include push(4); }
-		& > .push5 		{ @include push(5); }
-		& > .push6 		{ @include push(6); }
-		& > .push7 		{ @include push(7); }
-		& > .push8 		{ @include push(8); }
-		& > .push9 		{ @include push(9); }
-		& > .push10	 	{ @include push(10); }
-
-		& > .pull2 		{ @include pull(2); }
-		& > .pull3 		{ @include pull(3); }
-		& > .pull4 		{ @include pull(4); }
-		& > .pull5 		{ @include pull(5); }
-		& > .pull6 		{ @include pull(6); }
-		& > .pull7 		{ @include pull(7); }
-		& > .pull8 		{ @include pull(8); }
-		& > .pull9 		{ @include pull(9); }
-		& > .pull10	 	{ @include pull(10); }
 	}
 
-	//  ====================================
-	//  === SPLITTING COLUMNS & SHUNTING ===
-	//  ====================================
+	// ==============================================
+	// === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
+	// ==============================================
+	@if $usingOffsetcolumns == true {
+		@for $i from 1 to $gridColumnCount {
+			.row > .offset1 {
+				@include offset($i);
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+	@if $usingPushPullColumns == true {
+		@for $i from 2 to $gridColumnCount {
+			.row > .push#{$i}	{ @include push($i); }
+		}
+		@for $i from 2 to $gridColumnCount {
+			.row > .pull#{$i}	{ @include pull($i); }
+		}
+	}
+
+	// ====================================
+	// === SPLITTING COLUMNS & SHUNTING ===
+	// ====================================
 	.split .col, .shunt {
 		float:none;
 		margin-left: 0;
@@ -242,149 +260,71 @@ $gridMargin: 32px; // === Space outside the grid
 
 
 // === 992> ===
-@include respond-min(992px) {
-	// body:before {
-	// 	.media-query("mq-beta", fadeout(teal, 40%));
-	// }
+@media screen and (min-width: 992px) {
+	// NAME THIS MEDIA QUERY
+	$mediaQueryName : 'mq-beta';
 
-	//  ====================
-	//  === CHOREOGRAPHY ===
-	//  ====================
-	.split .col, .shunt {
-		@include gridColumn;
+	@if $debugQueries == true {
+		body:before {
+			@include media-query($mediaQueryName, transparentize(red, .1));
+		}
 	}
 
-	//  ============
-	//  === INFO ===
-	//  ============
-	// I need to restate the grid widths & offsets in this media-query because of the cascade. For example, if I add .mq-alpha-resize-to8 to a column in mq-alpha & I need the the same column to return to it's 'natural' width (.span6 for example) in the wider media-query, there is no other way, that I can see, to do that. One thought I had was to add a body class, using javascript, stating which media-query is currently being viewed, then I can just use that to apply the relevant class. Not sure about this though.
-
-	.span1 , .mq-beta-resize-to1 , .split .span1  { @include columns(1);  }
-	.span2 , .mq-beta-resize-to2 , .split .span2  { @include columns(2);  }
-	.span3 , .mq-beta-resize-to3 , .split .span3  { @include columns(3);  }
-	.span4 , .mq-beta-resize-to4 , .split .span4  { @include columns(4);  }
-	.span5 , .mq-beta-resize-to5 , .split .span5  { @include columns(5);  }
-	.span6 , .mq-beta-resize-to6 , .split .span6  { @include columns(6);  }
-	.span7 , .mq-beta-resize-to7 , .split .span7  { @include columns(7);  }
-	.span8 , .mq-beta-resize-to8 , .split .span8  { @include columns(8);  }
-	.span9 , .mq-beta-resize-to9 , .split .span9  { @include columns(9);  }
-	.span10, .mq-beta-resize-to10, .split .span10 { @include columns(10); }
-	.span11, .mq-beta-resize-to11, .split .span11 { @include columns(11); }
-	.span12, .mq-beta-resize-to12, .split .span12 { @include columns(12); }
-
-	.row {
-		& > .offset1 {
-			@include offset(1);
-			&:first-child {
-				@include offsetFirstChild(1);
-			}
-		}
-		& > .offset2 {
-			@include offset(2);
-			&:first-child {
-				@include offsetFirstChild(2);
-			}
-		}
-		& > .offset3 {
-			@include offset(3);
-			&:first-child {
-				@include offsetFirstChild(3);
-			}
-		}
-		& > .offset4 {
-			@include offset(4);
-			&:first-child {
-				@include offsetFirstChild(4);
-			}
-		}
-		& > .offset5 {
-			@include offset(5);
-			&:first-child {
-				@include offsetFirstChild(5);
-			}
-		}
-		& > .offset6 {
-			@include offset(6);
-			&:first-child {
-				@include offsetFirstChild(6);
-			}
-		}
-		& > .offset7 {
-			@include offset(7);
-			&:first-child {
-				@include offsetFirstChild(7);
-			}
-		}
-		& > .offset8 {
-			@include offset(8);
-			&:first-child {
-				@include offsetFirstChild(8);
-			}
-		}
-		& > .offset9 {
-			@include offset(9);
-			&:first-child {
-				@include offsetFirstChild(9);
-			}
-		}
-		& > .offset10 {
-			@include offset(10);
-			&:first-child {
-				@include offsetFirstChild(10);
-			}
-		}
-		& > .offset11 {
-			@include offset(11);
-			&:first-child {
-				@include offsetFirstChild(11);
-			}
-		}
-		& > .offset12 {
-			@include offset(12);
-			&:first-child {
-				@include offsetFirstChild(12);
-			}
+	// ====================
+	// === CHOREOGRAPHY ===
+	// ====================
+	@if $usingSplitsAndShunts == true {
+		.split .col, .shunt {
+			@include gridColumn;
 		}
 
-		& > .mq-beta-push2, .push2    	{ @include push(2); }
-		& > .mq-beta-push3, .push3 		{ @include push(3); }
-		& > .mq-beta-push4, .push4 		{ @include push(4); }
-		& > .mq-beta-push5, .push5 		{ @include push(5); }
-		& > .mq-beta-push6, .push6 		{ @include push(6); }
-		& > .mq-beta-push7, .push7 		{ @include push(7); }
-		& > .mq-beta-push8, .push8 		{ @include push(8); }
-		& > .mq-beta-push9, .push9 		{ @include push(9); }
-		& > .mq-beta-push10, .push10 	{ @include push(10); }
 
-		& > .mq-beta-pull2, .pull2 		{ @include pull(2); }
-		& > .mq-beta-pull3, .pull3 		{ @include pull(3); }
-		& > .mq-beta-pull4, .pull4 		{ @include pull(4); }
-		& > .mq-beta-pull5, .pull5 		{ @include pull(5); }
-		& > .mq-beta-pull6, .pull6 		{ @include pull(6); }
-		& > .mq-beta-pull7, .pull7 		{ @include pull(7); }
-		& > .mq-beta-pull8, .pull8 		{ @include pull(8); }
-		& > .mq-beta-pull9, .pull9 		{ @include pull(9); }
-		& > .mq-beta-pull10, .pull10 	{ @include pull(10); }
+		// === INFO ===
+		// I need to restate the grid widths & offsets in this media-query because of the cascade. For example, if I add .#{$mediaQueryName}-resize-to8 to a column in #{$mediaQueryName} & I need the the same column to return to it's 'natural' width (.span6 for example) in the wider media-query, there is no other way, that I can see, to do that. One thought I had was to add a body class, using javascript, stating which media-query is currently being viewed, then I can just use that to apply the relevant class. Not sure about this though.
+
+		@for $i from 1 to $gridColumnCount {
+			@if $mediaQueryName {
+				.span#{$i}, .#{$mediaQueryName}-resize-to#{$i}, .split .span#{$i} { @include column($i); }
+			} @else {
+				.span#{$i}, .split .span#{$i} { @include column($i); }
+			}
+		}
 	}
 
-	.mq-beta-end { float: right; }
-	.mq-alpha-end { float: left; }
+	// Offset Columns
+	@if $usingOffsetcolumns == true {
+		@for $i from 1 to $gridColumnCount {
+			.row > .offset1 {
+				@include offset($i);
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+
+	// Push & Pull Columns
+	@if $usingPushPullColumns == true {
+		@for $i from 2 to $gridColumnCount - 2 {
+			.row > .#{$mediaQueryName}-push#{$i}, .push#{$i}	{ @include push($i); }
+		}
+		@for $i from 2 to $gridColumnCount - 2 {
+			.row > .#{$mediaQueryName}-pull#{$i}, .pull#{$i}	{ @include pull($i); }
+		}
+	}
+
+	.#{$mediaQueryName}-end { float: right; }
+	.#{$mediaQueryName}-end { float: left; }
 
 
 }
 // === end 992> ===
 
-
-// === 1382> ===
-@include respond-min(1382px) {
-
-}
-// === end 1382> ===
-
-
-//  =======================
-//  === CENTRED COLUMNS ===
-//  =======================
+// =======================
+// === CENTRED COLUMNS ===
+// =======================
 .centered.col, .centred.col { float: none; margin: 0 auto; }
 
-
+img {
+	max-width: 100%;
+}

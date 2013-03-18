@@ -1,5 +1,5 @@
 // =======================
-// === COMPONENTS.less ===
+// === COMPONENTS.scss ===
 // =======================
 // EMBEDDED CONTENT
 // BLOCK GRIDS
@@ -168,7 +168,7 @@ ul.centred, ul.centered {
 
 .tabs {
 	@include clearfix;
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 
 	&.is-right {
 		& li {

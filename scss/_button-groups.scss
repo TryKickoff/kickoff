@@ -1,6 +1,6 @@
-// BUTTON GROUPS
-// -------------
-
+// ==========================
+// === BUTTON-GROUPS.scss ===
+// ==========================
 
 // Make the div behave like a button
 .btn-group {
@@ -17,8 +17,8 @@
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-	margin-top: $baseLineHeight / 2;
-	margin-bottom: $baseLineHeight / 2;
+	margin-top: ($baseLineHeight / 2) + px;
+	margin-bottom: ($baseLineHeight / 2) + px;
 	& .btn-group {
 		display: inline-block;
 		@include ie7-inline-block();

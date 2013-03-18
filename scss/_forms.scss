@@ -1,6 +1,6 @@
-// ==================*/
-// === FORMS.less ===*/
-// ==================*/
+// ==================
+// === FORMS.scss ===
+// ==================
 // FORM
 // INPUT SIZES
 // FORM FIELD FEEDBACK STATES
@@ -8,14 +8,12 @@
 // HORIZONTAL & VERTICAL FORMS
 // HORIZONTAL-SPECIFIC STYLES
 
-// Notes:
-
 /* ============ */
 /* === FORM === */
 /* ============ */
 // Make all forms have space below them
 form {
-	margin: 0 0 $baseLineHeight;
+	margin: 0 0 ($baseLineHeight + px);
 }
 
 fieldset {
@@ -26,11 +24,11 @@ fieldset {
 
 // Margin to space out fieldsets
 .control-group {
-	margin-top: $baseLineHeight / 2;
+	margin-top: ($baseLineHeight / 2 + px);
 
 	// Legend collapses margin, so next element is responsible for spacing
 	legend + & {
-		margin-top: $baseLineHeight;
+		margin-top: $baseLineHeight + px;
 		-webkit-margin-top-collapse: separate;
 	}
 }
@@ -41,7 +39,7 @@ legend {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 	@include font-size($baseFontSize * 1.5);
 	@include line-height($baseLineHeight * 2);
 	color: $labelColour;
@@ -108,7 +106,7 @@ select,
 	display: inline-block;
 	@include ie7-inline-block();
 	width: 210px;
-	height: $baseLineHeight * 1.5;
+	height: $baseLineHeight * 1.5 + px;
 	padding: 4px;
 	margin-bottom: 9px;
 	@include font-size($baseFontSize);
@@ -187,7 +185,7 @@ select {
 	width: 220px; // default input width + 10px of padding that doesn't get applied
 	height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
 	*margin-top: 4px; /* For IE7, add top margin to align select with labels */
-	line-height: 28px;
+	@include line-height(28);
 
 	// Chrome on Linux and Mobile Safari need background-color
 	background-color: $inputBackground;
@@ -411,7 +409,7 @@ textarea {
 
 	// Increase spacing between groups
 	& .control-group {
-		margin-bottom: $baseLineHeight;
+		margin-bottom: $baseLineHeight + px;
 		@include clearfix();
 	}
 
@@ -439,7 +437,7 @@ textarea {
 
 	// Remove bottom margin on block level help text since that's accounted for on .control-group
 	& .help-block {
-		margin-top: $baseLineHeight / 2;
+		margin-top: $baseLineHeight / 2 + px;
 		margin-bottom: 0;
 	}
 
@@ -511,9 +509,9 @@ textarea {
 // ------------
 
 .form-actions {
-	padding: ($baseLineHeight - 1) 20px $baseLineHeight;
-	margin-top: $baseLineHeight;
-	margin-bottom: $baseLineHeight;
+	padding: ($baseLineHeight - 1 + px) 20px ($baseLineHeight + px);
+	margin-top: $baseLineHeight + px;
+	margin-bottom: $baseLineHeight + px;
 	background-color: $formActionsBackground;
 	border-top: 1px solid #ddd;
 	@include clearfix(); // Adding clearfix to allow for .pull-right button containers
@@ -547,7 +545,7 @@ textarea {
 
 .help-block {
 	display: block; // account for any element using help-block
-	margin-bottom: $baseLineHeight / 2;
+	margin-bottom: $baseLineHeight / 2 + px;
 }
 
 .help-inline {
@@ -588,10 +586,10 @@ textarea {
 		@include ie7-inline-block();
 		width: auto;
 		min-width: 16px;
-		height: $baseLineHeight;
+		height: $baseLineHeight + px;
 		padding: 4px 5px;
 		font-weight: normal;
-		line-height: $baseLineHeight;
+		@include line-height($baseLineHeight);
 		text-align: center;
 		text-shadow: 0 1px 0 $white;
 		vertical-align: middle;

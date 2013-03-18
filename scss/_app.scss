@@ -1,5 +1,5 @@
 // =======================
-// === APP.less        ===
+// === APP.scss        ===
 // === Your app styles ===
 // =======================
 
@@ -14,11 +14,6 @@
 // ==============
 
 
-// ============
-// === CSS3 ===
-// ============
-
-
 
 // ======================
 // === HOME / LANDING ===
@@ -29,14 +24,14 @@
 // ===========================================
 // === Media queries for responsive design ===
 // ===========================================
-//  NOTE: these will need to be adjusted, possibly moved into another file
+// NOTE: these will need to be adjusted, possibly moved into another file
 
 // Retina media Queries
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-	only screen and ( min--moz-device-pixel-ratio: 2),
-	only screen and ( -o-min-device-pixel-ratio: 2/1),
-	only screen and ( min-device-pixel-ratio: 2),
-	only screen and ( min-resolution: 192dpi) {
+// Credit: http://dev.mattnt.com/retina-results.html
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
 
 	// * {
 	// 	background-image: url(@imgSprite2x);
@@ -58,7 +53,6 @@
 
 }
 // === end 768> ===
-
 
 
 // === 992> ===

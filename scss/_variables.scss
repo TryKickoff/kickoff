@@ -1,5 +1,5 @@
 // =========================
-// === VARIABLES.less ======
+// === VARIABLES.scss ======
 // === TABLE OF CONTENTS ===
 // =========================
 // GLOBAL VALUES
@@ -16,7 +16,6 @@ $disable-filters: true; 	// whether or not to disable MS-specific 'filter' prope
 $support-ie7: true;
 $support-ie8: true;
 $support-FF36: false;
-
 
 // ===============
 // === COLOURS ===
@@ -55,8 +54,6 @@ $tetra2:                            adjust-hue($accentColor, -90);
 $analog1:                           adjust-hue($accentColor, 22);   // Analogs colors
 $analog2:                           adjust-hue($accentColor, -22);
 
-
-
 // =====================
 // === GLOBAL VALUES ===
 // =====================
@@ -85,6 +82,8 @@ $altFontFamily:                      $serifFontFamily;
 $headingsFontFamily:                 inherit;   // empty to use BS default, $baseFontFamily
 $headingsFontWeight:                 bold;      // instead of browser default, bold
 $headingsColor:                      $grayDark; // empty to use BS default, $textColor
+
+
 
 
 
@@ -168,19 +167,24 @@ $imgSprite2x:                       "#{$imgUIPath}/sprites$2x.png";
 // $imgSpriteDimensions:               50px 300px; // Used for retina sprites  - make these the same size as $imgSprite1x
 
 
-// ============
-// === GRID ===
-// ============
-// Default 940px grid
-$gridColumns:                       12;
-$gridColumnWidth:                   60px;
-$gridGutterWidth:                   20px;
-$gridRowWidth:                      ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+// ==================
+// === GRID SETUP ===
+// ==================
 
-
-// Fluid grid
-$fluidGridColumnWidth:              4.3%;
-$fluidGridGutterWidth:              4.4%;
+// Choose your grid options
+$debugQueries         : false ; // Show the media query debugger at the top of the viewport
+$usingPushPullColumns : true  ; // Allow columns to be pushed & pulled
+$usingOffsetcolumns   : true  ; // Allow columns to be offset
+$usingSplitsAndShunts : true  ; // Use Splits & Shunts for responsive web design
+// Setup grid defaults
+$gridColumnCount      : 12    ; // Total column count
+$gridGutterWidth      : 20    ; // [in pixels]
+$gridMaxWidth         : 1000  ; // [in pixels]
+$gridMargin           : 0     ; // [in pixels] Space outside the grid
+// Column Padding
+$gridColumnPadding    : 10     ; // [in pixels]
+$gridColumnPaddingUnit: 'px'   ; // [in pixels or percent] Specify your unit of measurement for column padding
+$nestedColumnPadding  : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
 
 // ==============================
