@@ -25,7 +25,7 @@ img {
 .hidden-desktop    { display: none !important; }
 
 // Phones only
-@include respond-max(767px) {
+@include respond-max(767) {
 	// Show
 	.visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
 	// Hide
@@ -37,7 +37,7 @@ img {
 
 // Tablets & small desktops only
 // === 768px> - <979px ===
-@include respond-min-max(768px, 979px) {
+@include respond-min-max(768, 979) {
 	// Show
 	.visible-tablet    { display: inherit !important; }
 	// Hide
