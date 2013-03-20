@@ -1,6 +1,8 @@
 // ================================
 // === RESPONSIVE-UTLITIES.scss ===
 // ================================
+// TODO: grab these from Zurb Foundation
+
 
 img {
 	max-width: 100%;
@@ -23,7 +25,7 @@ img {
 .hidden-desktop    { display: none !important; }
 
 // Phones only
-@include respond-max(767px) {
+@include respond-max(767) {
 	// Show
 	.visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
 	// Hide
@@ -34,7 +36,8 @@ img {
 }
 
 // Tablets & small desktops only
-@media (min-width: 768px) and (max-width: 979px) {
+// === 768px> - <979px ===
+@include respond-min-max(768, 979) {
 	// Show
 	.visible-tablet    { display: inherit !important; }
 	// Hide
@@ -43,3 +46,5 @@ img {
 	.hidden-desktop    { display: inherit !important; }
 	.visible-desktop   { display: none !important ; }
 }
+// === end 768px> - <979px ===
+

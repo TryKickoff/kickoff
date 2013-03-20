@@ -1,51 +1,47 @@
-// __/\\\________/\\\___/\\\\\\\\\\\_________/\\\\\\\\\___/\\\________/\\\________/\\\\\________/\\\\\\\\\\\\\\\___/\\\\\\\\\\\\\\\_
-//  _\/\\\_____/\\\//___\/////\\\///_______/\\\////////___\/\\\_____/\\\//_______/\\\///\\\_____\/\\\///////////___\/\\\///////////__
-//   _\/\\\__/\\\//__________\/\\\________/\\\/____________\/\\\__/\\\//________/\\\/__\///\\\___\/\\\______________\/\\\_____________
-//    _\/\\\\\\//\\\__________\/\\\_______/\\\______________\/\\\\\\//\\\_______/\\\______\//\\\__\/\\\\\\\\\\\______\/\\\\\\\\\\\_____
-//     _\/\\\//_\//\\\_________\/\\\______\/\\\______________\/\\\//_\//\\\_____\/\\\_______\/\\\__\/\\\///////_______\/\\\///////______
-//      _\/\\\____\//\\\________\/\\\______\//\\\_____________\/\\\____\//\\\____\//\\\______/\\\___\/\\\______________\/\\\_____________
-//       _\/\\\_____\//\\\_______\/\\\_______\///\\\___________\/\\\_____\//\\\____\///\\\__/\\\_____\/\\\______________\/\\\_____________
-//        _\/\\\______\//\\\___/\\\\\\\\\\\_____\////\\\\\\\\\__\/\\\______\//\\\_____\///\\\\\/______\/\\\______________\/\\\_____________
-//         _\///________\///___\///////////_________\/////////___\///________\///________\/////________\///_______________\///______________
+//  ##  ## ######  ####  ##  ##  ####  ###### ######
+//  ## ##    ##   ##  ## ## ##  ##  ## ##     ##
+//  ####     ##   ##     ####   ##  ## ####   ####
+//  ## ##    ##   ##  ## ## ##  ##  ## ##     ##
+//  ##  ## ######  ####  ##  ##  ####  ##     ##
 
 // By Zander Martineau & Ashley Nolan for TMW - http://tmw.co.uk
 
-// CORE VARIABLES AND MIXINS
+// Core variables and mixins
+@import "colour-palette";
 @import "variables";
 @import "mixins";
+@import "functions";
 
-// CSS RESET
+// CSS reset
 @import "normalize";
 
-// GRID SYSTEM AND PAGE STRUCTURE
-@import "choreographic-grid";     // For responsive builds
-// @import "grid-static";          // For static width sites
+// Grid system and page structure
+@import "choreographic-grid";
 
-// BASE CSS
+// Base CSS
 @import "typography";
 @import "forms";
 @import "tables";
 @import "code";
 
-// COMPONENTS: COMMON
-@import "components";             // Generic components tools
+// Components: common
+@import "components";
 // @import "sprites";
 
-// COMPONENTS: BUTTONS & ALERTS
+// Components: buttons & alerts
 @import "buttons";
-// @import "button-groups";
 
-// COMPONENTS: MISC
-@import "carousel";
+// Components: misc
+// @import "carousel";
 
-// YOUR APP/SITE STYLES
+// Your app/site styles
 @import "app";
 
 
-// UTILITY CLASSES
+// Utility classes
 // Has to be last to override when necessary
 @import "utilities";
 @import "responsive-utilities";
 
-// PRINT STYLES
+// Print styles
 @import "print";

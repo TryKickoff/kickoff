@@ -1,19 +1,22 @@
 // ==================
 // === FORMS.scss ===
 // ==================
-// FORM
-// INPUT SIZES
-// FORM FIELD FEEDBACK STATES
-// INPUT GROUPS
-// HORIZONTAL & VERTICAL FORMS
-// HORIZONTAL-SPECIFIC STYLES
+// * Form
+// * Input sizes
+// * Form field feedback states
+// * Input groups
+// * Horizontal & vertical forms
+// * Horizontal-specific styles
 
-/* ============ */
-/* === FORM === */
-/* ============ */
+// === Form ===
+// ============
 // Make all forms have space below them
 form {
-	margin: 0 0 ($baseLineHeight + px);
+	margin: 0 0 ($base-line-height + px);
+
+	ul {
+		@extend .unstyled;
+	}
 }
 
 fieldset {
@@ -24,11 +27,12 @@ fieldset {
 
 // Margin to space out fieldsets
 .control-group {
-	margin-top: ($baseLineHeight / 2 + px);
+	margin-top: ($base-line-height / 2 + px);
+	list-style-type: none;
 
 	// Legend collapses margin, so next element is responsible for spacing
 	legend + & {
-		margin-top: $baseLineHeight + px;
+		margin-top: $base-line-height + px;
 		-webkit-margin-top-collapse: separate;
 	}
 }
@@ -39,17 +43,17 @@ legend {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: $baseLineHeight + px;
-	@include font-size($baseFontSize * 1.5);
-	@include line-height($baseLineHeight * 2);
+	margin-bottom: $base-line-height + px;
+	@include font-size($base-font-size * 1.5);
+	@include line-height($base-line-height * 2);
 	color: $labelColour;
 	border: 0;
 	border-bottom: 1px solid #eee;
 
 	// Small
 	& small {
-		@include font-size($baseFontSize * .75);
-		color: $grayLight;
+		@include font-size($base-font-size * .75);
+		color: lighten(#000, 70%);
 	}
 }
 
@@ -59,8 +63,8 @@ input,
 button,
 select,
 textarea {
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	font-weight: normal;
 }
 
@@ -69,7 +73,7 @@ input,
 button,
 select,
 textarea {
-	font-family: $baseFontFamily;
+	font-family: $base-font-family;
 }
 
 // Identify controls by their labels
@@ -87,6 +91,7 @@ label {
 	&.checkbox,
 	&.radio {
 		font-weight: normal;
+		line-height: 1.4;
 	}
 
 	// Inputs within a label
@@ -103,14 +108,13 @@ textarea,
 select,
 .uneditable-input,
 .file-wrapper {
-	display: inline-block;
-	@include ie7-inline-block();
+
 	width: 210px;
-	height: $baseLineHeight * 1.5 + px;
+	height: $base-line-height * 1.5 + px;
 	padding: 4px;
 	margin-bottom: 9px;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	color: $inputColour;
 	background-color: #FFF;
 	border: 1px solid $inputBorder;
@@ -230,8 +234,7 @@ textarea {
 	// Radios and checkboxes on same line
 	// TODO: Convert .inline to .control-inline
 	&.inline {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend %inline-block;
 		padding-top: 5px;
 		margin-bottom: 0;
 		vertical-align: middle;
@@ -260,15 +263,15 @@ textarea,
 .file-wrapper {
 	// Multiple arguments cannot be used inside a mixin if the mixin has not specified it, hence the need for a new $transtion var
 	@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-	$transition: border linear .2s, box-shadow linear .2s;
-	@include transition($transition);
+	@include transition;
 }
 
 input,
 textarea {
 	&:focus {
 		border-color: rgba(82,168,236,.8);
-		@include box-shadow("inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+		$shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(82,168,236,.6);
+		@include box-shadow($shadow);
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
@@ -280,12 +283,11 @@ input[type="checkbox"],
 select {
 	&:focus {
 		@include box-shadow(none); // override for file inputs
-		@include tab-focus();
+		@extend %tab-focus;
 	}
 }
 
 
-// ===================
 // === INPUT SIZES ===
 // ===================
 // General classes for quick sizes
@@ -327,7 +329,7 @@ select,
 textarea {
 	&[disabled],
 	&[readonly] {
-		background-color: $inputDisabledBackground;
+		background-color: $input-disabled-background;
 		border-color: #ddd;
 		cursor: not-allowed;
 	}
@@ -351,15 +353,15 @@ textarea {
 // ==================================
 // Warning
 .control-group.warning {
-	@include formFieldState($warningText, $warningText, $warningBackground);
+	@include formFieldState($warning-text, $warning-text, $warning-background);
 }
 // Error
 .control-group.error {
-	@include formFieldState($errorText, $errorText, $errorBackground);
+	@include formFieldState($error-text, $error-text, $error-background);
 }
 // Success
 .control-group.success {
-	@include formFieldState($successText, $successText, $successBackground);
+	@include formFieldState($success-text, $success-text, $success-background);
 }
 
 
@@ -380,8 +382,7 @@ textarea {
 	& .uneditable-input,
 	& .input-prepend,
 	& .input-append {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend %inline-block;
 		margin-bottom: 0;
 	}
 
@@ -409,7 +410,7 @@ textarea {
 
 	// Increase spacing between groups
 	& .control-group {
-		margin-bottom: $baseLineHeight + px;
+		margin-bottom: $base-line-height + px;
 		@include clearfix();
 	}
 
@@ -437,7 +438,7 @@ textarea {
 
 	// Remove bottom margin on block level help text since that's accounted for on .control-group
 	& .help-block {
-		margin-top: $baseLineHeight / 2 + px;
+		margin-top: $base-line-height / 2 + px;
 		margin-bottom: 0;
 	}
 
@@ -464,8 +465,7 @@ textarea {
 	}
 
 	& label {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend %inline-block;
 	}
 
 	// Inline checkbox/radio labels (remove padding on left)
@@ -509,9 +509,9 @@ textarea {
 // ------------
 
 .form-actions {
-	padding: ($baseLineHeight - 1 + px) 20px ($baseLineHeight + px);
-	margin-top: $baseLineHeight + px;
-	margin-bottom: $baseLineHeight + px;
+	padding: ($base-line-height - 1 + px) 20px ($base-line-height + px);
+	margin-top: $base-line-height + px;
+	margin-bottom: $base-line-height + px;
 	background-color: $formActionsBackground;
 	border-top: 1px solid #ddd;
 	@include clearfix(); // Adding clearfix to allow for .pull-right button containers
@@ -545,12 +545,11 @@ textarea {
 
 .help-block {
 	display: block; // account for any element using help-block
-	margin-bottom: $baseLineHeight / 2 + px;
+	margin-bottom: $base-line-height / 2 + px;
 }
 
 .help-inline {
-	display: inline-block;
-	@include ie7-inline-block();
+	@extend %inline-block;
 	vertical-align: middle;
 	padding-left: 5px;
 }
@@ -582,18 +581,17 @@ textarea {
 		border-left-color: #ccc;
 	}
 	& .add-on {
-		display: inline-block;
-		@include ie7-inline-block();
+		@extend %inline-block;
 		width: auto;
 		min-width: 16px;
-		height: $baseLineHeight + px;
+		height: $base-line-height + px;
 		padding: 4px 5px;
 		font-weight: normal;
-		@include line-height($baseLineHeight);
+		@include line-height($base-line-height);
 		text-align: center;
-		text-shadow: 0 1px 0 $white;
+		text-shadow: 0 1px 0 #fff;
 		vertical-align: middle;
-		background-color: $grayLighter;
+		background-color: lighten(#000, 70%)er;
 		border: 1px solid #ccc;
 	}
 	& .add-on,

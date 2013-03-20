@@ -1,0 +1,114 @@
+// === Colour palette ===
+// ======================
+// Generic colors
+$blue                         : #049CDB;
+$blueDark                     : darken($blue, 20%);
+$green                        : #46a546;
+$red                          : #bd362f;
+$yellow                       : #ffc40d;
+$orange                       : #f89406;
+$pink                         : #c3325f;
+$purple                       : #7a43b6;
+$gray                         : lighten(#000, 50%);
+
+// Colour Scheme
+$color-primary                : $blue;
+$color-secondary              : $green;
+$color-highlight              : #ff9600;
+$color-muted                  : #eef;
+$color-note                   : #666;
+$color-complement             : adjust-hue($color-primary, 180);
+
+// Common colours
+$color-text                   : #444;
+$color-headings               : $color-primary; // inherit to use default, $color-text
+$color-background             : #fff;
+$color-border                 : #ddd;
+
+
+// Links
+$color-link-default           : $color-primary;
+$color-link-visited           : $color-primary;
+$color-link-hover             : darken($color-primary, 15%);
+$color-link-active            : darken($color-primary, 15%);
+
+
+// Buttons
+$btn-background               : #fff;
+$btn-background-highlight     : darken(#fff, 10%);
+$btn-border                   : #ccc;
+
+$btn-primary-background       : $color-link-default;
+$btn-primary-background-highlight: adjust-hue($btn-primary-background, 20%);
+
+$btn-info-background          : #5bc0de;
+$btn-info-background-highlight: #2f96b4;
+
+$btn-success-background       : #62c462;
+$btn-success-background-highlight: #51a351;
+
+$btn-warning-background       : lighten($orange, 15%);
+$btn-warning-background-highlight: $orange;
+
+$btn-danger-background        : #ee5f5b;
+$btn-danger-background-highlight: #bd362f;
+
+$btn-inverse-background       : #444;
+$btn-inverse-background-highlight: #222;
+
+// Code
+$color-code                   : #d14;
+$color-code-background        : #f7f7f9;
+$color-pre                    : $color-code;
+$color-pre-background         : $color-code-background;
+
+// Text Selection
+$color-selection              : $color-primary;
+
+// Messages
+$color-message                : #f4ecbb;
+$color-success                : #2cde2c;
+$color-warning                : #cf8600;
+$color-important              : #d00;
+$color-notice                 : #66b;
+
+
+
+// === Component variables ===
+// ===========================
+// Forms
+$inputBackground              : #fff;
+$inputBorder                  : #ccc;
+$input-disabled-background    : lighten(#000, 70%);
+$formActionsBackground        : #f5f5f5;
+$labelColour                  : lighten(#000, 30%);
+$inputColour                  : lighten(#000, 30%);
+
+// Input placeholder text color
+$placeholderText              : lighten(#000, 70%);
+
+// Tables
+$tableBackground              : transparent; // overall background-color
+$tableBackgroundAccent        : #f9f9f9; // for striping
+$tableBackgroundHover         : #f5f5f5; // for hover
+$tableBorder                  : #ddd; // table and cell border
+
+// Form states and alerts
+$warning-text                  : #c09853;
+$warning-background            : #fcf8e3;
+$warning-border                : darken(adjust-hue($warning-background, -10), 3%);
+
+$error-text                    : #b94a48;
+$error-background              : #f2dede;
+$error-border                  : darken(adjust-hue($error-background, -10), 3%);
+
+$success-text                  : #468847;
+$success-background            : #dff0d8;
+$success-border                : darken(adjust-hue($success-background, -10), 5%);
+
+$info-text                     : #3a87ad;
+$info-background               : #d9edf7;
+$info-border                   : darken(adjust-hue($info-background, -10), 7%);
+
+// <hr> border colour
+$hrBorder                     : lighten(#000, 70%)er;

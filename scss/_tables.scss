@@ -18,12 +18,13 @@ table {
 
 .table {
 	width: 100%;
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $base-line-height + px;
+
 	// Cells
 	& th,
 	& td {
 		padding: 8px;
-		@include line-height($baseLineHeight);
+		@include line-height($base-line-height);
 		text-align: left;
 		vertical-align: top;
 		border-top: 1px solid $tableBorder;

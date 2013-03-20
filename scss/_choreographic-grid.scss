@@ -197,7 +197,7 @@ $nestedColumnPadding  : false  !default; // Remove padding on nested columns so 
 // ===========================================
 
 // === 768> ===
-@media screen and (min-width: 768px) {
+@include respond-min($breakpoint-narrow) {
 	// NAME THIS MEDIA QUERY
 	$mediaQueryName : 'mq-alpha';
 
@@ -258,9 +258,8 @@ $nestedColumnPadding  : false  !default; // Remove padding on nested columns so 
 // === end 768> ===
 
 
-
-// === 992> ===
-@media screen and (min-width: 992px) {
+// === 992px> ===
+@include respond-min($breakpoint-wide) {
 	// NAME THIS MEDIA QUERY
 	$mediaQueryName : 'mq-beta';
 
@@ -324,7 +323,3 @@ $nestedColumnPadding  : false  !default; // Remove padding on nested columns so 
 // === CENTRED COLUMNS ===
 // =======================
 .centered.col, .centred.col { float: none; margin: 0 auto; }
-
-img {
-	max-width: 100%;
-}

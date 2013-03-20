@@ -5,16 +5,17 @@
 // For image replacement
 .ir {
 	background-color: transparent;
+	background-repeat: no-repeat;
 	border: 0;
-	overflow: hidden;
-	/* IE 6/7 fallback */
-	*text-indent: -9999px;
-}
-.ir:before {
-	content: "";
+	direction: ltr;
 	display: block;
-	width: 0;
-	height: 100%;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+
+.ir br {
+	display: none;
 }
 
 
@@ -24,7 +25,9 @@
 	display: none !important;
 	visibility: hidden;
 }
+.is-shown,
 .show { display: block; }
+
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhidden {
 	border: 0;
@@ -56,11 +59,11 @@
 .clear	{ clear:both; float:none; }
 
 .mb0 { margin-bottom: 0 !important;}
-.mb1 { margin-bottom: $baseFontSize !important;}
-.mb2 { margin-bottom: $baseFontSize * 1.5 !important;}
-.mb3 { margin-bottom: $baseFontSize * 1.875 !important;}
+.mb1 { margin-bottom: $base-font-size !important;}
+.mb2 { margin-bottom: $base-font-size * 1.5 !important;}
+.mb3 { margin-bottom: $base-font-size * 1.875 !important;}
 
 .mt0 { margin-top:    0 !important;}
-.mt1 { margin-top:    $baseFontSize !important;}
-.mt2 { margin-top:    $baseFontSize * 1.5 !important;}
-.mt3 { margin-top:    $baseFontSize * 1.875 !important;}
+.mt1 { margin-top:    $base-font-size !important;}
+.mt2 { margin-top:    $base-font-size * 1.5 !important;}
+.mt3 { margin-top:    $base-font-size * 1.875 !important;}

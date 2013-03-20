@@ -1,22 +1,17 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+# humanstxt.org/
+# The humans responsible & technology colophon
 
+# TEAM
 
-/* TEAM */
-  Creative Technologist: Zander Martineau
-  Site: http://martineau.tv
-  Twitter: @MrMartineau
-  Location: London
+    Zander Martineau -- Creative Technologist -- http://twitter.com/MrMartineau
+    Ashley Nolan -- Creative Technologist -- http://twitter.com/dragongraphics
 
-  Creative Technologist: Ashley Nolan
-  Site: http://dragongraphics.co.uk
-  Twitter: @dragongraphics
-  Location: London
+# THANKS
 
-/* THANKS */
-  Names (& URL):
+    Paul Irish & the HTML5 Boilerplate crew
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
+    Sublime Text

@@ -1,0 +1,36 @@
+// Block level inputs
+@mixin input-block-level {
+	display: block;
+	width: 100%;
+	min-height: 28px; /* Make inputs at least the height of their button counterpart */
+	/* Makes inputs behave like true block-level elements */
+	@include box-sizing(border-box);
+}
+
+// Mixin for form field states
+@mixin formFieldState($color-text: $color-text, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
+	// Set the text color
+	> label,
+	.help-block,
+	.help-inline {
+		color: $color-text;
+	}
+	// Style inputs accordingly
+	input,
+	select,
+	textarea {
+		color: $color-text;
+		border-color: $borderColor;
+		&:focus {
+		border-color: darken($borderColor, 10%);
+		@include box-shadow(0 0 6px lighten($borderColor, 20%));
+		}
+	}
+	// Give a small background color for input-prepend/-append
+	.input-prepend .add-on,
+	.input-append .add-on {
+		color: $color-text;
+		background-color: $backgroundColor;
+		border-color: $color-text;
+	}
+}

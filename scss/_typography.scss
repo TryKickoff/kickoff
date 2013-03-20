@@ -2,29 +2,43 @@
 // === TYPOGRAPHY.scss =====
 // === TABLE OF CONTENTS ===
 // =========================
-// BODY TEXT
-// BASE
-// PARAGRAPHS
-// HEADINGS
-// LISTS
-// QUOTES
-// LINKS
-// HELPER CLASSES
+// * Body text
+// * Base
+// * Paragraphs
+// * Headings
+// * Lists
+// * Quotes
+// * Links
+// * Helper classes
 
-// Typography.less
-// Headings, body text, lists, code, and more for a versatile and durable typography system
-// ----------------------------------------------------------------------------------------
+// === Resources: ===
+// ==================
+// * http://www.gridlover.net/
+// * http://modularscale.com/
+// * http://lamb.cc/typograph/
+
+// Body font size, leadings etc have been set in _variables.scss.
+// The default typography has been built using gridlover.net with these settings:
+// * Body font size    : 16
+// * Body line height  : 1.400
+// * Scale factor      : 1.333 (Musical/Perfect Fourth)
+
+// Here is the same result from modularscale.com.
+// http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
+// ------------------------------------------------------------------------------
 
 
-// BODY TEXT
+// Body text
 body {
-	font-family: $baseFontFamily;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
-	color: $textColor;
-	background-color: $bodyBackground;
+	font-family: $base-font-family;
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
+	color: $color-text;
+	background-color: $color-background;
 
-	// Two ways to smoothen type, they are disabled by default. Enable only one of them if you need them.
+	// Two ways to smoothen type, they are disabled by default
+	// Enable only one of them if you need them
+	// =========================================
 	// 1.
 	// -webkit-font-smoothing: antialiased;
 	//    -moz-font-smoothing: antialiased;
@@ -35,195 +49,131 @@ body {
 }
 
 p {
-	font-family: $baseFontFamily;
-	@include font-size($baseFontSize);
-	@include line-height($baseLineHeight);
+	font-family: $base-font-family;
+	@include font-size($base-font-size);
+	@include line-height($base-line-height);
 	margin-top: 0;
-	margin-bottom: $baseLineHeight + px;
-	small {
-		font-size: $baseFontSize - 2;
-		color: $grayLight;
-	}
+	margin-bottom: $base-line-height + px;
+
+	// Measure - ideally about 65 chars per line
+	// =========================================
+	// max-width: $base-font-size * 30 + px;
+
+	// & small {
+	// 	color: lighten($color-text, 10%);
+	// }
 }
 
-.lead {
-	margin-bottom: $baseLineHeight + px;
-	font-size: 20px;
-	font-weight: 200;
-	@include line-height($baseLineHeight * 1.5);
-}
-
-// HEADINGS
-
+// Headings
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font-family: $headingsFontFamily;
-	font-weight: $headingsFontWeight;
-	color: $headingsColor;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	color: $color-headings;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
+
 	& small {
 		font-weight: normal;
-		color: $grayLight;
+		color: lighten($color-headings, 15%);
 	}
 }
-h1 {
-	@include font-size(68);
-	@include line-height(72);
-	margin-top: 24px;
-	margin-bottom: 48px;
-	& small {
-		@include font-size(18);
-	}
+
+// Use the helper classes to emulate styles for another element
+// For example: h3.h1 or h3.alpha
+
+h1, .h1, .alpha {
+	@include font-size(51);
+	@include line-height($base-line-height * 2);
+	margin-top: $base-line-height + px;
+	margin-bottom: ($base-line-height * 2) + px;
 }
-h2 {
-	@include font-size(42);
-	@include line-height(48);
-	margin-top: 48px;
-	margin-bottom: 24px;
-	& small {
-		@include font-size(18);
-	}
+
+h2, .h2, .beta {
+	@include font-size(28);
+	@include line-height($base-line-height * 2);
+	margin-top: ($base-line-height * 2) + px;
+	margin-bottom: $base-line-height + px;
 }
-h3 {
-	@include font-size(26);
-	@include line-height(48);
-	margin-top: 24px;
+
+h3, .h3, .gamma {
+	@include font-size(21);
+	@include line-height($base-line-height);
+	margin-top: $base-line-height + px;
 	margin-bottom: 0px;
-	& small {
-		@include font-size(14);
-	}
 }
-h4, h5, h6 {
-	@include line-height(48);
+
+h4, .h4,, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+	@include line-height($base-line-height);
+	margin-top: 0;
+	margin-bottom: 0;
 }
-h4 {
-	@include font-size(14);
-	& small {
-		@include font-size(12);
-	}
+
+h4, .h4, .delta {
+	@include font-size($base-font-size);
 }
-h5 {
+
+h5, .h5, .epsilon {
 	@include font-size(12);
 }
-h6 {
+
+h6, .h6, .zeta {
 	@include font-size(11);
-	color: $grayLight;
+	color: lighten(#000, 70%);
 	text-transform: uppercase;
 }
 
 // Page header
 .page-header {
-	padding-bottom: $baseLineHeight - 1 + px;
-	margin: ($baseLineHeight + px) 0;
-	border-bottom: 1px solid $grayLighter;
+	padding-bottom: $base-line-height - 1 + px;
+	margin: ($base-line-height + px) 0;
+	border-bottom: 1px solid lighten(#000, 70%)er;
 }
+
 .page-header h1 {
 	line-height: 1;
 }
 
-// LINKS
+// Links
 a {
-	color: $linkColor;
-	text-decoration: none;
-}
-a:hover {
-	color: $linkColorHover;
-	//text-decoration: underline;
-}
-
-
-// LISTS
-//default list styles
-ul { list-style-type: disc }
-ol { list-style-type: decimal }
-
-// Unordered and Ordered lists
-// Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
-ul, ol {
-	padding: 0;
-	margin: 0 0 ($baseLineHeight / 2 + px) 25px;
-	@include font-size($baseFontSize);
-	& ul,
-	& ol {
-		margin: 0 0 0 45px;
+	&, &:link {
+		color: $color-link-default;
+		text-decoration: none;
 	}
-	& ul {
-		list-style-type: circle;
-		& ul {
-			list-style-type: square;
-		}
+	&:visited {
+		color: $color-link-visited;
+		text-decoration: none;
 	}
-	& ol {
-		list-style-type: upper-roman;
-		& ol {
-			list-style-type: lower-roman;
-		}
+	&:hover {
+		color: $color-link-hover;
+		//text-decoration: underline;
 	}
-	& li {
-		@include line-height($baseLineHeight);
-	}
-
-	& ul,
-	& ol {
-		margin-bottom: 0;
-	}
-
-	&.unstyled {
-		margin-left: 0;
-		list-style: none;
+	&:active {
+		color: $color-link-active;
+		//text-decoration: underline;
 	}
 }
 
-
-// Description Lists
-dl {
-	margin-bottom: $baseLineHeight + px;
-}
-dt,
-dd {
-	@include line-height($baseLineHeight);
-}
-dt {
-	font-weight:$boldFontWeight;
-	@include line-height($baseLineHeight - 1); // fix jank Helvetica Neue font bug
-
-	// Horizontal layout (like forms)
-	.dl-horizontal & {
-		@include text-overflow();
-		float: left;
-		clear: left;
-		width: 120px;
-		text-align: right;
-	}
-}
-dd {
-	margin-left: $baseLineHeight / 2 + px;
-
-	.dl-horizontal & {
-		margin-left: 130px;
-	}
-}
-
-// MISC
-// ----
+// === Misc ===
 
 // Horizontal rules
 hr {
-	margin: ($baseLineHeight + px) 0;
+	margin: ($base-line-height + px) 0;
 	border: 0;
 	border-top: 1px solid $hrBorder;
-	border-bottom: 1px solid $white;
+	border-bottom: 1px solid #fff;
 }
 
 // Emphasis
 strong, b {
-	font-weight: $boldFontWeight;
+	font-weight: $bold-font-weight;
 }
 em, i {
 	font-style: italic;
 }
 .muted {
-	color: $grayLight;
+	color: lighten(#000, 70%);
 }
 
 // Abbreviations and acronyms
@@ -239,18 +189,18 @@ abbr.initialism {
 // Blockquotes
 blockquote {
 	padding: 0 0 0 15px;
-	margin: 0 0 ($baseLineHeight + px);
-	border-left: 5px solid $grayLighter;
+	margin: 0 0 ($base-line-height + px);
+	border-left: 5px solid lighten(#000, 70%)er;
 	& p {
 		margin-bottom: 0;
-		@include font-size($baseFontSize);
+		@include font-size($base-font-size);
 		font-weight: 300;
-		@include line-height($baseLineHeight * 1.25);
+		@include line-height($base-line-height * 1.25);
 	}
 	& small {
 		display: block;
-		@include line-height($baseLineHeight);
-		color: $grayLight;
+		@include line-height($base-line-height);
+		color: lighten(#000, 70%);
 		&:before {
 			content: '\2014 \00A0';
 		}
@@ -262,7 +212,7 @@ blockquote {
 		padding-left: 0;
 		padding-right: 15px;
 		border-left: 0;
-		border-right: 5px solid $grayLighter;
+		border-right: 5px solid lighten(#000, 70%)er;
 		& p,
 		& small {
 			text-align: right;
@@ -282,22 +232,24 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $baseLineHeight + px;
-	@include line-height($baseLineHeight);
+	margin-bottom: $base-line-height + px;
+	@include line-height($base-line-height);
 	font-style: normal;
 }
 
-// Misc
 small {
 	font-size: 75%;
 }
+
 cite {
 	font-style: normal;
 }
+
 // Addresses styling not present in S5, Chrome
 dfn {
 	font-style: italic;
 }
+
 // Addresses styling not present in IE6/7/8/9
 mark {
 	background: #ff0;
@@ -317,10 +269,99 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 
+// === Lists ===
+// default list styles
+ul { list-style-type: disc }
+ol { list-style-type: decimal }
 
-// =================
-// === UTILITIES ===
-// =================
+// Unordered and Ordered lists
+// Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
+ul, ol {
+	padding: 0;
+	margin: 0 0 ($base-line-height + px) ($base-line-height + px);
+
+	& ul,
+	& ol {
+		margin-left: ($base-line-height * 2) + px;
+	}
+
+	& ul {
+		list-style-type: circle;
+		& ul {
+			list-style-type: square;
+		}
+	}
+
+	& ol {
+		list-style-type: upper-roman;
+		& ol {
+			list-style-type: lower-roman;
+		}
+	}
+
+	& li {
+		@include line-height($base-line-height);
+	}
+
+	& ul,
+	& ol {
+		margin-bottom: 0;
+	}
+}
+
+.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+
+// === Definition lists ===
+dl {
+	margin-bottom: $base-line-height + px;
+}
+
+dt,
+dd {
+	@include line-height($base-line-height);
+}
+
+dt {
+	font-weight:$bold-font-weight;
+	@include line-height($base-line-height - 1); // fix jank Helvetica Neue font bug
+
+	// Horizontal layout (like forms)
+	.dl-horizontal & {
+		@extend text-overflow;
+		float: left;
+		clear: left;
+		width: 220px;
+		text-align: right;
+	}
+}
+
+dd {
+	margin-left: $base-line-height + px;
+
+	.dl-horizontal & {
+		margin-left: 240px;
+	}
+}
+
+// === Utilities ===
 .text-centre, .text-center { text-align: center;}
 .text-left { text-align: left;}
 .text-right { text-align: right;}
+
+
+
+::-moz-selection {
+	color: lighten($color-selection, 55%);
+	background: $color-selection;
+}
+
+::selection {
+	color: lighten($color-selection, 55%);
+	background: $color-selection;
+}

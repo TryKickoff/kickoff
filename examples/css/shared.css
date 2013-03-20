@@ -1,3 +1,14 @@
-.code-example {
+/*.code-example {
 	display: none;
+}*/
+.block-grid li {
+	text-align: center;
+
+}
+.block-grid a {
+	display: block;
+	min-height: 130px;
+}
+.block-grid p {
+	margin-bottom: 0;
 }
