@@ -1,14 +1,11 @@
-/* line 139, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_utility.scss */
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus, .btn:focus {
   outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
+  outline-offset: -2px; }
 
-/* line 2, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
 .radio.inline,
 .checkbox.inline, .form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
 .form-inline input,
@@ -27,212 +24,156 @@ select:focus, .btn:focus {
 .form-horizontal .input-append, .form-search label,
 .form-inline label, .help-inline, .input-prepend .add-on,
 .input-append .add-on, .btn {
-  display: inline-block;
-}
-/* line 6, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
-.lt-ie8 .radio.inline,
-.lt-ie8 .checkbox.inline, .lt-ie8 .form-search input, .form-search .lt-ie8 input, .lt-ie8 .form-search textarea, .form-search .lt-ie8 textarea, .lt-ie8 .form-search select, .form-search .lt-ie8 select, .lt-ie8 .form-search .help-inline, .form-search .lt-ie8 .help-inline, .lt-ie8 .form-search .uneditable-input, .form-search .lt-ie8 .uneditable-input, .lt-ie8 .form-search .input-prepend, .form-search .lt-ie8 .input-prepend, .lt-ie8 .form-search .input-append, .form-search .lt-ie8 .input-append,
-.lt-ie8 .form-inline input,
-.form-inline .lt-ie8 input,
-.lt-ie8 .form-inline textarea,
-.form-inline .lt-ie8 textarea,
-.lt-ie8 .form-inline select,
-.form-inline .lt-ie8 select,
-.lt-ie8 .form-inline .help-inline,
-.form-inline .lt-ie8 .help-inline,
-.lt-ie8 .form-inline .uneditable-input,
-.form-inline .lt-ie8 .uneditable-input,
-.lt-ie8 .form-inline .input-prepend,
-.form-inline .lt-ie8 .input-prepend,
-.lt-ie8 .form-inline .input-append,
-.form-inline .lt-ie8 .input-append,
-.lt-ie8 .form-horizontal input,
-.form-horizontal .lt-ie8 input,
-.lt-ie8 .form-horizontal textarea,
-.form-horizontal .lt-ie8 textarea,
-.lt-ie8 .form-horizontal select,
-.form-horizontal .lt-ie8 select,
-.lt-ie8 .form-horizontal .help-inline,
-.form-horizontal .lt-ie8 .help-inline,
-.lt-ie8 .form-horizontal .uneditable-input,
-.form-horizontal .lt-ie8 .uneditable-input,
-.lt-ie8 .form-horizontal .input-prepend,
-.form-horizontal .lt-ie8 .input-prepend,
-.lt-ie8 .form-horizontal .input-append,
-.form-horizontal .lt-ie8 .input-append, .lt-ie8 .form-search label, .form-search .lt-ie8 label,
-.lt-ie8 .form-inline label,
-.form-inline .lt-ie8 label, .lt-ie8 .help-inline, .lt-ie8 .input-prepend .add-on, .input-prepend .lt-ie8 .add-on,
-.lt-ie8 .input-append .add-on,
-.input-append .lt-ie8 .add-on, .lt-ie8 .btn {
-  display: inline;
-  zoom: 1;
-}
+  display: inline-block; }
+  .lt-ie8 .radio.inline,
+  .lt-ie8 .checkbox.inline, .lt-ie8 .form-search input, .form-search .lt-ie8 input, .lt-ie8 .form-search textarea, .form-search .lt-ie8 textarea, .lt-ie8 .form-search select, .form-search .lt-ie8 select, .lt-ie8 .form-search .help-inline, .form-search .lt-ie8 .help-inline, .lt-ie8 .form-search .uneditable-input, .form-search .lt-ie8 .uneditable-input, .lt-ie8 .form-search .input-prepend, .form-search .lt-ie8 .input-prepend, .lt-ie8 .form-search .input-append, .form-search .lt-ie8 .input-append,
+  .lt-ie8 .form-inline input,
+  .form-inline .lt-ie8 input,
+  .lt-ie8 .form-inline textarea,
+  .form-inline .lt-ie8 textarea,
+  .lt-ie8 .form-inline select,
+  .form-inline .lt-ie8 select,
+  .lt-ie8 .form-inline .help-inline,
+  .form-inline .lt-ie8 .help-inline,
+  .lt-ie8 .form-inline .uneditable-input,
+  .form-inline .lt-ie8 .uneditable-input,
+  .lt-ie8 .form-inline .input-prepend,
+  .form-inline .lt-ie8 .input-prepend,
+  .lt-ie8 .form-inline .input-append,
+  .form-inline .lt-ie8 .input-append,
+  .lt-ie8 .form-horizontal input,
+  .form-horizontal .lt-ie8 input,
+  .lt-ie8 .form-horizontal textarea,
+  .form-horizontal .lt-ie8 textarea,
+  .lt-ie8 .form-horizontal select,
+  .form-horizontal .lt-ie8 select,
+  .lt-ie8 .form-horizontal .help-inline,
+  .form-horizontal .lt-ie8 .help-inline,
+  .lt-ie8 .form-horizontal .uneditable-input,
+  .form-horizontal .lt-ie8 .uneditable-input,
+  .lt-ie8 .form-horizontal .input-prepend,
+  .form-horizontal .lt-ie8 .input-prepend,
+  .lt-ie8 .form-horizontal .input-append,
+  .form-horizontal .lt-ie8 .input-append, .lt-ie8 .form-search label, .form-search .lt-ie8 label,
+  .lt-ie8 .form-inline label,
+  .form-inline .lt-ie8 label, .lt-ie8 .help-inline, .lt-ie8 .input-prepend .add-on, .input-prepend .lt-ie8 .add-on,
+  .lt-ie8 .input-append .add-on,
+  .input-append .lt-ie8 .add-on, .lt-ie8 .btn {
+    display: inline;
+    zoom: 1; }
 
-/* line 22, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
 .btn {
-  *margin-left: .3em;
-}
-/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
-.btn:first-child {
-  *margin-left: 0;
-}
+  *margin-left: .3em; }
+  .btn:first-child {
+    *margin-left: 0; }
 
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_oldIE.scss */
 .btn, .btn-primary, .btn-warning, .btn-danger, .btn-success, .btn-info, .btn-inverse {
-  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-}
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)"; }
 
-/* line 7, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(polyfills/boxsizing.htc);
-}
+  *behavior: url(polyfills/boxsizing.htc); }
 
-/* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
-/* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 audio, canvas, video {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
-}
+  *zoom: 1; }
 
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 audio:not([controls]) {
   display: none;
-  height: 0;
-}
+  height: 0; }
 
-/* line 36, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 /* ============ */
 /* === BASE === */
 /* ============ */
-/* line 46, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
-}
+  /* 2 */ }
 
-/* line 53, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 html, button, input, select, textarea {
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
 
-/* line 58, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 body {
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 65, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 a:focus {
-  outline: thin dotted;
-}
+  outline: thin dotted; }
 
-/* line 69, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 a:hover, a:active {
-  outline: 0;
-}
+  outline: 0; }
 
-/* line 77, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 dl, menu, ol.normal, ul.normal {
-  margin: 1em 0;
-}
+  margin: 1em 0; }
 
-/* line 84, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 menu, ol.normal, ul.normal {
-  padding: 0 0 0 40px;
-}
+  padding: 0 0 0 40px; }
 
-/* line 90, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
-  list-style-image: none;
-}
+  list-style-image: none; }
 
-/* line 102, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 img {
   border: 0;
   /* 1 */
   -ms-interpolation-mode: bicubic;
-  /* 2 */
-}
+  /* 2 */ }
 
-/* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 117, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 figure {
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 125, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 form {
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 128, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+  padding: 0.35em 0.625em 0.75em; }
 
-/* line 138, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
   white-space: normal;
-  *margin-left: -7px;
-}
+  *margin-left: -7px; }
 
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
-  *vertical-align: middle;
-}
+  *vertical-align: middle; }
 
-/* line 158, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 button,
 input {
-  line-height: normal;
-}
+  line-height: normal; }
 
-/* line 170, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
-  *overflow: visible;
-}
+  *overflow: visible; }
 
-/* line 178, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 button[disabled],
 input[disabled] {
-  cursor: default;
-}
+  cursor: default; }
 
-/* line 187, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -241,74 +182,50 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
   *height: 13px;
-  *width: 13px;
-}
+  *width: 13px; }
 
-/* line 196, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 input[type="search"] {
-  -webkit-appearance: textfield;
-}
+  -webkit-appearance: textfield; }
 
-/* line 202, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
 
-/* line 209, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 217, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 textarea {
   overflow: auto;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
-/* line 227, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_normalize.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* line 161, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
 .container {
   padding-left: 0px;
   padding-right: 0px;
   width: 95%;
   max-width: 1000px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
 .row {
   width: 100%;
   margin: 0 auto;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.row:before, .row:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.row:after {
-  clear: both;
-}
-/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.row .row {
-  min-width: 0;
-}
-/* line 179, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.row .row .col {
-  padding: 0;
-}
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row .row {
+    min-width: 0; }
+    .row .row .col {
+      padding: 0; }
 
 @media screen and (min-width: 768px) {
-  /* line 211, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .col {
     margin-left: 2%;
     padding: 10px;
@@ -319,312 +236,193 @@ table {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  /* line 120, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .col:first-child {
-    margin-left: 0;
-  }
-  /* line 124, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .col + .col:last-child {
-    float: right;
-  }
-  /* line 125, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .col + .col.end {
-    float: left;
-  }
+    box-sizing: border-box; }
+    .col:first-child {
+      margin-left: 0; }
+    .col + .col:last-child {
+      float: right; }
+    .col + .col.end {
+      float: left; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span1, .mq-alpha-resize-to1 {
-    width: 6.5%;
-  }
+    width: 6.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span2, .mq-alpha-resize-to2 {
-    width: 15%;
-  }
+    width: 15%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span3, .mq-alpha-resize-to3 {
-    width: 23.5%;
-  }
+    width: 23.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span4, .mq-alpha-resize-to4 {
-    width: 32%;
-  }
+    width: 32%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span5, .mq-alpha-resize-to5 {
-    width: 40.5%;
-  }
+    width: 40.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span6, .mq-alpha-resize-to6 {
-    width: 49%;
-  }
+    width: 49%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span7, .mq-alpha-resize-to7 {
-    width: 57.5%;
-  }
+    width: 57.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span8, .mq-alpha-resize-to8 {
-    width: 66%;
-  }
+    width: 66%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span9, .mq-alpha-resize-to9 {
-    width: 74.5%;
-  }
+    width: 74.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span10, .mq-alpha-resize-to10 {
-    width: 83%;
-  }
+    width: 83%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span11, .mq-alpha-resize-to11 {
-    width: 91.5%;
-  }
+    width: 91.5%; }
 
-  /* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span12, .mq-alpha-resize-to12 {
-    width: 100%;
-  }
+    width: 100%; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.065%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 20.065;
-  }
+    margin-left: 0.065%; }
+    .row > .offset1:first-child {
+      margin-left: 20.065; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.3%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 40.3;
-  }
+    margin-left: 0.3%; }
+    .row > .offset1:first-child {
+      margin-left: 40.3; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.705%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 60.705;
-  }
+    margin-left: 0.705%; }
+    .row > .offset1:first-child {
+      margin-left: 60.705; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 1.28%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 81.28;
-  }
+    margin-left: 1.28%; }
+    .row > .offset1:first-child {
+      margin-left: 81.28; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 2.025%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 102.025;
-  }
+    margin-left: 2.025%; }
+    .row > .offset1:first-child {
+      margin-left: 102.025; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 2.94%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 122.94;
-  }
+    margin-left: 2.94%; }
+    .row > .offset1:first-child {
+      margin-left: 122.94; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 4.025%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 144.025;
-  }
+    margin-left: 4.025%; }
+    .row > .offset1:first-child {
+      margin-left: 144.025; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 5.28%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 165.28;
-  }
+    margin-left: 5.28%; }
+    .row > .offset1:first-child {
+      margin-left: 165.28; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 6.705%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 186.705;
-  }
+    margin-left: 6.705%; }
+    .row > .offset1:first-child {
+      margin-left: 186.705; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 8.3%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 208.3;
-  }
+    margin-left: 8.3%; }
+    .row > .offset1:first-child {
+      margin-left: 208.3; }
 
-  /* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 10.065%;
-  }
-  /* line 231, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 230.065;
-  }
+    margin-left: 10.065%; }
+    .row > .offset1:first-child {
+      margin-left: 230.065; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push2 {
     left: 17%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push3 {
     left: 25.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push4 {
     left: 34%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push5 {
     left: 42.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push6 {
     left: 51%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push7 {
     left: 59.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push8 {
     left: 68%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push9 {
     left: 76.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push10 {
     left: 85%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .push11 {
     left: 93.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull2 {
     right: 17%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull3 {
     right: 25.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull4 {
     right: 34%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull5 {
     right: 42.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull6 {
     right: 51%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull7 {
     right: 59.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull8 {
     right: 68%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull9 {
     right: 76.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull10 {
     right: 85%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 242, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .pull11 {
     right: 93.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 249, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .split .col, .shunt {
     float: none;
     margin-left: 0;
     min-height: 1px;
     position: relative;
     width: 100%;
-    clear: both;
-  }
-}
+    clear: both; } }
 @media screen and (min-width: 992px) {
-  /* line 277, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .split .col, .shunt {
     margin-left: 2%;
     padding: 10px;
@@ -635,293 +433,178 @@ table {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  /* line 120, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .split .col:first-child, .shunt:first-child {
-    margin-left: 0;
-  }
-  /* line 124, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .split .col + .split .col:last-child, .shunt + .shunt:last-child {
-    float: right;
-  }
-  /* line 125, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .split .col + .split .col.end, .shunt + .shunt.end {
-    float: left;
-  }
+    box-sizing: border-box; }
+    .split .col:first-child, .shunt:first-child {
+      margin-left: 0; }
+    .split .col + .split .col:last-child, .shunt + .shunt:last-child {
+      float: right; }
+    .split .col + .split .col.end, .shunt + .shunt.end {
+      float: left; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span1, .mq-beta-resize-to1, .split .span1 {
-    width: 6.5%;
-  }
+    width: 6.5%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span2, .mq-beta-resize-to2, .split .span2 {
-    width: 15%;
-  }
+    width: 15%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span3, .mq-beta-resize-to3, .split .span3 {
-    width: 23.5%;
-  }
+    width: 23.5%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span4, .mq-beta-resize-to4, .split .span4 {
-    width: 32%;
-  }
+    width: 32%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span5, .mq-beta-resize-to5, .split .span5 {
-    width: 40.5%;
-  }
+    width: 40.5%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span6, .mq-beta-resize-to6, .split .span6 {
-    width: 49%;
-  }
+    width: 49%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span7, .mq-beta-resize-to7, .split .span7 {
-    width: 57.5%;
-  }
+    width: 57.5%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span8, .mq-beta-resize-to8, .split .span8 {
-    width: 66%;
-  }
+    width: 66%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span9, .mq-beta-resize-to9, .split .span9 {
-    width: 74.5%;
-  }
+    width: 74.5%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span10, .mq-beta-resize-to10, .split .span10 {
-    width: 83%;
-  }
+    width: 83%; }
 
-  /* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .span11, .mq-beta-resize-to11, .split .span11 {
-    width: 91.5%;
-  }
+    width: 91.5%; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.065%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 20.065;
-  }
+    margin-left: 0.065%; }
+    .row > .offset1:first-child {
+      margin-left: 20.065; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.3%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 40.3;
-  }
+    margin-left: 0.3%; }
+    .row > .offset1:first-child {
+      margin-left: 40.3; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 0.705%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 60.705;
-  }
+    margin-left: 0.705%; }
+    .row > .offset1:first-child {
+      margin-left: 60.705; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 1.28%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 81.28;
-  }
+    margin-left: 1.28%; }
+    .row > .offset1:first-child {
+      margin-left: 81.28; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 2.025%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 102.025;
-  }
+    margin-left: 2.025%; }
+    .row > .offset1:first-child {
+      margin-left: 102.025; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 2.94%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 122.94;
-  }
+    margin-left: 2.94%; }
+    .row > .offset1:first-child {
+      margin-left: 122.94; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 4.025%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 144.025;
-  }
+    margin-left: 4.025%; }
+    .row > .offset1:first-child {
+      margin-left: 144.025; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 5.28%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 165.28;
-  }
+    margin-left: 5.28%; }
+    .row > .offset1:first-child {
+      margin-left: 165.28; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 6.705%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 186.705;
-  }
+    margin-left: 6.705%; }
+    .row > .offset1:first-child {
+      margin-left: 186.705; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 8.3%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 208.3;
-  }
+    margin-left: 8.3%; }
+    .row > .offset1:first-child {
+      margin-left: 208.3; }
 
-  /* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .offset1 {
-    margin-left: 10.065%;
-  }
-  /* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-  .row > .offset1:first-child {
-    margin-left: 230.065;
-  }
+    margin-left: 10.065%; }
+    .row > .offset1:first-child {
+      margin-left: 230.065; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push2, .push2 {
     left: 17%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push3, .push3 {
     left: 25.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push4, .push4 {
     left: 34%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push5, .push5 {
     left: 42.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push6, .push6 {
     left: 51%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push7, .push7 {
     left: 59.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push8, .push8 {
     left: 68%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 309, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-push9, .push9 {
     left: 76.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull2, .pull2 {
     right: 17%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull3, .pull3 {
     right: 25.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull4, .pull4 {
     right: 34%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull5, .pull5 {
     right: 42.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull6, .pull6 {
     right: 51%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull7, .pull7 {
     right: 59.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull8, .pull8 {
     right: 68%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .row > .mq-beta-pull9, .pull9 {
     right: 76.5%;
-    position: relative;
-  }
+    position: relative; }
 
-  /* line 316, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .mq-beta-end {
-    float: right;
-  }
+    float: right; }
 
-  /* line 317, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
   .mq-beta-end {
-    float: left;
-  }
-}
-/* line 326, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
+    float: left; } }
 .centered.col, .centred.col {
   float: none;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 328, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
-/* line 32, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -929,10 +612,8 @@ body {
   line-height: 22px;
   line-height: 1.375rem;
   color: #444444;
-  background-color: white;
-}
+  background-color: white; }
 
-/* line 51, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -940,383 +621,257 @@ p {
   line-height: 22px;
   line-height: 1.375rem;
   margin-top: 0;
-  margin-bottom: 22px;
-}
+  margin-bottom: 22px; }
 
-/* line 68, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
   color: #049cdb;
-  text-rendering: optimizelegibility;
-}
-/* line 75, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-weight: normal;
-  color: #30c0fb;
-}
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    color: #30c0fb; }
 
-/* line 84, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h1, .h1, .alpha {
   font-size: 51px;
   font-size: 3.1875rem;
   line-height: 44px;
   line-height: 2.75rem;
   margin-top: 22px;
-  margin-bottom: 44px;
-}
+  margin-bottom: 44px; }
 
-/* line 91, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h2, .h2, .beta {
   font-size: 28px;
   font-size: 1.75rem;
   line-height: 44px;
   line-height: 2.75rem;
   margin-top: 44px;
-  margin-bottom: 22px;
-}
+  margin-bottom: 22px; }
 
-/* line 98, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h3, .h3, .gamma {
   font-size: 21px;
   font-size: 1.3125rem;
   line-height: 22px;
   line-height: 1.375rem;
   margin-top: 22px;
-  margin-bottom: 0px;
-}
+  margin-bottom: 0px; }
 
-/* line 107, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h4, .h4, .delta,
 h5, .h5, .epsilon,
 h6, .h6, .zeta {
   line-height: 22px;
   line-height: 1.375rem;
   margin-top: 0;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
-/* line 113, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h4, .h4, .delta {
   font-size: 16px;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
-/* line 117, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h5, .h5, .epsilon {
   font-size: 12px;
-  font-size: 0.75rem;
-}
+  font-size: 0.75rem; }
 
-/* line 121, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 h6, .h6, .zeta {
   font-size: 11px;
   font-size: 0.6875rem;
   color: #b3b3b3;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-/* line 128, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .page-header {
   padding-bottom: 21px;
   margin: 22px 0;
-  border-bottom: 1px solid #b3b3b3 er;
-}
+  border-bottom: 1px solid #b3b3b3 er; }
 
-/* line 134, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .page-header h1 {
-  line-height: 1;
-}
+  line-height: 1; }
 
-/* line 140, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 a, a:link {
   color: #049cdb;
-  text-decoration: none;
-}
-/* line 144, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
+  text-decoration: none; }
 a:visited {
   color: #049cdb;
-  text-decoration: none;
-}
-/* line 148, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
+  text-decoration: none; }
 a:hover {
-  color: #036690;
-}
-/* line 152, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
+  color: #036690; }
 a:active {
-  color: #036690;
-}
+  color: #036690; }
 
-/* line 161, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 hr {
   margin: 22px 0;
   border: 0;
   border-top: 1px solid #b3b3b3 er;
-  border-bottom: 1px solid white;
-}
+  border-bottom: 1px solid white; }
 
-/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 strong, b {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-/* line 172, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 em, i {
-  font-style: italic;
-}
+  font-style: italic; }
 
-/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .muted {
-  color: #b3b3b3;
-}
+  color: #b3b3b3; }
 
-/* line 180, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 abbr[title] {
   border-bottom: 1px dotted #dddddd;
-  cursor: help;
-}
+  cursor: help; }
 
-/* line 184, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 abbr.initialism {
   font-size: 90%;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-/* line 190, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 22px;
-  border-left: 5px solid #b3b3b3 er;
-}
-/* line 194, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-blockquote p {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 27.5px;
-  line-height: 1.71875rem;
-}
-/* line 200, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-blockquote small {
-  display: block;
-  line-height: 22px;
-  line-height: 1.375rem;
-  color: #b3b3b3;
-}
-/* line 204, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-blockquote small:before {
-  content: '\2014 \00A0';
-}
-/* line 210, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-blockquote.pull-right {
-  float: right;
-  padding-left: 0;
-  padding-right: 15px;
-  border-left: 0;
-  border-right: 5px solid #b3b3b3 er;
-}
-/* line 217, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-blockquote.pull-right p, blockquote.pull-right small {
-  text-align: right;
-}
+  border-left: 5px solid #b3b3b3 er; }
+  blockquote p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 27.5px;
+    line-height: 1.71875rem; }
+  blockquote small {
+    display: block;
+    line-height: 22px;
+    line-height: 1.375rem;
+    color: #b3b3b3; }
+    blockquote small:before {
+      content: '\2014 \00A0'; }
+  blockquote.pull-right {
+    float: right;
+    padding-left: 0;
+    padding-right: 15px;
+    border-left: 0;
+    border-right: 5px solid #b3b3b3 er; }
+    blockquote.pull-right p, blockquote.pull-right small {
+      text-align: right; }
 
-/* line 227, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 q:before, q:after,
 blockquote:before,
 blockquote:after {
-  content: "";
-}
+  content: ""; }
 
-/* line 233, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 address {
   display: block;
   margin-bottom: 22px;
   line-height: 22px;
   line-height: 1.375rem;
-  font-style: normal;
-}
+  font-style: normal; }
 
-/* line 240, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 small {
-  font-size: 75%;
-}
+  font-size: 75%; }
 
-/* line 244, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 cite {
-  font-style: normal;
-}
+  font-style: normal; }
 
-/* line 249, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 dfn {
-  font-style: italic;
-}
+  font-style: italic; }
 
-/* line 254, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 mark {
   background: #ff0;
-  color: #000;
-}
+  color: #000; }
 
-/* line 261, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0px;
   line-height: 0rem;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-/* line 268, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
-/* line 269, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
-/* line 274, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 ul {
-  list-style-type: disc;
-}
+  list-style-type: disc; }
 
-/* line 275, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 ol {
-  list-style-type: decimal;
-}
+  list-style-type: decimal; }
 
-/* line 279, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 ul, ol {
   padding: 0;
-  margin: 0 0 22px 22px;
-}
-/* line 284, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ul, ul ol, ol ul, ol ol {
-  margin-left: 44px;
-}
-/* line 288, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ul, ol ul {
-  list-style-type: circle;
-}
-/* line 290, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ul ul, ol ul ul {
-  list-style-type: square;
-}
-/* line 295, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ol, ol ol {
-  list-style-type: upper-roman;
-}
-/* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ol ol, ol ol ol {
-  list-style-type: lower-roman;
-}
-/* line 302, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul li, ol li {
-  line-height: 22px;
-  line-height: 1.375rem;
-}
-/* line 307, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-ul ul, ul ol, ol ul, ol ol {
-  margin-bottom: 0;
-}
+  margin: 0 0 22px 22px; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-left: 44px; }
+  ul ul, ol ul {
+    list-style-type: circle; }
+    ul ul ul, ol ul ul {
+      list-style-type: square; }
+  ul ol, ol ol {
+    list-style-type: upper-roman; }
+    ul ol ol, ol ol ol {
+      list-style-type: lower-roman; }
+  ul li, ol li {
+    line-height: 22px;
+    line-height: 1.375rem; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-bottom: 0; }
 
-/* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .unstyled, form ul, .tabs, .tabs-content {
   margin: 0;
   padding: 0;
   list-style: none;
-  list-style-image: none;
-}
+  list-style-image: none; }
 
-/* line 321, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 dl {
-  margin-bottom: 22px;
-}
+  margin-bottom: 22px; }
 
-/* line 326, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 dt,
 dd {
   line-height: 22px;
-  line-height: 1.375rem;
-}
+  line-height: 1.375rem; }
 
-/* line 330, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 dt {
   font-weight: bold;
   line-height: 21px;
-  line-height: 1.3125rem;
-}
-/* line 335, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-.dl-horizontal dt {
-  float: left;
-  clear: left;
-  width: 220px;
-  text-align: right;
-}
+  line-height: 1.3125rem; }
+  .dl-horizontal dt {
+    float: left;
+    clear: left;
+    width: 220px;
+    text-align: right; }
 
-/* line 344, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 dd {
-  margin-left: 22px;
-}
-/* line 347, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
-.dl-horizontal dd {
-  margin-left: 240px;
-}
+  margin-left: 22px; }
+  .dl-horizontal dd {
+    margin-left: 240px; }
 
-/* line 353, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .text-centre, .text-center {
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 354, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .text-left {
-  text-align: left;
-}
+  text-align: left; }
 
-/* line 355, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 .text-right {
-  text-align: right;
-}
+  text-align: right; }
 
-/* line 359, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 ::-moz-selection {
   color: #f9fdff;
-  background: #049cdb;
-}
+  background: #049cdb; }
 
-/* line 364, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_typography.scss */
 ::selection {
   color: #f9fdff;
-  background: #049cdb;
-}
+  background: #049cdb; }
 
-/* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 form {
-  margin: 0 0 22px;
-}
+  margin: 0 0 22px; }
 
-/* line 22, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 fieldset {
   padding: 0;
   margin: 0;
-  border: 0;
-}
+  border: 0; }
 
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .control-group {
   margin-top: 11px;
-  list-style-type: none;
-}
-/* line 34, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-legend + .control-group {
-  margin-top: 22px;
-  -webkit-margin-top-collapse: separate;
-}
+  list-style-type: none; }
+  legend + .control-group {
+    margin-top: 22px;
+    -webkit-margin-top-collapse: separate; }
 
-/* line 42, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 legend {
   display: block;
   width: 100%;
@@ -1328,16 +883,12 @@ legend {
   line-height: 2.75rem;
   color: #4d4d4d;
   border: 0;
-  border-bottom: 1px solid #eeeeee;
-}
-/* line 54, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-legend small {
-  font-size: 12px;
-  font-size: 0.75rem;
-  color: #b3b3b3;
-}
+  border-bottom: 1px solid #eeeeee; }
+  legend small {
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #b3b3b3; }
 
-/* line 65, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 label,
 input,
 button,
@@ -1347,40 +898,28 @@ textarea {
   font-size: 1rem;
   line-height: 22px;
   line-height: 1.375rem;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
-/* line 75, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 80, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 label {
   display: block;
   margin-bottom: 5px;
   color: #4d4d4d;
-  font-weight: bold;
-}
-/* line 86, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-label small {
-  font-weight: normal;
-  color: #999999;
-}
-/* line 92, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-label.checkbox, label.radio {
-  font-weight: normal;
-  line-height: 1.4;
-}
-/* line 100, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-label input, label textarea, label select {
-  display: block;
-}
+  font-weight: bold; }
+  label small {
+    font-weight: normal;
+    color: #999999; }
+  label.checkbox, label.radio {
+    font-weight: normal;
+    line-height: 1.4; }
+  label input, label textarea, label select {
+    display: block; }
 
-/* line 110, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input,
 textarea,
 select,
@@ -1400,16 +939,12 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
-/* line 123, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .uneditable-textarea {
   width: auto;
-  height: auto;
-}
+  height: auto; }
 
-/* line 134, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input[type="image"], input[type="checkbox"], input[type="radio"] {
   width: auto;
   height: auto;
@@ -1424,13 +959,9 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {
   -o-border-radius: 0;
   border-radius: 0;
   border: 0 \9;
-  /* IE9 and down */
-}
-/* line 145, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  /* IE9 and down */ }
 input[type="image"] {
-  border: 0;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  border: 0; }
 input[type="file"] {
   width: auto;
   height: 28px;
@@ -1442,33 +973,23 @@ input[type="file"] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
-  box-shadow: none;
-}
-/* line 163, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  box-shadow: none; }
 input[type="button"], input[type="reset"], input[type="submit"] {
   width: auto;
-  height: auto;
-}
-/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  height: auto; }
 input[type="image"] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
-  box-shadow: none;
-}
-/* line 174, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  box-shadow: none; }
 input[type="hidden"] {
-  display: none;
-}
-/* line 178, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  display: none; }
 input[type="color"] {
   height: 40px;
   width: 40px;
   overflow: hidden;
-  padding: 2px;
-}
+  padding: 2px; }
 
-/* line 188, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 select {
   width: 220px;
   height: 28px;
@@ -1477,51 +998,35 @@ select {
   /* For IE7, add top margin to align select with labels */
   line-height: 28px;
   line-height: 1.75rem;
-  background-color: white;
-}
-/* line 199, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-select[multiple], select[size] {
-  height: auto;
-}
+  background-color: white; }
+  select[multiple], select[size] {
+    height: auto; }
 
-/* line 207, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 textarea {
   height: auto;
-  resize: vertical;
-}
+  resize: vertical; }
 
-/* line 225, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .radio,
 .checkbox {
-  padding-left: 18px;
-}
-/* line 229, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.radio input[type="radio"], .radio input[type="checkbox"],
-.checkbox input[type="radio"],
-.checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: -18px;
-}
-/* line 236, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.radio.inline,
-.checkbox.inline {
-  padding-top: 5px;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
+  padding-left: 18px; }
+  .radio input[type="radio"], .radio input[type="checkbox"],
+  .checkbox input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: -18px; }
+  .radio.inline,
+  .checkbox.inline {
+    padding-top: 5px;
+    margin-bottom: 0;
+    vertical-align: middle; }
 
-/* line 248, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .control-input > .radio:first-child, .control-input > .checkbox:first-child {
-  padding-top: 5px;
-}
+  padding-top: 5px; }
 
-/* line 255, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
-/* line 265, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input,
 textarea,
 .file-wrapper {
@@ -1532,10 +1037,8 @@ textarea,
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+  transition: all 0.2s ease-in-out; }
 
-/* line 273, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
@@ -1544,10 +1047,8 @@ textarea:focus {
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   outline: 0;
-  outline: thin dotted \9;
-}
+  outline: thin dotted \9; }
 
-/* line 286, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
@@ -1555,40 +1056,26 @@ select:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: none; }
 
-/* line 296, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-mini {
-  width: 60px;
-}
+  width: 60px; }
 
-/* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-small {
-  width: 90px;
-}
+  width: 90px; }
 
-/* line 298, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-medium {
-  width: 150px;
-}
+  width: 150px; }
 
-/* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-large {
-  width: 210px;
-}
+  width: 210px; }
 
-/* line 300, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-xlarge {
-  width: 270px;
-}
+  width: 270px; }
 
-/* line 301, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-xxlarge {
-  width: 530px;
-}
+  width: 530px; }
 
-/* line 313, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
@@ -1598,15 +1085,11 @@ textarea[class*="span"],
 .row-fluid textarea[class*="span"],
 .row-fluid .uneditable-input[class*="span"] {
   float: none;
-  margin-left: 0;
-}
+  margin-left: 0; }
 
-/* line 319, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .file-wrapper input {
-  width: 90%;
-}
+  width: 90%; }
 
-/* line 333, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 input[disabled], input[readonly],
 select[disabled],
 select[readonly],
@@ -1614,120 +1097,90 @@ textarea[disabled],
 textarea[readonly] {
   background-color: #b3b3b3;
   border-color: #ddd;
-  cursor: not-allowed;
-}
-/* line 341, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  cursor: not-allowed; }
 input:focus:required:invalid,
 select:focus:required:invalid,
 textarea:focus:required:invalid {
   color: #b94a48;
-  border-color: #ee5f5b;
-}
-/* line 344, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-input:focus:required:invalid:focus,
-select:focus:required:invalid:focus,
-textarea:focus:required:invalid:focus {
-  border-color: #e9322d;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-  -moz-box-shadow: 0 0 6px #f8b9b7;
-  -o-box-shadow: 0 0 6px #f8b9b7;
-  box-shadow: 0 0 6px #f8b9b7;
-}
+  border-color: #ee5f5b; }
+  input:focus:required:invalid:focus,
+  select:focus:required:invalid:focus,
+  textarea:focus:required:invalid:focus {
+    border-color: #e9322d;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    -o-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7; }
 
-/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
 .control-group.warning > label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
-  color: #c09853;
-}
-/* line 21, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  color: #c09853; }
 .control-group.warning input,
 .control-group.warning select,
 .control-group.warning textarea {
   color: #c09853;
-  border-color: #c09853;
-}
-/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
-.control-group.warning input:focus,
-.control-group.warning select:focus,
-.control-group.warning textarea:focus {
-  border-color: #a47e3c;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
-  -o-box-shadow: 0 0 6px #dbc59e;
-  box-shadow: 0 0 6px #dbc59e;
-}
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  border-color: #c09853; }
+  .control-group.warning input:focus,
+  .control-group.warning select:focus,
+  .control-group.warning textarea:focus {
+    border-color: #a47e3c;
+    -webkit-box-shadow: 0 0 6px #dbc59e;
+    -moz-box-shadow: 0 0 6px #dbc59e;
+    -o-box-shadow: 0 0 6px #dbc59e;
+    box-shadow: 0 0 6px #dbc59e; }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
-  border-color: #c09853;
-}
+  border-color: #c09853; }
 
-/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
 .control-group.error > label,
 .control-group.error .help-block,
 .control-group.error .help-inline {
-  color: #b94a48;
-}
-/* line 21, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  color: #b94a48; }
 .control-group.error input,
 .control-group.error select,
 .control-group.error textarea {
   color: #b94a48;
-  border-color: #b94a48;
-}
-/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
-.control-group.error input:focus,
-.control-group.error select:focus,
-.control-group.error textarea:focus {
-  border-color: #953b39;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  -o-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
-}
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  border-color: #b94a48; }
+  .control-group.error input:focus,
+  .control-group.error select:focus,
+  .control-group.error textarea:focus {
+    border-color: #953b39;
+    -webkit-box-shadow: 0 0 6px #d59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    -o-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #d59392; }
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
-  border-color: #b94a48;
-}
+  border-color: #b94a48; }
 
-/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
 .control-group.success > label,
 .control-group.success .help-block,
 .control-group.success .help-inline {
-  color: #468847;
-}
-/* line 21, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  color: #468847; }
 .control-group.success input,
 .control-group.success select,
 .control-group.success textarea {
   color: #468847;
-  border-color: #468847;
-}
-/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
-.control-group.success input:focus,
-.control-group.success select:focus,
-.control-group.success textarea:focus {
-  border-color: #356635;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
-  -o-box-shadow: 0 0 6px #7aba7b;
-  box-shadow: 0 0 6px #7aba7b;
-}
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_forms.scss */
+  border-color: #468847; }
+  .control-group.success input:focus,
+  .control-group.success select:focus,
+  .control-group.success textarea:focus {
+    border-color: #356635;
+    -webkit-box-shadow: 0 0 6px #7aba7b;
+    -moz-box-shadow: 0 0 6px #7aba7b;
+    -o-box-shadow: 0 0 6px #7aba7b;
+    box-shadow: 0 0 6px #7aba7b; }
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
-  border-color: #468847;
-}
+  border-color: #468847; }
 
-/* line 386, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
 .form-inline input,
 .form-inline textarea,
@@ -1743,94 +1196,64 @@ textarea:focus:required:invalid:focus {
 .form-horizontal .uneditable-input,
 .form-horizontal .input-prepend,
 .form-horizontal .input-append {
-  margin-bottom: 0;
-}
-/* line 392, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  margin-bottom: 0; }
 .form-search .hide,
 .form-inline .hide,
 .form-horizontal .hide {
-  display: none;
-}
+  display: none; }
 
-/* line 414, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .form-horizontal .control-group {
   margin-bottom: 22px;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.form-horizontal .control-group:before, .form-horizontal .control-group:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.form-horizontal .control-group:after {
-  clear: both;
-}
-/* line 421, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  *zoom: 1; }
+  .form-horizontal .control-group:before, .form-horizontal .control-group:after {
+    content: " ";
+    display: table; }
+  .form-horizontal .control-group:after {
+    clear: both; }
 .form-horizontal .control-label, .form-horizontal .control-group label {
   float: left;
   width: 140px;
   padding-top: 5px;
-  text-align: right;
-}
-/* line 430, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  text-align: right; }
 .form-horizontal .control-input, .form-horizontal .control-group div {
   margin-left: 160px;
   /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
   *display: inline-block;
   *margin-left: 0;
-  *padding-left: 20px;
-}
-/* line 436, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
-  *padding-left: 160px;
-}
-/* line 442, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  *padding-left: 20px; }
+  .form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
+    *padding-left: 160px; }
 .form-horizontal .help-block {
   margin-top: 11px;
-  margin-bottom: 0;
-}
-/* line 448, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  margin-bottom: 0; }
 .form-horizontal .form-actions {
-  padding-left: 160px;
-}
+  padding-left: 160px; }
 
-/* line 461, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .form-search > *,
 .form-inline > * {
-  margin-right: 10px;
-}
-/* line 464, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.form-search > *:last-child,
-.form-inline > *:last-child {
-  margin-right: 0;
-}
-/* line 475, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  margin-right: 10px; }
+  .form-search > *:last-child,
+  .form-inline > *:last-child {
+    margin-right: 0; }
 .form-search .radio, .form-search .checkbox,
 .form-inline .radio,
 .form-inline .checkbox {
   padding-left: 0;
   margin-bottom: 0;
-  vertical-align: middle;
-}
-/* line 482, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.form-search .radio input[type="radio"], .form-search .radio input[type="checkbox"], .form-search .checkbox input[type="radio"], .form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .radio input[type="checkbox"],
-.form-inline .checkbox input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: 0;
-  margin-right: 3px;
-}
-/* line 491, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  vertical-align: middle; }
+  .form-search .radio input[type="radio"], .form-search .radio input[type="checkbox"], .form-search .checkbox input[type="radio"], .form-search .checkbox input[type="checkbox"],
+  .form-inline .radio input[type="radio"],
+  .form-inline .radio input[type="checkbox"],
+  .form-inline .checkbox input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: 0;
+    margin-right: 3px; }
 .form-search .input-prepend, .form-search .input-append,
 .form-inline .input-prepend,
 .form-inline .input-append {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
-/* line 499, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .search-query {
   padding-left: 14px;
   padding-right: 14px;
@@ -1840,37 +1263,25 @@ textarea:focus:required:invalid:focus {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -o-border-radius: 100px;
-  border-radius: 100px;
-}
+  border-radius: 100px; }
 
-/* line 513, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .form-actions {
   padding: 21px 20px 22px;
   margin-top: 22px;
   margin-bottom: 22px;
   background-color: whitesmoke;
   border-top: 1px solid #dddddd;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.form-actions:before, .form-actions:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.form-actions:after {
-  clear: both;
-}
-/* line 521, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.form-actions .btn {
-  margin-right: 10px;
-}
-/* line 524, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.form-actions .btn:last-child {
-  margin-right: 0;
-}
+  *zoom: 1; }
+  .form-actions:before, .form-actions:after {
+    content: " ";
+    display: table; }
+  .form-actions:after {
+    clear: both; }
+  .form-actions .btn {
+    margin-right: 10px; }
+    .form-actions .btn:last-child {
+      margin-right: 0; }
 
-/* line 531, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .uneditable-input {
   background-color: white;
   border-color: #eee;
@@ -1878,195 +1289,139 @@ textarea:focus:required:invalid:focus {
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  cursor: not-allowed;
-}
+  cursor: not-allowed; }
 
-/* line 95, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_utility.scss */
 :-moz-placeholder {
-  color: #b3b3b3;
-}
+  color: #b3b3b3; }
 
-/* line 98, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_utility.scss */
 ::-webkit-input-placeholder {
-  color: #b3b3b3;
-}
+  color: #b3b3b3; }
 
-/* line 544, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .help-block,
 .help-inline {
-  color: gray;
-}
+  color: gray; }
 
-/* line 548, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .help-block {
   display: block;
-  margin-bottom: 11px;
-}
+  margin-bottom: 11px; }
 
-/* line 553, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .help-inline {
   vertical-align: middle;
-  padding-left: 5px;
-}
+  padding-left: 5px; }
 
-/* line 566, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-prepend,
 .input-append {
-  margin-bottom: 5px;
-}
-/* line 571, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
-.input-append input,
-.input-append select,
-.input-append .uneditable-input {
-  position: relative;
-  margin-bottom: 0;
-  *margin-left: 0;
-  vertical-align: middle;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-/* line 578, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
-.input-append input:focus,
-.input-append select:focus,
-.input-append .uneditable-input:focus {
-  z-index: 2;
-}
-/* line 582, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend .uneditable-input,
-.input-append .uneditable-input {
-  border-left-color: #ccc;
-}
-/* line 585, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend .add-on,
-.input-append .add-on {
-  width: auto;
-  min-width: 16px;
-  height: 22px;
-  padding: 4px 5px;
-  font-weight: normal;
-  line-height: 22px;
-  line-height: 1.375rem;
-  text-align: center;
-  text-shadow: 0 1px 0 white;
-  vertical-align: middle;
-  background-color: #b3b3b3 er;
-  border: 1px solid #cccccc;
-}
-/* line 600, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend .add-on, .input-prepend .btn,
-.input-append .add-on,
-.input-append .btn {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 603, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
-.input-prepend .active,
-.input-append .active {
-  background-color: #a9dba9;
-  border-color: #46a546;
-}
+  margin-bottom: 5px; }
+  .input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
+  .input-append input,
+  .input-append select,
+  .input-append .uneditable-input {
+    position: relative;
+    margin-bottom: 0;
+    *margin-left: 0;
+    vertical-align: middle;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -o-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0; }
+    .input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
+    .input-append input:focus,
+    .input-append select:focus,
+    .input-append .uneditable-input:focus {
+      z-index: 2; }
+  .input-prepend .uneditable-input,
+  .input-append .uneditable-input {
+    border-left-color: #ccc; }
+  .input-prepend .add-on,
+  .input-append .add-on {
+    width: auto;
+    min-width: 16px;
+    height: 22px;
+    padding: 4px 5px;
+    font-weight: normal;
+    line-height: 22px;
+    line-height: 1.375rem;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+    vertical-align: middle;
+    background-color: #b3b3b3 er;
+    border: 1px solid #cccccc; }
+  .input-prepend .add-on, .input-prepend .btn,
+  .input-append .add-on,
+  .input-append .btn {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px; }
+  .input-prepend .active,
+  .input-append .active {
+    background-color: #a9dba9;
+    border-color: #46a546; }
 
-/* line 610, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-prepend .add-on, .input-prepend .btn {
-  margin-right: -1px;
-}
+  margin-right: -1px; }
 
-/* line 617, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-append input, .input-append select, .input-append .uneditable-input {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 620, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  border-radius: 3px 0 0 3px; }
 .input-append .uneditable-input {
   border-left-color: #eee;
-  border-right-color: #ccc;
-}
-/* line 625, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  border-right-color: #ccc; }
 .input-append .add-on, .input-append .btn {
   margin-left: -1px;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
+  border-radius: 0 3px 3px 0; }
 
-/* line 634, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
 .input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
-  border-radius: 0;
-}
-/* line 638, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  border-radius: 0; }
 .input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 643, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_forms.scss */
+  border-radius: 3px 0 0 3px; }
 .input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
+  border-radius: 0 3px 3px 0; }
 
-/* line 9, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
-/* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 .table {
   width: 100%;
-  margin-bottom: 22px;
-}
-/* line 25, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table th, .table td {
-  padding: 8px;
-  line-height: 22px;
-  line-height: 1.375rem;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-/* line 33, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table th, .table tfoot td {
-  font-weight: bold;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table thead th {
-  vertical-align: bottom;
-}
-/* line 45, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-/* line 50, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
+  margin-bottom: 22px; }
+  .table th, .table td {
+    padding: 8px;
+    line-height: 22px;
+    line-height: 1.375rem;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #dddddd; }
+  .table th, .table tfoot td {
+    font-weight: bold; }
+  .table thead th {
+    vertical-align: bottom; }
+  .table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+    border-top: 0; }
+  .table tbody + tbody {
+    border-top: 2px solid #dddddd; }
 
-/* line 62, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 .table-condensed th, .table-condensed td {
-  padding: 4px 5px;
-}
+  padding: 4px 5px; }
 
-/* line 71, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 .table-bordered {
   border: 1px solid #dddddd;
   border-left: 0;
@@ -2075,105 +1430,63 @@ table {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 78, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered th, .table-bordered td {
-  border-left: 1px solid #dddddd;
-}
-/* line 90, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered caption + thead tr:first-child th, .table-bordered caption + tbody tr:first-child th, .table-bordered caption + tbody tr:first-child td, .table-bordered colgroup + thead tr:first-child th, .table-bordered colgroup + tbody tr:first-child th, .table-bordered colgroup + tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
-  border-top: 0;
-}
-/* line 95, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  -o-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-/* line 99, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  -o-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
-}
-/* line 104, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  -o-border-radius: 0 0 0 4px;
-  border-radius: 0 0 0 4px;
-}
-/* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
-  -o-border-radius: 0 0 4px 0;
-  border-radius: 0 0 4px 0;
-}
+  border-radius: 4px; }
+  .table-bordered th, .table-bordered td {
+    border-left: 1px solid #dddddd; }
+  .table-bordered caption + thead tr:first-child th, .table-bordered caption + tbody tr:first-child th, .table-bordered caption + tbody tr:first-child td, .table-bordered colgroup + thead tr:first-child th, .table-bordered colgroup + tbody tr:first-child th, .table-bordered colgroup + tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+    border-top: 0; }
+  .table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+    -o-border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 0; }
+  .table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
+    -webkit-border-radius: 0 4px 0 0;
+    -moz-border-radius: 0 4px 0 0;
+    -o-border-radius: 0 4px 0 0;
+    border-radius: 0 4px 0 0; }
+  .table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
+    -webkit-border-radius: 0 0 0 4px;
+    -moz-border-radius: 0 0 0 4px;
+    -o-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px; }
+  .table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    -o-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0; }
 
-/* line 122, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
-}
+  background-color: #f9f9f9; }
 
-/* line 136, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 .table tbody tr:hover td, .table tbody tr:hover th {
-  background-color: whitesmoke;
-}
+  background-color: whitesmoke; }
 
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
 table .span1 {
-  width: 6.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 6.5%; }
 table .span2 {
-  width: 15%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 15%; }
 table .span3 {
-  width: 23.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 23.5%; }
 table .span4 {
-  width: 32%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 32%; }
 table .span5 {
-  width: 40.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 40.5%; }
 table .span6 {
-  width: 49%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 49%; }
 table .span7 {
-  width: 57.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 57.5%; }
 table .span8 {
-  width: 66%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 66%; }
 table .span9 {
-  width: 74.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 74.5%; }
 table .span10 {
-  width: 83%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 83%; }
 table .span11 {
-  width: 91.5%;
-}
-/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_tables.scss */
+  width: 91.5%; }
 table .span12 {
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 9, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
 code,
 pre {
   padding: 0 3px 2px;
@@ -2185,18 +1498,14 @@ pre {
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  tab-size: 3;
-}
+  tab-size: 3; }
 
-/* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
 code {
   padding: 2px 4px;
   color: #dd1144;
   background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-}
+  border: 1px solid #e1e1e8; }
 
-/* line 27, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
 pre {
   display: block;
   padding: 10.5px;
@@ -2214,148 +1523,92 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  word-wrap: break-word;
-}
-/* line 43, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
-pre.prettyprint {
-  margin-bottom: 22px;
-}
-/* line 48, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
-pre code {
-  padding: 0;
-  color: #dd1144;
-  background-color: #f7f7f9;
-  border: 0;
-}
+  word-wrap: break-word; }
+  pre.prettyprint {
+    margin-bottom: 22px; }
+  pre code {
+    padding: 0;
+    color: #dd1144;
+    background-color: #f7f7f9;
+    border: 0; }
 
-/* line 57, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_code.scss */
 .pre-scrollable {
   max-height: 340px;
-  overflow-y: scroll;
-}
+  overflow-y: scroll; }
 
-/* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img {
   font-style: italic;
   color: #c00;
   border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-/* line 20, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-img.left {
-  margin: 0 20px 0 0;
-}
-/* line 23, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-img.right {
-  margin: 0 0 0 20px;
-}
+  -ms-interpolation-mode: bicubic; }
+  img.left {
+    margin: 0 20px 0 0; }
+  img.right {
+    margin: 0 0 0 20px; }
 
-/* line 28, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img, object, embed, video {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
-/* line 35, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 #map_canvas img, .map_canvas img {
-  max-width: none!important;
-}
+  max-width: none!important; }
 
-/* line 45, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid {
   display: block;
   list-style-type: none;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.block-grid:before, .block-grid:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.block-grid:after {
-  clear: both;
-}
-/* line 50, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid li {
-  display: block;
-  height: auto;
-  float: left;
-}
-/* line 56, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.two-up {
-  margin-left: -4%;
-}
-/* line 59, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.two-up li {
-  margin-left: 4%;
-  width: 46%;
-  margin-bottom: 4%;
-}
-/* line 67, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.three-up {
-  margin-left: -2%;
-}
-/* line 70, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.three-up li {
-  margin-left: 2%;
-  width: 31.3%;
-  margin-bottom: 2%;
-}
-/* line 78, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.four-up {
-  margin-left: -2%;
-}
-/* line 81, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.four-up li {
-  margin-left: 2%;
-  width: 23%;
-  margin-bottom: 2%;
-}
-/* line 89, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.five-up {
-  margin-left: -1.5%;
-}
-/* line 92, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.block-grid.five-up li {
-  margin-left: 1.5%;
-  width: 18.5%;
-  margin-bottom: 1.5%;
-}
+  *zoom: 1; }
+  .block-grid:before, .block-grid:after {
+    content: " ";
+    display: table; }
+  .block-grid:after {
+    clear: both; }
+  .block-grid li {
+    display: block;
+    height: auto;
+    float: left; }
+  .block-grid.two-up {
+    margin-left: -4%; }
+    .block-grid.two-up li {
+      margin-left: 4%;
+      width: 46%;
+      margin-bottom: 4%; }
+  .block-grid.three-up {
+    margin-left: -2%; }
+    .block-grid.three-up li {
+      margin-left: 2%;
+      width: 31.3%;
+      margin-bottom: 2%; }
+  .block-grid.four-up {
+    margin-left: -2%; }
+    .block-grid.four-up li {
+      margin-left: 2%;
+      width: 23%;
+      margin-bottom: 2%; }
+  .block-grid.five-up {
+    margin-left: -1.5%; }
+    .block-grid.five-up li {
+      margin-left: 1.5%;
+      width: 18.5%;
+      margin-bottom: 1.5%; }
 
-/* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 ul.centred, ul.centered {
-  text-align: center;
-}
-/* line 111, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-ul.centred li, ul.centered li {
-  display: inline;
-}
+  text-align: center; }
+  ul.centred li, ul.centered li {
+    display: inline; }
 
-/* line 123, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .floated {
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.floated:before, .floated:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.floated:after {
-  clear: both;
-}
-/* line 126, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.floated li {
-  float: left;
-  display: inline-block;
-}
+  *zoom: 1; }
+  .floated:before, .floated:after {
+    content: " ";
+    display: table; }
+  .floated:after {
+    clear: both; }
+  .floated li {
+    float: left;
+    display: inline-block; }
 
-/* line 138, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -2370,75 +1623,125 @@ ul.centred li, ul.centered li {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-/* line 148, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+  .well blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
 
-/* line 155, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well-large {
   padding: 24px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -o-border-radius: 6px;
-  border-radius: 6px;
-}
+  border-radius: 6px; }
 
-/* line 159, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well-small {
   padding: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
-/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs {
   *zoom: 1;
-  margin-bottom: 22px;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.tabs:before, .tabs:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_choreographic-grid.scss */
-.tabs:after {
-  clear: both;
-}
-/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.tabs.is-right li {
-  float: right;
-}
-/* line 181, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.tabs.is-centred, .tabs.is-centered {
-  text-align: center;
-}
-/* line 184, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.tabs.is-centred > li, .tabs.is-centered > li {
-  display: inline;
-  float: none;
-}
-/* line 190, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
-.tabs > li {
-  float: left;
-  margin: 0 5px;
-}
+  margin-bottom: 22px; }
+  .tabs:before, .tabs:after {
+    content: " ";
+    display: table; }
+  .tabs:after {
+    clear: both; }
+  .tabs.is-right li {
+    float: right; }
+  .tabs.is-centred, .tabs.is-centered {
+    text-align: center; }
+    .tabs.is-centred > li, .tabs.is-centered > li {
+      display: inline;
+      float: none; }
+  .tabs > li {
+    float: left;
+    margin: 0 5px; }
 
-/* line 198, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs-content > li {
-  display: none;
-}
-/* line 202, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+  display: none; }
 .tabs-content > li.is-active {
-  display: block;
-}
+  display: block; }
 
-/* line 10, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 22px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  .alert,
+  .alert h4 {
+    color: #c09853; }
+  .alert h4 {
+    margin: 0; }
+  .alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 22px; }
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847; }
+  .alert-success h4 {
+    color: #468847; }
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }
+  .alert-error h4 {
+    color: #b94a48; }
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad; }
+  .alert-info h4 {
+    color: #3a87ad; }
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px; }
+  .alert-block > p,
+  .alert-block > ul {
+    margin-bottom: 0; }
+  .alert-block p + p {
+    margin-top: 5px; }
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #000;
+  text-shadow: 0 1px 0 white;
+  zoom: 1;
+  filter: alpha(opacity=20);
+  opacity: 0.2; }
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    zoom: 1;
+    filter: alpha(opacity=40);
+    opacity: 0.4; }
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
 .btn {
   padding: 4px 12px;
   margin-bottom: 0;
@@ -2471,55 +1774,41 @@ ul.centred li, ul.centered li {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn:visited {
-  color: #333333;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-  color: #333333;
-  background-color: #e6e6e6;
-  *background-color: #d9d9d9;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn:active, .btn.active {
-  background-color: #cccccc \9;
-}
-/* line 35, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-.btn:hover, .btn:focus {
-  color: #333;
-  text-decoration: none;
-  background-position-y: -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
-}
-/* line 52, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-.btn.active, .btn:active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-/* line 61, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-.btn.disabled, .btn[disabled] {
-  cursor: default;
-  background-image: none;
-  zoom: 1;
-  filter: alpha(opacity=65);
-  opacity: 0.65;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .btn:visited {
+    color: #333333; }
+  .btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+    color: #333333;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9; }
+  .btn:active, .btn.active {
+    background-color: #cccccc \9; }
+  .btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none;
+    background-position-y: -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
+  .btn.active, .btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .btn.disabled, .btn[disabled] {
+    cursor: default;
+    background-image: none;
+    zoom: 1;
+    filter: alpha(opacity=65);
+    opacity: 0.65;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
 
-/* line 76, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-large {
   padding: 11px 19px;
   font-size: 18px;
@@ -2527,16 +1816,12 @@ ul.centred li, ul.centered li {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -o-border-radius: 6px;
-  border-radius: 6px;
-}
+  border-radius: 6px; }
 
-/* line 82, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
-  margin-top: 4px;
-}
+  margin-top: 4px; }
 
-/* line 87, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-small {
   padding: 2px 10px;
   font-size: 14px;
@@ -2544,22 +1829,16 @@ ul.centred li, ul.centered li {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
-/* line 93, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
-/* line 97, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-mini [class^="icon-"],
 .btn-mini [class*=" icon-"] {
-  margin-top: -1px;
-}
+  margin-top: -1px; }
 
-/* line 102, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-mini {
   padding: 0 6px;
   font-size: 14px;
@@ -2567,50 +1846,38 @@ ul.centred li, ul.centered li {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
-/* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-pill {
   -webkit-border-radius: 100em;
   -moz-border-radius: 100em;
   -o-border-radius: 100em;
   border-radius: 100em;
   padding-left: 15px;
-  padding-right: 15px;
-}
+  padding-right: 15px; }
 
-/* line 120, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-block {
   display: block;
   width: 100%;
   padding-left: 0;
-  padding-right: 0;
-}
+  padding-right: 0; }
 
-/* line 129, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-block + .btn-block {
-  margin-top: 5px;
-}
+  margin-top: 5px; }
 
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 153, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-primary.active,
 .btn-warning.active,
 .btn-danger.active,
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
-}
+  color: rgba(255, 255, 255, 0.75); }
 
-/* line 159, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2624,24 +1891,16 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #0454db #0454db #033790;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #0454db;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-primary:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-  color: white;
-  background-color: #0454db;
-  *background-color: #044bc2;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-primary:active, .btn-primary.active {
-  background-color: #0341a9 \9;
-}
+  *background-color: #0454db; }
+  .btn-primary:visited {
+    color: white; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    color: white;
+    background-color: #0454db;
+    *background-color: #044bc2; }
+  .btn-primary:active, .btn-primary.active {
+    background-color: #0341a9 \9; }
 
-/* line 163, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-warning {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2655,24 +1914,16 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #f89406;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-warning:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
-  color: white;
-  background-color: #f89406;
-  *background-color: #df8505;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-warning:active, .btn-warning.active {
-  background-color: #c67605 \9;
-}
+  *background-color: #f89406; }
+  .btn-warning:visited {
+    color: white; }
+  .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
+    color: white;
+    background-color: #f89406;
+    *background-color: #df8505; }
+  .btn-warning:active, .btn-warning.active {
+    background-color: #c67605 \9; }
 
-/* line 167, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-danger {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2686,24 +1937,16 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #bd362f;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-danger:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
-  color: white;
-  background-color: #bd362f;
-  *background-color: #a9302a;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-danger:active, .btn-danger.active {
-  background-color: #942a25 \9;
-}
+  *background-color: #bd362f; }
+  .btn-danger:visited {
+    color: white; }
+  .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+    color: white;
+    background-color: #bd362f;
+    *background-color: #a9302a; }
+  .btn-danger:active, .btn-danger.active {
+    background-color: #942a25 \9; }
 
-/* line 171, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-success {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2717,24 +1960,16 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #51a351;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-success:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
-  color: white;
-  background-color: #51a351;
-  *background-color: #499249;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-success:active, .btn-success.active {
-  background-color: #408140 \9;
-}
+  *background-color: #51a351; }
+  .btn-success:visited {
+    color: white; }
+  .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
+    color: white;
+    background-color: #51a351;
+    *background-color: #499249; }
+  .btn-success:active, .btn-success.active {
+    background-color: #408140 \9; }
 
-/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-info {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2748,24 +1983,16 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #2f96b4;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-info:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
-  color: white;
-  background-color: #2f96b4;
-  *background-color: #2a85a0;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-info:active, .btn-info.active {
-  background-color: #24748c \9;
-}
+  *background-color: #2f96b4; }
+  .btn-info:visited {
+    color: white; }
+  .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
+    color: white;
+    background-color: #2f96b4;
+    *background-color: #2a85a0; }
+  .btn-info:active, .btn-info.active {
+    background-color: #24748c \9; }
 
-/* line 179, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-inverse {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2779,55 +2006,37 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   border-color: #222222 #222222 black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #222222;
-}
-/* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-inverse:visited {
-  color: white;
-}
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
-  color: white;
-  background-color: #222222;
-  *background-color: #151515;
-}
-/* line 37, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/mixins/_buttons.scss */
-.btn-inverse:active, .btn-inverse.active {
-  background-color: #090909 \9;
-}
+  *background-color: #222222; }
+  .btn-inverse:visited {
+    color: white; }
+  .btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
+    color: white;
+    background-color: #222222;
+    *background-color: #151515; }
+  .btn-inverse:active, .btn-inverse.active {
+    background-color: #090909 \9; }
 
-/* line 188, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 button.btn,
 input[type="submit"].btn {
   *padding-top: 3px;
-  *padding-bottom: 3px;
-}
-/* line 191, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-button.btn::-moz-focus-inner,
-input[type="submit"].btn::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-/* line 200, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-button.btn.btn-large,
-input[type="submit"].btn.btn-large {
-  *padding-top: 7px;
-  *padding-bottom: 7px;
-}
-/* line 204, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-button.btn.btn-small,
-input[type="submit"].btn.btn-small {
-  *padding-top: 3px;
-  *padding-bottom: 3px;
-}
-/* line 208, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
-button.btn.btn-mini,
-input[type="submit"].btn.btn-mini {
-  *padding-top: 1px;
-  *padding-bottom: 1px;
-}
+  *padding-bottom: 3px; }
+  button.btn::-moz-focus-inner,
+  input[type="submit"].btn::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+  button.btn.btn-large,
+  input[type="submit"].btn.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px; }
+  button.btn.btn-small,
+  input[type="submit"].btn.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px; }
+  button.btn.btn-mini,
+  input[type="submit"].btn.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px; }
 
-/* line 221, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-link,
 .btn-link:active,
 .btn-link[disabled] {
@@ -2836,10 +2045,8 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: none; }
 
-/* line 226, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-link {
   border-color: transparent;
   cursor: pointer;
@@ -2847,25 +2054,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
-  border-radius: 0;
-}
+  border-radius: 0; }
 
-/* line 233, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-link:hover,
 .btn-link:focus {
   color: #036690;
   text-decoration: underline;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
-/* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
   color: #333;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 6, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .ir {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -2874,28 +2075,20 @@ input[type="submit"].btn.btn-mini {
   display: block;
   overflow: hidden;
   text-align: left;
-  text-indent: -999em;
-}
+  text-indent: -999em; }
 
-/* line 17, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .ir br {
-  display: none;
-}
+  display: none; }
 
-/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .is-hidden,
 .hide {
   display: none !important;
-  visibility: hidden;
-}
+  visibility: hidden; }
 
-/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .is-shown,
 .show {
-  display: block;
-}
+  display: block; }
 
-/* line 32, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2904,217 +2097,138 @@ input[type="submit"].btn.btn-mini {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
-}
-/* line 44, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
 
-/* line 55, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .is-invisible {
-  visibility: hidden;
-}
+  visibility: hidden; }
 
-/* line 57, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .left {
-  float: left;
-}
+  float: left; }
 
-/* line 58, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .right {
-  float: right;
-}
+  float: right; }
 
-/* line 59, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .clear {
   clear: both;
-  float: none;
-}
+  float: none; }
 
-/* line 61, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mb0 {
-  margin-bottom: 0 !important;
-}
+  margin-bottom: 0 !important; }
 
-/* line 62, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mb1 {
-  margin-bottom: 16 !important;
-}
+  margin-bottom: 16 !important; }
 
-/* line 63, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mb2 {
-  margin-bottom: 24 !important;
-}
+  margin-bottom: 24 !important; }
 
-/* line 64, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mb3 {
-  margin-bottom: 30 !important;
-}
+  margin-bottom: 30 !important; }
 
-/* line 66, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mt0 {
-  margin-top: 0 !important;
-}
+  margin-top: 0 !important; }
 
-/* line 67, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mt1 {
-  margin-top: 16 !important;
-}
+  margin-top: 16 !important; }
 
-/* line 68, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mt2 {
-  margin-top: 24 !important;
-}
+  margin-top: 24 !important; }
 
-/* line 69, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_utilities.scss */
 .mt3 {
-  margin-top: 30 !important;
-}
+  margin-top: 30 !important; }
 
-/* line 5, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
-/* line 10, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
 .hidden {
   display: none;
-  visibility: hidden;
-}
+  visibility: hidden; }
 
-/* line 18, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
 .visible-phone {
-  display: none !important;
-}
+  display: none !important; }
 
-/* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
 .visible-tablet {
-  display: none !important;
-}
+  display: none !important; }
 
-/* line 23, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
 .hidden-desktop {
-  display: none !important;
-}
+  display: none !important; }
 
 @media screen and (max-width: 767px) {
-  /* line 28, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .visible-phone {
-    display: inherit !important;
-  }
+    display: inherit !important; }
 
-  /* line 30, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .hidden-phone {
-    display: none !important;
-  }
+    display: none !important; }
 
-  /* line 32, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .hidden-desktop {
-    display: inherit !important;
-  }
+    display: inherit !important; }
 
-  /* line 33, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .visible-desktop {
-    display: none !important;
-  }
-}
+    display: none !important; } }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 39, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .visible-tablet {
-    display: inherit !important;
-  }
+    display: inherit !important; }
 
-  /* line 41, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .hidden-tablet {
-    display: none !important;
-  }
+    display: none !important; }
 
-  /* line 43, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .hidden-desktop {
-    display: inherit !important;
-  }
+    display: inherit !important; }
 
-  /* line 44, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_responsive-utilities.scss */
   .visible-desktop {
-    display: none !important;
-  }
-}
+    display: none !important; } }
 @media print {
-  /* line 5, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   * {
     background: transparent !important;
     color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    text-shadow: none !important; }
 
-  /* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   a:visited {
-    text-decoration: underline;
-  }
-  /* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
+    text-decoration: underline; }
   a[href]:after {
-    content: " (" attr(href) ")";
-  }
+    content: " (" attr(href) ")"; }
 
-  /* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
+    content: " (" attr(title) ")"; }
 
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 27, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
-    content: "";
-  }
+    content: ""; }
 
-  /* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999999;
-    page-break-inside: avoid;
-  }
+    page-break-inside: avoid; }
 
-  /* line 35, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   thead {
     display: table-header-group;
-    /* h5bp.com/t */
-  }
+    /* h5bp.com/t */ }
 
-  /* line 39, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   tr,
   img {
-    page-break-inside: avoid;
-  }
+    page-break-inside: avoid; }
 
-  /* line 42, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   img {
-    max-width: 100% !important;
-  }
+    max-width: 100% !important; }
 
   @page {
-    margin: 0.5cm;
-}
+    margin: 0.5cm; }
 
-  /* line 48, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   p, h2, h3 {
     orphans: 3;
-    widows: 3;
-  }
+    widows: 3; }
 
-  /* line 52, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_print.scss */
   h2, h3 {
-    page-break-after: avoid;
-  }
-}
+    page-break-after: avoid; } }

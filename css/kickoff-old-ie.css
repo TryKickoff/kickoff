@@ -2234,38 +2234,38 @@ pre code {
   overflow-y: scroll;
 }
 
-/* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img {
   font-style: italic;
   color: #c00;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-/* line 20, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 21, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img.left {
   margin: 0 20px 0 0;
 }
-/* line 23, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 24, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img.right {
   margin: 0 0 0 20px;
 }
 
-/* line 28, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 32, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 img, object, embed, video {
   max-width: 100%;
 }
 
-/* line 35, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 36, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 #map_canvas img, .map_canvas img {
   max-width: none!important;
 }
 
-/* line 45, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 46, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid {
   display: block;
   list-style-type: none;
@@ -2280,63 +2280,63 @@ img, object, embed, video {
 .block-grid:after {
   clear: both;
 }
-/* line 50, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 51, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid li {
   display: block;
   height: auto;
   float: left;
 }
-/* line 56, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 57, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.two-up {
   margin-left: -4%;
 }
-/* line 59, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 60, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.two-up li {
   margin-left: 4%;
   width: 46%;
   margin-bottom: 4%;
 }
-/* line 67, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 68, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.three-up {
   margin-left: -2%;
 }
-/* line 70, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 71, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.three-up li {
   margin-left: 2%;
   width: 31.3%;
   margin-bottom: 2%;
 }
-/* line 78, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 79, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.four-up {
   margin-left: -2%;
 }
-/* line 81, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 82, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.four-up li {
   margin-left: 2%;
   width: 23%;
   margin-bottom: 2%;
 }
-/* line 89, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 90, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.five-up {
   margin-left: -1.5%;
 }
-/* line 92, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 93, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .block-grid.five-up li {
   margin-left: 1.5%;
   width: 18.5%;
   margin-bottom: 1.5%;
 }
 
-/* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 109, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 ul.centred, ul.centered {
   text-align: center;
 }
-/* line 111, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 112, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 ul.centred li, ul.centered li {
   display: inline;
 }
 
-/* line 123, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 124, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .floated {
   *zoom: 1;
 }
@@ -2349,13 +2349,13 @@ ul.centred li, ul.centered li {
 .floated:after {
   clear: both;
 }
-/* line 126, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 127, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .floated li {
   float: left;
   display: inline-block;
 }
 
-/* line 138, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 139, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -2372,13 +2372,13 @@ ul.centred li, ul.centered li {
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-/* line 148, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 149, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 155, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 156, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well-large {
   padding: 24px;
   -webkit-border-radius: 6px;
@@ -2387,7 +2387,7 @@ ul.centred li, ul.centered li {
   border-radius: 6px;
 }
 
-/* line 159, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 160, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .well-small {
   padding: 9px;
   -webkit-border-radius: 3px;
@@ -2396,7 +2396,7 @@ ul.centred li, ul.centered li {
   border-radius: 3px;
 }
 
-/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 170, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs {
   *zoom: 1;
   margin-bottom: 22px;
@@ -2410,32 +2410,140 @@ ul.centred li, ul.centered li {
 .tabs:after {
   clear: both;
 }
-/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 176, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs.is-right li {
   float: right;
 }
-/* line 181, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 182, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs.is-centred, .tabs.is-centered {
   text-align: center;
 }
-/* line 184, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 185, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs.is-centred > li, .tabs.is-centered > li {
   display: inline;
   float: none;
 }
-/* line 190, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 191, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs > li {
   float: left;
   margin: 0 5px;
 }
 
-/* line 198, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 199, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs-content > li {
   display: none;
 }
-/* line 202, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+/* line 203, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
 .tabs-content > li.is-active {
   display: block;
+}
+
+/* line 269, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 22px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 278, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert,
+.alert h4 {
+  color: #c09853;
+}
+/* line 282, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert h4 {
+  margin: 0;
+}
+/* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 22px;
+}
+
+/* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+/* line 304, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-success h4 {
+  color: #468847;
+}
+
+/* line 308, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+/* line 313, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-error h4 {
+  color: #b94a48;
+}
+
+/* line 317, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad;
+}
+/* line 322, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-info h4 {
+  color: #3a87ad;
+}
+
+/* line 331, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+/* line 336, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+/* line 339, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.alert-block p + p {
+  margin-top: 5px;
+}
+
+/* line 347, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #000;
+  text-shadow: 0 1px 0 white;
+  zoom: 1;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+}
+/* line 357, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+}
+
+/* line 368, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_components.scss */
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
 }
 
 /* line 10, /Users/mrmartineau/Dropbox/dropbox-htdocs/github/tmw/kickoff-develop/scss/_buttons.scss */

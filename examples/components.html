@@ -214,6 +214,96 @@
 		</div>
 		<!-- END EXAMPLE -->
 
+		<hr>
+
+		<h2>4. Alerts</h2>
+		<div class="row">
+			<div class="span5 col">
+				<p>The default Kickoff button set has 7 states.</p>
+			</div>
+			<div class="span7 col">
+				<ul class="tabs is-right">
+					<li><a href="#layout-example-alerts" class="btn btn-pill is-active">Example</a></li>
+					<li><a href="#code-example-alerts" class="btn btn-pill">Code</a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li id="layout-example-alerts" class="is-active well">
+						<h4>Alert types</h4>
+						<h5>Default</h5>
+						<div class="alert">
+							<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+							<strong>Warning!</strong> Best check yo self, you're not looking too good.
+						</div>
+						<h5>Success</h5>
+						<div class="alert alert-success">
+							<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+							<strong>Warning!</strong> Best check yo self, you're not looking too good.
+						</div>
+						<h5>Error</h5>
+						<div class="alert alert-error">
+							<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+							<strong>Warning!</strong> Best check yo self, you're not looking too good.
+						</div>
+						<h5>Alert block</h5>
+						<div class="alert alert-block">
+							<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+							<h4>Warning!</h4>
+							This version allows for more text inside the message box. Add the class <code>alert-block</code> to use this style.
+						</div>
+					</li>
+
+					<li id="code-example-alerts">
+						<b><code>HTML</code></b>
+<pre class="prettyprint lang-html linenums"><code>&lt;h5>Default&lt;/h5>
+	&lt;div class="alert">
+		&lt;strong>Warning!&lt;/strong> Best check yo self, you're not looking too good.
+	&lt;/div>
+	&lt;h5>Success&lt;/h5>
+	&lt;div class="alert alert-success">
+		&lt;strong>Warning!&lt;/strong> Best check yo self, you're not looking too good.
+	&lt;/div>
+	&lt;h5>Error&lt;/h5>
+	&lt;div class="alert alert-error">
+		&lt;strong>Warning!&lt;/strong> Best check yo self, you're not looking too good.
+	&lt;/div>
+	&lt;h5>Alert block&lt;/h5>
+	&lt;div class="alert alert-block">
+		&lt;h4>Warning!&lt;/h4>
+		This version allows for more text inside the message box. Add the class &lt;code>alert-block&lt;/code> to use this style.
+	&lt;/div></code></pre>
+			<b><code>.SCSS</code></b>
+			<pre class="prettyprint lang-css linenums"><code>// Set the backgrounds
+// -------------------------
+.btn-primary {
+	@include button-background($btn-primary-background, $btn-primary-background-highlight);
+}
+// Warning appears are orange
+.btn-warning {
+	@include button-background($btn-warning-background, $btn-warning-background-highlight);
+}
+// Danger and error appear as red
+.btn-danger {
+	@include button-background($btn-danger-background, $btn-danger-background-highlight);
+}
+// Success appears as green
+.btn-success {
+	@include button-background($btn-success-background, $btn-success-background-highlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+	@include button-background($btn-info-background, $btn-info-background-highlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+	@include button-background($btn-inverse-background, $btn-inverse-background-highlight);
+}</code></pre>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- END EXAMPLE -->
+
 	</div>
 
 
