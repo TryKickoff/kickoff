@@ -411,7 +411,7 @@
 	theme = {
 		bootstrap: 'alert alert-error',
 		jqueryui: 'ui-state-error ui-corner-all',
-		tmw: 'tmw-alert tmw-alert-error'
+		kickoff: 'alert alert-error'
 	},
 
 	inlineStyles = {
@@ -720,6 +720,7 @@
 		}
 
 		var offset = $target.offset(),
+			width  = $target.outerWidth(),
 			location = $target[0].getAttribute('data-location') || this.options.location;
 
 		if (filters.position.test(location)) {
@@ -750,6 +751,7 @@
 
 			if (location === 'none') {
 				console.log('no position');
+				// error.css('width', width);
 				//error.offset({top: offset.top + error.outerHeight()});
 			}
 		}
