@@ -52,10 +52,10 @@ $headings-font-weight         : bold;    // instead of browser default, bold
 // ===================
 // There are no common breakpoints so these are just a suggestion
 // You'll need to define your own breakpoints to suit your design
-$breakpoint-narrow            : 25em;  // 400px  @ 16px base
-$breakpoint-mid               : 48em;  // 768px  @ 16px base
-$breakpoint-wide              : 60em;  // 960px  @ 16px base
-$breakpoint-huge              : 100em; // 1600px @ 16px base
+$breakpoint-narrow            : 400;  // Set in px
+$breakpoint-narrow            : 768;  // Set in px
+$breakpoint-wide              : 992;  // Set in px
+$breakpoint-huge              : 1600; // Set in px
 
 
 // === Paths ===

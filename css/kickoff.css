@@ -225,7 +225,7 @@ table {
     .row .row .col {
       padding: 0; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .col {
     margin-left: 2%;
     padding: 10px;
@@ -422,7 +422,7 @@ table {
     position: relative;
     width: 100%;
     clear: both; } }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62em) {
   .split .col, .shunt {
     margin-left: 2%;
     padding: 10px;
@@ -601,9 +601,6 @@ table {
 .centered.col, .centred.col {
   float: none;
   margin: 0 auto; }
-
-img {
-  max-width: 100%; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2159,7 +2156,7 @@ img {
 .hidden-desktop {
   display: none !important; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 47.9375em) {
   .visible-phone {
     display: inherit !important; }
 
@@ -2171,7 +2168,7 @@ img {
 
   .visible-desktop {
     display: none !important; } }
-@media screen and (min-width: 768px) and (max-width: 979px) {
+@media screen and (min-width: 48em) and (max-width: 61.1875em) {
   .visible-tablet {
     display: inherit !important; }
 

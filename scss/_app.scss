@@ -40,30 +40,30 @@
 
 }
 
-// === 480> ===
-@include respond-min(480) {
+// === 400> ===
+@include respond-min($breakpoint-narrow) {
 
 }
-// === end 480> ===
+// === end 400> ===
 
 
 
 // === 768> ===
-@include respond-min(768) {
+@include respond-min($breakpoint-narrow) {
 
 }
 // === end 768> ===
 
 
 // === 992> ===
-@include respond-min(992) {
+@include respond-min($breakpoint-wide) {
 
 }
 // === end 992> ===
 
 
 // === 1382> ===
-@include respond-min(1382) {
+@include respond-min($breakpoint-huge) {
 
 }
 // === end 1382> ===
