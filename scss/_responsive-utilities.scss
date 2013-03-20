@@ -1,6 +1,8 @@
 // ================================
 // === RESPONSIVE-UTLITIES.scss ===
 // ================================
+// TODO: grab these from Zurb Foundation
+
 
 img {
 	max-width: 100%;
@@ -34,7 +36,8 @@ img {
 }
 
 // Tablets & small desktops only
-@media (min-width: 768px) and (max-width: 979px) {
+// === 768px> - <979px ===
+@include respond-min-max(768px, 979px) {
 	// Show
 	.visible-tablet    { display: inherit !important; }
 	// Hide
@@ -43,3 +46,5 @@ img {
 	.hidden-desktop    { display: inherit !important; }
 	.visible-desktop   { display: none !important ; }
 }
+// === end 768px> - <979px ===
+

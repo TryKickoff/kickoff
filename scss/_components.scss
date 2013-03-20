@@ -6,6 +6,7 @@
 // * Centred list
 // * Floated lists
 // * Wells
+// * Alerts
 // -----------------------
 
 // ========================
@@ -202,4 +203,112 @@ ul.centred, ul.centered {
 	& > li.is-active {
 		display: block;
 	}
+}
+
+
+// ==============
+// === Alerts ===
+// ==============
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: $base-line-height + px;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	background-color: $warning-background;
+	border: 1px solid $warning-border;
+	@include border-radius(4px);
+
+	&,
+	h4 {
+		// Specified for the h4 to prevent conflicts of changing $headings-color
+		color: $warning-text;
+	}
+	h4 {
+		margin: 0;
+	}
+
+	// Adjust close link position
+	.close {
+		position: relative;
+		top: -2px;
+		right: -21px;
+		line-height: $base-line-height + px;
+	}
+}
+
+
+// Alternate styles
+.alert-success {
+	background-color: $success-background;
+	border-color: $success-border;
+	color: $success-text;
+
+	h4 {
+		color: $success-text;
+	}
+}
+.alert-error {
+	background-color: $error-background;
+	border-color: $error-border;
+	color: $error-text;
+
+	h4 {
+		color: $error-text;
+	}
+}
+.alert-info {
+	background-color: $info-background;
+	border-color: $info-border;
+	color: $info-text;
+
+	h4 {
+		color: $info-text;
+	}
+}
+
+
+// Block alerts
+
+.alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+
+	> p,
+	> ul {
+		margin-bottom: 0;
+	}
+	p + p {
+		margin-top: 5px;
+	}
+}
+
+// =====================
+// === CLOSE BUTTONS ===
+// =====================
+.close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: $base-line-height + px;
+	color: #000;
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+	@include opacity(20);
+
+	&:hover,
+	&:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+		@include opacity(40);
+	}
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
 }

@@ -331,7 +331,7 @@ select,
 textarea {
 	&[disabled],
 	&[readonly] {
-		background-color: $inputDisabledBackground;
+		background-color: $input-disabled-background;
 		border-color: #ddd;
 		cursor: not-allowed;
 	}
@@ -355,15 +355,15 @@ textarea {
 // ==================================
 // Warning
 .control-group.warning {
-	@include formFieldState($warningText, $warningText, $warningBackground);
+	@include formFieldState($warning-text, $warning-text, $warning-background);
 }
 // Error
 .control-group.error {
-	@include formFieldState($errorText, $errorText, $errorBackground);
+	@include formFieldState($error-text, $error-text, $error-background);
 }
 // Success
 .control-group.success {
-	@include formFieldState($successText, $successText, $successBackground);
+	@include formFieldState($success-text, $success-text, $success-background);
 }
 
 
