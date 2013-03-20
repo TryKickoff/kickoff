@@ -79,7 +79,7 @@ $color-notice                 : #66b;
 // Forms
 $inputBackground              : #fff;
 $inputBorder                  : #ccc;
-$inputDisabledBackground      : lighten(#000, 70%);
+$input-disabled-background    : lighten(#000, 70%);
 $formActionsBackground        : #f5f5f5;
 $labelColour                  : lighten(#000, 30%);
 $inputColour                  : lighten(#000, 30%);
@@ -94,21 +94,21 @@ $tableBackgroundHover         : #f5f5f5; // for hover
 $tableBorder                  : #ddd; // table and cell border
 
 // Form states and alerts
-$warningText                  : #c09853;
-$warningBackground            : #fcf8e3;
-$warningBorder                : darken(adjust-hue($warningBackground, -10), 3%);
+$warning-text                  : #c09853;
+$warning-background            : #fcf8e3;
+$warning-border                : darken(adjust-hue($warning-background, -10), 3%);
 
-$errorText                    : #b94a48;
-$errorBackground              : #f2dede;
-$errorBorder                  : darken(adjust-hue($errorBackground, -10), 3%);
+$error-text                    : #b94a48;
+$error-background              : #f2dede;
+$error-border                  : darken(adjust-hue($error-background, -10), 3%);
 
-$successText                  : #468847;
-$successBackground            : #dff0d8;
-$successBorder                : darken(adjust-hue($successBackground, -10), 5%);
+$success-text                  : #468847;
+$success-background            : #dff0d8;
+$success-border                : darken(adjust-hue($success-background, -10), 5%);
 
-$infoText                     : #3a87ad;
-$infoBackground               : #d9edf7;
-$infoBorder                   : darken(adjust-hue($infoBackground, -10), 7%);
+$info-text                     : #3a87ad;
+$info-background               : #d9edf7;
+$info-border                   : darken(adjust-hue($info-background, -10), 7%);
 
 // <hr> border colour
 $hrBorder                     : lighten(#000, 70%)er;
