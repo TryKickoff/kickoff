@@ -1,0 +1,19 @@
+{
+	"browser": true,
+	"camelcase":  true,
+	"curly": true,
+	"forin": true,
+	"latedef":  true,
+	"noarg": true,
+	"noempty": true,
+	"eqeqeq": true,
+	"bitwise": true,
+	"strict": false,
+	"maxerr": "50",
+	"white": false,
+	"smarttabs": false,
+	"quotmark":  "single",
+	"trailing":  true,
+	"debug":  true,
+	"laxcomma":  true
+}

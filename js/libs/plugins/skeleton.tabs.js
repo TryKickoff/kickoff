@@ -1,6 +1,3 @@
-/*jslint white: true, browser: true, devel: true, debug: true */
-/*jshint browser:true, camelcase: true, curly:true, forin:true, indent:4, latedef: true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, maxerr:50, white:false, smarttabs:false, quotmark: single, trailing: true, debug: true, laxcomma: true */
-
 /**
  * Skeleton V1.1
  * Copyright 2011, Dave Gamache

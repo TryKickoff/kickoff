@@ -1,6 +1,3 @@
-/*jslint white: true, browser: true, devel: true, debug: true */
-/*jshint browser:true, camelcase: true, curly:true, forin:true, indent:4, latedef: true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, maxerr:50, white:false, smarttabs:false, quotmark: single, trailing: true, debug: true, laxcomma: true */
-
 /* MOBILE PLUGIN DIRECTORY
 What you can find in this file [listed in order they appear]
 Please keep me up-to-date :)
@@ -17,13 +14,13 @@ Please keep me up-to-date :)
 // A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT License
 // =================================================================================================
 // https://github.com/scottjehl/iOS-Orientationchange-Fix/
-// Use meta content="width=device-width,initial-scale=1" or similar
+// Use meta content='width=device-width,initial-scale=1' or similar
 // This is not needed if we are disallowing user scaling
 (function(w){
 
 	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
 	var ua = navigator.userAgent;
-	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( 'AppleWebKit' ) > -1 ) ){
 		return;
 	}
 
@@ -31,22 +28,22 @@ Please keep me up-to-date :)
 
 	if( !doc.querySelector ){ return; }
 
-	var meta = doc.querySelector( "meta[name=viewport]" ),
-		initialContent = meta && meta.getAttribute( "content" ),
-		disabledZoom = initialContent + ",maximum-scale=1",
-		enabledZoom = initialContent + ",maximum-scale=10",
+	var meta = doc.querySelector( 'meta[name=viewport]' ),
+		initialContent = meta && meta.getAttribute( 'content' ),
+		disabledZoom = initialContent + ',maximum-scale=1',
+		enabledZoom = initialContent + ',maximum-scale=10',
 		enabled = true,
 		x, y, z, aig;
 
 	if( !meta ){ return; }
 
 	function restoreZoom(){
-		meta.setAttribute( "content", enabledZoom );
+		meta.setAttribute( 'content', enabledZoom );
 		enabled = true;
 	}
 
 	function disableZoom(){
-		meta.setAttribute( "content", disabledZoom );
+		meta.setAttribute( 'content', disabledZoom );
 		enabled = false;
 	}
 
@@ -67,8 +64,8 @@ Please keep me up-to-date :)
 		}
 	}
 
-	w.addEventListener( "orientationchange", restoreZoom, false );
-	w.addEventListener( "devicemotion", checkTilt, false );
+	w.addEventListener( 'orientationchange', restoreZoom, false );
+	w.addEventListener( 'devicemotion', checkTilt, false );
 
 })( this );
 
@@ -86,7 +83,7 @@ Please keep me up-to-date :)
 		win.scrollTo( 0, 1 );
 		var scrollTop = 1,
 			getScrollTop = function(){
-				return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+				return win.pageYOffset || doc.compatMode === 'CSS1Compat' && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
 			},
 
 			//reset to 0 on bodyready, if needed
@@ -98,7 +95,7 @@ Please keep me up-to-date :)
 				}
 			}, 15 );
 
-		win.addEventListener( "load", function(){
+		win.addEventListener( 'load', function(){
 			setTimeout(function(){
 				//at load, if user hasn't scrolled more than 20 or so...
 				if( getScrollTop() < 20 ){
