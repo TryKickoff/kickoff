@@ -71,6 +71,13 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// Not needed at the moment
+		csscss: {
+			dist: {
+				src: ['css/kickoff.css']
+			}
+		},
+
 		// We're not using this at the moment, but it is left here for reference
 		concat: {
 			js: {
@@ -83,6 +90,8 @@ module.exports = function (grunt) {
 
 		uglify: {
 			options: {
+				message: 'We are now ugly',
+
 				// mangle: Turn on or off mangling
 				mangle: true,
 
@@ -105,10 +114,10 @@ module.exports = function (grunt) {
 				// sourceMapPrefix: 1,
 
 				// banner: Disabled until sourcemaps are fixed
-				//banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version + "\\n" %>' +
-						// '* <%= grunt.template.today("yyyy-mm-dd") + "\\n" %>' +
-						// '* <%= pkg.homepage + "\\n" %>' +
-						// '* Copyright (c) <%= grunt.template.today("yyyy") %> - <%= pkg.title %> */ <%= "\\n" %>'
+				//banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version + '\\n' %>' +
+						// '* <%= grunt.template.today('yyyy-mm-dd') + '\\n' %>' +
+						// '* <%= pkg.homepage + '\\n' %>' +
+						// '* Copyright (c) <%= grunt.template.today('yyyy') %> - <%= pkg.title %> */ <%= '\\n' %>'
 			},
 			// files: { 'js/dist/app.min.js' : jsFileList },
 			js: {
@@ -131,6 +140,9 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
+			options: {
+				message: 'SASS and Uglify finished running'
+			},
 			scss: {
 				files: ['scss/**/*.scss'],
 				tasks: 'sass:dev'
@@ -150,8 +162,17 @@ module.exports = function (grunt) {
 			server: {
 				options: {
 					port: 9001,
-					keepalive: true
+					keepalive: true,
+					message: 'Server is ready!'
 				}
+			}
+		},
+
+		concurrent: {
+			target: {
+				tasks: ['connect', 'watch'],
+				logConcurrentOutput: true,
+				message: 'Concurrent change!'
 			}
 		}
 	});
@@ -162,12 +183,22 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	// grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-devtools');
+	grunt.loadNpmTasks('grunt-concurrent');
 
+	// Installed but unused
+	// grunt.loadNpmTasks('grunt-contrib-livereload');
+	// grunt.loadNpmTasks('grunt-contrib-concat');
+	// grunt.loadNpmTasks('grunt-csscss');
+	// grunt.loadNpmTasks('grunt-notify'); // Automatic notifications when tasks fail.
+
+
+	// =============
+	// === Tasks ===
+	// =============
 	// A task for development
 	grunt.registerTask('dev', ['jshint', 'uglify', 'sass:dev']);
 
@@ -175,6 +206,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('deploy', ['jshint', 'clean', 'modernizr', 'uglify', 'sass:deploy']);
 
 	// Default task
-	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
+	// grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
+
+	// Default task 2: Same as above but this creates a server and watches the project for changes
+	grunt.registerTask('default', ['jshint', 'uglify', 'concurrent:target']);
 
 };

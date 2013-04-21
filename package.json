@@ -22,17 +22,21 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.x",
-    "grunt-contrib-jshint": "0.4.3",
-    "grunt-contrib-clean": "0.4.0",
-    "grunt-contrib-copy": "0.4.1",
-    "grunt-contrib-watch": "0.3.1",
-    "grunt-contrib-sass": "0.3.0",
-    "grunt-contrib-concat": "0.2.0",
-    "grunt-contrib-requirejs": "0.4.0",
-    "grunt-modernizr": "0.2.1",
-    "grunt-contrib-connect": "0.2.0",
-    "grunt-contrib-uglify": "0.2.0",
-    "grunt-devtools": "~0.1.0-7"
+    "grunt-devtools": "~0.1.0-7",
+    "grunt-csscss": "~0.4.0",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-modernizr": "~0.2.2",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-concurrent": "~0.2.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-notify": "~0.2.3"
   },
   "keywords": []
 }
