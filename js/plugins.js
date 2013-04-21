@@ -1,3 +1,6 @@
+// ===============
+// === Plugins ===
+// ===============
 /* PLUGIN DIRECTORY
 What you can find in this file [listed in order they appear]
 Please keep me up-to-date :)

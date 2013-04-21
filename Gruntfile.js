@@ -2,6 +2,14 @@ module.exports = function (grunt) {
 
 	'use strict';
 
+	// ====================
+	// == Edit this section
+	var jsFileList = ['js/helpers.js', 'js/plugins.js', 'js/script.js'];
+	var distDir = 'js/dist/';
+	var jsFile = 'app.min.js';
+	// ====================
+	// ====================
+
 	// Project configuration.
 	grunt.initConfig({
 		pkg: require('./package'),
@@ -24,7 +32,7 @@ module.exports = function (grunt) {
 		// TODO: still needs a bit of work
 		modernizr: {
 			devFile: 'js/libs/modernizr-dev.js',
-			outputFile : 'js/dist/vendor/modernizr-for-<%= pkg.version %>.min.js',
+			outputFile : distDir + 'vendor/modernizr-for-<%= pkg.version %>.min.js',
 
 			extra: {
 				shiv: true,
@@ -38,6 +46,7 @@ module.exports = function (grunt) {
 			files: ['js/**/*.js', 'scss/**/*.scss']
 		},
 
+		// Choose Sass files below
 		sass: {
 			dev: {
 				options: {
@@ -55,7 +64,8 @@ module.exports = function (grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'css/kickoff-<%= pkg.version %>.min.css': 'scss/kickoff.scss'
+					'css/kickoff.min.css': 'scss/kickoff.scss',
+					'css/kickoff-old-ie.min.css': 'scss/kickoff-old-ie.scss'
 				}
 
 			}
@@ -67,7 +77,7 @@ module.exports = function (grunt) {
 				// src: 'js/*.js',
 				// Choose files to concatinate
 				src: ['js/helpers.js', 'js/plugins.js', 'js/script.js'],
-				dest: 'js/dist/concat.js'
+				dest: distDir + 'concat.js'
 			}
 		},
 
@@ -76,33 +86,34 @@ module.exports = function (grunt) {
 				// mangle: Turn on or off mangling
 				mangle: true,
 
+				// beautify: beautify your code for debugging/troubleshooting purposes
+				beautify: false,
+
 				// report: Show file size report
-				// report: 'gzip',
+				report: 'gzip',
 
-				// sourceMap: The location of the source map, relative to the project
-				sourceMap: 'app.min.js.map',
+				// sourceMap: @string. The location of the source map, relative to the project
+				sourceMap: jsFile + '.map',
 
-				// sourceMappingURL: The string that is printed to the final file
-				sourceMappingURL: '../../app.min.js.map',
+				// sourceMappingURL: @string. The string that is printed to the final file
+				sourceMappingURL: '../../'+ jsFile +'.map'
 
-				// sourceMapRoot: The location where your source files can be found. This sets the sourceRoot field in the source map.
+				// sourceMapRoot: @string. The location where your source files can be found. This sets the sourceRoot field in the source map.
 				// sourceMapRoot: 'js',
 
-				// sourceMapPrefix: The number of directories to drop from the path prefix when declaring files in the source map.
+				// sourceMapPrefix: @integer. The number of directories to drop from the path prefix when declaring files in the source map.
 				// sourceMapPrefix: 1,
 
-				banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version + "\\n" %>' +
-						'* <%= grunt.template.today("yyyy-mm-dd") + "\\n" %>' +
-						'* <%= pkg.homepage + "\\n" %>' +
-						'* Copyright (c) <%= grunt.template.today("yyyy") %> - <%= pkg.title %> */ <%= "\\n" %>'
+				// banner: Disabled until sourcemaps are fixed
+				//banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version + "\\n" %>' +
+						// '* <%= grunt.template.today("yyyy-mm-dd") + "\\n" %>' +
+						// '* <%= pkg.homepage + "\\n" %>' +
+						// '* Copyright (c) <%= grunt.template.today("yyyy") %> - <%= pkg.title %> */ <%= "\\n" %>'
 			},
-			files: {
-				'js/dist/app.min.js': ['js/helpers.js', 'js/plugins.js', 'js/script.js']
-			}
-			,
+			// files: { 'js/dist/app.min.js' : jsFileList },
 			js: {
-				src: ['js/helpers.js', 'js/plugins.js', 'js/script.js'],
-				dest:'js/dist/app.min.js'
+				src: jsFileList,
+				dest: distDir + jsFile
 			}
 		},
 

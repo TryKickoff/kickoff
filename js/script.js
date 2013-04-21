@@ -40,6 +40,6 @@ TMW.SiteSetup = {
 	variableX : '', // please don't keep me - only for example syntax!
 
 	init : function () {
-
+		console.debug('Kickoff is running');
 	}
 };
