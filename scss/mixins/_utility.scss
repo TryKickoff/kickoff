@@ -92,6 +92,9 @@
 
 // INPUT PLACEHOLDER TEXT
 @mixin placeholder($color: lighten(#000, 70%)) {
+	:-ms-input-placeholder {
+		color: $color;
+	}
 	:-moz-placeholder {
 		color: $color;
 	}
