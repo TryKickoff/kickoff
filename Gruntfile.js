@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 				options: {
 					unixNewlines: true,
 					style: 'expanded',
-					lineNumbers: true,
+					lineNumbers: false,
 					debugInfo : false,
 					precision : 8
 				},
