@@ -34,7 +34,9 @@ module.exports = function (grunt) {
 				options: {
 					unixNewlines: true,
 					style: 'expanded',
-					lineNumbers: true
+					lineNumbers: true,
+					debugInfo : false,
+					precision : 8
 				},
 				files: {
 					'css/kickoff.css': 'scss/kickoff.scss',
@@ -55,8 +57,6 @@ module.exports = function (grunt) {
 
 		uglify: {
 			options: {
-				message: 'We are now ugly',
-
 				// mangle: Turn on or off mangling
 				mangle: true,
 

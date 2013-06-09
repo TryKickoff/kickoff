@@ -2,7 +2,7 @@
   "name": "Kickoff",
   "title": "Kickoff",
   "description": "TMW's front-end framework",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/tmwagency/kickoff",
   "author": {
     "name": "Zander Martineau",
@@ -27,7 +27,7 @@
     "grunt-contrib-jshint": "~0.5.4",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-uglify": "~0.2.1",
-    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1"
   },
   "keywords": []
 }
