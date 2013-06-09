@@ -25,18 +25,17 @@
 @import "code";
 
 // Components: common
+@import "buttons";
 @import "components";
 // @import "sprites";
 
 // Components: buttons & alerts
-@import "buttons";
 
 // Components: misc
 // @import "carousel";
 
 // Your app/site styles
 @import "app";
-
 
 // Utility classes
 // Has to be last to override when necessary
