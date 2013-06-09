@@ -31,9 +31,9 @@
 			<h1>The Choreographic Grid</h1>
 		</header>
 
-		<ul class="tabs">
+		<ul class="tabs is-centred">
 			<li>
-				<a href="#standard" class="active">Standard Grid</a>
+				<a href="#standard" class="is-active">Standard Grid</a>
 			</li>
 			<li>
 				<a href="#split">Split columns</a>
@@ -52,7 +52,9 @@
 			</li>
 		</ul>
 
-		<a id="show-grid-button" href="#">Hide Grid</a>
+		<div class="text-centre">
+			<a id="show-grid-button" class="btn-info btn-small" href="#">Hide Grid</a>
+		</div>
 
 
 		<ul class="tabs_content">
@@ -379,9 +381,7 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="js/tests-grid.js"></script>
-	<!--[if lt IE 8]>
-		<script src="/js/libs/polyfills/respond.min.js"></script>
-	<![endif]-->
+	<script src="../js/libs/plugins/skeleton.tabs.js"></script>
 
 </body>
 </html>

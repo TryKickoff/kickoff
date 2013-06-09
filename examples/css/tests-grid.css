@@ -41,7 +41,7 @@ body {
 }
 
 
-ul.tabs {
+/*ul.tabs {
 	padding: 0;
 	margin: 5px 0 0;
 	text-align: center;
@@ -61,12 +61,12 @@ ul.tabs li a {
 	font-size: .9em;
 	color: black;
 	font-weight: bold;
-}
-ul.tabs li a.active,
+}*/
+/*ul.tabs li a.active,
 ul.tabs li a:hover {
 	background: rgba(0, 0, 0, 0.4);
 	color: #fff;
-}
+}*/
 ul.tabs_content {
 	margin: 1.5em 0 0 0;
 	padding: 0;
@@ -96,24 +96,4 @@ footer {
 }
 footer a {
 	color: #FFFFFF;
-}
-
-#show-grid-button {
-	display: block;
-	margin: 20px auto;
-	width: 120px;
-	padding: 5px;
-	text-align: center;
-}
-/*=== 768> ===*/
-@media screen and (min-width: 768px) {
-	ul.tabs li {
-		display: inline-block;
-		margin: 0;
-	}
-	ul.tabs li a {
-		display: block;
-		border-radius: 50px;
-		color: black;
-	}
 }
