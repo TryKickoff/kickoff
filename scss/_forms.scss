@@ -181,6 +181,10 @@ input {
 		padding: 2px;
 	}
 
+	&[type="password"] {
+		font-family: sans-serif;
+	}
+
 }
 
 
