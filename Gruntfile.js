@@ -19,10 +19,7 @@ module.exports = function (grunt) {
 		pkg: require('./package'),
 
 		jshint: {
-			all: [
-				'Gruntfile.js',
-				'js/**/*.js'
-			],
+			all: jsFileList,
 			options: {
 				jshintrc: '.jshintrc'
 			}
