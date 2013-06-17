@@ -36,3 +36,15 @@ Out of the box, Kickoff is setup to use 3 Grunt tasks, but many more can be used
 Running `grunt` in the command line will do a one-time build using the default setup.
 
 Running `grunt watch` will watch your working directory for any changes and build, compile or run any task that related to that file type. For example, editing a `.scss` file will effectively run the `grunt sass:dev` sub-task which compiles the sass to css. Changing any javascript will effectively run the `grunt uglify` task. 
+
+#### Grunt is now setup!
+
+## Next steps:
+### Javascript
+By default Kickoff minifies, concatinates and creates a [Source Map](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) for all javascript files included in the project.
+
+To choose which javascript files you want to include, just edit the `jsFileList` array at the beginning of the file. Files in this array should be organised in the order that you need them to be run.
+
+### CSS / SCSS
+There are two main `.scss` files that get compiled by Grunt: `scss/kickoff.scss` and `scss/kickoff-old-ie.scss`. These are compiled to `css/kickoff.css` and `css/kickoff-old-ie.css`. If you need to add or amend this list, change the `dev` and `deploy` subtasks in the Gruntfile (around [line 30](https://github.com/tmwagency/kickoff/blob/master/Gruntfile.js#L32)).
+
