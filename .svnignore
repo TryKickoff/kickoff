@@ -1,0 +1,29 @@
+# General #
+###########
+*.o *.lo *.la #*# .*.rej *.rej
+.*~ *~ .#* .DS_Store thumbs.db
+Thumbs.db *.bak *.class *.exe *.dll
+*.mine *.obj *.ncb *.lib *.log
+*.idb *.pdb *.ilk *.msi* .res *.pch *.suo
+*.exp *.*~ *.~* ~*.* cvs  CVS .CVS .cvs
+release Release debug Debug
+ignore Ignore bin Bin obj  Obj
+*.csproj.user *.user
+*.generated.cs
+
+
+# Kickoff added #
+#################
+*.sublime-*
+node_modules/
+dist/
+*.map
+
+# SASS #
+########
+.sass-cache/
+*.scssc
+
+# Jekyll #
+##########
+_site/
