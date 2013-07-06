@@ -1,18 +1,18 @@
 // === Colour palette ===
 // ======================
 // Generic colors
-$blue                         : #049CDB;
+$blue                         : #3498db;
 $blueDark                     : darken($blue, 20%);
-$green                        : #46a546;
-$red                          : #bd362f;
-$yellow                       : #ffc40d;
-$orange                       : #f89406;
+$green                        : #1abc9c;
+$red                          : #c0392b;
+$yellow                       : #f1c40f;
+$orange                       : #e67e22;
 $pink                         : #c3325f;
-$purple                       : #7a43b6;
-$gray                         : lighten(#000, 50%);
+$purple                       : #8e44ad;
+$gray                         : #7f8c8d;
 
 // Colour Scheme
-$color-primary                : $green;
+$color-primary                : #34495e;
 $color-secondary              : $green;
 $color-highlight              : #ff9600;
 $color-muted                  : #eef;
@@ -39,28 +39,32 @@ $btn-background-highlight     : darken(#fff, 10%);
 $btn-border                   : #ccc;
 
 $btn-primary-background       : $color-link-default;
-$btn-primary-background-highlight: adjust-hue($btn-primary-background, 20%);
+$btn-primary-background-highlight: #2c3e50;
 
-$btn-info-background          : #5bc0de;
-$btn-info-background-highlight: #2f96b4;
+$btn-info-background          : #1abc9c;
+$btn-info-background-highlight: #16a085;
 
-$btn-success-background       : #62c462;
-$btn-success-background-highlight: #51a351;
+$btn-success-background       : #2ecc71;
+$btn-success-background-highlight: #27ae60;
 
-$btn-warning-background       : lighten($orange, 15%);
-$btn-warning-background-highlight: $orange;
+$btn-warning-background       : #e67e22;
+$btn-warning-background-highlight: #d35400;
 
-$btn-danger-background        : #ee5f5b;
-$btn-danger-background-highlight: #bd362f;
+$btn-danger-background        : #e74c3c;
+$btn-danger-background-highlight: #c0392b;
 
 $btn-inverse-background       : #444;
 $btn-inverse-background-highlight: #222;
 
+// Tabs
+$inactive-tab                 : #95a5a6;
+$active-tab                   : $green;
+
 // Code
 $color-code                   : #d14;
-$color-code-background        : #f7f7f9;
-$color-pre                    : $color-code;
-$color-pre-background         : $color-code-background;
+$color-code-background        : #fbefc0;
+$color-pre                    : #222;
+$color-pre-background         : #f7f7f9;
 
 // Text Selection
 $color-selection              : $color-primary;
@@ -77,30 +81,30 @@ $color-notice                 : #66b;
 // === Component variables ===
 // ===========================
 // Forms
-$inputBackground              : #fff;
-$inputBorder                  : #ccc;
+$input-background             : #fff;
+$input-border                 : #ccc;
 $input-disabled-background    : lighten(#000, 70%);
-$formActionsBackground        : #f5f5f5;
-$labelColour                  : lighten(#000, 30%);
-$inputColour                  : lighten(#000, 30%);
+$form-actions-background      : #f5f5f5;
+$label-colour                 : lighten(#000, 30%);
+$input-colour                 : lighten(#000, 30%);
 
 // Input placeholder text color
-$placeholderText              : lighten(#000, 70%);
+$placeholder-text             : lighten(#000, 70%);
 
 // Tables
-$tableBackground              : transparent; // overall background-color
-$tableBackgroundAccent        : #f9f9f9; // for striping
-$tableBackgroundHover         : #f5f5f5; // for hover
-$tableBorder                  : #ddd; // table and cell border
+$table-background             : transparent; // overall background-color
+$table-background-accent      : #f9f9f9; // for striping
+$table-background-hover       : #f5f5f5; // for hover
+$table-border                 : #ddd; // table and cell border
 
 // Form states and alerts
-$warning-text                  : #c09853;
-$warning-background            : #fcf8e3;
-$warning-border                : darken(adjust-hue($warning-background, -10), 3%);
+$warning-text                 : #c09853;
+$warning-background           : #fcf8e3;
+$warning-border               : darken(adjust-hue($warning-background, -10), 3%);
 
-$error-text                    : #b94a48;
-$error-background              : #f2dede;
-$error-border                  : darken(adjust-hue($error-background, -10), 3%);
+$error-text                   : #b94a48;
+$error-background             : #f2dede;
+$error-border                 : darken(adjust-hue($error-background, -10), 3%);
 
 $success-text                  : #468847;
 $success-background            : #dff0d8;
@@ -111,4 +115,4 @@ $info-background               : #d9edf7;
 $info-border                   : darken(adjust-hue($info-background, -10), 7%);
 
 // <hr> border colour
-$hrBorder                     : lighten(#000, 70%)er;
+$hrBorder                      : lighten(#000, 70%)er;

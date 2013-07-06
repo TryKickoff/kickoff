@@ -76,12 +76,6 @@ $img-icon-white-sprite        : "#{$img-ui-path}/glyphicons-halflings-white.png"
 // ==================
 // Settings here override & affect the output in choreographic-grid.scss
 
-// Choose your grid options
-$debugQueries                 : false ; // Show the media query debugger at the top of the viewport
-$usingPushPullColumns         : true  ; // Allow columns to be pushed & pulled
-$usingOffsetcolumns           : true  ; // Allow columns to be offset
-$usingSplitsAndShunts         : true  ; // Use Splits & Shunts for responsive web design
-
 // Setup grid defaults
 $gridColumnCount              : 12    ; // Total column count
 $gridGutterWidth              : 20    ; // [in pixels]
@@ -92,6 +86,12 @@ $gridMargin                   : 0     ; // [in pixels] Space outside the grid
 $gridColumnPadding            : 10     ; // [in pixels]
 $gridColumnPaddingUnit        : 'px'   ; // [in pixels or percent] Specify your unit of measurement for column padding
 $nestedColumnPadding          : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+// Choose your grid options
+$debugQueries                 : false ; // Show the media query debugger at the top of the viewport
+$usingPushPullColumns         : false  ; // Allow columns to be pushed & pulled
+$usingOffsetcolumns           : false  ; // Allow columns to be offset
+$usingSplitsAndShunts         : false  ; // Use Splits & Shunts for responsive web design
 
 
 

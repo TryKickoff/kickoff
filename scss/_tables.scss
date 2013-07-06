@@ -10,7 +10,7 @@ table {
 	max-width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-	background-color: $tableBackground;
+	background-color: $table-background;
 }
 
 // BASELINE STYLES
@@ -27,7 +27,7 @@ table {
 		@include line-height($base-line-height);
 		text-align: left;
 		vertical-align: top;
-		border-top: 1px solid $tableBorder;
+		border-top: 1px solid $table-border;
 	}
 	& th,
 	& tfoot td {
@@ -48,7 +48,7 @@ table {
 	}
 	// Account for multiple tbody instances
 	& tbody + tbody {
-		border-top: 2px solid $tableBorder;
+		border-top: 2px solid $table-border;
 	}
 }
 
@@ -69,14 +69,14 @@ table {
 // ----------------
 
 .table-bordered {
-	border: 1px solid $tableBorder;
+	border: 1px solid $table-border;
 	border-left: 0;
 	border-collapse: separate; // Done so we can round those corners!
 	*border-collapse: collapsed; // IE7 can't round corners anyway
 	@include border-radius(4px);
 	& th,
 	& td {
-		border-left: 1px solid $tableBorder;
+		border-left: 1px solid $table-border;
 	}
 	// Prevent a double border
 	& caption + thead tr:first-child th,
@@ -120,7 +120,7 @@ table {
 		& tr:nth-child(odd) {
 			& td,
 			& th {
-				background-color: $tableBackgroundAccent;
+				background-color: $table-background-accent;
 			}
 		}
 	}
@@ -134,7 +134,7 @@ table {
 	& tbody tr:hover {
 		& td,
 		& th {
-			background-color: $tableBackgroundHover;
+			background-color: $table-background-hover;
 		}
 	}
 }

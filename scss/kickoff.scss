@@ -9,8 +9,8 @@
 // Core variables and mixins
 @import "colour-palette";
 @import "variables";
-@import "mixins";
 @import "functions";
+@import "mixins";
 
 // CSS reset
 @import "normalize";
@@ -25,18 +25,11 @@
 @import "code";
 
 // Components: common
-@import "components";
-// @import "sprites";
-
-// Components: buttons & alerts
 @import "buttons";
-
-// Components: misc
-// @import "carousel";
+@import "components";
 
 // Your app/site styles
 @import "app";
-
 
 // Utility classes
 // Has to be last to override when necessary

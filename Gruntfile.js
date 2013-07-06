@@ -19,10 +19,7 @@ module.exports = function (grunt) {
 		pkg: require('./package'),
 
 		jshint: {
-			all: [
-				'Gruntfile.js',
-				'js/**/*.js'
-			],
+			all: jsFileList,
 			options: {
 				jshintrc: '.jshintrc'
 			}
@@ -34,7 +31,9 @@ module.exports = function (grunt) {
 				options: {
 					unixNewlines: true,
 					style: 'expanded',
-					lineNumbers: true
+					lineNumbers: false,
+					debugInfo : false,
+					precision : 8
 				},
 				files: {
 					'css/kickoff.css': 'scss/kickoff.scss',
@@ -55,8 +54,6 @@ module.exports = function (grunt) {
 
 		uglify: {
 			options: {
-				message: 'We are now ugly',
-
 				// mangle: Turn on or off mangling
 				mangle: true,
 

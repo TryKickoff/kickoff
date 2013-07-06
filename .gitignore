@@ -4,7 +4,7 @@
 
 # SASS #
 ########
-.sass-cache
+.sass-cache/
 *.scssc
 
 
@@ -23,6 +23,9 @@ Thumbs.db
 # Random
 *.sublime-*
 
-node_modules
-dist
+node_modules/
+dist/
 *.map
+
+# Jekyll
+_site/
