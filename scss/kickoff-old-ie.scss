@@ -14,38 +14,33 @@
 $old-ie: true;
 $fix-mqs: 1024px; //could use ems too
 
-// CORE VARIABLES AND MIXINS
+// Core variables and mixins
 @import "colour-palette";
 @import "variables";
+@import "functions";
 @import "mixins";
 
-// CSS RESET
+// CSS reset
 @import "normalize";
 
-// GRID SYSTEM AND PAGE STRUCTURE
+// Grid system and page structure
 @import "choreographic-grid"; // For responsive builds
 
-// BASE CSS
+// Base css
 @import "typography";
 @import "forms";
 @import "tables";
 @import "code";
 
-// COMPONENTS: COMMON
-@import "components"; // Generic components tools
-// @import "sprites";
-
-// COMPONENTS: BUTTONS & ALERTS
+// Components: common
 @import "buttons";
+@import "components";
 
-// COMPONENTS: MISC
-// @import "carousel";
-
-// YOUR APP/SITE STYLES
+// Your app/site styles
 @import "app";
 
 
-// UTILITY CLASSES
+// Utility classes
 // Has to be last to override when necessary
 @import "utilities";
 

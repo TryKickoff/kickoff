@@ -2,8 +2,6 @@
 
 Developed by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
 
-**This is a work in progress set of base templates, and as such will be changed quite regularly.  If using be sure to read the documentation to understand it fully before using**
-
 ### Browser support
 There are quite a few CSS & Javascript fallbacks/polyfills to cater for older browser's lack of features - we're looking at you IE!
 
