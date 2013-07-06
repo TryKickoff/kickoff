@@ -1,19 +1,19 @@
 {
-	"browser": true,
 	"camelcase":  true,
 	"curly": true,
+	"debug":  true,
 	"forin": true,
 	"latedef":  true,
+	"laxcomma":  true
+	"maxerr": "50",
 	"noarg": true,
 	"noempty": true,
-	"eqeqeq": true,
-	"bitwise": true,
-	"strict": false,
-	"maxerr": "50",
-	"white": false,
-	"smarttabs": false,
 	"quotmark":  "single",
+	"smarttabs": false,
+	"strict": false,
 	"trailing":  true,
-	"debug":  true,
-	"laxcomma":  true
+	"unused":  true,
+	"white": false,
+
+	"jquery": true
 }
