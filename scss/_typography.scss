@@ -27,6 +27,13 @@
 // http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
 // ------------------------------------------------------------------------------
 
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+// www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {
+	font-size: $base-font-size + px;
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+}
 
 // Body text
 body {
@@ -185,7 +192,8 @@ ul, ol {
 	}
 }
 
-.unstyled {
+.unstyled,
+nav ul, nav ol {
 	margin: 0;
 	padding: 0;
 	list-style: none;
