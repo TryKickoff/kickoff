@@ -12,9 +12,8 @@ module.exports = function (grunt) {
 	var distDir = 'js/dist/';
 	var jsFile = 'app.min.js';
 	// ====================
-	// ====================
 
-	// Project configuration.
+	// Project configuration
 	grunt.initConfig({
 		pkg: require('./package'),
 
@@ -96,6 +95,7 @@ module.exports = function (grunt) {
 				],
 				tasks: ['uglify']
 			},
+
 			livereload: {
 				options: { livereload: true },
 				files: [
