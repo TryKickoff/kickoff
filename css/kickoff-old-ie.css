@@ -457,7 +457,7 @@ dd {
 hr {
   margin: 22px 0;
   border: 0;
-  border-top: 1px solid #b3b3b3 er;
+  border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #fff;
 }
 
@@ -1185,7 +1185,7 @@ textarea:focus:required:invalid:focus {
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   vertical-align: middle;
-  background-color: #b3b3b3 er;
+  background-color: #b3b3b3;
   border: 1px solid #ccc;
 }
 .input-prepend .add-on, .input-prepend .btn, .input-prepend .tabs a, .tabs .input-prepend a,
@@ -2013,15 +2013,15 @@ button.close {
 }
 
 .mb1 {
-  margin-bottom: 16 !important;
+  margin-bottom: 16px !important;
 }
 
 .mb2 {
-  margin-bottom: 24 !important;
+  margin-bottom: 24px !important;
 }
 
 .mb3 {
-  margin-bottom: 30 !important;
+  margin-bottom: 30px !important;
 }
 
 .mt0 {
@@ -2029,15 +2029,15 @@ button.close {
 }
 
 .mt1 {
-  margin-top: 16 !important;
+  margin-top: 16px !important;
 }
 
 .mt2 {
-  margin-top: 24 !important;
+  margin-top: 24px !important;
 }
 
 .mt3 {
-  margin-top: 30 !important;
+  margin-top: 30px !important;
 }
 
 @media print {
