@@ -6,9 +6,12 @@
 
 // By Zander Martineau & Ashley Nolan for TMW - http://tmw.co.uk
 
-// Core variables and mixins
+// Core variables
 @import "colour-palette";
 @import "variables";
+
+// Mixins
+@import "helpers";
 @import "functions";
 @import "mixins";
 

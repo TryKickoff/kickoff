@@ -1,5 +1,5 @@
 // Clearfix
-// Other clearfix options: https://github.com/stubbornella/oocss/blob/oocss-sass/components/utils/_clearfix-me.scss
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
 @mixin clearfix {
 	*zoom: 1;
 	&:before,
@@ -59,21 +59,9 @@
 	}
 }
 
-// Optional hyphenation
-// https://developer.mozilla.org/en-US/docs/CSS/hyphens
-// @include hyphens();
-@mixin hyphens($arg: auto) {
-	word-wrap: break-word;
-	@include prefixer(hyphens, $arg, webkit moz ms o spec);
-}
-
-
-
 // Centre-align a block level element
-// @extend %center-block
-// #context a%center-block
-// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholders
-%center-block {
+// @include center-block
+@mixin center-block() {
 	display: block;
 	margin: 0 auto;
 }

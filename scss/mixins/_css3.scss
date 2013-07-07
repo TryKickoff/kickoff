@@ -99,20 +99,23 @@
 
 // @include transform-origin(center, center);
 @mixin transform-origin($args...) {
-		@include prefixer(transform-origin, $args, webkit moz o ms spec);
+	@include prefixer(transform-origin, $args, webkit moz o ms spec);
 }
 
 // ANIMATION
 @mixin animation($name, $duration: 300ms, $delay: 0, $ease: ease) {
--webkit-animation: $name $duration $delay $ease;
-   -moz-animation: $name $duration $delay $ease;
-	-ms-animation: $name $duration $delay $ease;
-		animation: $name $duration $delay $ease;
+	@include prefixer(animation, $name $duration $delay $ease, webkit moz o ms spec);
 }
 
-
-// GRADIENTS
-
+// HYPHENS
+// @include hyphens(auto);
+@mixin hyphens($hyphenation: none) {
+// none | manual | auto
+  @include prefixer(hyphens, $hyphenation, webkit moz ms spec);
+}
+// =================
+// === GRADIENTS ===
+// =================
 
 // Linear gradients
 // ================
@@ -153,12 +156,4 @@
 @mixin gradient-radial($inner-color: #555, $outer-color: #333) {
 	@include radial-gradient($inner-color 0%, $outer-color 100%, $fallback: $outer-color);
 	background-repeat: no-repeat;
-}
-
-// TODO: Is this needed?
-// Gradient Bar Colors for buttons and alerts
-@mixin gradientBar($primaryColor, $secondaryColor) {
-	@include gradient-vertical($primaryColor, $secondaryColor);
-	border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
-	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }

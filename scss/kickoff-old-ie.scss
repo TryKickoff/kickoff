@@ -14,9 +14,12 @@
 $old-ie: true;
 $fix-mqs: 1024px; //could use ems too
 
-// Core variables and mixins
+// Core variables
 @import "colour-palette";
 @import "variables";
+
+// Mixins
+@import "helpers";
 @import "functions";
 @import "mixins";
 
