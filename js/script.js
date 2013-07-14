@@ -2,13 +2,8 @@
 		TMW - (Author Name Here)
 */
 
-// ======================================
-// === Declare global 'TMW' namespace ===
-// ======================================
-var TMW = window.TMW || {};
-
-// Create a closure to maintain scope of the '$' and remain compatible with other frameworks
-(function($) {
+// Create a closure to maintain scope of the '$' and TMW
+(function (TMW, $) {
 
 	$(function() {
 		// Any globals go here in CAPS (but avoid if possible)
@@ -20,8 +15,8 @@ var TMW = window.TMW || {};
 
 	});// END DOC READY
 
-	/* optional triggers
 
+	/* optional triggers
 	// WINDOW.LOAD
 	$(window).load(function() {
 
@@ -34,12 +29,14 @@ var TMW = window.TMW || {};
 
 	*/
 
-})(jQuery);
 
-TMW.SiteSetup = {
-	variableX : '', // please don't keep me - only for example syntax!
 
-	init : function () {
-		console.debug('Kickoff is running');
-	}
-};
+	TMW.SiteSetup = {
+		variableX : '', // please don't keep me - only for example syntax!
+
+		init : function () {
+			console.debug('Kickoff is running');
+		}
+	};
+
+})(window.TMW = window.TMW || {}, jQuery);
