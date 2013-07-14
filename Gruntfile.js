@@ -5,8 +5,8 @@ module.exports = function (grunt) {
 	// ====================
 	// == Edit this section
 	var jsFileList = [
-		'js/helpers.js',
-		'js/plugins.js',
+		'js/helpers/helpers.js',
+		'js/helpers/console.js',
 		'js/script.js'
 	];
 	var distDir = 'js/dist/';
