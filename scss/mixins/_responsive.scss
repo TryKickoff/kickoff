@@ -1,7 +1,7 @@
 $fix-mqs: false !default; //assign false if no value set already
 
 @mixin respond-min($width) {
-	$width-em: $width / $base-font-size + em;
+	$width-em: em($width);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -19,7 +19,7 @@ $fix-mqs: false !default; //assign false if no value set already
 	}
 }
 @mixin respond-max($width) {
-	$width-em: $width / $base-font-size + em;
+	$width-em: em($width);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -37,8 +37,8 @@ $fix-mqs: false !default; //assign false if no value set already
 	}
 }
 @mixin respond-min-max($min-width, $max-width) {
-	$min-width-em: $min-width / $base-font-size + em;
-	$max-width-em: $max-width / $base-font-size + em;
+	$min-width-em: em($min-width);
+	$max-width-em: em($max-width);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {

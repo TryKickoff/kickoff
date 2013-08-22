@@ -4,7 +4,7 @@
 
 # SASS #
 ########
-.sass-cache
+.sass-cache/
 *.scssc
 
 
@@ -18,3 +18,14 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+
+# Random
+*.sublime-*
+
+node_modules/
+dist/
+*.map
+
+# Jekyll
+_site/

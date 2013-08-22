@@ -10,7 +10,7 @@ pre {
 	padding: 0 3px 2px;
 	font-family: $mono-font-family;
 	@include font-size(13);
-	color: $gray;
+	color: $color-code;
 	@include border-radius(3px);
 	tab-size: 3;
 }
@@ -20,7 +20,6 @@ code {
 	padding: 2px 4px;
 	color: $color-code;
 	background-color: $color-code-background;
-	border: 1px solid #e1e1e8;
 }
 
 // Blocks of code
@@ -47,8 +46,8 @@ pre {
 	// Account for some code outputs that place code tags in pre tags
 	& code {
 		padding: 0;
-		color: $color-code;
-		background-color: $color-code-background;
+		color: $color-pre;
+		background-color: $color-pre-background;
 		border: 0;
 	}
 }

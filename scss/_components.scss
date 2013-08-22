@@ -21,6 +21,7 @@ img {
 	&.left {
 		margin:0 20px 0 0;
 	}
+
 	&.right {
 		margin:0 0 0 20px;
 	}
@@ -171,6 +172,7 @@ ul.centred, ul.centered {
 	@include clearfix;
 	@extend .unstyled;
 	margin-bottom: $base-line-height + px;
+	border-bottom: 2px solid $active-tab;
 
 	&.is-right {
 		& li {
@@ -191,6 +193,17 @@ ul.centred, ul.centered {
 	& > li {
 		float: left;
 		margin: 0 5px;
+	}
+
+	a {
+		background-color: $inactive-tab;
+		@extend .btn;
+		@include border-radius(4px 4px 0 0);
+		color: #fff;
+
+		&.is-active {
+			background-color: $active-tab;
+		}
 	}
 }
 

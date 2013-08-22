@@ -5,6 +5,7 @@
 // * RESPONSIVE
 // * CSS3
 // * UTILITY MIXINS
+// * HiDPI
 // * FORMS
 
 // === Vendor prefix ===
@@ -23,9 +24,11 @@
 // === COMPONENTS ===
 @import "mixins/buttons";
 
-
 // === UTILITY MIXINS ===
 @import "mixins/utility";
+
+// === HiDPI ===
+@import "mixins/hidpi";
 
 // === FORMS ===
 @import "mixins/forms";

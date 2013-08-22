@@ -59,11 +59,11 @@
 .clear	{ clear:both; float:none; }
 
 .mb0 { margin-bottom: 0 !important;}
-.mb1 { margin-bottom: $base-font-size !important;}
-.mb2 { margin-bottom: $base-font-size * 1.5 !important;}
-.mb3 { margin-bottom: $base-font-size * 1.875 !important;}
+.mb1 { margin-bottom: ($base-font-size) + px !important;}
+.mb2 { margin-bottom: ($base-font-size * 1.5) + px !important;}
+.mb3 { margin-bottom: ($base-font-size * 1.875) + px !important;}
 
 .mt0 { margin-top:    0 !important;}
-.mt1 { margin-top:    $base-font-size !important;}
-.mt2 { margin-top:    $base-font-size * 1.5 !important;}
-.mt3 { margin-top:    $base-font-size * 1.875 !important;}
+.mt1 { margin-top:    ($base-font-size) + px !important;}
+.mt2 { margin-top:    ($base-font-size * 1.5) + px !important;}
+.mt3 { margin-top:    ($base-font-size * 1.875) + px !important;}

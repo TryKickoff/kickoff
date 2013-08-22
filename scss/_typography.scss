@@ -27,6 +27,13 @@
 // http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
 // ------------------------------------------------------------------------------
 
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+// www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {
+	font-size: $base-font-size + px;
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+}
 
 // Body text
 body {
@@ -124,17 +131,6 @@ h6, .h6, .zeta {
 	text-transform: uppercase;
 }
 
-// Page header
-.page-header {
-	padding-bottom: $base-line-height - 1 + px;
-	margin: ($base-line-height + px) 0;
-	border-bottom: 1px solid lighten(#000, 70%)er;
-}
-
-.page-header h1 {
-	line-height: 1;
-}
-
 // Links
 a {
 	&, &:link {
@@ -154,119 +150,6 @@ a {
 		//text-decoration: underline;
 	}
 }
-
-// === Misc ===
-
-// Horizontal rules
-hr {
-	margin: ($base-line-height + px) 0;
-	border: 0;
-	border-top: 1px solid $hrBorder;
-	border-bottom: 1px solid #fff;
-}
-
-// Emphasis
-strong, b {
-	font-weight: $bold-font-weight;
-}
-em, i {
-	font-style: italic;
-}
-.muted {
-	color: lighten(#000, 70%);
-}
-
-// Abbreviations and acronyms
-abbr[title] {
-	border-bottom: 1px dotted #ddd;
-	cursor: help;
-}
-abbr.initialism {
-	font-size: 90%;
-	text-transform: uppercase;
-}
-
-// Blockquotes
-blockquote {
-	padding: 0 0 0 15px;
-	margin: 0 0 ($base-line-height + px);
-	border-left: 5px solid lighten(#000, 70%)er;
-	& p {
-		margin-bottom: 0;
-		@include font-size($base-font-size);
-		font-weight: 300;
-		@include line-height($base-line-height * 1.25);
-	}
-	& small {
-		display: block;
-		@include line-height($base-line-height);
-		color: lighten(#000, 70%);
-		&:before {
-			content: '\2014 \00A0';
-		}
-	}
-
-	// Float right with text-align: right
-	&.pull-right {
-		float: right;
-		padding-left: 0;
-		padding-right: 15px;
-		border-left: 0;
-		border-right: 5px solid lighten(#000, 70%)er;
-		& p,
-		& small {
-			text-align: right;
-		}
-	}
-}
-
-// Quotes
-q,
-blockquote {
-	&:before,
-	&:after {
-		content: "";
-	}
-}
-
-// Addresses
-address {
-	display: block;
-	margin-bottom: $base-line-height + px;
-	@include line-height($base-line-height);
-	font-style: normal;
-}
-
-small {
-	font-size: 75%;
-}
-
-cite {
-	font-style: normal;
-}
-
-// Addresses styling not present in S5, Chrome
-dfn {
-	font-style: italic;
-}
-
-// Addresses styling not present in IE6/7/8/9
-mark {
-	background: #ff0;
-	color: #000;
-}
-
-// Prevents sub and sup affecting line-height in all browsers
-// gist.github.com/413930
-sub, sup {
-	font-size: 75%;
-	@include line-height(0);
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
 
 
 // === Lists ===
@@ -309,7 +192,8 @@ ul, ol {
 	}
 }
 
-.unstyled {
+.unstyled,
+nav ul, nav ol {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -333,7 +217,7 @@ dt {
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
-		@extend text-overflow;
+		@extend %text-overflow;
 		float: left;
 		clear: left;
 		width: 220px;
@@ -349,12 +233,133 @@ dd {
 	}
 }
 
+
+// === Misc ===
+
+// Horizontal rules
+hr {
+	margin: ($base-line-height + px) 0;
+	border: 0;
+	border-top: 1px solid $hr-border;
+	border-bottom: 1px solid #fff;
+}
+
+// Emphasis
+strong, b {
+	font-weight: $bold-font-weight;
+}
+em, i {
+	font-style: italic;
+}
+.muted {
+	color: lighten(#000, 70%);
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+	border-bottom: 1px dotted #ddd;
+	cursor: help;
+}
+abbr.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+	padding-left: 10px;
+	margin: ($base-line-height + px);
+	border-left: 4px solid lighten(#000, 80%);
+
+	& p {
+		margin-bottom: 0;
+		@include font-size($base-font-size);
+		font-weight: 300;
+		@include line-height($base-line-height * 1.25);
+	}
+
+	& small {
+		display: block;
+		@include line-height($base-line-height);
+		color: lighten(#000, 70%);
+
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+
+	// Float right with text-align: right
+	&.pull-right {
+		float: right;
+		padding-left: 0;
+		padding-right: 10px;
+		border-left: 0;
+		border-right: 4px solid lighten(#000, 80%);
+
+		&, & p, & small {
+			text-align: right;
+		}
+	}
+}
+
+// Quotes
+q,
+blockquote {
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+// Addresses
+address {
+	display: block;
+	margin-bottom: $base-line-height + px;
+	@include line-height($base-line-height);
+	font-style: normal;
+}
+
+small {
+	font-size: 75%;
+}
+
+cite {
+	font-style: normal;
+}
+
+// Addresses styling not present in S5, Chrome
+dfn {
+	font-style: italic;
+}
+
+// Addresses styling not present in IE6/7/8/9
+mark {
+	background: $yellow;
+	padding: 2px 4px;
+	@include border-radius(3px);
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+sub, sup {
+	font-size: 75%;
+	@include line-height(0);
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+samp {
+	font-family: $mono-font-family;
+}
+
+
 // === Utilities ===
 .text-centre, .text-center { text-align: center;}
 .text-left { text-align: left;}
 .text-right { text-align: right;}
-
-
 
 ::-moz-selection {
 	color: lighten($color-selection, 55%);
@@ -364,4 +369,17 @@ dd {
 ::selection {
 	color: lighten($color-selection, 55%);
 	background: $color-selection;
+}
+
+
+
+// Page header
+.page-header {
+	padding-bottom: $base-line-height - 1 + px;
+	margin: ($base-line-height + px) 0;
+	border-bottom: 1px solid lighten(#000, 70%);
+}
+
+.page-header h1 {
+	line-height: 1;
 }
