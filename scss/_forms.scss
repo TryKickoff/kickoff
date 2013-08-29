@@ -45,7 +45,7 @@ legend {
 	padding: 0;
 	margin-bottom: $base-line-height + px;
 	@include font-size($base-font-size * 1.5);
-	@include line-height($base-line-height * 2);
+	line-height: $base-leading;
 	color: $label-colour;
 	border: 0;
 	border-bottom: 1px solid #eee;
@@ -65,7 +65,7 @@ button,
 select,
 textarea {
 	@include font-size($base-font-size);
-	@include line-height($base-line-height);
+	line-height: $base-leading;
 	font-weight: normal;
 	vertical-align: baseline;
 	*vertical-align: middle;
@@ -116,7 +116,7 @@ select,
 	padding: 4px;
 	margin-bottom: 9px;
 	@include font-size($base-font-size);
-	@include line-height($base-line-height);
+	line-height: $base-leading;
 	color: $input-colour;
 	background-color: #FFF;
 	border: 1px solid $input-border;
@@ -587,7 +587,7 @@ textarea {
 		height: $base-line-height + px;
 		padding: 4px 5px;
 		font-weight: normal;
-		@include line-height($base-line-height);
+		line-height: $base-leading;
 		text-align: center;
 		text-shadow: 0 1px 0 #fff;
 		vertical-align: middle;

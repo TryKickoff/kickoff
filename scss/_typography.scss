@@ -39,7 +39,7 @@ html {
 body {
 	font-family: $base-font-family;
 	@include font-size($base-font-size);
-	@include line-height($base-line-height);
+	line-height: $base-leading;
 	color: $color-text;
 	background-color: $color-background;
 
@@ -58,7 +58,6 @@ body {
 p {
 	font-family: $base-font-family;
 	@include font-size($base-font-size);
-	@include line-height($base-line-height);
 	margin-top: 0;
 	margin-bottom: $base-line-height + px;
 
@@ -90,21 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1, .alpha {
 	@include font-size(51);
-	@include line-height($base-line-height * 2);
+	line-height: $base-leading * 2;
 	margin-top: $base-line-height + px;
 	margin-bottom: ($base-line-height * 2) + px;
 }
 
 h2, .h2, .beta {
 	@include font-size(28);
-	@include line-height($base-line-height * 2);
 	margin-top: ($base-line-height * 2) + px;
 	margin-bottom: $base-line-height + px;
 }
 
 h3, .h3, .gamma {
 	@include font-size(21);
-	@include line-height($base-line-height);
 	margin-top: $base-line-height + px;
 	margin-bottom: 0px;
 }
@@ -112,7 +109,6 @@ h3, .h3, .gamma {
 h4, .h4,, .delta,
 h5, .h5, .epsilon,
 h6, .h6, .zeta {
-	@include line-height($base-line-height);
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -182,10 +178,6 @@ ul, ol {
 		}
 	}
 
-	& li {
-		@include line-height($base-line-height);
-	}
-
 	& ul,
 	& ol {
 		margin-bottom: 0;
@@ -206,14 +198,8 @@ dl {
 	margin-bottom: $base-line-height + px;
 }
 
-dt,
-dd {
-	@include line-height($base-line-height);
-}
-
 dt {
 	font-weight:$bold-font-weight;
-	@include line-height($base-line-height - 1); // fix jank Helvetica Neue font bug
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
@@ -275,12 +261,10 @@ blockquote {
 		margin-bottom: 0;
 		@include font-size($base-font-size);
 		font-weight: 300;
-		@include line-height($base-line-height * 1.25);
 	}
 
 	& small {
 		display: block;
-		@include line-height($base-line-height);
 		color: lighten(#000, 70%);
 
 		&:before {
@@ -315,7 +299,6 @@ blockquote {
 address {
 	display: block;
 	margin-bottom: $base-line-height + px;
-	@include line-height($base-line-height);
 	font-style: normal;
 }
 
@@ -343,7 +326,7 @@ mark {
 // gist.github.com/413930
 sub, sup {
 	font-size: 75%;
-	@include line-height(0);
+	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }

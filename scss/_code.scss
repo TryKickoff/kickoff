@@ -27,7 +27,7 @@ pre {
 	display: block;
 	padding: ($base-line-height - 1) / 2 + px;
 	margin: 0 0 ($base-line-height / 2 + px);
-	@include line-height($base-line-height);
+	line-height: $base-leading;
 	color: $color-pre;
 	background-color: $color-pre-background;
 	border: 1px solid #ccc; // fallback for IE7-8

@@ -244,7 +244,7 @@ ul.centred, ul.centered {
 		position: relative;
 		top: -2px;
 		right: -21px;
-		line-height: $base-line-height + px;
+		line-height: $base-leading;
 	}
 }
 
@@ -301,7 +301,7 @@ ul.centred, ul.centered {
 	float: right;
 	font-size: 20px;
 	font-weight: bold;
-	line-height: $base-line-height + px;
+	line-height: $base-leading;
 	color: #000;
 	text-shadow: 0 1px 0 rgba(255,255,255,1);
 	@include opacity(20);
