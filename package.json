@@ -19,7 +19,8 @@
   "engines": {
     "node": ">=0.6"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-contrib-sass": "~0.4.1",
@@ -27,7 +28,10 @@
     "grunt-contrib-watch": "~0.5.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-devtools": "~0.1.0-7"
+    "grunt-devtools": "~0.1.0-7",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-autoprefixer": "~0.2.20130806",
+    "grunt-csso": "~0.5.0"
   },
   "keywords": []
 }

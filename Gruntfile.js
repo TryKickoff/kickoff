@@ -45,8 +45,8 @@ module.exports = function (grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'css/kickoff.min.css': 'scss/kickoff.scss',
-					'css/kickoff-old-ie.min.css': 'scss/kickoff-old-ie.scss'
+					'css/kickoff.css': 'scss/kickoff.scss',
+					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
 
 			}
@@ -82,10 +82,39 @@ module.exports = function (grunt) {
 			}
 		},
 
+		//auto prefixes your css using caniuse
+		//https://github.com/ai/autoprefixer
+		autoprefixer: {
+			dist : {
+				options: {
+					// Task-specific options go here - we are supporting
+					// the last 2 browsers, any browsers with >1% market share,
+					// and ensuring we support IE7 + 8 with prefixes
+					browsers: ['last 2 versions', '> 1%', 'ie 8', 'ie 7']
+				},
+				files: {
+					'css/kickoff.prefixed.css': 'css/kickoff.css',
+					'css/kickoff-old-ie.prefixed.css': 'css/kickoff-old-ie.css'
+				}
+			}
+		},
+
+		//https://github.com/t32k/grunt-csso
+		csso: {
+			dist: {
+				files: {
+					'css/kickoff.min.css': ['css/kickoff.prefixed.css'],
+					'css/kickoff-old-ie.min.css': ['css/kickoff-old-ie.prefixed.css']
+				},
+
+			}
+		},
+
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: 'sass:dev'
+				tasks: ['sass:dev']
+				// tasks: ['sass:dev', 'autoprefixer:dist', 'csso']
 			},
 
 			js: {
@@ -113,6 +142,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-devtools');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-csso');
 
 	// =============
 	// === Tasks ===
@@ -122,6 +153,7 @@ module.exports = function (grunt) {
 
 	// A task for deployment
 	grunt.registerTask('deploy', ['jshint', 'uglify', 'sass:deploy']);
+	// grunt.registerTask('deploy', ['jshint', 'uglify', 'sass:deploy', 'autoprefixer', 'csso']);
 
 	// Default task
 	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
