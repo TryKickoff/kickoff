@@ -30,7 +30,7 @@ String.prototype.substitute = function (object) {
 };
 
 //Array forEach patch
-if (!'forEach' in Array.prototype) {
+if (!('forEach' in Array.prototype)) {
 	Array.prototype.forEach = function (fn, scope) {
 		for (var i = 0, len = this.length; i < len; ++i) {
 			fn.call(scope, this[i], i, this);
@@ -39,7 +39,7 @@ if (!'forEach' in Array.prototype) {
 }
 
 //Array filter patch
-if (!'filter' in Array.prototype) {
+if (!('filter' in Array.prototype)) {
 	Array.prototype.filter = function (fn, scope) {
 		var results = [];
 		for (var value, i = 0, l = this.length >>> 0; i < l; i++) {
@@ -55,7 +55,7 @@ if (!'filter' in Array.prototype) {
 }
 
 //Array map patch
-if (!'map' in Array.prototype) {
+if (!('map' in Array.prototype)) {
 	Array.prototype.map = function (fn, scope) {
 		var length = this.length >>> 0, results = Array(length);
 		for (var i = 0; i < length; i++) {
@@ -68,7 +68,7 @@ if (!'map' in Array.prototype) {
 }
 
 //Object create patch
-if (!'create' in Object.prototype) {
+if (!('create' in Object.prototype)) {
 	Object.create = (function () {
 		function F() { }
 
@@ -106,8 +106,9 @@ Object.compare = function (obj1, obj2) {
 	return true;
 };
 
+
 //Function bind patch
-if (!'bind' in Function.prototype) {
+if (!('bind' in Function.prototype)) {
 	Function.prototype.bind = function (oThis) {
 		if (typeof this !== "function") {
 			// closest thing possible to the ECMAScript 5 internal IsCallable function
@@ -118,10 +119,7 @@ if (!'bind' in Function.prototype) {
 			fToBind = this,
 			fNOP = function () { },
 			fBound = function () {
-				return fToBind.apply(this instanceof fNOP && oThis
-									   ? this
-									   : oThis,
-									 aArgs.concat(Array.prototype.slice.call(arguments)));
+				return fToBind.apply(this instanceof fNOP && oThis ? this : oThis, aArgs.concat(Array.prototype.slice.call(arguments)));
 			};
 
 		fNOP.prototype = this.prototype;
@@ -129,4 +127,4 @@ if (!'bind' in Function.prototype) {
 
 		return fBound;
 	};
-}
+};
