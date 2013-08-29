@@ -8,7 +8,6 @@
 	"maxerr": "50",
 	"noarg": true,
 	"noempty": true,
-	"quotmark":  "single",
 	"smarttabs": false,
 	"strict": false,
 	"trailing":  true,

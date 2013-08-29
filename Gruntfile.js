@@ -32,7 +32,8 @@ module.exports = function (grunt) {
 					style: 'expanded',
 					lineNumbers: false,
 					debugInfo : false,
-					precision : 8
+					precision : 8,
+					sourcemap : true
 				},
 				files: {
 					'css/kickoff.css': 'scss/kickoff.scss',
@@ -111,6 +112,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-devtools');
 
 	// =============
 	// === Tasks ===
@@ -119,7 +121,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev', ['jshint', 'uglify', 'sass:dev']);
 
 	// A task for deployment
-	grunt.registerTask('deploy', ['jshint', 'clean', 'modernizr', 'uglify', 'sass:deploy']);
+	grunt.registerTask('deploy', ['jshint', 'uglify', 'sass:deploy']);
 
 	// Default task
 	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
