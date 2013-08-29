@@ -305,10 +305,6 @@ ul.centred, ul.centered {
 	color: #000;
 	text-shadow: 0 1px 0 rgba(255,255,255,1);
 	@include opacity(20);
-	background: linear-gradient(to bottom, hsl(0, 80%, 70%), #bada55);
-	display: flex;
-	border-radius: 5px;
-	transition: transform 1s;
 
 	&:hover,
 	&:focus {
