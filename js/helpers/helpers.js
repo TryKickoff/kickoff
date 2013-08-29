@@ -16,7 +16,7 @@
 // ============
 // By John Resig (MIT Licensed)
 // http://ejohn.org/blog/javascript-array-remove/
-Array.prototype.remove = Array.prototype.remove ||  function(from, to) {
+Array.prototype.remove = Array.prototype.remove || function (from, to) {
 	var rest = this.slice((to || from) + 1 || this.length);
 	this.length = from < 0 ? this.length + from : from;
 	return this.push.apply(this, rest);
@@ -68,7 +68,7 @@ if (!'map' in Array.prototype) {
 }
 
 //Object create patch
-if (!'create' in Object.create) {
+if (!'create' in Object.prototype) {
 	Object.create = (function () {
 		function F() { }
 
@@ -105,3 +105,28 @@ Object.compare = function (obj1, obj2) {
 	}
 	return true;
 };
+
+//Function bind patch
+if (!'bind' in Function.prototype) {
+	Function.prototype.bind = function (oThis) {
+		if (typeof this !== "function") {
+			// closest thing possible to the ECMAScript 5 internal IsCallable function
+			throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+		}
+
+		var aArgs = Array.prototype.slice.call(arguments, 1),
+			fToBind = this,
+			fNOP = function () { },
+			fBound = function () {
+				return fToBind.apply(this instanceof fNOP && oThis
+									   ? this
+									   : oThis,
+									 aArgs.concat(Array.prototype.slice.call(arguments)));
+			};
+
+		fNOP.prototype = this.prototype;
+		fBound.prototype = new fNOP();
+
+		return fBound;
+	};
+}
