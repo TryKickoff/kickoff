@@ -24,8 +24,11 @@ Thumbs.db
 *.sublime-*
 
 node_modules/
-dist/
-*.map
+
+# Ignore these if we are building js/Sass on the server #
+#########################################################
+# dist/
+# *.map
 
 # Jekyll
 _site/
