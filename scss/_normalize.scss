@@ -1,8 +1,9 @@
-// ======================
-// === NORMALIZE.scss ===
-// ======================
-// http://github.com/necolas/normalize.css
-// Kickoff uses an amended version of this file.
+/* ==========================================================================
+   Normalize - CSS reset
+
+   http://github.com/necolas/normalize.css
+   Kickoff uses an amended version of this file.
+   ========================================================================== */
 
 * {
 	@include box-sizing(border-box);
