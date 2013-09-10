@@ -345,13 +345,13 @@ samp {
 .text-right { text-align: right;}
 
 ::-moz-selection {
-	color: lighten($color-selection, 55%);
-	background: $color-selection;
+	color: $color-selection;
+	background: $color-selection-bg;
 }
 
 ::selection {
-	color: lighten($color-selection, 55%);
-	background: $color-selection;
+	color: $color-selection;
+	background: $color-selection-bg;
 }
 
 
