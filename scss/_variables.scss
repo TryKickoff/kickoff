@@ -1,18 +1,18 @@
-// =========================
-// === VARIABLES.scss ======
-// === TABLE OF CONTENTS ===
-// =========================
-// * Settings
-// * Global valuesx
-// * Breakpoints
-// * Paths
-// * Grid setup
-// * Colour palette
-// * Components
+/* ==========================================================================
+   Variables
+   * Settings
+   * Global valuesx
+   * Breakpoints
+   * Paths
+   * Grid setup
+   * Colour palette
+   * Components
+   ========================================================================== */
 
-// === Settings ===
-// ================
 
+/*
+   Settings
+   ========================================================================== */
 // Whether or not the markup has html5-boilerplate style IE classes in it or not
 $using-ieclasses              : true;
 
@@ -24,9 +24,9 @@ $support-ie8                  : true;
 $support-FF36                 : false;
 
 
-// === Typography ===
-// ==================
-
+/*
+    Typography
+   ========================================================================== */
 // Base sizes
 // Set this in pixels, the font-size mixin will convert to REMS
 $base-font-size                : 16;
@@ -48,8 +48,9 @@ $headings-font-family         : inherit; // empty to use Kickoff default $base-f
 $headings-font-weight         : bold;    // instead of browser default, bold
 
 
-// === Breakpoints ===
-// ===================
+/*
+   Breakpoints
+   ========================================================================== */
 // There are no common breakpoints so these are just a suggestion
 // You'll need to define your own breakpoints to suit your design
 $breakpoint-narrow            : 400;  // Set in px
@@ -58,8 +59,9 @@ $breakpoint-wide              : 992;  // Set in px
 $breakpoint-huge              : 1600; // Set in px
 
 
-// === Paths ===
-// =============
+/*
+   Path vars
+   ========================================================================== */
 // Usage
 // background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 
@@ -70,8 +72,9 @@ $img-ui-path                  : "#{$img-path}/ui";
 // $img-ui-sprite-2x             : "#{$img-ui-path}/kickoff-sprite-2x.png";
 
 
-// === Grid setup ===
-// ==================
+/*
+   Choreographic Grid setup
+   ========================================================================== */
 // Settings here override & affect the output in choreographic-grid.scss
 
 // Setup grid defaults
@@ -93,7 +96,11 @@ $usingSplitsAndShunts         : false  ; // Use Splits & Shunts for responsive w
 
 
 
-// === App-specific variables ===
-// ==============================
+/*
+   App-specific variables
+   ========================================================================== */
+
+
+
 
 
