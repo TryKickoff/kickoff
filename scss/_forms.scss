@@ -123,7 +123,7 @@ select,
 	@include border-radius(3px);
 }
 
-.uneditable-textarea {
+.textarea--uneditable {
 	width: auto;
 	height: auto;
 }
@@ -301,12 +301,12 @@ select {
 // === INPUT SIZES ===
 // ===================
 // General classes for quick sizes
-.input-mini       { width: 60px;  }
-.input-small      { width: 90px;  }
-.input-medium     { width: 150px; }
-.input-large      { width: 210px; }
-.input-xlarge     { width: 270px; }
-.input-xxlarge    { width: 530px; }
+.input--mini       { width: 60px;  }
+.input--small      { width: 90px;  }
+.input--medium     { width: 150px; }
+.input--large      { width: 210px; }
+.input--xlarge     { width: 270px; }
+.input--xxlarge    { width: 530px; }
 
 // Grid style input sizes
 input,
@@ -354,15 +354,15 @@ textarea {
 // === FORM FIELD FEEDBACK STATES ===
 // ==================================
 // Warning
-.control-group.warning {
+.control-group.control-group--warning {
 	@include formFieldState($warning-text, $warning-text, $warning-background);
 }
 // Error
-.control-group.error {
+.control-group.control-group--error {
 	@include formFieldState($error-text, $error-text, $error-background);
 }
 // Success
-.control-group.success {
+.control-group.control-group--success {
 	@include formFieldState($success-text, $success-text, $success-background);
 }
 

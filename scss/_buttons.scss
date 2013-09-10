@@ -70,7 +70,7 @@
 // --------------------------------------------------
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
-.btn-large {
+.btn--large {
 	@include font-size($base-font-size + 2);
 	line-height:3.5;
 	height:     3.5em;
@@ -80,7 +80,7 @@
 }
 
 // Small
-.btn-small {
+.btn--small {
 	@include font-size(13);
 	line-height:1.5;
 	height:     1.5em;
@@ -89,13 +89,98 @@
 	@include border-radius(3px);
 }
 
-.btn-pill {
+.btn--pill {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	@include border-radius(100em);
 }
 
-// Close button: for lightboxes etc
+// Block button
+// -------------------------
+.btn--block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.btn--block + .btn--block {
+	margin-top: 10px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn-block {
+		width: 100%;
+	}
+}
+
+// Make the button inherit sizing from its parent.
+.btn--natural{
+	vertical-align:baseline;
+	font-size:inherit;
+	line-height:inherit;
+	height:auto;
+	padding-right:0.5em;
+	padding-left: 0.5em;
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn--primary.active {
+	color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn--primary {
+	background-color: $btn-primary-background;
+	color: #fff !important;
+	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
+
+	&:hover{
+		background-color: $btn-primary-background-highlight;
+	}
+}
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn--link,
+.btn--link:active,
+.btn--link[disabled] {
+	background-color: transparent;
+	background-image: none;
+	@include box-shadow(none);
+}
+.btn--link {
+	border-color: transparent;
+	cursor: pointer;
+	color: $color-link-default;
+	@include border-radius(0);
+}
+.btn--link:hover,
+.btn--link:focus {
+	color: $color-link-hover;
+	text-decoration: underline;
+	background-color: transparent;
+}
+.btn--link[disabled]:hover,
+.btn--link[disabled]:focus {
+	color: #333;
+	text-decoration: none;
+}
+
+/*
+   Close Button: for lightboxes etc
+   ========================================================================== */
+
 .btn-close {
 	position: absolute;
 	right: 20px;
@@ -117,141 +202,4 @@
 		color: #fff;
 		@include border-radius(50px);
 	}
-}
-
-// Block button
-// -------------------------
-.btn-block {
-	display: block;
-	width: 100%;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-	margin-top: 10px;
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-	&.btn-block {
-		width: 100%;
-	}
-}
-
-// Make the button inherit sizing from its parent.
-.btn-natural{
-	vertical-align:baseline;
-	font-size:inherit;
-	line-height:inherit;
-	height:auto;
-	padding-right:0.5em;
-	padding-left: 0.5em;
-}
-
-// Alternate buttons
-// --------------------------------------------------
-
-// Provide *some* extra contrast for those who can get it
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
-	color: rgba(255,255,255,.75);
-}
-
-// Set the backgrounds
-// -------------------------
-.btn-primary {
-	background-color: $btn-primary-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-primary-background-highlight;
-	}
-}
-// Warning appears are orange
-.btn-warning {
-	background-color: $btn-warning-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-warning-background-highlight;
-	}
-}
-// Danger and error appear as red
-.btn-danger {
-	background-color: $btn-danger-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-danger-background-highlight;
-	}
-}
-// Success appears as green
-.btn-success {
-	background-color: $btn-success-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-success-background-highlight;
-	}
-}
-// Info appears as a neutral blue
-.btn-info {
-	background-color: $btn-info-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-info-background-highlight;
-	}
-}
-// Inverse appears as dark gray
-.btn-inverse {
-	background-color: $btn-inverse-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-inverse-background-highlight;
-	}
-}
-
-// Link buttons
-// --------------------------------------------------
-
-// Make a button look and behave like a link
-.btn-link,
-.btn-link:active,
-.btn-link[disabled] {
-	background-color: transparent;
-	background-image: none;
-	@include box-shadow(none);
-}
-.btn-link {
-	border-color: transparent;
-	cursor: pointer;
-	color: $color-link-default;
-	@include border-radius(0);
-}
-.btn-link:hover,
-.btn-link:focus {
-	color: $color-link-hover;
-	text-decoration: underline;
-	background-color: transparent;
-}
-.btn-link[disabled]:hover,
-.btn-link[disabled]:focus {
-	color: #333;
-	text-decoration: none;
 }

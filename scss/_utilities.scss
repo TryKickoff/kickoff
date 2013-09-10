@@ -53,9 +53,9 @@
 // Hide visually and from screenreaders, but maintain layout
 .is-invisible { visibility: hidden; }
 
-.float-left		{ float:left; }
-.float-right	{ float:right; }
-.clear			{ clear:both; float:none; }
+.l-float-left		{ float:left; }
+.l-float-right	{ float:right; }
+.l-clear			{ clear:both; float:none; }
 
 .l-mb0 { margin-bottom: 0 !important;}
 .l-mb1 { margin-bottom: ($base-font-size) + px !important;}
