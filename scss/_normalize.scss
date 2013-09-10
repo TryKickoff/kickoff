@@ -4,7 +4,9 @@
 // http://github.com/necolas/normalize.css
 // Kickoff uses an amended version of this file.
 
-* {
+*,
+*:before,
+*:after {
 	@include box-sizing(border-box);
 }
 
