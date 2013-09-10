@@ -46,7 +46,7 @@ legend {
 	margin-bottom: $base-line-height + px;
 	@include font-size($base-font-size * 1.5);
 	line-height: $base-leading;
-	color: $label-colour;
+	color: $label-color;
 	border: 0;
 	border-bottom: 1px solid #eee;
 	white-space: normal;
@@ -83,12 +83,12 @@ textarea {
 label {
 	display: block;
 	margin-bottom: 5px;
-	color: $label-colour;
+	color: $label-color;
 	font-weight: bold;
 
 	& small {
 		font-weight: normal;
-		color: lighten($label-colour, 30%);
+		color: lighten($label-color, 30%);
 	}
 
 	&.checkbox,
@@ -117,7 +117,7 @@ select,
 	margin-bottom: 9px;
 	@include font-size($base-font-size);
 	line-height: $base-leading;
-	color: $input-colour;
+	color: $input-color;
 	background-color: #FFF;
 	border: 1px solid $input-border;
 	@include border-radius(3px);
