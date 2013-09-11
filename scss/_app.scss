@@ -11,6 +11,7 @@
 
 
 
+
 /*
    Footer
    ========================================================================== */
@@ -39,30 +40,30 @@
 
 }
 
-// === 400> ===
+// === $breakpoint-narrow> ===
 @include respond-min($breakpoint-narrow) {
 
 }
-// === end 400> ===
+// === end $breakpoint-narrow> ===
 
 
 
-// === 768> ===
+// === $breakpoint-mid> ===
 @include respond-min($breakpoint-mid) {
 
 }
-// === end 768> ===
+// === end $breakpoint-mid> ===
 
 
-// === 992> ===
+// === $breakpoint-wide> ===
 @include respond-min($breakpoint-wide) {
 
 }
-// === end 992> ===
+// === end $breakpoint-wide> ===
 
 
-// === 1382> ===
+// === $breakpoint-huge> ===
 @include respond-min($breakpoint-huge) {
 
 }
-// === end 1382> ===
+// === end $breakpoint-huge> ===
