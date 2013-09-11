@@ -66,7 +66,7 @@
 	}
 }
 
-// Button Sizes
+// Button Modifiers
 // --------------------------------------------------
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
@@ -113,7 +113,7 @@
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	&.btn-block {
+	&.btn--block {
 		width: 100%;
 	}
 }
@@ -126,14 +126,6 @@ input[type="button"] {
 	height:auto;
 	padding-right:0.5em;
 	padding-left: 0.5em;
-}
-
-// Alternate buttons
-// --------------------------------------------------
-
-// Provide *some* extra contrast for those who can get it
-.btn--primary.active {
-	color: rgba(255,255,255,.75);
 }
 
 // Set the backgrounds
@@ -176,6 +168,11 @@ input[type="button"] {
 	color: #333;
 	text-decoration: none;
 }
+
+
+
+// Separate Button Styles - not modifiers
+// --------------------------------------------------
 
 /*
    Close Button: for lightboxes etc

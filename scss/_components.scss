@@ -41,7 +41,7 @@ img,object,embed,video{
    These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility block-grid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
 
    Usage:
-   <ul class="block-grid two-up">
+   <ul class="l-block-grid l-block-grid--two-up">
        <li></li>
    </ul>
    ========================================================================== */
@@ -105,7 +105,7 @@ img,object,embed,video{
 /*
    Centred lists
 
-   <ul class="centred">
+   <ul class="l-centred">
    	<li></li>
    </ul>
    ========================================================================== */
@@ -121,7 +121,7 @@ ul.l-centred, ul.l-centered {
 /*
    Floated lists
 
-   <ul class="floated">
+   <ul class="l-floated">
    	<li></li>
    </ul>
    ========================================================================== */
@@ -204,7 +204,7 @@ ul.l-centred, ul.l-centered {
 		@include border-radius(4px 4px 0 0);
 		color: #fff;
 
-		&.is-active {
+		&.tab--is-active {
 			background-color: $active-tab;
 		}
 	}
@@ -216,7 +216,7 @@ ul.l-centred, ul.l-centered {
 		display: none;
 	}
 
-	& > li.is-active {
+	& > li.tab--is-active {
 		display: block;
 	}
 }
@@ -300,7 +300,7 @@ ul.l-centred, ul.l-centered {
 /*
    Close buttons
    ========================================================================== */
-.alert--close {
+.alert-close {
 	float: right;
 	font-size: 20px;
 	font-weight: bold;
@@ -321,7 +321,7 @@ ul.l-centred, ul.l-centered {
 // Additional properties for button version
 // iOS requires the button element instead of an anchor tag.
 // If you want the anchor version, it requires `href="#"`.
-button.alert--close {
+button.alert-close {
 	padding: 0;
 	cursor: pointer;
 	background: transparent;

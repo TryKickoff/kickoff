@@ -26,7 +26,7 @@ fieldset {
 }
 
 // Margin to space out fieldsets
-.control-group {
+.form--control-group {
 	margin-top: ($base-line-height / 2 + px);
 	list-style-type: none;
 
@@ -106,12 +106,13 @@ label {
 }
 
 // Inputs, Textareas, Selects
+// fluid width by default
 input,
 textarea,
 select,
 .uneditable-input,
 .file-wrapper {
-	width: 210px;
+	width: 100%;
 	height: $base-line-height * 1.5 + px;
 	padding: 4px;
 	margin-bottom: 9px;
@@ -337,7 +338,7 @@ textarea {
 	}
 
 	// HTML5 invalid states
-	// Shares styles with the .control-group.error above
+	// Shares styles with the .form--control-group.error above
 	&:focus:required:invalid {
 		color: #b94a48;
 		border-color: #ee5f5b;
@@ -354,15 +355,15 @@ textarea {
 // === FORM FIELD FEEDBACK STATES ===
 // ==================================
 // Warning
-.control-group.control-group--warning {
+.form-controlgroup.form-controlgroup--warning {
 	@include formFieldState($warning-text, $warning-text, $warning-background);
 }
 // Error
-.control-group.control-group--error {
+.form-controlgroup.form--controlgroup--error {
 	@include formFieldState($error-text, $error-text, $error-background);
 }
 // Success
-.control-group.control-group--success {
+.form-controlgroup.form-controlgroup--success {
 	@include formFieldState($success-text, $success-text, $success-background);
 }
 
@@ -373,17 +374,15 @@ textarea {
 
 // Common properties
 // -----------------
-.form-search,
-.form-inline,
-.form-horizontal {
+.form--search,
+.form--inline,
+.form--horizontal {
 
 	& input,
 	& textarea,
 	& select,
-	& .help-inline,
-	& .uneditable-input,
-	& .input-prepend,
-	& .input-append {
+	& .form-helpinline,
+	& .uneditable-input {
 		@extend %inline-block;
 		margin-bottom: 0;
 	}
@@ -399,26 +398,26 @@ textarea {
 // === HORIZONTAL-SPECIFIC STYLES ===
 // ==================================
 
-// <ul class="control-group">
-// 	<li class="control-group">
-// 		<label for="name" class="control-label">Name</label>
-// 		<div class="control-input">
+// <ul>
+// 	<li class="form--control-group">
+// 		<label for="name" class="form--control-group--label">Name</label>
+// 		<div class="form--control-group--input">
 // 			<input type="text" id="name" placeholder="Zander Martineau" />
 // 		</div>
 // 	</li>
 // </ul>
 
-.form-horizontal {
+.form--horizontal {
 
 	// Increase spacing between groups
-	& .control-group {
+	& .form-controlgroup {
 		margin-bottom: $base-line-height + px;
 		@include clearfix();
 	}
 
 	// Float the labels left
-	& .control-label,
-	& .control-group label {
+	& .form-controlgroup-label,
+	& .form-controlgroup label {
 		float: left;
 		width: 140px;
 		padding-top: 5px;
@@ -426,8 +425,8 @@ textarea {
 	}
 
 	// Move over all input controls and content
-	& .control-input,
-	& .control-group div {
+	& .form-controlgroup-input,
+	& .form-controlgroup div {
 		margin-left: 160px;
 		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
 		*display: inline-block;
@@ -438,8 +437,8 @@ textarea {
 		}
 	}
 
-	// Remove bottom margin on block level help text since that's accounted for on .control-group
-	& .help-block {
+	// Remove bottom margin on block level help text since that's accounted for on .form--control-group
+	& .form-helpblock {
 		margin-top: $base-line-height / 2 + px;
 		margin-bottom: 0;
 	}
@@ -454,8 +453,8 @@ textarea {
 // =============================================
 // === INLINE & SEARCH FORMS SPECIFIC STYLES ===
 // =============================================
-.form-search,
-.form-inline {
+.form--search,
+.form--inline {
 
 	// Give all elements some space
 	& > * {
@@ -485,18 +484,12 @@ textarea {
 		margin-left: 0;
 		margin-right: 3px;
 	}
-
-	// Remove margin for input-prepend/-append
-	& .input-prepend,
-	& .input-append {
-		margin-bottom: 0;
-	}
 }
 
 // SEARCH FORM
 // -----------
 
-.search-query {
+.form--search-input {
 	padding-left: 14px;
 	padding-right: 14px;
 	margin-bottom: 0; // remove the default margin on all inputs
@@ -526,7 +519,7 @@ textarea {
 }
 
 // For text that needs to appear as an input but should not be an input
-.uneditable-input {
+.input--uneditable {
 	background-color: $input-background;
 	border-color: #eee;
 	@include box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
@@ -538,108 +531,18 @@ textarea {
 
 // HELP TEXT
 // ---------
-.help-block,
-.help-inline {
+.form--helpBlock,
+.form--helpInline {
 	color: $gray; // lighten the text some for contrast
 }
 
-.help-block {
+.form--helpBlock {
 	display: block; // account for any element using help-block
 	margin-bottom: $base-line-height / 2 + px;
 }
 
-.help-inline {
+.form--helpInline {
 	@extend %inline-block;
 	vertical-align: middle;
 	padding-left: 5px;
-}
-
-
-
-// ====================
-// === INPUT GROUPS ===
-// ====================
-// Allow us to put symbols and text within the input field for a cleaner look
-.input-prepend,
-.input-append {
-	margin-bottom: 5px;
-
-	& input,
-	& select,
-	& .uneditable-input {
-		position: relative; // placed here by default so that on :focus we can place the input above the .add-on for full border and box-shadow goodness
-		margin-bottom: 0; // prevent bottom margin from screwing up alignment in stacked forms
-		*margin-left: 0;
-		vertical-align: middle;
-		@include border-radius(0 3px 3px 0);
-		// Make input on top when focused so blue border and shadow always show
-		&:focus {
-			z-index: 2;
-		}
-	}
-	& .uneditable-input {
-		border-left-color: #ccc;
-	}
-	& .add-on {
-		@extend %inline-block;
-		width: auto;
-		min-width: 16px;
-		height: $base-line-height + px;
-		padding: 4px 5px;
-		font-weight: normal;
-		line-height: $base-leading;
-		text-align: center;
-		text-shadow: 0 1px 0 #fff;
-		vertical-align: middle;
-		background-color: lighten(#000, 70%);
-		border: 1px solid #ccc;
-	}
-	& .add-on,
-	& .btn {
-		@include border-radius(3px 0 0 3px);
-	}
-	& .active {
-		background-color: lighten($green, 30);
-		border-color: $green;
-	}
-}
-.input-prepend {
-	& .add-on,
-	& .btn {
-		margin-right: -1px;
-	}
-}
-.input-append {
-	& input,
-	& select,
-	& .uneditable-input {
-		@include border-radius(3px 0 0 3px);
-	}
-	& .uneditable-input {
-		border-left-color: #eee;
-		border-right-color: #ccc;
-	}
-	& .add-on,
-	& .btn {
-		margin-left: -1px;
-		@include border-radius(0 3px 3px 0);
-	}
-}
-// Remove all border-radius for inputs with both prepend and append
-.input-prepend.input-append {
-	& input,
-	& select,
-	& .uneditable-input {
-		@include border-radius(0);
-	}
-	& .add-on:first-child,
-	& .btn:first-child {
-		margin-right: -1px;
-		@include border-radius(3px 0 0 3px);
-	}
-	& .add-on:last-child,
-	& .btn:last-child {
-		margin-left: -1px;
-		@include border-radius(0 3px 3px 0);
-	}
 }
