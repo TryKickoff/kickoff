@@ -355,15 +355,15 @@ textarea {
 // === FORM FIELD FEEDBACK STATES ===
 // ==================================
 // Warning
-.form-controlgroup.form-controlgroup--warning {
+.form-controlGroup.form-controlGroup--warning {
 	@include formFieldState($warning-text, $warning-text, $warning-background);
 }
 // Error
-.form-controlgroup.form--controlgroup--error {
+.form-controlGroup.form--controlGroup--error {
 	@include formFieldState($error-text, $error-text, $error-background);
 }
 // Success
-.form-controlgroup.form-controlgroup--success {
+.form-controlGroup.form-controlGroup--success {
 	@include formFieldState($success-text, $success-text, $success-background);
 }
 
@@ -410,14 +410,14 @@ textarea {
 .form--horizontal {
 
 	// Increase spacing between groups
-	& .form-controlgroup {
+	& .form-controlGroup {
 		margin-bottom: $base-line-height + px;
 		@include clearfix();
 	}
 
 	// Float the labels left
-	& .form-controlgroup-label,
-	& .form-controlgroup label {
+	& .form-controlGroup-label,
+	& .form-controlGroup label {
 		float: left;
 		width: 140px;
 		padding-top: 5px;
@@ -425,8 +425,8 @@ textarea {
 	}
 
 	// Move over all input controls and content
-	& .form-controlgroup-input,
-	& .form-controlgroup div {
+	& .form-controlGroup-input,
+	& .form-controlGroup div {
 		margin-left: 160px;
 		/* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
 		*display: inline-block;
@@ -438,7 +438,7 @@ textarea {
 	}
 
 	// Remove bottom margin on block level help text since that's accounted for on .form--control-group
-	& .form-helpblock {
+	& .form-helpBlock {
 		margin-top: $base-line-height / 2 + px;
 		margin-bottom: 0;
 	}
