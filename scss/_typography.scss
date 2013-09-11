@@ -348,21 +348,7 @@ samp {
 	color: $color-selection;
 	background: $color-selection-bg;
 }
-
 ::selection {
 	color: $color-selection;
 	background: $color-selection-bg;
-}
-
-
-
-// Page header
-.page-header {
-	padding-bottom: $base-line-height - 1 + px;
-	margin: ($base-line-height + px) 0;
-	border-bottom: 1px solid lighten(#000, 70%);
-}
-
-.page-header h1 {
-	line-height: 1;
 }
