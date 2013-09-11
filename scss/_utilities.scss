@@ -28,7 +28,7 @@
 .is-shown { display: block; }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
-.is-visuallyhidden {
+.is-visuallyHidden {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -53,8 +53,8 @@
 // Hide visually and from screenreaders, but maintain layout
 .is-invisible { visibility: hidden; }
 
-.l-float-left		{ float:left; }
-.l-float-right	{ float:right; }
+.l-floatLleft		{ float:left; }
+.l-floatRight		{ float:right; }
 .l-clear			{ clear:both; float:none; }
 
 .l-mb0 { margin-bottom: 0 !important;}

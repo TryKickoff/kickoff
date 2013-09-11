@@ -26,19 +26,19 @@
 }
 
 // Print utilities
-.visible-print {
+.is-visiblePrint {
 	display: block !important;
 	tr&      { display: table-row !important; }
 	th&, td& { display: table-cell !important; }
 }
 
 @media print {
-	.is-visible-print {
+	.is-visiblePrint {
 		display: block !important;
 		tr&      { display: table-row !important; }
 		th&, td& { display: table-cell !important; }
 	}
-	.is-hidden-print {
+	.is-hiddenPrint {
 		display: none !important;
 		tr&      { display: none !important; }
 		th&, td& { display: none !important; }
