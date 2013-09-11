@@ -45,7 +45,7 @@ img,object,embed,video{
        <li></li>
    </ul>
    ========================================================================== */
-.block-grid {
+.l-block-grid {
 	display: block;
 	list-style-type: none;
 	@include clearfix;
@@ -56,7 +56,7 @@ img,object,embed,video{
 		float: left;
 	}
 
-	&.two-up {
+	&.l-block-grid--two-up {
 		margin-left: -4%;
 
 		& li {
@@ -67,7 +67,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.three-up {
+	&.l-block-grid--three-up {
 		margin-left: -2%;
 
 		& li {
@@ -78,7 +78,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.four-up {
+	&.l-block-grid--four-up {
 		margin-left: -2%;
 
 		& li {
@@ -89,7 +89,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.five-up {
+	&.l-block-grid--five-up {
 		margin-left: -1.5%;
 
 		& li {
@@ -109,7 +109,7 @@ img,object,embed,video{
    	<li></li>
    </ul>
    ========================================================================== */
-ul.centred, ul.centered {
+ul.l-centred, ul.l-centered {
 	text-align: center;
 
 	& li {
@@ -125,7 +125,7 @@ ul.centred, ul.centered {
    	<li></li>
    </ul>
    ========================================================================== */
-.floated {
+.l-floated {
 	@include clearfix;
 
 	& li {
@@ -158,11 +158,11 @@ ul.centred, ul.centered {
 }
 
 // Sizes
-.well-large {
+.well--large {
 	padding: 24px;
 	@include border-radius(6px);
 }
-.well-small {
+.well--small {
 	padding: 9px;
 	@include border-radius(3px);
 }
@@ -177,14 +177,14 @@ ul.centred, ul.centered {
 	margin-bottom: $base-line-height + px;
 	border-bottom: 2px solid $active-tab;
 
-	&.is-right {
+	&.tabs--is-right {
 		& li {
 			float: right;
 		}
 	}
 
-	&.is-centred,
-	&.is-centered {
+	&.tabs--is-centred,
+	&.tabs--is-centered {
 		text-align: center;
 
 		& > li {
@@ -244,7 +244,7 @@ ul.centred, ul.centered {
 	}
 
 	// Adjust close link position
-	.close {
+	.alert--close {
 		position: relative;
 		top: -2px;
 		right: -21px;
@@ -254,7 +254,7 @@ ul.centred, ul.centered {
 
 
 // Alternate styles
-.alert-success {
+.alert--success {
 	background-color: $success-background;
 	border-color: $success-border;
 	color: $success-text;
@@ -263,7 +263,7 @@ ul.centred, ul.centered {
 		color: $success-text;
 	}
 }
-.alert-error {
+.alert--error {
 	background-color: $error-background;
 	border-color: $error-border;
 	color: $error-text;
@@ -272,7 +272,7 @@ ul.centred, ul.centered {
 		color: $error-text;
 	}
 }
-.alert-info {
+.alert--info {
 	background-color: $info-background;
 	border-color: $info-border;
 	color: $info-text;
@@ -284,7 +284,7 @@ ul.centred, ul.centered {
 
 
 // Block alerts
-.alert-block {
+.alert--block {
 	padding-top: 14px;
 	padding-bottom: 14px;
 
@@ -300,7 +300,7 @@ ul.centred, ul.centered {
 /*
    Close buttons
    ========================================================================== */
-.close {
+.alert--close {
 	float: right;
 	font-size: 20px;
 	font-weight: bold;
@@ -321,7 +321,7 @@ ul.centred, ul.centered {
 // Additional properties for button version
 // iOS requires the button element instead of an anchor tag.
 // If you want the anchor version, it requires `href="#"`.
-button.close {
+button.alert--close {
 	padding: 0;
 	cursor: pointer;
 	background: transparent;

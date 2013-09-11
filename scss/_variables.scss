@@ -67,11 +67,9 @@ $breakpoint-huge              : 1600; // Set in px
 
 $img-path                     : "/img";
 $img-ui-path                  : "#{$img-path}/ui";
-$img-ui-sprite                : "#{$img-ui-path}/ui/kickoff-sprite.png";
+// $img-ui-sprite                : "#{$img-ui-path}/ui/kickoff-sprite.png";
 // $img-ui-sprite-dimensions     : 50px 300px; // Used for hiDPI sprites  - make these the same size as $imgSprite1x
-$img-ui-sprite-2x             : "#{$img-ui-path}/kickoff-sprite-2x.png";
-$img-icon-sprite              : "#{$img-ui-path}/glyphicons-halflings.png";
-$img-icon-white-sprite        : "#{$img-ui-path}/glyphicons-halflings-white.png";
+// $img-ui-sprite-2x             : "#{$img-ui-path}/kickoff-sprite-2x.png";
 
 
 /*
