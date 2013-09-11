@@ -1,12 +1,12 @@
 // Clearfix
 // Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
 @mixin clearfix {
-	*zoom: 1;
+	zoom: 1;
+
 	&:before,
 	&:after {
 		display: table;
 		content: " ";
-		zoom: 1;
 	}
 	&:after {
 		clear: both;

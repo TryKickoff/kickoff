@@ -1,12 +1,3 @@
-// Block level inputs
-@mixin input-block-level {
-	display: block;
-	width: 100%;
-	min-height: 28px; /* Make inputs at least the height of their button counterpart */
-	/* Makes inputs behave like true block-level elements */
-	@include box-sizing(border-box);
-}
-
 // Mixin for form field states
 @mixin formFieldState($color-text: $color-text, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
 	// Set the text color

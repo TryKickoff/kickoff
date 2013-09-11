@@ -17,11 +17,11 @@ img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
 
-	&.left {
+	&.img--left {
 		margin:0 20px 0 0;
 	}
 
-	&.right {
+	&.img--right {
 		margin:0 0 0 20px;
 	}
 }
@@ -38,14 +38,14 @@ img,object,embed,video{
 
 /*
    Block grids
-   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility block-grid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
+   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
 
    Usage:
-   <ul class="l-block-grid l-block-grid--two-up">
+   <ul class="l-blockGrid l-blockGrid--twoUp">
        <li></li>
    </ul>
    ========================================================================== */
-.l-block-grid {
+.l-blockGrid {
 	display: block;
 	list-style-type: none;
 	@include clearfix;
@@ -56,7 +56,7 @@ img,object,embed,video{
 		float: left;
 	}
 
-	&.l-block-grid--two-up {
+	&.l-blockGrid--twoUp {
 		margin-left: -4%;
 
 		& li {
@@ -67,7 +67,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.l-block-grid--three-up {
+	&.l-blockGrid--threeUp {
 		margin-left: -2%;
 
 		& li {
@@ -78,7 +78,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.l-block-grid--four-up {
+	&.l-blockGrid--fourUp {
 		margin-left: -2%;
 
 		& li {
@@ -89,7 +89,7 @@ img,object,embed,video{
 		}
 	}
 
-	&.l-block-grid--five-up {
+	&.l-blockGrid--fiveUp {
 		margin-left: -1.5%;
 
 		& li {
@@ -105,11 +105,11 @@ img,object,embed,video{
 /*
    Centred lists
 
-   <ul class="l-centred">
+   <ul class="l-list--centred">
    	<li></li>
    </ul>
    ========================================================================== */
-ul.l-centred, ul.l-centered {
+.l-list--centred, .l-list--centered {
 	text-align: center;
 
 	& li {
@@ -121,11 +121,11 @@ ul.l-centred, ul.l-centered {
 /*
    Floated lists
 
-   <ul class="l-floated">
+   <ul class="l-list--floated">
    	<li></li>
    </ul>
    ========================================================================== */
-.l-floated {
+.l-list--floated {
 	@include clearfix;
 
 	& li {
@@ -177,14 +177,14 @@ ul.l-centred, ul.l-centered {
 	margin-bottom: $base-line-height + px;
 	border-bottom: 2px solid $active-tab;
 
-	&.tabs--is-right {
+	&.tabs--alignRight {
 		& li {
 			float: right;
 		}
 	}
 
-	&.tabs--is-centred,
-	&.tabs--is-centered {
+	&.tabs--alignCentre,
+	&.tabs--alignCenter {
 		text-align: center;
 
 		& > li {
@@ -204,19 +204,19 @@ ul.l-centred, ul.l-centered {
 		@include border-radius(4px 4px 0 0);
 		color: #fff;
 
-		&.tab--is-active {
+		&.is-active {
 			background-color: $active-tab;
 		}
 	}
 }
 
-.tabs-content {
+.l-tabsContent {
 	@extend .unstyled;
 	& > li {
 		display: none;
 	}
 
-	& > li.tab--is-active {
+	& > li.is-active {
 		display: block;
 	}
 }
@@ -244,7 +244,7 @@ ul.l-centred, ul.l-centered {
 	}
 
 	// Adjust close link position
-	.alert--close {
+	.alertClose {
 		position: relative;
 		top: -2px;
 		right: -21px;
@@ -300,7 +300,8 @@ ul.l-centred, ul.l-centered {
 /*
    Close buttons
    ========================================================================== */
-.alert-close {
+
+.alertClose {
 	float: right;
 	font-size: 20px;
 	font-weight: bold;
@@ -321,7 +322,7 @@ ul.l-centred, ul.l-centered {
 // Additional properties for button version
 // iOS requires the button element instead of an anchor tag.
 // If you want the anchor version, it requires `href="#"`.
-button.alert-close {
+button.alertClose {
 	padding: 0;
 	cursor: pointer;
 	background: transparent;
