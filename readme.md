@@ -14,8 +14,8 @@ Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/)
 * Install Sass globally - `sudo gem install sass --pre`
 * Install Node from [nodejs.org](http://nodejs.org/)
 * Install Grunt CLI - `npm install -g grunt-cli`
-* Navigate to (`cd`) your project directory and run 'npm install' which will install all Grunt's dependencies
-* Run 'grunt watch' to watch for changes and compile Sass/Javascript
+* Navigate to (`cd`) your project directory and run `npm install` which will install all Grunt's dependencies
+* Run `grunt watch` to watch for changes and compile Sass/Javascript
 
 When using Grunt with Kickoff, source maps are created for both the Javascript and Sass. Javascript is compiled to the `/js/dist` and Sass is compiled to the '/css' folder.
 
