@@ -71,7 +71,8 @@ module.exports = function (grunt) {
 			},
 			production: {
 				options: {
-					style: 'compressed'
+					style: 'compressed',
+					precision : 8
 				},
 				files: {
 					'css/kickoff.css': 'scss/kickoff.scss',
@@ -114,7 +115,7 @@ module.exports = function (grunt) {
 			},
 
 			/**
-			 * Use the array at the top of this files to specify which js files you include
+			 * Use the array at the top of this file to specify which js files you include
 			 */
 			js: {
 				src: jsFileList,
