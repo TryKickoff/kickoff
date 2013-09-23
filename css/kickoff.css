@@ -1,3 +1,48 @@
+/* ==========================================================================
+   Colour palette (yeah we're from England!)
+   ========================================================================== */
+/* ==========================================================================
+   Variables
+   * Settings
+   * Global valuesx
+   * Breakpoints
+   * Paths
+   * Grid setup
+   * Colour palette
+   * Components
+   ========================================================================== */
+/*
+   Settings
+   ========================================================================== */
+/*
+    Typography
+   ========================================================================== */
+/*
+   Breakpoints
+   ========================================================================== */
+/*
+   Path vars
+   ========================================================================== */
+/*
+   Choreographic Grid setup
+   ========================================================================== */
+/*
+   App-specific variables
+   ========================================================================== */
+/* ==========================================================================
+   Sass Mixins
+   * Vendor Prefixer
+   * Responsive
+   * CSS3
+   * Utility Mixins
+   * hiDpi
+   * Forms
+   ========================================================================== */
+/* Vendor prefixer */
+/* Responsive mixins */
+/* CSS3 */
+/* Components */
+/* Utility mixins */
 .dl-horizontal dt {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -13,61 +58,18 @@ select:focus {
   outline-offset: -2px;
 }
 
-.radio.inline,
-.checkbox.inline, .form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
-.form-inline input,
-.form-inline textarea,
-.form-inline select,
-.form-inline .help-inline,
-.form-inline .uneditable-input,
-.form-inline .input-prepend,
-.form-inline .input-append,
-.form-horizontal input,
-.form-horizontal textarea,
-.form-horizontal select,
-.form-horizontal .help-inline,
-.form-horizontal .uneditable-input,
-.form-horizontal .input-prepend,
-.form-horizontal .input-append, .form-search label,
-.form-inline label, .help-inline, .input-prepend .add-on,
-.input-append .add-on {
-  display: inline-block;
-}
-.lt-ie8 .radio.inline,
-.lt-ie8 .checkbox.inline, .lt-ie8 .form-search input, .form-search .lt-ie8 input, .lt-ie8 .form-search textarea, .form-search .lt-ie8 textarea, .lt-ie8 .form-search select, .form-search .lt-ie8 select, .lt-ie8 .form-search .uneditable-input, .form-search .lt-ie8 .uneditable-input, .lt-ie8 .form-search .input-prepend, .form-search .lt-ie8 .input-prepend, .lt-ie8 .form-search .input-append, .form-search .lt-ie8 .input-append,
-.lt-ie8 .form-inline input,
-.form-inline .lt-ie8 input,
-.lt-ie8 .form-inline textarea,
-.form-inline .lt-ie8 textarea,
-.lt-ie8 .form-inline select,
-.form-inline .lt-ie8 select,
-.lt-ie8 .form-inline .uneditable-input,
-.form-inline .lt-ie8 .uneditable-input,
-.lt-ie8 .form-inline .input-prepend,
-.form-inline .lt-ie8 .input-prepend,
-.lt-ie8 .form-inline .input-append,
-.form-inline .lt-ie8 .input-append,
-.lt-ie8 .form-horizontal input,
-.form-horizontal .lt-ie8 input,
-.lt-ie8 .form-horizontal textarea,
-.form-horizontal .lt-ie8 textarea,
-.lt-ie8 .form-horizontal select,
-.form-horizontal .lt-ie8 select,
-.lt-ie8 .form-horizontal .uneditable-input,
-.form-horizontal .lt-ie8 .uneditable-input,
-.lt-ie8 .form-horizontal .input-prepend,
-.form-horizontal .lt-ie8 .input-prepend,
-.lt-ie8 .form-horizontal .input-append,
-.form-horizontal .lt-ie8 .input-append, .lt-ie8 .form-search label, .form-search .lt-ie8 label,
-.lt-ie8 .form-inline label,
-.form-inline .lt-ie8 label, .lt-ie8 .help-inline, .lt-ie8 .input-prepend .add-on, .input-prepend .lt-ie8 .add-on,
-.lt-ie8 .input-append .add-on,
-.input-append .lt-ie8 .add-on {
-  display: inline;
-  zoom: 1;
-}
+/* HiDPI */
+/* FORMS */
+/* BROWSER FIXES */
+/* ==========================================================================
+   Normalize - CSS reset
 
-* {
+   http://github.com/necolas/normalize.css
+   Kickoff uses an amended version of this file.
+   ========================================================================== */
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -85,7 +87,8 @@ hgroup,
 main,
 nav,
 section,
-summary {
+summary,
+main {
   display: block;
 }
 
@@ -288,8 +291,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  line-height: 1.4;
   color: #444444;
   background-color: white;
 }
@@ -298,8 +300,6 @@ p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 22px;
-  line-height: 1.375rem;
   margin-top: 0;
   margin-bottom: 22px;
 }
@@ -319,8 +319,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 h1, .h1, .alpha {
   font-size: 51px;
   font-size: 3.1875rem;
-  line-height: 44px;
-  line-height: 2.75rem;
+  line-height: 2.8;
   margin-top: 22px;
   margin-bottom: 44px;
 }
@@ -328,8 +327,6 @@ h1, .h1, .alpha {
 h2, .h2, .beta {
   font-size: 28px;
   font-size: 1.75rem;
-  line-height: 44px;
-  line-height: 2.75rem;
   margin-top: 44px;
   margin-bottom: 22px;
 }
@@ -337,8 +334,6 @@ h2, .h2, .beta {
 h3, .h3, .gamma {
   font-size: 21px;
   font-size: 1.3125rem;
-  line-height: 22px;
-  line-height: 1.375rem;
   margin-top: 22px;
   margin-bottom: 0px;
 }
@@ -346,8 +341,6 @@ h3, .h3, .gamma {
 h4, .h4, .delta,
 h5, .h5, .epsilon,
 h6, .h6, .zeta {
-  line-height: 22px;
-  line-height: 1.375rem;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -411,15 +404,11 @@ ul ol, ol ol {
 ul ol ol, ol ol ol {
   list-style-type: lower-roman;
 }
-ul li, ol li {
-  line-height: 22px;
-  line-height: 1.375rem;
-}
 ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0;
 }
 
-.unstyled, form ul, .tabs, .tabs-content,
+.unstyled, form ul, .tabs, .l-tabsContent,
 nav ul, nav ol {
   margin: 0;
   padding: 0;
@@ -431,16 +420,8 @@ dl {
   margin-bottom: 22px;
 }
 
-dt,
-dd {
-  line-height: 22px;
-  line-height: 1.375rem;
-}
-
 dt {
   font-weight: bold;
-  line-height: 21px;
-  line-height: 1.3125rem;
 }
 .dl-horizontal dt {
   float: left;
@@ -495,13 +476,9 @@ blockquote p {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 300;
-  line-height: 27.5px;
-  line-height: 1.71875rem;
 }
 blockquote small {
   display: block;
-  line-height: 22px;
-  line-height: 1.375rem;
   color: #b3b3b3;
 }
 blockquote small:before {
@@ -527,8 +504,6 @@ blockquote:after {
 address {
   display: block;
   margin-bottom: 22px;
-  line-height: 22px;
-  line-height: 1.375rem;
   font-style: normal;
 }
 
@@ -555,8 +530,7 @@ mark {
 
 sub, sup {
   font-size: 75%;
-  line-height: 0px;
-  line-height: 0rem;
+  line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
@@ -586,23 +560,13 @@ samp {
 }
 
 ::-moz-selection {
-  color: #c9d5e1;
+  color: white;
   background: #34495e;
 }
 
 ::selection {
-  color: #c9d5e1;
+  color: white;
   background: #34495e;
-}
-
-.page-header {
-  padding-bottom: 21px;
-  margin: 22px 0;
-  border-bottom: 1px solid #b3b3b3;
-}
-
-.page-header h1 {
-  line-height: 1;
 }
 
 form {
@@ -615,11 +579,11 @@ fieldset {
   border: 0;
 }
 
-.control-group {
+.form-controlGroup {
   margin-top: 11px;
   list-style-type: none;
 }
-legend + .control-group {
+legend + .form-controlGroup {
   margin-top: 22px;
   -webkit-margin-top-collapse: separate;
 }
@@ -631,8 +595,7 @@ legend {
   margin-bottom: 22px;
   font-size: 24px;
   font-size: 1.5rem;
-  line-height: 44px;
-  line-height: 2.75rem;
+  line-height: 1.4;
   color: #4d4d4d;
   border: 0;
   border-bottom: 1px solid #eee;
@@ -651,8 +614,7 @@ select,
 textarea {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  line-height: 1.4;
   font-weight: normal;
   vertical-align: baseline;
   *vertical-align: middle;
@@ -686,16 +648,15 @@ label input, label textarea, label select {
 input,
 textarea,
 select,
-.uneditable-input,
-.file-wrapper {
-  width: 210px;
+.fileWrapper {
+  display: block;
+  width: 100%;
   height: 33px;
   padding: 4px;
   margin-bottom: 9px;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  line-height: 1.4;
   color: #4d4d4d;
   background-color: #FFF;
   border: 1px solid #cccccc;
@@ -705,7 +666,7 @@ select,
   border-radius: 3px;
 }
 
-.uneditable-textarea {
+.textarea--uneditable {
   width: auto;
   height: auto;
 }
@@ -801,19 +762,19 @@ textarea {
   float: left;
   margin-left: -18px;
 }
-.radio.inline,
-.checkbox.inline {
+
+.control--inline {
+  display: inline-block;
   padding-top: 5px;
   margin-bottom: 0;
   vertical-align: middle;
 }
-.radio.inline + .radio.inline,
-.checkbox.inline +
-.checkbox.inline {
+
+.control--inline + .control--inline {
   margin-left: 10px;
 }
 
-.control-input > .radio:first-child, .control-input > .checkbox:first-child {
+.form-controlGroup-input > .radio:first-child, .form-controlGroup-input > .checkbox:first-child {
   padding-top: 5px;
 }
 
@@ -851,39 +812,38 @@ select:focus {
   box-shadow: none;
 }
 
-.input-mini {
+.input--mini {
   width: 60px;
 }
 
-.input-small {
+.input--small {
   width: 90px;
 }
 
-.input-medium {
+.input--medium {
   width: 150px;
 }
 
-.input-large {
+.input--large {
   width: 210px;
 }
 
-.input-xlarge {
+.input--xlarge {
   width: 270px;
 }
 
-.input-xxlarge {
+.input--xxlarge {
   width: 530px;
 }
 
 input[class*="span"],
 select[class*="span"],
-textarea[class*="span"],
-.uneditable-input[class*="span"] {
+textarea[class*="span"] {
   float: none;
   margin-left: 0;
 }
 
-.file-wrapper input {
+.fileWrapper input {
   width: 90%;
 }
 
@@ -912,174 +872,164 @@ textarea:focus:required:invalid:focus {
   box-shadow: 0 0 6px #f8b9b7;
 }
 
-.control-group.warning > label,
-.control-group.warning .help-block,
-.control-group.warning .help-inline {
+.form-controlGroup.form-controlGroup--warning > label,
+.form-controlGroup.form-controlGroup--warning .help-block,
+.form-controlGroup.form-controlGroup--warning .help-inline {
   color: #c09853;
 }
-.control-group.warning input,
-.control-group.warning select,
-.control-group.warning textarea {
+.form-controlGroup.form-controlGroup--warning input,
+.form-controlGroup.form-controlGroup--warning select,
+.form-controlGroup.form-controlGroup--warning textarea {
   color: #c09853;
   border-color: #c09853;
 }
-.control-group.warning input:focus,
-.control-group.warning select:focus,
-.control-group.warning textarea:focus {
+.form-controlGroup.form-controlGroup--warning input:focus,
+.form-controlGroup.form-controlGroup--warning select:focus,
+.form-controlGroup.form-controlGroup--warning textarea:focus {
   border-color: #a47e3c;
   -webkit-box-shadow: 0 0 6px #dbc59e;
   -moz-box-shadow: 0 0 6px #dbc59e;
   -o-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
-.control-group.warning .input-prepend .add-on,
-.control-group.warning .input-append .add-on {
+.form-controlGroup.form-controlGroup--warning .input-prepend .add-on,
+.form-controlGroup.form-controlGroup--warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853;
 }
 
-.control-group.error > label,
-.control-group.error .help-block,
-.control-group.error .help-inline {
+.form-controlGroup.form-controlGroup--error > label,
+.form-controlGroup.form-controlGroup--error .help-block,
+.form-controlGroup.form-controlGroup--error .help-inline {
   color: #b94a48;
 }
-.control-group.error input,
-.control-group.error select,
-.control-group.error textarea {
+.form-controlGroup.form-controlGroup--error input,
+.form-controlGroup.form-controlGroup--error select,
+.form-controlGroup.form-controlGroup--error textarea {
   color: #b94a48;
   border-color: #b94a48;
 }
-.control-group.error input:focus,
-.control-group.error select:focus,
-.control-group.error textarea:focus {
+.form-controlGroup.form-controlGroup--error input:focus,
+.form-controlGroup.form-controlGroup--error select:focus,
+.form-controlGroup.form-controlGroup--error textarea:focus {
   border-color: #953b39;
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   -o-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
-.control-group.error .input-prepend .add-on,
-.control-group.error .input-append .add-on {
+.form-controlGroup.form-controlGroup--error .input-prepend .add-on,
+.form-controlGroup.form-controlGroup--error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
 
-.control-group.success > label,
-.control-group.success .help-block,
-.control-group.success .help-inline {
+.form-controlGroup.form-controlGroup--success > label,
+.form-controlGroup.form-controlGroup--success .help-block,
+.form-controlGroup.form-controlGroup--success .help-inline {
   color: #468847;
 }
-.control-group.success input,
-.control-group.success select,
-.control-group.success textarea {
+.form-controlGroup.form-controlGroup--success input,
+.form-controlGroup.form-controlGroup--success select,
+.form-controlGroup.form-controlGroup--success textarea {
   color: #468847;
   border-color: #468847;
 }
-.control-group.success input:focus,
-.control-group.success select:focus,
-.control-group.success textarea:focus {
+.form-controlGroup.form-controlGroup--success input:focus,
+.form-controlGroup.form-controlGroup--success select:focus,
+.form-controlGroup.form-controlGroup--success textarea:focus {
   border-color: #356635;
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   -o-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
 }
-.control-group.success .input-prepend .add-on,
-.control-group.success .input-append .add-on {
+.form-controlGroup.form-controlGroup--success .input-prepend .add-on,
+.form-controlGroup.form-controlGroup--success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
   border-color: #468847;
 }
 
-.form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
-.form-inline input,
-.form-inline textarea,
-.form-inline select,
-.form-inline .help-inline,
-.form-inline .uneditable-input,
-.form-inline .input-prepend,
-.form-inline .input-append,
-.form-horizontal input,
-.form-horizontal textarea,
-.form-horizontal select,
-.form-horizontal .help-inline,
-.form-horizontal .uneditable-input,
-.form-horizontal .input-prepend,
-.form-horizontal .input-append {
+.form--search input, .form--search textarea, .form--search select, .form--search .form-helpInline,
+.form--inline input,
+.form--inline textarea,
+.form--inline select,
+.form--inline .form-helpInline,
+.form--horizontal input,
+.form--horizontal textarea,
+.form--horizontal select,
+.form--horizontal .form-helpInline {
+  display: inline-block;
   margin-bottom: 0;
 }
-.form-search .hide,
-.form-inline .hide,
-.form-horizontal .hide {
+.form--search .hide,
+.form--inline .hide,
+.form--horizontal .hide {
   display: none;
 }
 
-.form-horizontal .control-group {
+.form--horizontal .form-controlGroup {
   margin-bottom: 22px;
   *zoom: 1;
 }
-.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+.form--horizontal .form-controlGroup:before, .form--horizontal .form-controlGroup:after {
   content: " ";
   display: table;
 }
-.form-horizontal .control-group:after {
+.form--horizontal .form-controlGroup:after {
   clear: both;
 }
-.form-horizontal .control-label, .form-horizontal .control-group label {
+.form--horizontal .form-controlGroup-label, .form--horizontal .form-controlGroup label {
   float: left;
   width: 140px;
   padding-top: 5px;
   text-align: right;
 }
-.form-horizontal .control-input, .form-horizontal .control-group div {
+.form--horizontal .form-controlGroup-input, .form--horizontal .form-controlGroup div {
   margin-left: 160px;
-  /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
-  *display: inline-block;
-  *margin-left: 0;
-  *padding-left: 20px;
 }
-.form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
+.form--horizontal .form-controlGroup-input:first-child, .form--horizontal .form-controlGroup div:first-child {
   *padding-left: 160px;
 }
-.form-horizontal .help-block {
+.form--horizontal .form-helpBlock {
   margin-top: 11px;
   margin-bottom: 0;
 }
-.form-horizontal .form-actions {
+.form--horizontal .form-actions {
   padding-left: 160px;
 }
 
-.form-search > *,
-.form-inline > * {
+.form--search > *,
+.form--inline > * {
   margin-right: 10px;
 }
-.form-search > *:last-child,
-.form-inline > *:last-child {
+.form--search > *:last-child,
+.form--inline > *:last-child {
   margin-right: 0;
 }
-.form-search .radio, .form-search .checkbox,
-.form-inline .radio,
-.form-inline .checkbox {
+.form--search label,
+.form--inline label {
+  display: inline-block;
+}
+.form--search .radio, .form--search .checkbox,
+.form--inline .radio,
+.form--inline .checkbox {
   padding-left: 0;
   margin-bottom: 0;
   vertical-align: middle;
 }
-.form-search .radio input[type="radio"], .form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
+.form--search .radio input[type="radio"], .form--search .checkbox input[type="checkbox"],
+.form--inline .radio input[type="radio"],
+.form--inline .checkbox input[type="checkbox"] {
   float: left;
   margin-left: 0;
   margin-right: 3px;
 }
-.form-search .input-prepend, .form-search .input-append,
-.form-inline .input-prepend,
-.form-inline .input-append {
-  margin-bottom: 0;
-}
 
-.search-query {
+.form--search-input {
   padding-left: 14px;
   padding-right: 14px;
   margin-bottom: 0;
@@ -1111,16 +1061,6 @@ textarea:focus:required:invalid:focus {
   margin-right: 0;
 }
 
-.uneditable-input {
-  background-color: white;
-  border-color: #eee;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  cursor: not-allowed;
-}
-
 :-ms-input-placeholder {
   color: #b3b3b3;
 }
@@ -1133,120 +1073,20 @@ textarea:focus:required:invalid:focus {
   color: #b3b3b3;
 }
 
-.help-block,
-.help-inline {
+.form-helpBlock,
+.form-helpInline {
   color: #7f8c8d;
 }
 
-.help-block {
+.form-helpBlock {
   display: block;
   margin-bottom: 11px;
 }
 
-.help-inline {
+.form-helpInline {
+  display: inline-block;
   vertical-align: middle;
   padding-left: 5px;
-}
-
-.input-prepend,
-.input-append {
-  margin-bottom: 5px;
-}
-.input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
-.input-append input,
-.input-append select,
-.input-append .uneditable-input {
-  position: relative;
-  margin-bottom: 0;
-  *margin-left: 0;
-  vertical-align: middle;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-.input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
-.input-append input:focus,
-.input-append select:focus,
-.input-append .uneditable-input:focus {
-  z-index: 2;
-}
-.input-prepend .uneditable-input,
-.input-append .uneditable-input {
-  border-left-color: #ccc;
-}
-.input-prepend .add-on,
-.input-append .add-on {
-  width: auto;
-  min-width: 16px;
-  height: 22px;
-  padding: 4px 5px;
-  font-weight: normal;
-  line-height: 22px;
-  line-height: 1.375rem;
-  text-align: center;
-  text-shadow: 0 1px 0 #fff;
-  vertical-align: middle;
-  background-color: #b3b3b3;
-  border: 1px solid #ccc;
-}
-.input-prepend .add-on, .input-prepend .btn, .input-prepend .tabs a, .tabs .input-prepend a,
-.input-append .add-on,
-.input-append .btn,
-.input-append .tabs a,
-.tabs .input-append a {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-.input-prepend .active,
-.input-append .active {
-  background-color: #81eed8;
-  border-color: #1abc9c;
-}
-
-.input-prepend .add-on, .input-prepend .btn, .input-prepend .tabs a, .tabs .input-prepend a {
-  margin-right: -1px;
-}
-
-.input-append input, .input-append select, .input-append .uneditable-input {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-.input-append .uneditable-input {
-  border-left-color: #eee;
-  border-right-color: #ccc;
-}
-.input-append .add-on, .input-append .btn, .input-append .tabs a, .tabs .input-append a {
-  margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-
-.input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child, .input-prepend.input-append .tabs a:first-child, .tabs .input-prepend.input-append a:first-child {
-  margin-right: -1px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child, .input-prepend.input-append .tabs a:last-child, .tabs .input-prepend.input-append a:last-child {
-  margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
 }
 
 table {
@@ -1262,8 +1102,7 @@ table {
 }
 .table th, .table td {
   padding: 8px;
-  line-height: 22px;
-  line-height: 1.375rem;
+  line-height: 1.4;
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -1281,11 +1120,11 @@ table {
   border-top: 2px solid #dddddd;
 }
 
-.table-condensed th, .table-condensed td {
+.table--condensed th, .table--condensed td {
   padding: 4px 5px;
 }
 
-.table-bordered {
+.table--bordered {
   border: 1px solid #dddddd;
   border-left: 0;
   border-collapse: separate;
@@ -1295,38 +1134,38 @@ table {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-.table-bordered th, .table-bordered td {
+.table--bordered th, .table--bordered td {
   border-left: 1px solid #dddddd;
 }
-.table-bordered caption + thead tr:first-child th, .table-bordered caption + tbody tr:first-child th, .table-bordered caption + tbody tr:first-child td, .table-bordered colgroup + thead tr:first-child th, .table-bordered colgroup + tbody tr:first-child th, .table-bordered colgroup + tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+.table--bordered caption + thead tr:first-child th, .table--bordered caption + tbody tr:first-child th, .table--bordered caption + tbody tr:first-child td, .table--bordered colgroup + thead tr:first-child th, .table--bordered colgroup + tbody tr:first-child th, .table--bordered colgroup + tbody tr:first-child td, .table--bordered thead:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child td {
   border-top: 0;
 }
-.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
+.table--bordered thead:first-child tr:first-child th:first-child, .table--bordered tbody:first-child tr:first-child td:first-child {
   -webkit-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
-.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
+.table--bordered thead:first-child tr:first-child th:last-child, .table--bordered tbody:first-child tr:first-child td:last-child {
   -webkit-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
-.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
+.table--bordered thead:last-child tr:last-child th:first-child, .table--bordered tbody:last-child tr:last-child td:first-child {
   -webkit-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
   -o-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
-.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
+.table--bordered thead:last-child tr:last-child th:last-child, .table--bordered tbody:last-child tr:last-child td:last-child {
   -webkit-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
   -o-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;
 }
 
-.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+.table--striped tbody tr:nth-child(odd) td, .table--striped tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
@@ -1334,43 +1173,10 @@ table {
   background-color: whitesmoke;
 }
 
-table .span1 {
-  width: 6.5%;
-}
-table .span2 {
-  width: 15%;
-}
-table .span3 {
-  width: 23.5%;
-}
-table .span4 {
-  width: 32%;
-}
-table .span5 {
-  width: 40.5%;
-}
-table .span6 {
-  width: 49%;
-}
-table .span7 {
-  width: 57.5%;
-}
-table .span8 {
-  width: 66%;
-}
-table .span9 {
-  width: 74.5%;
-}
-table .span10 {
-  width: 83%;
-}
-table .span11 {
-  width: 91.5%;
-}
-table .span12 {
-  width: 100%;
-}
-
+/* ==========================================================================
+   Preformatted code
+   Code typography styles for the <code> and <pre> elements
+   ========================================================================== */
 code,
 pre {
   padding: 0 3px 2px;
@@ -1395,8 +1201,7 @@ pre {
   display: block;
   padding: 10.5px;
   margin: 0 0 11px;
-  line-height: 22px;
-  line-height: 1.375rem;
+  line-height: 1.4;
   color: #222222;
   background-color: #f7f7f9;
   border: 1px solid #ccc;
@@ -1420,7 +1225,7 @@ pre code {
   border: 0;
 }
 
-.pre-scrollable {
+.pre--scrollable {
   max-height: 340px;
   overflow-y: scroll;
 }
@@ -1490,7 +1295,7 @@ pre code {
   box-shadow: none;
 }
 
-.btn-large {
+.btn--large {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 3.5;
@@ -1503,7 +1308,7 @@ pre code {
   border-radius: 6px;
 }
 
-.btn-small {
+.btn--small {
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.5;
@@ -1516,7 +1321,7 @@ pre code {
   border-radius: 3px;
 }
 
-.btn-pill {
+.btn--pill {
   padding-left: 1.5em;
   padding-right: 1.5em;
   -webkit-border-radius: 100em;
@@ -1525,6 +1330,78 @@ pre code {
   border-radius: 100em;
 }
 
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn--block + .btn--block {
+  margin-top: 10px;
+}
+
+input[type="submit"].btn--block,
+input[type="reset"].btn--block,
+input[type="button"].btn--block {
+  width: 100%;
+}
+
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.btn--primary {
+  background-color: #34495e;
+  color: #fff !important;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.btn--primary:hover {
+  background-color: #2c3e50;
+}
+
+.btn--link,
+.btn--link:active,
+.btn--link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #34495e;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn--link:hover,
+.btn--link:focus {
+  color: #19232d;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn--link[disabled]:hover,
+.btn--link[disabled]:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+   Close Button: for lightboxes etc
+   ========================================================================== */
 .btn-close {
   position: absolute;
   right: 20px;
@@ -1554,139 +1431,28 @@ pre code {
   border-radius: 50px;
 }
 
-.btn-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.btn-block + .btn-block {
-  margin-top: 10px;
-}
-
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%;
-}
-
-.btn-natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  height: auto;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-}
-
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.btn-primary {
-  background-color: #34495e;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-primary:hover {
-  background-color: #2c3e50;
-}
-
-.btn-warning {
-  background-color: #e67e22;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-warning:hover {
-  background-color: #d35400;
-}
-
-.btn-danger {
-  background-color: #e74c3c;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-danger:hover {
-  background-color: #c0392b;
-}
-
-.btn-success {
-  background-color: #2ecc71;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-success:hover {
-  background-color: #27ae60;
-}
-
-.btn-info {
-  background-color: #1abc9c;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-info:hover {
-  background-color: #16a085;
-}
-
-.btn-inverse {
-  background-color: #444444;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn-inverse:hover {
-  background-color: #222222;
-}
-
-.btn-link,
-.btn-link:active,
-.btn-link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn-link {
-  border-color: transparent;
-  cursor: pointer;
-  color: #34495e;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-.btn-link:hover,
-.btn-link:focus {
-  color: #19232d;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-.btn-link[disabled]:hover,
-.btn-link[disabled]:focus {
-  color: #333;
-  text-decoration: none;
-}
-
+/* ==========================================================================
+   Components:
+   * Embedded content
+   * Block grids
+   * Centred list
+   * Floated lists
+   * Wells
+   * Alerts
+   ========================================================================== */
+/*
+   Embedded content
+   ========================================================================== */
 img {
   font-style: italic;
   color: #c00;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-img.left {
+img.img--left {
   margin: 0 20px 0 0;
 }
-img.right {
+img.img--right {
   margin: 0 0 0 20px;
 }
 
@@ -1702,78 +1468,107 @@ img, object, embed, video {
   max-width: none !important;
 }
 
-.block-grid {
+/*
+   Block grids
+   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
+
+   Usage:
+   <ul class="l-blockGrid l-blockGrid--twoUp">
+       <li></li>
+   </ul>
+   ========================================================================== */
+.l-blockGrid {
   display: block;
   list-style-type: none;
   *zoom: 1;
 }
-.block-grid:before, .block-grid:after {
+.l-blockGrid:before, .l-blockGrid:after {
   content: " ";
   display: table;
 }
-.block-grid:after {
+.l-blockGrid:after {
   clear: both;
 }
-.block-grid li {
+.l-blockGrid li {
   display: block;
   height: auto;
   float: left;
 }
-.block-grid.two-up {
+.l-blockGrid.l-blockGrid--twoUp {
   margin-left: -4%;
 }
-.block-grid.two-up li {
+.l-blockGrid.l-blockGrid--twoUp li {
   margin-left: 4%;
   width: 46%;
   margin-bottom: 4%;
 }
-.block-grid.three-up {
+.l-blockGrid.l-blockGrid--threeUp {
   margin-left: -2%;
 }
-.block-grid.three-up li {
+.l-blockGrid.l-blockGrid--threeUp li {
   margin-left: 2%;
   width: 31.3%;
   margin-bottom: 2%;
 }
-.block-grid.four-up {
+.l-blockGrid.l-blockGrid--fourUp {
   margin-left: -2%;
 }
-.block-grid.four-up li {
+.l-blockGrid.l-blockGrid--fourUp li {
   margin-left: 2%;
   width: 23%;
   margin-bottom: 2%;
 }
-.block-grid.five-up {
+.l-blockGrid.l-blockGrid--fiveUp {
   margin-left: -1.5%;
 }
-.block-grid.five-up li {
+.l-blockGrid.l-blockGrid--fiveUp li {
   margin-left: 1.5%;
   width: 18.5%;
   margin-bottom: 1.5%;
 }
 
-ul.centred, ul.centered {
+/*
+   Centred lists
+
+   <ul class="l-list--centred">
+   	<li></li>
+   </ul>
+   ========================================================================== */
+.l-list--centred, .l-list--centered {
   text-align: center;
 }
-ul.centred li, ul.centered li {
+.l-list--centred li, .l-list--centered li {
   display: inline;
 }
 
-.floated {
+/*
+   Floated lists
+
+   <ul class="l-list--floated">
+   	<li></li>
+   </ul>
+   ========================================================================== */
+.l-list--floated {
   *zoom: 1;
 }
-.floated:before, .floated:after {
+.l-list--floated:before, .l-list--floated:after {
   content: " ";
   display: table;
 }
-.floated:after {
+.l-list--floated:after {
   clear: both;
 }
-.floated li {
+.l-list--floated li {
   float: left;
   display: inline-block;
 }
 
+/*
+   Wells
+
+   Use the well as a simple effect on an element to give it an inset effect
+   <div class="well"></div>
+   ========================================================================== */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -1795,7 +1590,7 @@ ul.centred li, ul.centered li {
   border-color: rgba(0, 0, 0, 0.15);
 }
 
-.well-large {
+.well--large {
   padding: 24px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -1803,7 +1598,7 @@ ul.centred li, ul.centered li {
   border-radius: 6px;
 }
 
-.well-small {
+.well--small {
   padding: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1811,6 +1606,9 @@ ul.centred li, ul.centered li {
   border-radius: 3px;
 }
 
+/*
+   Tabs
+   ========================================================================== */
 .tabs {
   *zoom: 1;
   margin-bottom: 22px;
@@ -1823,13 +1621,13 @@ ul.centred li, ul.centered li {
 .tabs:after {
   clear: both;
 }
-.tabs.is-right li {
+.tabs.tabs--alignRight li {
   float: right;
 }
-.tabs.is-centred, .tabs.is-centered {
+.tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
   text-align: center;
 }
-.tabs.is-centred > li, .tabs.is-centered > li {
+.tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
   display: inline;
   float: none;
 }
@@ -1849,13 +1647,16 @@ ul.centred li, ul.centered li {
   background-color: #1abc9c;
 }
 
-.tabs-content > li {
+.l-tabsContent > li {
   display: none;
 }
-.tabs-content > li.is-active {
+.l-tabsContent > li.is-active {
   display: block;
 }
 
+/*
+   Alerts
+   ========================================================================== */
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 22px;
@@ -1874,68 +1675,67 @@ ul.centred li, ul.centered li {
 .alert h4 {
   margin: 0;
 }
-.alert .close {
+.alert .alertClose {
   position: relative;
   top: -2px;
   right: -21px;
-  line-height: 22px;
+  line-height: 1.4;
 }
 
-.alert-success {
+.alert--success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
-.alert-success h4 {
+.alert--success h4 {
   color: #468847;
 }
 
-.alert-error {
+.alert--error {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
 }
-.alert-error h4 {
+.alert--error h4 {
   color: #b94a48;
 }
 
-.alert-info {
+.alert--info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #3a87ad;
 }
-.alert-info h4 {
+.alert--info h4 {
   color: #3a87ad;
 }
 
-.alert-block {
+.alert--block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-.alert-block > p,
-.alert-block > ul {
+.alert--block > p,
+.alert--block > ul {
   margin-bottom: 0;
 }
-.alert-block p + p {
+.alert--block p + p {
   margin-top: 5px;
 }
 
-.close {
+/*
+   Close buttons
+   ========================================================================== */
+.alertClose {
   float: right;
   font-size: 20px;
   font-weight: bold;
-  line-height: 22px;
+  line-height: 1.4;
   color: #000;
   text-shadow: 0 1px 0 white;
   zoom: 1;
   filter: alpha(opacity=20);
   opacity: 0.2;
-  background: linear, to bottom, #f07575, #bada55;
-  display: flex;
-  border-radius: 5px;
-  transition: transform 1s;
 }
-.close:hover, .close:focus {
+.alertClose:hover, .alertClose:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -1944,12 +1744,43 @@ ul.centred li, ul.centered li {
   opacity: 0.4;
 }
 
-button.close {
+button.alertClose {
   padding: 0;
   cursor: pointer;
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+}
+
+/* ==========================================================================
+   Global app/site styles
+   ========================================================================== */
+/*
+   Masthead
+   ========================================================================== */
+/*
+   Footer
+   ========================================================================== */
+/* ==========================================================================
+   Media queries for responsive design
+   ========================================================================== */
+/*
+   Retina media Queries
+   Credit: http://dev.mattnt.com/retina-results.html
+   ========================================================================== */
+/* ==========================================================================
+   Utilities
+   Non-semantic helper classes
+   ========================================================================== */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
 }
 
 .ir {
@@ -1967,18 +1798,16 @@ button.close {
   display: none;
 }
 
-.is-hidden,
-.hide {
+.is-hidden {
   display: none !important;
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
-.is-shown,
-.show {
+.is-shown {
   display: block;
 }
 
-.visuallyhidden {
+.is-visuallyHidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1988,7 +1817,7 @@ button.close {
   position: absolute;
   width: 1px;
 }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.is-visuallyHidden.focusable:active, .is-visuallyHidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -2001,106 +1830,79 @@ button.close {
   visibility: hidden;
 }
 
-.left {
+.l-floatLleft {
   float: left;
 }
 
-.right {
+.l-floatRight {
   float: right;
 }
 
-.clear {
+.l-clear {
   clear: both;
   float: none;
 }
 
-.mb0 {
+.l-mb0 {
   margin-bottom: 0 !important;
 }
 
-.mb1 {
-  margin-bottom: 16px !important;
-}
-
-.mb2 {
-  margin-bottom: 24px !important;
-}
-
-.mb3 {
-  margin-bottom: 30px !important;
-}
-
-.mt0 {
+.l-mt0 {
   margin-top: 0 !important;
 }
 
-.mt1 {
-  margin-top: 16px !important;
+/* ==========================================================================
+   Responsive Utilities
+   ========================================================================== */
+@-ms-viewport {
+  width: device-width;
 }
 
-.mt2 {
-  margin-top: 24px !important;
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+}
+}
+.is-visiblePrint {
+  display: block !important;
 }
 
-.mt3 {
-  margin-top: 30px !important;
+tr.is-visiblePrint {
+  display: table-row !important;
 }
 
-img {
-  max-width: 100%;
+th.is-visiblePrint, td.is-visiblePrint {
+  display: table-cell !important;
 }
 
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.visible-phone {
-  display: none !important;
-}
-
-.visible-tablet {
-  display: none !important;
-}
-
-.hidden-desktop {
-  display: none !important;
-}
-
-@media screen and (max-width: 47.9375em) {
-  .visible-phone {
-    display: inherit !important;
+@media print {
+  .is-visiblePrint {
+    display: block !important;
   }
 
-  .hidden-phone {
+  tr.is-visiblePrint {
+    display: table-row !important;
+  }
+
+  th.is-visiblePrint, td.is-visiblePrint {
+    display: table-cell !important;
+  }
+
+  .is-hiddenPrint {
     display: none !important;
   }
 
-  .hidden-desktop {
-    display: inherit !important;
+  tr.is-hiddenPrint {
+    display: none !important;
   }
 
-  .visible-desktop {
+  th.is-hiddenPrint, td.is-hiddenPrint {
     display: none !important;
   }
 }
-@media screen and (min-width: 48em) and (max-width: 61.1875em) {
-  .visible-tablet {
-    display: inherit !important;
-  }
-
-  .hidden-tablet {
-    display: none !important;
-  }
-
-  .hidden-desktop {
-    display: inherit !important;
-  }
-
-  .visible-desktop {
-    display: none !important;
-  }
-}
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
 @media print {
   * {
     background: transparent !important;
