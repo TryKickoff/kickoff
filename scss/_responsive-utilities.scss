@@ -26,21 +26,23 @@
 }
 
 // Print utilities
+// Print utilities
 .is-visiblePrint {
 	display: block !important;
-	tr&      { display: table-row !important; }
-	th&, td& { display: table-cell !important; }
 }
+tr.is-visiblePrint { display: table-row !important; }
+th.is-visiblePrint, td.is-visiblePrint { display: table-cell !important; }
 
 @media print {
 	.is-visiblePrint {
 		display: block !important;
-		tr&      { display: table-row !important; }
-		th&, td& { display: table-cell !important; }
 	}
+	tr.is-visiblePrint { display: table-row !important; }
+	th.is-visiblePrint, td.is-visiblePrint { display: table-cell !important; }
+
 	.is-hiddenPrint {
 		display: none !important;
-		tr&      { display: none !important; }
-		th&, td& { display: none !important; }
 	}
+	tr.is-hiddenPrint { display: none !important; }
+	th.is-hiddenPrint, td.is-hiddenPrint { display: none !important; }
 }
