@@ -1,35 +1,65 @@
-// Core variables
+/* ==========================================================================
+   Site dependencies
+   ========================================================================== */
+
+/*
+   Core variables
+   * Edit your color palette and app vars before your begin
+   ========================================================================== */
 @import "colour-palette";
 @import "variables";
 
-// Mixins
-@import "helpers";
-@import "functions";
-@import "mixins";
 
-// CSS reset
-@import "normalize";
+/*
+   Mixins, helpers and functions
+   * Most CSS3 vendor prefixed items have a mixin.
+   * See mixins/css3.scss for the full list
+   ========================================================================== */
+@import "helpers/helpers";
+@import "functions/functions";
+@import "mixins/mixins";
 
-// Grid system and page structure
+
+/* 
+   CSS Framework
+   * Edit these
+   ========================================================================== */
+@import "normalize"; // CSS reset
+
+/* 
+   Grid System
+   * Default: Choreographic Grid. Switch out for your own if you need
+   ========================================================================== */
 @import "choreographic-grid";
 
-// Base CSS
+/* Framework styles */
 @import "typography";
 @import "forms";
 @import "tables";
 @import "code";
-
-// Components: common
 @import "buttons";
 @import "components";
 
-// Your app/site styles
+
+/* 
+   Your app styles
+   * Consider modularizing your code.
+   * e.g. Create a partials directory with _header.scss, _footer.scss etc
+   * e.g. Create a pages directory with _home.scss, _contact.scss etc
+   ========================================================================== */
 @import "app";
 
-// Utility classes
-// Has to be last to override when necessary
+/* Examples */
+//@import "partials/header";
+//@import "pages/home";
+
+
+/* 
+   Utility classes
+   * Has to be last to override when necessary
+   ========================================================================== */
 @import "utilities";
 @import "responsive-utilities";
 
-// Print styles
+/* Print styles */
 @import "print";
