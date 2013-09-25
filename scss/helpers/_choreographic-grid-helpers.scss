@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Choreographic Grid helpers
+   ========================================================================== */
+
+
+/*
+   Grid columns width calcs
+   ========================================================================== */
+@function gridColumnWidthCalc($columnSpan: 1, $showUnit: true) {
+	$numberOfBlocksInContainer: $gridColumnCount / $columnSpan;
+	$totalWidthOfAllGutters:    gutterCalc(false) * ($numberOfBlocksInContainer - 1);
+	$totalWidthOfAllBlocks:     1 - $totalWidthOfAllGutters;
+	$widthOfASingleBlock:       $totalWidthOfAllBlocks / $numberOfBlocksInContainer;
+
+	@if $showUnit == true {
+		@return percentage( $widthOfASingleBlock );
+	} @else {
+		@return $widthOfASingleBlock;
+	}
+}
+
+/*
+   Column width mixin
+   ========================================================================== */
+@mixin column($columnSpan: 1) {
+	width: gridColumnWidthCalc($columnSpan, true);
+}
+
+
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+@function gutterCalc($showUnit: true) {
+	@if $showUnit == true {
+		@return percentage( $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) ) );
+	} @else {
+		@return $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) );
+	}
+}
+
+
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+@function paddingCalc() {
+	@if $gridColumnPaddingUnit == '%' {
+		@return percentage( $gridColumnPadding / $gridMaxWidth );
+	} @else if $gridColumnPaddingUnit == 'px' {
+		@return $gridColumnPadding + px;
+	}
+}
+
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+@mixin shunt($shuntSpan: 1) {
+	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
+}
+@mixin offset($columnOffset: 1) {
+	margin-left: percentage( gridColumnWidthCalc($columnOffset, false) * $columnOffset / 100 );
+}
+@mixin offsetFirstChild($columnOffset: 1) {
+	margin-left: (gridColumnWidthCalc($columnOffset, false) * $columnOffset) + ($gridGutterWidth * $columnOffset);
+}
+@mixin push($pushOffset: 1) {
+	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
+	position: relative;
+}
+@mixin pull($pullOffset: 1) {
+	right: gridColumnWidthCalc($pullOffset, true) + gutterCalc();
+	position: relative;
+}
+
+@mixin gridColumn() {
+	@if $gridGutterWidth > 0 {
+		margin-left: gutterCalc();
+	}
+	@if $gridColumnPadding > 0 {
+		padding: paddingCalc();
+	}
+	float: left;
+	min-height: 1px;
+	position: relative;
+	clear: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	&:first-child {
+		margin-left: 0;
+	}
+
+	& + &:last-child { float: right; }
+	& + &.end { float: left; }
+}
+
+@mixin clearfix {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin media-query($mq-title: 'mobile', $bgcolor: transparentize(yellow, .4)) {
+	content: $mq-title;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 30px;
+	line-height: 30px;
+	background-color: $bgcolor;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	z-index: 1000;
+}
