@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Utlity Mixins
+   ========================================================================== */
 // Clearfix
 // Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
 @mixin clearfix {
@@ -21,9 +24,9 @@
 	#{$property}: $remValue + rem;
 }
 
-// =========================
-// === TYPOGRAPHY MIXINS ===
-// =========================
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
 // REM font size
 // @include font-size(16);
 @mixin font-size($sizeValue: $base-font-size){
