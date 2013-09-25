@@ -1,4 +1,11 @@
 /* ==========================================================================
+   Site dependencies
+   ========================================================================== */
+/*
+   Core variables
+   * Edit your color palette and app vars before your begin
+   ========================================================================== */
+/* ==========================================================================
    Colour palette (yeah we're from England!)
    ========================================================================== */
 /* ==========================================================================
@@ -19,15 +26,23 @@
    ========================================================================== */
 /*
    Breakpoints
+   * There are no common breakpoints so these are just a suggestion
+   * You'll need to define your own breakpoints to suit your design
    ========================================================================== */
 /*
    Path vars
    ========================================================================== */
 /*
    Choreographic Grid setup
+   * Settings here override & affect the output in choreographic-grid.scss
    ========================================================================== */
 /*
    App-specific variables
+   ========================================================================== */
+/*
+   Mixins, helpers and functions
+   * Most CSS3 vendor prefixed items have a mixin.
+   * See mixins/css3.scss for the full list
    ========================================================================== */
 /* ==========================================================================
    Sass Mixins
@@ -40,9 +55,47 @@
    ========================================================================== */
 /* Vendor prefixer */
 /* Responsive mixins */
+/* ==========================================================================
+   Responsive media query mixins
+   * These are used so that we can define separate media-query content
+     for <IE9 and browsers with support for media queries
+   * These are directly related to the global $fix-mqs var defined in
+     kickoff-old-ie.scss
+   * kickoff-old-ie.scss ignores any content in media-queries with values less
+     than the $fix-mqs var value
+   ========================================================================== */
+/*
+   Min-width media query:
+   * Equivalent to: @media screen and (min-width: 20em) { ... }
+   * Usage: @include respond-min(500) { ... };
+   * Argument is a pixel value WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Max-width media query:
+   * Equivalent to: @media screen and (max-width: 20em) { ... }
+   * Usage: @include respond-max(500) { ... };
+   * Argument is a pixel value WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Min-max-width media query:
+   * Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
+   * Usage: @include respond-min-max(500, 600) { ... };
+   * Arguments are pixel values WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Old IE specific mixin
+   * Only use this content if we're dealing with old IE
+   * Usage: @include oldie() { ... }
+   ========================================================================== */
 /* CSS3 */
 /* Components */
 /* Utility mixins */
+/* ==========================================================================
+   Utlity Mixins
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
 .dl-horizontal dt {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -61,6 +114,10 @@ select:focus {
 /* HiDPI */
 /* FORMS */
 /* BROWSER FIXES */
+/* 
+   CSS Framework
+   * Edit these
+   ========================================================================== */
 /* ==========================================================================
    Normalize - CSS reset
 
@@ -158,6 +215,63 @@ textarea {
   vertical-align: top;
 }
 
+/* 
+   Grid System
+   * Default: Choreographic Grid. Switch out for your own if you need
+   ========================================================================== */
+/* ==========================================================================
+	 The Choreographic Grid
+	 * Grid setup
+	 * Grid helpers/mixins
+	 * Default grid styles
+	 * Media queries
+	 * Centred columns
+	 ========================================================================== */
+/*
+	 Basic Usage:
+	 <div class="g-row">
+			 <div class="g-col g-span4"></div>
+			 <div class="g-col g-span8"></div>
+	 </div>
+	 ========================================================================== */
+/*
+	 Grid Setup
+	 * Choose your grid options.
+	 * These will be overridden by the settings in _variables.scss
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
+/*
+	 Import Grid helpers and mixins
+	 ========================================================================== */
+/* ==========================================================================
+   Choreographic Grid helpers
+   ========================================================================== */
+/*
+   Grid column mixin
+   ========================================================================== */
+/*
+   Grid columns width calcs
+   ========================================================================== */
+/*
+   Column width mixin
+   ========================================================================== */
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+/* ==========================================================================
+	 Default grid styles
+	 ========================================================================== */
 .g-container {
   padding-left: 0px;
   padding-right: 0px;
@@ -169,7 +283,7 @@ textarea {
 .g-row {
   width: 100%;
   margin: 0 auto;
-  *zoom: 1;
+  zoom: 1;
 }
 .g-row:before, .g-row:after {
   content: " ";
@@ -185,7 +299,10 @@ textarea {
   padding: 0;
 }
 
-@media screen and (min-width: 25em) {
+/* ==========================================================================
+	 Media queries
+	 ========================================================================== */
+@media screen and (min-width: 48em) {
   .g-col {
     margin-left: 2%;
     padding: 10px;
@@ -274,11 +391,15 @@ textarea {
     float: left;
   }
 }
+/*
+	 Centred columns
+	 ========================================================================== */
 .g-centered.g-col, .g-centred.g-col {
   float: none;
   margin: 0 auto;
 }
 
+/* Framework styles */
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
@@ -973,11 +1094,11 @@ textarea:focus:required:invalid:focus {
 
 .form--horizontal .form-controlGroup {
   margin-bottom: 22px;
-  *zoom: 1;
+  zoom: 1;
 }
 .form--horizontal .form-controlGroup:before, .form--horizontal .form-controlGroup:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .form--horizontal .form-controlGroup:after {
   clear: both;
@@ -1045,11 +1166,11 @@ textarea:focus:required:invalid:focus {
   margin-bottom: 22px;
   background-color: whitesmoke;
   border-top: 1px solid #ddd;
-  *zoom: 1;
+  zoom: 1;
 }
 .form-actions:before, .form-actions:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .form-actions:after {
   clear: both;
@@ -1480,11 +1601,11 @@ img, object, embed, video {
 .l-blockGrid {
   display: block;
   list-style-type: none;
-  *zoom: 1;
+  zoom: 1;
 }
 .l-blockGrid:before, .l-blockGrid:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .l-blockGrid:after {
   clear: both;
@@ -1549,11 +1670,11 @@ img, object, embed, video {
    </ul>
    ========================================================================== */
 .l-list--floated {
-  *zoom: 1;
+  zoom: 1;
 }
 .l-list--floated:before, .l-list--floated:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .l-list--floated:after {
   clear: both;
@@ -1610,13 +1731,13 @@ img, object, embed, video {
    Tabs
    ========================================================================== */
 .tabs {
-  *zoom: 1;
+  zoom: 1;
   margin-bottom: 22px;
   border-bottom: 2px solid #1abc9c;
 }
 .tabs:before, .tabs:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 .tabs:after {
   clear: both;
@@ -1752,6 +1873,12 @@ button.alertClose {
   -webkit-appearance: none;
 }
 
+/* 
+   Your app styles
+   * Consider modularizing your code.
+   * e.g. Create a partials directory with _header.scss, _footer.scss etc
+   * e.g. Create a pages directory with _home.scss, _contact.scss etc
+   ========================================================================== */
 /* ==========================================================================
    Global app/site styles
    ========================================================================== */
@@ -1767,6 +1894,11 @@ button.alertClose {
 /*
    Retina media Queries
    Credit: http://dev.mattnt.com/retina-results.html
+   ========================================================================== */
+/* Examples */
+/* 
+   Utility classes
+   * Has to be last to override when necessary
    ========================================================================== */
 /* ==========================================================================
    Utilities
@@ -1900,6 +2032,7 @@ th.is-visiblePrint, td.is-visiblePrint {
     display: none !important;
   }
 }
+/* Print styles */
 /* ==========================================================================
    Print styles
    ========================================================================== */
