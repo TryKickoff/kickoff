@@ -21,7 +21,7 @@ $fix-mqs: false !default; //assign false if no value set already
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs >= $width-em {
+		@if $fix-mqs >= $width {
 			// ...output the content the user gave us.
 			@content;
 		}
@@ -47,7 +47,7 @@ $fix-mqs: false !default; //assign false if no value set already
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs <= $width-em {
+		@if $fix-mqs <= $width {
 			// ...output the content the user gave us.
 			@content;
 		}
@@ -76,7 +76,7 @@ $fix-mqs: false !default; //assign false if no value set already
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs >= $min-width-em and $fix-mqs <= $max-width-em {
+		@if $fix-mqs >= $min-width and $fix-mqs <= $max-width {
 			// ...output the content the user gave us.
 			@content;
 		}
