@@ -1,16 +1,27 @@
-// ==================
-// === FORMS.scss ===
-// ==================
-// * Form
-// * Input sizes
-// * Form field feedback states
-// * Input groups
-// * Horizontal & vertical forms
-// * Horizontal-specific styles
+/* ==========================================================================
+   Forms
+   * Generic form styles
+   * Form inputs and groups
+   * Form field feedback states
+   * Horizontal & vertical forms
+   * Horizontal-specific styles
+   ========================================================================== */
 
-// === Form ===
-// ============
-// Make all forms have space below them
+
+/* ==========================================================================
+   Generic form styles
+   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+   Usage:
+    <ul>
+    	<li class="form-controlGroup">
+    		<label for="name" class="form-controlGroup-label">Name</label>
+    		<div class="form-controlGroup-input">
+    			<input type="text" id="name" placeholder="Zander Martineau" />
+    		</div>
+    	</li>
+    </ul>
+   ========================================================================== */
 form {
 	margin: 0 0 ($base-line-height + px);
 
@@ -19,13 +30,16 @@ form {
 	}
 }
 
+/* Fieldset */
 fieldset {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
 
-// Margin to space out fieldsets
+/* ==========================================================================
+   Form inputs and groups
+   ========================================================================== */
 .form-controlGroup {
 	margin-top: ($base-line-height / 2 + px);
 	list-style-type: none;
@@ -34,27 +48,6 @@ fieldset {
 	legend + & {
 		margin-top: $base-line-height + px;
 		-webkit-margin-top-collapse: separate;
-	}
-}
-
-
-// Groups of fields with labels on top (legends)
-legend {
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: $base-line-height + px;
-	@include font-size($base-font-size * 1.5);
-	line-height: $base-leading;
-	color: $label-color;
-	border: 0;
-	border-bottom: 1px solid #eee;
-	white-space: normal;
-
-	// Small
-	& small {
-		@include font-size($base-font-size * .75);
-		color: lighten(#000, 70%);
 	}
 }
 
@@ -197,11 +190,6 @@ input[type="submit"] {
 
 // Set the height of select and file controls to match text inputs
 select {
-	width: 220px; // default input width + 10px of padding that doesn't get applied
-	height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
-	*margin-top: 4px; /* For IE7, add top margin to align select with labels */
-	@include line-height(28);
-
 	// Chrome on Linux and Mobile Safari need background-color
 	background-color: $input-background;
 
@@ -218,6 +206,27 @@ select {
 textarea {
 	height: auto;
 	resize: vertical;
+}
+
+
+// Groups of fields with labels on top (legends)
+legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: $base-line-height + px;
+	@include font-size($base-font-size * 1.5);
+	line-height: $base-leading;
+	color: $label-color;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	& small {
+		@include font-size($base-font-size * .75);
+		color: lighten(#000, 70%);
+	}
 }
 
 
@@ -238,8 +247,10 @@ textarea {
 
 	& input[type="radio"],
 	& input[type="checkbox"] {
-		float: left;
 		margin-left: -18px;
+		margin-right: 5px;
+		vertical-align: middle;
+		display: inline;
 	}
 }
 	// Radios and checkboxes on same line
@@ -269,7 +280,7 @@ textarea {
 // -----------
 input,
 textarea,
-.file-wrapper {
+.fileWrapper {
 	// Multiple arguments cannot be used inside a mixin if the mixin has not specified it, hence the need for a new $transtion var
 	@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 	@include transition;
@@ -319,6 +330,7 @@ textarea {
 
 .fileWrapper input {
 	width: 90%;
+	line-height: 0;
 }
 
 // DISABLED STATE
@@ -348,30 +360,13 @@ textarea {
 
 
 
-// ==================================
-// === FORM FIELD FEEDBACK STATES ===
-// ==================================
-// Warning
-.form-controlGroup.form-controlGroup--warning {
-	@include formFieldState($warning-text, $warning-text, $warning-background);
-}
-// Error
-.form-controlGroup.form-controlGroup--error {
-	@include formFieldState($error-text, $error-text, $error-background);
-}
-// Success
-.form-controlGroup.form-controlGroup--success {
-	@include formFieldState($success-text, $success-text, $success-background);
-}
 
 
-// ===================================
-// === HORIZONTAL & VERTICAL FORMS ===
-// ===================================
 
-// Common properties
-// -----------------
-.form--search,
+
+/*
+   Both horizontal & vertical forms
+   ========================================================================== */
 .form--inline,
 .form--horizontal {
 
@@ -390,68 +385,16 @@ textarea {
 }
 
 
-// ==================================
-// === HORIZONTAL-SPECIFIC STYLES ===
-// ==================================
 
-// <ul>
-// 	<li class="form--control-group">
-// 		<label for="name" class="form--control-group--label">Name</label>
-// 		<div class="form--control-group--input">
-// 			<input type="text" id="name" placeholder="Zander Martineau" />
-// 		</div>
-// 	</li>
-// </ul>
-
-.form--horizontal {
-
-	// Increase spacing between groups
-	& .form-controlGroup {
-		margin-bottom: $base-line-height + px;
-		@include clearfix();
-	}
-
-	// Float the labels left
-	& .form-controlGroup-label,
-	& .form-controlGroup label {
-		float: left;
-		width: 140px;
-		padding-top: 5px;
-		text-align: right;
-	}
-
-	// Move over all input controls and content
-	& .form-controlGroup-input,
-	& .form-controlGroup div {
-		margin-left: 160px;
-
-		&:first-child {
-			*padding-left: 160px;
-		}
-	}
-
-	// Remove bottom margin on block level help text since that's accounted for on .form--control-group
-	& .form-helpBlock {
-		margin-top: $base-line-height / 2 + px;
-		margin-bottom: 0;
-	}
-
-	// Move over buttons in .form-actions to align with .form-controlGroup-input
-	& .form-actions {
-		padding-left: 160px;
-	}
-}
-
-
-// =============================================
-// === INLINE & SEARCH FORMS SPECIFIC STYLES ===
-// =============================================
-.form--search,
+/*
+   Inline & search forms specific styles
+   ========================================================================== */
 .form--inline {
 
 	// Give all elements some space
 	& > * {
 		margin-right: 10px;
+		vertical-align: top;
 
 		&:last-child {
 			margin-right: 0;
@@ -470,18 +413,17 @@ textarea {
 		vertical-align: middle;
 	}
 
-	// Remove float and margin, set to inline-block
+	// Remove left margin
 	& .radio input[type="radio"],
 	& .checkbox input[type="checkbox"] {
-		float: left;
 		margin-left: 0;
 		margin-right: 3px;
 	}
 }
 
-// SEARCH FORM
-// -----------
-
+/*
+   Search input
+   ========================================================================== */
 .form--search-input {
 	padding-left: 14px;
 	padding-right: 14px;
@@ -490,10 +432,9 @@ textarea {
 }
 
 
-
-// FORM ACTIONS
-// ------------
-
+/*
+   Form actions
+   ========================================================================== */
 .form-actions {
 	padding: ($base-line-height - 1 + px) 20px ($base-line-height + px);
 	margin-top: $base-line-height + px;
@@ -512,8 +453,33 @@ textarea {
 }
 
 
-// Placeholder text gets special styles; can't be bundled together though for some reason
+
+/*
+   Form field feedback states
+   ========================================================================== */
+// Warning
+.form-controlGroup.form-controlGroup--warning {
+	@include formFieldState($warning-text, $warning-text, $warning-background);
+}
+
+// Error
+.form-controlGroup.form-controlGroup--error {
+	@include formFieldState($error-text, $error-text, $error-background);
+}
+
+// Success
+.form-controlGroup.form-controlGroup--success {
+	@include formFieldState($success-text, $success-text, $success-background);
+}
+
+
+/*
+   Placeholder text
+   * Gets special styles; can't be bundled together though for some reason
+   ========================================================================== */
 @include placeholder($placeholder-text);
+
+
 
 // HELP TEXT
 // ---------
@@ -532,3 +498,54 @@ textarea {
 	vertical-align: middle;
 	padding-left: 5px;
 }
+
+// === <$breakpoint-single-col ===
+@include respond-min($breakpoint-single-col) {
+	/* ==========================================================================
+	   Horizontal-specific styles
+	   * add .form--horizontal to the <form> element
+	   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+	   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+	   ========================================================================== */
+	.form--horizontal {
+
+		// Increase spacing between groups
+		& .form-controlGroup {
+			margin-bottom: $base-line-height + px;
+			@include clearfix();
+		}
+
+		// Float the labels left
+		& .form-controlGroup-label {
+			float: left;
+			width: 140px;
+			padding-top: 5px;
+			text-align: right;
+		}
+
+		// Move over all input controls and content
+		& .form-controlGroup-input {
+			margin-left: 160px;
+
+			&:first-child {
+				*padding-left: 160px;
+			}
+		}
+
+		& .form-controlGroup .fileWrapper {
+			margin-left: 0;
+		}
+
+		// Remove bottom margin on block level help text since that's accounted for on .form--control-group
+		& .form-helpBlock {
+			margin-top: $base-line-height / 2 + px;
+			margin-bottom: 0;
+		}
+
+		// Move over buttons in .form-actions to align with .form-controlGroup-input
+		& .form-actions {
+			padding-left: 160px;
+		}
+	}
+}
+// === end <$breakpoint-single-col ===
