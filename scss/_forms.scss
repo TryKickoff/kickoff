@@ -106,7 +106,7 @@ select,
 .fileWrapper {
 	display: block;
 	width: 100%;
-	height: $base-line-height * 1.5 + px;
+	height: 2.5em;
 	padding: 4px;
 	margin-bottom: 9px;
 	@include font-size($base-font-size);
@@ -127,7 +127,8 @@ select,
 input {
 	&[type="image"],
 	&[type="checkbox"],
-	&[type="radio"] {
+	&[type="radio"],
+	&[type="range"] {
 		width: auto;
 		height: auto;
 		padding: 0;
@@ -136,7 +137,7 @@ input {
 		cursor: pointer;
 		@include border-radius(0);
 		@include box-sizing(border-box);
-		border: 0 \9; // IE9 and down
+		// border: 0 \9; // IE9 and down
 	}
 
 	&[type="image"] {
@@ -155,7 +156,9 @@ input {
 	}
 
 	// Remove shadow from image inputs
-	&[type="image"] {
+	&[type="image"],
+	&[type="range"],
+	&[type="range"]:focus {
 		@include box-shadow(none);
 	}
 
@@ -174,6 +177,9 @@ input {
 		font-family: sans-serif;
 	}
 
+	&[type="range"] {
+		width: 100%;
+	}
 }
 
 // Help out input buttons
@@ -182,7 +188,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	width: auto;
-	height: auto;
 	cursor: pointer;
 	-webkit-appearance: button;
 }
