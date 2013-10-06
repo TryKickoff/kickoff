@@ -19,6 +19,7 @@
 }
 
 // CSS3 CONTENT COLUMNS
+// @include content-columns(2,30px);
 @mixin content-columns($columnCount:2, $columnGap: 20px) {
 	@include prefixer(column-count, $columnCount, moz webkit spec);
 	@include prefixer(column-gap, $columnGap, moz webkit spec);
@@ -103,8 +104,9 @@
 }
 
 // ANIMATION
-@mixin animation($name, $duration: 300ms, $delay: 0, $ease: ease) {
-	@include prefixer(animation, $name $duration $delay $ease, webkit moz o ms spec);
+// @include animation(bounce 300ms 0 ease);
+@mixin animation($args...) {
+	@include prefixer(animation, $args, webkit moz o ms spec);
 }
 
 // HYPHENS
