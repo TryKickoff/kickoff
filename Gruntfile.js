@@ -229,6 +229,7 @@ module.exports = function (grunt) {
 		 * grunt watch  : run sass:dev, uglify and livereload
 		 * grunt dev    : run jshint, uglify and sass:dev
 		 * grunt deploy : run jshint, uglify and sass:production
+		 * grunt jquery : build custom version of jquery
 	 */
 
 	/**
