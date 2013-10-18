@@ -2,9 +2,9 @@ module.exports = function (grunt) {
 
 	'use strict';
 
-	/* 
-	   Javascript settings - Edit this section
-	   ========================================================================== */
+	/*
+		 Javascript settings - Edit this section
+		 ========================================================================== */
 	/**
 	 * Specify which js files you want to include
 	 */
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 	 * Specify your output directory
 	 */
 	var distDir = 'js/dist/';
-	
+
 	/**
 	 * Specify the name of your compiled JS file
 	 * which will be placed in the directory you define above
@@ -188,6 +188,28 @@ module.exports = function (grunt) {
 				},
 
 			}
+		},
+
+		/**
+		 * Custom jQuery builder
+		 * Check build numbers at jquery.com
+		 */
+		jquery: {
+			build: {
+				options: {
+					prefix: "jquery-",
+					minify: true
+				},
+				output: "js/libs/jquery",
+				versions: {
+					// Add items to the below arrays to remove them from the build
+					// Remove everything we don't need from 2.x versions
+					"2.0.3": [ "deprecated", "dimensions", "offset", "wrap"],
+
+					// We can't remove sizzle from 1.x versions, so let's not specify it
+					"1.10.2": [ "deprecated", "dimensions", "offset", "wrap"]
+				}
+			}
 		}
 	});
 
@@ -198,14 +220,15 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-csso');
+	grunt.loadNpmTasks("grunt-jquery-builder");
 
 
 	/**
 	 * Available tasks:
-	   * grunt        : run jshint, uglify and sass:dev
-	   * grunt watch  : run sass:dev, uglify and livereload
-	   * grunt dev    : run jshint, uglify and sass:dev
-	   * grunt deploy : run jshint, uglify and sass:production
+		 * grunt        : run jshint, uglify and sass:dev
+		 * grunt watch  : run sass:dev, uglify and livereload
+		 * grunt dev    : run jshint, uglify and sass:dev
+		 * grunt deploy : run jshint, uglify and sass:production
 	 */
 
 	/**
@@ -215,7 +238,7 @@ module.exports = function (grunt) {
 	// Default task
 	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
 
-	
+
 	/**
 	 * A task for development
 	 * run jshint, uglify and sass:dev
