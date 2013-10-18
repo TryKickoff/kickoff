@@ -13,6 +13,7 @@
 	"trailing":  true,
 	"unused":  true,
 	"white": false,
-
+	"browser": true,
+	"devel": true,
 	"jquery": true
 }
