@@ -213,14 +213,8 @@ module.exports = function (grunt) {
 		}
 	});
 
-	// Load some stuff
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-csso');
-	grunt.loadNpmTasks("grunt-jquery-builder");
+	// Load all the grunt tasks
+	require('load-grunt-tasks')(grunt);
 
 
 	/**
