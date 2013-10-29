@@ -407,7 +407,7 @@ textarea {
    * Quotes
    * Links
    * Helper classes
-   
+
    Body font size, leadings etc have been set in _variables.scss.
    The default typography has been built using gridlover.net with these settings:
    * Body font size    : 16
@@ -435,7 +435,7 @@ body {
   background-color: white;
 }
 
-/* 
+/*
    Paragraphs
    ========================================================================== */
 p {
@@ -477,7 +477,7 @@ h3, .h3, .gamma {
   font-size: 24px;
   font-size: 1.2rem;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 h4, .h4, .delta,
@@ -572,7 +572,7 @@ nav ul, nav ol {
   list-style-image: none;
 }
 
-/* 
+/*
    Definition lists
    ========================================================================== */
 dl {
@@ -596,7 +596,7 @@ dd {
   margin-left: 240px;
 }
 
-/* 
+/*
    Miscellaneous rules
    ========================================================================== */
 hr {
@@ -628,7 +628,7 @@ abbr.initialism {
   text-transform: uppercase;
 }
 
-/* 
+/*
    Blockquotes
    ========================================================================== */
 blockquote {
@@ -712,7 +712,7 @@ samp {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
-/* 
+/*
    Utilities
    ========================================================================== */
 .text-centre, .text-center {
@@ -905,7 +905,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   width: auto;
-  height: auto;
   cursor: pointer;
   -webkit-appearance: button;
 }
@@ -2154,4 +2153,4 @@ th.is-visiblePrint, td.is-visiblePrint {
   }
 }
 
-/*# sourceMappingURL=kickoff.css.map */
+/*# sourceMappingURL=Kickoff.css.map */
