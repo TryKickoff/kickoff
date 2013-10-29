@@ -65,8 +65,8 @@ module.exports = function (grunt) {
 					sourcemap : true
 				},
 				files: {
-					'css/kickoff.css': 'scss/kickoff.scss',
-					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
+					'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
+					'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			production: {
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
 					precision : 8
 				},
 				files: {
-					'css/kickoff.css': 'scss/kickoff.scss',
-					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
+					'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
+					'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
 
 			}
@@ -91,27 +91,20 @@ module.exports = function (grunt) {
 		 */
 		uglify: {
 			options: {
-				// mangle: Turn on or off mangling
-				mangle: true,
 
-				// beautify: beautify your code for debugging/troubleshooting purposes
-				beautify: false,
-
-				// report: Show file size report
-				report: 'gzip',
+				mangle: true, // mangle: Turn on or off mangling
+				beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
+				compress: true,
+				// report: 'gzip', // report: Show file size report
 
 				// sourceMap: @string. The location of the source map, relative to the project
-				sourceMap: jsFile + '.map',
+				sourceMap: distDir + jsFile + '.map',
 
 				// sourceMappingURL: @string. The string that is printed to the final file
-				sourceMappingURL: '../../'+ jsFile +'.map'
+				sourceMappingURL: jsFile +'.map',
 
 				// sourceMapRoot: @string. The location where your source files can be found. This sets the sourceRoot field in the source map.
-				// sourceMapRoot: 'js',
-
-				// sourceMapPrefix: @integer. The number of directories to drop from the path prefix when declaring files in the source map.
-				// sourceMapPrefix: 1,
-
+				sourceMapRoot: '../../'
 			},
 
 			/**
@@ -170,6 +163,22 @@ module.exports = function (grunt) {
 				files: {
 					'css/kickoff.prefixed.css': 'css/kickoff.css',
 					'css/kickoff-old-ie.prefixed.css': 'css/kickoff-old-ie.css'
+				}
+			}
+		},
+
+
+		/**
+		 * Connect
+		 * https://github.com/gruntjs/grunt-contrib-connect
+		 * Start a static web server
+		 */
+		connect: {
+			server: {
+				options: {
+					// port: 9001,
+					open: true,
+					livereload: true
 				}
 			}
 		},
@@ -246,5 +255,11 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('deploy', ['jshint', 'uglify', 'sass:production']);
 	// grunt.registerTask('production', ['jshint', 'uglify', 'sass:production', 'autoprefixer', 'csso']);
+
+	/**
+	 * A task for for a static server with a watch
+	 * run connect and watch
+	 */
+	grunt.registerTask("serve", ["connect", "watch"]);
 
 };
