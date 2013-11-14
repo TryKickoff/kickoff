@@ -21,5 +21,5 @@ Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/)
 
 When using Grunt with Kickoff, source maps are created for both the Javascript and Sass. Javascript is compiled to the `/js/dist` and Sass is compiled to the '/css' folder.
 
-## Using Git?
+## Using Git? 
 Kickoff's [.gitignore](https://github.com/tmwagency/kickoff/blob/master/.gitignore#L30) file ignores the `/dist` folder by default. You will want to uncomment this line if you are **not** compiling these on the server.
