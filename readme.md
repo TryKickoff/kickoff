@@ -4,6 +4,8 @@
 
 Developed by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
 
+If you're using Kickoff we'd love to hear about it; please e-mail me at labs@tmw.co.uk
+
 ### Browser support
 Simple: Internet Explorer 8+
 
