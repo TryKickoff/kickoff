@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Global app/site styles
+   ========================================================================== */
+body {
+	background-color: $color-background;
+}
+
+
+
+/* ==========================================================================
+   Media queries for responsive design
+   ========================================================================== */
+
+/*
+   Retina media query
+   ========================================================================== */
+@include hidpi() {
+
+};
+
+
+
+// === $breakpoint-narrow> ===
+@include respond-min($breakpoint-narrow) {
+
+}
+// === end $breakpoint-narrow> ===
+
+
+
+// === $breakpoint-mid> ===
+@include respond-min($breakpoint-mid) {
+
+}
+// === end $breakpoint-mid> ===
+
+
+// === $breakpoint-wide> ===
+@include respond-min($breakpoint-wide) {
+
+}
+// === end $breakpoint-wide> ===
+
+
+// === $breakpoint-huge> ===
+@include respond-min($breakpoint-huge) {
+
+}
+// === end $breakpoint-huge> ===
