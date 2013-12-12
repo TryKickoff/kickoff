@@ -6,7 +6,7 @@
    * Edit your color palette and app vars before your begin
    ========================================================================== */
 /* ==========================================================================
-   Colour palette (yeah we're from England!)
+   Colour palette (yeah we're British!)
    ========================================================================== */
 /* ==========================================================================
    Variables
@@ -114,7 +114,7 @@ select:focus {
 /* HiDPI */
 /* FORMS */
 /* BROWSER FIXES */
-/* 
+/*
    CSS Framework
    * Edit these
    ========================================================================== */
@@ -211,7 +211,7 @@ textarea {
   vertical-align: top;
 }
 
-/* 
+/*
    Grid System
    * Default: Choreographic Grid. Switch out for your own if you need
    ========================================================================== */
@@ -432,7 +432,6 @@ body {
   font-size: 1rem;
   line-height: 1.4;
   color: #444444;
-  background-color: white;
 }
 
 /*
@@ -1927,30 +1926,24 @@ img, object, embed, video {
     margin-bottom: 1.5%;
   }
 }
-/* 
-   Your app styles
-   * Consider modularizing your code.
-   * e.g. Create a partials directory with _header.scss, _footer.scss etc
-   * e.g. Create a pages directory with _home.scss, _contact.scss etc
+/*
+   Your styles
    ========================================================================== */
 /* ==========================================================================
    Global app/site styles
    ========================================================================== */
-/*
-   Masthead
-   ========================================================================== */
-/*
-   Footer
-   ========================================================================== */
+body {
+  background-color: white;
+}
+
 /* ==========================================================================
    Media queries for responsive design
    ========================================================================== */
 /*
-   Retina media Queries
-   Credit: http://dev.mattnt.com/retina-results.html
+   Retina media query
    ========================================================================== */
 /* Examples */
-/* 
+/*
    Utility classes
    * Has to be last to override when necessary
    ========================================================================== */
