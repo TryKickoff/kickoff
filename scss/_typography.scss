@@ -35,7 +35,6 @@ body {
 	@include font-size($base-font-size);
 	line-height: $base-leading;
 	color: $color-text;
-	background-color: $color-background;
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
