@@ -1,5 +1,8 @@
-// Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License
-// https://raw.github.com/scottjehl/Hide-Address-Bar/
+/* ==========================================================================
+   Normalized address bar hiding for iOS & Android
+   (c) @scottjehl MIT License
+   https://raw.github.com/scottjehl/Hide-Address-Bar/
+   ========================================================================== */
 (function( win ){
 	var doc = win.document;
 

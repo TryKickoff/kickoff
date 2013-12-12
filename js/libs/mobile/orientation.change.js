@@ -1,9 +1,11 @@
-// A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT License
-// =================================================================================================
-// https://github.com/scottjehl/iOS-Orientationchange-Fix/
-// Use meta content='width=device-width,initial-scale=1' or similar
-// This is not needed if we are disallowing user scaling
-(function(w){
+/* ==========================================================================
+   A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT License
+   =================================================================================================
+   https://github.com/scottjehl/iOS-Orientationchange-Fix/
+   Use meta content='width=device-width,initial-scale=1' or similar
+   This is not needed if we are disallowing user scaling
+   ========================================================================== */
+;(function(w){
 
 	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
 	var ua = navigator.userAgent;

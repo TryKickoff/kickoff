@@ -1,35 +1,38 @@
-// ==================
-// === HELPERS.js ===
-// ==================
+/* ==========================================================================
+   Helpers.js - JS Shims, helpers
 
-// JS Shims, helpers
-// =================
-// Consider using one of these libraries to provide support for
-// javascript's natives across browsers
-//
-// * https://github.com/kriskowal/es5-shim
-// * http://lodash.com/
-// * http://sugarjs.com/
+   Consider using one of these libraries to provide support for
+   javascript's natives across browsers
 
+   * https://github.com/kriskowal/es5-shim
+   * http://lodash.com/
+   * http://sugarjs.com/
+   ========================================================================== */
 
-// Array Remove
-// ============
-// By John Resig (MIT Licensed)
-// http://ejohn.org/blog/javascript-array-remove/
+/*
+   Array Remove
+   By John Resig (MIT Licensed)
+   http://ejohn.org/blog/javascript-array-remove/
+   ========================================================================== */
 Array.prototype.remove = Array.prototype.remove || function (from, to) {
 	var rest = this.slice((to || from) + 1 || this.length);
 	this.length = from < 0 ? this.length + from : from;
 	return this.push.apply(this, rest);
 };
 
-//String substitute, ported from MooTools
+/*
+   String substitute, ported from MooTools
+   Usage: https://gist.github.com/mrmartineau/7926397
+   ========================================================================== */
 String.prototype.substitute = function (object) {
 	return this.replace(/\{(.+?)\}/g, function (match, name) {
 		return name in object ? object[name] : match;
 	});
 };
 
-//Array forEach patch
+/*
+   Array forEach patch
+   ========================================================================== */
 if (!('forEach' in Array.prototype)) {
 	Array.prototype.forEach = function (fn, scope) {
 		for (var i = 0, len = this.length; i < len; ++i) {
@@ -38,7 +41,9 @@ if (!('forEach' in Array.prototype)) {
 	};
 }
 
-//Array filter patch
+/*
+   Array filter patch
+   ========================================================================== */
 if (!('filter' in Array.prototype)) {
 	Array.prototype.filter = function (fn, scope) {
 		var results = [];
@@ -54,7 +59,9 @@ if (!('filter' in Array.prototype)) {
 	};
 }
 
-//Array map patch
+/*
+   Array map patch
+   ========================================================================== */
 if (!('map' in Array.prototype)) {
 	Array.prototype.map = function (fn, scope) {
 		var length = this.length >>> 0, results = Array(length);
@@ -67,7 +74,9 @@ if (!('map' in Array.prototype)) {
 	};
 }
 
-//Object create patch
+/*
+   Object create patch
+   ========================================================================== */
 if (!('create' in Object.prototype)) {
 	Object.create = (function () {
 		function F() { }
@@ -82,8 +91,10 @@ if (!('create' in Object.prototype)) {
 	})();
 }
 
-//Object comparison is not the same as if you compare primitive types.
-//https://gist.github.com/nicbell/6081098
+/*
+   Object comparison is not the same as if you compare primitive types.
+   https://gist.github.com/nicbell/6081098
+   ========================================================================== */
 Object.compare = function (obj1, obj2) {
 	for (var p in obj1) {
 		if (obj1.hasOwnProperty(p) !== obj2.hasOwnProperty(p)) return false;
@@ -107,7 +118,9 @@ Object.compare = function (obj1, obj2) {
 };
 
 
-//Function bind patch
+/*
+   Function bind patch
+   ========================================================================== */
 if (!('bind' in Function.prototype)) {
 	Function.prototype.bind = function (oThis) {
 		if (typeof this !== "function") {

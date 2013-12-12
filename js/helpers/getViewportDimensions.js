@@ -1,16 +1,17 @@
 /* ==========================================================================
-   Reliably get viewport dimensions in JS
+   Reliably get viewport dimensions
 
    Notes:
-   relies on position:fixed support, but it should work in browsers that partially support position: fixed like iOS4 and such...
+   relies on position:fixed support, but it should work in browsers that
+   partially support position: fixed like iOS4 and such...
 
    Usage:
-   * $('.spotlight').css( TMW.getViewportDimensions() );
-   * $('.spotlight').css('height', TMW.getViewportDimensions().height);
-   * var viewportwidth = TMW.getViewportDimensions.width;
+   * $('.spotlight').css( KO.getViewportDimensions() );
+   * $('.spotlight').css('height', KO.getViewportDimensions().height);
+   * var viewportwidth = KO.getViewportDimensions.width;
    ========================================================================== */
-;(function (TMW) {
-	TMW.getViewportDimensions = function getViewportDimensions(){
+;(function (KO) {
+	KO.getViewportDimensions = function getViewportDimensions(){
 		var test = document.createElement( "div" );
 
 		test.style.cssText = "position: fixed;top: 0;left: 0;bottom: 0;right: 0;";
@@ -21,4 +22,4 @@
 
 		return dims;
 	};
-})(window.TMW = window.TMW || {});
+})(window.KO = window.KO || {});

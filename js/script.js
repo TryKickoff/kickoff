@@ -2,8 +2,8 @@
 		TMW - (Author Name Here)
 */
 
-// Create a closure to maintain scope of the '$' and TMW
-;(function (TMW, $) {
+// Create a closure to maintain scope of the '$' and KO (Kickoff)
+;(function (KO, $) {
 
 	$(function() {
 		// Any globals go here in CAPS (but avoid if possible)
@@ -11,7 +11,7 @@
 		// follow a singleton pattern
 		// (http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript)
 
-		TMW.Config.init();
+		KO.Config.init();
 
 	});// END DOC READY
 
@@ -32,7 +32,7 @@
 
 
 
-	TMW.Config = {
+	KO.Config = {
 		variableX : '', // please don't keep me - only for example syntax!
 
 		init : function () {
@@ -42,9 +42,9 @@
 
 	// Example module
 	/*
-	TMW.Ui = {
+	KO.Ui = {
 		init : function() {
-			TMW.Ui.modal();
+			KO.Ui.modal();
 		},
 
 		modal : function() {
@@ -53,4 +53,4 @@
 	};
 	*/
 
-})(window.TMW = window.TMW || {}, jQuery);
+})(window.KO = window.KO || {}, jQuery);
