@@ -14,13 +14,13 @@ $purple                       : #8e44ad;
 $gray                         : #7f8c8d;
 
 // Colour Scheme
-$color-primary                : #34495e;
-$color-secondary              : $green;
-$color-highlight              : #ff9600;
+$color-primary                : $blue;
+$color-secondary              : $red;
+$color-highlight              : $yellow;
 
 // Common colours
 $color-text                   : #444;
-$color-background             : #fff;
+$color-background             : #f1f1f1;
 $color-border                 : #ddd;
 
 // Text Selection
@@ -31,8 +31,8 @@ $color-selection-bg           : $color-primary;
 // Links
 $color-link-default           : $color-primary;
 $color-link-visited           : $color-primary;
-$color-link-hover             : darken($color-primary, 15%);
-$color-link-active            : darken($color-primary, 15%);
+$color-link-hover             : darken($color-primary, 20%);
+$color-link-active            : darken($color-primary, 20%);
 
 
 // Buttons
