@@ -515,18 +515,18 @@ h6, .h6, .zeta {
    Links
    ========================================================================== */
 a {
-  color: #34495e;
+  color: #3498db;
   text-decoration: none;
 }
 a:visited {
-  color: #34495e;
+  color: #3498db;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #19232d;
+  color: #196090;
 }
 a:active {
-  color: #19232d;
+  color: #196090;
 }
 
 /*
@@ -728,12 +728,12 @@ samp {
 
 ::-moz-selection {
   color: white;
-  background: #34495e;
+  background: #3498db;
 }
 
 ::selection {
   color: white;
-  background: #34495e;
+  background: #3498db;
 }
 
 /* ==========================================================================
@@ -1462,9 +1462,9 @@ pre code {
   /* [7] */
   height: 2.5em;
   /* [7] */
-  padding-right: 1em;
+  padding-right: 1.5em;
   /* [7] */
-  padding-left: 1em;
+  padding-left: 1.5em;
   /* [7] */
   overflow: visible;
   /* [8] */
@@ -1503,12 +1503,12 @@ pre code {
 }
 
 .btn--large {
-  font-size: 22px;
-  font-size: 1.1rem;
-  line-height: 3.5;
-  height: 3.5em;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
+  font-size: 23px;
+  font-size: 1.15rem;
+  line-height: 3;
+  height: 3em;
+  padding-right: 2em;
+  padding-left: 2em;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -o-border-radius: 6px;
@@ -1520,8 +1520,8 @@ pre code {
   font-size: 0.65rem;
   line-height: 1.5;
   height: 1.5em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
@@ -1564,7 +1564,7 @@ input[type="button"].btn--block {
 }
 
 .btn--primary {
-  background-color: #34495e;
+  background-color: #3498db;
   color: #fff !important;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
@@ -1586,7 +1586,7 @@ input[type="button"].btn--block {
 .btn--link {
   border-color: transparent;
   cursor: pointer;
-  color: #34495e;
+  color: #3498db;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
@@ -1595,7 +1595,7 @@ input[type="button"].btn--block {
 
 .btn--link:hover,
 .btn--link:focus {
-  color: #19232d;
+  color: #196090;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -1618,7 +1618,7 @@ input[type="button"].btn--block {
   width: 20px;
   line-height: 17px;
   background: #000;
-  color: #34495e;
+  color: #3498db;
   text-align: center;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1933,7 +1933,7 @@ img, object, embed, video {
    Global app/site styles
    ========================================================================== */
 body {
-  background-color: white;
+  background-color: #f1f1f1;
 }
 
 /* ==========================================================================
