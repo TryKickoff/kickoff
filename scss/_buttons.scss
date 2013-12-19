@@ -31,10 +31,10 @@
 	margin:0;                   /* [6] */
 	padding-top:   0;           /* [6] */
 	padding-bottom:0;           /* [6] */
-	line-height:2.5;              /* [7] */
-	height:     2.5em;            /* [7] */
-	padding-right:1em;          /* [7] */
-	padding-left: 1em;          /* [7] */
+	line-height: 2.5;           /* [7] */
+	height:      2.5em;         /* [7] */
+	padding-right:1.5em;        /* [7] */
+	padding-left: 1.5em;        /* [7] */
 	overflow:visible;           /* [8] */
 	text-align: center;
 
@@ -71,11 +71,11 @@
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
 .btn--large {
-	@include font-size($base-font-size + 2);
-	line-height:3.5;
-	height:     3.5em;
-	padding-right:1.5em;
-	padding-left: 1.5em;
+	@include font-size($base-font-size + 3);
+	line-height:3;
+	height:     3em;
+	padding-right:2em;
+	padding-left: 2em;
 	@include border-radius(6px);
 }
 
@@ -84,8 +84,8 @@
 	@include font-size(13);
 	line-height:1.5;
 	height:     1.5em;
-	padding-right:0.5em;
-	padding-left: 0.5em;
+	padding-right:0.75em;
+	padding-left: 0.75em;
 	@include border-radius(3px);
 }
 
