@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Setup styleguide imports
+   ========================================================================== */
+@import "colour-palette";
+@import "variables";
+// Override the grid
+$gridColumnCount              : 12    ;
+$gridGutterWidth              : 20    ;
+$gridMaxWidth                 : 1000  ;
+$gridMargin                   : 40     ;
+$gridColumnPadding            : 0     ;
+$gridColumnPaddingUnit        : 'px'   ;
+$nestedColumnPadding          : false ;
+@import "helpers/helpers";
+@import "functions/functions";
+@import "mixins/mixins";
+@import "normalize";
+@import "choreographic-grid";
+@import "typography";
+//@import "forms";
+//@import "tables";
+@import "code";
+@import "buttons";
+@import "components";
+@import "global";
+@import "utilities";
+@import "responsive-utilities";
+@import "print";
+
+/* ==========================================================================
+   Styleguide styles
+   ========================================================================== */
+body {
+	background-color: #f1f1f1;
+}
+.well {
+	min-height: 90px;
+}
+.g-container {
+	@include box-shadow(0 1px 15px rgba(0,0,0,.4));
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #fff;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	@include border-radius(3px);
+}
+.g-row + .g-row {
+	margin-top: 30px;
+}
+.g-span12 + .g-span12 {
+	margin-top: 30px;
+}
+.section-heading {
+	border-bottom: 1px solid rgba(#000, 0.2);
+	padding-bottom: .3em;
+	@extend .interfaceType;
+	margin-top: 1em;
+}
+.interfaceType {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.interfaceType-subtle {
+	color: #888;
+}
+.masthead h1 {
+	margin-bottom: 0;
+}
+/*
+   Colours
+   ========================================================================== */
+.swatch {
+	// width: 220px;
+	height: 220px;
+}
+
+.color-primary {
+	color: $color-primary;
+
+	&.bg {
+		background-color: $color-primary;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-primary}';
+		}
+	}
+}
+.color-secondary {
+	color: $color-secondary;
+
+	&.bg {
+		background-color: $color-secondary;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-secondary}';
+		}
+	}
+}
+.color-highlight {
+	color: $color-highlight;
+
+	&.bg {
+		background-color: $color-highlight;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-highlight}';
+		}
+	}
+}
+.color-text {
+	color: $color-text;
+
+	&.bg {
+		background-color: $color-text;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-text}';
+		}
+	}
+}
+.color-background {
+	color: $color-background;
+
+	&.bg {
+		background-color: $color-background;
+		@if lightness($color-background) < 50 {
+			color: #fff;
+		} @else {
+			color: #444;
+		}
+
+		&:after {
+			content: '#{$color-background}';
+		}
+	}
+}
+.color-link {
+	color: $color-link-default;
+
+	&.bg {
+		background-color: $color-link-default;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-link-default}';
+		}
+	}
+}
+.color-link-hover {
+	color: $color-link-hover;
+
+	&.bg {
+		background-color: $color-link-hover;
+		color: #fff;
+
+		&:after {
+			content: '#{$color-link-hover}';
+		}
+	}
+}
+
+.typography {
+	.info {
+		p {
+			-ms-word-wrap: break-word;
+			word-wrap: break-word;
+		}
+	}
+	.example {
+		margin: 1em 0;
+
+		h1:after {
+			content: ' - #{$h1-size}px';
+		}
+		h2:after {
+			content: ' - #{$h2-size}px';
+		}
+		h3:after {
+			content: ' - #{$h3-size}px';
+		}
+		h4:after {
+			content: ' - #{$h4-size}px';
+		}
+		h5:after {
+			content: ' - #{$h5-size}px';
+		}
+		h6:after {
+			content: ' - #{$h6-size}px';
+		}
+
+		h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+			text-transform: lowercase;
+		}
+
+		.interfaceType:after {
+			content: "";
+		}
+	}
+}
+
+.typeSpecimen {
+	margin-bottom: 0;
+	margin-top: 0;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+
+	&:after {
+		display: block;
+		@extend .interfaceType;
+		@extend .interfaceType-subtle;
+		@include font-size(16);
+		margin-top: 5px;
+		border-top: 1px solid #ddd;
+		font-weight: normal;
+	}
+}
+h1.typeSpecimen:after {
+	content: "Font stack: #{$headings-font-family}";
+}
+p.typeSpecimen:after {
+	content: "Font stack: #{$base-font-family}";
+}
