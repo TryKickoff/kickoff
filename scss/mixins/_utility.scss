@@ -55,7 +55,7 @@
 			 url('${font-path}.woff')					format('woff'),
 			 url('${font-path}.ttf')					format('truetype')
 			 // @if $include-svg == true {
-				,url('${font-path}.svg#{$family-name}') format('svg');
+				,url('${font-path}.svg##{$family-name}') format('svg');
 			 // }
 		font-weight: $font-weight;
 		font-style: $font-style;
@@ -106,13 +106,13 @@
 // @include truncate(100%);
 @mixin truncate($truncation-boundary) {
 	max-width: $truncation-boundary;
-	@extend %text-overflow;
+	@include text-overflow();
 }
 
 // Text overflow
-// @extend %text-overflow;
+// @include text-overflow();
 // Requires inline-block or block for proper styling
-%text-overflow {
+@mixin text-overflow {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -125,8 +125,9 @@
 	overflow: auto; // Safari fix
 }
 
-// @extend %tab-focus;
-%tab-focus {
+
+// @include tab-focus();
+@mixin tab-focus {
 	// Default
 	outline: thin dotted #333;
 	// Webkit

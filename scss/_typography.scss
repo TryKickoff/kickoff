@@ -210,7 +210,7 @@ dt {
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
-		@extend %text-overflow;
+		@include text-overflow();
 		float: left;
 		clear: left;
 		width: 220px;

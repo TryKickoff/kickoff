@@ -96,21 +96,6 @@
 /* ==========================================================================
    Typography mixins
    ========================================================================== */
-.dl-horizontal dt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
 /* HiDPI */
 /* FORMS */
 /* BROWSER FIXES */
@@ -582,6 +567,9 @@ dt {
   font-weight: bold;
 }
 .dl-horizontal dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   float: left;
   clear: left;
   width: 220px;
@@ -999,6 +987,9 @@ select:focus {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .input--mini {

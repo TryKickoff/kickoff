@@ -87,12 +87,6 @@
 /* ==========================================================================
    Typography mixins
    ========================================================================== */
-.dl-horizontal dt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 /* HiDPI */
 /* FORMS */
 /* BROWSER FIXES */
@@ -554,6 +548,9 @@ dt {
   font-weight: bold;
 }
 .dl-horizontal dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   float: left;
   clear: left;
   width: 220px;

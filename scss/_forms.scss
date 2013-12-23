@@ -308,7 +308,7 @@ input[type="checkbox"],
 select {
 	&:focus {
 		@include box-shadow(none); // override for file inputs
-		@extend %tab-focus;
+		@include tab-focus;
 	}
 }
 
