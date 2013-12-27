@@ -2,11 +2,19 @@
 
 # Kickoff
 
-Developed by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
+Developed and maintained by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw.co.uk
 
 [![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies)
+
+### Features
+
+* Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
+* Mixins for lots of CSS3 features including gradients, rems with fallbacks
+* Starter content styles, including clean typography, lists, tables, etc
+* Starter form element styles
+* Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
 
 ### Browser support
 Simple: Internet Explorer 8+
