@@ -6,6 +6,8 @@ Developed by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martine
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw.co.uk
 
+[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies)
+
 ### Browser support
 Simple: Internet Explorer 8+
 
