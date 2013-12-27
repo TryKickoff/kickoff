@@ -6,7 +6,7 @@ Developed and maintained by [Ashley Nolan](https://github.com/dragongraphics) & 
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw.co.uk
 
-[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies)
+[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ### Features
 
@@ -45,4 +45,4 @@ There is also a Yeoman generator for Kickoff, visit [tmwagency.github.io/kickoff
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
