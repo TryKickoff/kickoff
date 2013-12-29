@@ -11,10 +11,14 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw
 ### Features
 
 * Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
-* Mixins for lots of CSS3 features including gradients, rems with fallbacks
+* Sass mixins for many CSS3 features including gradients, REMs with fallbacks
 * Starter content styles, including clean typography, lists, tables, etc
-* Starter form element styles
-* Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+* Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
+* Grunt used extensively to ease common development bottlenecks
+ * Sass compilation using [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+ * Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+ * Simple server using [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
+
 
 ### Browser support
 Simple: Internet Explorer 8+
@@ -26,7 +30,7 @@ Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/)
 * Install Node from [nodejs.org](http://nodejs.org/)
 * Install Grunt CLI - `npm install -g grunt-cli`
 * Install Sass globally - `sudo gem install sass --pre`. [Ruby](https://www.ruby-lang.org/en/) v2 is needed. Update using [rvm](http://rvm.io/), [brew](http://brew.sh) (if you use a Mac) or from [ruby-lang.org/en/downloads/](https://www.ruby-lang.org/en/downloads/) then install the packages below
-* Navigate to (`cd`) your project directory and run `npm install` which will install all Grunt's dependencies
+* Navigate (`cd`) to your project directory and run `npm install` which will install all Grunt's dependencies
 * Run `grunt watch` or `grunt serve` (if you want to create a simple local server) to watch for changes and compile Sass/Javascript
 
 When using Grunt with Kickoff, source maps are created for both the Javascript and Sass. Javascript is compiled to the `/js/dist` and Sass is compiled to the '/css' folder.
