@@ -101,10 +101,10 @@ module.exports = function (grunt) {
 				sourceMap: distDir + jsFile + '.map',
 
 				// sourceMappingURL: @string. The string that is printed to the final file
-				sourceMappingURL: jsFile +'.map',
+				sourceMappingURL: '/' + jsFile +'.map',
 
 				// sourceMapRoot: @string. The location where your source files can be found. This sets the sourceRoot field in the source map.
-				sourceMapRoot: '../../'
+				//sourceMapRoot: '../../'
 			},
 
 			/**
@@ -177,6 +177,7 @@ module.exports = function (grunt) {
 			server: {
 				options: {
 					// port: 9001,
+					// hostname: 'mysite.local',
 					open: true,
 					livereload: true
 				}
