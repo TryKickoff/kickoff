@@ -78,7 +78,17 @@ module.exports = function (grunt) {
 					'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
 					'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
-
+			},
+			styleguide: {
+				options: {
+					unixNewlines: true,
+					style: 'expanded',
+					precision : 8,
+					sourcemap : true
+				},
+				files: {
+					'css/styleguide.css': 'scss/styleguide.scss'
+				}
 			}
 		},
 
@@ -125,7 +135,7 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev']
+				tasks: ['sass:dev', 'sass:styleguide']
 				// tasks: ['sass:dev', 'autoprefixer:dist', 'csso']
 			},
 

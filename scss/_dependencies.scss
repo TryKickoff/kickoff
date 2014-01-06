@@ -20,13 +20,13 @@
 @import "mixins/mixins";
 
 
-/* 
+/*
    CSS Framework
    * Edit these
    ========================================================================== */
 @import "normalize"; // CSS reset
 
-/* 
+/*
    Grid System
    * Default: Choreographic Grid. Switch out for your own if you need
    ========================================================================== */
@@ -41,20 +41,18 @@
 @import "components";
 
 
-/* 
-   Your app styles
-   * Consider modularizing your code.
-   * e.g. Create a partials directory with _header.scss, _footer.scss etc
-   * e.g. Create a pages directory with _home.scss, _contact.scss etc
+/*
+   Your styles
    ========================================================================== */
-@import "app";
+@import "global";
+@import "partials/masthead";
+@import "partials/footer";
 
 /* Examples */
-//@import "partials/header";
 //@import "pages/home";
 
 
-/* 
+/*
    Utility classes
    * Has to be last to override when necessary
    ========================================================================== */

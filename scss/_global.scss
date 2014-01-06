@@ -1,22 +1,9 @@
 /* ==========================================================================
    Global app/site styles
    ========================================================================== */
-
-
-
-
-/*
-   Masthead
-   ========================================================================== */
-
-
-
-
-/*
-   Footer
-   ========================================================================== */
-
-
+body {
+	background-color: $color-background;
+}
 
 
 
@@ -25,20 +12,13 @@
    ========================================================================== */
 
 /*
-   Retina media Queries
-   Credit: http://dev.mattnt.com/retina-results.html
+   Retina media query
    ========================================================================== */
-@media print,
-	(-o-min-device-pixel-ratio: 5/4),
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 120dpi) {
+@include hidpi() {
 
-	// * {
-	// 	background-image: url(@imgSprite2x);
-	// 	background-size: @imgSpriteDimensions;
-	// }
+};
 
-}
+
 
 // === $breakpoint-narrow> ===
 @include respond-min($breakpoint-narrow) {
