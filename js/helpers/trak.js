@@ -8,9 +8,9 @@
    https://developers.google.com/analytics/devguides/collection/analyticsjs/events
 
    ### Usage:
-   KO.Trak('category', 'action');
-   KO.Trak('category', 'action', 'label');
-   KO.Trak('category', 'action', 'label', value); // value is a number
+   KO.Trak.event('category', 'action');
+   KO.Trak.event('category', 'action', 'label');
+   KO.Trak.event('category', 'action', 'label', value); // value is a number
    ========================================================================== */
 ;(function(KO) {
 	KO.Trak = {
