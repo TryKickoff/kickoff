@@ -140,11 +140,7 @@ module.exports = function (grunt) {
 			},
 
 			js: {
-				files: [
-					'Gruntfile.js',
-					'js/*.js',
-					'js/libs/**/*.js'
-				],
+				files: jsFileList,
 				tasks: ['uglify']
 			},
 
