@@ -229,6 +229,17 @@ module.exports = function (grunt) {
 					"1.10.2": [ "deprecated", "dimensions", "offset", "wrap"]
 				}
 			}
+		},
+
+		availabletasks: {
+			tasks: {}
+		},
+
+		jscs: {
+			src: jsFileList,
+			options: {
+				config: ".jscs.json"
+			}
 		}
 	});
 
