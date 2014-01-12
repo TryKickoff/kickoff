@@ -21,12 +21,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "gulp": "~3.3.0",
+    "gulp": "~3.3.1",
     "gulp-uglify": "~0.1.0",
     "gulp-rename": "~0.2.1",
     "gulp-concat": "~2.1.7",
     "gulp-jshint": "~1.3.4",
-    "gulp-sass": "~0.2.3",
+    "gulp-sass": "~0.3.0",
     "gulp-ruby-sass": "~0.1.1"
   },
   "keywords": []

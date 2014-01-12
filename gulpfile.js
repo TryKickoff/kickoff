@@ -1,12 +1,16 @@
 // Include gulp
-var gulp = require('gulp');
+var gulp = require('gulp'),
 
 // Include Our Plugins
-var jshint = require('gulp-jshint');
-var sass = require('gulp-ruby-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+	jshint     = require('gulp-jshint'),
+	sass       = require('gulp-ruby-sass'),
+	concat     = require('gulp-concat'),
+	uglify     = require('gulp-uglify'),
+	rename     = require('gulp-rename'),
+	lr         = require('tiny-lr'),
+	livereload = require('gulp-livereload'),
+	server     = lr()
+;
 
 
 /*
@@ -47,8 +51,17 @@ gulp.task('lint', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
 	gulp.src(['./scss/kickoff.scss', './scss/kickoff-old-ie.scss', './scss/styleguide.scss'])
-		.pipe(sass())
-		.pipe(gulp.dest('./css'));
+		.pipe(sass({
+					unixNewlines: true,
+					style: 'expanded',
+					lineNumbers: false,
+					debugInfo : false,
+					precision : 8,
+					sourcemap : true
+				})
+		)
+		.pipe(gulp.dest('./css'))
+		.pipe(livereload(server));
 });
 
 // Concatenate & Minify JS
@@ -57,7 +70,15 @@ gulp.task('scripts', function() {
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest(jsDistDir))
 		.pipe(rename('app.min.js'))
-		.pipe(uglify())
+		.pipe(uglify({
+			mangle: true, // mangle: Turn on or off mangling
+			beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
+			compress: true,
+			// report: 'gzip', // report: Show file size report
+			outSourceMap	: jsDistDir + jsFile + '.map',
+			sourceMappingURL: jsFile + '.map',
+			sourceMapRoot: '../../'
+		}))
 		.pipe(gulp.dest(jsDistDir));
 });
 
@@ -71,7 +92,11 @@ gulp.task('default', function(){
 	});
 
 	// Watch For Changes To Our SCSS
-	gulp.watch('./scss/*.scss', function(){
-		gulp.run('sass');
+	server.listen(35729, function (err) {
+		if (err) { return console.log(err); }
+
+		gulp.watch('./scss/**/*.scss', function(){
+			gulp.run('sass');
+		});
 	});
 });
