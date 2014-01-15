@@ -43,14 +43,14 @@ var jsFile = 'app.min.js';
 
 // Lint Task
 gulp.task('lint', function() {
-	gulp.src(jsFileList)
+	return gulp.src(jsFileList)
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
 });
 
 // Compile Our Sass
 gulp.task('sass', function() {
-	gulp.src(['./scss/kickoff.scss', './scss/kickoff-old-ie.scss', './scss/styleguide.scss'])
+	return gulp.src(['./scss/kickoff.scss', './scss/kickoff-old-ie.scss', './scss/styleguide.scss'])
 		.pipe(sass({
 					unixNewlines: true,
 					style: 'expanded',
@@ -66,7 +66,7 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-	gulp.src(jsFileList)
+	return gulp.src(jsFileList)
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest(jsDistDir))
 		.pipe(rename('app.min.js'))
