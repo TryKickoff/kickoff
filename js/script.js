@@ -3,7 +3,7 @@
 */
 
 // Create a closure to maintain scope of the '$' and KO (Kickoff)
-;(function (KO, $) {
+;(function(KO, $) {
 
 	$(function() {
 		// Any globals go here in CAPS (but avoid if possible)

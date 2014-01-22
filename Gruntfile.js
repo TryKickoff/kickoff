@@ -140,11 +140,7 @@ module.exports = function (grunt) {
 			},
 
 			js: {
-				files: [
-					'Gruntfile.js',
-					'js/*.js',
-					'js/libs/**/*.js'
-				],
+				files: jsFileList,
 				tasks: ['uglify']
 			},
 
@@ -229,6 +225,17 @@ module.exports = function (grunt) {
 					// We can't remove sizzle from 1.x versions, so let's not specify it
 					"1.10.2": [ "deprecated", "dimensions", "offset", "wrap"]
 				}
+			}
+		},
+
+		availabletasks: {
+			tasks: {}
+		},
+
+		jscs: {
+			src: jsFileList,
+			options: {
+				config: ".jscs.json"
 			}
 		}
 	});
