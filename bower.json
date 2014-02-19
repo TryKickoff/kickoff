@@ -1,0 +1,17 @@
+{
+  "name": "kickoff",
+  "version": "3.3.0",
+  "homepage": "https://github.com/tmwagency/kickoff",
+  "authors": [
+    "Zander Martineau @MrMartineau",
+    "Ashley Nolan @AshNolan_"
+  ],
+  "description": "A lightweight front-end framework for creating scalable, responsive sites",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components"
+  ]
+}
