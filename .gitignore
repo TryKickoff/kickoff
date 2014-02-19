@@ -6,6 +6,7 @@
 ########
 .sass-cache/
 *.scssc
+css/temp/
 
 
 # OS generated files #
