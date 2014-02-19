@@ -296,7 +296,7 @@ module.exports = function (grunt) {
 		 * Manage the options inside .jshintrc file
 		 */
 		jshint: {
-			all: jsFileList,
+			all: '<%=config.js.fileList%>',
 			options: {
 				jshintrc: '.jshintrc'
 			}
@@ -309,7 +309,7 @@ module.exports = function (grunt) {
 		 * Manage the options inside .jscs.json file
 		 */
 		jscs: {
-			src: jsFileList,
+			src: '<%=config.js.fileList%>',
 			options: {
 				config: ".jscs.json"
 			}
