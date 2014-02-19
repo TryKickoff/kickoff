@@ -2,36 +2,34 @@ module.exports = function (grunt) {
 
 	'use strict';
 
-	/*
-		 Javascript settings - Edit this section
-		 ========================================================================== */
-	/**
-	 * Specify which js files you want to include
-	 */
-	var jsFileList = [
-		'js/helpers/helpers.js',
-		'js/helpers/console.js',
-		'js/script.js'
-	];
-
-	/**
-	 * Specify your output directory
-	 */
-	var distDir = 'js/dist/';
-
-	/**
-	 * Specify the name of your compiled JS file
-	 * which will be placed in the directory you define above
-	 */
-	var jsFile = 'app.min.js';
-
-	/* ==================== */
-
 	/**
 	 * Project configuration
 	 */
 	grunt.initConfig({
-		pkg: require('./package'),
+		pkg: require('./package'), // <%=pkg.name%>
+
+		/**
+		 * Config - Edit this section
+		 * Choose javascript dist filename
+		 * Choose javascript dist location
+		 * Choose javascript files to be uglified
+		 */
+		config : {
+			js : {
+				// <%=config.js.distDir%>
+				distDir  : 'js/dist/',
+
+				// <%=config.js.distFile%>
+				distFile : 'app.min.js',
+
+				// <%=config.js.fileList%>
+				fileList : [
+					'js/helpers/helpers.js',
+					'js/helpers/console.js',
+					'js/script.js'
+				]
+			}
+		},
 
 
 		/**
