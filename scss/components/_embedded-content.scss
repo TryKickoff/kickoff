@@ -1,0 +1,24 @@
+/*
+	Embedded content
+	========================================================================== */
+img {
+	font-style:italic;
+	color:#c00;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+
+	&.img--left {
+		margin:0 20px 0 0;
+	}
+
+	&.img--right {
+		margin:0 0 0 20px;
+	}
+}
+
+svg:not(:root) { overflow: hidden; }
+
+// Images, Flash & video
+img, object, embed, video{
+	max-width:100%;
+}
