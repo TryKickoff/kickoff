@@ -3,7 +3,10 @@
    Non-semantic helper classes
    ========================================================================== */
 
-// Clearfix
+/**
+ * Clearfix
+ * See mixins/_utility.scss for a mixin version of this
+ */
 .clearfix {
 	zoom: 1;
 
@@ -18,7 +21,7 @@
 }
 
 
-// For image replacement
+// For background image replacement
 .ir {
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -68,7 +71,7 @@
 // Hide visually and from screenreaders, but maintain layout
 .is-invisible { visibility: hidden; }
 
-.l-floatLleft		{ float:left; }
+.l-floatLeft		{ float:left; }
 .l-floatRight		{ float:right; }
 .l-clear			{ clear:both; float:none; }
 
