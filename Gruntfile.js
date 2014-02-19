@@ -117,8 +117,8 @@ module.exports = function (grunt) {
 					sourcemap: true
 				},
 				files: {
-					'css/temp/<%=pkg.name%>.sass.css': 'scss/kickoff.scss',
-					'css/temp/<%=pkg.name%>-old-ie.sass.css': 'scss/kickoff-old-ie.scss'
+					'css/temp/kickoff.sass.css': 'scss/kickoff.scss',
+					'css/temp/kickoff-old-ie.sass.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			styleguide: {
@@ -171,17 +171,9 @@ module.exports = function (grunt) {
 				beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
 				compress: false,
 				// report: 'gzip', // report: Show file size report
-
-				// sourceMap: @string. The location of the source map, relative to the project
-				sourceMap:  '<%=config.js.distDir%>/<%=config.js.distFile%>.map',
-
-				// sourceMappingURL: @string. The string that is printed to the final file
+				sourceMap: '<%=config.js.distDir%>/<%=config.js.distFile%>.map',
 				sourceMappingURL: '/<%=config.js.distFile%>.map',
 			},
-
-			/**
-			 * Use the array at the top of this file to specify which js files you include
-			 */
 			js: {
 				src: '<%=config.js.fileList%>',
 				dest: '<%=config.js.distDir%>/<%=config.js.distFile%>'
@@ -325,23 +317,16 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 
-	/**
-	 * Available tasks:
-		 * grunt        : run jshint, uglify and sass:dev
-		 * grunt watch  : run sass:dev, uglify and livereload
-		 * grunt dev    : run jshint, uglify and sass:dev
-		 * grunt deploy : run jshint, uglify, sass:dev and csso
-		 * grunt jquery : build custom version of jquery
-		 * grunt serve  : watch js & scss and run a local server
-		 * grunt availabletasks : view all available tasks
-	 */
-
 	/* ==========================================================================
-
+		Available tasks:
+		* grunt        : run jshint, uglify and sass:dev
+		* grunt watch  : run sass:dev, uglify and livereload
+		* grunt dev    : run jshint, uglify and sass:dev
+		* grunt deploy : run jshint, uglify, sass:dev and csso
+		* grunt jquery : build custom version of jquery
+		* grunt serve  : watch js & scss and run a local server
+		* grunt availabletasks : view all available tasks
 	   ========================================================================== */
-
-
-
 
 	/**
 	 * GRUNT * Default task
