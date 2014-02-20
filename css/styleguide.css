@@ -7,7 +7,7 @@
 /* ==========================================================================
    Variables
    * Settings
-   * Global valuesx
+   * Global values
    * Breakpoints
    * Paths
    * Grid setup
@@ -19,6 +19,9 @@
    ========================================================================== */
 /*
     Typography
+   ========================================================================== */
+/*
+   Font stacks
    ========================================================================== */
 /*
    Breakpoints
@@ -34,6 +37,7 @@
    ========================================================================== */
 /*
    App-specific variables
+   Add common vars here
    ========================================================================== */
 /* ==========================================================================
    Sass Mixins
@@ -79,8 +83,10 @@
    * Usage: @include oldie() { ... }
    ========================================================================== */
 /* CSS3 */
-/* Components */
-/* Utility mixins */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ */
 /* ==========================================================================
    Utlity Mixins
    ========================================================================== */
@@ -99,7 +105,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -273,7 +278,6 @@ textarea {
     min-height: 1px;
     position: relative;
     clear: none;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
@@ -655,8 +659,6 @@ dfn {
 mark {
   background: #f1c40f;
   padding: 2px 4px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -716,10 +718,9 @@ pre {
   font-size: 13px;
   font-size: 0.65rem;
   color: #dd1144;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -moz-tab-size: 3;
   tab-size: 3;
 }
 
@@ -738,8 +739,6 @@ pre {
   background-color: #f7f7f9;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
   white-space: pre;
@@ -795,16 +794,12 @@ pre code {
   /* [8] */
   text-align: center;
   background-color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -821,8 +816,6 @@ pre code {
   zoom: 1;
   filter: alpha(opacity=65);
   opacity: 0.65;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
@@ -834,8 +827,6 @@ pre code {
   height: 3em;
   padding-right: 2em;
   padding-left: 2em;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
@@ -847,8 +838,6 @@ pre code {
   height: 1.5em;
   padding-right: 0.75em;
   padding-left: 0.75em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -856,8 +845,6 @@ pre code {
 .btn--pill {
   padding-left: 1.5em;
   padding-right: 1.5em;
-  -webkit-border-radius: 100em;
-  -moz-border-radius: 100em;
   -o-border-radius: 100em;
   border-radius: 100em;
 }
@@ -902,8 +889,6 @@ input[type="button"].btn--block {
 .btn--link[disabled] {
   background-color: transparent;
   background-image: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
@@ -912,8 +897,6 @@ input[type="button"].btn--block {
   border-color: transparent;
   cursor: pointer;
   color: #3498db;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
@@ -945,8 +928,6 @@ input[type="button"].btn--block {
   background: #000;
   color: #3498db;
   text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -957,8 +938,6 @@ input[type="button"].btn--block {
 }
 .btn-close:hover {
   color: #fff;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
   -o-border-radius: 50px;
   border-radius: 50px;
 }
@@ -969,7 +948,9 @@ input[type="button"].btn--block {
 	* Centred list
 	* Floated lists
 	* Wells
+	* iconicList
 	* Tabs
+	* Blockquotes
 	* Media Object
 	* Block grids
 	========================================================================== */
@@ -1046,32 +1027,20 @@ img, object, embed, video {
   background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .well--large {
   padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
 
 .well--small {
   padding: 9px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -1079,12 +1048,12 @@ img, object, embed, video {
 /*
 	Tabs
 
-	* Usage: 
+	* Usage:
 	<ul class="tabs">
 		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
 		<li><a href="#tabs-example-2">Tab 2</a></li>
 	</ul>
-	
+
 	<!-- Tabs Content -->
 	<ul class="l-tabsContent">
 		<li id="tabs-example-1" class="is-active">
@@ -1124,8 +1093,6 @@ img, object, embed, video {
 }
 .tabs a {
   background-color: #95a5a6;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
   color: #fff;
@@ -1141,6 +1108,69 @@ img, object, embed, video {
   display: block;
 }
 
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	*
+	** Image is optional **
+	*
+	* Markup:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+.media {
+  display: block;
+  padding: 20px 0;
+}
+
+/*
+   Add image to left or right
+   ========================================================================== */
+.media-img {
+  margin-right: 28px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 28px;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 25em) {
+  .media {
+    padding: 35px 0;
+  }
+
+  .media--zeroTopPad {
+    padding-top: 0;
+  }
+
+  .media-img {
+    float: left;
+  }
+}
 /*
 	Media Object
 
@@ -1183,6 +1213,29 @@ img, object, embed, video {
 .media-body,
 .media-body > :last-child {
   margin-bottom: 0;
+}
+
+/**
+ * Consider moving images and floats so only wide viewports see them
+ */
+/*
+   Fluid width video
+   * 16:9 aspect ratio by default
+   * Usage:
+   * <div class="fluidVideo"><iframe src="..."/></div
+   ========================================================================== */
+.fluidVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.fluidVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -1268,6 +1321,10 @@ body {
    Utilities
    Non-semantic helper classes
    ========================================================================== */
+/**
+ * Clearfix
+ * See mixins/_utility.scss for a mixin version of this
+ */
 .clearfix {
   zoom: 1;
 }
@@ -1326,7 +1383,7 @@ body {
   visibility: hidden;
 }
 
-.l-floatLleft {
+.l-floatLeft {
   float: left;
 }
 
@@ -1473,8 +1530,6 @@ body {
 }
 
 .g-container {
-  -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
   -o-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
   padding-top: 3%;
@@ -1482,8 +1537,6 @@ body {
   background-color: #fff;
   margin-top: 3%;
   margin-bottom: 3%;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -1652,5 +1705,4 @@ h1.typeSpecimen:after {
 p.typeSpecimen:after {
   content: 'Font stack: "Helvetica Neue", Helvetica, Arial, sans-serif';
 }
-
 /*# sourceMappingURL=styleguide.css.map */

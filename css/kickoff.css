@@ -11,7 +11,7 @@
 /* ==========================================================================
    Variables
    * Settings
-   * Global valuesx
+   * Global values
    * Breakpoints
    * Paths
    * Grid setup
@@ -23,6 +23,9 @@
    ========================================================================== */
 /*
     Typography
+   ========================================================================== */
+/*
+   Font stacks
    ========================================================================== */
 /*
    Breakpoints
@@ -38,6 +41,7 @@
    ========================================================================== */
 /*
    App-specific variables
+   Add common vars here
    ========================================================================== */
 /*
    Mixins, helpers and functions
@@ -88,8 +92,10 @@
    * Usage: @include oldie() { ... }
    ========================================================================== */
 /* CSS3 */
-/* Components */
-/* Utility mixins */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ */
 /* ==========================================================================
    Utlity Mixins
    ========================================================================== */
@@ -197,190 +203,8 @@ textarea {
 }
 
 /*
-   Grid System
-   * Default: Choreographic Grid. Switch out for your own if you need
+   Framework styles
    ========================================================================== */
-/* ==========================================================================
-	 The Choreographic Grid
-	 * Grid setup
-	 * Grid helpers/mixins
-	 * Default grid styles
-	 * Media queries
-	 * Centred columns
-	 ========================================================================== */
-/*
-	 Basic Usage:
-	 <div class="g-row">
-			 <div class="g-col g-span4"></div>
-			 <div class="g-col g-span8"></div>
-	 </div>
-	 ========================================================================== */
-/*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-/* Setup grid defaults */
-/* Column Padding */
-/*
-	 Import Grid helpers and mixins
-	 ========================================================================== */
-/* ==========================================================================
-   Choreographic Grid helpers
-   ========================================================================== */
-/*
-   Grid column mixin
-   ========================================================================== */
-/*
-   Grid columns width calcs
-   ========================================================================== */
-/*
-   Column width mixin
-   ========================================================================== */
-/*
-   Gutter calcs
-   * Default: percent
-   * Usage: gutterCalc() or gutterCalc(false)
-   ========================================================================== */
-/*
-   Column padding (gutter)
-   * Default: percent (can be pixels though)
-   * Usage: paddingCalc() or paddingCalc(px)
-   ========================================================================== */
-/*
-   Shunts, offset columns, column source order calculations
-   ========================================================================== */
-/* ==========================================================================
-	 Default grid styles
-	 ========================================================================== */
-.g-container {
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.g-row {
-  width: 100%;
-  margin: 0 auto;
-  zoom: 1;
-}
-.g-row:before, .g-row:after {
-  content: " ";
-  display: table;
-}
-.g-row:after {
-  clear: both;
-}
-.g-row .g-row {
-  min-width: 0;
-}
-.g-row .g-row .g-col {
-  padding: 0;
-}
-
-/* ==========================================================================
-	 Media queries
-	 ========================================================================== */
-@media screen and (min-width: 48em) {
-  .g-col {
-    margin-left: 2%;
-    padding: 10px;
-    float: left;
-    min-height: 1px;
-    position: relative;
-    clear: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .g-col:first-child {
-    margin-left: 0;
-  }
-  .g-col + .g-col:last-child {
-    float: right;
-  }
-  .g-col + .g-col.end {
-    float: left;
-  }
-
-  .g-span1, .g-mq-alpha-resize-to1 {
-    width: 6.5%;
-  }
-
-  .g-span2, .g-mq-alpha-resize-to2 {
-    width: 15%;
-  }
-
-  .g-span3, .g-mq-alpha-resize-to3 {
-    width: 23.5%;
-  }
-
-  .g-span4, .g-mq-alpha-resize-to4 {
-    width: 32%;
-  }
-
-  .g-span5, .g-mq-alpha-resize-to5 {
-    width: 40.5%;
-  }
-
-  .g-span6, .g-mq-alpha-resize-to6 {
-    width: 49%;
-  }
-
-  .g-span7, .g-mq-alpha-resize-to7 {
-    width: 57.5%;
-  }
-
-  .g-span8, .g-mq-alpha-resize-to8 {
-    width: 66%;
-  }
-
-  .g-span9, .g-mq-alpha-resize-to9 {
-    width: 74.5%;
-  }
-
-  .g-span10, .g-mq-alpha-resize-to10 {
-    width: 83%;
-  }
-
-  .g-span11, .g-mq-alpha-resize-to11 {
-    width: 91.5%;
-  }
-
-  .g-span12, .g-mq-alpha-resize-to12 {
-    width: 100%;
-  }
-
-  .g-split .g-col, .g-shunt {
-    float: none;
-    margin-left: 0;
-    min-height: 1px;
-    position: relative;
-    width: 100%;
-    clear: both;
-  }
-}
-@media screen and (min-width: 62em) {
-  .g-mq-beta-end {
-    float: right;
-  }
-
-  .g-mq-beta-end {
-    float: left;
-  }
-}
-/*
-	 Centred columns
-	 ========================================================================== */
-.g-centered.g-col, .g-centred.g-col {
-  float: none;
-  margin: 0 auto;
-}
-
-/* Framework styles */
 /* ==========================================================================
    Typography
 
@@ -1153,12 +977,6 @@ textarea:focus:required:invalid:focus {
   -o-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
-.form-controlGroup.form-controlGroup--warning .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--warning .input-append .add-on {
-  color: #c09853;
-  background-color: #fcf8e3;
-  border-color: #c09853;
-}
 
 .form-controlGroup.form-controlGroup--error > label,
 .form-controlGroup.form-controlGroup--error .help-block,
@@ -1180,12 +998,6 @@ textarea:focus:required:invalid:focus {
   -o-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
-.form-controlGroup.form-controlGroup--error .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--error .input-append .add-on {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #b94a48;
-}
 
 .form-controlGroup.form-controlGroup--success > label,
 .form-controlGroup.form-controlGroup--success .help-block,
@@ -1206,12 +1018,6 @@ textarea:focus:required:invalid:focus {
   -moz-box-shadow: 0 0 6px #7aba7b;
   -o-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
-}
-.form-controlGroup.form-controlGroup--success .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--success .input-append .add-on {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #468847;
 }
 
 /*
@@ -1635,7 +1441,9 @@ input[type="button"].btn--block {
 	* Centred list
 	* Floated lists
 	* Wells
+	* iconicList
 	* Tabs
+	* Blockquotes
 	* Media Object
 	* Block grids
 	========================================================================== */
@@ -1721,10 +1529,6 @@ img, object, embed, video {
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
 
 .well--large {
   padding: 24px;
@@ -1745,12 +1549,12 @@ img, object, embed, video {
 /*
 	Tabs
 
-	* Usage: 
+	* Usage:
 	<ul class="tabs">
 		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
 		<li><a href="#tabs-example-2">Tab 2</a></li>
 	</ul>
-	
+
 	<!-- Tabs Content -->
 	<ul class="l-tabsContent">
 		<li id="tabs-example-1" class="is-active">
@@ -1812,6 +1616,69 @@ img, object, embed, video {
 
 	* Place any image- and text-like content side-by-side, as per:
 	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	*
+	** Image is optional **
+	*
+	* Markup:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+.media {
+  display: block;
+  padding: 20px 0;
+}
+
+/*
+   Add image to left or right
+   ========================================================================== */
+.media-img {
+  margin-right: 28px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 28px;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 25em) {
+  .media {
+    padding: 35px 0;
+  }
+
+  .media--zeroTopPad {
+    padding-top: 0;
+  }
+
+  .media-img {
+    float: left;
+  }
+}
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 	* E.g.:
 	*
 	<div class="media">
@@ -1849,6 +1716,29 @@ img, object, embed, video {
 .media-body,
 .media-body > :last-child {
   margin-bottom: 0;
+}
+
+/**
+ * Consider moving images and floats so only wide viewports see them
+ */
+/*
+   Fluid width video
+   * 16:9 aspect ratio by default
+   * Usage:
+   * <div class="fluidVideo"><iframe src="..."/></div
+   ========================================================================== */
+.fluidVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.fluidVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -1918,6 +1808,191 @@ img, object, embed, video {
   }
 }
 /*
+   Grid System
+   * Default: Choreographic Grid. Switch out for your own if you need
+   * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
+   ========================================================================== */
+/* ==========================================================================
+	 The Choreographic Grid
+	 * Grid setup
+	 * Grid helpers/mixins
+	 * Default grid styles
+	 * Media queries
+	 * Centred columns
+	 ========================================================================== */
+/*
+	 Basic Usage:
+	 <div class="g-row">
+			 <div class="g-col g-span4"></div>
+			 <div class="g-col g-span8"></div>
+	 </div>
+	 ========================================================================== */
+/*
+	 Grid Setup
+	 * Choose your grid options.
+	 * These will be overridden by the settings in _variables.scss
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
+/*
+	 Import Grid helpers and mixins
+	 ========================================================================== */
+/* ==========================================================================
+   Choreographic Grid helpers
+   ========================================================================== */
+/*
+   Grid column mixin
+   ========================================================================== */
+/*
+   Grid columns width calcs
+   ========================================================================== */
+/*
+   Column width mixin
+   ========================================================================== */
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+/* ==========================================================================
+	 Default grid styles
+	 ========================================================================== */
+.g-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.g-row {
+  width: 100%;
+  margin: 0 auto;
+  zoom: 1;
+}
+.g-row:before, .g-row:after {
+  content: " ";
+  display: table;
+}
+.g-row:after {
+  clear: both;
+}
+.g-row .g-row {
+  min-width: 0;
+}
+.g-row .g-row .g-col {
+  padding: 0;
+}
+
+/* ==========================================================================
+	 Media queries
+	 ========================================================================== */
+@media screen and (min-width: 48em) {
+  .g-col {
+    margin-left: 2%;
+    padding: 10px;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    clear: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .g-col:first-child {
+    margin-left: 0;
+  }
+  .g-col + .g-col:last-child {
+    float: right;
+  }
+  .g-col + .g-col.end {
+    float: left;
+  }
+
+  .g-span1, .g-mq-alpha-resize-to1 {
+    width: 6.5%;
+  }
+
+  .g-span2, .g-mq-alpha-resize-to2 {
+    width: 15%;
+  }
+
+  .g-span3, .g-mq-alpha-resize-to3 {
+    width: 23.5%;
+  }
+
+  .g-span4, .g-mq-alpha-resize-to4 {
+    width: 32%;
+  }
+
+  .g-span5, .g-mq-alpha-resize-to5 {
+    width: 40.5%;
+  }
+
+  .g-span6, .g-mq-alpha-resize-to6 {
+    width: 49%;
+  }
+
+  .g-span7, .g-mq-alpha-resize-to7 {
+    width: 57.5%;
+  }
+
+  .g-span8, .g-mq-alpha-resize-to8 {
+    width: 66%;
+  }
+
+  .g-span9, .g-mq-alpha-resize-to9 {
+    width: 74.5%;
+  }
+
+  .g-span10, .g-mq-alpha-resize-to10 {
+    width: 83%;
+  }
+
+  .g-span11, .g-mq-alpha-resize-to11 {
+    width: 91.5%;
+  }
+
+  .g-span12, .g-mq-alpha-resize-to12 {
+    width: 100%;
+  }
+
+  .g-split .g-col, .g-shunt {
+    float: none;
+    margin-left: 0;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+    clear: both;
+  }
+}
+@media screen and (min-width: 62em) {
+  .g-mq-beta-end {
+    float: right;
+  }
+
+  .g-mq-beta-end {
+    float: left;
+  }
+}
+/*
+	 Centred columns
+	 ========================================================================== */
+.g-centered.g-col, .g-centred.g-col {
+  float: none;
+  margin: 0 auto;
+}
+
+/*
    Your styles
    ========================================================================== */
 /* ==========================================================================
@@ -1942,6 +2017,10 @@ body {
    Utilities
    Non-semantic helper classes
    ========================================================================== */
+/**
+ * Clearfix
+ * See mixins/_utility.scss for a mixin version of this
+ */
 .clearfix {
   zoom: 1;
 }
@@ -2000,7 +2079,7 @@ body {
   visibility: hidden;
 }
 
-.l-floatLleft {
+.l-floatLeft {
   float: left;
 }
 
