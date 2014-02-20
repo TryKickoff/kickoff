@@ -11,6 +11,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw
 ### Features
 
 * Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
+* Sass compilation uses autoprefixer to dynamically add vendor prefixes so you don't even have to think about it
 * Sass mixins for many CSS3 features including gradients, REMs with fallbacks
 * Starter content styles, including clean typography, lists, tables, etc
 * Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
