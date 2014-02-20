@@ -69,43 +69,6 @@ module.exports = function (grunt) {
 		 * Includes kickoff.scss and kickoff-old-ie.scss by default
 		 * Also creates source maps
 		 */
-		// sass: {
-		// 	dev: {
-		// 		options: {
-		// 			unixNewlines: true,
-		// 			style: 'expanded',
-		// 			lineNumbers: false,
-		// 			debugInfo : false,
-		// 			precision : 8,
-		// 			sourcemap : true
-		// 		},
-		// 		files: {
-		// 			'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
-		// 			'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
-		// 		}
-		// 	},
-		// 	production: {
-		// 		options: {
-		// 			style: 'compressed',
-		// 			precision : 8
-		// 		},
-		// 		files: {
-		// 			'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
-		// 			'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
-		// 		}
-		// 	},
-		// 	styleguide: {
-		// 		options: {
-		// 			unixNewlines: true,
-		// 			style: 'expanded',
-		// 			precision : 8,
-		// 			sourcemap : true
-		// 		},
-		// 		files: {
-		// 			'css/styleguide.css': 'scss/styleguide.scss'
-		// 		}
-		// 	}
-		// },
 		sass: {
 			dev: {
 				options: {
@@ -117,8 +80,8 @@ module.exports = function (grunt) {
 					sourcemap: true
 				},
 				files: {
-					'css/temp/kickoff.sass.css': 'scss/kickoff.scss',
-					'css/temp/kickoff-old-ie.sass.css': 'scss/kickoff-old-ie.scss'
+					'css/kickoff.css'       : 'scss/kickoff.scss',
+					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			styleguide: {
@@ -129,7 +92,7 @@ module.exports = function (grunt) {
 					sourcemap: true
 				},
 				files: {
-					'css/temp/styleguide.sass.css': 'scss/styleguide.scss'
+					'css/styleguide.css': 'scss/styleguide.scss'
 				}
 			}
 		},
@@ -137,6 +100,7 @@ module.exports = function (grunt) {
 
 		/**
 		 * Autoprefixer
+		 * https://github.com/nDmitry/grunt-autoprefixer
 		 * https://github.com/ai/autoprefixer
 		 * Auto prefixes your CSS using caniuse data
 		 */
@@ -150,9 +114,9 @@ module.exports = function (grunt) {
 					map: true
 				},
 				files: {
-					'css/kickoff.css': 'css/temp/kickoff.sass.css',
-					'css/kickoff-old-ie.css': 'css/temp/kickoff-old-ie.sass.css',
-					'css/styleguide/styleguide.css': 'css/temp/styleguide.sass.css'
+					'css/kickoff.css'       : 'css/kickoff.css',
+					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css',
+					'css/styleguide.css'    : 'css/styleguide.css'
 				}
 			}
 		},
@@ -171,12 +135,12 @@ module.exports = function (grunt) {
 				beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
 				compress: false,
 				// report: 'gzip', // report: Show file size report
-				sourceMap: '<%=config.js.distDir%>/<%=config.js.distFile%>.map',
+				sourceMap: '<%=config.js.distDir%><%=config.js.distFile%>.map',
 				sourceMappingURL: '/<%=config.js.distFile%>.map',
 			},
 			js: {
 				src: '<%=config.js.fileList%>',
-				dest: '<%=config.js.distDir%>/<%=config.js.distFile%>'
+				dest: '<%=config.js.distDir%><%=config.js.distFile%>'
 			}
 		},
 
@@ -235,8 +199,8 @@ module.exports = function (grunt) {
 		csso: {
 			dist: {
 				files: {
-					'css/kickoff.min.css': ['css/kickoff.prefixed.css'],
-					'css/kickoff-old-ie.min.css': ['css/kickoff-old-ie.prefixed.css']
+					'css/kickoff.css'       : 'css/kickoff.css',
+					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
 				},
 
 			}
@@ -340,14 +304,14 @@ module.exports = function (grunt) {
 	 * GRUNT DEV * A task for development
 	 * run jshint, uglify and sass:dev
 	 */
-	grunt.registerTask('dev', ['jshint', 'uglify', 'sass:dev']);
+	grunt.registerTask('dev', ['uglify', 'sass:dev']);
 
 
 	/**
 	 * GRUNT DEPLOY * A task for your production environment
 	 * run jshint, uglify and sass:production
 	 */
-	grunt.registerTask('deploy', ['jshint', 'uglify', 'sass:dev', 'sass:styleguide', 'autoprefixer:dist', 'csso']);
+	grunt.registerTask('deploy', ['uglify', 'sass:dev', 'autoprefixer:dist', 'csso']);
 	// grunt.registerTask('production', ['jshint', 'uglify', 'sass:production', 'autoprefixer', 'csso']);
 
 
@@ -361,7 +325,6 @@ module.exports = function (grunt) {
 	 * TODO:
 	 * Need task to update all grunt dependencies
 	 * Need task to download all bower dependencies
-	 * Need to find out if we can stream files like gulp e.g. sass:dev > autoprefixer:dist > csso
 	 */
 
 };
