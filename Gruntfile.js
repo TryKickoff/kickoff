@@ -144,7 +144,6 @@ module.exports = function (grunt) {
 		},
 
 
-
 		/**
 		 * Grunticon
 		 * https://github.com/filamentgroup/grunticon
@@ -222,6 +221,7 @@ module.exports = function (grunt) {
 			}
 		},
 
+
 		/**
 		 * Custom jQuery builder
 		 * Check build numbers at jquery.com
@@ -296,29 +296,47 @@ module.exports = function (grunt) {
 	 * run jshint, uglify and sass:kickoff
 	 */
 	// Default task
-	grunt.registerTask('default', ['jshint', 'uglify', 'sass:kickoff']);
+	grunt.registerTask('default', [
+		'jshint',
+		'uglify',
+		'sass:kickoff'
+	]);
 
 
 	/**
 	 * GRUNT DEV * A task for development
 	 * run jshint, uglify and sass:kickoff
 	 */
-	grunt.registerTask('dev', ['uglify', 'sass:kickoff']);
+	grunt.registerTask('dev', [
+		'uglify',
+		'sass:kickoff'
+	]);
 
 
 	/**
 	 * GRUNT DEPLOY * A task for your production environment
 	 * run jshint, uglify and sass:production
 	 */
-	grunt.registerTask('deploy', ['uglify', 'sass:kickoff', 'autoprefixer:dist', 'csso']);
-	// grunt.registerTask('production', ['jshint', 'uglify', 'sass:production', 'autoprefixer', 'csso']);
+	grunt.registerTask('deploy', [
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:dist',
+		'csso'
+	]);
 
 
 	/**
 	 * GRUNT SERVE * A task for for a static server with a watch
 	 * run connect and watch
 	 */
-	grunt.registerTask("serve", ['uglify', 'sass:kickoff', 'sass:styleguide', 'autoprefixer:dist', 'connect', 'watch']);
+	grunt.registerTask("serve", [
+		'uglify',
+		'sass:kickoff',
+		'sass:styleguide',
+		'autoprefixer:dist',
+		'connect',
+		'watch'
+	]);
 
 	/**
 	 * TODO:
