@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev', 'sass:styleguide', 'autoprefixer:dist']
+				tasks: ['sass:kickoff', 'sass:styleguide', 'autoprefixer:dist']
 			},
 
 			js: {
@@ -65,12 +65,11 @@ module.exports = function (grunt) {
 		/**
 		 * Sass compilation
 		 * https://github.com/gruntjs/grunt-contrib-sass
-		 * Separate options for dev and production environments
 		 * Includes kickoff.scss and kickoff-old-ie.scss by default
 		 * Also creates source maps
 		 */
 		sass: {
-			dev: {
+			kickoff: {
 				options: {
 					unixNewlines: true,
 					style: 'expanded',
@@ -148,7 +147,7 @@ module.exports = function (grunt) {
 
 		/**
 		 * Grunticon
-		 *
+		 * https://github.com/filamentgroup/grunticon
 		 */
 		grunticon: {
 			myIcons: {
@@ -169,7 +168,7 @@ module.exports = function (grunt) {
 
 		/**
 		 * SVGmin
-		 *
+		 * https://github.com/sindresorhus/grunt-svgmin
 		 */
 		svgmin: {
 			options: {
@@ -261,7 +260,7 @@ module.exports = function (grunt) {
 
 		/**
 		 * JSCS
-		 *
+		 * https://github.com/dsheiko/grunt-jscs
 		 * Manage the options inside .jscs.json file
 		 */
 		jscs: {
@@ -274,7 +273,7 @@ module.exports = function (grunt) {
 
 		availabletasks: {
 			tasks: {}
-		},
+		}
 	});
 
 	// Load all the grunt tasks
@@ -283,35 +282,35 @@ module.exports = function (grunt) {
 
 	/* ==========================================================================
 		Available tasks:
-		* grunt        : run jshint, uglify and sass:dev
-		* grunt watch  : run sass:dev, uglify and livereload
-		* grunt dev    : run jshint, uglify and sass:dev
-		* grunt deploy : run jshint, uglify, sass:dev and csso
+		* grunt        : run jshint, uglify and sass:kickoff
+		* grunt watch  : run sass:kickoff, uglify and livereload
+		* grunt dev    : run jshint, uglify and sass:kickoff
+		* grunt deploy : run jshint, uglify, sass:kickoff and csso
 		* grunt jquery : build custom version of jquery
 		* grunt serve  : watch js & scss and run a local server
 		* grunt availabletasks : view all available tasks
-	   ========================================================================== */
+		 ========================================================================== */
 
 	/**
 	 * GRUNT * Default task
-	 * run jshint, uglify and sass:dev
+	 * run jshint, uglify and sass:kickoff
 	 */
 	// Default task
-	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
+	grunt.registerTask('default', ['jshint', 'uglify', 'sass:kickoff']);
 
 
 	/**
 	 * GRUNT DEV * A task for development
-	 * run jshint, uglify and sass:dev
+	 * run jshint, uglify and sass:kickoff
 	 */
-	grunt.registerTask('dev', ['uglify', 'sass:dev']);
+	grunt.registerTask('dev', ['uglify', 'sass:kickoff']);
 
 
 	/**
 	 * GRUNT DEPLOY * A task for your production environment
 	 * run jshint, uglify and sass:production
 	 */
-	grunt.registerTask('deploy', ['uglify', 'sass:dev', 'autoprefixer:dist', 'csso']);
+	grunt.registerTask('deploy', ['uglify', 'sass:kickoff', 'autoprefixer:dist', 'csso']);
 	// grunt.registerTask('production', ['jshint', 'uglify', 'sass:production', 'autoprefixer', 'csso']);
 
 
@@ -319,7 +318,7 @@ module.exports = function (grunt) {
 	 * GRUNT SERVE * A task for for a static server with a watch
 	 * run connect and watch
 	 */
-	grunt.registerTask("serve", ['uglify', 'sass:dev', 'sass:styleguide', 'autoprefixer:dist', 'connect', 'watch']);
+	grunt.registerTask("serve", ['uglify', 'sass:kickoff', 'sass:styleguide', 'autoprefixer:dist', 'connect', 'watch']);
 
 	/**
 	 * TODO:
