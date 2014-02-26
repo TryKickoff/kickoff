@@ -10,6 +10,7 @@ module.exports = function (grunt) {
 
 		/**
 		 * Config - Edit this section
+		 * ==========================
 		 * Choose javascript dist filename
 		 * Choose javascript dist location
 		 * Choose javascript files to be uglified
@@ -268,11 +269,6 @@ module.exports = function (grunt) {
 			options: {
 				config: ".jscs.json"
 			}
-		},
-
-
-		availabletasks: {
-			tasks: {}
 		}
 	});
 
@@ -299,7 +295,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', [
 		'jshint',
 		'uglify',
-		'sass:kickoff'
+		'sass:kickoff',
+		'autoprefixer:dist'
 	]);
 
 
@@ -309,7 +306,8 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('dev', [
 		'uglify',
-		'sass:kickoff'
+		'sass:kickoff',
+		'autoprefixer:dist'
 	]);
 
 
