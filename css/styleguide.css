@@ -189,184 +189,6 @@ textarea {
 }
 
 /* ==========================================================================
-	 The Choreographic Grid
-	 * Grid setup
-	 * Grid helpers/mixins
-	 * Default grid styles
-	 * Media queries
-	 * Centred columns
-	 ========================================================================== */
-/*
-	 Basic Usage:
-	 <div class="g-row">
-			 <div class="g-col g-span4"></div>
-			 <div class="g-col g-span8"></div>
-	 </div>
-	 ========================================================================== */
-/*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-/* Setup grid defaults */
-/* Column Padding */
-/*
-	 Import Grid helpers and mixins
-	 ========================================================================== */
-/* ==========================================================================
-   Choreographic Grid helpers
-   ========================================================================== */
-/*
-   Grid column mixin
-   ========================================================================== */
-/*
-   Grid columns width calcs
-   ========================================================================== */
-/*
-   Column width mixin
-   ========================================================================== */
-/*
-   Gutter calcs
-   * Default: percent
-   * Usage: gutterCalc() or gutterCalc(false)
-   ========================================================================== */
-/*
-   Column padding (gutter)
-   * Default: percent (can be pixels though)
-   * Usage: paddingCalc() or paddingCalc(px)
-   ========================================================================== */
-/*
-   Shunts, offset columns, column source order calculations
-   ========================================================================== */
-/* ==========================================================================
-	 Default grid styles
-	 ========================================================================== */
-.g-container {
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.g-row {
-  width: 100%;
-  margin: 0 auto;
-  zoom: 1;
-}
-.g-row:before, .g-row:after {
-  content: " ";
-  display: table;
-}
-.g-row:after {
-  clear: both;
-}
-.g-row .g-row {
-  min-width: 0;
-}
-.g-row .g-row .g-col {
-  padding: 0;
-}
-
-/* ==========================================================================
-	 Media queries
-	 ========================================================================== */
-@media screen and (min-width: 48em) {
-  .g-col {
-    margin-left: 2.17391304%;
-    float: left;
-    min-height: 1px;
-    position: relative;
-    clear: none;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .g-col:first-child {
-    margin-left: 0;
-  }
-  .g-col + .g-col:last-child {
-    float: right;
-  }
-  .g-col + .g-col.end {
-    float: left;
-  }
-
-  .g-span1, .g-mq-alpha-resize-to1 {
-    width: 6.34057971%;
-  }
-
-  .g-span2, .g-mq-alpha-resize-to2 {
-    width: 14.85507246%;
-  }
-
-  .g-span3, .g-mq-alpha-resize-to3 {
-    width: 23.36956522%;
-  }
-
-  .g-span4, .g-mq-alpha-resize-to4 {
-    width: 31.88405797%;
-  }
-
-  .g-span5, .g-mq-alpha-resize-to5 {
-    width: 40.39855072%;
-  }
-
-  .g-span6, .g-mq-alpha-resize-to6 {
-    width: 48.91304348%;
-  }
-
-  .g-span7, .g-mq-alpha-resize-to7 {
-    width: 57.42753623%;
-  }
-
-  .g-span8, .g-mq-alpha-resize-to8 {
-    width: 65.94202899%;
-  }
-
-  .g-span9, .g-mq-alpha-resize-to9 {
-    width: 74.45652174%;
-  }
-
-  .g-span10, .g-mq-alpha-resize-to10 {
-    width: 82.97101449%;
-  }
-
-  .g-span11, .g-mq-alpha-resize-to11 {
-    width: 91.48550725%;
-  }
-
-  .g-span12, .g-mq-alpha-resize-to12 {
-    width: 100%;
-  }
-
-  .g-split .g-col, .g-shunt {
-    float: none;
-    margin-left: 0;
-    min-height: 1px;
-    position: relative;
-    width: 100%;
-    clear: both;
-  }
-}
-@media screen and (min-width: 62em) {
-  .g-mq-beta-end {
-    float: right;
-  }
-
-  .g-mq-beta-end {
-    float: left;
-  }
-}
-/*
-	 Centred columns
-	 ========================================================================== */
-.g-centered.g-col, .g-centred.g-col {
-  float: none;
-  margin: 0 auto;
-}
-
-/* ==========================================================================
    Typography
 
    * Body text
@@ -533,7 +355,7 @@ ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0;
 }
 
-.unstyled, .tabs, .l-tabsContent,
+.unstyled, form ul, .tabs, .l-tabsContent,
 nav ul, nav ol {
   margin: 0;
   padding: 0;
@@ -705,6 +527,599 @@ samp {
 ::selection {
   color: white;
   background: #3498db;
+}
+
+/* ==========================================================================
+   Forms
+   * Generic form styles
+   * Form inputs and groups
+   * Form field feedback states
+   * Horizontal & vertical forms
+   * Horizontal-specific styles
+   ========================================================================== */
+/* ==========================================================================
+   Generic form styles
+   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+   Usage:
+    <ul>
+    	<li class="form-controlGroup">
+    		<label for="name" class="form-controlGroup-label">Name</label>
+    		<div class="form-controlGroup-input">
+    			<input type="text" id="name" placeholder="Zander Martineau" />
+    		</div>
+    	</li>
+    </ul>
+   ========================================================================== */
+form {
+  margin: 0 0 28px;
+}
+
+/* Fieldset */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* ==========================================================================
+   Form inputs and groups
+   ========================================================================== */
+.form-controlGroup {
+  margin-top: 14px;
+  list-style-type: none;
+}
+legend + .form-controlGroup {
+  margin-top: 28px;
+  -webkit-margin-top-collapse: separate;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: normal;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4d4d4d;
+  font-weight: bold;
+}
+label small {
+  font-weight: normal;
+  color: #999999;
+}
+label.checkbox, label.radio {
+  font-weight: normal;
+  line-height: 1.4;
+}
+label input, label textarea, label select {
+  display: block;
+}
+
+input,
+textarea,
+select,
+.fileWrapper {
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #4d4d4d;
+  background-color: #FFF;
+  border: 1px solid #cccccc;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.textarea--uneditable {
+  width: auto;
+  height: auto;
+}
+
+input[type="image"], input[type="checkbox"], input[type="radio"], input[type="range"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  line-height: normal;
+  cursor: pointer;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="image"] {
+  border: 0;
+}
+input[type="file"] {
+  width: auto;
+  height: 28px;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: white;
+  background-color: initial;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+input[type="image"], input[type="range"], input[type="range"]:focus {
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+input[type="hidden"] {
+  display: none;
+}
+input[type="color"] {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  padding: 2px;
+}
+input[type="password"] {
+  font-family: sans-serif;
+}
+input[type="range"] {
+  width: 100%;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+select {
+  background-color: white;
+}
+select[multiple], select[size] {
+  height: auto;
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 28px;
+  font-size: 30px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #4d4d4d;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  white-space: normal;
+}
+legend small {
+  font-size: 15px;
+  font-size: 0.75rem;
+  color: #b3b3b3;
+}
+
+.radio,
+.checkbox {
+  padding-left: 18px;
+}
+.radio input[type="radio"], .radio input[type="checkbox"],
+.checkbox input[type="radio"],
+.checkbox input[type="checkbox"] {
+  margin-left: -18px;
+  margin-right: 5px;
+  vertical-align: middle;
+  display: inline;
+}
+
+.control--inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.control--inline + .control--inline {
+  margin-left: 10px;
+}
+
+.form-controlGroup-input > .radio:first-child, .form-controlGroup-input > .checkbox:first-child {
+  padding-top: 5px;
+}
+
+input,
+textarea,
+.fileWrapper {
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  -o-box-shadow: none;
+  box-shadow: none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.input--mini {
+  width: 60px;
+}
+
+.input--small {
+  width: 90px;
+}
+
+.input--medium {
+  width: 150px;
+}
+
+.input--large {
+  width: 210px;
+}
+
+.input--xlarge {
+  width: 270px;
+}
+
+.input--xxlarge {
+  width: 530px;
+}
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+.fileWrapper input {
+  width: 90%;
+  line-height: 0;
+}
+
+input[disabled], input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+  background-color: #b3b3b3;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+input:focus:required:invalid,
+select:focus:required:invalid,
+textarea:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+input:focus:required:invalid:focus,
+select:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus {
+  border-color: #e9322d;
+  -o-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+
+/*
+   Both horizontal & vertical forms
+   ========================================================================== */
+.form--inline input, .form--inline textarea, .form--inline select, .form--inline .form-helpInline,
+.form--horizontal input,
+.form--horizontal textarea,
+.form--horizontal select,
+.form--horizontal .form-helpInline {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.form--inline .hide,
+.form--horizontal .hide {
+  display: none;
+}
+
+/*
+   Inline & search forms specific styles
+   ========================================================================== */
+.form--inline > * {
+  margin-right: 10px;
+  vertical-align: top;
+}
+.form--inline > *:last-child {
+  margin-right: 0;
+}
+.form--inline label {
+  display: inline-block;
+}
+.form--inline .radio, .form--inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form--inline .radio input[type="radio"], .form--inline .checkbox input[type="checkbox"] {
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+/*
+   Search input
+   ========================================================================== */
+.form--search-input {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+}
+
+/*
+   Form actions
+   ========================================================================== */
+.form-actions {
+  padding: 27px 20px 28px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  background-color: whitesmoke;
+  border-top: 1px solid #ddd;
+  zoom: 1;
+}
+.form-actions:before, .form-actions:after {
+  display: table;
+  content: " ";
+}
+.form-actions:after {
+  clear: both;
+}
+.form-actions .btn, .form-actions .tabs a, .tabs .form-actions a {
+  margin-right: 10px;
+}
+.form-actions .btn:last-child, .form-actions .tabs a:last-child, .tabs .form-actions a:last-child {
+  margin-right: 0;
+}
+
+/*
+   Form field feedback states
+   ========================================================================== */
+.form-controlGroup.form-controlGroup--warning > label,
+.form-controlGroup.form-controlGroup--warning .help-block,
+.form-controlGroup.form-controlGroup--warning .help-inline {
+  color: #c09853;
+}
+.form-controlGroup.form-controlGroup--warning input,
+.form-controlGroup.form-controlGroup--warning select,
+.form-controlGroup.form-controlGroup--warning textarea {
+  color: #c09853;
+  border-color: #c09853;
+}
+.form-controlGroup.form-controlGroup--warning input:focus,
+.form-controlGroup.form-controlGroup--warning select:focus,
+.form-controlGroup.form-controlGroup--warning textarea:focus {
+  border-color: #a47e3c;
+  -o-box-shadow: 0 0 6px #dbc59e;
+  box-shadow: 0 0 6px #dbc59e;
+}
+
+.form-controlGroup.form-controlGroup--error > label,
+.form-controlGroup.form-controlGroup--error .help-block,
+.form-controlGroup.form-controlGroup--error .help-inline {
+  color: #b94a48;
+}
+.form-controlGroup.form-controlGroup--error input,
+.form-controlGroup.form-controlGroup--error select,
+.form-controlGroup.form-controlGroup--error textarea {
+  color: #b94a48;
+  border-color: #b94a48;
+}
+.form-controlGroup.form-controlGroup--error input:focus,
+.form-controlGroup.form-controlGroup--error select:focus,
+.form-controlGroup.form-controlGroup--error textarea:focus {
+  border-color: #953b39;
+  -o-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;
+}
+
+.form-controlGroup.form-controlGroup--success > label,
+.form-controlGroup.form-controlGroup--success .help-block,
+.form-controlGroup.form-controlGroup--success .help-inline {
+  color: #468847;
+}
+.form-controlGroup.form-controlGroup--success input,
+.form-controlGroup.form-controlGroup--success select,
+.form-controlGroup.form-controlGroup--success textarea {
+  color: #468847;
+  border-color: #468847;
+}
+.form-controlGroup.form-controlGroup--success input:focus,
+.form-controlGroup.form-controlGroup--success select:focus,
+.form-controlGroup.form-controlGroup--success textarea:focus {
+  border-color: #356635;
+  -o-box-shadow: 0 0 6px #7aba7b;
+  box-shadow: 0 0 6px #7aba7b;
+}
+
+/*
+   Placeholder text
+   * Gets special styles; can't be bundled together though for some reason
+   ========================================================================== */
+:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
+:-moz-placeholder {
+  color: #b3b3b3;
+}
+
+::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+
+.form-helpBlock,
+.form-helpInline {
+  color: #7f8c8d;
+}
+
+.form-helpBlock {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.form-helpInline {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 48em) {
+  /* ==========================================================================
+     Horizontal-specific styles
+     * add .form--horizontal to the <form> element
+     * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+     * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+     ========================================================================== */
+  .form--horizontal .form-controlGroup {
+    margin-bottom: 28px;
+    zoom: 1;
+  }
+  .form--horizontal .form-controlGroup:before, .form--horizontal .form-controlGroup:after {
+    display: table;
+    content: " ";
+  }
+  .form--horizontal .form-controlGroup:after {
+    clear: both;
+  }
+  .form--horizontal .form-controlGroup-label {
+    float: left;
+    width: 140px;
+    padding-top: 5px;
+    text-align: right;
+  }
+  .form--horizontal .form-controlGroup-input {
+    margin-left: 160px;
+  }
+  .form--horizontal .form-controlGroup-input:first-child {
+    *padding-left: 160px;
+  }
+  .form--horizontal .form-controlGroup .fileWrapper {
+    margin-left: 0;
+  }
+  .form--horizontal .form-helpBlock {
+    margin-top: 14px;
+    margin-bottom: 0;
+  }
+  .form--horizontal .form-actions {
+    padding-left: 160px;
+  }
+}
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 28px;
+}
+.table th, .table td {
+  padding: 8px;
+  line-height: 1.4;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table th, .table tfoot td {
+  font-weight: bold;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table--condensed th, .table--condensed td {
+  padding: 4px 5px;
+}
+
+.table--bordered {
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.table--bordered th, .table--bordered td {
+  border-left: 1px solid #dddddd;
+}
+.table--bordered caption + thead tr:first-child th, .table--bordered caption + tbody tr:first-child th, .table--bordered caption + tbody tr:first-child td, .table--bordered colgroup + thead tr:first-child th, .table--bordered colgroup + tbody tr:first-child th, .table--bordered colgroup + tbody tr:first-child td, .table--bordered thead:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table--bordered thead:first-child tr:first-child th:first-child, .table--bordered tbody:first-child tr:first-child td:first-child {
+  -o-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table--bordered thead:first-child tr:first-child th:last-child, .table--bordered tbody:first-child tr:first-child td:last-child {
+  -o-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.table--bordered thead:last-child tr:last-child th:first-child, .table--bordered tbody:last-child tr:last-child td:first-child {
+  -o-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.table--bordered thead:last-child tr:last-child th:last-child, .table--bordered tbody:last-child tr:last-child td:last-child {
+  -o-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+
+.table--striped tbody tr:nth-child(odd) td, .table--striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: whitesmoke;
 }
 
 /* ==========================================================================
@@ -942,18 +1357,6 @@ input[type="button"].btn--block {
   border-radius: 50px;
 }
 
-/* ==========================================================================
-	Components:
-	* Embedded content
-	* Centred list
-	* Floated lists
-	* Wells
-	* iconicList
-	* Tabs
-	* Blockquotes
-	* Media Object
-	* Block grids
-	========================================================================== */
 /*
 	Embedded content
 	========================================================================== */
@@ -1305,6 +1708,184 @@ img, object, embed, video {
   }
 }
 /* ==========================================================================
+	 The Choreographic Grid
+	 * Grid setup
+	 * Grid helpers/mixins
+	 * Default grid styles
+	 * Media queries
+	 * Centred columns
+	 ========================================================================== */
+/*
+	 Basic Usage:
+	 <div class="g-row">
+			 <div class="g-col g-span4"></div>
+			 <div class="g-col g-span8"></div>
+	 </div>
+	 ========================================================================== */
+/*
+	 Grid Setup
+	 * Choose your grid options.
+	 * These will be overridden by the settings in _variables.scss
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
+/*
+	 Import Grid helpers and mixins
+	 ========================================================================== */
+/* ==========================================================================
+   Choreographic Grid helpers
+   ========================================================================== */
+/*
+   Grid column mixin
+   ========================================================================== */
+/*
+   Grid columns width calcs
+   ========================================================================== */
+/*
+   Column width mixin
+   ========================================================================== */
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+/* ==========================================================================
+	 Default grid styles
+	 ========================================================================== */
+.g-container {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.g-row {
+  width: 100%;
+  margin: 0 auto;
+  zoom: 1;
+}
+.g-row:before, .g-row:after {
+  content: " ";
+  display: table;
+}
+.g-row:after {
+  clear: both;
+}
+.g-row .g-row {
+  min-width: 0;
+}
+.g-row .g-row .g-col {
+  padding: 0;
+}
+
+/* ==========================================================================
+	 Media queries
+	 ========================================================================== */
+@media screen and (min-width: 48em) {
+  .g-col {
+    margin-left: 2.17391304%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    clear: none;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .g-col:first-child {
+    margin-left: 0;
+  }
+  .g-col + .g-col:last-child {
+    float: right;
+  }
+  .g-col + .g-col.end {
+    float: left;
+  }
+
+  .g-span1, .g-mq-alpha-resize-to1 {
+    width: 6.34057971%;
+  }
+
+  .g-span2, .g-mq-alpha-resize-to2 {
+    width: 14.85507246%;
+  }
+
+  .g-span3, .g-mq-alpha-resize-to3 {
+    width: 23.36956522%;
+  }
+
+  .g-span4, .g-mq-alpha-resize-to4 {
+    width: 31.88405797%;
+  }
+
+  .g-span5, .g-mq-alpha-resize-to5 {
+    width: 40.39855072%;
+  }
+
+  .g-span6, .g-mq-alpha-resize-to6 {
+    width: 48.91304348%;
+  }
+
+  .g-span7, .g-mq-alpha-resize-to7 {
+    width: 57.42753623%;
+  }
+
+  .g-span8, .g-mq-alpha-resize-to8 {
+    width: 65.94202899%;
+  }
+
+  .g-span9, .g-mq-alpha-resize-to9 {
+    width: 74.45652174%;
+  }
+
+  .g-span10, .g-mq-alpha-resize-to10 {
+    width: 82.97101449%;
+  }
+
+  .g-span11, .g-mq-alpha-resize-to11 {
+    width: 91.48550725%;
+  }
+
+  .g-span12, .g-mq-alpha-resize-to12 {
+    width: 100%;
+  }
+
+  .g-split .g-col, .g-shunt {
+    float: none;
+    margin-left: 0;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+    clear: both;
+  }
+}
+@media screen and (min-width: 62em) {
+  .g-mq-beta-end {
+    float: right;
+  }
+
+  .g-mq-beta-end {
+    float: left;
+  }
+}
+/*
+	 Centred columns
+	 ========================================================================== */
+.g-centered.g-col, .g-centred.g-col {
+  float: none;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
    Global app/site styles
    ========================================================================== */
 body {
@@ -1411,47 +1992,19 @@ body {
   width: device-width;
 }
 
+* {
+  -webkit-tap-highlight-color: #3498db !important;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
 @media screen and (max-width: 400px) {
   @-ms-viewport {
     width: 320px;
 }
-}
-.is-visiblePrint {
-  display: block !important;
-}
-
-tr.is-visiblePrint {
-  display: table-row !important;
-}
-
-th.is-visiblePrint, td.is-visiblePrint {
-  display: table-cell !important;
-}
-
-@media print {
-  .is-visiblePrint {
-    display: block !important;
-  }
-
-  tr.is-visiblePrint {
-    display: table-row !important;
-  }
-
-  th.is-visiblePrint, td.is-visiblePrint {
-    display: table-cell !important;
-  }
-
-  .is-hiddenPrint {
-    display: none !important;
-  }
-
-  tr.is-hiddenPrint {
-    display: none !important;
-  }
-
-  th.is-hiddenPrint, td.is-hiddenPrint {
-    display: none !important;
-  }
 }
 /* ==========================================================================
    Print styles
@@ -1571,7 +2124,7 @@ body {
    Colours
    ========================================================================== */
 .swatch {
-  height: 220px;
+  height: 120px;
 }
 
 .color-primary {

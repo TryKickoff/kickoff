@@ -21,20 +21,42 @@
 
 
 /*
-   CSS Framework
-   * Edit these
+   CSS Reset
    ========================================================================== */
 @import "normalize"; // CSS reset
 
+
 /*
-   Framework styles
+   Global typography styles
    ========================================================================== */
 @import "typography";
-@import "forms";
-@import "tables";
-@import "code";
-@import "buttons";
-@import "components";
+
+
+/* ==========================================================================
+   Components:
+   * Forms
+   * Tables
+   * Embedded content
+   * Centred list
+   * Floated lists
+   * Wells
+   * iconicList
+   * Tabs
+   * Blockquotes
+   * Media Object
+   * Block grids
+   ========================================================================== */
+@import "partials/components/forms";
+@import "partials/components/tables";
+@import "partials/components/code";
+@import "partials/components/buttons";
+@import "partials/components/embedded-content";
+@import "partials/components/lists";
+@import "partials/components/wells";
+@import "partials/components/tabs";
+@import "partials/components/media-object";
+@import "partials/components/fluid-video";
+@import "partials/components/block-grids";
 
 
 /*
@@ -42,26 +64,26 @@
    * Default: Choreographic Grid. Switch out for your own if you need
    * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
    ========================================================================== */
-@import "choreographic-grid";
+@import "partials/components/choreographic-grid";
 
 
 /*
-   Your styles
+   Your app styles
    ========================================================================== */
 @import "global";
 @import "partials/masthead";
 @import "partials/footer";
 
-/* Examples */
-//@import "pages/home";
+/* Examples: */
+//@import "partials/home";
+//@import "partials/contact";
 
 
 /*
    Utility classes
    * Has to be last to override when necessary
    ========================================================================== */
-@import "utilities";
-@import "responsive-utilities";
+@import "helper-classes";
 
 /* Print styles */
 @import "print";

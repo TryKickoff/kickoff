@@ -106,8 +106,7 @@
 /* FORMS */
 /* BROWSER FIXES */
 /*
-   CSS Framework
-   * Edit these
+   CSS Reset
    ========================================================================== */
 /* ==========================================================================
    Normalize - CSS reset
@@ -202,7 +201,7 @@ textarea {
 }
 
 /*
-   Framework styles
+   Global typography styles
    ========================================================================== */
 /* ==========================================================================
    Typography
@@ -545,6 +544,20 @@ samp {
   background: #3498db;
 }
 
+/* ==========================================================================
+   Components:
+   * Forms
+   * Tables
+   * Embedded content
+   * Centred list
+   * Floated lists
+   * Wells
+   * iconicList
+   * Tabs
+   * Blockquotes
+   * Media Object
+   * Block grids
+   ========================================================================== */
 /* ==========================================================================
    Forms
    * Generic form styles
@@ -1372,18 +1385,6 @@ input[type="button"].btn--block {
   border-radius: 50px;
 }
 
-/* ==========================================================================
-	Components:
-	* Embedded content
-	* Centred list
-	* Floated lists
-	* Wells
-	* iconicList
-	* Tabs
-	* Blockquotes
-	* Media Object
-	* Block grids
-	========================================================================== */
 /*
 	Embedded content
 	========================================================================== */
@@ -1915,7 +1916,7 @@ img, object, embed, video {
 }
 
 /*
-   Your styles
+   Your app styles
    ========================================================================== */
 /* ==========================================================================
    Global app/site styles
@@ -1930,7 +1931,7 @@ body {
 /*
    Retina media query
    ========================================================================== */
-/* Examples */
+/* Examples: */
 /*
    Utility classes
    * Has to be last to override when necessary
@@ -2029,47 +2030,19 @@ body {
   width: device-width;
 }
 
+* {
+  -webkit-tap-highlight-color: #3498db !important;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
 @media screen and (max-width: 400px) {
   @-ms-viewport {
     width: 320px;
 }
-}
-.is-visiblePrint {
-  display: block !important;
-}
-
-tr.is-visiblePrint {
-  display: table-row !important;
-}
-
-th.is-visiblePrint, td.is-visiblePrint {
-  display: table-cell !important;
-}
-
-@media print {
-  .is-visiblePrint {
-    display: block !important;
-  }
-
-  tr.is-visiblePrint {
-    display: table-row !important;
-  }
-
-  th.is-visiblePrint, td.is-visiblePrint {
-    display: table-cell !important;
-  }
-
-  .is-hiddenPrint {
-    display: none !important;
-  }
-
-  tr.is-hiddenPrint {
-    display: none !important;
-  }
-
-  th.is-hiddenPrint, td.is-hiddenPrint {
-    display: none !important;
-  }
 }
 /* Print styles */
 /* ==========================================================================
