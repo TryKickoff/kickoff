@@ -15,7 +15,6 @@
    * Most CSS3 vendor prefixed items have a mixin.
    * See mixins/css3.scss for the full list
    ========================================================================== */
-@import "helpers/helpers";
 @import "functions/functions";
 @import "mixins/mixins";
 
@@ -75,8 +74,8 @@
 @import "partials/footer";
 
 /* Examples: */
-//@import "partials/home";
-//@import "partials/contact";
+//@import "views/home";
+//@import "views/contact";
 
 
 /*
