@@ -33,29 +33,28 @@
 
 /* ==========================================================================
    Components:
+   * Buttons
+   * Lists
    * Forms
-   * Tables
    * Embedded content
-   * Centred list
-   * Floated lists
-   * Wells
-   * iconicList
-   * Tabs
-   * Blockquotes
    * Media Object
+   * Wells
    * Block grids
+   * Tabs
+   * Tables
+   * Code
    ========================================================================== */
-@import "partials/components/forms";
-@import "partials/components/tables";
-@import "partials/components/code";
 @import "partials/components/buttons";
-@import "partials/components/embedded-content";
 @import "partials/components/lists";
-@import "partials/components/wells";
-@import "partials/components/tabs";
+@import "partials/components/forms";
+@import "partials/components/embedded-content";
 @import "partials/components/media-object";
+@import "partials/components/wells";
 @import "partials/components/fluid-video";
 @import "partials/components/block-grids";
+@import "partials/components/tabs";
+@import "partials/components/tables";
+@import "partials/components/code";
 
 
 /*
