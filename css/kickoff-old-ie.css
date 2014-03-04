@@ -554,18 +554,234 @@ samp {
 
 /* ==========================================================================
    Components:
+   * Buttons
+   * Lists
    * Forms
-   * Tables
    * Embedded content
-   * Centred list
-   * Floated lists
-   * Wells
-   * iconicList
-   * Tabs
-   * Blockquotes
    * Media Object
+   * Wells
    * Block grids
+   * Tabs
+   * Tables
+   * Code
    ========================================================================== */
+.btn, .tabs a {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 2.5;
+  /* [7] */
+  height: 2.5em;
+  /* [7] */
+  padding-right: 1.5em;
+  /* [7] */
+  padding-left: 1.5em;
+  /* [7] */
+  overflow: visible;
+  /* [8] */
+  text-align: center;
+  background-color: white;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
+  text-decoration: none;
+}
+.btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+.btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
+  cursor: default;
+  background-image: none;
+  zoom: 1;
+  filter: alpha(opacity=65);
+  opacity: 0.65;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--large {
+  font-size: 23px;
+  font-size: 1.15rem;
+  line-height: 3;
+  height: 3em;
+  padding-right: 2em;
+  padding-left: 2em;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.btn--small {
+  font-size: 13px;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  height: 1.5em;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn--pill {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -o-border-radius: 100em;
+  border-radius: 100em;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn--block + .btn--block {
+  margin-top: 10px;
+}
+
+input[type="submit"].btn--block,
+input[type="reset"].btn--block,
+input[type="button"].btn--block {
+  width: 100%;
+}
+
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.btn--primary {
+  background-color: #3498db;
+  color: #fff !important;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.btn--primary:hover {
+  background-color: #2c3e50;
+}
+
+.btn--link,
+.btn--link:active,
+.btn--link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #3498db;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn--link:hover,
+.btn--link:focus {
+  color: #196090;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn--link[disabled]:hover,
+.btn--link[disabled]:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+   Close Button: for lightboxes etc
+   ========================================================================== */
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 17px;
+  background: #000;
+  color: #3498db;
+  text-align: center;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn-close:hover {
+  color: #fff;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/*
+	Centred lists
+
+	<ul class="l-list--centred">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--centred, .l-list--centered {
+  text-align: center;
+}
+.l-list--centred li, .l-list--centered li {
+  display: inline;
+}
+
+/*
+	Floated lists
+
+	<ul class="l-list--floated">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--floated {
+  zoom: 1;
+}
+.l-list--floated:before, .l-list--floated:after {
+  display: table;
+  content: " ";
+}
+.l-list--floated:after {
+  clear: both;
+}
+.l-list--floated li {
+  float: left;
+  display: inline-block;
+}
+
 /* ==========================================================================
    Forms
    * Generic form styles
@@ -1084,6 +1300,318 @@ textarea:focus:required:invalid:focus {
   padding-left: 160px;
 }
 
+/*
+	Embedded content
+	========================================================================== */
+img {
+  font-style: italic;
+  color: #c00;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+img.img--left {
+  margin: 0 20px 0 0;
+}
+img.img--right {
+  margin: 0 0 0 20px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img, object, embed, video {
+  max-width: 100%;
+}
+
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	*
+	** Image is optional **
+	*
+	* Markup:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+.media {
+  display: block;
+  padding: 20px 0;
+}
+
+/*
+   Add image to left or right
+   ========================================================================== */
+.media-img {
+  margin-right: 28px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 28px;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+.media {
+  padding: 35px 0;
+}
+
+.media--zeroTopPad {
+  padding-top: 0;
+}
+
+.media-img {
+  float: left;
+}
+
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	* E.g.:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+.media {
+  display: block;
+}
+
+.media-img {
+  float: left;
+  margin-right: 28px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 28px;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Consider moving images and floats so only wide viewports see them
+ */
+/*
+	Wells
+
+	Use the well as a simple effect on an element to give it an inset effect
+	<div class="well"></div>
+	========================================================================== */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well--large {
+  padding: 24px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.well--small {
+  padding: 9px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+   Fluid width video
+   * 16:9 aspect ratio by default
+   * Usage:
+   * <div class="fluidVideo"><iframe src="..."/></div
+   ========================================================================== */
+.fluidVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.fluidVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+   Block grids
+
+   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
+
+   Usage:
+   <ul class="l-blockGrid l-blockGrid--twoUp">
+       <li></li>
+   </ul>
+   ========================================================================== */
+.l-blockGrid {
+  display: block;
+  list-style-type: none;
+  zoom: 1;
+}
+.l-blockGrid:before, .l-blockGrid:after {
+  display: table;
+  content: " ";
+}
+.l-blockGrid:after {
+  clear: both;
+}
+.l-blockGrid li {
+  display: block;
+  height: auto;
+}
+
+.l-blockGrid li {
+  display: block;
+  height: auto;
+  float: left;
+}
+.l-blockGrid.l-blockGrid--twoUp {
+  margin-left: -4%;
+}
+.l-blockGrid.l-blockGrid--twoUp li {
+  margin-left: 4%;
+  width: 46%;
+  margin-bottom: 4%;
+}
+.l-blockGrid.l-blockGrid--threeUp {
+  margin-left: -2%;
+}
+.l-blockGrid.l-blockGrid--threeUp li {
+  margin-left: 2%;
+  width: 31.3%;
+  margin-bottom: 2%;
+}
+.l-blockGrid.l-blockGrid--fourUp {
+  margin-left: -2%;
+}
+.l-blockGrid.l-blockGrid--fourUp li {
+  margin-left: 2%;
+  width: 23%;
+  margin-bottom: 2%;
+}
+.l-blockGrid.l-blockGrid--fiveUp {
+  margin-left: -1.5%;
+}
+.l-blockGrid.l-blockGrid--fiveUp li {
+  margin-left: 1.5%;
+  width: 18.5%;
+  margin-bottom: 1.5%;
+}
+
+/*
+	Tabs
+
+	* Usage:
+	<ul class="tabs">
+		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
+		<li><a href="#tabs-example-2">Tab 2</a></li>
+	</ul>
+
+	<!-- Tabs Content -->
+	<ul class="l-tabsContent">
+		<li id="tabs-example-1" class="is-active">
+			Tab 1 content
+		</li>
+
+		<li id="tabs-example-2">
+			Tab 2 content
+		</li>
+	</ul>
+	========================================================================== */
+.tabs {
+  zoom: 1;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #1abc9c;
+}
+.tabs:before, .tabs:after {
+  display: table;
+  content: " ";
+}
+.tabs:after {
+  clear: both;
+}
+.tabs.tabs--alignRight li {
+  float: right;
+}
+.tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
+  text-align: center;
+}
+.tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
+  display: inline;
+  float: none;
+}
+.tabs > li {
+  float: left;
+  margin: 0 5px;
+}
+.tabs a {
+  background-color: #95a5a6;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+}
+.tabs a.is-active {
+  background-color: #1abc9c;
+}
+
+.l-tabsContent > li {
+  display: none;
+}
+.l-tabsContent > li.is-active {
+  display: block;
+}
+
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -1212,535 +1740,6 @@ pre code {
   overflow-y: scroll;
 }
 
-.btn, .tabs a {
-  display: inline-block;
-  /* [1] */
-  vertical-align: middle;
-  /* [2] */
-  white-space: nowrap;
-  /* [3] */
-  font-family: inherit;
-  /* [4] */
-  font-size: 100%;
-  /* [4] */
-  cursor: pointer;
-  /* [5] */
-  border: none;
-  /* [6] */
-  margin: 0;
-  /* [6] */
-  padding-top: 0;
-  /* [6] */
-  padding-bottom: 0;
-  /* [6] */
-  line-height: 2.5;
-  /* [7] */
-  height: 2.5em;
-  /* [7] */
-  padding-right: 1.5em;
-  /* [7] */
-  padding-left: 1.5em;
-  /* [7] */
-  overflow: visible;
-  /* [8] */
-  text-align: center;
-  background-color: white;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
-  text-decoration: none;
-}
-.btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
-}
-.btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
-  cursor: default;
-  background-image: none;
-  zoom: 1;
-  filter: alpha(opacity=65);
-  opacity: 0.65;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn--large {
-  font-size: 23px;
-  font-size: 1.15rem;
-  line-height: 3;
-  height: 3em;
-  padding-right: 2em;
-  padding-left: 2em;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-.btn--small {
-  font-size: 13px;
-  font-size: 0.65rem;
-  line-height: 1.5;
-  height: 1.5em;
-  padding-right: 0.75em;
-  padding-left: 0.75em;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.btn--pill {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  -o-border-radius: 100em;
-  border-radius: 100em;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.btn--block + .btn--block {
-  margin-top: 10px;
-}
-
-input[type="submit"].btn--block,
-input[type="reset"].btn--block,
-input[type="button"].btn--block {
-  width: 100%;
-}
-
-.btn--natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  height: auto;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-}
-
-.btn--primary {
-  background-color: #3498db;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn--primary:hover {
-  background-color: #2c3e50;
-}
-
-.btn--link,
-.btn--link:active,
-.btn--link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn--link {
-  border-color: transparent;
-  cursor: pointer;
-  color: #3498db;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-.btn--link:hover,
-.btn--link:focus {
-  color: #196090;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-.btn--link[disabled]:hover,
-.btn--link[disabled]:focus {
-  color: #333;
-  text-decoration: none;
-}
-
-/*
-   Close Button: for lightboxes etc
-   ========================================================================== */
-.btn-close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 17px;
-  background: #000;
-  color: #3498db;
-  text-align: center;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.btn-close:hover {
-  color: #fff;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-}
-
-/*
-	Embedded content
-	========================================================================== */
-img {
-  font-style: italic;
-  color: #c00;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-img.img--left {
-  margin: 0 20px 0 0;
-}
-img.img--right {
-  margin: 0 0 0 20px;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-img, object, embed, video {
-  max-width: 100%;
-}
-
-/*
-	Centred lists
-
-	<ul class="l-list--centred">
-		<li></li>
-	</ul>
-	========================================================================== */
-.l-list--centred, .l-list--centered {
-  text-align: center;
-}
-.l-list--centred li, .l-list--centered li {
-  display: inline;
-}
-
-/*
-	Floated lists
-
-	<ul class="l-list--floated">
-		<li></li>
-	</ul>
-	========================================================================== */
-.l-list--floated {
-  zoom: 1;
-}
-.l-list--floated:before, .l-list--floated:after {
-  display: table;
-  content: " ";
-}
-.l-list--floated:after {
-  clear: both;
-}
-.l-list--floated li {
-  float: left;
-  display: inline-block;
-}
-
-/*
-	Wells
-
-	Use the well as a simple effect on an element to give it an inset effect
-	<div class="well"></div>
-	========================================================================== */
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.well--large {
-  padding: 24px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-.well--small {
-  padding: 9px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/*
-	Tabs
-
-	* Usage:
-	<ul class="tabs">
-		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
-		<li><a href="#tabs-example-2">Tab 2</a></li>
-	</ul>
-
-	<!-- Tabs Content -->
-	<ul class="l-tabsContent">
-		<li id="tabs-example-1" class="is-active">
-			Tab 1 content
-		</li>
-
-		<li id="tabs-example-2">
-			Tab 2 content
-		</li>
-	</ul>
-	========================================================================== */
-.tabs {
-  zoom: 1;
-  margin-bottom: 28px;
-  border-bottom: 2px solid #1abc9c;
-}
-.tabs:before, .tabs:after {
-  display: table;
-  content: " ";
-}
-.tabs:after {
-  clear: both;
-}
-.tabs.tabs--alignRight li {
-  float: right;
-}
-.tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
-  text-align: center;
-}
-.tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
-  display: inline;
-  float: none;
-}
-.tabs > li {
-  float: left;
-  margin: 0 5px;
-}
-.tabs a {
-  background-color: #95a5a6;
-  -o-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-  color: #fff;
-}
-.tabs a.is-active {
-  background-color: #1abc9c;
-}
-
-.l-tabsContent > li {
-  display: none;
-}
-.l-tabsContent > li.is-active {
-  display: block;
-}
-
-/*
-	Media Object
-
-	* Place any image- and text-like content side-by-side, as per:
-	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-	*
-	** Image is optional **
-	*
-	* Markup:
-	*
-	<div class="media">
-		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
-		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-	========================================================================== */
-.media {
-  display: block;
-  padding: 20px 0;
-}
-
-/*
-   Add image to left or right
-   ========================================================================== */
-.media-img {
-  margin-right: 28px;
-}
-
-/**
- * Reversed image location (right instead of left).
- */
-.media-img--rev {
-  float: right;
-  margin-left: 28px;
-}
-
-.media-img img,
-.media-img--rev img {
-  display: block;
-}
-
-.media-body {
-  overflow: hidden;
-}
-
-.media-body,
-.media-body > :last-child {
-  margin-bottom: 0;
-}
-
-.media {
-  padding: 35px 0;
-}
-
-.media--zeroTopPad {
-  padding-top: 0;
-}
-
-.media-img {
-  float: left;
-}
-
-/*
-	Media Object
-
-	* Place any image- and text-like content side-by-side, as per:
-	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-	* E.g.:
-	*
-	<div class="media">
-		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
-		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-	========================================================================== */
-.media {
-  display: block;
-}
-
-.media-img {
-  float: left;
-  margin-right: 28px;
-}
-
-/**
- * Reversed image location (right instead of left).
- */
-.media-img--rev {
-  float: right;
-  margin-left: 28px;
-}
-
-.media-img img,
-.media-img--rev img {
-  display: block;
-}
-
-.media-body {
-  overflow: hidden;
-}
-
-.media-body,
-.media-body > :last-child {
-  margin-bottom: 0;
-}
-
-/**
- * Consider moving images and floats so only wide viewports see them
- */
-/*
-   Fluid width video
-   * 16:9 aspect ratio by default
-   * Usage:
-   * <div class="fluidVideo"><iframe src="..."/></div
-   ========================================================================== */
-.fluidVideo {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  height: 0;
-}
-.fluidVideo iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/*
-   Block grids
-
-   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
-
-   Usage:
-   <ul class="l-blockGrid l-blockGrid--twoUp">
-       <li></li>
-   </ul>
-   ========================================================================== */
-.l-blockGrid {
-  display: block;
-  list-style-type: none;
-  zoom: 1;
-}
-.l-blockGrid:before, .l-blockGrid:after {
-  display: table;
-  content: " ";
-}
-.l-blockGrid:after {
-  clear: both;
-}
-.l-blockGrid li {
-  display: block;
-  height: auto;
-}
-
-.l-blockGrid li {
-  display: block;
-  height: auto;
-  float: left;
-}
-.l-blockGrid.l-blockGrid--twoUp {
-  margin-left: -4%;
-}
-.l-blockGrid.l-blockGrid--twoUp li {
-  margin-left: 4%;
-  width: 46%;
-  margin-bottom: 4%;
-}
-.l-blockGrid.l-blockGrid--threeUp {
-  margin-left: -2%;
-}
-.l-blockGrid.l-blockGrid--threeUp li {
-  margin-left: 2%;
-  width: 31.3%;
-  margin-bottom: 2%;
-}
-.l-blockGrid.l-blockGrid--fourUp {
-  margin-left: -2%;
-}
-.l-blockGrid.l-blockGrid--fourUp li {
-  margin-left: 2%;
-  width: 23%;
-  margin-bottom: 2%;
-}
-.l-blockGrid.l-blockGrid--fiveUp {
-  margin-left: -1.5%;
-}
-.l-blockGrid.l-blockGrid--fiveUp li {
-  margin-left: 1.5%;
-  width: 18.5%;
-  margin-bottom: 1.5%;
-}
-
 /*
    Grid System
    * Default: Choreographic Grid. Switch out for your own if you need
@@ -1805,6 +1804,9 @@ img, object, embed, video {
   width: 95%;
   max-width: 1000px;
   margin: 0 auto;
+}
+.lt-ie9 .g-container {
+  min-width: 1000px;
 }
 
 .g-row {
