@@ -25,7 +25,6 @@ module.exports = function (grunt) {
 
 				// <%=config.js.fileList%>
 				fileList : [
-					'js/helpers/helpers.js',
 					'js/helpers/console.js',
 					'js/script.js'
 				]
