@@ -1775,6 +1775,9 @@ img, object, embed, video {
   max-width: 1000px;
   margin: 0 auto;
 }
+.lt-ie9 .g-container {
+  min-width: 1000px;
+}
 
 .g-row {
   width: 100%;
