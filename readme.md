@@ -16,7 +16,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw
 * Starter content styles, including clean typography, lists, tables, etc
 * Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
 * Grunt used extensively to ease common development bottlenecks
- * Sass compilation using [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+ * Sass compilation using [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) although [grunt-sass](https://github.com/sindresorhus/grunt-sass) can be used a drop-in replacement but there are still some bugs; it is far quicker though..
  * Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
  * Simple server using [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
 
