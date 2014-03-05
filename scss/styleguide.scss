@@ -3,28 +3,41 @@
    ========================================================================== */
 @import "colour-palette";
 @import "variables";
+@import "functions/functions";
+@import "mixins/mixins";
+
+@import "normalize";
+
+@import "typography";
+
+@import "partials/components/forms";
+@import "partials/components/tables";
+@import "partials/components/code";
+@import "partials/components/buttons";
+@import "partials/components/embedded-content";
+@import "partials/components/lists";
+@import "partials/components/wells";
+@import "partials/components/tabs";
+@import "partials/components/media-object";
+@import "partials/components/fluid-video";
+@import "partials/components/block-grids";
+
+
 // Override the grid
 $gridColumnCount              : 12    ;
 $gridGutterWidth              : 20    ;
 $gridMaxWidth                 : 1000  ;
-$gridMargin                   : 40     ;
+$gridMargin                   : 40    ;
 $gridColumnPadding            : 0     ;
-$gridColumnPaddingUnit        : 'px'   ;
+$gridColumnPaddingUnit        : 'px'  ;
 $nestedColumnPadding          : false ;
-@import "helpers/helpers";
-@import "functions/functions";
-@import "mixins/mixins";
-@import "normalize";
-@import "choreographic-grid";
-@import "typography";
-//@import "forms";
-//@import "tables";
-@import "code";
-@import "buttons";
-@import "components";
+@import "partials/components/choreographic-grid";
+
 @import "global";
-@import "utilities";
-@import "responsive-utilities";
+@import "partials/masthead";
+@import "partials/footer";
+
+@import "helper-classes";
 @import "print";
 
 /* ==========================================================================
@@ -70,8 +83,7 @@ body {
    Colours
    ========================================================================== */
 .swatch {
-	// width: 220px;
-	height: 220px;
+	height: 120px;
 }
 
 .color-primary {

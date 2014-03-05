@@ -17,11 +17,4 @@
 		@include box-shadow(0 0 6px lighten($borderColor, 20%));
 		}
 	}
-	// Give a small background color for input-prepend/-append
-	.input-prepend .add-on,
-	.input-append .add-on {
-		color: $color-text;
-		background-color: $backgroundColor;
-		border-color: $color-text;
-	}
 }

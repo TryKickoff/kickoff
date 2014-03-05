@@ -15,16 +15,15 @@
 @import "mixins/responsive";
 
 /* CSS3 */
+@import "mixins/css3";
 @import "mixins/linear-gradient";
 @import "mixins/radial-gradient";
-@import "mixins/css3";
-@import "mixins/animation";
 @import "mixins/keyframes";
 
-/* Components */
-@import "mixins/buttons";
-
-/* Utility mixins */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ */
 @import "mixins/utility";
 
 /* HiDPI */

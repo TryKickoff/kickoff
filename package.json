@@ -2,7 +2,7 @@
   "name": "kickoff",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive sites",
-  "version": "3.3.2",
+  "version": "3.4.0",
   "homepage": "http://tmwagency.github.io/kickoff/",
   "author": {
     "name": "Zander Martineau",
@@ -25,13 +25,15 @@
     "grunt-contrib-sass": "~0.7.2",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-csso": "~0.5.3",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-csso": "~0.6.0",
     "grunt-jquery-builder": "~0.1.1",
-    "load-grunt-tasks": "~0.3.0",
-    "grunt-contrib-connect": "~0.7.0",
-    "grunt-available-tasks": "~0.4.2",
-    "grunt-jscs-checker": "~0.3.2"
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-jscs-checker": "~0.4.0",
+    "grunt-svgmin": "~0.4.0",
+    "grunt-grunticon": "~1.0.0",
+    "grunt-autoprefixer": "~0.7.2"
   },
   "keywords": []
 }

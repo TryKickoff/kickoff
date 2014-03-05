@@ -1,41 +1,30 @@
-@mixin linear-gradient($pos, $G1, $G2: false,
-                       $G3: false, $G4: false,
-                       $G5: false, $G6: false,
-                       $G7: false, $G8: false,
-                       $G9: false, $G10: false,
-                       $deprecated-pos1: left top,
-                       $deprecated-pos2: left bottom,
-                       $fallback: false) {
-  // Detect what type of value exists in $pos
-  $pos-type: type-of(nth($pos, 1));
-  $pos-spec: null;
-  $pos-degree: null;
+/* ==========================================================================
+   Linear Gradient
+   Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+   ========================================================================== */
+@mixin linear-gradient($fromColor, $toColor, $direction: vertical, $ie: false) {
+	// Set default vars for vertical gradient
+	$from      : top;
+	$to        : bottom;
+	$fallback1 : left top;
+	$fallback2 : left bottom;
+	$type      : 1;
 
-  // If $pos is missing from mixin, reassign vars and add default position
-  @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
-    $G10: $G9; $G9: $G8; $G8: $G7; $G7: $G6; $G6: $G5;
-     $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
-     $pos: null;
-  }
-
-  @if $pos {
-    $positions: _linear-positions-parser($pos);
-    $pos-degree: nth($positions, 1);
-    $pos-spec:   nth($positions, 2);
-  }
-
-  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
-
-  // Set $G1 as the default fallback color
-  $fallback-color: nth($G1, 1);
-
-  // If $fallback is a color use that color as the fallback color
-  @if (type-of($fallback) == color) or ($fallback == "transparent") {
-    $fallback-color: $fallback;
-  }
-
-  background-color: $fallback-color;
-  background-image: _deprecated-webkit-gradient(linear, $deprecated-pos1, $deprecated-pos2, $full); // Safari <= 5.0
-  background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
-  background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+	@if $direction == horizontal {
+		$from      : left;
+		$to        : right;
+		$fallback1 : left top;
+		$fallback2 : left bottom;
+		$type      : 0;
+	}
+	background-color: $toColor; // Fallback Color
+	background-image: -webkit-gradient(linear, $fallback1, $fallback2, from($fromColor), to($toColor)); // Saf4+, Chrome
+	background-image: -webkit-linear-gradient($from, $fromColor 0%, $toColor 100%); // Chrome 10+, Saf5.1+, iOS 5+
+	background-image:    -moz-linear-gradient($from, $fromColor 0%, $toColor 100%); // FF3.6
+	background-image:     -ms-linear-gradient($from, $fromColor 0%, $toColor 100%); // IE10
+	background-image:      -o-linear-gradient($from, $fromColor 0%, $toColor 100%); // Opera 11.10+
+	background-image:         linear-gradient(to $to, $fromColor 0%, $toColor 100%); // Spec
+	@if $ie == true {
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}',GradientType=#{$type});
+	}
 }

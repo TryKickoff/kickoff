@@ -1,0 +1,120 @@
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	*
+	** Image is optional **
+	*
+	* Markup:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+
+.media {
+	display: block;
+	padding: 20px 0;
+}
+
+
+/*
+   Add image to left or right
+   ========================================================================== */
+.media-img {
+	margin-right: $base-line-height + px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+	float: right;
+	margin-left: $base-line-height + px;
+}
+
+.media-img img,
+.media-img--rev img{
+	display: block;
+}
+
+.media-body {
+	overflow: hidden;
+}
+.media-body,
+.media-body > :last-child{
+	margin-bottom:0;
+}
+
+
+// === <$breakpoint-narrow ===
+@include respond-min($breakpoint-narrow) {
+	.media {
+		padding: 35px 0;
+	}
+	.media--zeroTopPad {
+		padding-top: 0;
+	}
+	.media-img {
+		float: left;
+	}
+}
+// === end <$breakpoint-narrow ===
+
+
+
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	* E.g.:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	========================================================================== */
+
+.media {
+	display: block;
+}
+.media-img {
+	float: left;
+	margin-right: $base-line-height + px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+	float: right;
+	margin-left: $base-line-height + px;
+}
+
+.media-img img,
+.media-img--rev img{
+	display: block;
+}
+
+.media-body{
+	overflow: hidden;
+}
+.media-body,
+.media-body > :last-child{
+	margin-bottom:0;
+}
+
+/**
+ * Consider moving images and floats so only wide viewports see them
+ */
+
+// === <$breakpoint-single-col ===
+// @include respond-min($breakpoint-single-col) {
+
+// }
+// === end <$breakpoint-single-col ===

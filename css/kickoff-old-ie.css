@@ -11,7 +11,7 @@
 /* ==========================================================================
    Variables
    * Settings
-   * Global valuesx
+   * Global values
    * Breakpoints
    * Paths
    * Grid setup
@@ -23,6 +23,9 @@
    ========================================================================== */
 /*
     Typography
+   ========================================================================== */
+/*
+   Font stacks
    ========================================================================== */
 /*
    Breakpoints
@@ -38,6 +41,7 @@
    ========================================================================== */
 /*
    App-specific variables
+   Add common vars here
    ========================================================================== */
 /*
    Mixins, helpers and functions
@@ -88,8 +92,18 @@
    * Usage: @include oldie() { ... }
    ========================================================================== */
 /* CSS3 */
-/* Components */
-/* Utility mixins */
+/* ==========================================================================
+   Linear Gradient
+   Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+   ========================================================================== */
+/* ==========================================================================
+   Radial Gradient
+   Usage: @include radial-gradient(#000, #BADA55, true);
+   ========================================================================== */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ */
 /* ==========================================================================
    Utlity Mixins
    ========================================================================== */
@@ -100,8 +114,7 @@
 /* FORMS */
 /* BROWSER FIXES */
 /*
-   CSS Framework
-   * Edit these
+   CSS Reset
    ========================================================================== */
 /* ==========================================================================
    Normalize - CSS reset
@@ -112,7 +125,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -197,188 +209,8 @@ textarea {
 }
 
 /*
-   Grid System
-   * Default: Choreographic Grid. Switch out for your own if you need
+   Global typography styles
    ========================================================================== */
-/* ==========================================================================
-	 The Choreographic Grid
-	 * Grid setup
-	 * Grid helpers/mixins
-	 * Default grid styles
-	 * Media queries
-	 * Centred columns
-	 ========================================================================== */
-/*
-	 Basic Usage:
-	 <div class="g-row">
-			 <div class="g-col g-span4"></div>
-			 <div class="g-col g-span8"></div>
-	 </div>
-	 ========================================================================== */
-/*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-/* Setup grid defaults */
-/* Column Padding */
-/*
-	 Import Grid helpers and mixins
-	 ========================================================================== */
-/* ==========================================================================
-   Choreographic Grid helpers
-   ========================================================================== */
-/*
-   Grid column mixin
-   ========================================================================== */
-/*
-   Grid columns width calcs
-   ========================================================================== */
-/*
-   Column width mixin
-   ========================================================================== */
-/*
-   Gutter calcs
-   * Default: percent
-   * Usage: gutterCalc() or gutterCalc(false)
-   ========================================================================== */
-/*
-   Column padding (gutter)
-   * Default: percent (can be pixels though)
-   * Usage: paddingCalc() or paddingCalc(px)
-   ========================================================================== */
-/*
-   Shunts, offset columns, column source order calculations
-   ========================================================================== */
-/* ==========================================================================
-	 Default grid styles
-	 ========================================================================== */
-.g-container {
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.g-row {
-  width: 100%;
-  margin: 0 auto;
-  zoom: 1;
-}
-.g-row:before, .g-row:after {
-  content: " ";
-  display: table;
-}
-.g-row:after {
-  clear: both;
-}
-.g-row .g-row {
-  min-width: 0;
-}
-.g-row .g-row .g-col {
-  padding: 0;
-}
-
-/* ==========================================================================
-	 Media queries
-	 ========================================================================== */
-.g-col {
-  margin-left: 2%;
-  padding: 10px;
-  float: left;
-  min-height: 1px;
-  position: relative;
-  clear: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.g-col:first-child {
-  margin-left: 0;
-}
-.g-col + .g-col:last-child {
-  float: right;
-}
-.g-col + .g-col.end {
-  float: left;
-}
-
-.g-span1, .g-mq-alpha-resize-to1 {
-  width: 6.5%;
-}
-
-.g-span2, .g-mq-alpha-resize-to2 {
-  width: 15%;
-}
-
-.g-span3, .g-mq-alpha-resize-to3 {
-  width: 23.5%;
-}
-
-.g-span4, .g-mq-alpha-resize-to4 {
-  width: 32%;
-}
-
-.g-span5, .g-mq-alpha-resize-to5 {
-  width: 40.5%;
-}
-
-.g-span6, .g-mq-alpha-resize-to6 {
-  width: 49%;
-}
-
-.g-span7, .g-mq-alpha-resize-to7 {
-  width: 57.5%;
-}
-
-.g-span8, .g-mq-alpha-resize-to8 {
-  width: 66%;
-}
-
-.g-span9, .g-mq-alpha-resize-to9 {
-  width: 74.5%;
-}
-
-.g-span10, .g-mq-alpha-resize-to10 {
-  width: 83%;
-}
-
-.g-span11, .g-mq-alpha-resize-to11 {
-  width: 91.5%;
-}
-
-.g-span12, .g-mq-alpha-resize-to12 {
-  width: 100%;
-}
-
-.g-split .g-col, .g-shunt {
-  float: none;
-  margin-left: 0;
-  min-height: 1px;
-  position: relative;
-  width: 100%;
-  clear: both;
-}
-
-.g-mq-beta-end {
-  float: right;
-}
-
-.g-mq-beta-end {
-  float: left;
-}
-
-/*
-	 Centred columns
-	 ========================================================================== */
-.g-centered.g-col, .g-centred.g-col {
-  float: none;
-  margin: 0 auto;
-}
-
-/* Framework styles */
 /* ==========================================================================
    Typography
 
@@ -672,8 +504,6 @@ dfn {
 mark {
   background: #f1c40f;
   padding: 2px 4px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -720,6 +550,236 @@ samp {
 ::selection {
   color: white;
   background: #3498db;
+}
+
+/* ==========================================================================
+   Components:
+   * Buttons
+   * Lists
+   * Forms
+   * Embedded content
+   * Media Object
+   * Wells
+   * Block grids
+   * Tabs
+   * Tables
+   * Code
+   ========================================================================== */
+.btn, .tabs a {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 2.5;
+  /* [7] */
+  height: 2.5em;
+  /* [7] */
+  padding-right: 1.5em;
+  /* [7] */
+  padding-left: 1.5em;
+  /* [7] */
+  overflow: visible;
+  /* [8] */
+  text-align: center;
+  background-color: white;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
+  text-decoration: none;
+}
+.btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+.btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
+  cursor: default;
+  background-image: none;
+  zoom: 1;
+  filter: alpha(opacity=65);
+  opacity: 0.65;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--large {
+  font-size: 23px;
+  font-size: 1.15rem;
+  line-height: 3;
+  height: 3em;
+  padding-right: 2em;
+  padding-left: 2em;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.btn--small {
+  font-size: 13px;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  height: 1.5em;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn--pill {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -o-border-radius: 100em;
+  border-radius: 100em;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn--block + .btn--block {
+  margin-top: 10px;
+}
+
+input[type="submit"].btn--block,
+input[type="reset"].btn--block,
+input[type="button"].btn--block {
+  width: 100%;
+}
+
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.btn--primary {
+  background-color: #3498db;
+  color: #fff !important;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.btn--primary:hover {
+  background-color: #2c3e50;
+}
+
+.btn--link,
+.btn--link:active,
+.btn--link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #3498db;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn--link:hover,
+.btn--link:focus {
+  color: #196090;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn--link[disabled]:hover,
+.btn--link[disabled]:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+   Close Button: for lightboxes etc
+   ========================================================================== */
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 17px;
+  background: #000;
+  color: #3498db;
+  text-align: center;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn-close:hover {
+  color: #fff;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/*
+	Centred lists
+
+	<ul class="l-list--centred">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--centred, .l-list--centered {
+  text-align: center;
+}
+.l-list--centred li, .l-list--centered li {
+  display: inline;
+}
+
+/*
+	Floated lists
+
+	<ul class="l-list--floated">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--floated {
+  zoom: 1;
+}
+.l-list--floated:before, .l-list--floated:after {
+  display: table;
+  content: " ";
+}
+.l-list--floated:after {
+  clear: both;
+}
+.l-list--floated li {
+  float: left;
+  display: inline-block;
 }
 
 /* ==========================================================================
@@ -820,8 +880,6 @@ select,
   color: #4d4d4d;
   background-color: #FFF;
   border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -838,11 +896,8 @@ input[type="image"], input[type="checkbox"], input[type="radio"], input[type="ra
   margin: 3px 0;
   line-height: normal;
   cursor: pointer;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -858,14 +913,10 @@ input[type="file"] {
   border: initial;
   background-color: white;
   background-color: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
 input[type="image"], input[type="range"], input[type="range"]:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
@@ -956,21 +1007,16 @@ legend small {
 input,
 textarea,
 .fileWrapper {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
   outline: 0;
@@ -981,8 +1027,6 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
   outline: thin dotted #333;
@@ -1045,8 +1089,6 @@ input:focus:required:invalid:focus,
 select:focus:required:invalid:focus,
 textarea:focus:required:invalid:focus {
   border-color: #e9322d;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-  -moz-box-shadow: 0 0 6px #f8b9b7;
   -o-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
 }
@@ -1097,8 +1139,6 @@ textarea:focus:required:invalid:focus {
   padding-left: 14px;
   padding-right: 14px;
   margin-bottom: 0;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
   -o-border-radius: 100px;
   border-radius: 100px;
 }
@@ -1146,16 +1186,8 @@ textarea:focus:required:invalid:focus {
 .form-controlGroup.form-controlGroup--warning select:focus,
 .form-controlGroup.form-controlGroup--warning textarea:focus {
   border-color: #a47e3c;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
   -o-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
-}
-.form-controlGroup.form-controlGroup--warning .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--warning .input-append .add-on {
-  color: #c09853;
-  background-color: #fcf8e3;
-  border-color: #c09853;
 }
 
 .form-controlGroup.form-controlGroup--error > label,
@@ -1173,16 +1205,8 @@ textarea:focus:required:invalid:focus {
 .form-controlGroup.form-controlGroup--error select:focus,
 .form-controlGroup.form-controlGroup--error textarea:focus {
   border-color: #953b39;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
   -o-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
-}
-.form-controlGroup.form-controlGroup--error .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--error .input-append .add-on {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #b94a48;
 }
 
 .form-controlGroup.form-controlGroup--success > label,
@@ -1200,16 +1224,8 @@ textarea:focus:required:invalid:focus {
 .form-controlGroup.form-controlGroup--success select:focus,
 .form-controlGroup.form-controlGroup--success textarea:focus {
   border-color: #356635;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
   -o-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
-}
-.form-controlGroup.form-controlGroup--success .input-prepend .add-on,
-.form-controlGroup.form-controlGroup--success .input-append .add-on {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #468847;
 }
 
 /*
@@ -1284,358 +1300,6 @@ textarea:focus:required:invalid:focus {
   padding-left: 160px;
 }
 
-table {
-  max-width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  background-color: transparent;
-}
-
-.table {
-  width: 100%;
-  margin-bottom: 28px;
-}
-.table th, .table td {
-  padding: 8px;
-  line-height: 1.4;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-.table th, .table tfoot td {
-  font-weight: bold;
-}
-.table thead th {
-  vertical-align: bottom;
-}
-.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-.table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-
-.table--condensed th, .table--condensed td {
-  padding: 4px 5px;
-}
-
-.table--bordered {
-  border: 1px solid #dddddd;
-  border-left: 0;
-  border-collapse: separate;
-  *border-collapse: collapsed;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.table--bordered th, .table--bordered td {
-  border-left: 1px solid #dddddd;
-}
-.table--bordered caption + thead tr:first-child th, .table--bordered caption + tbody tr:first-child th, .table--bordered caption + tbody tr:first-child td, .table--bordered colgroup + thead tr:first-child th, .table--bordered colgroup + tbody tr:first-child th, .table--bordered colgroup + tbody tr:first-child td, .table--bordered thead:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child td {
-  border-top: 0;
-}
-.table--bordered thead:first-child tr:first-child th:first-child, .table--bordered tbody:first-child tr:first-child td:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  -o-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-.table--bordered thead:first-child tr:first-child th:last-child, .table--bordered tbody:first-child tr:first-child td:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  -o-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
-}
-.table--bordered thead:last-child tr:last-child th:first-child, .table--bordered tbody:last-child tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  -o-border-radius: 0 0 0 4px;
-  border-radius: 0 0 0 4px;
-}
-.table--bordered thead:last-child tr:last-child th:last-child, .table--bordered tbody:last-child tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
-  -o-border-radius: 0 0 4px 0;
-  border-radius: 0 0 4px 0;
-}
-
-.table--striped tbody tr:nth-child(odd) td, .table--striped tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
-}
-
-.table tbody tr:hover td, .table tbody tr:hover th {
-  background-color: whitesmoke;
-}
-
-/* ==========================================================================
-   Preformatted code
-   Code typography styles for the <code> and <pre> elements
-   ========================================================================== */
-code,
-pre {
-  padding: 0 3px 2px;
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 13px;
-  font-size: 0.65rem;
-  color: #dd1144;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  tab-size: 3;
-}
-
-code {
-  padding: 2px 4px;
-  color: #dd1144;
-  background-color: #fbefc0;
-}
-
-pre {
-  display: block;
-  padding: 13.5px;
-  margin: 0 0 14px;
-  line-height: 1.4;
-  color: #222222;
-  background-color: #f7f7f9;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-pre.prettyprint {
-  margin-bottom: 28px;
-}
-pre code {
-  padding: 0;
-  color: #222222;
-  background-color: #f7f7f9;
-  border: 0;
-}
-
-.pre--scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
-}
-
-.btn, .tabs a {
-  display: inline-block;
-  /* [1] */
-  vertical-align: middle;
-  /* [2] */
-  white-space: nowrap;
-  /* [3] */
-  font-family: inherit;
-  /* [4] */
-  font-size: 100%;
-  /* [4] */
-  cursor: pointer;
-  /* [5] */
-  border: none;
-  /* [6] */
-  margin: 0;
-  /* [6] */
-  padding-top: 0;
-  /* [6] */
-  padding-bottom: 0;
-  /* [6] */
-  line-height: 2.5;
-  /* [7] */
-  height: 2.5em;
-  /* [7] */
-  padding-right: 1.5em;
-  /* [7] */
-  padding-left: 1.5em;
-  /* [7] */
-  overflow: visible;
-  /* [8] */
-  text-align: center;
-  background-color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
-  text-decoration: none;
-}
-.btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
-}
-.btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
-  cursor: default;
-  background-image: none;
-  zoom: 1;
-  filter: alpha(opacity=65);
-  opacity: 0.65;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn--large {
-  font-size: 23px;
-  font-size: 1.15rem;
-  line-height: 3;
-  height: 3em;
-  padding-right: 2em;
-  padding-left: 2em;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-.btn--small {
-  font-size: 13px;
-  font-size: 0.65rem;
-  line-height: 1.5;
-  height: 1.5em;
-  padding-right: 0.75em;
-  padding-left: 0.75em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.btn--pill {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  -webkit-border-radius: 100em;
-  -moz-border-radius: 100em;
-  -o-border-radius: 100em;
-  border-radius: 100em;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.btn--block + .btn--block {
-  margin-top: 10px;
-}
-
-input[type="submit"].btn--block,
-input[type="reset"].btn--block,
-input[type="button"].btn--block {
-  width: 100%;
-}
-
-.btn--natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  height: auto;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-}
-
-.btn--primary {
-  background-color: #3498db;
-  color: #fff !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-.btn--primary:hover {
-  background-color: #2c3e50;
-}
-
-.btn--link,
-.btn--link:active,
-.btn--link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn--link {
-  border-color: transparent;
-  cursor: pointer;
-  color: #3498db;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-.btn--link:hover,
-.btn--link:focus {
-  color: #196090;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-.btn--link[disabled]:hover,
-.btn--link[disabled]:focus {
-  color: #333;
-  text-decoration: none;
-}
-
-/*
-   Close Button: for lightboxes etc
-   ========================================================================== */
-.btn-close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 17px;
-  background: #000;
-  color: #3498db;
-  text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.btn-close:hover {
-  color: #fff;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-}
-
-/* ==========================================================================
-	Components:
-	* Embedded content
-	* Centred list
-	* Floated lists
-	* Wells
-	* Tabs
-	* Media Object
-	* Block grids
-	========================================================================== */
 /*
 	Embedded content
 	========================================================================== */
@@ -1661,147 +1325,65 @@ img, object, embed, video {
 }
 
 /*
-	Centred lists
+	Media Object
 
-	<ul class="l-list--centred">
-		<li></li>
-	</ul>
+	* Place any image- and text-like content side-by-side, as per:
+	* stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	*
+	** Image is optional **
+	*
+	* Markup:
+	*
+	<div class="media">
+		<img src="http://placekitten.com/100/100" alt="" class="media-img>"
+		<p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
 	========================================================================== */
-.l-list--centred, .l-list--centered {
-  text-align: center;
-}
-.l-list--centred li, .l-list--centered li {
-  display: inline;
-}
-
-/*
-	Floated lists
-
-	<ul class="l-list--floated">
-		<li></li>
-	</ul>
-	========================================================================== */
-.l-list--floated {
-  zoom: 1;
-}
-.l-list--floated:before, .l-list--floated:after {
-  display: table;
-  content: " ";
-}
-.l-list--floated:after {
-  clear: both;
-}
-.l-list--floated li {
-  float: left;
-  display: inline-block;
-}
-
-/*
-	Wells
-
-	Use the well as a simple effect on an element to give it an inset effect
-	<div class="well"></div>
-	========================================================================== */
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.well--large {
-  padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-.well--small {
-  padding: 9px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/*
-	Tabs
-
-	* Usage: 
-	<ul class="tabs">
-		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
-		<li><a href="#tabs-example-2">Tab 2</a></li>
-	</ul>
-	
-	<!-- Tabs Content -->
-	<ul class="l-tabsContent">
-		<li id="tabs-example-1" class="is-active">
-			Tab 1 content
-		</li>
-
-		<li id="tabs-example-2">
-			Tab 2 content
-		</li>
-	</ul>
-	========================================================================== */
-.tabs {
-  zoom: 1;
-  margin-bottom: 28px;
-  border-bottom: 2px solid #1abc9c;
-}
-.tabs:before, .tabs:after {
-  display: table;
-  content: " ";
-}
-.tabs:after {
-  clear: both;
-}
-.tabs.tabs--alignRight li {
-  float: right;
-}
-.tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
-  text-align: center;
-}
-.tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
-  display: inline;
-  float: none;
-}
-.tabs > li {
-  float: left;
-  margin: 0 5px;
-}
-.tabs a {
-  background-color: #95a5a6;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -o-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-  color: #fff;
-}
-.tabs a.is-active {
-  background-color: #1abc9c;
-}
-
-.l-tabsContent > li {
-  display: none;
-}
-.l-tabsContent > li.is-active {
+.media {
   display: block;
+  padding: 20px 0;
+}
+
+/*
+   Add image to left or right
+   ========================================================================== */
+.media-img {
+  margin-right: 28px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 28px;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
+.media {
+  padding: 35px 0;
+}
+
+.media--zeroTopPad {
+  padding-top: 0;
+}
+
+.media-img {
+  float: left;
 }
 
 /*
@@ -1846,6 +1428,60 @@ img, object, embed, video {
 .media-body,
 .media-body > :last-child {
   margin-bottom: 0;
+}
+
+/**
+ * Consider moving images and floats so only wide viewports see them
+ */
+/*
+	Wells
+
+	Use the well as a simple effect on an element to give it an inset effect
+	<div class="well"></div>
+	========================================================================== */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well--large {
+  padding: 24px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.well--small {
+  padding: 9px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+   Fluid width video
+   * 16:9 aspect ratio by default
+   * Usage:
+   * <div class="fluidVideo"><iframe src="..."/></div
+   ========================================================================== */
+.fluidVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.fluidVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -1914,7 +1550,383 @@ img, object, embed, video {
 }
 
 /*
-   Your styles
+	Tabs
+
+	* Usage:
+	<ul class="tabs">
+		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
+		<li><a href="#tabs-example-2">Tab 2</a></li>
+	</ul>
+
+	<!-- Tabs Content -->
+	<ul class="l-tabsContent">
+		<li id="tabs-example-1" class="is-active">
+			Tab 1 content
+		</li>
+
+		<li id="tabs-example-2">
+			Tab 2 content
+		</li>
+	</ul>
+	========================================================================== */
+.tabs {
+  zoom: 1;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #1abc9c;
+}
+.tabs:before, .tabs:after {
+  display: table;
+  content: " ";
+}
+.tabs:after {
+  clear: both;
+}
+.tabs.tabs--alignRight li {
+  float: right;
+}
+.tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
+  text-align: center;
+}
+.tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
+  display: inline;
+  float: none;
+}
+.tabs > li {
+  float: left;
+  margin: 0 5px;
+}
+.tabs a {
+  background-color: #95a5a6;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+}
+.tabs a.is-active {
+  background-color: #1abc9c;
+}
+
+.l-tabsContent > li {
+  display: none;
+}
+.l-tabsContent > li.is-active {
+  display: block;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 28px;
+}
+.table th, .table td {
+  padding: 8px;
+  line-height: 1.4;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table th, .table tfoot td {
+  font-weight: bold;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table--condensed th, .table--condensed td {
+  padding: 4px 5px;
+}
+
+.table--bordered {
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.table--bordered th, .table--bordered td {
+  border-left: 1px solid #dddddd;
+}
+.table--bordered caption + thead tr:first-child th, .table--bordered caption + tbody tr:first-child th, .table--bordered caption + tbody tr:first-child td, .table--bordered colgroup + thead tr:first-child th, .table--bordered colgroup + tbody tr:first-child th, .table--bordered colgroup + tbody tr:first-child td, .table--bordered thead:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child th, .table--bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table--bordered thead:first-child tr:first-child th:first-child, .table--bordered tbody:first-child tr:first-child td:first-child {
+  -o-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table--bordered thead:first-child tr:first-child th:last-child, .table--bordered tbody:first-child tr:first-child td:last-child {
+  -o-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.table--bordered thead:last-child tr:last-child th:first-child, .table--bordered tbody:last-child tr:last-child td:first-child {
+  -o-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.table--bordered thead:last-child tr:last-child th:last-child, .table--bordered tbody:last-child tr:last-child td:last-child {
+  -o-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+
+.table--striped tbody tr:nth-child(odd) td, .table--striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: whitesmoke;
+}
+
+/* ==========================================================================
+   Preformatted code
+   Code typography styles for the <code> and <pre> elements
+   ========================================================================== */
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 13px;
+  font-size: 0.65rem;
+  color: #dd1144;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+code {
+  padding: 2px 4px;
+  color: #dd1144;
+  background-color: #fbefc0;
+}
+
+pre {
+  display: block;
+  padding: 13.5px;
+  margin: 0 0 14px;
+  line-height: 1.4;
+  color: #222222;
+  background-color: #f7f7f9;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+pre.prettyprint {
+  margin-bottom: 28px;
+}
+pre code {
+  padding: 0;
+  color: #222222;
+  background-color: #f7f7f9;
+  border: 0;
+}
+
+.pre--scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+/*
+   Grid System
+   * Default: Choreographic Grid. Switch out for your own if you need
+   * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
+   ========================================================================== */
+/* ==========================================================================
+	 The Choreographic Grid
+	 * Grid setup
+	 * Grid helpers/mixins
+	 * Default grid styles
+	 * Media queries
+	 * Centred columns
+	 ========================================================================== */
+/*
+	 Basic Usage:
+	 <div class="g-row">
+			 <div class="g-col g-span4"></div>
+			 <div class="g-col g-span8"></div>
+	 </div>
+	 ========================================================================== */
+/*
+	 Grid Setup
+	 * Choose your grid options.
+	 * These will be overridden by the settings in _variables.scss
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
+/*
+	 Import Grid helpers and mixins
+	 ========================================================================== */
+/* ==========================================================================
+   Choreographic Grid helpers
+   ========================================================================== */
+/*
+   Grid column mixin
+   ========================================================================== */
+/*
+   Grid columns width calcs
+   ========================================================================== */
+/*
+   Column width mixin
+   ========================================================================== */
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+/* ==========================================================================
+	 Default grid styles
+	 ========================================================================== */
+.g-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.lt-ie9 .g-container {
+  min-width: 1000px;
+}
+
+.g-row {
+  width: 100%;
+  margin: 0 auto;
+  zoom: 1;
+}
+.g-row:before, .g-row:after {
+  content: " ";
+  display: table;
+}
+.g-row:after {
+  clear: both;
+}
+.g-row .g-row {
+  min-width: 0;
+}
+.g-row .g-row .g-col {
+  padding: 0;
+}
+
+/* ==========================================================================
+	 Media queries
+	 ========================================================================== */
+.g-col {
+  margin-left: 2%;
+  padding: 10px;
+  float: left;
+  min-height: 1px;
+  position: relative;
+  clear: none;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.g-col:first-child {
+  margin-left: 0;
+}
+.g-col + .g-col:last-child {
+  float: right;
+}
+.g-col + .g-col.end {
+  float: left;
+}
+
+.g-span1, .g-mq-alpha-resize-to1 {
+  width: 6.5%;
+}
+
+.g-span2, .g-mq-alpha-resize-to2 {
+  width: 15%;
+}
+
+.g-span3, .g-mq-alpha-resize-to3 {
+  width: 23.5%;
+}
+
+.g-span4, .g-mq-alpha-resize-to4 {
+  width: 32%;
+}
+
+.g-span5, .g-mq-alpha-resize-to5 {
+  width: 40.5%;
+}
+
+.g-span6, .g-mq-alpha-resize-to6 {
+  width: 49%;
+}
+
+.g-span7, .g-mq-alpha-resize-to7 {
+  width: 57.5%;
+}
+
+.g-span8, .g-mq-alpha-resize-to8 {
+  width: 66%;
+}
+
+.g-span9, .g-mq-alpha-resize-to9 {
+  width: 74.5%;
+}
+
+.g-span10, .g-mq-alpha-resize-to10 {
+  width: 83%;
+}
+
+.g-span11, .g-mq-alpha-resize-to11 {
+  width: 91.5%;
+}
+
+.g-span12, .g-mq-alpha-resize-to12 {
+  width: 100%;
+}
+
+.g-split .g-col, .g-shunt {
+  float: none;
+  margin-left: 0;
+  min-height: 1px;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.g-mq-beta-end {
+  float: right;
+}
+
+.g-mq-beta-end {
+  float: left;
+}
+
+/*
+	 Centred columns
+	 ========================================================================== */
+.g-centered.g-col, .g-centred.g-col {
+  float: none;
+  margin: 0 auto;
+}
+
+/*
+   Your app styles
    ========================================================================== */
 /* ==========================================================================
    Global app/site styles
@@ -1929,7 +1941,7 @@ body {
 /*
    Retina media query
    ========================================================================== */
-/* Examples */
+/* Examples: */
 /*
    Utility classes
    * Has to be last to override when necessary
@@ -1938,6 +1950,10 @@ body {
    Utilities
    Non-semantic helper classes
    ========================================================================== */
+/**
+ * Clearfix
+ * See mixins/_utility.scss for a mixin version of this
+ */
 .clearfix {
   zoom: 1;
 }
@@ -1996,7 +2012,7 @@ body {
   visibility: hidden;
 }
 
-.l-floatLleft {
+.l-floatLeft {
   float: left;
 }
 
@@ -2024,47 +2040,19 @@ body {
   width: device-width;
 }
 
+* {
+  -webkit-tap-highlight-color: #3498db !important;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
 @media screen and (max-width: 400px) {
   @-ms-viewport {
     width: 320px;
 }
-}
-.is-visiblePrint {
-  display: block !important;
-}
-
-tr.is-visiblePrint {
-  display: table-row !important;
-}
-
-th.is-visiblePrint, td.is-visiblePrint {
-  display: table-cell !important;
-}
-
-@media print {
-  .is-visiblePrint {
-    display: block !important;
-  }
-
-  tr.is-visiblePrint {
-    display: table-row !important;
-  }
-
-  th.is-visiblePrint, td.is-visiblePrint {
-    display: table-cell !important;
-  }
-
-  .is-hiddenPrint {
-    display: none !important;
-  }
-
-  tr.is-hiddenPrint {
-    display: none !important;
-  }
-
-  th.is-hiddenPrint, td.is-hiddenPrint {
-    display: none !important;
-  }
 }
 /* Print styles */
 /* ==========================================================================
@@ -2132,5 +2120,4 @@ th.is-visiblePrint, td.is-visiblePrint {
     page-break-after: avoid;
   }
 }
-
 /*# sourceMappingURL=kickoff-old-ie.css.map */
