@@ -112,7 +112,7 @@ select,
 	@include font-size($base-font-size);
 	line-height: $base-leading;
 	color: $input-color;
-	background-color: #FFF;
+	background-color: $input-background;
 	border: 1px solid $input-border;
 	@include border-radius(3px);
 }
