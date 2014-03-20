@@ -87,7 +87,7 @@
 	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
 }
 @mixin offset($columnOffset: 1) {
-	margin-left: percentage( gridColumnWidthCalc($columnOffset, false) * $columnOffset / 100 );
+	margin-left: gutterCalc() + percentage( gridColumnWidthCalc($columnOffset, false)  ) + gutterCalc();
 }
 @mixin offsetFirstChild($columnOffset: 1) {
 	margin-left: (gridColumnWidthCalc($columnOffset, false) * $columnOffset) + ($gridGutterWidth * $columnOffset);
