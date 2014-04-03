@@ -65,6 +65,9 @@ $usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive w
 	width: 100%;
 	margin: 0 auto;
 
+	/*This is for clearing the spacing between the inline block (.g-cols) elements*/
+	font-size: 0;
+
 	// Clearfix this mother!
 	zoom: 1;
 	&:before,

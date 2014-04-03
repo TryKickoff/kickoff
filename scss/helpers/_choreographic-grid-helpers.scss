@@ -6,24 +6,21 @@
    Grid column mixin
    ========================================================================== */
 @mixin gridColumn() {
-	@if $gridGutterWidth > 0 {
-		margin-left: gutterCalc();
-	}
-	@if $gridColumnPadding > 0 {
-		padding: paddingCalc();
-	}
-	float: left;
-	min-height: 1px;
-	position: relative;
-	clear: none;
-	@include box-sizing(border-box);
-
-	&:first-child {
-		margin-left: 0;
-	}
-
-	& + &:last-child { float: right; }
-	& + &.end { float: left; }
+    @if $gridGutterWidth > 0 {
+        margin-left: gutterCalc();
+    }
+    @if $gridColumnPadding > 0 {
+        padding: paddingCalc();
+    }
+    display: inline-block;
+    min-height: 1px;
+    position: relative;
+    clear: none;
+    @include box-sizing(border-box);
+    vertical-align: top;
+    &:first-child {
+        margin-left: 0;
+    }   
 }
 
 
