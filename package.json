@@ -35,5 +35,9 @@
     "grunt-grunticon": "~1.0.0",
     "grunt-autoprefixer": "~0.7.2"
   },
-  "keywords": []
+  "keywords": [],
+  ,
+	"scripts": {
+		"test": "grunt travis --verbose"
+	}
 }
