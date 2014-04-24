@@ -4,10 +4,14 @@
   "description": "A lightweight front-end framework for creating scalable, responsive sites",
   "version": "3.4.2",
   "homepage": "http://tmwagency.github.io/kickoff/",
-  "author": {
+  "authors": [{
     "name": "Zander Martineau",
     "url": "http://martineau.tv"
   },
+  {
+    "name": "Ashley Nolan",
+    "url": "http://ashleynolan.co.uk"
+  }],
   "repository": {
     "type": "git",
     "url": "git://github.com/tmwagency/kickoff.git"
