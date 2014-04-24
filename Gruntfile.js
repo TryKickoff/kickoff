@@ -341,4 +341,11 @@ module.exports = function (grunt) {
 	 * Need task to download all bower dependencies
 	 */
 
+	//Travis CI to test build
+	grunt.registerTask('travis', [
+		'jshint',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:dist'
+	]);
 };
