@@ -36,7 +36,6 @@
     "grunt-autoprefixer": "~0.7.2"
   },
   "keywords": [],
-  ,
 	"scripts": {
 		"test": "grunt travis --verbose"
 	}
