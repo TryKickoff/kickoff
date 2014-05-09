@@ -18,31 +18,10 @@
 
 
 /*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-
-/* Setup grid defaults */
-$gridColumnCount      : 12     !default; // Total column count
-$gridGutterWidth      : 30     !default; // [in pixels]
-$gridMaxWidth         : 1000   !default; // [in pixels]
-$gridMinWidth         : 1000   !default; // [in pixels] Minimum width for grid in <IE9
-$gridMargin           : 0      !default; // [in pixels] Space outside the grid
-
-/* Column Padding */
-$gridColumnPadding    : 0      !default; // [in pixels]
-$gridColumnPaddingUnit: '%'    !default; // [px or %] Specify your unit of measurement for column padding
-$nestedColumnPadding  : false  !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
-
-$usingPushPullColumns : true   !default; // Allow columns to be pushed & pulled
-$usingOffsetcolumns   : true   !default; // Allow columns to be offset
-$usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive web design
-
-/*
 	 Import Grid helpers and mixins
 	 ========================================================================== */
 @import "../../helpers/choreographic-grid-helpers";
+
 
 
 
