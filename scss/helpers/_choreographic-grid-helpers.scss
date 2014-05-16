@@ -110,10 +110,10 @@ $usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive w
 	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
 }
 @mixin offset($columnOffset: 1) {
-	margin-left: gutterCalc() + percentage( gridColumnWidthCalc($columnOffset, false)  ) + gutterCalc();
+	margin-left: gutterCalc() + gridColumnWidthCalc($columnOffset, true) + gutterCalc();
 }
 @mixin offsetFirstChild($columnOffset: 1) {
-	margin-left: (gridColumnWidthCalc($columnOffset, false) * $columnOffset) + ($gridGutterWidth * $columnOffset);
+	margin-left: gridColumnWidthCalc($columnOffset, true) + gutterCalc();
 }
 @mixin push($pushOffset: 1) {
 	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
