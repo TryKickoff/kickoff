@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:kickoff', 'sass:styleguide', 'autoprefixer:dist']
+				tasks: ['sass:kickoff', 'autoprefixer:dist']
 			},
 
 			js: {
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 
 			grunticon : {
 				files: ['img/src/*.svg', 'img/src/*.png'],
-				tasks: ['svgmin', 'grunticon']
+				tasks: ['clean:icons', 'svgmin', 'grunticon']
 			}
 		},
 
@@ -114,8 +114,19 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'css/kickoff.css'       : 'css/kickoff.css',
-					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css',
-					'css/styleguide.css'    : 'css/styleguide.css'
+					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
+				}
+			},
+			styleguide : {
+				options: {
+					// Task-specific options go here - we are supporting
+					// the last 2 browsers, any browsers with >1% market share,
+					// and ensuring we support IE7 + 8 with prefixes
+					browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 6'],
+					map: false
+				},
+				files: {
+					'css/styleguide.css' : 'css/styleguide.css'
 				}
 			}
 		},
@@ -211,11 +222,25 @@ module.exports = function (grunt) {
 		 * Start a static web server
 		 */
 		connect: {
-			server: {
+			site: {
 				options: {
-					// port: 9001,
-					// hostname: 'mysite.local',
 					open: true,
+					livereload: true
+				}
+			},
+			styleguide: {
+				options: {
+					open: {
+						target: 'http://0.0.0.0:8000/_docs/styleguide.html'
+					},
+					livereload: true
+				}
+			},
+			start: {
+				options: {
+					open: {
+						target: 'http://0.0.0.0:8000/_docs/index.html'
+					},
 					livereload: true
 				}
 			}
@@ -268,6 +293,16 @@ module.exports = function (grunt) {
 			options: {
 				config: ".jscs.json"
 			}
+		},
+
+
+		/**
+		* Clean
+		* https://github.com/gruntjs/grunt-contrib-clean
+		* Clean some files
+		*/
+		clean: {
+			icons: ['img/icons']
 		}
 	});
 
@@ -277,22 +312,24 @@ module.exports = function (grunt) {
 
 	/* ==========================================================================
 		Available tasks:
-		* grunt        : run jshint, uglify and sass:kickoff
-		* grunt watch  : run sass:kickoff, uglify and livereload
-		* grunt dev    : run jshint, uglify and sass:kickoff
-		* grunt deploy : run jshint, uglify, sass:kickoff and csso
-		* grunt jquery : build custom version of jquery
-		* grunt serve  : watch js & scss and run a local server
-		* grunt availabletasks : view all available tasks
+* grunt            : run jshint, uglify and sass:kickoff
+* grunt start      : run this before starting development
+* grunt watch      : run sass:kickoff, uglify and livereload
+* grunt dev        : run uglify, sass:kickoff & autoprefixer:dist
+* grunt deploy     : run jshint, uglify, sass:kickoff and csso
+* grunt jquery     : build custom version of jquery
+* grunt styleguide : watch js & scss, run a local server for editing the styleguide
+* grunt serve      : watch js & scss and run a local server
+* grunt icons      : generate the icons. uses svgmin and grunticon
+* grunt jscheck    : run jshint & jscs
+* grunt travis     : used by travis ci only
 		 ========================================================================== */
 
 	/**
 	 * GRUNT * Default task
-	 * run jshint, uglify and sass:kickoff
+	 * run uglify, sass:kickoff and autoprefixer
 	 */
-	// Default task
 	grunt.registerTask('default', [
-		'jshint',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:dist'
@@ -300,8 +337,24 @@ module.exports = function (grunt) {
 
 
 	/**
+	* GRUNT START * Run this to
+	* run jquery builder, uglify, sass and autoprefixer
+	*/
+	grunt.registerTask('start', [
+		'jquery',
+		'uglify',
+		'sass:kickoff',
+		'sass:styleguide',
+		'autoprefixer:dist',
+		'autoprefixer:styleguide',
+		'connect:start',
+		'watch'
+	]);
+
+
+	/**
 	 * GRUNT DEV * A task for development
-	 * run jshint, uglify and sass:kickoff
+	 * run uglify, sass:kickoff & autoprefixer:dist
 	 */
 	grunt.registerTask('dev', [
 		'uglify',
@@ -311,9 +364,9 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT DEPLOY * A task for your production environment
-	 * run jshint, uglify and sass:production
-	 */
+	* GRUNT DEPLOY * A task for your production environment
+	* run uglify, sass:kickoff, autoprefixer:dist and csso
+	*/
 	grunt.registerTask('deploy', [
 		'uglify',
 		'sass:kickoff',
@@ -323,23 +376,55 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT SERVE * A task for for a static server with a watch
-	 * run connect and watch
+	 * GRUNT STYLEGUIDE * A task for the styleguide
+	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:dist, autoprefixer:styleguide, connect:styleguide & watch
 	 */
-	grunt.registerTask("serve", [
+	grunt.registerTask('styleguide', [
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
 		'autoprefixer:dist',
-		'connect',
+		'autoprefixer:styleguide',
+		'connect:styleguide',
 		'watch'
 	]);
 
+
 	/**
-	 * TODO:
-	 * Need task to update all grunt dependencies
-	 * Need task to download all bower dependencies
+	 * GRUNT SERVE * A task for for a static server with a watch
+	 * run connect and watch
 	 */
+	grunt.registerTask('serve', [
+		'uglify',
+		'sass:kickoff',
+		'sass:styleguide',
+		'autoprefixer:dist',
+		'connect:site',
+		'watch'
+	]);
+
+
+	/**
+	 * GRUNT ICONS * A task to create all icons using grunticon
+	 * run clean, svgmin and grunticon
+	 */
+	grunt.registerTask('icons', [
+		'clean:icons',
+		'svgmin',
+		'grunticon'
+	]);
+
+
+	/**
+	 * GRUNT JSCHECK * Check js for errors and style problems
+	 * run jshint, jscs
+	 */
+	// Default task
+	grunt.registerTask('jscheck', [
+		'jshint',
+		'jscs'
+	]);
+
 
 	//Travis CI to test build
 	grunt.registerTask('travis', [
@@ -348,4 +433,11 @@ module.exports = function (grunt) {
 		'sass:kickoff',
 		'autoprefixer:dist'
 	]);
+
+
+	/**
+	 * TODO:
+	 * Need task to update all grunt dependencies
+	 * Need task to download all bower dependencies
+	 */
 };
