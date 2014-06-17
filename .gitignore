@@ -4,7 +4,7 @@
 
 # SASS #
 ########
-.sass-cache/
+.sass-cache
 *.scssc
 
 
@@ -22,14 +22,14 @@ Thumbs.db
 # Random
 *.sublime-*
 
-node_modules/
+node_modules
+bower_components
 
 # Ignore these if we are building js/Sass on the server #
 #########################################################
 js/dist/*.js
 css/*.css
 **/*.map
-bower_components
 
 # Jekyll
 _site/
