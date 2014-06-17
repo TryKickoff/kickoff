@@ -26,6 +26,9 @@ module.exports = function (grunt) {
 				// <%=config.js.fileList%>
 				fileList : [
 					'js/helpers/console.js',
+					'bower_components/trak/dist/trak.js',
+					'bower_components/swiftclick/js/libs/swiftclick.js',
+					'bower_components/cookies-js/src/cookies.js',
 					'js/script.js'
 				]
 			}
@@ -303,6 +306,18 @@ module.exports = function (grunt) {
 		*/
 		clean: {
 			icons: ['img/icons']
+		},
+
+
+		/**
+		* Shell
+		* https://github.com/sindresorhus/grunt-shell
+		* Run shell commands
+		*/
+		shell: {
+			bowerinstall: {
+				command: 'bower install'
+			}
 		}
 	});
 
@@ -342,6 +357,7 @@ module.exports = function (grunt) {
 	*/
 	grunt.registerTask('start', [
 		'jquery',
+		'shell:bowerinstall',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',

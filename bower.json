@@ -19,5 +19,10 @@
     "node_modules",
     "bower_components",
     "app/components"
-  ]
+  ],
+  "dependencies": {
+    "swiftclick": "*",
+    "trak": "*",
+    "cookies-js": "*"
+  }
 }

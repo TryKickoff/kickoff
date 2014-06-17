@@ -39,6 +39,7 @@
     "grunt-grunticon": "~1.2.6",
     "grunt-jquery-builder": "~0.1.1",
     "grunt-jscs-checker": "~0.4.4",
+    "grunt-shell": "^0.7.0",
     "grunt-svgmin": "~0.4.0",
     "load-grunt-configs": "~0.4.0",
     "load-grunt-tasks": "~0.5.0"

@@ -26,8 +26,10 @@ node_modules/
 
 # Ignore these if we are building js/Sass on the server #
 #########################################################
-# dist/
-*.map
+js/dist/*.js
+css/*.css
+**/*.map
+bower_components
 
 # Jekyll
 _site/
