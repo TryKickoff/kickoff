@@ -15,9 +15,6 @@
    * Components
    ========================================================================== */
 /*
-   Settings
-   ========================================================================== */
-/*
     Typography
    ========================================================================== */
 /*
@@ -96,14 +93,13 @@
  * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
  */
 /* ==========================================================================
-   Utlity Mixins
+   Utility Mixins
    ========================================================================== */
 /* ==========================================================================
    Typography mixins
    ========================================================================== */
 /* HiDPI */
 /* FORMS */
-/* BROWSER FIXES */
 /* ==========================================================================
    Normalize - CSS reset
 
@@ -1731,18 +1727,18 @@ img, object, embed, video {
 	 </div>
 	 ========================================================================== */
 /*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-/* Setup grid defaults */
-/* Column Padding */
-/*
 	 Import Grid helpers and mixins
 	 ========================================================================== */
 /* ==========================================================================
    Choreographic Grid helpers
    ========================================================================== */
+/*
+	 Grid Setup Defaults
+	 * Choose your grid options.
+	 ** THESE WILL BE OVERRIDDEN BY THE SETTINGS IN _variables.scss **
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
 /*
    Grid column mixin
    ========================================================================== */
@@ -2269,4 +2265,3 @@ h1.typeSpecimen:after {
 p.typeSpecimen:after {
   content: 'Font stack: "Helvetica Neue", Helvetica, Arial, sans-serif';
 }
-/*# sourceMappingURL=styleguide.css.map */

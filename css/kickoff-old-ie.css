@@ -19,9 +19,6 @@
    * Components
    ========================================================================== */
 /*
-   Settings
-   ========================================================================== */
-/*
     Typography
    ========================================================================== */
 /*
@@ -105,14 +102,13 @@
  * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
  */
 /* ==========================================================================
-   Utlity Mixins
+   Utility Mixins
    ========================================================================== */
 /* ==========================================================================
    Typography mixins
    ========================================================================== */
 /* HiDPI */
 /* FORMS */
-/* BROWSER FIXES */
 /*
    CSS Reset
    ========================================================================== */
@@ -1301,6 +1297,26 @@ textarea:focus:required:invalid:focus {
 }
 
 /*
+   Icons
+   ========================================================================== */
+[class^="icon-"], [class*=" icon-"] {
+  speak: none;
+}
+
+.icon-large {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: top;
+}
+
+/*
 	Embedded content
 	========================================================================== */
 img {
@@ -1741,6 +1757,37 @@ pre code {
 }
 
 /*
+	Wells
+
+	Use the well as a simple effect on an element to give it an inset effect
+	<div class="well"></div>
+	========================================================================== */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well--large {
+  padding: 24px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.well--small {
+  padding: 9px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
    Grid System
    * Default: Choreographic Grid. Switch out for your own if you need
    * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
@@ -1761,18 +1808,18 @@ pre code {
 	 </div>
 	 ========================================================================== */
 /*
-	 Grid Setup
-	 * Choose your grid options.
-	 * These will be overridden by the settings in _variables.scss
-	 ========================================================================== */
-/* Setup grid defaults */
-/* Column Padding */
-/*
 	 Import Grid helpers and mixins
 	 ========================================================================== */
 /* ==========================================================================
    Choreographic Grid helpers
    ========================================================================== */
+/*
+	 Grid Setup Defaults
+	 * Choose your grid options.
+	 ** THESE WILL BE OVERRIDDEN BY THE SETTINGS IN _variables.scss **
+	 ========================================================================== */
+/* Setup grid defaults */
+/* Column Padding */
 /*
    Grid column mixin
    ========================================================================== */
