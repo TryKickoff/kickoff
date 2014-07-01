@@ -8,7 +8,10 @@ module.exports.tasks = {
 	watch: {
 		scss: {
 			files: ['scss/**/*.scss'],
-			tasks: ['sass:kickoff', 'autoprefixer:dist']
+			tasks: [
+				'sass:kickoff',
+				'autoprefixer:dist'
+			]
 		},
 
 		js: {
@@ -25,7 +28,11 @@ module.exports.tasks = {
 
 		grunticon : {
 			files: ['img/src/*.svg', 'img/src/*.png'],
-			tasks: ['clean:icons', 'svgmin', 'grunticon']
+			tasks: [
+				'clean:icons',
+				'svgmin',
+				'grunticon'
+			]
 		}
 	}
 }

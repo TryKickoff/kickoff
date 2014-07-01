@@ -72,8 +72,8 @@ module.exports = function (grunt) {
 	* run uglify, sass:kickoff and autoprefixer
 	*/
 	grunt.registerTask('default', [
-		'uglify',
-		'sass:kickoff',
+		'newer:uglify',
+		'newer:sass:kickoff',
 		'autoprefixer:dist'
 	]);
 
@@ -110,10 +110,10 @@ module.exports = function (grunt) {
 	* run uglify, sass:kickoff, autoprefixer:dist and csso
 	*/
 	grunt.registerTask('deploy', [
-		'uglify',
-		'sass:kickoff',
-		'autoprefixer:dist',
-		'csso'
+		'newer:uglify',
+		'newer:sass:kickoff',
+		'newer:autoprefixer:dist',
+		'newer:csso'
 	]);
 
 
