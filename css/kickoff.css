@@ -8,6 +8,9 @@
 /* ==========================================================================
    Colour palette (yeah we're British!)
    ========================================================================== */
+/*
+   Forms
+   ========================================================================== */
 /* ==========================================================================
    Variables
    * Settings
@@ -121,7 +124,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -375,7 +377,7 @@ ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0;
 }
 
-.unstyled, form ul, .tabs, .l-tabsContent,
+.unstyled, .tabs, .l-tabsContent,
 nav ul, nav ol {
   margin: 0;
   padding: 0;
@@ -501,8 +503,6 @@ dfn {
 mark {
   background: #f1c40f;
   padding: 2px 4px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -597,18 +597,11 @@ samp {
   /* [8] */
   text-align: center;
   background-color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 5px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
   text-decoration: none;
@@ -620,13 +613,7 @@ samp {
 .btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
   cursor: default;
   background-image: none;
-  zoom: 1;
-  filter: alpha(opacity=65);
   opacity: 0.65;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
 }
 
 .btn--large {
@@ -636,8 +623,6 @@ samp {
   height: 3em;
   padding-right: 2em;
   padding-left: 2em;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
@@ -649,8 +634,6 @@ samp {
   height: 1.5em;
   padding-right: 0.75em;
   padding-left: 0.75em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -658,8 +641,6 @@ samp {
 .btn--pill {
   padding-left: 1.5em;
   padding-right: 1.5em;
-  -webkit-border-radius: 100em;
-  -moz-border-radius: 100em;
   -o-border-radius: 100em;
   border-radius: 100em;
 }
@@ -704,8 +685,6 @@ input[type="button"].btn--block {
 .btn--link[disabled] {
   background-color: transparent;
   background-image: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
@@ -714,8 +693,6 @@ input[type="button"].btn--block {
   border-color: transparent;
   cursor: pointer;
   color: #3498db;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
@@ -747,8 +724,6 @@ input[type="button"].btn--block {
   background: #000;
   color: #3498db;
   text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -759,8 +734,6 @@ input[type="button"].btn--block {
 }
 .btn-close:hover {
   color: #fff;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
   -o-border-radius: 50px;
   border-radius: 50px;
 }
@@ -814,21 +787,21 @@ input[type="button"].btn--block {
    * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
    * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
    Usage:
-    <ul>
-    	<li class="form-controlGroup">
-    		<label for="name" class="form-controlGroup-label">Name</label>
-    		<div class="form-controlGroup-input">
-    			<input type="text" id="name" placeholder="Zander Martineau" />
+    <div>
+    	<div class="form-controlGroup">
+    		<label for="name" class="form-label">Name</label>
+    		<div class="form-controlGroup-inputWrapper">
+    			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
     		</div>
-    	</li>
-    </ul>
+    	</div>
+    </div>
    ========================================================================== */
-form {
+.form {
   margin: 0 0 28px;
 }
 
 /* Fieldset */
-fieldset {
+.form-fieldset {
   padding: 0;
   margin: 0;
   border: 0;
@@ -839,97 +812,65 @@ fieldset {
    ========================================================================== */
 .form-controlGroup {
   margin-top: 14px;
+  margin-bottom: 9px;
   list-style-type: none;
 }
-legend + .form-controlGroup {
+.form-legend + .form-controlGroup {
   margin-top: 28px;
   -webkit-margin-top-collapse: separate;
 }
 
-label,
-input,
-button,
-select,
-textarea {
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: normal;
-  vertical-align: baseline;
-  *vertical-align: middle;
-}
-
-input,
-button,
-select,
-textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-label {
+.form-label {
   display: block;
   margin-bottom: 5px;
-  color: #4d4d4d;
+  color: #444444;
   font-weight: bold;
 }
-label small {
+.form-label small {
   font-weight: normal;
-  color: #999999;
-}
-label.checkbox, label.radio {
-  font-weight: normal;
-  line-height: 1.4;
-}
-label input, label textarea, label select {
-  display: block;
+  color: #919191;
 }
 
-input,
-textarea,
-select,
-.fileWrapper {
+.form-input {
   display: block;
   width: 100%;
   height: 2.5em;
-  padding: 4px;
-  margin-bottom: 9px;
+  padding: 0.5em;
   font-size: 20px;
   font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  color: #4d4d4d;
+  color: #444444;
+  font-weight: normal;
+  vertical-align: baseline;
   background-color: white;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  -webkit-transition: border 200ms ease-in-out;
+     -moz-transition: border 200ms ease-in-out;
+          transition: border 200ms ease-in-out;
 }
-
-.textarea--uneditable {
-  width: auto;
-  height: auto;
+.form-input:focus {
+  border-color: #999999;
+  outline: 0;
+  outline: thin dotted \9;
 }
-
-input[type="image"], input[type="checkbox"], input[type="radio"], input[type="range"] {
+.form-input[type="image"], .form-input[type="checkbox"], .form-input[type="radio"], .form-input[type="range"] {
   width: auto;
   height: auto;
   padding: 0;
   margin: 3px 0;
   line-height: normal;
   cursor: pointer;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-input[type="image"] {
+.form-input[type="image"] {
   border: 0;
 }
-input[type="file"] {
+.form-input[type="file"] {
   width: auto;
   height: 28px;
   padding: initial;
@@ -937,33 +878,82 @@ input[type="file"] {
   border: initial;
   background-color: white;
   background-color: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
 }
-input[type="image"], input[type="range"], input[type="range"]:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-input[type="hidden"] {
+.form-input[type="hidden"] {
   display: none;
 }
-input[type="color"] {
-  height: 40px;
+.form-input[type="color"] {
   width: 40px;
+  height: 40px;
   overflow: hidden;
   padding: 2px;
 }
-input[type="password"] {
+.form-input[type="password"] {
   font-family: sans-serif;
 }
-input[type="range"] {
+.form-input[type="range"] {
   width: 100%;
 }
+.form-input > .radio:first-child, .form-input > .checkbox:first-child {
+  padding-top: 5px;
+}
+.form-input[disabled], .form-input[readonly] {
+  background-color: #e6e6e6;
+  border-color: #cccccc;
+  cursor: not-allowed;
+}
+.form-input:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+.form-input:focus:required:invalid:focus {
+  border-color: #e9322d;
+}
 
+.form-input--textarea {
+  height: auto;
+  resize: vertical;
+}
+
+.form-input--textarea--uneditable {
+  width: auto;
+  height: auto;
+}
+
+.form-input--select {
+  background-color: white;
+}
+.form-input--select[multiple], .form-input--select[size] {
+  height: auto;
+}
+
+.form-input--fileWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.form-input--fileWrapper::before {
+  content: 'Choose file...';
+}
+.form-input--fileWrapper::after {
+  content: 'Browse';
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  padding: 0.44em 1em 0;
+  background-color: #d9d9d9;
+}
+
+.form-input-file {
+  opacity: 0;
+  position: absolute;
+}
+
+/* ==========================================================================
+   Unedited code below here
+   ========================================================================== */
 button,
 input[type="button"],
 input[type="reset"],
@@ -973,19 +963,7 @@ input[type="submit"] {
   -webkit-appearance: button;
 }
 
-select {
-  background-color: white;
-}
-select[multiple], select[size] {
-  height: auto;
-}
-
-textarea {
-  height: auto;
-  resize: vertical;
-}
-
-legend {
+.form-legend {
   display: block;
   width: 100%;
   padding: 0;
@@ -993,192 +971,68 @@ legend {
   font-size: 30px;
   font-size: 1.5rem;
   line-height: 1.4;
-  color: #4d4d4d;
+  color: #444444;
   border: 0;
   border-bottom: 1px solid #eee;
   white-space: normal;
 }
-legend small {
+.form-legend small {
   font-size: 15px;
   font-size: 0.75rem;
   color: #b3b3b3;
 }
 
-.radio,
-.checkbox {
-  padding-left: 18px;
+/*
+	Checkboxes & Radios
+
+	Checkboxes:
+	<label class="control">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+	<label class="control control--inline">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+
+	Radios:
+	<label class="control">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		This is a radio
+	</label>
+	<label class="control control--inline">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
+		This is a radio
+	</label>
+   ========================================================================== */
+.control {
+  display: block;
 }
-.radio input[type="radio"], .radio input[type="checkbox"],
-.checkbox input[type="radio"],
-.checkbox input[type="checkbox"] {
-  margin-left: -18px;
-  margin-right: 5px;
+.control input[type="radio"],
+.control input[type="checkbox"] {
   vertical-align: middle;
+  margin-right: 0.5em;
+  margin-top: -0.1em;
   display: inline;
+  line-height: normal;
 }
 
 .control--inline {
   display: inline-block;
-  padding-top: 5px;
-  margin-bottom: 0;
   vertical-align: middle;
 }
 
 .control--inline + .control--inline {
-  margin-left: 10px;
-}
-
-.form-controlGroup-input > .radio:first-child, .form-controlGroup-input > .checkbox:first-child {
-  padding-top: 5px;
-}
-
-input,
-textarea,
-.fileWrapper {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-input:focus,
-textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(82, 168, 236, 0.6);
-  outline: 0;
-  outline: thin dotted \9;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-.input--mini {
-  width: 60px;
-}
-
-.input--small {
-  width: 90px;
-}
-
-.input--medium {
-  width: 150px;
-}
-
-.input--large {
-  width: 210px;
-}
-
-.input--xlarge {
-  width: 270px;
-}
-
-.input--xxlarge {
-  width: 530px;
-}
-
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
-
-.fileWrapper input {
-  width: 90%;
-  line-height: 0;
-}
-
-input[disabled], input[readonly],
-select[disabled],
-select[readonly],
-textarea[disabled],
-textarea[readonly] {
-  background-color: #b3b3b3;
-  border-color: #ddd;
-  cursor: not-allowed;
-}
-input:focus:required:invalid,
-select:focus:required:invalid,
-textarea:focus:required:invalid {
-  color: #b94a48;
-  border-color: #ee5f5b;
-}
-input:focus:required:invalid:focus,
-select:focus:required:invalid:focus,
-textarea:focus:required:invalid:focus {
-  border-color: #e9322d;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-  -moz-box-shadow: 0 0 6px #f8b9b7;
-  -o-box-shadow: 0 0 6px #f8b9b7;
-  box-shadow: 0 0 6px #f8b9b7;
-}
-
-/*
-   Both horizontal & vertical forms
-   ========================================================================== */
-.form--inline input, .form--inline textarea, .form--inline select, .form--inline .form-helpInline,
-.form--horizontal input,
-.form--horizontal textarea,
-.form--horizontal select,
-.form--horizontal .form-helpInline {
-  display: inline-block;
-  margin-bottom: 0;
-}
-.form--inline .hide,
-.form--horizontal .hide {
-  display: none;
-}
-
-/*
-   Inline & search forms specific styles
-   ========================================================================== */
-.form--inline > * {
-  margin-right: 10px;
-  vertical-align: top;
-}
-.form--inline > *:last-child {
-  margin-right: 0;
-}
-.form--inline label {
-  display: inline-block;
-}
-.form--inline .radio, .form--inline .checkbox {
-  padding-left: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-.form--inline .radio input[type="radio"], .form--inline .checkbox input[type="checkbox"] {
-  margin-left: 0;
-  margin-right: 3px;
+  margin-left: 1.5em;
 }
 
 /*
    Search input
    ========================================================================== */
-.form--search-input {
+.form-input--search {
   padding-left: 14px;
   padding-right: 14px;
   margin-bottom: 0;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -o-border-radius: 100px;
   border-radius: 100px;
 }
 
@@ -1210,67 +1064,46 @@ textarea:focus:required:invalid:focus {
 /*
    Form field feedback states
    ========================================================================== */
-.form-controlGroup.form-controlGroup--warning > label,
-.form-controlGroup.form-controlGroup--warning .help-block,
-.form-controlGroup.form-controlGroup--warning .help-inline {
-  color: #c09853;
+.form-controlGroup--warning .form-label,
+.form-controlGroup--warning .help-block,
+.form-controlGroup--warning .help-inline {
+  color: #dab10d;
 }
-.form-controlGroup.form-controlGroup--warning input,
-.form-controlGroup.form-controlGroup--warning select,
-.form-controlGroup.form-controlGroup--warning textarea {
-  color: #c09853;
-  border-color: #c09853;
+.form-controlGroup--warning .form-input {
+  color: #dab10d;
+  border-color: #dab10d;
+  background-color: #fcf1c6;
 }
-.form-controlGroup.form-controlGroup--warning input:focus,
-.form-controlGroup.form-controlGroup--warning select:focus,
-.form-controlGroup.form-controlGroup--warning textarea:focus {
-  border-color: #a47e3c;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
-  -o-box-shadow: 0 0 6px #dbc59e;
-  box-shadow: 0 0 6px #dbc59e;
+.form-controlGroup--warning .form-input:focus {
+  border-color: #aa8a0a;
 }
 
-.form-controlGroup.form-controlGroup--error > label,
-.form-controlGroup.form-controlGroup--error .help-block,
-.form-controlGroup.form-controlGroup--error .help-inline {
-  color: #b94a48;
+.form-controlGroup--error .form-label,
+.form-controlGroup--error .help-block,
+.form-controlGroup--error .help-inline {
+  color: #e43725;
 }
-.form-controlGroup.form-controlGroup--error input,
-.form-controlGroup.form-controlGroup--error select,
-.form-controlGroup.form-controlGroup--error textarea {
-  color: #b94a48;
-  border-color: #b94a48;
+.form-controlGroup--error .form-input {
+  color: #e43725;
+  border-color: #e43725;
+  background-color: #fceae9;
 }
-.form-controlGroup.form-controlGroup--error input:focus,
-.form-controlGroup.form-controlGroup--error select:focus,
-.form-controlGroup.form-controlGroup--error textarea:focus {
-  border-color: #953b39;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  -o-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
+.form-controlGroup--error .form-input:focus {
+  border-color: #bf2718;
 }
 
-.form-controlGroup.form-controlGroup--success > label,
-.form-controlGroup.form-controlGroup--success .help-block,
-.form-controlGroup.form-controlGroup--success .help-inline {
-  color: #468847;
+.form-controlGroup--success .form-label,
+.form-controlGroup--success .help-block,
+.form-controlGroup--success .help-inline {
+  color: #2ecc71;
 }
-.form-controlGroup.form-controlGroup--success input,
-.form-controlGroup.form-controlGroup--success select,
-.form-controlGroup.form-controlGroup--success textarea {
-  color: #468847;
-  border-color: #468847;
+.form-controlGroup--success .form-input {
+  color: #2ecc71;
+  border-color: #2ecc71;
+  background-color: #def8e9;
 }
-.form-controlGroup.form-controlGroup--success input:focus,
-.form-controlGroup.form-controlGroup--success select:focus,
-.form-controlGroup.form-controlGroup--success textarea:focus {
-  border-color: #356635;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
-  -o-box-shadow: 0 0 6px #7aba7b;
-  box-shadow: 0 0 6px #7aba7b;
+.form-controlGroup--success .form-input:focus {
+  border-color: #25a25a;
 }
 
 /*
@@ -1291,7 +1124,7 @@ textarea:focus:required:invalid:focus {
 
 .form-helpBlock,
 .form-helpInline {
-  color: #7f8c8d;
+  color: #95a5a6;
 }
 
 .form-helpBlock {
@@ -1323,19 +1156,19 @@ textarea:focus:required:invalid:focus {
   .form--horizontal .form-controlGroup:after {
     clear: both;
   }
-  .form--horizontal .form-controlGroup-label {
+  .form--horizontal .form-label {
     float: left;
     width: 140px;
     padding-top: 5px;
     text-align: right;
   }
-  .form--horizontal .form-controlGroup-input {
+  .form--horizontal .form-controlGroup-inputWrapper {
     margin-left: 160px;
   }
-  .form--horizontal .form-controlGroup-input:first-child {
+  .form--horizontal .form-controlGroup-inputWrapper:first-child {
     *padding-left: 160px;
   }
-  .form--horizontal .form-controlGroup .fileWrapper {
+  .form--horizontal .form-controlGroup .form-input--fileWrapper {
     margin-left: 0;
   }
   .form--horizontal .form-helpBlock {
@@ -1513,28 +1346,20 @@ img, object, embed, video {
   background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .well--large {
   padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
 
 .well--small {
   padding: 9px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -1648,7 +1473,7 @@ img, object, embed, video {
 .tabs {
   zoom: 1;
   margin-bottom: 28px;
-  border-bottom: 2px solid #1abc9c;
+  border-bottom: 2px solid #2ecc71;
 }
 .tabs:before, .tabs:after {
   display: table;
@@ -1673,14 +1498,12 @@ img, object, embed, video {
 }
 .tabs a {
   background-color: #95a5a6;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
   color: #fff;
 }
 .tabs a.is-active {
-  background-color: #1abc9c;
+  background-color: #2ecc71;
 }
 
 .l-tabsContent > li {
@@ -1730,8 +1553,6 @@ table {
   border-left: 0;
   border-collapse: separate;
   *border-collapse: collapsed;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
 }
@@ -1742,26 +1563,18 @@ table {
   border-top: 0;
 }
 .table--bordered thead:first-child tr:first-child th:first-child, .table--bordered tbody:first-child tr:first-child td:first-child {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
 .table--bordered thead:first-child tr:first-child th:last-child, .table--bordered tbody:first-child tr:first-child td:last-child {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
 .table--bordered thead:last-child tr:last-child th:first-child, .table--bordered tbody:last-child tr:last-child td:first-child {
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
   -o-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
 .table--bordered thead:last-child tr:last-child th:last-child, .table--bordered tbody:last-child tr:last-child td:last-child {
-  -webkit-border-radius: 0 0 4px 0;
-  -moz-border-radius: 0 0 4px 0;
   -o-border-radius: 0 0 4px 0;
   border-radius: 0 0 4px 0;
 }
@@ -1785,11 +1598,10 @@ pre {
   font-size: 13px;
   font-size: 0.65rem;
   color: #dd1144;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  tab-size: 3;
+  -moz-tab-size: 3;
+       tab-size: 3;
 }
 
 code {
@@ -1807,8 +1619,6 @@ pre {
   background-color: #f7f7f9;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
   white-space: pre;
@@ -1844,28 +1654,20 @@ pre code {
   background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .well--large {
   padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
 
 .well--small {
   padding: 9px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
@@ -1969,7 +1771,6 @@ pre code {
     min-height: 1px;
     position: relative;
     clear: none;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
@@ -2172,7 +1973,6 @@ body {
 @-ms-viewport {
   width: device-width;
 }
-
 * {
   -webkit-tap-highlight-color: #3498db !important;
 }
@@ -2185,7 +1985,7 @@ textarea[contenteditable] {
 @media screen and (max-width: 400px) {
   @-ms-viewport {
     width: 320px;
-}
+  }
 }
 /* Print styles */
 /* ==========================================================================
@@ -2242,8 +2042,7 @@ textarea[contenteditable] {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p, h2, h3 {
     orphans: 3;
     widows: 3;
