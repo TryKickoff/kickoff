@@ -36,7 +36,193 @@
 		<!--  === Main content ===  -->
 		<!--  ====================  -->
 		<div class="g-container" role="main">
+			<div class="g-row">
+				<div class="g-span12 g-col">
 
+
+					<form action="#" class="form">
+						<fieldset class="form-fieldset">
+							<legend class="form-legend">Your form</legend>
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4">
+									<label for="text" class="form-label">Text</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="email" class="form-label">Email</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="password" class="form-label">Password</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" />
+									</div>
+								</div>
+							</div>
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--success">
+									<label for="text" class="form-label">Text (Success)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--error">
+									<label for="email" class="form-label">Email (Error)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--warning">
+									<label for="password" class="form-label">Password (Warning)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" value="A value" />
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="form-controlGroup">
+									<label for="comments" class="form-label">Textarea</label>
+									<div class="form-controlGroup-inputWrapper">
+										<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="text" class="form-label">Disabled Text</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" disabled/>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="file" class="form-label">File upload <br>
+										<small>Firefox uses the <code>size</code> attribute to determine width.</small>
+									</label>
+
+									<div class="form-controlGroup-inputWrapper">
+										<label class="form-input form-input--fileWrapper">
+											<input type="file" id="file" accept="image/*" size="14" class="form-input-file" />
+										</label>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="comments" class="form-label">Checkboxes</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="checkbox" value="check1">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check2">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check3" disabled>
+											This is a checkbox
+										</label>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="comments" class="form-label">Inline Checkboxes</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control control--inline">
+											<input type="checkbox" value="check1">
+											This is a checkbox
+										</label>
+										<label class="control control--inline">
+											<input type="checkbox" value="check2">
+											This is a checkbox
+										</label>
+										<label class="control control--inline">
+											<input type="checkbox" value="check3" disabled>
+											This is a checkbox
+										</label>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="comments" class="form-label">Radio buttons</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											This is a radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											This is another radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+											This is another radio
+										</label>
+									</div>
+								</div>
+								<div class="form-controlGroup">
+									<label for="comments" class="form-label">Inline radio buttons</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control control--inline">
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											This is a radio
+										</label>
+										<label class="control control--inline">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											This is another radio
+										</label>
+										<label class="control control--inline">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+											This is another radio
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Choice</label>
+									<div class="form-controlGroup-inputWrapper">
+										<select id="choice" class="form-input form-input--select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Choice (mulitple)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<select id="choicemulitple" multiple class="form-input form-input--select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+								<div class="form-controlGroup">
+									<label for="search" class="form-label">Search</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="search" id="search" placeholder="Zander Martineau" class="form-input form-input--search">
+									</div>
+								</div>
+							</div>
+
+						</fieldset>
+
+						<div class="form-actions text_centre">
+							<input type="submit" value="Submit" class="btn btn--primary" />
+							<input type="reset" class="btn" value="Cancel" />
+						</div>
+
+					</form>
+
+				</div>
+			</div>
 		</div>
 
 
