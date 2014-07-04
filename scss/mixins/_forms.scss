@@ -1,20 +1,19 @@
 // Mixin for form field states
-@mixin formFieldState($color-text: $color-text, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
+@mixin formFieldState($color) {
 	// Set the text color
-	> label,
+	.form-label,
 	.help-block,
 	.help-inline {
-		color: $color-text;
+		color: $color;
 	}
-	// Style inputs accordingly
-	input,
-	select,
-	textarea {
-		color: $color-text;
-		border-color: $borderColor;
+
+	.form-input {
+		color: $color;
+		border-color: $color;
+		background-color: lighten($color, 43%);
+
 		&:focus {
-		border-color: darken($borderColor, 10%);
-		@include box-shadow(0 0 6px lighten($borderColor, 20%));
+			border-color: darken($color, 10%);
 		}
 	}
 }
