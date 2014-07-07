@@ -38,8 +38,6 @@
 		<div class="g-container" role="main">
 			<div class="g-row">
 				<div class="g-span12 g-col">
-
-
 					<form action="#" class="form">
 						<fieldset class="form-fieldset">
 							<legend class="form-legend">Your form</legend>
@@ -63,6 +61,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="g-row">
 								<div class="form-controlGroup g-col g-span4 form-controlGroup--success">
 									<label for="text" class="form-label">Text (Success)</label>
@@ -84,31 +83,31 @@
 								</div>
 							</div>
 
-							<div>
-								<div class="form-controlGroup">
-									<label for="comments" class="form-label">Textarea</label>
-									<div class="form-controlGroup-inputWrapper">
-										<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
-									</div>
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Textarea</label>
+								<div class="form-controlGroup-inputWrapper">
+									<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
 								</div>
-								<div class="form-controlGroup">
-									<label for="text" class="form-label">Disabled Text</label>
-									<div class="form-controlGroup-inputWrapper">
-										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" disabled/>
-									</div>
+							</div>
+							<div class="form-controlGroup">
+								<label for="text" class="form-label">Disabled Text</label>
+								<div class="form-controlGroup-inputWrapper">
+									<input type="text" id="text" placeholder="Zander Martineau" class="form-input" disabled/>
 								</div>
-								<div class="form-controlGroup">
-									<label for="file" class="form-label">File upload <br>
-										<small>Firefox uses the <code>size</code> attribute to determine width.</small>
-									</label>
+							</div>
+							<div class="form-controlGroup">
+								<label for="file" class="form-label">File upload <br>
+									<small>Firefox uses the <code>size</code> attribute to determine width.</small>
+								</label>
 
-									<div class="form-controlGroup-inputWrapper">
-										<label class="form-input form-input--fileWrapper">
-											<input type="file" id="file" accept="image/*" size="14" class="form-input-file" />
-										</label>
-									</div>
+								<div class="form-controlGroup-inputWrapper">
+									<label class="form-input form-input--fileWrapper">
+										<input type="file" id="file" accept="image/*" size="14" class="form-input-file" />
+									</label>
 								</div>
-								<div class="form-controlGroup">
+							</div>
+							<div class="g-row">
+								<div class="form-controlGroup g-span6 g-col">
 									<label for="comments" class="form-label">Checkboxes</label>
 									<div class="form-controlGroup-inputWrapper">
 										<label class="control">
@@ -125,24 +124,8 @@
 										</label>
 									</div>
 								</div>
-								<div class="form-controlGroup">
-									<label for="comments" class="form-label">Inline Checkboxes</label>
-									<div class="form-controlGroup-inputWrapper">
-										<label class="control control--inline">
-											<input type="checkbox" value="check1">
-											This is a checkbox
-										</label>
-										<label class="control control--inline">
-											<input type="checkbox" value="check2">
-											This is a checkbox
-										</label>
-										<label class="control control--inline">
-											<input type="checkbox" value="check3" disabled>
-											This is a checkbox
-										</label>
-									</div>
-								</div>
-								<div class="form-controlGroup">
+
+								<div class="form-controlGroup g-span6 g-col">
 									<label for="comments" class="form-label">Radio buttons</label>
 									<div class="form-controlGroup-inputWrapper">
 										<label class="control">
@@ -159,24 +142,44 @@
 										</label>
 									</div>
 								</div>
-								<div class="form-controlGroup">
-									<label for="comments" class="form-label">Inline radio buttons</label>
-									<div class="form-controlGroup-inputWrapper">
-										<label class="control control--inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-											This is a radio
-										</label>
-										<label class="control control--inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-											This is another radio
-										</label>
-										<label class="control control--inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
-											This is another radio
-										</label>
-									</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Inline Checkboxes</label>
+								<div class="form-controlGroup-inputWrapper">
+									<label class="control control--inline">
+										<input type="checkbox" value="check1">
+										This is a checkbox
+									</label>
+									<label class="control control--inline">
+										<input type="checkbox" value="check2">
+										This is a checkbox
+									</label>
+									<label class="control control--inline">
+										<input type="checkbox" value="check3" disabled>
+										This is a checkbox
+									</label>
 								</div>
 							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Inline radio buttons</label>
+								<div class="form-controlGroup-inputWrapper">
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										This is a radio
+									</label>
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										This is another radio
+									</label>
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+										This is another radio
+									</label>
+								</div>
+							</div>
+
 							<div class="g-row">
 								<div class="form-controlGroup g-col g-span6">
 									<label for="choice" class="form-label">Choice</label>
@@ -204,11 +207,10 @@
 								</div>
 							</div>
 
-								<div class="form-controlGroup">
-									<label for="search" class="form-label">Search</label>
-									<div class="form-controlGroup-inputWrapper">
-										<input type="search" id="search" placeholder="Zander Martineau" class="form-input form-input--search">
-									</div>
+							<div class="form-controlGroup">
+								<label for="search" class="form-label">Search</label>
+								<div class="form-controlGroup-inputWrapper">
+									<input type="search" id="search" placeholder="Zander Martineau" class="form-input form-input--search">
 								</div>
 							</div>
 
