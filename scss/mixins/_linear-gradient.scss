@@ -1,8 +1,9 @@
-/* ==========================================================================
-   Linear Gradient
-   Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
-   ========================================================================== */
+/**
+ * Linear Gradient
+ * Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+ */
 @mixin linear-gradient($fromColor, $toColor, $direction: vertical, $ie: false) {
+	@warn "DEPRECATION: If you are using autoprefixer there is no need for this mixin, this will be removed in the next version of Kickoff.";
 	// Set default vars for vertical gradient
 	$from      : top;
 	$to        : bottom;
