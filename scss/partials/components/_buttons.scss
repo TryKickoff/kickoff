@@ -36,10 +36,21 @@
 	text-align: center;
 
 	// You may want to change this
-	background-color: $btn-background;
+	background-color: $btn-default-bg;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
 
 	border-radius: 5px;
 	user-select: none;
+
+	&:hover,
+	&:active {
+		background-color: $btn-default-bg-highlight;
+	}
 
 	&,
 	&:hover,
@@ -52,7 +63,7 @@
 	&:active,
 	&:focus{
 		outline:none;
-		box-shadow:0 0 5px rgba(0, 0, 0, 0.5) inset;
+		// box-shadow:0 0 5px rgba(0, 0, 0, 0.5) inset;
 	}
 
 	// Disabled state
@@ -61,6 +72,23 @@
 		cursor: default;
 		background-image: none;
 		opacity: 0.65;
+	}
+}
+
+// Set the backgrounds
+// -------------------------
+.btn--primary {
+	background-color: $btn-primary-bg;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $btn-primary-bg-highlight;
 	}
 }
 
@@ -124,18 +152,6 @@ input[type="button"] {
 	height:auto;
 	padding-right:0.5em;
 	padding-left: 0.5em;
-}
-
-// Set the backgrounds
-// -------------------------
-.btn--primary {
-	background-color: $btn-primary-background;
-	color: #fff !important;
-	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-
-	&:hover{
-		background-color: $btn-primary-background-highlight;
-	}
 }
 
 // Link buttons
