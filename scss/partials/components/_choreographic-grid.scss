@@ -159,7 +159,7 @@
 	// Offset Columns
 	@if $usingOffsetcolumns == true {
 		@for $i from 1 to $gridColumnCount {
-			.g-row > .g-offset1 {
+			.g-row > .g-offset#{$i} {
 				@include offset($i);
 				&:first-child {
 					@include offsetFirstChild($i);
