@@ -1,23 +1,17 @@
 /* ==========================================================================
-   Utilities
-   Non-semantic helper classes
-   ========================================================================== */
+	 Utilities
+	 Non-semantic helper classes
+	 ========================================================================== */
 
 /**
  * Clearfix
+ * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix {
-	zoom: 1;
-
-	&:before,
-	&:after {
-		display: table;
-		content: " ";
-	}
-	&:after {
-		clear: both;
-	}
+.clearfix::after {
+	content:"";
+	display:table;
+	clear:both;
 }
 
 
@@ -80,8 +74,8 @@
 
 
 /* ==========================================================================
-   Responsive Utilities
-   ========================================================================== */
+	 Responsive Utilities
+	 ========================================================================== */
 
 // IE10 Metro responsive
 // Required for Windows 8 Metro split-screen snapping with IE10
