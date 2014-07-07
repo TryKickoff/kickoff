@@ -48,7 +48,7 @@ body {
 	// font-smooth:always;
 
 	// 2.
-	// @include opacity(99);
+	// opacity: 0.99;
 }
 
 /*
@@ -332,7 +332,7 @@ dfn {
 mark {
 	background: $yellow;
 	padding: 2px 4px;
-	@include border-radius(3px);
+	border-radius: 3px;
 }
 
 // Prevents sub and sup affecting line-height in all browsers
