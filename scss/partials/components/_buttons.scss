@@ -1,24 +1,21 @@
-// ====================
-// === BUTTONS.scss ===
-// ====================
-// Based on csswizardry.com/beautons
-//
-
-//////////////////////
-// Base button styles.
-//
-//  1. Allow us to better style box model properties.
-//  2. Line different sized buttons up a little nicer.
-//  3. Stop buttons wrapping and looking broken.
-//  4. Make buttons inherit font styles.
-//  5. Force all elements using beautons to appear clickable.
-//  6. Normalise box model styles.
-//  7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
-//     there is 1em of space above and below that text. We therefore apply 1em
-//     of space to the left and right, as padding, to keep consistent spacing.
-//  8. Fixes odd inner spacing in IE7.
-//  9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
-// 10. Prevents from inheriting default anchor styles.
+/**
+ * Buttons
+ * Based on csswizardry.com/beautons
+ *
+ * Base button styles:
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Fixes odd inner spacing in IE7.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ *10. Prevents from inheriting default anchor styles.
+ */
 
 .btn {
 	display:inline-block;       /* [1] */

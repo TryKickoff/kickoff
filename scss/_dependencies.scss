@@ -1,49 +1,50 @@
-/* ==========================================================================
-   Site dependencies
-   ========================================================================== */
+/**
+ * Site dependencies
+ */
 
-/*
-   Core variables
-   * Edit your color palette and app vars before your begin
-   ========================================================================== */
-@import "colour-palette";
+/**
+ * Core variables
+ * Edit your color palette and app vars before your begin
+ */
+@import "color-palette";
 @import "variables";
 
 
 /*
-   Mixins, helpers and functions
-   * Most CSS3 vendor prefixed items have a mixin.
-   * See mixins/css3.scss for the full list
-   ========================================================================== */
+ * Mixins, helpers and functions
+ * Most CSS3 vendor prefixed items have a mixin,
+ * but we should not need them if autoprefixer is being used
+ * See mixins/css3.scss for the full list
+ */
 @import "functions/functions";
 @import "mixins/mixins";
 
 
-/*
-   CSS Reset
-   ========================================================================== */
-@import "normalize"; // CSS reset
+/**
+ * CSS Reset
+ */
+@import "normalize";
 
 
-/*
-   Global typography styles
-   ========================================================================== */
+/**
+ * Global typography styles
+ */
 @import "typography";
 
 
-/* ==========================================================================
-   Components:
-   * Buttons
-   * Lists
-   * Forms
-   * Embedded content
-   * Media Object
-   * Wells
-   * Block grids
-   * Tabs
-   * Tables
-   * Code
-   ========================================================================== */
+/**
+ * Components:
+ * Buttons
+ * Lists
+ * Forms
+ * Embedded content
+ * Media Object
+ * Wells
+ * Block grids
+ * Tabs
+ * Tables
+ * Code
+ */
 @import "partials/components/buttons";
 @import "partials/components/lists";
 @import "partials/components/forms";
@@ -63,15 +64,15 @@
 
 /**
  * Grid System
-   * Default: Choreographic Grid. Switch out for your own if you need
-   * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
+ * Default: Choreographic Grid. Switch out for your own if you need
+ * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
  */
 @import "partials/components/choreographic-grid";
 
 
-/*
-   Your app styles
-   ========================================================================== */
+/**
+ * Your app styles
+ */
 @import "global";
 @import "partials/masthead";
 @import "partials/footer";
@@ -81,11 +82,14 @@
 //@import "views/contact";
 
 
-/*
-   Utility classes
-   * Has to be last to override when necessary
-   ========================================================================== */
+/**
+ * Utility classes
+ * Has to be last to override when necessary
+ */
 @import "helper-classes";
 
-/* Print styles */
+
+/**
+ * Print styles
+ */
 @import "print";
