@@ -1,0 +1,10 @@
+::-webkit-scrollbar {
+	width: 10px;
+	margin: 10px 10px 10px 0;
+	background-color: darken($color-bg, 10%);
+}
+::-webkit-scrollbar-thumb {
+	background: darken($color-bg, 40%);
+	cursor: pointer;
+	border-radius: 10px;
+}

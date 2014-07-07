@@ -58,13 +58,14 @@
 @import "partials/components/code";
 @import "partials/components/wells";
 @import "partials/components/skip-navigation";
+@import "partials/components/scrollbars";
 
 
-/*
-   Grid System
+/**
+ * Grid System
    * Default: Choreographic Grid. Switch out for your own if you need
    * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
-   ========================================================================== */
+ */
 @import "partials/components/choreographic-grid";
 
 
