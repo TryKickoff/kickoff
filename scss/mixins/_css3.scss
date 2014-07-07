@@ -34,6 +34,7 @@
 // Opacity
 // @include opacity(50);
 @mixin opacity($opacity: 100) {
+	@warn "DEPRECATION: If you are using autoprefixer there is no need for this mixin, this will be removed in the next version of Kickoff";
 	zoom: 1;
 	filter: alpha(opacity=$opacity);
 	opacity: $opacity / 100;
