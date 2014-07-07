@@ -36,6 +36,9 @@ body {
 	line-height: $base-leading;
 	color: $color-text;
 
+	// Add ligatures
+	font-feature-settings: "liga","dlig";
+
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
 	// =========================================
