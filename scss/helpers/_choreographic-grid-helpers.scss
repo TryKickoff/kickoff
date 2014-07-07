@@ -66,9 +66,11 @@ $usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive w
 	}
 }
 
-/*
-   Column width mixin
-   ========================================================================== */
+/**
+ * Column width mixin
+ * Usage:
+ * @include column(2);
+ */
 @mixin column($columnSpan: 1) {
 	width: gridColumnWidthCalc($columnSpan, true);
 }
