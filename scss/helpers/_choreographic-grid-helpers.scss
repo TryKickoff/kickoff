@@ -39,7 +39,7 @@ $usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive w
 	min-height: 1px;
 	position: relative;
 	clear: none;
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 
 	&:first-child {
 		margin-left: 0;
