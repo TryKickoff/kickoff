@@ -194,6 +194,21 @@
 }
 
 .form-input--fileWrapper {
+}
+.form-input-file {
+	display: inline-block;
+	width: 100%;
+	@include font-size($base-font-size);
+	margin: 0;
+	vertical-align: middle;
+	line-height: 1em;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.form-input--fileWrapper--styled {
 	position: relative;
 	overflow: hidden;
 
@@ -214,10 +229,11 @@
 
 		background-color: lighten($input-border, 5%);
 	}
-}
+
 .form-input-file {
 	opacity: 0;
 	position: absolute;
+}
 }
 
 
