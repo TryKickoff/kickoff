@@ -13,24 +13,40 @@
    * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
    * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
    Usage:
-    <div>
-    	<div class="form-controlGroup">
-    		<label for="name" class="form-label">Name</label>
-    		<div class="form-controlGroup-inputWrapper">
-    			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
-    		</div>
-    	</div>
-    </div>
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
    ========================================================================== */
 .form {
 	margin: 0 0 ($base-line-height + px);
 }
 
-/* Fieldset */
 .form-fieldset {
 	padding: 0;
 	margin: 0;
 	border: 0;
+}
+
+.form-legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: $base-line-height + px;
+	@include font-size($base-font-size * 1.5);
+	line-height: $base-leading;
+	color: $label-color;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	& small {
+		@include font-size($base-font-size * .75);
+		color: lighten(#000, 70%);
+	}
 }
 
 /* ==========================================================================
@@ -40,14 +56,13 @@
 	margin-top: ($base-line-height / 2 + px);
 	margin-bottom: 9px;
 	list-style-type: none;
-
-	// Legend collapses margin, so next element is responsible for spacing
-	.form-legend + & {
-		margin-top: $base-line-height + px;
-		-webkit-margin-top-collapse: separate;
-	}
 }
 
+// Legend collapses margin, so next element is responsible for spacing
+.form-legend + .form-controlGroup {
+	margin-top: $base-line-height + px;
+	-webkit-margin-top-collapse: separate;
+}
 
 // Identify controls by their labels
 .form-label {
@@ -62,8 +77,7 @@
 	}
 }
 
-
-// Move the options list down to align with labels
+// Any form inputs
 .form-input {
 	display: block;
 	width: 100%;
@@ -77,7 +91,7 @@
 	font-weight: normal;
 	vertical-align: baseline;
 
-	background-color: $input-background;
+	background-color: $input-bg;
 	border: 2px solid $input-border;
 	border-radius: 5px;
 
@@ -101,7 +115,7 @@
 		line-height: normal;
 		cursor: pointer;
 		border-radius: 0;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		// border: 0 \9; // IE9 and down
 	}
 
@@ -116,7 +130,7 @@
 		padding: initial;
 		line-height: initial;
 		border: initial;
-		background-color: $input-background;
+		background-color: $input-bg;
 		background-color: initial;
 	}
 
@@ -154,7 +168,7 @@
 	// Disabled State
 	&[disabled],
 	&[readonly] {
-		background-color: darken($input-background, 10%);
+		background-color: darken($input-bg, 10%);
 		border-color: $input-border;
 		cursor: not-allowed;
 	}
@@ -183,7 +197,7 @@
 // Set the height of select and file controls to match text inputs
 .form-input--select {
 	// Chrome on Linux and Mobile Safari need background-color
-	background-color: $input-background;
+	background-color: $input-bg;
 
 	// Make multiple select elements height not fixed
 	&[multiple],
@@ -230,10 +244,10 @@
 		background-color: lighten($input-border, 5%);
 	}
 
-.form-input-file {
-	opacity: 0;
-	position: absolute;
-}
+	.form-input-file {
+		opacity: 0;
+		position: absolute;
+	}
 }
 
 
@@ -332,9 +346,8 @@ input[type="submit"] {
 	padding: ($base-line-height - 1 + px) 20px ($base-line-height + px);
 	margin-top: $base-line-height + px;
 	margin-bottom: $base-line-height + px;
-	background-color: $form-actions-background;
+	background-color: $form-actions-bg;
 	border-top: 1px solid #ddd;
-	@include clearfix(); // Adding clearfix to allow for .pull-right button containers
 
 	& .btn {
 		margin-right: 10px;

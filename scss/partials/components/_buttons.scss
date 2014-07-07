@@ -77,7 +77,7 @@
 	height:     3em;
 	padding-right:2em;
 	padding-left: 2em;
-	@include border-radius(6px);
+	border-radius: 6px;
 }
 
 // Small
@@ -87,13 +87,13 @@
 	height:     1.5em;
 	padding-right:0.75em;
 	padding-left: 0.75em;
-	@include border-radius(3px);
+	border-radius: 3px;
 }
 
 .btn--pill {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
-	@include border-radius(100em);
+	border-radius: 100em;
 }
 
 // Block button
@@ -150,13 +150,12 @@ input[type="button"] {
 .btn--link[disabled] {
 	background-color: transparent;
 	background-image: none;
-	@include box-shadow(none);
 }
 .btn--link {
 	border-color: transparent;
 	cursor: pointer;
 	color: $color-link-default;
-	@include border-radius(0);
+	border-radius: 0;
 }
 .btn--link:hover,
 .btn--link:focus {
@@ -192,12 +191,12 @@ input[type="button"] {
 	background: #000;
 	color: $color-primary;
 	text-align: center;
-	@include border-radius(5px);
+	border-radius: 5px;
 	cursor: pointer;
-	@include user-select(none);
+	user-select: none;
 
 	&:hover {
 		color: #fff;
-		@include border-radius(50px);
+		border-radius: 50px;
 	}
 }

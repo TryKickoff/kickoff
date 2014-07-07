@@ -48,7 +48,7 @@
 	a {
 		background-color: $inactive-tab;
 		@extend .btn;
-		@include border-radius(4px 4px 0 0);
+		border-radius: 4px 4px 0 0;
 		color: #fff;
 
 		&.is-active {

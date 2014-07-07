@@ -10,7 +10,7 @@ table {
 	max-width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-	background-color: $table-background;
+	background-color: $table-bg;
 }
 
 // BASELINE STYLES
@@ -72,8 +72,7 @@ table {
 	border: 1px solid $table-border;
 	border-left: 0;
 	border-collapse: separate; // Done so we can round those corners!
-	*border-collapse: collapsed; // IE7 can't round corners anyway
-	@include border-radius(4px);
+	border-radius: 4px;
 	& th,
 	& td {
 		border-left: 1px solid $table-border;
@@ -93,20 +92,20 @@ table {
 	// For first th or td in the first row in the first thead or tbody
 	& thead:first-child tr:first-child th:first-child,
 	& tbody:first-child tr:first-child td:first-child {
-		@include border-radius(4px 0 0 0);
+		border-radius: 4px 0 0 0;
 	}
 	& thead:first-child tr:first-child th:last-child,
 	& tbody:first-child tr:first-child td:last-child {
-		@include border-radius(0 4px 0 0);
+		border-radius: 0 4px 0 0;
 	}
 	// For first th or td in the first row in the first thead or tbody
 	& thead:last-child tr:last-child th:first-child,
 	& tbody:last-child tr:last-child td:first-child {
-		@include border-radius(0 0 0 4px);
+		border-radius: 0 0 0 4px;
 	}
 	& thead:last-child tr:last-child th:last-child,
 	& tbody:last-child tr:last-child td:last-child {
-		@include border-radius(0 0 4px 0);
+		border-radius: 0 0 4px 0;
 	}
 }
 
@@ -120,7 +119,7 @@ table {
 		& tr:nth-child(odd) {
 			& td,
 			& th {
-				background-color: $table-background-accent;
+				background-color: $table-bg-accent;
 			}
 		}
 	}
@@ -134,7 +133,7 @@ table {
 	& tbody tr:hover {
 		& td,
 		& th {
-			background-color: $table-background-hover;
+			background-color: $table-bg-hover;
 		}
 	}
 }

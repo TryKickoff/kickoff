@@ -6,9 +6,9 @@
    ========================================================================== */
 
 *,
-*:before,
-*:after {
-	@include box-sizing(border-box);
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 // HTML5 display definitions
@@ -88,10 +88,8 @@ input {
 }
 
 // 1. Addresses appearance set to searchfield in Safari 5, Chrome
-// 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
 input[type="search"] {
 	-webkit-appearance: textfield; // 1
-	// @include box-sizing(content-box);
 }
 
 // Removes inner padding and search cancel button in S5, Chrome on OS X
