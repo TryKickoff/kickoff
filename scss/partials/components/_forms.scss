@@ -310,10 +310,7 @@ input[type="submit"] {
 .control--inline {
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.control--inline + .control--inline {
-	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 
