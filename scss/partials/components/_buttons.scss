@@ -48,7 +48,8 @@
 	user-select: none;
 
 	&:hover,
-	&:active {
+	&:active,
+	&:focus {
 		background-color: $btn-default-bg-highlight;
 	}
 
@@ -87,7 +88,8 @@
 	}
 
 	&:hover,
-	&:active {
+	&:active,
+	&:focus {
 		background-color: $btn-primary-bg-highlight;
 	}
 }
