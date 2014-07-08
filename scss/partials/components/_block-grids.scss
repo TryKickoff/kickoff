@@ -1,14 +1,14 @@
 /**
  * Block grids
- * These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
-
+ * These are suited for repeating blocks of content. See below for usage
+ *
  * Usage:
  * <ul class="l-blockGrid l-blockGrid--3up">
  *     <li></li>
  * </ul>
-
+ *
  * Mobile Usage:
- * <ul class="l-blockGrid l-blockGrid--3up l-blockGrid--3up--mobile">
+ * <ul class="l-blockGrid l-blockGrid--3up l-blockGrid--3up--narrow">
  *     <li></li>
  * </ul>
  */
@@ -17,25 +17,23 @@
 	list-style-type: none;
 	margin: 0;
 	@include clearfix;
-	background-color: red;
 
 	> li {
 		display: block;
 		height: auto;
-		background-color: #fff;
 
 		@if $gridColumnPadding > 0 {
 			padding: $gridColumnPadding + px;
 		}
 	}
 
+	// Narrow block-grid
 	@include respond-max($breakpoint-single-col) {
-		> li[class*="up--mobile"] {
+		> li[class*="up--narrow"] {
 			display: block;
 			height: auto;
 			float: left;
 		}
-		// Narrow block-grid
 		@for $i from 1 to $gridColumnCount + 1 {
 			&.l-blockGrid--#{$i}up--mobile > li {
 				width: percentage(1 / $i);
