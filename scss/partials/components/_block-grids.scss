@@ -22,8 +22,8 @@
 		display: block;
 		height: auto;
 
-		@if $gridColumnPadding > 0 {
-			padding: $gridColumnPadding + px;
+		@if $grid-column-padding > 0 {
+			padding: $grid-column-padding + px;
 		}
 	}
 
@@ -34,7 +34,7 @@
 			height: auto;
 			float: left;
 		}
-		@for $i from 1 to $gridColumnCount + 1 {
+		@for $i from 1 to $grid-column-count + 1 {
 			&.l-blockGrid--#{$i}up--mobile > li {
 				width: percentage(1 / $i);
 				display: block;
@@ -52,7 +52,7 @@
 		}
 
 		// Wide block-grid
-		@for $i from 1 to $gridColumnCount + 1 {
+		@for $i from 1 to $grid-column-count + 1 {
 			&.l-blockGrid--#{$i}up > li {
 				width: percentage(1 / $i);
 			}

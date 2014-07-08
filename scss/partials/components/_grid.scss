@@ -1,0 +1,125 @@
+/**
+  The Kickoff Grid
+  * Default grid styles
+  * Media queries
+  * Centred columns
+ */
+
+
+/*
+	 Basic Usage:
+	 <div class="g-row">
+			 <div class="g-col g-span4"></div>
+			 <div class="g-col g-span8"></div>
+	 </div>
+	 ========================================================================== */
+
+
+/* Import Grid helpers and mixins */
+@import "../../helpers/grid-helpers";
+
+
+/**
+ * Default grid styles
+ */
+.g-container {
+	padding-left: #{$grid-margin}px;
+	padding-right: #{$grid-margin}px;
+	width: 95%;
+	max-width: #{$grid-max-width}px;
+	margin: 0 auto;
+
+	.lt-ie9 & {
+		min-width: #{$grid-min-width}px;
+	}
+}
+
+.g-row {
+	width: 100%;
+	margin: 0 auto;
+	@include clearfix;
+
+	// Nested rows
+	.g-row {
+		min-width: 0;
+
+		@if $nested-column-padding == false {
+			.g-col {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.g-col {
+	@if $grid-column-padding > 0 {
+		padding: paddingCalc();
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
+		box-sizing: border-box;
+
+		@if $grid-gutter-width > 0 {
+			margin-left: gutterCalc();
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+
+		& + &:last-child { float: right; }
+		& + &.end { float: left; }
+	}
+}
+
+
+@include respond-min($breakpoint-single-col) {
+	// Create the relevant classes
+	@for $i from 1 to $grid-column-count + 1 {
+		.g-span#{$i} {
+			@include column($i);
+		}
+	}
+
+	/**
+	 * Offset columns
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#offset
+	 */
+	@if $using-offsetcolumns == true {
+		@for $i from 1 to $grid-column-count {
+			.g-row > .g-offset#{$i} {
+				@include offset($i);
+
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+
+	/**
+	 * Source ordering (push & pull)
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
+	 */
+	@if $using-push-pull-columns == true {
+		@for $i from 2 to $grid-column-count {
+			.g-row > .g-push#{$i} {
+				@include push($i);
+			}
+		}
+		@for $i from 2 to $grid-column-count {
+			.g-row > .g-pull#{$i} {
+				@include pull($i);
+			}
+		}
+	}
+}
+
+
+/**
+ * Centred columns
+ */
+.g-centered.g-col, .g-centred.g-col { float: none; margin: 0 auto; }

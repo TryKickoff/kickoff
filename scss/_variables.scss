@@ -70,21 +70,21 @@ $img-ui-path                  : "#{$img-path}/ui";
    ========================================================================== */
 
 // Setup grid defaults
-$gridColumnCount              : 12    ; // Total column count
-$gridGutterWidth              : 20    ; // [in pixels]
-$gridMaxWidth                 : 1000  ; // [in pixels]
-$gridMinWidth                 : 1000  ; // [in pixels] Minimum width for grid in <IE9
-$gridMargin                   : 0     ; // [in pixels] Space outside the grid
+$grid-column-count            : 12    ; // Total column count
+$grid-gutter-width            : 20    ; // [in pixels]
+$grid-max-width               : 1000  ; // [in pixels]
+$grid-min-width               : 1000  ; // [in pixels] Minimum width for grid in <IE9
+$grid-margin                  : 0     ; // [in pixels] Space outside the grid
 
 // Column Padding
-$gridColumnPadding            : 10    ; // [in pixels]
-$gridColumnPaddingUnit        : 'px'  ; // [in pixels or percent] Specify your unit of measurement for column padding
-$nestedColumnPadding          : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+$grid-column-padding          : 10    ; // [in pixels]
+$grid-column-padding-unit     : 'px'  ; // [in pixels or percent] Specify your unit of measurement for column padding
+$nested-column-padding        : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
 // Choose your grid options
-$usingPushPullColumns         : false ; // Allow columns to be pushed & pulled
-$usingOffsetcolumns           : false ; // Allow columns to be offset
-$usingSplitsAndShunts         : false ; // Use Splits & Shunts for responsive web design
+$using-push-pull-columns      : false ; // Allow columns to be pushed & pulled
+$using-offsetcolumns          : false ; // Allow columns to be offset
+$using-splits-and-shunts      : false ; // Use Splits & Shunts for responsive web design
 
 
 
