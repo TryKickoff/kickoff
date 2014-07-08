@@ -46,6 +46,7 @@
  * Code
  */
 @import "partials/components/buttons";
+@import "partials/components/choreographic-grid"; // See http://tmwagency.github.io/kickoff/docs/grid.html for more info
 @import "partials/components/lists";
 @import "partials/components/forms";
 @import "partials/components/icons";
@@ -62,12 +63,6 @@
 @import "partials/components/scrollbars";
 
 
-/**
- * Grid System
- * Default: Choreographic Grid. Switch out for your own if you need
- * See http://tmwagency.github.io/kickoff/docs/grid.html for more info
- */
-@import "partials/components/choreographic-grid";
 
 
 /**
