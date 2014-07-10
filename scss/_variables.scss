@@ -7,30 +7,32 @@
    * Grid setup
    * Colour palette
    * Components
-   ========================================================================== */
+ */
 
-/*
-    Typography
-   ========================================================================== */
-// Base sizes
-// Set this in pixels, the font-size mixin will convert to REMS
+/**
+ * Typography
+ * =================================
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
 $base-font-size                : 20;
-$h1-size                       : 36 !default; // .alpha
-$h2-size                       : 30 !default; // .beta
-$h3-size                       : 24 !default; // .gamma
-$h4-size                       : 20 !default; // .delta
-$h5-size                       : 16 !default; // .epsilon
-$h6-size                       : 14 !default; // .zeta
-
 $base-leading                  : 1.4;
-$base-line-height              : round($base-font-size * $base-leading);
+$base-line-height              : round($base-font-size * $base-leading); // 20 * 1.4
+$base-line-height-px           : $base-line-height * 1px;
+
+$h1-size                       : 36 !default;
+$h2-size                       : 30 !default;
+$h3-size                       : 24 !default;
+$h4-size                       : 20 !default;
+$h5-size                       : 16 !default;
+$h6-size                       : 14 !default;
 
 // Useful to set here when bold webfonts come as 400 font-weight.
 $bold-font-weight             : bold;
 
-/*
-   Font stacks
-   ========================================================================== */
+
+/* Font stacks */
 $sans-font-family             : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family            : Georgia, "Times New Roman", Times, serif;
 $mono-font-family             : Menlo, Monaco, "Courier New", monospace;
@@ -40,13 +42,15 @@ $alt-font-family              : $serif-font-family;
 
 $headings-font-family         : inherit; // empty to use Kickoff default $base-font-family
 $headings-font-weight         : bold;    // instead of browser default, bold
+$headings-line-height         : 1.1;
 
 
-/*
-   Breakpoints
+/**
+ *  Breakpoints
+ * =================================
    * There are no common breakpoints so these are just a suggestion
    * You'll need to define your own breakpoints to suit your design
-   ========================================================================== */
+ */
 $breakpoint-narrow            : 400;  // Set in px
 $breakpoint-mid               : 768;  // Set in px
 $breakpoint-wide              : 992;  // Set in px

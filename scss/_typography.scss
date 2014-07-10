@@ -1,35 +1,29 @@
-/* ==========================================================================
-   Typography
+/**
+ * Typography
+ * =================================
+ * Body text
+ * Base
+ * Paragraphs
+ * Headings
+ * Lists
+ * Quotes
+ * Links
+ * Helper classes
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ * Resources:
+ * http://www.gridlover.net/
+ * http://modularscale.com/
+ * http://lamb.cc/typograph/
+ *
+ */
 
-   * Body text
-   * Base
-   * Paragraphs
-   * Headings
-   * Lists
-   * Quotes
-   * Links
-   * Helper classes
-
-   Body font size, leadings etc have been set in _variables.scss.
-   The default typography has been built using gridlover.net with these settings:
-   * Body font size    : 16
-   * Body line height  : 1.4
-
-   Resources:
-   * http://www.gridlover.net/
-   * http://modularscale.com/
-   * http://lamb.cc/typograph/
-   ========================================================================== */
-
-// 1. Prevents iOS text size adjust after orientation change, without disabling user zoom
-// www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 html {
 	font-size: $base-font-size + px;
-	-webkit-text-size-adjust: 100%; /* 1 */
-	-ms-text-size-adjust: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
-// Body text
 body {
 	font-family: $base-font-family;
 	@include font-size($base-font-size);
@@ -51,14 +45,14 @@ body {
 	// opacity: 0.99;
 }
 
-/*
-   Paragraphs
-   ========================================================================== */
+/**
+ * Paragraphs
+ */
 p {
 	font-family: $base-font-family;
 	@include font-size($base-font-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height + px;
+	margin-bottom: $base-line-height-px;
 
 	// Measure - ideally about 65 chars per line
 	// =========================================
@@ -69,13 +63,14 @@ p {
 	// }
 }
 
-/*
-   Headings
-   ========================================================================== */
+/**
+ * Headings
+ */
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-family: $headings-font-family;
 	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 
 	& small {
@@ -88,13 +83,13 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1, .alpha {
 	@include font-size($h1-size);
 	margin-top: 0;
-	margin-bottom: ($base-line-height * 2) + px;
+	margin-bottom: $base-line-height-px * 2;
 }
 
 h2, .h2, .beta {
 	@include font-size($h2-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height + px;
+	margin-bottom: $base-line-height-px;
 }
 
 h3, .h3, .gamma {
@@ -129,15 +124,21 @@ h6, .h6, .zeta {
 * + h4, * + .h4, * + .delta,
 * + h5, * + .h5, * + .epsilon,
 * + h6, * + .h6, * + .zeta {
-	margin-top: $base-line-height + px;
+	margin-top: $base-line-height-px;
 }
 
-/*
-   Links
-   ========================================================================== */
+small {
+	font-size: 75%;
+}
+
+/**
+ * Links
+ */
 a {
-	color: $color-link-default;
-	text-decoration: none;
+	&, &:link {
+		color: $color-link-default;
+		text-decoration: none;
+	}
 
 	&:visited {
 		color: $color-link-visited;
@@ -154,22 +155,25 @@ a {
 }
 
 
-/*
-   Lists
-   ========================================================================== */
-// Default list styles
-ul { list-style-type: disc }
-ol { list-style-type: decimal }
+/**
+ * Lists
+ */
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
 
 // Unordered and Ordered lists
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($base-line-height + px) ($base-line-height + px);
+	margin: 0 0 $base-line-height-px $base-line-height-px;
 
 	& ul,
 	& ol {
-		margin-left: ($base-line-height * 2) + px;
+		margin-left: $base-line-height-px * 2;
 	}
 
 	& ul {
@@ -192,6 +196,9 @@ ul, ol {
 	}
 }
 
+/**
+ * Unstyled lists
+ */
 .unstyled,
 nav ul, nav ol {
 	margin: 0;
@@ -201,11 +208,11 @@ nav ul, nav ol {
 }
 
 
-/*
-   Definition lists
-   ========================================================================== */
+/**
+ * Definition lists
+ */
 dl {
-	margin-bottom: $base-line-height + px;
+	margin-bottom: $base-line-height-px;
 }
 
 dt {
@@ -222,7 +229,7 @@ dt {
 }
 
 dd {
-	margin-left: $base-line-height + px;
+	margin-left: $base-line-height-px;
 
 	.dl-horizontal & {
 		margin-left: 240px;
@@ -230,12 +237,12 @@ dd {
 }
 
 
-/*
-   Miscellaneous rules
-   ========================================================================== */
+/**
+ * Miscellaneous
+ */
 // Horizontal rules
 hr {
-	margin: ($base-line-height + px) 0;
+	margin: ($base-line-height-px) 0;
 	border: 0;
 	border-top: 1px solid $hr-border;
 	border-bottom: 1px solid #fff;
@@ -248,9 +255,6 @@ strong, b {
 em, i {
 	font-style: italic;
 }
-.muted {
-	color: lighten(#000, 70%);
-}
 
 // Abbreviations and acronyms
 abbr[title] {
@@ -262,12 +266,12 @@ abbr.initialism {
 	text-transform: uppercase;
 }
 
-/*
-   Blockquotes
-   ========================================================================== */
+/**
+ * Blockquotes
+ */
 blockquote {
 	padding-left: 10px;
-	margin: ($base-line-height + px);
+	margin: ($base-line-height-px);
 	border-left: 4px solid lighten(#000, 80%);
 
 	& p {
@@ -311,12 +315,8 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $base-line-height + px;
+	margin-bottom: $base-line-height-px;
 	font-style: normal;
-}
-
-small {
-	font-size: 75%;
 }
 
 cite {
@@ -352,9 +352,9 @@ samp {
 }
 
 
-/*
-   Utilities
-   ========================================================================== */
+/**
+ * Utilities
+ */
 .text-centre, .text-center { text-align: center;}
 .text-left { text-align: left;}
 .text-right { text-align: right;}
