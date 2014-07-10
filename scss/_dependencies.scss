@@ -4,6 +4,7 @@
 
 /**
  * Core variables
+ * =================================
  * Edit your color palette and app vars before your begin
  */
 @import "color-palette";
@@ -12,6 +13,7 @@
 
 /*
  * Mixins, helpers and functions
+ * =================================
  * Most CSS3 vendor prefixed items have a mixin,
  * but we should not need them if autoprefixer is being used
  * See mixins/css3.scss for the full list
@@ -20,30 +22,29 @@
 @import "mixins/mixins";
 
 
-/**
- * CSS Reset
- */
+/* CSS Reset  */
 @import "normalize";
 
-
-/**
- * Global typography styles
- */
+/* Global typography styles */
 @import "typography";
 
 
 /**
  * Components:
+ * =================================
  * Buttons
+ * Grid
  * Lists
  * Forms
  * Embedded content
  * Media Object
- * Wells
  * Block grids
+ * Fluid video
  * Tabs
  * Tables
  * Code
+ * Skip navigation
+ * Scrollbars
  */
 @import "partials/components/buttons";
 @import "partials/components/grid"; // See http://tmwagency.github.io/kickoff/docs/grid.html for more info
@@ -51,7 +52,6 @@
 @import "partials/components/forms";
 @import "partials/components/embedded-content";
 @import "partials/components/media-object";
-@import "partials/components/wells";
 @import "partials/components/fluid-video";
 @import "partials/components/block-grids";
 @import "partials/components/tabs";
@@ -63,20 +63,27 @@
 
 /**
  * Your app styles
+ * =================================
+ * Global styles
+ * Example partial for masthead & footer
+ * Icons - used in conjunction with grunticon
  */
 @import "global";
 @import "partials/masthead";
 @import "partials/footer";
 @import "partials/icons";
 
-/* Examples: */
+/**
+ * Views
+ * =================================
+ */
 //@import "views/home";
 //@import "views/contact";
 
 
 /**
- * Utility classes
- * Has to be last to override when necessary
+ * Helper/utility classes
+ * =================================
  */
 @import "helper-classes";
 
