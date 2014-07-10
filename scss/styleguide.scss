@@ -24,14 +24,14 @@
 
 
 // Override the grid
-$gridColumnCount              : 12    ;
-$gridGutterWidth              : 20    ;
-$gridMaxWidth                 : 1000  ;
-$gridMargin                   : 40    ;
-$gridColumnPadding            : 0     ;
-$gridColumnPaddingUnit        : 'px'  ;
-$nestedColumnPadding          : false ;
-@import "partials/components/choreographic-grid";
+$grid-column-count              : 12    ;
+$grid-gutter-width              : 20    ;
+$grid-max-width                 : 1000  ;
+$grid-margin                    : 40    ;
+$grid-column-padding            : 0     ;
+$grid-column-padding-unit       : 'px'  ;
+$nested-column-padding          : false ;
+@import "partials/components/grid";
 
 @import "global";
 @import "partials/masthead";
