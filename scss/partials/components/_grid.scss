@@ -122,4 +122,8 @@
 /**
  * Centred columns
  */
-.g-centered.g-col, .g-centred.g-col { float: none; margin: 0 auto; }
+.g-col.g-col--centered,
+.g-col.g-col--centred {
+	float: none;
+	margin: 0 auto;
+}
