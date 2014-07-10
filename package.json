@@ -36,7 +36,7 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csso": "~0.6.2",
-    "grunt-grunticon": "~1.2.8",
+    "grunt-grunticon": "~1.2.9",
     "grunt-jquery-builder": "~0.1.1",
     "grunt-jscs-checker": "~0.6.1",
     "grunt-newer": "~0.7.0",
