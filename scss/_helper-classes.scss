@@ -1,7 +1,7 @@
-/* ==========================================================================
-	 Utilities
-	 Non-semantic helper classes
-	 ========================================================================== */
+/**
+ * Utilities
+ * Non-semantic helper classes
+ */
 
 /**
  * Clearfix
@@ -65,17 +65,24 @@
 // Hide visually and from screenreaders, but maintain layout
 .is-invisible { visibility: hidden; }
 
-.l-floatLeft		{ float:left; }
-.l-floatRight		{ float:right; }
-.l-clear			{ clear:both; float:none; }
+.l-floatLeft {
+	float:left;
+}
+.l-floatRight {
+	float:right;
+}
+.l-clear {
+	clear:both;
+	float:none;
+}
 
 .l-mb0 { margin-bottom: 0 !important;}
 .l-mt0 { margin-top:    0 !important;}
 
 
-/* ==========================================================================
-	 Responsive Utilities
-	 ========================================================================== */
+/**
+ * Responsive Utilities
+ */
 
 // IE10 Metro responsive
 // Required for Windows 8 Metro split-screen snapping with IE10
