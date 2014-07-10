@@ -1,3 +1,7 @@
+/**
+ * Scrollbar styling (only in webkit)
+ */
+
 ::-webkit-scrollbar {
 	width: 10px;
 	background-color: darken($color-bg, 10%);

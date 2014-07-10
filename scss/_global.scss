@@ -1,25 +1,25 @@
-/* ==========================================================================
-   Global app/site styles
-   ========================================================================== */
+/**
+ * Global app/site styles
+ */
 body {
 	background-color: $color-bg;
 }
 
 
 
-/* ==========================================================================
-   Media queries for responsive design
-   ========================================================================== */
 
-/*
-   Retina media query
-   ========================================================================== */
+
+/**
+ * Retina media query
+ */
 @include hidpi() {
 
 }
 
 
-
+/**
+ * Media queries for responsive design
+ */
 // === $breakpoint-narrow> ===
 @include respond-min($breakpoint-narrow) {
 
