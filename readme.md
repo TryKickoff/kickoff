@@ -11,19 +11,25 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at labs@tmw
 ### Features
 
 * Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
-* Sass compilation uses autoprefixer to dynamically add vendor prefixes so you don't even have to think about it
-* Sass mixins for many CSS3 features including gradients, REMs with fallbacks
+* Sass compilation uses [autoprefixer]() to dynamically add vendor prefixes so you don't even have to think about it. We still have many Sass mixins for many CSS3 features including gradients, REMs with fallbacks
 * Starter content styles, including clean typography, lists, tables, etc
 * Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
 * Grunt used extensively to ease common development bottlenecks
- * Sass compilation using [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) although [grunt-sass](https://github.com/sindresorhus/grunt-sass) can be used a drop-in replacement but there are still some bugs; it is far quicker though..
+ * Sass compilation using [grunt-sass](https://github.com/sindresorhus/grunt-sass) although [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) can be used a drop-in replacement. grunt-sass is far quicker but may have one or two bugs..
  * Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
  * Simple server using [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
+ * SVG Icon generation using [grunticon](https://github.com/filamentgroup/grunticon)
 
+---
+## Browser Compatibility
+Kickoff has been tested in the following browsers:
+- Chrome
+- Safari
+- Firefox 3+
+- Opera 10+
+- Internet Explorer 8+
 
-### Browser support
-Simple: Internet Explorer 8+
-
+---
 ## Demos and documentation
 Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/) all demos and documentation for Kickoff.
 
