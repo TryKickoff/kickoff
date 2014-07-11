@@ -33,20 +33,21 @@ $h5-size                       : 16 !default;
 $h6-size                       : 14 !default;
 
 // Useful to set here when bold webfonts come as 400 font-weight.
-$bold-font-weight             : bold;
+$font-weight-bold             : bold;
 
 
 /* Font stacks */
-$sans-font-family             : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif-font-family            : Georgia, "Times New Roman", Times, serif;
-$mono-font-family             : Menlo, Monaco, "Courier New", monospace;
+$font-family-sans             : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif            : Georgia, "Times New Roman", Times, serif;
+$font-family-mono             : Menlo, Monaco, "Courier New", monospace;
 
-$base-font-family             : $sans-font-family;
-$alt-font-family              : $serif-font-family;
+// $font-family-base             : $font-family-sans;
+$font-family-base : 'Karla', sans-serif;
+$font-family-alt              : $font-family-serif;
 
-$headings-font-family         : inherit; // empty to use Kickoff default $base-font-family
-$headings-font-weight         : bold;    // instead of browser default, bold
-$headings-line-height         : 1.1;
+$font-family-headings         : inherit; // using inherit will use $font-family-base for all headings
+$font-weight-headings         : bold;    // instead of browser default, bold
+$line-height-headings         : 1.1;
 
 
 /**

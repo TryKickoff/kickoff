@@ -28,9 +28,9 @@ html {
 }
 
 body {
-	font-family: $base-font-family;
-	@include font-size($base-font-size);
-	line-height: $base-leading;
+	font-family: $font-family-base;
+	@include font-size($font-size-base);
+	line-height: $leading-base;
 	color: $color-text;
 
 	// Add ligatures
@@ -52,14 +52,14 @@ body {
  * Paragraphs
  */
 p {
-	font-family: $base-font-family;
-	@include font-size($base-font-size);
+	font-family: $font-family-base;
+	@include font-size($font-size-base);
 	margin-top: 0;
-	margin-bottom: $base-line-height-px;
+	margin-bottom: $line-height-base-px;
 
 	// Measure - ideally about 65 chars per line
 	// =========================================
-	// max-width: $base-font-size * 30 + px;
+	// max-width: $font-size-base * 30 + px;
 
 	// & small {
 	// 	color: lighten($color-text, 10%);
@@ -71,9 +71,9 @@ p {
  */
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font-family: $headings-font-family;
-	font-weight: $headings-font-weight;
-	line-height: $headings-line-height;
+	font-family: $font-family-headings;
+	font-weight: $font-weight-headings;
+	line-height: $line-height-headings;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 
 	& small {
@@ -86,13 +86,13 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1, .alpha {
 	@include font-size($h1-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height-px * 2;
+	margin-bottom: $line-height-base-px * 2;
 }
 
 h2, .h2, .beta {
 	@include font-size($h2-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height-px;
+	margin-bottom: $line-height-base-px;
 }
 
 h3, .h3, .gamma {
@@ -127,7 +127,7 @@ h6, .h6, .zeta {
 * + h4, * + .h4, * + .delta,
 * + h5, * + .h5, * + .epsilon,
 * + h6, * + .h6, * + .zeta {
-	margin-top: $base-line-height-px;
+	margin-top: $line-height-base-px;
 }
 
 small {
@@ -172,11 +172,11 @@ ol {
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 $base-line-height-px $base-line-height-px;
+	margin: 0 0 $line-height-base-px $line-height-base-px;
 
 	& ul,
 	& ol {
-		margin-left: $base-line-height-px * 2;
+		margin-left: $line-height-base-px * 2;
 	}
 
 	& ul {
@@ -215,11 +215,11 @@ nav ul, nav ol {
  * Definition lists
  */
 dl {
-	margin-bottom: $base-line-height-px;
+	margin-bottom: $line-height-base-px;
 }
 
 dt {
-	font-weight:$bold-font-weight;
+	font-weight: $font-weight-bold;
 
 	// Horizontal layout (like forms)
 	.dl-horizontal & {
@@ -232,7 +232,7 @@ dt {
 }
 
 dd {
-	margin-left: $base-line-height-px;
+	margin-left: $line-height-base-px;
 
 	.dl-horizontal & {
 		margin-left: 240px;
@@ -245,7 +245,7 @@ dd {
  */
 // Horizontal rules
 hr {
-	margin: ($base-line-height-px) 0;
+	margin: ($line-height-base-px) 0;
 	border: 0;
 	border-top: 1px solid $hr-border;
 	border-bottom: 1px solid #fff;
@@ -253,7 +253,7 @@ hr {
 
 // Emphasis
 strong, b {
-	font-weight: $bold-font-weight;
+	font-weight: $font-weight-bold;
 }
 em, i {
 	font-style: italic;
@@ -270,12 +270,12 @@ abbr[title] {
  */
 blockquote {
 	padding-left: 10px;
-	margin: ($base-line-height-px);
+	margin: ($line-height-base-px);
 	border-left: 4px solid lighten(#000, 80%);
 
 	& p {
 		margin-bottom: 0;
-		@include font-size($base-font-size);
+		@include font-size($font-size-base);
 		font-weight: 300;
 	}
 
@@ -314,7 +314,7 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $base-line-height-px;
+	margin-bottom: $line-height-base-px;
 	font-style: normal;
 }
 
@@ -347,7 +347,7 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 samp {
-	font-family: $mono-font-family;
+	font-family: $font-family-mono;
 }
 
 

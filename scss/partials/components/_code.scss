@@ -7,7 +7,7 @@
 code,
 pre {
 	padding: 0 3px 2px;
-	font-family: $mono-font-family;
+	font-family: $font-family-mono;
 	@include font-size(13);
 	color: $color-code;
 	border-radius: 3px;
@@ -24,9 +24,9 @@ code {
 // Blocks of code
 pre {
 	display: block;
-	padding: ($base-line-height - 1) / 2 + px;
-	margin: 0 0 ($base-line-height / 2 + px);
-	line-height: $base-leading;
+	padding: ($line-height-base - 1) / 2 + px;
+	margin: 0 0 ($line-height-base / 2 + px);
+	line-height: $leading-base;
 	color: $color-pre;
 	background-color: $color-pre-bg;
 	border: 1px solid #ccc; // fallback for IE7-8
@@ -39,7 +39,7 @@ pre {
 
 	// Make prettyprint styles more spaced out for readability
 	&.prettyprint {
-		margin-bottom: $base-line-height + px;
+		margin-bottom: $line-height-base + px;
 	}
 
 	// Account for some code outputs that place code tags in pre tags

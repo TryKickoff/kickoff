@@ -21,7 +21,7 @@
 .tabs {
 	@include clearfix;
 	@extend .unstyled;
-	margin-bottom: $base-line-height + px;
+	margin-bottom: $line-height-base + px;
 	border-bottom: 2px solid $active-tab;
 
 	&.tabs--alignRight {

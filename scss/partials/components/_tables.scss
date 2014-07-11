@@ -14,7 +14,7 @@ th {
 .table {
 	width: 100%;
 	max-width: 100%;
-	margin-bottom: $base-line-height-px;
+	margin-bottom: $line-height-base-px;
 	// Cells
 	> thead,
 	> tbody,
@@ -23,7 +23,7 @@ th {
 			> th,
 			> td {
 				padding: $table-cell-padding;
-				line-height: $base-line-height-px;
+				line-height: $line-height-base-px;
 				vertical-align: top;
 				border-top: 1px solid $table-border-color;
 			}
@@ -190,7 +190,7 @@ table {
 .tableResponsive {
 	@include respond-max($breakpoint-single-col) {
 		width: 100%;
-		margin-bottom: ($base-line-height * 0.75) + px;
+		margin-bottom: ($line-height-base * 0.75) + px;
 		overflow-y: hidden;
 		overflow-x: auto;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
