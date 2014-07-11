@@ -117,273 +117,6 @@
    ========================================================================== */
 /* HiDPI */
 /* FORMS */
-/**
- * Typography
- * =================================
- * Body text
- * Base
- * Paragraphs
- * Headings
- * Lists
- * Quotes
- * Links
- * Helper classes
- *
- * Body font size, leadings etc have been set in _variables.scss
- * Resources:
- * http://www.gridlover.net/
- * http://modularscale.com/
- * http://lamb.cc/typograph/
- *
- */
-html {
-  font-size: 18px;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%; }
-  @media screen and (min-width: 48em) {
-    html {
-      font-size: 20px; } }
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #444;
-  -webkit-font-feature-settings: "liga", "dlig";
-     -moz-font-feature-settings: "liga", "dlig";
-          font-feature-settings: "liga", "dlig"; }
-
-/**
- * Paragraphs
- */
-p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 28px; }
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: inherit;
-  font-weight: bold;
-  line-height: 1.1;
-  text-rendering: optimizelegibility; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    font-weight: normal; }
-
-h1, .h1, .alpha {
-  font-size: 36px;
-  font-size: 1.8rem;
-  margin-top: 0;
-  margin-bottom: 56px; }
-
-h2, .h2, .beta {
-  font-size: 30px;
-  font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 28px; }
-
-h3, .h3, .gamma {
-  font-size: 24px;
-  font-size: 1.2rem;
-  margin-top: 0;
-  margin-bottom: 0; }
-
-h4, .h4, .delta, h5, .h5, .epsilon, h6, .h6, .zeta {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-h4, .h4, .delta {
-  font-size: 20px;
-  font-size: 1rem; }
-
-h5, .h5, .epsilon {
-  font-size: 16px;
-  font-size: 0.8rem; }
-
-h6, .h6, .zeta {
-  font-size: 14px;
-  font-size: 0.7rem;
-  text-transform: uppercase; }
-
-* + h1, * + .h1, * + .alpha, * + h2, * + .h2, * + .beta, * + h3, * + .h3, * + .gamma, * + h4, * + .h4, * + .delta, * + h5, * + .h5, * + .epsilon, * + h6, * + .h6, * + .zeta {
-  margin-top: 28px; }
-
-small {
-  font-size: 75%; }
-
-/**
- * Links
- */
-a, a:link {
-  color: #e67e22;
-  text-decoration: none; }
-a:visited {
-  color: #e67e22;
-  text-decoration: none; }
-a:hover, a:focus {
-  color: #924d10; }
-a:active {
-  color: #924d10; }
-
-/**
- * Lists
- */
-ul {
-  list-style-type: disc; }
-
-ol {
-  list-style-type: decimal; }
-
-ul, ol {
-  padding: 0;
-  margin: 0 0 28px 28px; }
-  ul ul, ul ol, ol ul, ol ol {
-    margin-left: 56px; }
-  ul ul, ol ul {
-    list-style-type: circle; }
-    ul ul ul, ol ul ul {
-      list-style-type: square; }
-  ul ol, ol ol {
-    list-style-type: upper-roman; }
-    ul ol ol, ol ol ol {
-      list-style-type: lower-roman; }
-  ul ul, ul ol, ol ul, ol ol {
-    margin-bottom: 0; }
-
-/**
- * Unstyled lists
- */
-.unstyled, nav ul, nav ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  list-style-image: none; }
-
-/**
- * Definition lists
- */
-dl {
-  margin-bottom: 28px; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin-left: 28px; }
-
-.dl-horizontal::after {
-  content: "";
-  display: table;
-  clear: both; }
-.dl-horizontal dt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  float: left;
-  clear: left;
-  width: 220px;
-  text-align: right; }
-.dl-horizontal dd {
-  margin-left: 240px; }
-
-/**
- * Miscellaneous
- */
-hr {
-  margin: 28px 0;
-  border: 0;
-  border-top: 1px solid #b3b3b3;
-  border-bottom: 1px solid #fff; }
-
-strong, b {
-  font-weight: bold; }
-
-em, i {
-  font-style: italic; }
-
-abbr[title] {
-  border-bottom: 1px dotted #ddd;
-  cursor: help; }
-
-/**
- * Blockquotes
- */
-blockquote {
-  padding-left: 10px;
-  margin: 28px;
-  border-left: 4px solid #cccccc; }
-  blockquote p {
-    margin-bottom: 0;
-    font-size: 20px;
-    font-size: 1rem;
-    font-weight: 300; }
-  blockquote small {
-    display: block;
-    color: #b3b3b3; }
-    blockquote small:before {
-      content: '\2014 \00A0'; }
-  blockquote.pull-right {
-    float: right;
-    padding-left: 0;
-    padding-right: 10px;
-    border-left: 0;
-    border-right: 4px solid #cccccc; }
-    blockquote.pull-right, blockquote.pull-right p, blockquote.pull-right small {
-      text-align: right; }
-
-q:before, q:after, blockquote:before, blockquote:after {
-  content: ""; }
-
-address {
-  display: block;
-  margin-bottom: 28px;
-  font-style: normal; }
-
-cite {
-  font-style: normal; }
-
-dfn {
-  font-style: italic; }
-
-mark {
-  background: #f1c40f;
-  padding: 2px 4px;
-  border-radius: 3px; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-samp {
-  font-family: Menlo, Monaco, "Courier New", monospace; }
-
-/**
- * Utilities
- */
-.text-centre, .text-center {
-  text-align: center; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
 /* ==========================================================================
    Styleguide styles
    ========================================================================== */
@@ -424,20 +157,34 @@ body {
 .interfaceType-subtle, .typeSpecimen::after {
   color: #888; }
 
-.masthead {
-  background-color: #e67e22;
+/**
+ * Masthead
+ */
+.masthead, .footer {
+  background-color: slategray;
   color: #fff;
   padding: 30px;
   margin: -30px -30px 30px; }
-  .masthead h1 {
+  .masthead h1, .footer h1 {
     margin-bottom: 0.2em; }
-  .masthead a {
+  .masthead a, .footer a {
     color: #fff;
-    border-bottom: 2px solid; }
-    .masthead a:hover {
-      border-bottom-style: dashed; }
-  .masthead :last-child {
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.3); }
+    .masthead a:hover, .footer a:hover {
+      border-bottom: 2px solid #fff; }
+  .masthead :last-child, .footer :last-child {
     margin-bottom: 0; }
+
+.footer {
+  margin-top: 30px;
+  margin-bottom: -30px; }
+
+.docsNav {
+  margin-bottom: 1em; }
+  .docsNav li {
+    margin-right: 1em; }
+  .docsNav .is-active {
+    border-bottom: 2px solid #fff; }
 
 /*
    Colours
@@ -448,12 +195,12 @@ body {
   margin-bottom: 0.5em; }
 
 .color-primary {
-  color: #e67e22; }
+  color: #3498db; }
   .color-primary.bg {
-    background-color: #e67e22;
+    background-color: #3498db;
     color: #fff; }
     .color-primary.bg::after {
-      content: '#e67e22'; }
+      content: '#3498db'; }
 
 .color-secondary {
   color: #e74c3c; }
@@ -488,20 +235,20 @@ body {
       content: '#f1f1f1'; }
 
 .color-link {
-  color: #e67e22; }
+  color: #3498db; }
   .color-link.bg {
-    background-color: #e67e22;
+    background-color: #3498db;
     color: #fff; }
     .color-link.bg::after {
-      content: '#e67e22'; }
+      content: '#3498db'; }
 
 .color-link-hover {
-  color: #924d10; }
+  color: #196090; }
   .color-link-hover.bg {
-    background-color: #924d10;
+    background-color: #196090;
     color: #fff; }
     .color-link-hover.bg::after {
-      content: '#924d10'; }
+      content: '#196090'; }
 
 .typography .info p {
   -ms-word-wrap: break-word;

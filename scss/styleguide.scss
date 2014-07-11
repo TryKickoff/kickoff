@@ -10,7 +10,7 @@
 
 // @import "normalize";
 
-@import "typography";
+// @import "typography";
 
 
 // Override the grid
@@ -88,8 +88,12 @@ body {
 	color: #888;
 }
 
-.masthead {
-	background-color: $orange;
+/**
+ * Masthead
+ */
+
+.masthead, .footer {
+	background-color: slategray;
 	color: #fff;
 	padding: 30px;
 	margin: -30px -30px 30px;
@@ -100,10 +104,10 @@ body {
 
 	a {
 		color: #fff;
-		border-bottom: 2px solid;
+		border-bottom: 2px dashed rgba(#fff, 0.3);
 
 		&:hover {
-			border-bottom-style: dashed;
+			border-bottom: 2px solid #fff;
 		}
 	}
 
@@ -111,6 +115,25 @@ body {
 		margin-bottom: 0;
 	}
 }
+
+.footer {
+	margin-top: 30px;
+	margin-bottom: -30px;
+}
+.docsNav {
+	margin-bottom: 1em;
+
+	li {
+		margin-right: 1em;
+	}
+
+	.is-active {
+		// font-weight: bold;
+		border-bottom: 2px solid #fff;
+	}
+}
+
+
 /*
    Colours
    ========================================================================== */
