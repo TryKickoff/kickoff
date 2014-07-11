@@ -6,40 +6,6 @@
 
 @import "functions/functions";
 @import "mixins/mixins";
-
-
-// @import "normalize";
-
-// @import "typography";
-
-
-// Override the grid
-// $grid-column-count              : 12    ;
-// $grid-gutter-width              : 20    ;
-// $grid-max-width                 : 1000  ;
-// $grid-margin                    : 40    ;
-// $grid-column-padding            : 0     ;
-// $grid-column-padding-unit       : 'px'  ;
-// $nested-column-padding          : false ;
-// @import "partials/components/grid";
-
-// @import "partials/components/forms";
-// @import "partials/components/tables";
-// @import "partials/components/code";
-// @import "partials/components/buttons";
-// @import "partials/components/embedded-content";
-// @import "partials/components/lists";
-// @import "partials/components/tabs";
-// @import "partials/components/media-object";
-// @import "partials/components/fluid-video";
-// @import "partials/components/block-grids";
-
-// @import "global";
-// @import "partials/masthead";
-// @import "partials/footer";
-
-// @import "helper-classes";
-// @import "print";
 $interface-type : 'Karla', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* ==========================================================================
@@ -157,15 +123,6 @@ body {
 		}
 	}
 }
-.color-primary {
-	@include swatch($color-primary);
-}
-.color-secondary {
-	@include swatch($color-secondary);
-}
-.color-highlight {
-	@include swatch($color-highlight);
-}
 .color-text {
 	@include swatch($color-text);
 }
@@ -177,6 +134,15 @@ body {
 }
 .color-link-hover {
 	@include swatch($color-link-hover);
+}
+.color-primary {
+	@include swatch($color-primary);
+}
+.color-secondary {
+	@include swatch($color-secondary);
+}
+.color-highlight {
+	@include swatch($color-highlight);
 }
 
 .typography {
