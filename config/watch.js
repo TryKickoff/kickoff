@@ -7,10 +7,18 @@ module.exports.tasks = {
 	*/
 	watch: {
 		scss: {
-			files: ['scss/**/*.scss'],
+			files: ['scss/**/*.scss', '!scss/styleguide.scss'],
 			tasks: [
 				'sass:kickoff',
 				'autoprefixer:dist'
+			]
+		},
+
+		styleguide_scss: {
+			files: ['scss/styleguide.scss'],
+			tasks: [
+				'sass:styleguide',
+				'autoprefixer:styleguide'
 			]
 		},
 
