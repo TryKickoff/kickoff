@@ -16,10 +16,14 @@
  * Set this in pixels (but do not add px),
  * the font-size mixin will convert to REMS
  */
-$base-font-size                : 20;
-$base-leading                  : 1.4;
-$base-line-height              : round($base-font-size * $base-leading); // 20 * 1.4
-$base-line-height-px           : $base-line-height * 1px;
+$font-size-base                : 20;
+$font-size-base-px             : $font-size-base * 1px;
+$font-size-base-narrow         : $font-size-base - 2;
+$font-size-base-narrow-px      : $font-size-base-narrow * 1px;
+
+$leading-base                  : 1.4;
+$line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
+$line-height-base-px           : $line-height-base * 1px;
 
 $h1-size                       : 36 !default;
 $h2-size                       : 30 !default;

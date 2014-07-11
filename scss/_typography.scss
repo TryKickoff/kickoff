@@ -19,9 +19,12 @@
  */
 
 html {
-	font-size: $base-font-size + px;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+	font-size: $font-size-base-narrow-px;
+	text-size-adjust: 100%;
+
+	@include respond-min($breakpoint-mid) {
+		font-size: $font-size-base-px;
+	}
 }
 
 body {
