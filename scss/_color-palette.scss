@@ -48,10 +48,10 @@ $active-tab                   : $green;
 
 
 // Code
-$color-code                   : #d14;
-$color-code-bg                : #fbefc0;
-$color-pre                    : #222;
-$color-pre-bg                 : #f7f7f9;
+$color-code                   : #444;
+$color-code-bg                : #ddd;
+$color-pre                    : #444;
+$color-pre-bg                 : #ddd;
 
 
 
@@ -66,9 +66,9 @@ $color-info                   : #3a87ad;
 
 
 
-/*
-   Forms
-   ========================================================================== */
+/**
+ * Forms
+ */
 $input-bg                     : #fff;
 $input-border                 : #ccc;
 $input-disabled-bg            : lighten(#000, 70%);

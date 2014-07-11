@@ -220,21 +220,24 @@ dl {
 
 dt {
 	font-weight: $font-weight-bold;
+}
 
-	// Horizontal layout (like forms)
-	.dl-horizontal & {
+dd {
+	margin-left: $line-height-base-px;
+}
+
+.dl-horizontal {
+	@include clearfix;
+
+	dt {
 		@include text-overflow();
 		float: left;
 		clear: left;
 		width: 220px;
 		text-align: right;
 	}
-}
 
-dd {
-	margin-left: $line-height-base-px;
-
-	.dl-horizontal & {
+	dd {
 		margin-left: 240px;
 	}
 }
@@ -354,15 +357,24 @@ samp {
 /**
  * Utilities
  */
-.text-centre, .text-center { text-align: center;}
-.text-left { text-align: left;}
-.text-right { text-align: right;}
+.text-centre, // British or US English spellings..
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
 
 ::-moz-selection {
 	color: $color-selection;
 	background: $color-selection-bg;
+	text-shadow: none;
 }
 ::selection {
 	color: $color-selection;
 	background: $color-selection-bg;
+	text-shadow: none;
 }

@@ -8,7 +8,7 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $font-family-mono;
-	@include font-size(13);
+	@include font-size($font-size-base - 3);
 	color: $color-code;
 	border-radius: 3px;
 	tab-size: 3;
@@ -29,8 +29,6 @@ pre {
 	line-height: $leading-base;
 	color: $color-pre;
 	background-color: $color-pre-bg;
-	border: 1px solid #ccc; // fallback for IE7-8
-	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 4px;
 	white-space: pre;
 	white-space: pre-wrap;
