@@ -3,41 +3,44 @@
  */
 @import "color-palette";
 @import "variables";
+
 @import "functions/functions";
 @import "mixins/mixins";
 
-@import "normalize";
+
+// @import "normalize";
 
 @import "typography";
 
-@import "partials/components/forms";
-@import "partials/components/tables";
-@import "partials/components/code";
-@import "partials/components/buttons";
-@import "partials/components/embedded-content";
-@import "partials/components/lists";
-@import "partials/components/tabs";
-@import "partials/components/media-object";
-@import "partials/components/fluid-video";
-@import "partials/components/block-grids";
-
 
 // Override the grid
-$grid-column-count              : 12    ;
-$grid-gutter-width              : 20    ;
-$grid-max-width                 : 1000  ;
-$grid-margin                    : 40    ;
-$grid-column-padding            : 0     ;
-$grid-column-padding-unit       : 'px'  ;
-$nested-column-padding          : false ;
-@import "partials/components/grid";
+// $grid-column-count              : 12    ;
+// $grid-gutter-width              : 20    ;
+// $grid-max-width                 : 1000  ;
+// $grid-margin                    : 40    ;
+// $grid-column-padding            : 0     ;
+// $grid-column-padding-unit       : 'px'  ;
+// $nested-column-padding          : false ;
+// @import "partials/components/grid";
 
-@import "global";
-@import "partials/masthead";
-@import "partials/footer";
+// @import "partials/components/forms";
+// @import "partials/components/tables";
+// @import "partials/components/code";
+// @import "partials/components/buttons";
+// @import "partials/components/embedded-content";
+// @import "partials/components/lists";
+// @import "partials/components/tabs";
+// @import "partials/components/media-object";
+// @import "partials/components/fluid-video";
+// @import "partials/components/block-grids";
 
-@import "helper-classes";
-@import "print";
+// @import "global";
+// @import "partials/masthead";
+// @import "partials/footer";
+
+// @import "helper-classes";
+// @import "print";
+$interface-type : 'Karla', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* ==========================================================================
    Styleguide styles
@@ -45,17 +48,11 @@ $nested-column-padding          : false ;
 body {
 	background-color: #f1f1f1;
 }
-.well {
-	min-height: 90px;
-}
 .g-container {
-	box-shadow: 0 1px 15px rgba(0,0,0,.4);
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding: 30px;
 	background-color: #fff;
 	margin-top: 3%;
 	margin-bottom: 3%;
-	border-radius: 3px;
 }
 .g-row + .g-row {
 	margin-top: 30px;
@@ -63,115 +60,100 @@ body {
 .g-span12 + .g-span12 {
 	margin-top: 30px;
 }
+
+.well {
+	min-height: 90px;
+	padding: 30px;
+	background-color: #dbdbdb;
+	margin: 30px -30px 50px;
+	color: #333;
+}
+
+.well--inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.interfaceType {
+	font-family: $interface-type;
+}
+
 .section-heading {
 	border-bottom: 1px solid rgba(#000, 0.2);
 	padding-bottom: .3em;
 	@extend .interfaceType;
 	margin-top: 1em;
 }
-.interfaceType {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .interfaceType-subtle {
 	color: #888;
 }
-.masthead h1 {
-	margin-bottom: 0;
+
+.masthead {
+	background-color: $orange;
+	color: #fff;
+	padding: 30px;
+	margin: -30px -30px 30px;
+
+	h1 {
+		margin-bottom: 0.2em;
+	}
+
+	a {
+		color: #fff;
+		border-bottom: 2px solid;
+
+		&:hover {
+			border-bottom-style: dashed;
+		}
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
 }
 /*
    Colours
    ========================================================================== */
 .swatch {
 	height: 120px;
+	padding: 15px;
+	margin-bottom: 0.5em;
 }
-
-.color-primary {
-	color: $color-primary;
-
+@mixin swatch($color) {
+	color: $color;
 	&.bg {
-		background-color: $color-primary;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-primary}';
-		}
-	}
-}
-.color-secondary {
-	color: $color-secondary;
-
-	&.bg {
-		background-color: $color-secondary;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-secondary}';
-		}
-	}
-}
-.color-highlight {
-	color: $color-highlight;
-
-	&.bg {
-		background-color: $color-highlight;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-highlight}';
-		}
-	}
-}
-.color-text {
-	color: $color-text;
-
-	&.bg {
-		background-color: $color-text;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-text}';
-		}
-	}
-}
-.color-bg {
-	color: $color-bg;
-
-	&.bg {
-		background-color: $color-bg;
-		@if lightness($color-bg) < 50 {
+		background-color: $color;
+		@if lightness($color) < 60 {
 			color: #fff;
 		} @else {
 			color: #444;
 		}
 
-		&:after {
-			content: '#{$color-bg}';
+		&::after {
+			content: '#{$color}';
 		}
 	}
+}
+.color-primary {
+	@include swatch($color-primary);
+}
+.color-secondary {
+	@include swatch($color-secondary);
+}
+.color-highlight {
+	@include swatch($color-highlight);
+}
+.color-text {
+	@include swatch($color-text);
+}
+.color-background {
+	@include swatch($color-bg);
 }
 .color-link {
-	color: $color-link-default;
-
-	&.bg {
-		background-color: $color-link-default;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-link-default}';
-		}
-	}
+	@include swatch($color-link-default);
 }
 .color-link-hover {
-	color: $color-link-hover;
-
-	&.bg {
-		background-color: $color-link-hover;
-		color: #fff;
-
-		&:after {
-			content: '#{$color-link-hover}';
-		}
-	}
+	@include swatch($color-link-hover);
 }
 
 .typography {
@@ -184,30 +166,30 @@ body {
 	.example {
 		margin: 1em 0;
 
-		h1:after {
+		h1::after {
 			content: ' - #{$h1-size}px';
 		}
-		h2:after {
+		h2::after {
 			content: ' - #{$h2-size}px';
 		}
-		h3:after {
+		h3::after {
 			content: ' - #{$h3-size}px';
 		}
-		h4:after {
+		h4::after {
 			content: ' - #{$h4-size}px';
 		}
-		h5:after {
+		h5::after {
 			content: ' - #{$h5-size}px';
 		}
-		h6:after {
+		h6::after {
 			content: ' - #{$h6-size}px';
 		}
 
-		h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+		h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 			text-transform: lowercase;
 		}
 
-		.interfaceType:after {
+		.interfaceType::after {
 			content: "";
 		}
 	}
@@ -219,7 +201,7 @@ body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 
-	&:after {
+	&::after {
 		display: block;
 		@extend .interfaceType;
 		@extend .interfaceType-subtle;
@@ -229,9 +211,30 @@ body {
 		font-weight: normal;
 	}
 }
-h1.typeSpecimen:after {
-	content: "Font stack: #{$headings-font-family}";
+h1.typeSpecimen::after {
+	content: "Font stack: #{$font-family-headings}";
 }
-p.typeSpecimen:after {
-	content: "Font stack: #{$base-font-family}";
+p.typeSpecimen::after {
+	content: "Font stack: #{$font-family-base}";
+}
+
+
+/**
+ * Starter page
+ */
+
+.checklistInfo {
+	margin-bottom: 15px;
+	margin-left: 30px;
+	font-size: $font-size-base-px - 3;
+
+	li {
+		margin-bottom: 0.2em;
+	}
+
+	code,
+	pre {
+		@include font-size(14);
+		background-color: #CACACA;
+	}
 }
