@@ -28,7 +28,8 @@ bower_components
 # Ignore these if we are building js/Sass on the server #
 #########################################################
 js/dist/*.js
-css/*.css
+#css/*.css
+css/temp/*.css
 **/*.map
 
 # Jekyll

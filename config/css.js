@@ -1,7 +1,7 @@
 module.exports.tasks = {
 
 	/**
-	 * Sass compilation
+	 * Sass compilation using grunt-sass
 	 * https://github.com/gruntjs/grunt-contrib-sass
 	 * Includes kickoff.scss and kickoff-old-ie.scss by default
 	 * Also creates source maps
@@ -17,14 +17,14 @@ module.exports.tasks = {
 				sourcemap: true
 			},
 			files: {
-				'css/kickoff.css'       : 'scss/kickoff.scss',
-				'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
+				'css/temp/<%=config.scss.cssFile%>.css'       : 'scss/<%=config.scss.cssFile%>.scss',
+				'css/temp/<%=config.scss.cssFile%>-old-ie.css': 'scss/<%=config.scss.cssFile%>-old-ie.scss'
 			}
 		},
 		styleguide: {
 			options: {
 				unixNewlines: true,
-				style: 'expanded',
+				style: 'compact',
 				precision : 8,
 				sourcemap: true
 			},
@@ -42,30 +42,23 @@ module.exports.tasks = {
 	 * Auto prefixes your CSS using caniuse data
 	 */
 	autoprefixer: {
-		dist : {
-			options: {
-				// Task-specific options go here - we are supporting
-				// the last 2 browsers, any browsers with >1% market share,
-				// and ensuring we support IE7 + 8 with prefixes
-				browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 6'],
-				map: true
-			},
-			files: {
-				'css/kickoff.css'       : 'css/kickoff.css',
-				'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
-			}
+		options: {
+			// We are supporting the last 2 browsers, any browsers with >1% market share,
+			// and ensuring we support IE8+ with prefixes
+			browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 7'],
+			map: true
 		},
+
+		kickoff: {
+			expand: true,
+			flatten: true,
+			src: 'css/temp/*.css',
+			dest: 'css/'
+		},
+
 		styleguide : {
-			options: {
-				// Task-specific options go here - we are supporting
-				// the last 2 browsers, any browsers with >1% market share,
-				// and ensuring we support IE7 + 8 with prefixes
-				browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 6'],
-				map: false
-			},
-			files: {
-				'css/styleguide.css' : 'css/styleguide.css'
-			}
+			src: 'css/styleguide.css',
+			dest: 'css/styleguide.css'
 		}
 	},
 
@@ -78,11 +71,11 @@ module.exports.tasks = {
 	csso: {
 		dist: {
 			options: {
-				restructure: false //turns structural optimiations off as can mess up fallbacks http://bem.info/tools/optimizers/csso/description/
+				restructure: false //turns structural optimisations off as can mess up fallbacks http://bem.info/tools/optimizers/csso/description/
 			},
 			files: {
-				'css/kickoff.css'       : 'css/kickoff.css',
-				'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
+				'css/<%=config.scss.cssFile%>.css'       : 'css/<%=config.scss.cssFile%>.css',
+				'css/<%=config.scss.cssFile%>-old-ie.css': 'css/<%=config.scss.cssFile%>-old-ie.css'
 			},
 
 		}

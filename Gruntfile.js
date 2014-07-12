@@ -16,6 +16,10 @@ module.exports = function (grunt) {
 		 * Choose javascript files to be uglified
 		 */
 		config : {
+			scss : {
+				cssFile : 'kickoff' // <%=config.scss.cssFile%>
+			},
+
 			js : {
 				// <%=config.js.distDir%>
 				distDir  : 'js/dist/',
@@ -57,7 +61,7 @@ module.exports = function (grunt) {
 * grunt            : run jshint, uglify and sass:kickoff
 * grunt start      : run this before starting development
 * grunt watch      : run sass:kickoff, uglify and livereload
-* grunt dev        : run uglify, sass:kickoff & autoprefixer:dist
+* grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
 * grunt jquery     : build custom version of jquery
 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
@@ -74,7 +78,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', [
 		'newer:uglify',
 		'newer:sass:kickoff',
-		'autoprefixer:dist'
+		'autoprefixer:kickoff'
 	]);
 
 	/**
@@ -87,7 +91,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
-		'autoprefixer:dist',
+		'autoprefixer:kickoff',
 		'autoprefixer:styleguide',
 		'connect:start',
 		'watch'
@@ -96,36 +100,36 @@ module.exports = function (grunt) {
 
 	/**
 	 * GRUNT DEV * A task for development
-	 * run uglify, sass:kickoff & autoprefixer:dist
+	 * run uglify, sass:kickoff & autoprefixer:kickoff
 	 */
 	grunt.registerTask('dev', [
 		'uglify',
 		'sass:kickoff',
-		'autoprefixer:dist'
+		'autoprefixer:kickoff'
 	]);
 
 
 	/**
 	* GRUNT DEPLOY * A task for your production environment
-	* run uglify, sass:kickoff, autoprefixer:dist and csso
+	* run uglify, sass:kickoff, autoprefixer:kickoff and csso
 	*/
 	grunt.registerTask('deploy', [
 		'newer:uglify',
 		'newer:sass:kickoff',
-		'newer:autoprefixer:dist',
+		'newer:autoprefixer:kickoff',
 		'newer:csso'
 	]);
 
 
 	/**
 	 * GRUNT STYLEGUIDE * A task for the styleguide
-	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:dist, autoprefixer:styleguide, connect:styleguide & watch
+	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:kickoff, autoprefixer:styleguide, connect:styleguide & watch
 	 */
 	grunt.registerTask('styleguide', [
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
-		'autoprefixer:dist',
+		'autoprefixer:kickoff',
 		'autoprefixer:styleguide',
 		'connect:styleguide',
 		'watch'
@@ -140,7 +144,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
-		'autoprefixer:dist',
+		'autoprefixer:kickoff',
 		'connect:site',
 		'watch'
 	]);
@@ -173,7 +177,7 @@ module.exports = function (grunt) {
 		'jshint',
 		'uglify',
 		'sass:kickoff',
-		'autoprefixer:dist'
+		'autoprefixer:kickoff'
 	]);
 
 

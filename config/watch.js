@@ -10,7 +10,7 @@ module.exports.tasks = {
 			files: ['scss/**/*.scss', '!scss/styleguide.scss'],
 			tasks: [
 				'sass:kickoff',
-				'autoprefixer:dist'
+				'autoprefixer:kickoff'
 			]
 		},
 
