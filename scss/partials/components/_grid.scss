@@ -1,22 +1,23 @@
 /**
-  The Kickoff Grid
-  * Default grid styles
-  * Media queries
-  * Centred columns
+ * The Kickoff Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ * Centred columns
  */
 
-
-/*
-	 Basic Usage:
-	 <div class="g-row">
-			 <div class="g-col g-span4"></div>
-			 <div class="g-col g-span8"></div>
-	 </div>
-	 ========================================================================== */
-
-
 /* Import Grid helpers and mixins */
-@import "../../helpers/grid-helpers";
+@import "../../mixins/grid-helpers";
+
+
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g-row">
+		<div class="g-col g-span4"></div>
+		<div class="g-col g-span8"></div>
+	</div>
+ */
 
 
 /**
