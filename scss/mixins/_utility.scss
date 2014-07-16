@@ -90,6 +90,20 @@
 	}
 }
 
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+	::-moz-selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
+	}
+	::selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
+	}
+}
+
 // Vertical align
 // @include vertical-align(50px);
 @mixin vertical-align($argument) {
