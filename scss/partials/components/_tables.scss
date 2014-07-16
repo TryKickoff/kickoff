@@ -83,7 +83,7 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-	border: 1px solid $table-border-color;
+	border: 2px solid $table-border-color;
 	> thead,
 	> tbody,
 	> tfoot {
