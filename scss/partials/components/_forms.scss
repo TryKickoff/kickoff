@@ -176,14 +176,15 @@
 	}
 
 	// HTML5 invalid states
-	&:focus:required:invalid {
-		color: #b94a48;
-		border-color: #ee5f5b;
+	// Uncomment this if you need it
+	// &:focus:required:invalid {
+	// 	color: #b94a48;
+	// 	border-color: #ee5f5b;
 
-		&:focus {
-			border-color: darken(#ee5f5b, 10%);
-		}
-	}
+	// 	&:focus {
+	// 		border-color: darken(#ee5f5b, 10%);
+	// 	}
+	// }
 }
 
 .form-input--textarea {
