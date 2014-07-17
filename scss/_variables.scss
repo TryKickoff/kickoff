@@ -97,11 +97,6 @@ $using-splits-and-shunts      : false ; // Use Splits & Shunts for responsive we
  */
 $table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
 $table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-condensed`.
-$table-bg                     : $color-bg !default; // Default background color used for all tables.
-$table-bg-accent              : #f9f9f9 !default; // Background color used for `.table-striped`.
-$table-bg-hover               : #f5f5f5 !default; // Background color used for `.table-hover`.
-$table-bg-active              : $table-bg-hover !default;
-$table-border-color           : #ddd !default; // Border color for table and cell borders.
 
 
 /**
