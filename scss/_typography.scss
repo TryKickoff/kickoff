@@ -22,7 +22,7 @@ html {
 	font-size: $font-size-base-narrow-px;
 	text-size-adjust: 100%;
 
-	@include respond-min($breakpoint-mid) {
+	@include respond-min($bp-mid) {
 		font-size: $font-size-base-px;
 	}
 }
