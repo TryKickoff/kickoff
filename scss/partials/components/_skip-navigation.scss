@@ -1,0 +1,21 @@
+/**
+ * Skip to main content link
+ * <div class="skipToContent"><a href="#mainContent" class="btn btn--primary">Skip to main content</a></div>
+ */
+.skipToContent {
+	position: relative;
+	text-align: center;
+	height: 0;
+
+	a {
+		position: relative;
+		top: -100px;
+		z-index: 100;
+		background-color: #fff;
+		transition: $link-transition;
+
+		&:focus {
+			top: 5px;
+		}
+	}
+}

@@ -1,77 +1,61 @@
-/*
-   Block grids
-
-   These are 2-up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content. Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones. For IE7/8 compatibility blockGrid items need to be the same height. You can optionally uncomment the lines below to support arbitrary height, but know that IE7/8 do not support :nth-child.
-
-   Usage:
-   <ul class="l-blockGrid l-blockGrid--twoUp">
-       <li></li>
-   </ul>
-   ========================================================================== */
+/**
+ * Block grids
+ * These are suited for repeating blocks of content. See below for usage
+ *
+ * Usage:
+ * <ul class="l-blockGrid l-blockGrid--3up">
+ *     <li></li>
+ * </ul>
+ *
+ * Mobile Usage:
+ * <ul class="l-blockGrid l-blockGrid--3up l-blockGrid--3up--narrow">
+ *     <li></li>
+ * </ul>
+ */
 .l-blockGrid {
 	display: block;
 	list-style-type: none;
+	margin: 0;
 	@include clearfix;
 
-	& li {
+	> li {
 		display: block;
 		height: auto;
-	}
-}
 
-// === <$breakpoint-single-col ===
-@include respond-min($bp-single-col) {
-	.l-blockGrid {
-		& li {
+		@if $grid-column-padding > 0 {
+			padding: $grid-column-padding + px;
+		}
+	}
+
+	// Narrow block-grid
+	@include respond-max($bp-single-col) {
+		> li[class*="up--narrow"] {
+			display: block;
+			height: auto;
+			float: left;
+		}
+		@for $i from 1 to $grid-column-count + 1 {
+			&.l-blockGrid--#{$i}up--mobile > li {
+				width: percentage(1 / $i);
+				display: block;
+				height: auto;
+				float: left;
+			}
+		}
+	}
+
+	@include respond-min($bp-single-col) {
+		> li {
 			display: block;
 			height: auto;
 			float: left;
 		}
 
-		&.l-blockGrid--twoUp {
-			margin-left: -4%;
-
-			& li {
-				margin-left: 4%;
-				width: 46%;
-				margin-bottom: 4%;
-				//&:nth-child(2n+1) {clear: left;}
-			}
-		}
-
-		&.l-blockGrid--threeUp {
-			margin-left: -2%;
-
-			& li {
-				margin-left: 2%;
-				width: 31.3%;
-				margin-bottom: 2%;
-				//&:nth-child(3n+1) {clear: left;}
-			}
-		}
-
-		&.l-blockGrid--fourUp {
-			margin-left: -2%;
-
-			& li {
-				margin-left: 2%;
-				width: 23%;
-				margin-bottom: 2%;
-				//&:nth-child(4n+1) {clear: left;}
-			}
-		}
-
-		&.l-blockGrid--fiveUp {
-			margin-left: -1.5%;
-
-			& li {
-				margin-left: 1.5%;
-				width: 18.5%;
-				margin-bottom: 1.5%;
-				//&:nth-child(5n+1) {clear: left;}
+		// Wide block-grid
+		@for $i from 1 to $grid-column-count + 1 {
+			&.l-blockGrid--#{$i}up > li {
+				width: percentage(1 / $i);
 			}
 		}
 	}
-
 }
-// === end <$breakpoint-single-col ===

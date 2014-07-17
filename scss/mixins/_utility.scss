@@ -2,24 +2,20 @@
    Utility Mixins
    ========================================================================== */
 // Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
 // Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
 @mixin clearfix {
-	zoom: 1;
-
-	&:before,
-	&:after {
-		display: table;
-		content: " ";
-	}
-	&:after {
-		clear: both;
+	&::after {
+		content:"";
+		display:table;
+		clear:both;
 	}
 }
 
 // REM
-// @include rem(margin, $base-font-size);
-@mixin rem($property, $sizeValue: $base-font-size){
-	$remValue: ($sizeValue / $base-font-size);
+// @include rem(margin, $font-size-base);
+@mixin rem($property, $sizeValue: $font-size-base){
+	$remValue: ($sizeValue / $font-size-base);
 	#{$property}: $sizeValue + px;
 	#{$property}: $remValue + rem;
 }
@@ -29,19 +25,19 @@
    ========================================================================== */
 // REM font size
 // @include font-size(16);
-@mixin font-size($sizeValue: $base-font-size){
+@mixin font-size($sizeValue: $font-size-base){
 	@include rem(font-size, $sizeValue);
 }
 
 // REM line height
 // @include line-height(16);
-@mixin line-height($sizeValue: $base-line-height){
+@mixin line-height($sizeValue: $line-height-base){
 	@include rem(line-height, $sizeValue);
 }
 
 // EM font size
 // @include font-size-ems(20, 16);
-@mixin font-size-ems($target-px-size, $context-px-size:$base-font-size) {
+@mixin font-size-ems($target-px-size, $context-px-size:$font-size-base) {
 	font-size: ($target-px-size / $context-px-size) * 1em;
 }
 
@@ -91,6 +87,20 @@
 	}
 	::-webkit-input-placeholder {
 		color: $color;
+	}
+}
+
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+	::-moz-selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
+	}
+	::selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
 	}
 }
 

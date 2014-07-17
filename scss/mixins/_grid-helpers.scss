@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Kickoff Grid helpers
+   ========================================================================== */
+
+/*
+	 Grid Setup Defaults
+	 * Choose your grid options.
+	 ** THESE WILL BE OVERRIDDEN BY THE SETTINGS IN _variables.scss **
+	 ========================================================================== */
+
+// Setup grid defaults
+$grid-column-count            : 12    !default; // Total column count
+$grid-gutter-width            : 20    !default; // [in pixels]
+$grid-max-width               : 1000  !default; // [in pixels]
+$grid-min-width               : 1000  !default; // [in pixels] Minimum width for grid in <IE9
+$grid-margin                  : 0     !default; // [in pixels] Space outside the grid
+
+// Column Padding
+$grid-column-padding          : 10    !default; // [in pixels]
+$grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
+$nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+// Choose your grid options
+$using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
+$using-offsetcolumns          : false !default; // Allow columns to be offset
+$using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
+
+
+/*
+   Grid columns width calcs
+   ========================================================================== */
+@function gridColumnWidthCalc($column-span: 1, $show-unit: true) {
+	$number-of-blocks-in-container: $grid-column-count / $column-span;
+	$total-width-of-all-gutters:    gutterCalc(false) * ($number-of-blocks-in-container - 1);
+	$total-width-of-all-blocks:     1 - $total-width-of-all-gutters;
+	$width-of-a-single-block:       $total-width-of-all-blocks / $number-of-blocks-in-container;
+
+	@if $show-unit == true {
+		@return percentage( $width-of-a-single-block );
+	} @else {
+		@return $width-of-a-single-block;
+	}
+}
+
+/**
+ * Column width mixin
+ * Usage:
+ * @include column(2);
+ */
+@mixin column($column-span: 1) {
+	width: gridColumnWidthCalc($column-span, true);
+}
+
+
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+@function gutterCalc($show-unit: true) {
+	@if $show-unit == true {
+		@return percentage( $grid-gutter-width / ( $grid-max-width - ($grid-margin * 2) ) );
+	} @else {
+		@return $grid-gutter-width / ( $grid-max-width - ($grid-margin * 2) );
+	}
+}
+
+
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+@function paddingCalc() {
+	@if $grid-column-padding-unit == '%' {
+		@return percentage( $grid-column-padding / $grid-max-width );
+	} @else if $grid-column-padding-unit == 'px' {
+		@return $grid-column-padding + px;
+	}
+}
+
+
+
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+@mixin shunt($shuntSpan: 1) {
+	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
+}
+@mixin offset($columnOffset: 1) {
+	margin-left: gutterCalc() + gridColumnWidthCalc($columnOffset, true) + gutterCalc();
+}
+@mixin offsetFirstChild($columnOffset: 1) {
+	margin-left: gridColumnWidthCalc($columnOffset, true) + gutterCalc();
+}
+@mixin push($pushOffset: 1) {
+	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
+	position: relative;
+}
+@mixin pull($pullOffset: 1) {
+	right: gridColumnWidthCalc($pullOffset, true) + gutterCalc();
+	position: relative;
+}
