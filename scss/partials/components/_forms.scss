@@ -504,8 +504,8 @@ textarea {
 	padding-left: 5px;
 }
 
-// === <$breakpoint-single-col ===
-@include respond-min($breakpoint-single-col) {
+// === <$bp-single-col ===
+@include respond-min($bp-single-col) {
 	/* ==========================================================================
 	   Horizontal-specific styles
 	   * add .form--horizontal to the <form> element
@@ -553,4 +553,4 @@ textarea {
 		}
 	}
 }
-// === end <$breakpoint-single-col ===
+// === end <$bp-single-col ===

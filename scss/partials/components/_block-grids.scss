@@ -20,7 +20,7 @@
 }
 
 // === <$breakpoint-single-col ===
-@include respond-min($breakpoint-single-col) {
+@include respond-min($bp-single-col) {
 	.l-blockGrid {
 		& li {
 			display: block;

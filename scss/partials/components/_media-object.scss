@@ -50,8 +50,8 @@
 }
 
 
-// === <$breakpoint-narrow ===
-@include respond-min($breakpoint-narrow) {
+// === <$bp-narrow ===
+@include respond-min($bp-narrow) {
 	.media {
 		padding: 35px 0;
 	}
@@ -62,7 +62,7 @@
 		float: left;
 	}
 }
-// === end <$breakpoint-narrow ===
+// === end <$bp-narrow ===
 
 
 
@@ -113,8 +113,8 @@
  * Consider moving images and floats so only wide viewports see them
  */
 
-// === <$breakpoint-single-col ===
-// @include respond-min($breakpoint-single-col) {
+// === <$bp-single-col ===
+// @include respond-min($bp-single-col) {
 
 // }
-// === end <$breakpoint-single-col ===
+// === end <$bp-single-col ===

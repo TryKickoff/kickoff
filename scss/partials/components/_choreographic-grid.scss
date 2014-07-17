@@ -73,8 +73,8 @@
 	 Media queries
 	 ========================================================================== */
 
-// === $breakpoint-single-col> ===
-@include respond-min($breakpoint-single-col) {
+// === $bp-single-col> ===
+@include respond-min($bp-single-col) {
 	// NAME THIS MEDIA QUERY
 	$mediaQueryName : 'mq-alpha';
 
@@ -126,12 +126,12 @@
 		clear: both;
 	}
 }
-// === end $breakpoint-single-col> ===
+// === end $bp-single-col> ===
 
 
 
-// === $breakpoint-wide> ===
-@include respond-min($breakpoint-wide) {
+// === $bp-wide> ===
+@include respond-min($bp-wide) {
 	// NAME THIS MEDIA QUERY
 	$mediaQueryName : 'mq-beta';
 
@@ -183,7 +183,7 @@
 
 
 }
-// === end $breakpoint-wide> ===
+// === end $bp-wide> ===
 
 
 
