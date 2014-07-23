@@ -28,7 +28,7 @@
 	}
 
 	// Narrow block-grid
-	@include respond-max($breakpoint-single-col) {
+	@include respond-max($bp-single-col) {
 		> li[class*="up--narrow"] {
 			display: block;
 			height: auto;
@@ -44,7 +44,7 @@
 		}
 	}
 
-	@include respond-min($breakpoint-single-col) {
+	@include respond-min($bp-single-col) {
 		> li {
 			display: block;
 			height: auto;

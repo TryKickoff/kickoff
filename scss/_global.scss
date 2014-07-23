@@ -20,30 +20,30 @@ body {
 /**
  * Media queries for responsive design
  */
-// === $breakpoint-narrow> ===
-@include respond-min($breakpoint-narrow) {
+// === $bp-narrow> ===
+@include respond-min($bp-narrow) {
 
 }
-// === end $breakpoint-narrow> ===
+// === end $bp-narrow> ===
 
 
 
-// === $breakpoint-mid> ===
-@include respond-min($breakpoint-mid) {
-
-}
-// === end $breakpoint-mid> ===
-
-
-// === $breakpoint-wide> ===
-@include respond-min($breakpoint-wide) {
+// === $bp-mid> ===
+@include respond-min($bp-mid) {
 
 }
-// === end $breakpoint-wide> ===
+// === end $bp-mid> ===
 
 
-// === $breakpoint-huge> ===
-@include respond-min($breakpoint-huge) {
+// === $bp-wide> ===
+@include respond-min($bp-wide) {
 
 }
-// === end $breakpoint-huge> ===
+// === end $bp-wide> ===
+
+
+// === $bp-huge> ===
+@include respond-min($bp-huge) {
+
+}
+// === end $bp-huge> ===

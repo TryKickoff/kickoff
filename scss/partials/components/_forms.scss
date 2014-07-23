@@ -1,25 +1,27 @@
-/* ==========================================================================
-   Forms
-   * Generic form styles
-   * Form inputs and groups
-   * Form field feedback states
-   * Horizontal & vertical forms
-   * Horizontal-specific styles
-   ========================================================================== */
+/**
+ * Forms
+ * =================================
+ * Generic form styles
+ * Form inputs and groups
+ * Form field feedback states
+ * Horizontal & vertical forms
+ * Horizontal-specific styles
+ */
 
 
-/* ==========================================================================
-   Generic form styles
-   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
-   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
-   Usage:
+/**
+ * Generic form styles
+ * =================================
+ * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
   	<div class="form-controlGroup">
   		<label for="name" class="form-label">Name</label>
   		<div class="form-controlGroup-inputWrapper">
   			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
   		</div>
   	</div>
-   ========================================================================== */
+ */
 .form {
 	margin: 0 0 ($line-height-base + px);
 }
@@ -49,9 +51,9 @@
 	}
 }
 
-/* ==========================================================================
-   Form inputs and groups
-   ========================================================================== */
+/**
+ * Form inputs and groups
+ */
 .form-controlGroup {
 	margin-top: ($line-height-base / 2 + px);
 	margin-bottom: 9px;
@@ -174,15 +176,15 @@
 	}
 
 	// HTML5 invalid states
-	// Shares styles with the .form--control-group.error above
-	&:focus:required:invalid {
-		color: #b94a48;
-		border-color: #ee5f5b;
+	// Uncomment this if you need it
+	// &:focus:required:invalid {
+	// 	color: #b94a48;
+	// 	border-color: #ee5f5b;
 
-		&:focus {
-			border-color: darken(#ee5f5b, 10%);
-		}
-	}
+	// 	&:focus {
+	// 		border-color: darken(#ee5f5b, 10%);
+	// 	}
+	// }
 }
 
 .form-input--textarea {
@@ -251,9 +253,9 @@
 }
 
 
-/* ==========================================================================
-   Unedited code below here
-   ========================================================================== */
+/*
+ * Unedited code below here
+ */
 // Help out input buttons
 button,
 input[type="button"],
@@ -285,10 +287,9 @@ input[type="submit"] {
 	}
 }
 
-/*
-	Checkboxes & Radios
-
-	Checkboxes:
+/**
+ * Checkboxes:
+ * =================================
 	<label class="control">
 		<input type="checkbox" value="check1">
 		This is a checkbox
@@ -298,7 +299,8 @@ input[type="submit"] {
 		This is a checkbox
 	</label>
 
-	Radios:
+ * Radios:
+ * =================================
 	<label class="control">
 		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
 		This is a radio
@@ -307,7 +309,7 @@ input[type="submit"] {
 		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
 		This is a radio
 	</label>
-   ========================================================================== */
+ */
 .control {
 	display: block;
 
@@ -328,9 +330,9 @@ input[type="submit"] {
 }
 
 
-/*
-   Search input
-   ========================================================================== */
+/**
+ * Search input
+ */
 .form-input--search {
 	padding-left: 14px;
 	padding-right: 14px;
@@ -339,9 +341,9 @@ input[type="submit"] {
 }
 
 
-/*
-   Form actions
-   ========================================================================== */
+/**
+ * Form actions
+ */
 .form-actions {
 	padding: ($line-height-base - 1 + px) 20px ($line-height-base + px);
 	margin-top: $line-height-base + px;
@@ -360,9 +362,9 @@ input[type="submit"] {
 
 
 
-/*
-   Form field feedback states
-   ========================================================================== */
+/**
+ * Form field feedback states
+ */
 // Warning
 .form-controlGroup--warning {
 	@include formFieldState($color-warning);
@@ -379,10 +381,11 @@ input[type="submit"] {
 }
 
 
-/*
-   Placeholder text
-   * Gets special styles; can't be bundled together though for some reason
-   ========================================================================== */
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
 @include placeholder($placeholder-text);
 
 
@@ -405,14 +408,15 @@ input[type="submit"] {
 	padding-left: 5px;
 }
 
-// === <$breakpoint-single-col ===
-@include respond-min($breakpoint-single-col) {
-	/* ==========================================================================
-	   Horizontal-specific styles
-	   * add .form--horizontal to the <form> element
-	   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
-	   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
-	   ========================================================================== */
+// === <$bp-single-col ===
+@include respond-min($bp-single-col) {
+	/**
+	 * Horizontal-specific styles
+	 * =================================
+	 * add .form--horizontal to the <form> element
+	 * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+	 */
 	.form--horizontal {
 		// Increase spacing between groups
 		& .form-controlGroup {
@@ -453,4 +457,4 @@ input[type="submit"] {
 		}
 	}
 }
-// === end <$breakpoint-single-col ===
+// === end <$bp-single-col ===

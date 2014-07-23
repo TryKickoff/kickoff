@@ -83,7 +83,7 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-	border: 1px solid $table-border-color;
+	border: 2px solid $table-border-color;
 	> thead,
 	> tbody,
 	> tfoot {
@@ -185,10 +185,10 @@ table {
 
 /**
  * Responsive tables
- * Wrap your tables in `.table-responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ * Wrap your tables in `.table--responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
  */
-.tableResponsive {
-	@include respond-max($breakpoint-single-col) {
+.table--responsive {
+	@include respond-max($bp-single-col) {
 		width: 100%;
 		margin-bottom: ($line-height-base * 0.75) + px;
 		overflow-y: hidden;

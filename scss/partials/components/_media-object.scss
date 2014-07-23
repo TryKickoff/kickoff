@@ -28,7 +28,7 @@
 
 
 
-@include respond-min($breakpoint-narrow) {
+@include respond-min($bp-narrow) {
 	.media-img,
 	.media-body {
 		display: table-cell;

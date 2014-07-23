@@ -55,11 +55,11 @@ $line-height-headings         : 1.1;
  * There are no common breakpoints so these are just a suggestion
  * You'll need to define your own breakpoints to suit your design
  */
-$breakpoint-narrow            : 400;  // Set in px
-$breakpoint-mid               : 768;  // Set in px
-$breakpoint-wide              : 992;  // Set in px
-$breakpoint-huge              : 1600; // Set in px
-$breakpoint-single-col        : $breakpoint-mid; // Break to single column
+$bp-narrow            : 400;  // Set in px
+$bp-mid               : 768;  // Set in px
+$bp-wide              : 992;  // Set in px
+$bp-huge              : 1600; // Set in px
+$bp-single-col        : $bp-mid; // Break to single column
 
 
 /**
@@ -97,11 +97,6 @@ $using-splits-and-shunts      : false ; // Use Splits & Shunts for responsive we
  */
 $table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
 $table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-condensed`.
-$table-bg                     : $color-bg !default; // Default background color used for all tables.
-$table-bg-accent              : #f9f9f9 !default; // Background color used for `.table-striped`.
-$table-bg-hover               : #f5f5f5 !default; // Background color used for `.table-hover`.
-$table-bg-active              : $table-bg-hover !default;
-$table-border-color           : #ddd !default; // Border color for table and cell borders.
 
 
 /**

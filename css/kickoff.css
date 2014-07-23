@@ -779,18 +779,12 @@ input[type="button"].btn--block {
 }
 
 /**
-  The Kickoff Grid
-  * Default grid styles
-  * Media queries
-  * Centred columns
+ * The Kickoff Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ * Centred columns
  */
-/*
-	 Basic Usage:
-	 <div class="g-row">
-			 <div class="g-col g-span4"></div>
-			 <div class="g-col g-span8"></div>
-	 </div>
-	 ========================================================================== */
 /* Import Grid helpers and mixins */
 /* ==========================================================================
    Kickoff Grid helpers
@@ -821,6 +815,14 @@ input[type="button"].btn--block {
 /*
    Shunts, offset columns, column source order calculations
    ========================================================================== */
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g-row">
+		<div class="g-col g-span4"></div>
+		<div class="g-col g-span8"></div>
+	</div>
+ */
 /**
  * Default grid styles
  */
@@ -973,26 +975,28 @@ input[type="button"].btn--block {
   display: inline-block;
 }
 
-/* ==========================================================================
-   Forms
-   * Generic form styles
-   * Form inputs and groups
-   * Form field feedback states
-   * Horizontal & vertical forms
-   * Horizontal-specific styles
-   ========================================================================== */
-/* ==========================================================================
-   Generic form styles
-   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
-   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
-   Usage:
+/**
+ * Forms
+ * =================================
+ * Generic form styles
+ * Form inputs and groups
+ * Form field feedback states
+ * Horizontal & vertical forms
+ * Horizontal-specific styles
+ */
+/**
+ * Generic form styles
+ * =================================
+ * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
   	<div class="form-controlGroup">
   		<label for="name" class="form-label">Name</label>
   		<div class="form-controlGroup-inputWrapper">
   			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
   		</div>
   	</div>
-   ========================================================================== */
+ */
 .form {
   margin: 0 0 28px;
 }
@@ -1022,9 +1026,9 @@ input[type="button"].btn--block {
   color: #b3b3b3;
 }
 
-/* ==========================================================================
-   Form inputs and groups
-   ========================================================================== */
+/**
+ * Form inputs and groups
+ */
 .form-controlGroup {
   margin-top: 14px;
   margin-bottom: 9px;
@@ -1117,13 +1121,6 @@ input[type="button"].btn--block {
   border-color: #cccccc;
   cursor: not-allowed;
 }
-.form-input:focus:required:invalid {
-  color: #b94a48;
-  border-color: #ee5f5b;
-}
-.form-input:focus:required:invalid:focus {
-  border-color: #e9322d;
-}
 
 .form-input--textarea {
   height: auto;
@@ -1178,9 +1175,9 @@ input[type="button"].btn--block {
   position: absolute;
 }
 
-/* ==========================================================================
-   Unedited code below here
-   ========================================================================== */
+/*
+ * Unedited code below here
+ */
 button,
 input[type="button"],
 input[type="reset"],
@@ -1209,10 +1206,9 @@ input[type="submit"] {
   color: #b3b3b3;
 }
 
-/*
-	Checkboxes & Radios
-
-	Checkboxes:
+/**
+ * Checkboxes:
+ * =================================
 	<label class="control">
 		<input type="checkbox" value="check1">
 		This is a checkbox
@@ -1222,7 +1218,8 @@ input[type="submit"] {
 		This is a checkbox
 	</label>
 
-	Radios:
+ * Radios:
+ * =================================
 	<label class="control">
 		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
 		This is a radio
@@ -1231,7 +1228,7 @@ input[type="submit"] {
 		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
 		This is a radio
 	</label>
-   ========================================================================== */
+ */
 .control {
   display: block;
 }
@@ -1250,9 +1247,9 @@ input[type="submit"] {
   margin-right: 1.5em;
 }
 
-/*
-   Search input
-   ========================================================================== */
+/**
+ * Search input
+ */
 .form-input--search {
   padding-left: 14px;
   padding-right: 14px;
@@ -1260,9 +1257,9 @@ input[type="submit"] {
   border-radius: 100px;
 }
 
-/*
-   Form actions
-   ========================================================================== */
+/**
+ * Form actions
+ */
 .form-actions {
   padding: 27px 20px 28px;
   margin-top: 28px;
@@ -1277,9 +1274,9 @@ input[type="submit"] {
   margin-right: 0;
 }
 
-/*
-   Form field feedback states
-   ========================================================================== */
+/**
+ * Form field feedback states
+ */
 .form-controlGroup--warning .form-label,
 .form-controlGroup--warning .help-block,
 .form-controlGroup--warning .help-inline {
@@ -1322,10 +1319,11 @@ input[type="submit"] {
   border-color: #25a25a;
 }
 
-/*
-   Placeholder text
-   * Gets special styles; can't be bundled together though for some reason
-   ========================================================================== */
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
 :-ms-input-placeholder {
   color: #b3b3b3;
 }
@@ -1355,12 +1353,13 @@ input[type="submit"] {
 }
 
 @media screen and (min-width: 48em) {
-  /* ==========================================================================
-     Horizontal-specific styles
-     * add .form--horizontal to the <form> element
-     * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
-     * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
-     ========================================================================== */
+  /**
+   * Horizontal-specific styles
+   * =================================
+   * add .form--horizontal to the <form> element
+   * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+   * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+   */
   .form--horizontal .form-controlGroup {
     margin-bottom: 28px;
   }
@@ -1773,7 +1772,7 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-  border: 1px solid #dddddd;
+  border: 2px solid #dddddd;
 }
 .table--bordered > thead > tr > th,
 .table--bordered > thead > tr > td,
@@ -1855,10 +1854,10 @@ table th[class*="col-"] {
 
 /**
  * Responsive tables
- * Wrap your tables in `.table-responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ * Wrap your tables in `.table--responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
  */
 @media screen and (max-width: 48em) {
-  .tableResponsive {
+  .table--responsive {
     width: 100%;
     margin-bottom: 21px;
     overflow-y: hidden;
@@ -1867,40 +1866,40 @@ table th[class*="col-"] {
     border: 1px solid #dddddd;
     -webkit-overflow-scrolling: touch;
   }
-  .tableResponsive > .table {
+  .table--responsive > .table {
     margin-bottom: 0;
   }
-  .tableResponsive > .table > thead > tr > th,
-  .tableResponsive > .table > thead > tr > td,
-  .tableResponsive > .table > tbody > tr > th,
-  .tableResponsive > .table > tbody > tr > td,
-  .tableResponsive > .table > tfoot > tr > th,
-  .tableResponsive > .table > tfoot > tr > td {
+  .table--responsive > .table > thead > tr > th,
+  .table--responsive > .table > thead > tr > td,
+  .table--responsive > .table > tbody > tr > th,
+  .table--responsive > .table > tbody > tr > td,
+  .table--responsive > .table > tfoot > tr > th,
+  .table--responsive > .table > tfoot > tr > td {
     white-space: nowrap;
   }
-  .tableResponsive > .table-bordered {
+  .table--responsive > .table-bordered {
     border: 0;
   }
-  .tableResponsive > .table-bordered > thead > tr > th:first-child,
-  .tableResponsive > .table-bordered > thead > tr > td:first-child,
-  .tableResponsive > .table-bordered > tbody > tr > th:first-child,
-  .tableResponsive > .table-bordered > tbody > tr > td:first-child,
-  .tableResponsive > .table-bordered > tfoot > tr > th:first-child,
-  .tableResponsive > .table-bordered > tfoot > tr > td:first-child {
+  .table--responsive > .table-bordered > thead > tr > th:first-child,
+  .table--responsive > .table-bordered > thead > tr > td:first-child,
+  .table--responsive > .table-bordered > tbody > tr > th:first-child,
+  .table--responsive > .table-bordered > tbody > tr > td:first-child,
+  .table--responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table--responsive > .table-bordered > tfoot > tr > td:first-child {
     border-left: 0;
   }
-  .tableResponsive > .table-bordered > thead > tr > th:last-child,
-  .tableResponsive > .table-bordered > thead > tr > td:last-child,
-  .tableResponsive > .table-bordered > tbody > tr > th:last-child,
-  .tableResponsive > .table-bordered > tbody > tr > td:last-child,
-  .tableResponsive > .table-bordered > tfoot > tr > th:last-child,
-  .tableResponsive > .table-bordered > tfoot > tr > td:last-child {
+  .table--responsive > .table-bordered > thead > tr > th:last-child,
+  .table--responsive > .table-bordered > thead > tr > td:last-child,
+  .table--responsive > .table-bordered > tbody > tr > th:last-child,
+  .table--responsive > .table-bordered > tbody > tr > td:last-child,
+  .table--responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table--responsive > .table-bordered > tfoot > tr > td:last-child {
     border-right: 0;
   }
-  .tableResponsive > .table-bordered > tbody > tr:last-child > th,
-  .tableResponsive > .table-bordered > tbody > tr:last-child > td,
-  .tableResponsive > .table-bordered > tfoot > tr:last-child > th,
-  .tableResponsive > .table-bordered > tfoot > tr:last-child > td {
+  .table--responsive > .table-bordered > tbody > tr:last-child > th,
+  .table--responsive > .table-bordered > tbody > tr:last-child > td,
+  .table--responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table--responsive > .table-bordered > tfoot > tr:last-child > td {
     border-bottom: 0;
   }
 }
