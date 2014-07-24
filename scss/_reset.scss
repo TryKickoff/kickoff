@@ -1,31 +1,22 @@
-/* ==========================================================================
-   Normalize - CSS reset
-
-   http://github.com/necolas/normalize.css
-   Kickoff uses an amended version of this file.
-   ========================================================================== */
-
-*,
-*:before,
-*:after {
+/**
+ * Kickoff reset
+ */
+html {
 	box-sizing: border-box;
 }
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/**
+ * Normalize - CSS reset
+ * http://github.com/necolas/normalize.css
+ * Kickoff uses an amended version of this file.
+ */
 
 // HTML5 display definitions
 // Corrects block display not defined in IE6/7/8/9 & FF3
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary,
-main {
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,main {
 	display: block;
 }
 
