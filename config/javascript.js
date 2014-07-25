@@ -30,7 +30,7 @@ module.exports.tasks = {
 	jshint: {
 		all: '<%=config.js.fileList%>',
 		options: {
-			jshintrc: '.jshintrc'
+			jshintrc: 'config/.jshintrc'
 		}
 	},
 
@@ -43,7 +43,7 @@ module.exports.tasks = {
 	jscs: {
 		src: '<%=config.js.fileList%>',
 		options: {
-			config: ".jscs.json"
+			config: "config/.jscs.json"
 		}
 	},
 
