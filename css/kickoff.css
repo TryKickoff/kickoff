@@ -131,32 +131,25 @@
 /* HiDPI */
 /* FORMS */
 /* CSS Reset  */
-/* ==========================================================================
-   Normalize - CSS reset
-
-   http://github.com/necolas/normalize.css
-   Kickoff uses an amended version of this file.
-   ========================================================================== */
-*,
-*::before,
-*::after {
+/**
+ * Kickoff reset
+ */
+html {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary,
-main {
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit;
+}
+
+/**
+ * Normalize - CSS reset
+ * http://github.com/necolas/normalize.css
+ * Kickoff uses an amended version of this file.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, main {
   display: block;
 }
 
@@ -1156,10 +1149,10 @@ input[type="button"].btn--block {
   position: relative;
   overflow: hidden;
 }
-.form-input--fileWrapper--styled::before {
+.form-input--fileWrapper--styled:before {
   content: 'Choose file...';
 }
-.form-input--fileWrapper--styled::after {
+.form-input--fileWrapper--styled:after {
   content: 'Browse';
   cursor: pointer;
   display: inline-block;
@@ -1712,7 +1705,7 @@ img, object, embed, video {
  * Tables
  */
 table {
-  background-color: transparent;
+  background-color: #f1f1f1;
 }
 
 th {
@@ -1935,9 +1928,6 @@ pre {
   background-color: #dddddd;
   border-radius: 4px;
   white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
 }
 pre.prettyprint {
   margin-bottom: 28px;
@@ -1981,6 +1971,7 @@ pre code {
  */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
   background-color: #d7d7d7;
 }
 
