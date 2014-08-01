@@ -459,14 +459,9 @@
 
 
 		<!-- JavaScript at the bottom for fast page loading -->
-		<!--[if lte IE 8]>
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
-		<![endif]-->
-		<!--[if gt IE 8]><!-->
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
-		<!--<![endif]-->
+
+		<!-- If you would like to include jQuery as a separate script request, rather than using the grunt-jquery-builder task and grunt
+			to compile it into one JS file, then replace this comment with the code at this gist – https://gist.github.com/ashleynolan/65596c15b31de0d160bf -->
 
 		<script src="/js/dist/app.min.js"></script>
 

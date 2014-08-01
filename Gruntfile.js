@@ -29,6 +29,9 @@ module.exports = function (grunt) {
 
 				// <%=config.js.fileList%>
 				fileList : [
+					// if you would like to remove jQuery from your concatenated JS, comment out the line below
+					'js/libs/jquery/jquery-1.10.2.js',
+
 					'js/helpers/console.js',
 					'bower_components/trak/dist/trak.js',
 					'bower_components/swiftclick/js/libs/swiftclick.js',

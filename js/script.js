@@ -16,22 +16,6 @@
 	});// END DOC READY
 
 
-	/* Optional triggers
-
-	// WINDOW.LOAD
-	$(window).load(function() {
-
-	});
-
-	// WINDOW.RESIZE
-	$(window).resize(function() {
-
-	});
-
-	*/
-
-
-
 	KO.Config = {
 		variableX : '', // please don't keep me - only for example syntax!
 
@@ -42,13 +26,13 @@
 
 	// Example module
 	/*
-	KO.Ui = {
-		init : function() {
-			KO.Ui.modal();
+	KO.MyExampleModule = {
+		init : function () {
+			KO.MyExampleModule.setupEvents();
 		},
 
-		modal : function() {
-
+		setupEvents : function () {
+			//do some more stuff in here
 		}
 	};
 	*/
