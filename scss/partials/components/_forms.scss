@@ -228,10 +228,10 @@
 	position: relative;
 	overflow: hidden;
 
-	&::before {
+	&:before {
 		content: 'Choose file...';
 	}
-	&::after {
+	&:after {
 		content:'Browse';
 		cursor: pointer;
 

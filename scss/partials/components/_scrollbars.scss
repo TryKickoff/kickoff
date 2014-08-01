@@ -4,6 +4,7 @@
 
 ::-webkit-scrollbar {
 	width: 10px;
+	height: 10px;
 	background-color: darken($color-bg, 10%);
 }
 ::-webkit-scrollbar-thumb {
