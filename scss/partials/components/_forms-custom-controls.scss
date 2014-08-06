@@ -1,0 +1,95 @@
+/**
+ * Custom Checkboxes and radios - modified from WTF forms – http://wtfforms.com/
+ *
+ * --------------------------------
+ *
+ * Checkbox button example HTML
+ *
+ *	 <label class="control control--custom control--checkbox">
+ *		<input type="checkbox" name="myCheckbox" />
+ *		<span class="control-indicator"></span>
+ *		My Checkbox Label Text
+ *	</label>
+ *
+ * -------------------------------
+ *
+ * Radio button example HTML
+ *
+ *	<label class="control control--custom control--radio">
+ *		<input type="radio" id="radio1" name="myRadioBtn" />
+ *		<span class="control-indicator"></span>
+ *		My Radio Button Label Text
+ * 	</label>
+ *
+ * ================================= */
+
+.control-indicator {
+	position: absolute;
+	top: .25rem;
+	left: 0;
+	display: block;
+	width:  1rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 65%;
+	color: #eee;
+	text-align: center;
+	background-color: #ddd;
+	background-size: 50% 50%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	user-select: none;
+}
+
+.control--custom input,
+.control-indicator {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.control--custom {
+	position: relative;
+	display: block;
+	padding-left: 2rem;
+	margin-left: 0;
+	line-height: 2.8;
+	color: #555;
+	cursor: pointer;
+
+ 	& input {
+	  position: absolute;
+	  opacity: 0;
+	  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+	}
+
+	/* Focus */
+	& input:focus ~ .control-indicator {
+		box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem lighten($gray, 5%);
+	}
+	/* Checked state */
+	& input:checked ~ .control-indicator {
+	  color: #fff;
+	  background-color: lighten($gray, 5%);
+	}
+	/* Active */
+	& input:active ~ .control-indicator {
+		color: #fff;
+		background-color: lighten($gray, 20%);
+	}
+}
+
+/* Checkbox modifiers */
+.control--checkbox .control-indicator {
+	border-radius: .25rem;
+}
+.control--checkbox input:checked ~ .control-indicator {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+/* Radio modifiers */
+.control--radio .control-indicator {
+	border-radius: 50%;
+}
+.control--radio input:checked ~ .control-indicator {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
