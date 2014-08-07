@@ -32,6 +32,9 @@ module.exports = function (grunt) {
 					// if you would like to remove jQuery from your concatenated JS, comment out the line below
 					'js/libs/jquery/jquery-1.10.2.js',
 
+					// if you would like some basic JS shims (when not using jQuery), uncomment the line below to compile Shimly output
+					//'js/helpers/shims.js',
+
 					'js/helpers/console.js',
 					'bower_components/trak/dist/trak.js',
 					'bower_components/swiftclick/js/libs/swiftclick.js',
@@ -79,6 +82,7 @@ module.exports = function (grunt) {
 	* run uglify, sass:kickoff and autoprefixer
 	*/
 	grunt.registerTask('default', [
+		'shimly',
 		'newer:uglify',
 		'newer:sass:kickoff',
 		'autoprefixer:kickoff'
@@ -91,6 +95,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('start', [
 		'jquery',
 		'shell:bowerinstall',
+		'shimly',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
@@ -106,6 +111,7 @@ module.exports = function (grunt) {
 	 * run uglify, sass:kickoff & autoprefixer:kickoff
 	 */
 	grunt.registerTask('dev', [
+		'shimly',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff'
@@ -117,6 +123,7 @@ module.exports = function (grunt) {
 	* run uglify, sass:kickoff, autoprefixer:kickoff and csso
 	*/
 	grunt.registerTask('deploy', [
+		'shimly',
 		'newer:uglify',
 		'newer:sass:kickoff',
 		'newer:autoprefixer:kickoff',
@@ -129,6 +136,7 @@ module.exports = function (grunt) {
 	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:kickoff, autoprefixer:styleguide, connect:styleguide & watch
 	 */
 	grunt.registerTask('styleguide', [
+		'shimly',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
@@ -144,6 +152,7 @@ module.exports = function (grunt) {
 	 * run connect and watch
 	 */
 	grunt.registerTask('serve', [
+		'shimly',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
