@@ -75,11 +75,11 @@ $img-path                     : "/img"; // Usage: background: url('#{$img-path}/
 
 // Setup grid defaults
 $layout-margin                : 0     !default; // [in pixels] Space outside the grid
+$layout-max-width               : 1000  !default; // [in pixels]
+$layout-min-width               : 1000  !default; // [in pixels] Minimum width for layout in <IE9
 
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
-$grid-max-width               : 1000  !default; // [in pixels]
-$grid-min-width               : 1000  !default; // [in pixels] Minimum width for grid in <IE9
 
 // Column Padding
 $grid-column-padding          : 10    !default; // [in pixels]

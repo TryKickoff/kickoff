@@ -35,9 +35,9 @@
    ========================================================================== */
 @function gutterCalc($show-unit: true) {
 	@if $show-unit == true {
-		@return percentage( $grid-gutter-width / ( $grid-max-width - ($layout-margin * 2) ) );
+		@return percentage( $grid-gutter-width / ( $layout-max-width - ($layout-margin * 2) ) );
 	} @else {
-		@return $grid-gutter-width / ( $grid-max-width - ($layout-margin * 2) );
+		@return $grid-gutter-width / ( $layout-max-width - ($layout-margin * 2) );
 	}
 }
 
@@ -49,7 +49,7 @@
    ========================================================================== */
 @function paddingCalc() {
 	@if $grid-column-padding-unit == '%' {
-		@return percentage( $grid-column-padding / $grid-max-width );
+		@return percentage( $grid-column-padding / $layout-max-width );
 	} @else if $grid-column-padding-unit == 'px' {
 		@return $grid-column-padding + px;
 	}
