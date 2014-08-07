@@ -39,6 +39,7 @@ module.exports = function (grunt) {
 					'bower_components/trak/dist/trak.js',
 					'bower_components/swiftclick/js/libs/swiftclick.js',
 					'bower_components/cookies-js/src/cookies.js',
+
 					'js/script.js'
 				]
 			}
