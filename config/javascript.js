@@ -1,5 +1,23 @@
 module.exports.tasks = {
 
+
+	/**
+	 * Shimly
+	 *
+	 * Load in a base set of JS shims for use in a project
+	 *
+	 */
+	shimly: {
+      // things you would like to shim (an array of items from the list above)
+      shim: ['Array.forEach', 'Array.filter', 'Array.map', 'Function.bind', 'EventListener'],
+
+      // output location (relative to your grunt.js file location)
+      dest: 'js/helpers/shims.js',
+
+      // minify the output (true or false)
+      minify: false
+    },
+
 	/**
 	 * Uglify
 	 * https://github.com/gruntjs/grunt-contrib-uglify

@@ -20,21 +20,6 @@
  */
 
 
-/**
- * Default grid styles
- */
-.g-container {
-	padding-left: #{$grid-margin}px;
-	padding-right: #{$grid-margin}px;
-	width: 95%;
-	max-width: #{$grid-max-width}px;
-	margin: 0 auto;
-
-	.lt-ie9 & {
-		min-width: #{$grid-min-width}px;
-	}
-}
-
 .g-row {
 	width: 100%;
 	margin: 0 auto;

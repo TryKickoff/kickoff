@@ -38,7 +38,7 @@
 		<!--  ====================  -->
 		<!--  === Main content ===  -->
 		<!--  ====================  -->
-		<div id="mainContent" class="g-container" role="main">
+		<div id="mainContent" class="l-container" role="main">
 
 			<hr>
 			<h4>Components: form</h4>
@@ -139,6 +139,11 @@
 											<input type="checkbox" value="check3" disabled>
 											This is a checkbox
 										</label>
+										<label class="control control--custom control--checkbox">
+											<input type="checkbox" value="check4">
+											<span class="control-indicator"></span>
+											This is a custom checkbox
+										</label>
 									</div>
 								</div>
 
@@ -154,8 +159,13 @@
 											This is another radio
 										</label>
 										<label class="control">
-											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option4" disabled>
 											This is another radio
+										</label>
+										<label class="control control--custom control--radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+											<span class="control-indicator"></span>
+											This is a custom radio button
 										</label>
 									</div>
 								</div>
@@ -336,7 +346,7 @@
 			<h4>Media object</h4>
 			<div class="media">
 				<div class="media-img">
-					<img src="http://placekitten.com/100/100">
+					<img src="http://placekitten.com/g/200/200">
 				</div>
 				<div class="media-body">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -347,7 +357,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 				<div class="media-img">
-					<img src="http://placekitten.com/200/100">
+					<img src="http://placekitten.com/g/300/200">
 				</div>
 			</div>
 
@@ -459,14 +469,9 @@
 
 
 		<!-- JavaScript at the bottom for fast page loading -->
-		<!--[if lte IE 8]>
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
-		<![endif]-->
-		<!--[if gt IE 8]><!-->
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
-		<!--<![endif]-->
+
+		<!-- If you would like to include jQuery as a separate script request, rather than using the grunt-jquery-builder task and grunt
+			to compile it into one JS file, then replace this comment with the code at this gist – https://gist.github.com/ashleynolan/65596c15b31de0d160bf -->
 
 		<script src="/js/dist/app.min.js"></script>
 

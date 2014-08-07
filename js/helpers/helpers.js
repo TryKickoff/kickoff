@@ -30,49 +30,6 @@ String.prototype.substitute = function (object) {
 	});
 };
 
-/*
-   Array forEach patch
-   ========================================================================== */
-if (!('forEach' in Array.prototype)) {
-	Array.prototype.forEach = function (fn, scope) {
-		for (var i = 0, len = this.length; i < len; ++i) {
-			fn.call(scope, this[i], i, this);
-		}
-	};
-}
-
-/*
-   Array filter patch
-   ========================================================================== */
-if (!('filter' in Array.prototype)) {
-	Array.prototype.filter = function (fn, scope) {
-		var results = [];
-		for (var value, i = 0, l = this.length >>> 0; i < l; i++) {
-			if (i in this) {
-				value = this[i];
-				if (fn.call(scope, value, i, this)) {
-					results.push(value);
-				}
-			}
-		}
-		return results;
-	};
-}
-
-/*
-   Array map patch
-   ========================================================================== */
-if (!('map' in Array.prototype)) {
-	Array.prototype.map = function (fn, scope) {
-		var length = this.length >>> 0, results = Array(length);
-		for (var i = 0; i < length; i++) {
-			if (i in this) {
-				results[i] = fn.call(scope, this[i], i, this);
-			}
-		}
-		return results;
-	};
-}
 
 /*
    Object create patch
@@ -90,6 +47,7 @@ if (!('create' in Object.prototype)) {
 		};
 	})();
 }
+
 
 /*
    Object comparison is not the same as if you compare primitive types.
@@ -127,26 +85,4 @@ Object.compare = function (obj1, obj2) {
 	return true;
 };
 
-/*
-   Function bind patch
-   ========================================================================== */
-if (!('bind' in Function.prototype)) {
-	Function.prototype.bind = function (oThis) {
-		if (typeof this !== "function") {
-			// closest thing possible to the ECMAScript 5 internal IsCallable function
-			throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
-		}
 
-		var aArgs = Array.prototype.slice.call(arguments, 1),
-			fToBind = this,
-			fNOP = function () { },
-			fBound = function () {
-				return fToBind.apply(this instanceof fNOP && oThis ? this : oThis, aArgs.concat(Array.prototype.slice.call(arguments)));
-			};
-
-		fNOP.prototype = this.prototype;
-		fBound.prototype = new fNOP();
-
-		return fBound;
-	};
-}

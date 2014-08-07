@@ -69,26 +69,27 @@ $img-path                     : "/img"; // Usage: background: url('#{$img-path}/
 
 
 /**
- * Grid setup
+ * Layout setup
  * Settings here override & affect the output in scss/partials/components/grid.scss
  */
 
-// Grid defaults
-$grid-column-count            : 12    ; // Total column count
-$grid-gutter-width            : 20    ; // [in pixels]
-$grid-max-width               : 1000  ; // [in pixels]
-$grid-min-width               : 1000  ; // [in pixels] Minimum width for grid in <IE9
-$grid-margin                  : 0     ; // [in pixels] Space outside the grid
+// Setup grid defaults
+$layout-margin                : 0     !default; // [in pixels] Space outside the grid
+
+$grid-column-count            : 12    !default; // Total column count
+$grid-gutter-width            : 20    !default; // [in pixels]
+$grid-max-width               : 1000  !default; // [in pixels]
+$grid-min-width               : 1000  !default; // [in pixels] Minimum width for grid in <IE9
 
 // Column Padding
-$grid-column-padding          : 10    ; // [in pixels]
-$grid-column-padding-unit     : 'px'  ; // [in pixels or percent] Specify your unit of measurement for column padding
-$nested-column-padding        : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+$grid-column-padding          : 10    !default; // [in pixels]
+$grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
+$nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
 // Choose your grid options
-$using-push-pull-columns      : false ; // Allow columns to be pushed & pulled
-$using-offsetcolumns          : false ; // Allow columns to be offset
-$using-splits-and-shunts      : false ; // Use Splits & Shunts for responsive web design
+$using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
+$using-offsetcolumns          : false !default; // Allow columns to be offset
+$using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
 
 
 /**
