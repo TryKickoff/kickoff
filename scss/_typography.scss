@@ -1,14 +1,15 @@
 /**
  * Typography
  * =================================
- * Body text
  * Base
  * Paragraphs
  * Headings
- * Lists
- * Quotes
  * Links
- * Helper classes
+ * Lists
+ * Definition lists
+ * Blockquotes
+ * Misc
+ * Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -22,7 +23,7 @@ html {
 	font-size: $font-size-base-narrow-px;
 	text-size-adjust: 100%;
 
-	@include respond-min($bp-mid) {
+	@include respond-min($bp-rwd-text) {
 		font-size: $font-size-base-px;
 	}
 }

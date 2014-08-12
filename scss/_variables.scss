@@ -52,14 +52,18 @@ $line-height-headings         : 1.1;
 /**
  *  Breakpoints
  * =================================
- * There are no common breakpoints so these are just a suggestion
+ * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
  */
 $bp-narrow            : 400;  // Set in px
 $bp-mid               : 768;  // Set in px
 $bp-wide              : 992;  // Set in px
 $bp-huge              : 1600; // Set in px
-$bp-single-col        : $bp-mid; // Break to single column
+
+// Special breakpoints
+$bp-single-col        : $bp-mid; // Break to single column (used in the grid)
+$bp-block-grid-narrow : $bp-mid; // Breakpoint for narrow block grids
+$bp-rwd-text          : $bp-mid; // Reduce text size below this width
 
 
 /**
