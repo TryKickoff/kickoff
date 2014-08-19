@@ -149,11 +149,11 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT SERVE * A task for for a static server with a watch
+	 * GRUNT SERVE * A task for a static server with a watch
 	 * run connect and watch
 	 */
 	grunt.registerTask('serve', [
-		// 'shimly',
+		'shimly',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff',
