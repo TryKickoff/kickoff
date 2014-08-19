@@ -30,18 +30,30 @@ module.exports.tasks = {
 		}
 	},
 
+	/**
+	 * browserSync
+	 * http://www.browsersync.io/docs/options/
+	 * http://www.browsersync.io/docs/grunt/
+	 */
 	browserSync: {
-		dev: {
+		serve: {
 			bsFiles: {
 				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
 			},
 			options: {
-				// proxy: 'kickoff.dev',
 				watchTask: true,
 				server: {
 					baseDir: "./"
-				},
-				xip : true
+				}
+			}
+		},
+
+		watch: {
+			bsFiles: {
+				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
+			},
+			options: {
+				watchTask: true
 			}
 		}
 	}

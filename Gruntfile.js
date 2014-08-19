@@ -157,7 +157,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff',
-		'browserSync',
+		'browserSync:serve',
 		'watch'
 	]);
 
