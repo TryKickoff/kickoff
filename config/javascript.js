@@ -47,7 +47,7 @@ module.exports.tasks = {
 	jshint: {
 		all: '<%=config.js.fileList%>',
 		options: {
-			jshintrc: 'config/.jshintrc'
+			jshintrc: '.jshintrc'
 		}
 	},
 
