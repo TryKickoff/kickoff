@@ -30,6 +30,7 @@ module.exports.tasks = {
 		}
 	},
 
+
 	/**
 	 * browserSync
 	 * http://www.browsersync.io/docs/options/
@@ -53,7 +54,8 @@ module.exports.tasks = {
 				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
 			},
 			options: {
-				watchTask: true
+				watchTask: true,
+				proxy: '<%=config.localserver%>'
 			}
 		}
 	}

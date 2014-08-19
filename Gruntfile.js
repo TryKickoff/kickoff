@@ -37,7 +37,9 @@ module.exports = function (grunt) {
 
 					'js/script.js'
 				]
-			}
+			},
+
+			localserver: 'kickoff.dev' // <%=config.localserver%>
 		}
 	};
 
@@ -148,6 +150,20 @@ module.exports = function (grunt) {
 		'sass:kickoff',
 		'autoprefixer:kickoff',
 		'browserSync:serve',
+		'watch'
+	]);
+
+
+	/**
+	 * GRUNT WATCHER * A task for a static server with a watch
+	 * run connect and watch
+	 */
+	grunt.registerTask('watcher', [
+		'shimly',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:kickoff',
+		'browserSync:watch',
 		'watch'
 	]);
 
