@@ -3,10 +3,10 @@ module.exports = function (grunt) {
 	'use strict';
 
 	// Load grunt tasks automatically
-    require('load-grunt-tasks')(grunt);
+	require('load-grunt-tasks')(grunt);
 
-    var options = {
-        pkg: require('./package'), // <%=pkg.name%>
+	var options = {
+		pkg: require('./package'), // <%=pkg.name%>
 
 		/**
 		 * Config - Edit this section
@@ -56,11 +56,11 @@ module.exports = function (grunt) {
 	 */
 
 
-    // Load grunt configurations automatically
-    var configs = require('load-grunt-configs')(grunt, options);
+	// Load grunt configurations automatically
+	var configs = require('load-grunt-configs')(grunt, options);
 
-    // Define the configuration for all the tasks
-    grunt.initConfig(configs);
+	// Define the configuration for all the tasks
+	grunt.initConfig(configs);
 
 
 	/* ==========================================================================
@@ -153,12 +153,11 @@ module.exports = function (grunt) {
 	 * run connect and watch
 	 */
 	grunt.registerTask('serve', [
-		'shimly',
+		// 'shimly',
 		'uglify',
 		'sass:kickoff',
-		'sass:styleguide',
 		'autoprefixer:kickoff',
-		'connect:site',
+		'browserSync',
 		'watch'
 	]);
 

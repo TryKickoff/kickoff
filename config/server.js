@@ -28,6 +28,22 @@ module.exports.tasks = {
 				livereload: true
 			}
 		}
+	},
+
+	browserSync: {
+		dev: {
+			bsFiles: {
+				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
+			},
+			options: {
+				// proxy: 'kickoff.dev',
+				watchTask: true,
+				server: {
+					baseDir: "./"
+				},
+				xip : true
+			}
+		}
 	}
 
-}
+};
