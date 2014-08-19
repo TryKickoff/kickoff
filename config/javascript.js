@@ -36,7 +36,7 @@ module.exports.tasks = {
 
 		// minify the output (true or false)
 		minify: false
-		},
+	},
 
 
 	/**

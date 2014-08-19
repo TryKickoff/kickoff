@@ -13,11 +13,12 @@ module.exports.tasks = {
 			}],
 			options: {
 				// customselectors: {
-				// 	"*": [".icon-$1:before"]
+				// 	"arrow": [".icon-arrow:before"]
 				// }
 			}
 		}
 	},
+
 
 	/**
 	 * SVGmin
@@ -30,15 +31,14 @@ module.exports.tasks = {
 				{ removeUselessStrokeAndFill: false }
 			]
 		},
-		dist: {                     // Target
-			files: [{               // Dictionary of files
-				expand: true,       // Enable dynamic expansion.
-				cwd: 'img/src',     // Src matches are relative to this path.
-				src: ['**/*.svg'],  // Actual pattern(s) to match.
-				dest: 'img/src-min',       // Destination path prefix.
-				ext: '.svg'     // Dest filepaths will have this extension.
-				// ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
+		dist: {
+			files: [{
+				expand : true,
+				cwd    : 'img/src',
+				src    : ['**/*.svg'],
+				dest   : 'img/src-min',
+				ext    : '.svg'
 			}]
 		}
 	}
-}
+};
