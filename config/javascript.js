@@ -52,19 +52,6 @@ module.exports.tasks = {
 		}
 	},
 
-
-	/**
-	 * JSCS
-	 * https://github.com/dsheiko/grunt-jscs
-	 * Manage the options inside .jscs.json file
-	 */
-	jscs: {
-		src: '<%=config.js.fileList%>',
-		options: {
-			config: "config/.jscs.json"
-		}
-	},
-
 	/**
 	 * Custom jQuery builder
 	 * Check build numbers at jquery.com

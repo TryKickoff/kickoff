@@ -74,7 +74,7 @@ module.exports = function (grunt) {
 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
 * grunt serve      : watch js & scss and run a local server
 * grunt icons      : generate the icons. uses svgmin and grunticon
-* grunt jscheck    : run jshint & jscs
+* grunt check      : run jshint
 * grunt travis     : used by travis ci only
 		 ========================================================================== */
 
@@ -174,13 +174,12 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT JSCHECK * Check js for errors and style problems
-	 * run jshint, jscs
+	 * GRUNT CHECKS * Check code for errors
+	 * run jshint
 	 */
 	// Default task
-	grunt.registerTask('jscheck', [
-		'jshint',
-		'jscs'
+	grunt.registerTask('checks', [
+		'jshint'
 	]);
 
 
