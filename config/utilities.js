@@ -20,6 +20,4 @@ module.exports.tasks = {
 			command: 'bower install'
 		}
 	}
-
-
 };

@@ -27,7 +27,8 @@ module.exports = function (grunt) {
 					// if you would like to remove jQuery from your concatenated JS, comment out the line below
 					'js/libs/jquery/jquery-1.10.2.js',
 
-					// if you would like some basic JS shims (when not using jQuery), uncomment the line below to compile Shimly output
+					// if you would like some basic JS shims (when not using jQuery),
+					// uncomment the line below to compile Shimly output
 					//'js/helpers/shims.js',
 
 					'js/helpers/console.js',
