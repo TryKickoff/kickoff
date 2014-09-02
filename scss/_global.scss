@@ -1,6 +1,16 @@
 /* ==========================================================================
    Global app/site styles
    ========================================================================== */
+.ltr {
+    direction:ltr;
+    unicode-bidi: embed;
+}
+
+.rtl {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
 body {
 	background-color: $color-background;
 }
