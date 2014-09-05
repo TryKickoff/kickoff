@@ -25,12 +25,26 @@ $leading-base                  : 1.4;
 $line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
 $line-height-base-px           : $line-height-base * 1px;
 
-$h1-size                       : 36 !default;
-$h2-size                       : 30 !default;
-$h3-size                       : 24 !default;
-$h4-size                       : 20 !default;
-$h5-size                       : 16 !default;
-$h6-size                       : 14 !default;
+// TODO: remove these vars
+$h1-size                       : 36;
+$h2-size                       : 30;
+$h3-size                       : 24;
+$h4-size                       : 20;
+$h5-size                       : 16;
+$h6-size                       : 14;
+
+// TODO: integrate these vars
+$type-scale                    : 1.25; // Major third
+
+$type-micro                    : $type-smallest  / $type-scale;
+$type-smallest                 : $type-smaller   / $type-scale;
+$type-smaller                  : $type-small     / $type-scale;
+$type-small                    : $font-size-base / $type-scale; // h5, h6
+$type-base                     : $font-size-base;               // p, h4
+$type-large                    : $type-base      * $type-scale; // h3
+$type-larger                   : $type-large     * $type-scale; // h2
+$type-largest                  : $type-larger    * $type-scale; // h1
+$type-jumbo                    : $type-largest   * $type-scale;
 
 // Useful to set here when bold webfonts come as 400 font-weight.
 $font-weight-bold             : bold;
