@@ -8,9 +8,14 @@ module.exports.tasks = {
 	 */
 	uglify: {
 		options: {
-			mangle: true, // mangle: Turn on or off mangling
+			mangle: { // set to false (replace this object) to turn off mangling
+				except: ['jQuery'] // https://github.com/gruntjs/grunt-contrib-uglify#reserved-identifiers
+			},
+			compress: { // set to false (replace this object) to turn off compression
+				drop_console: false
+			},
+
 			beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
-			compress: false,
 			// report: 'gzip', // report: Show file size report
 			sourceMap: '<%=config.js.distDir%><%=config.js.distFile%>.map',
 			sourceMappingURL: '/<%=config.js.distFile%>.map',
