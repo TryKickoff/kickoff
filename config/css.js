@@ -14,7 +14,7 @@ module.exports.tasks = {
 				lineNumbers: false,
 				debugInfo : false,
 				precision : 8,
-				sourcemap: true
+				loadPath : 'scss/'
 			},
 			files: {
 				'css/temp/<%=config.scss.cssFile%>.css'       : 'scss/<%=config.scss.cssFile%>.scss',
@@ -26,7 +26,7 @@ module.exports.tasks = {
 				unixNewlines: true,
 				style: 'compact',
 				precision : 8,
-				sourcemap: true
+				loadPath : 'scss/'
 			},
 			files: {
 				'css/styleguide.css': 'scss/styleguide.scss'
