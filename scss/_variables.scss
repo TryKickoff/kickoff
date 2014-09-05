@@ -36,10 +36,11 @@ $h6-size                       : 14;
 // TODO: integrate these vars
 $type-scale                    : 1.25; // Major third
 
-$type-micro                    : $type-smallest  / $type-scale;
-$type-smallest                 : $type-smaller   / $type-scale;
-$type-smaller                  : $type-small     / $type-scale;
+// Funny order because of how Sass parses vars
 $type-small                    : $font-size-base / $type-scale; // h5, h6
+$type-smaller                  : $type-small     / $type-scale;
+$type-smallest                 : $type-smaller   / $type-scale;
+$type-micro                    : $type-smallest  / $type-scale;
 $type-base                     : $font-size-base;               // p, h4
 $type-large                    : $type-base      * $type-scale; // h3
 $type-larger                   : $type-large     * $type-scale; // h2
