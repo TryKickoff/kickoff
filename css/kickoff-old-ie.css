@@ -34,7 +34,7 @@
 /**
  *  Breakpoints
  * =================================
- * There are no common breakpoints so these are just a suggestion
+ * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
  */
 /**
@@ -59,6 +59,15 @@
  * Most CSS3 vendor prefixed items have a mixin,
  * but we should not need them if autoprefixer is being used
  * See mixins/css3.scss for the full list
+ */
+/**
+ * Convert pixels to ems
+ * For a relational value of 12px write em(12) when the parent is 16px
+ * If the parent is another value say 24px write em(12, 24)
+ *
+ * Usage:
+ * font-size : em(12);
+ * font-size : em(12, 24);
  */
 /* ==========================================================================
    Sass Mixins
@@ -219,14 +228,15 @@ textarea {
 /**
  * Typography
  * =================================
- * Body text
  * Base
  * Paragraphs
  * Headings
- * Lists
- * Quotes
  * Links
- * Helper classes
+ * Lists
+ * Definition lists
+ * Blockquotes
+ * Misc
+ * Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -248,7 +258,7 @@ body {
   font-size: 20px;
   font-size: 1rem;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   -webkit-font-feature-settings: "liga","dlig";
      -moz-font-feature-settings: "liga","dlig";
           font-feature-settings: "liga","dlig";
@@ -280,24 +290,24 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 h1, .h1, .alpha {
-  font-size: 36px;
-  font-size: 1.8rem;
+  font-size: 39.0625px;
+  font-size: 1.953125rem;
   margin-top: 0;
   margin-bottom: 56px;
 }
 
 h2, .h2, .beta {
-  font-size: 30px;
-  font-size: 1.5rem;
+  font-size: 31.25px;
+  font-size: 1.5625rem;
   margin-top: 0;
   margin-bottom: 28px;
 }
 
 h3, .h3, .gamma {
-  font-size: 24px;
-  font-size: 1.2rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 28px;
 }
 
 h4, .h4, .delta,
@@ -305,6 +315,8 @@ h5, .h5, .epsilon,
 h6, .h6, .zeta {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 h4, .h4, .delta {
@@ -312,28 +324,19 @@ h4, .h4, .delta {
   font-size: 1rem;
 }
 
-h5, .h5, .epsilon {
-  font-size: 16px;
-  font-size: 0.8rem;
-}
-
 h6, .h6, .zeta {
-  font-size: 14px;
-  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
 * + h1, * + .h1, * + .alpha,
 * + h2, * + .h2, * + .beta,
 * + h3, * + .h3, * + .gamma,
-* + h4, * + .h4, * + .delta,
-* + h5, * + .h5, * + .epsilon,
-* + h6, * + .h6, * + .zeta {
+* + h4, * + .h4, * + .delta {
   margin-top: 28px;
 }
 
 small {
-  font-size: 75%;
+  font-size: 80%;
 }
 
 /**
@@ -369,7 +372,9 @@ ul, ol {
   padding: 0;
   margin: 0 0 28px 28px;
 }
-ul ul, ul ol, ol ul, ol ol {
+ul ul,
+ul ol, ol ul,
+ol ol {
   margin-left: 56px;
 }
 ul ul, ol ul {
@@ -384,7 +389,9 @@ ul ol, ol ol {
 ul ol ol, ol ol ol {
   list-style-type: lower-roman;
 }
-ul ul, ul ol, ol ul, ol ol {
+ul ul,
+ul ol, ol ul,
+ol ol {
   margin-bottom: 0;
 }
 
@@ -549,13 +556,13 @@ samp {
 }
 
 ::-moz-selection {
-  color: white;
+  color: #fff;
   background: #3498db;
   text-shadow: none;
 }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #3498db;
   text-shadow: none;
 }
@@ -663,8 +670,8 @@ samp {
 }
 
 .btn--large {
-  font-size: 23px;
-  font-size: 1.15rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   line-height: 3;
   height: 3em;
   padding-right: 2em;
@@ -673,8 +680,8 @@ samp {
 }
 
 .btn--small {
-  font-size: 13px;
-  font-size: 0.65rem;
+  font-size: 16px;
+  font-size: 0.8rem;
   line-height: 1.5;
   height: 1.5em;
   padding-right: 0.75em;
@@ -976,17 +983,17 @@ input[type="button"].btn--block {
   width: 100%;
   padding: 0;
   margin-bottom: 28px;
-  font-size: 30px;
-  font-size: 1.5rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   border: 0;
   border-bottom: 1px solid #eee;
   white-space: normal;
 }
 .form-legend small {
-  font-size: 15px;
-  font-size: 0.75rem;
+  font-size: 16px;
+  font-size: 0.8rem;
   color: #b3b3b3;
 }
 
@@ -995,7 +1002,7 @@ input[type="button"].btn--block {
  */
 .form-controlGroup {
   margin-top: 14px;
-  margin-bottom: 9px;
+  margin-bottom: 14px;
   list-style-type: none;
 }
 
@@ -1006,8 +1013,7 @@ input[type="button"].btn--block {
 
 .form-label {
   display: block;
-  margin-bottom: 5px;
-  color: #444444;
+  color: #444;
   font-weight: bold;
 }
 .form-label small {
@@ -1024,11 +1030,11 @@ input[type="button"].btn--block {
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   font-weight: normal;
   vertical-align: baseline;
-  background-color: white;
-  border: 2px solid #cccccc;
+  background-color: #fff;
+  border: 2px solid #ccc;
   border-radius: 5px;
   -webkit-transition: border 200ms ease-in-out;
      -moz-transition: border 200ms ease-in-out;
@@ -1059,7 +1065,7 @@ input[type="button"].btn--block {
   padding: initial;
   line-height: initial;
   border: initial;
-  background-color: white;
+  background-color: #fff;
   background-color: initial;
 }
 .form-input[type="hidden"] {
@@ -1082,7 +1088,7 @@ input[type="button"].btn--block {
 }
 .form-input[disabled], .form-input[readonly] {
   background-color: #e6e6e6;
-  border-color: #cccccc;
+  border-color: #ccc;
   cursor: not-allowed;
 }
 
@@ -1097,7 +1103,7 @@ input[type="button"].btn--block {
 }
 
 .form-input--select {
-  background-color: white;
+  background-color: #fff;
 }
 .form-input--select[multiple], .form-input--select[size] {
   height: auto;
@@ -1149,25 +1155,6 @@ input[type="submit"] {
   width: auto;
   cursor: pointer;
   -webkit-appearance: button;
-}
-
-.form-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 28px;
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  color: #444444;
-  border: 0;
-  border-bottom: 1px solid #eee;
-  white-space: normal;
-}
-.form-legend small {
-  font-size: 15px;
-  font-size: 0.75rem;
-  color: #b3b3b3;
 }
 
 /**
@@ -1225,10 +1212,10 @@ input[type="submit"] {
  * Form actions
  */
 .form-actions {
-  padding: 27px 20px 28px;
+  padding: 28px 20px;
   margin-top: 28px;
   margin-bottom: 28px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
 .form-actions .btn, .form-actions .tabs a, .tabs .form-actions a {
@@ -1424,7 +1411,7 @@ input[type="submit"] {
   /* Put the input behind the label so it doesn't overlay text */
 }
 .control--custom input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 0.075rem white, 0 0 0 0.2rem #a3b1b2;
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #a3b1b2;
 }
 .control--custom input:checked ~ .control-indicator {
   color: #fff;
@@ -1542,7 +1529,7 @@ img, object, embed, video {
    Fluid width video
    * 16:9 aspect ratio by default
    * Usage:
-   * <div class="fluidVideo"><iframe src="..."/></div
+   * <div class="fluidVideo"><iframe src="..."/></div>
    ========================================================================== */
 .fluidVideo {
   position: relative;
@@ -1568,7 +1555,7 @@ img, object, embed, video {
  * </ul>
  *
  * Mobile Usage:
- * <ul class="l-blockGrid l-blockGrid--3up l-blockGrid--3up--narrow">
+ * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
  *     <li></li>
  * </ul>
  */
@@ -1703,6 +1690,8 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 28px;
+  border-padding: 0;
+  border-spacing: 0;
 }
 .table > thead > tr > th,
 .table > thead > tr > td,
@@ -1713,15 +1702,15 @@ th {
   padding: 8px;
   line-height: 28px;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .table > thead > tr > th,
 .table > thead > tr > td {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #ddd;
 }
 .table > tfoot > tr > td {
-  border-top: 3px solid #dddddd;
+  border-top: 3px solid #ddd;
 }
 .table > caption + thead > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
@@ -1732,7 +1721,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ddd;
 }
 .table .table {
   background-color: #f1f1f1;
@@ -1752,7 +1741,7 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-  border: 2px solid #dddddd;
+  border: 2px solid #ddd;
 }
 .table--bordered > thead > tr > th,
 .table--bordered > thead > tr > td,
@@ -1760,7 +1749,7 @@ th {
 .table--bordered > tbody > tr > td,
 .table--bordered > tfoot > tr > th,
 .table--bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table--bordered > thead > tr > th,
 .table--bordered > thead > tr > td {
@@ -1812,7 +1801,7 @@ th {
  */
 .table--hover > tbody > tr:hover > td,
 .table--hover > tbody > tr:hover > th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 /**
@@ -1834,7 +1823,7 @@ table th[class*="col-"] {
 
 /**
  * Responsive tables
- * Wrap your tables in `.table--responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
  */
 /**
  * Preformatted code
@@ -1844,9 +1833,9 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 17px;
-  font-size: 0.85rem;
-  color: #444444;
+  font-size: 16px;
+  font-size: 0.8rem;
+  color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;
        tab-size: 3;
@@ -1854,27 +1843,23 @@ pre {
 
 code {
   padding: 2px 4px;
-  color: #444444;
-  background-color: #dddddd;
+  color: #444;
+  background-color: #ddd;
 }
 
 pre {
   display: block;
-  padding: 13.5px;
-  margin: 0 0 14px;
-  line-height: 1.4;
-  color: #444444;
-  background-color: #dddddd;
+  padding: 14px;
+  margin: 0 0 28px;
+  color: #444;
+  background-color: #ddd;
   border-radius: 4px;
   white-space: pre;
 }
-pre.prettyprint {
-  margin-bottom: 28px;
-}
 pre code {
   padding: 0;
-  color: #444444;
-  background-color: #dddddd;
+  color: #444;
+  background-color: #ddd;
   border: 0;
 }
 
