@@ -24,7 +24,7 @@ module.exports.tasks = {
 		styleguide: {
 			options: {
 				unixNewlines: true,
-				style: 'compact',
+				style: 'compressed',
 				precision : 8,
 				loadPath : 'scss/'
 			},
