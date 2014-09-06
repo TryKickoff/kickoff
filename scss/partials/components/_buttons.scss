@@ -99,7 +99,7 @@
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
 .btn--large {
-	@include font-size($font-size-base + 3);
+	@include font-size($type-large);
 	line-height:3;
 	height:     3em;
 	padding-right:2em;
@@ -109,7 +109,7 @@
 
 // Small
 .btn--small {
-	@include font-size(13);
+	@include font-size($type-small);
 	line-height:1.5;
 	height:     1.5em;
 	padding-right:0.75em;

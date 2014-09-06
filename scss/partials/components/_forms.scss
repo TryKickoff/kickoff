@@ -23,7 +23,7 @@
   	</div>
  */
 .form {
-	margin: 0 0 ($line-height-base + px);
+	margin: 0 0 $baseline;
 }
 
 .form-fieldset {
@@ -36,8 +36,8 @@
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: $line-height-base + px;
-	@include font-size($font-size-base * 1.5);
+	margin-bottom: $baseline;
+	@include font-size($type-large);
 	line-height: $leading-base;
 	color: $label-color;
 	border: 0;
@@ -46,7 +46,7 @@
 
 	// Small
 	& small {
-		@include font-size($font-size-base * .75);
+		@include font-size($type-small);
 		color: lighten(#000, 70%);
 	}
 }
@@ -55,21 +55,21 @@
  * Form inputs and groups
  */
 .form-controlGroup {
-	margin-top: ($line-height-base / 2 + px);
-	margin-bottom: 9px;
+	margin-top: $baseline / 2;
+	margin-bottom: $baseline / 2;
 	list-style-type: none;
 }
 
 // Legend collapses margin, so next element is responsible for spacing
 .form-legend + .form-controlGroup {
-	margin-top: $line-height-base + px;
+	margin-top: $baseline;
 	-webkit-margin-top-collapse: separate;
 }
 
 // Identify controls by their labels
 .form-label {
 	display: block;
-	margin-bottom: 5px;
+	// margin-bottom: $baseline / 2;
 	color: $label-color;
 	font-weight: bold;
 
@@ -86,7 +86,7 @@
 	height: 2.5em;
 	padding: 0.5em;
 
-	@include font-size($font-size-base);
+	@include font-size($type-base);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-color;
@@ -154,6 +154,7 @@
 		padding: 2px;
 	}
 
+	// See http://martineau.tv/2013/05/hidden-characters-in-password-inputs/
 	&[type="password"] {
 		font-family: sans-serif;
 	}
@@ -214,7 +215,7 @@
 .form-input-file {
 	display: inline-block;
 	width: 100%;
-	@include font-size($font-size-base);
+	@include font-size($type-base);
 	margin: 0;
 	vertical-align: middle;
 	line-height: 1em;
@@ -266,26 +267,6 @@ input[type="submit"] {
 	-webkit-appearance: button;
 }
 
-
-// Groups of fields with labels on top (legends)
-.form-legend {
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: $line-height-base + px;
-	@include font-size($font-size-base * 1.5);
-	line-height: $leading-base;
-	color: $label-color;
-	border: 0;
-	border-bottom: 1px solid #eee;
-	white-space: normal;
-
-	// Small
-	& small {
-		@include font-size($font-size-base * .75);
-		color: lighten(#000, 70%);
-	}
-}
 
 /**
  * Checkboxes:
@@ -345,9 +326,9 @@ input[type="submit"] {
  * Form actions
  */
 .form-actions {
-	padding: ($line-height-base - 1 + px) 20px ($line-height-base + px);
-	margin-top: $line-height-base + px;
-	margin-bottom: $line-height-base + px;
+	padding: $baseline 20px;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 	background-color: $form-actions-bg;
 	border-top: 1px solid #ddd;
 
@@ -399,7 +380,7 @@ input[type="submit"] {
 
 .form-helpBlock {
 	display: block; // account for any element using help-block
-	margin-bottom: $line-height-base / 2 + px;
+	margin-bottom: $baseline / 2;
 }
 
 .form-helpInline {
@@ -420,7 +401,7 @@ input[type="submit"] {
 	.form--horizontal {
 		// Increase spacing between groups
 		& .form-controlGroup {
-			margin-bottom: $line-height-base + px;
+			margin-bottom: $baseline;
 			@include clearfix;
 		}
 
@@ -447,7 +428,7 @@ input[type="submit"] {
 
 		// Remove bottom margin on block level help text since that's accounted for on .form--control-group
 		& .form-helpBlock {
-			margin-top: $line-height-base / 2 + px;
+			margin-top: $baseline / 2;
 			margin-bottom: 0;
 		}
 
