@@ -23,15 +23,7 @@ $font-size-base-narrow-px      : $font-size-base-narrow * 1px;
 
 $leading-base                  : 1.4;
 $line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
-$line-height-base-px           : $line-height-base * 1px;
-
-// TODO: remove these vars
-$h1-size                       : 36;
-$h2-size                       : 30;
-$h3-size                       : 24;
-$h4-size                       : 20;
-$h5-size                       : 16;
-$h6-size                       : 14;
+$baseline                      : $line-height-base * 1px;
 
 // TODO: integrate these vars
 $type-scale                    : 1.25; // Major third
@@ -47,9 +39,9 @@ $type-larger                   : $type-large     * $type-scale; // h2
 $type-largest                  : $type-larger    * $type-scale; // h1
 $type-jumbo                    : $type-largest   * $type-scale;
 
+
 // Useful to set here when bold webfonts come as 400 font-weight.
 $font-weight-bold             : bold;
-
 
 /* Font stacks */
 $font-family-sans             : "Helvetica Neue", Helvetica, Arial, sans-serif;
