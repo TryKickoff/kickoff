@@ -64,7 +64,7 @@ module.exports.tasks = {
 		build: {
 			options: {
 				prefix: "jquery-",
-				minify: true
+				minify: false
 			},
 			output: "js/libs/jquery",
 			versions: {
