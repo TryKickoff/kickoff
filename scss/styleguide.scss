@@ -156,22 +156,22 @@ body {
 		margin: 1em 0;
 
 		h1::after {
-			content: ' - #{$h1-size}px';
+			content: ' - #{$type-largest}px';
 		}
 		h2::after {
-			content: ' - #{$h2-size}px';
+			content: ' - #{$type-larger}px';
 		}
 		h3::after {
-			content: ' - #{$h3-size}px';
+			content: ' - #{$type-large}px';
 		}
 		h4::after {
-			content: ' - #{$h4-size}px';
+			content: ' - #{$type-base}px';
 		}
 		h5::after {
-			content: ' - #{$h5-size}px';
+			content: ' - #{$type-small}px';
 		}
 		h6::after {
-			content: ' - #{$h6-size}px';
+			content: ' - #{$type-small}px';
 		}
 
 		h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
@@ -224,6 +224,6 @@ p.typeSpecimen::after {
 	code,
 	pre {
 		@include font-size(14);
-		background-color: #CACACA;
+		background-color: #cacaca; /* alpha: 1 */
 	}
 }
