@@ -76,9 +76,11 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('default', [
 		'shimly',
-		'newer:uglify',
-		'newer:sass:kickoff',
-		'autoprefixer:kickoff'
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:kickoff',
+		'browserSync:serve',
+		'watch'
 	]);
 
 
