@@ -187,7 +187,7 @@ module.exports = function (grunt) {
 	 * run jshint
 	 */
 	grunt.registerTask('checks', [
-		'jshint'
+		'jshint:project'
 	]);
 
 
@@ -195,9 +195,8 @@ module.exports = function (grunt) {
 	 * Travis CI to test build
 	 */
 	grunt.registerTask('travis', [
-		'jshint',
+		'jshint:all',
 		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff'
+		'sass:kickoff'
 	]);
 };

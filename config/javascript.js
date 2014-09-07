@@ -50,10 +50,11 @@ module.exports.tasks = {
 	 * Manage the options inside .jshintrc file
 	 */
 	jshint: {
-		all: '<%=config.js.fileList%>',
 		options: {
 			jshintrc: '.jshintrc'
-		}
+		},
+		project: '<%=config.js.fileList%>',
+		all: ['js/**/*.js', '!js/dist/*.js', '!js/**/*.min.js']
 	},
 
 	/**
