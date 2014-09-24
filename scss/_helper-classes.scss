@@ -8,7 +8,7 @@
  * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix::after {
+.clearfix:after {
 	content:"";
 	display:table;
 	clear:both;
