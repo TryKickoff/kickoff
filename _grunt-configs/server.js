@@ -39,7 +39,7 @@ module.exports.tasks = {
 	browserSync: {
 		serve: {
 			bsFiles: {
-				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
+				src: ['css/*.css', '<%=config.js.distDir%>/*.js', '*.html']
 			},
 			options: {
 				watchTask: true,
