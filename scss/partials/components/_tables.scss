@@ -189,6 +189,9 @@ table {
 /**
  * Responsive tables
  * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ *
+ * If you need more responsive tables, consider Tablesaw by the Filament Group:
+ * https://github.com/filamentgroup/tablesaw
  */
 .tableResponsive {
 	@include respond-max($bp-single-col) {
