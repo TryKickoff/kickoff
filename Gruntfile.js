@@ -16,6 +16,8 @@ module.exports = function (grunt) {
 		 * Choose javascript files to be uglified
 		 */
 		config : {
+			src: "config-grunt/*.js",
+
 			scss : {
 				cssFile : 'kickoff' // <%=config.scss.cssFile%>
 			},

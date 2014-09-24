@@ -6,7 +6,7 @@
 /* Font stacks */
 /** Breakpoints ================================= There are no common breakpoints so these are just a suggestion You'll need to define your own breakpoints to suit your design */
 /** Path vars */
-/** Grid setup Settings here override & affect the output in scss/partials/components/grid.scss */
+/** Layout setup Settings here override & affect the output in scss/partials/components/grid.scss */
 /** Tables Customizes the `.table` component with basic values, each used across all table variations. */
 /** App-specific variables ================================= Add common vars below here */
 /* ========================================================================== Sass Mixins Vendor Prefixer Responsive CSS3 Utility Mixins hiDpi Forms ========================================================================== */
@@ -61,9 +61,9 @@ body { background-color: #f1f1f1; }
 /* Colours ========================================================================== */
 .swatch { height: 120px; padding: 15px; margin-bottom: 0.5em; }
 
-.color-text { color: #444444; }
-.color-text.bg { background-color: #444444; color: #fff; }
-.color-text.bg::after { content: "#444444"; }
+.color-text { color: #444; }
+.color-text.bg { background-color: #444; color: #fff; }
+.color-text.bg::after { content: "#444"; }
 
 .color-background { color: #f1f1f1; }
 .color-background.bg { background-color: #f1f1f1; color: #444; }
@@ -105,7 +105,7 @@ body { background-color: #f1f1f1; }
 
 h1.typeSpecimen::after { content: "Font stack: inherit"; }
 
-p.typeSpecimen::after { content: 'Font stack: "Helvetica Neue", Helvetica, Arial, sans-serif'; }
+p.typeSpecimen::after { content: "Font stack: Helvetica Neue, Helvetica, Arial, sans-serif"; }
 
 /** Starter page */
 .checklistInfo { margin-bottom: 15px; margin-left: 30px; font-size: 17px; }

@@ -252,7 +252,7 @@ body {
   font-size: 20px;
   font-size: 1rem;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   -webkit-font-feature-settings: "liga","dlig";
      -moz-font-feature-settings: "liga","dlig";
           font-feature-settings: "liga","dlig";
@@ -553,13 +553,13 @@ samp {
 }
 
 ::-moz-selection {
-  color: white;
+  color: #fff;
   background: #3498db;
   text-shadow: none;
 }
 
 ::selection {
-  color: white;
+  color: #fff;
   background: #3498db;
   text-shadow: none;
 }
@@ -989,7 +989,7 @@ input[type="button"].btn--block {
   font-size: 30px;
   font-size: 1.5rem;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   border: 0;
   border-bottom: 1px solid #eee;
   white-space: normal;
@@ -1017,7 +1017,7 @@ input[type="button"].btn--block {
 .form-label {
   display: block;
   margin-bottom: 5px;
-  color: #444444;
+  color: #444;
   font-weight: bold;
 }
 .form-label small {
@@ -1034,11 +1034,11 @@ input[type="button"].btn--block {
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   font-weight: normal;
   vertical-align: baseline;
-  background-color: white;
-  border: 2px solid #cccccc;
+  background-color: #fff;
+  border: 2px solid #ccc;
   border-radius: 5px;
   -webkit-transition: border 200ms ease-in-out;
      -moz-transition: border 200ms ease-in-out;
@@ -1069,7 +1069,7 @@ input[type="button"].btn--block {
   padding: initial;
   line-height: initial;
   border: initial;
-  background-color: white;
+  background-color: #fff;
   background-color: initial;
 }
 .form-input[type="hidden"] {
@@ -1092,7 +1092,7 @@ input[type="button"].btn--block {
 }
 .form-input[disabled], .form-input[readonly] {
   background-color: #e6e6e6;
-  border-color: #cccccc;
+  border-color: #ccc;
   cursor: not-allowed;
 }
 
@@ -1107,7 +1107,7 @@ input[type="button"].btn--block {
 }
 
 .form-input--select {
-  background-color: white;
+  background-color: #fff;
 }
 .form-input--select[multiple], .form-input--select[size] {
   height: auto;
@@ -1169,7 +1169,7 @@ input[type="submit"] {
   font-size: 30px;
   font-size: 1.5rem;
   line-height: 1.4;
-  color: #444444;
+  color: #444;
   border: 0;
   border-bottom: 1px solid #eee;
   white-space: normal;
@@ -1238,7 +1238,7 @@ input[type="submit"] {
   padding: 27px 20px 28px;
   margin-top: 28px;
   margin-bottom: 28px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
 .form-actions .btn, .form-actions .tabs a, .tabs .form-actions a {
@@ -1435,7 +1435,7 @@ input[type="submit"] {
   /* Put the input behind the label so it doesn't overlay text */
 }
 .control--custom input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 0.075rem white, 0 0 0 0.2rem #a3b1b2;
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #a3b1b2;
 }
 .control--custom input:checked ~ .control-indicator {
   color: #fff;
@@ -1806,15 +1806,15 @@ th {
   padding: 8px;
   line-height: 28px;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .table > thead > tr > th,
 .table > thead > tr > td {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #ddd;
 }
 .table > tfoot > tr > td {
-  border-top: 3px solid #dddddd;
+  border-top: 3px solid #ddd;
 }
 .table > caption + thead > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
@@ -1825,7 +1825,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ddd;
 }
 .table .table {
   background-color: #f1f1f1;
@@ -1845,7 +1845,7 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-  border: 2px solid #dddddd;
+  border: 2px solid #ddd;
 }
 .table--bordered > thead > tr > th,
 .table--bordered > thead > tr > td,
@@ -1853,7 +1853,7 @@ th {
 .table--bordered > tbody > tr > td,
 .table--bordered > tfoot > tr > th,
 .table--bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table--bordered > thead > tr > th,
 .table--bordered > thead > tr > td {
@@ -1905,7 +1905,7 @@ th {
  */
 .table--hover > tbody > tr:hover > td,
 .table--hover > tbody > tr:hover > th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 /**
@@ -1936,7 +1936,7 @@ table th[class*="col-"] {
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     -webkit-overflow-scrolling: touch;
   }
   .table--responsive > .table {
@@ -1987,7 +1987,7 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 17px;
   font-size: 0.85rem;
-  color: #444444;
+  color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;
        tab-size: 3;
@@ -1995,8 +1995,8 @@ pre {
 
 code {
   padding: 2px 4px;
-  color: #444444;
-  background-color: #dddddd;
+  color: #444;
+  background-color: #ddd;
 }
 
 pre {
@@ -2004,8 +2004,8 @@ pre {
   padding: 13.5px;
   margin: 0 0 14px;
   line-height: 1.4;
-  color: #444444;
-  background-color: #dddddd;
+  color: #444;
+  background-color: #ddd;
   border-radius: 4px;
   white-space: pre;
 }
@@ -2014,8 +2014,8 @@ pre.prettyprint {
 }
 pre code {
   padding: 0;
-  color: #444444;
-  background-color: #dddddd;
+  color: #444;
+  background-color: #ddd;
   border: 0;
 }
 
