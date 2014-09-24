@@ -20,6 +20,9 @@
 			 * http://iconifier.net
 		-->
 
+		<script>window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var a=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];a.rel="stylesheet",a.href=e[o&&n?0:o?1:2],a.media="only x",r.parentNode.insertBefore(a,r),setTimeout(function(){a.media="all"})},a=new t.Image;a.onerror=function(){o(!1)},a.onload=function(){o(1===a.width&&1===a.height)},a.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};grunticon(["/img/icons/icons.data.svg.css", "/img/icons/icons.data.png.css", "/img/icons/icons.fallback.css"]);</script>
+		<noscript><link href="/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
+
 		<script src="/js/libs/modernizr.min.js"></script>
 	</head>
 	<body>
@@ -269,6 +272,20 @@
 
 			<hr>
 
+			<h1>Heading 1 <small>small</small></h1>
+			<h2>Heading 2</h2>
+			<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h3>Heading 3</h3>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras <a href="">mattis consectetur purus</a> sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h4>Heading 4</h4>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante <a href="">venenatis dapibus</a> posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h5>Heading 5</h5>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h6>Heading 6</h6>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+			<hr>
+
 			<h4>Grid: Normal columns</h4>
 			<div class="g-row">
 				<div class="g-col g-span3">
@@ -365,7 +382,7 @@
 
 			<h4>Tables</h4>
 
-			<table class="table table--bordered table--striped table--hover table--rounded" cellpadding="0" cellspacing="0">
+			<table class="table table--bordered table--striped table--hover table--rounded">
 				<thead>
 					<th>Table Cell</th>
 					<th>Table Cell</th>
@@ -405,9 +422,9 @@
 				</tfoot>
 			</table>
 
-			<h5>Responsive tables</h5>
+			<h5>Simple responsive tables</h5>
 			<div class="tableResponsive">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<thead>
 						<th>Table Cell</th>
 						<th>Table Cell</th>
@@ -461,6 +478,22 @@
 					</tfoot>
 				</table>
 			</div>
+
+
+			<pre>
+&lt;table class="table">
+	&lt;tbody>
+		&lt;tr>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+		&lt;/tr>
+	&lt;/tbody>
+&lt;/table></pre>
+
+<p>Lorem ipsum dolor sit amet, <code>consectetur adipisicing elit</code>. Repellat id dicta soluta sequi saepe!</p>
 
 
 

@@ -2,21 +2,16 @@ module.exports = function (grunt) {
 
 	'use strict';
 
-	// Load grunt tasks automatically
-    require('load-grunt-tasks')(grunt);
-
-    var options = {
-        pkg: require('./package'), // <%=pkg.name%>
+	var options = {
+		pkg: require('./package'), // <%=pkg.name%>
 
 		/**
 		 * Config - Edit this section
 		 * ==========================
-		 * Choose javascript dist filename
-		 * Choose javascript dist location
-		 * Choose javascript files to be uglified
+		 * Choose sass & js vars
 		 */
 		config : {
-			src: "config-grunt/*.js",
+			src: "_grunt-configs/*.js",
 
 			scss : {
 				cssFile : 'kickoff' // <%=config.scss.cssFile%>
@@ -34,67 +29,67 @@ module.exports = function (grunt) {
 					// if you would like to remove jQuery from your concatenated JS, comment out the line below
 					'js/libs/jquery/jquery-1.10.2.js',
 
-					// if you would like some basic JS shims (when not using jQuery), uncomment the line below to compile Shimly output
+					// if you would like some basic JS shims (when not using jQuery),
+					// uncomment the line below to compile Shimly output
 					//'js/helpers/shims.js',
 
 					'js/helpers/console.js',
-					'bower_components/trak/dist/trak.js',
-					'bower_components/swiftclick/js/libs/swiftclick.js',
-					'bower_components/cookies-js/src/cookies.js',
+					'js/vendor/trak/dist/trak.js',
+					'js/vendor/swiftclick/js/libs/swiftclick.js',
+					'js/vendor/cookies-js/src/cookies.js',
 
 					'js/script.js'
 				]
-			}
+			},
+
+			localserver: 'kickoff.dev' // <%=config.localserver%>
 		}
 	};
 
+	// Load grunt tasks automatically
+	require('load-grunt-tasks')(grunt);
+
+	// Load grunt configurations automatically
+	var configs = require('load-grunt-configs')(grunt, options);
+
+	// Define the configuration for all the tasks
+	grunt.initConfig(configs);
+
 
 	/**
-	 * Config - Edit this section
-	 * ==========================
-	 * Choose javascript dist filename
-	 * Choose javascript dist location
-	 * Choose javascript files to be uglified
+	 * Available tasks:
+	 * grunt            : run jshint, uglify and sass:kickoff
+	 * grunt start      : run this before starting development
+	 * grunt watch      : run sass:kickoff, uglify and livereload
+	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
+	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
+	 * grunt jquery     : build custom version of jquery
+	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
+	 * grunt serve      : watch js & scss and run a local server
+	 * grunt icons      : generate the icons. uses svgmin and grunticon
+	 * grunt check      : run jshint
+	 * grunt travis     : used by travis ci only
 	 */
 
 
-    // Load grunt configurations automatically
-    var configs = require('load-grunt-configs')(grunt, options);
-
-    // Define the configuration for all the tasks
-    grunt.initConfig(configs);
-
-
-	/* ==========================================================================
-		Available tasks:
-* grunt            : run jshint, uglify and sass:kickoff
-* grunt start      : run this before starting development
-* grunt watch      : run sass:kickoff, uglify and livereload
-* grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
-* grunt deploy     : run jshint, uglify, sass:kickoff and csso
-* grunt jquery     : build custom version of jquery
-* grunt styleguide : watch js & scss, run a local server for editing the styleguide
-* grunt serve      : watch js & scss and run a local server
-* grunt icons      : generate the icons. uses svgmin and grunticon
-* grunt jscheck    : run jshint & jscs
-* grunt travis     : used by travis ci only
-		 ========================================================================== */
-
 	/**
-	* GRUNT * Default task
-	* run uglify, sass:kickoff and autoprefixer
-	*/
+	 * GRUNT * Default task
+	 * run uglify, sass:kickoff and autoprefixer
+	 */
 	grunt.registerTask('default', [
 		'shimly',
-		'newer:uglify',
-		'newer:sass:kickoff',
-		'autoprefixer:kickoff'
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:kickoff',
+		'browserSync:serve',
+		'watch'
 	]);
 
+
 	/**
-	* GRUNT START * Run this to
-	* run jquery builder, uglify, sass and autoprefixer
-	*/
+	 * GRUNT START * Run this to
+	 * run jquery builder, uglify, sass and autoprefixer
+	 */
 	grunt.registerTask('start', [
 		'jquery',
 		'shell:bowerinstall',
@@ -122,9 +117,9 @@ module.exports = function (grunt) {
 
 
 	/**
-	* GRUNT DEPLOY * A task for your production environment
-	* run uglify, sass:kickoff, autoprefixer:kickoff and csso
-	*/
+	 * GRUNT DEPLOY * A task for your production environment
+	 * run uglify, sass:kickoff, autoprefixer:kickoff and csso
+	 */
 	grunt.registerTask('deploy', [
 		'shimly',
 		'newer:uglify',
@@ -151,16 +146,29 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT SERVE * A task for for a static server with a watch
+	 * GRUNT SERVE * A task for a static server with a watch
 	 * run connect and watch
 	 */
 	grunt.registerTask('serve', [
 		'shimly',
 		'uglify',
 		'sass:kickoff',
-		'sass:styleguide',
 		'autoprefixer:kickoff',
-		'connect:site',
+		'browserSync:serve',
+		'watch'
+	]);
+
+
+	/**
+	 * GRUNT WATCHER * A task for a static server with a watch
+	 * run connect and watch
+	 */
+	grunt.registerTask('watcher', [
+		'shimly',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:kickoff',
+		'browserSync:watch',
 		'watch'
 	]);
 
@@ -177,29 +185,20 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT JSCHECK * Check js for errors and style problems
-	 * run jshint, jscs
+	 * GRUNT CHECKS * Check code for errors
+	 * run jshint
 	 */
-	// Default task
-	grunt.registerTask('jscheck', [
-		'jshint',
-		'jscs'
-	]);
-
-
-	//Travis CI to test build
-	grunt.registerTask('travis', [
-		'jshint',
-		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff'
+	grunt.registerTask('checks', [
+		'jshint:project'
 	]);
 
 
 	/**
-	 * TODO:
-	 * Need task to update all grunt dependencies
-	 * Need task to download all bower dependencies
+	 * Travis CI to test build
 	 */
-
+	grunt.registerTask('travis', [
+		'jshint:all',
+		'uglify',
+		'sass:kickoff'
+	]);
 };

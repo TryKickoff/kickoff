@@ -1,0 +1,23 @@
+{
+	"curly": false,
+	"eqeqeq": true,
+	"newcap": false,
+	"noarg": true,
+	"noempty": false,
+	"nonew": true,
+	"sub": true,
+	"undef": false,
+	"unused": true,
+	"trailing": true,
+	"boss": true,
+	"eqnull": true,
+	"strict": false,
+	"immed": true,
+	"expr": true,
+	"latedef": "nofunc",
+	"indent": 2,
+	"node": true,
+	"jquery": true,
+	"browser": true,
+	"evil": true
+}

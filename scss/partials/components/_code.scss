@@ -8,7 +8,7 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $font-family-mono;
-	@include font-size($font-size-base - 3);
+	@include font-size($type-small);
 	color: $color-code;
 	border-radius: 3px;
 	tab-size: 3;
@@ -24,9 +24,9 @@ code {
 // Blocks of code
 pre {
 	display: block;
-	padding: ($line-height-base - 1) / 2 + px;
-	margin: 0 0 ($line-height-base / 2 + px);
-	line-height: $leading-base;
+	padding: $baseline / 2;
+	margin: 0 0 $baseline;
+	// line-height: $leading-base;
 	color: $color-pre;
 	background-color: $color-pre-bg;
 	border-radius: 4px;
@@ -34,11 +34,6 @@ pre {
 	// white-space: pre-wrap;
 	// word-break: break-all;
 	// word-wrap: break-word;
-
-	// Make prettyprint styles more spaced out for readability
-	&.prettyprint {
-		margin-bottom: $line-height-base + px;
-	}
 
 	// Account for some code outputs that place code tags in pre tags
 	& code {

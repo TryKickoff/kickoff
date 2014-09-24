@@ -23,7 +23,7 @@ Thumbs.db
 *.sublime-*
 
 node_modules
-bower_components
+js/vendor
 
 # Ignore these if we are building js/Sass on the server #
 #########################################################

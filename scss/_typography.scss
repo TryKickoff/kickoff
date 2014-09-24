@@ -1,14 +1,15 @@
 /**
  * Typography
  * =================================
- * Body text
  * Base
  * Paragraphs
  * Headings
- * Lists
- * Quotes
  * Links
- * Helper classes
+ * Lists
+ * Definition lists
+ * Blockquotes
+ * Misc
+ * Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -22,14 +23,14 @@ html {
 	font-size: $font-size-base-narrow-px;
 	text-size-adjust: 100%;
 
-	@include respond-min($bp-mid) {
+	@include respond-min($bp-rwd-text) {
 		font-size: $font-size-base-px;
 	}
 }
 
 body {
 	font-family: $font-family-base;
-	@include font-size($font-size-base);
+	@include font-size($type-base);
 	line-height: $leading-base;
 	color: $color-text;
 
@@ -53,13 +54,13 @@ body {
  */
 p {
 	font-family: $font-family-base;
-	@include font-size($font-size-base);
+	@include font-size($type-base);
 	margin-top: 0;
-	margin-bottom: $line-height-base-px;
+	margin-bottom: $baseline;
 
 	// Measure - ideally about 65 chars per line
 	// =========================================
-	// max-width: $font-size-base * 30 + px;
+	// max-width: $type-base * 30 + px;
 
 	// & small {
 	// 	color: lighten($color-text, 10%);
@@ -84,21 +85,21 @@ h1, h2, h3, h4, h5, h6 {
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
 h1, .h1, .alpha {
-	@include font-size($h1-size);
+	@include font-size($type-largest);
 	margin-top: 0;
-	margin-bottom: $line-height-base-px * 2;
+	margin-bottom: $baseline * 2;
 }
 
 h2, .h2, .beta {
-	@include font-size($h2-size);
+	@include font-size($type-larger);
 	margin-top: 0;
-	margin-bottom: $line-height-base-px;
+	margin-bottom: $baseline;
 }
 
 h3, .h3, .gamma {
-	@include font-size($h3-size);
+	@include font-size($type-large);
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: $baseline;
 }
 
 h4, .h4, .delta,
@@ -106,32 +107,29 @@ h5, .h5, .epsilon,
 h6, .h6, .zeta {
 	margin-top: 0;
 	margin-bottom: 0;
+	@include font-size($type-small);
 }
 
 h4, .h4, .delta {
-	@include font-size($h4-size);
+	@include font-size($type-base);
 }
 
-h5, .h5, .epsilon {
-	@include font-size($h5-size);
-}
+// h5, .h5, .epsilon {
+// }
 
 h6, .h6, .zeta {
-	@include font-size($h6-size);
 	text-transform: uppercase;
 }
 
 * + h1, * + .h1, * + .alpha,
 * + h2, * + .h2, * + .beta,
 * + h3, * + .h3, * + .gamma,
-* + h4, * + .h4, * + .delta,
-* + h5, * + .h5, * + .epsilon,
-* + h6, * + .h6, * + .zeta {
-	margin-top: $line-height-base-px;
+* + h4, * + .h4, * + .delta {
+	margin-top: $baseline;
 }
 
 small {
-	font-size: 75%;
+	font-size: 80%;
 }
 
 /**
@@ -172,29 +170,31 @@ ol {
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 $line-height-base-px $line-height-base-px;
+	margin: 0 0 $baseline $baseline;
 
-	& ul,
-	& ol {
-		margin-left: $line-height-base-px * 2;
+	ul,
+	ol {
+		margin-left: $baseline * 2;
 	}
 
-	& ul {
+	ul {
 		list-style-type: circle;
-		& ul {
+
+		ul {
 			list-style-type: square;
 		}
 	}
 
-	& ol {
+	ol {
 		list-style-type: upper-roman;
-		& ol {
+
+		ol {
 			list-style-type: lower-roman;
 		}
 	}
 
-	& ul,
-	& ol {
+	ul,
+	ol {
 		margin-bottom: 0;
 	}
 }
@@ -215,15 +215,13 @@ nav ul, nav ol {
  * Definition lists
  */
 dl {
-	margin-bottom: $line-height-base-px;
+	margin-bottom: $baseline;
 }
-
 dt {
 	font-weight: $font-weight-bold;
 }
-
 dd {
-	margin-left: $line-height-base-px;
+	margin-left: $baseline;
 }
 
 .dl-horizontal {
@@ -248,7 +246,7 @@ dd {
  */
 // Horizontal rules
 hr {
-	margin: ($line-height-base-px) 0;
+	margin: ($baseline) 0;
 	border: 0;
 	border-top: 1px solid $hr-border;
 	border-bottom: 1px solid #fff;
@@ -273,12 +271,12 @@ abbr[title] {
  */
 blockquote {
 	padding-left: 10px;
-	margin: ($line-height-base-px);
+	margin: $baseline;
 	border-left: 4px solid lighten(#000, 80%);
 
 	& p {
 		margin-bottom: 0;
-		@include font-size($font-size-base);
+		@include font-size($type-base);
 		font-weight: 300;
 	}
 
@@ -317,7 +315,7 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $line-height-base-px;
+	margin-bottom: $baseline;
 	font-style: normal;
 }
 

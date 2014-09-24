@@ -8,7 +8,7 @@
  * </ul>
  *
  * Mobile Usage:
- * <ul class="l-blockGrid l-blockGrid--3up l-blockGrid--3up--narrow">
+ * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
  *     <li></li>
  * </ul>
  */
@@ -28,14 +28,14 @@
 	}
 
 	// Narrow block-grid
-	@include respond-max($bp-single-col) {
-		> li[class*="up--narrow"] {
+	@include respond-min-max($bp-block-grid-narrow, $bp-single-col) {
+		&[class*="up--narrow"] > li {
 			display: block;
 			height: auto;
 			float: left;
 		}
 		@for $i from 1 to $grid-column-count + 1 {
-			&.l-blockGrid--#{$i}up--mobile > li {
+			&.l-blockGrid--#{$i}up--narrow > li {
 				width: percentage(1 / $i);
 				display: block;
 				height: auto;

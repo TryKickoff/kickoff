@@ -14,7 +14,7 @@ module.exports.tasks = {
 			]
 		},
 
-		styleguide_scss: {
+		"styleguide_scss": {
 			files: ['scss/styleguide.scss'],
 			tasks: [
 				'sass:styleguide',
@@ -43,4 +43,4 @@ module.exports.tasks = {
 			]
 		}
 	}
-}
+};

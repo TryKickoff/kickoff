@@ -14,7 +14,10 @@ th {
 .table {
 	width: 100%;
 	max-width: 100%;
-	margin-bottom: $line-height-base-px;
+	margin-bottom: $baseline;
+	border-padding: 0;
+	border-spacing: 0;
+
 	// Cells
 	> thead,
 	> tbody,
@@ -23,7 +26,7 @@ th {
 			> th,
 			> td {
 				padding: $table-cell-padding;
-				line-height: $line-height-base-px;
+				line-height: $baseline;
 				vertical-align: top;
 				border-top: 1px solid $table-border-color;
 			}
@@ -185,9 +188,9 @@ table {
 
 /**
  * Responsive tables
- * Wrap your tables in `.table--responsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
  */
-.table--responsive {
+.tableResponsive {
 	@include respond-max($bp-single-col) {
 		width: 100%;
 		margin-bottom: ($line-height-base * 0.75) + px;
