@@ -421,7 +421,7 @@ dd {
   margin-left: 28px;
 }
 
-.dl-horizontal::after {
+.dl-horizontal:after {
   content: "";
   display: table;
   clear: both;
@@ -818,7 +818,7 @@ input[type="button"].btn--block {
   width: 100%;
   margin: 0 auto;
 }
-.g-row::after {
+.g-row:after {
   content: "";
   display: table;
   clear: both;
@@ -936,7 +936,7 @@ input[type="button"].btn--block {
 		<li></li>
 	</ul>
 	========================================================================== */
-.l-list--floated::after {
+.l-list--floated:after {
   content: "";
   display: table;
   clear: both;
@@ -1313,7 +1313,7 @@ input[type="submit"] {
 .form--horizontal .form-controlGroup {
   margin-bottom: 28px;
 }
-.form--horizontal .form-controlGroup::after {
+.form--horizontal .form-controlGroup:after {
   content: "";
   display: table;
   clear: both;
@@ -1564,7 +1564,7 @@ img, object, embed, video {
   list-style-type: none;
   margin: 0;
 }
-.l-blockGrid::after {
+.l-blockGrid:after {
   content: "";
   display: table;
   clear: both;
@@ -1640,7 +1640,7 @@ img, object, embed, video {
   margin-bottom: 28px;
   border-bottom: 2px solid #2ecc71;
 }
-.tabs::after {
+.tabs:after {
   content: "";
   display: table;
   clear: both;
@@ -1824,6 +1824,9 @@ table th[class*="col-"] {
 /**
  * Responsive tables
  * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ *
+ * If you need more responsive tables, consider Tablesaw by the Filament Group:
+ * https://github.com/filamentgroup/tablesaw
  */
 /**
  * Preformatted code
@@ -1976,7 +1979,7 @@ body {
  * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix::after {
+.clearfix:after {
   content: "";
   display: table;
   clear: both;
