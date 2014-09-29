@@ -34,9 +34,9 @@ module.exports = function (grunt) {
 					//'js/helpers/shims.js',
 
 					'js/helpers/console.js',
-					'js/vendor/trak/dist/trak.js',
-					'js/vendor/swiftclick/js/libs/swiftclick.js',
-					'js/vendor/cookies-js/src/cookies.js',
+					'js/bower/trak/dist/trak.js',
+					'js/bower/swiftclick/js/libs/swiftclick.js',
+					'js/bower/cookies-js/src/cookies.js',
 
 					'js/script.js'
 				]

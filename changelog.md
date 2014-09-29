@@ -13,7 +13,7 @@
 
 ### Javascript
 * We have removed many of the old 'helper' files and plugins, instead opting for dependencies found on the [Bower](http://bower.io) registry.
-* Bower dependencies are installed to `js/vendor`. To change this, edit the `.bowerrc` file. The default dependencies that we suggest are [Swiftclick](), [Trak.js]() and [Cookies]()
+* Bower dependencies are installed to `js/bower`. To change this, edit the `.bowerrc` file. The default dependencies that we suggest are [Swiftclick](), [Trak.js]() and [Cookies]()
 * [Shimly](http://github.com/nicbell/shimly), a grunt plugin by [Nic Bell](http://github.com/nicbell) is being used to generate a file of javascript shims. Have a look at `_grunt-configs/javascript.js` to find the Shimly settings.
 
 ### Grunt & tooling
