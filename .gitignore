@@ -1,17 +1,37 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-# Examples: https://github.com/github/gitignore
+# Find more examples at https://github.com/github/gitignore
 
-# SASS #
-########
-.sass-cache
+
+# Comment these if we are building js/Sass on the server
+js/dist/*.js
+# css/*.css
+css/temp/*.css
+**/*.map
+
+# SASS
+.sass-cache/
 *.scssc
 
+# Random
 # bower dependencies directory. comment this line to commit them.
 js/bower
+# Sublime Text project files
+*.sublime-*
+# Jekyll compilation directory
+_site/
 
-# OS generated files #
-######################
+# Node
+ # node modules directory
+node_modules/
+logs
+*.log
+
+# Tooling
+# Photobox visual regression testing
+photobox/
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -19,20 +39,3 @@ js/bower
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-
-# Random
-*.sublime-*
-
-node_modules
-js/vendor
-
-# Ignore these if we are building js/Sass on the server #
-#########################################################
-js/dist/*.js
-#css/*.css
-css/temp/*.css
-**/*.map
-
-# Jekyll
-_site/
