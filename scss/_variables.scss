@@ -25,7 +25,6 @@ $leading-base                  : 1.4;
 $line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
 $baseline                      : $line-height-base * 1px;
 
-// TODO: integrate these vars
 $type-scale                    : 1.25; // Major third
 
 // Funny order because of how Sass parses vars
