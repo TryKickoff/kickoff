@@ -7,15 +7,12 @@
     Ashley Nolan     -- @AshNolan_
     Nic Bell         -- @nicbell
 
-# THANKS
-
-    The HTML5 Boilerplate team
-
 
 # TECHNOLOGY COLOPHON
 
-    HTML5
-    CSS3
+    HTML
+    CSS
     Sass
     Grunt.js
     Bower
+    BrowserSync
