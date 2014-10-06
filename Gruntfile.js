@@ -6,23 +6,21 @@ module.exports = function (grunt) {
 		pkg: require('./package'), // <%=pkg.name%>
 
 		/**
-		 * Config - Edit this section
-		 * ==========================
-		 * Choose sass & js vars
+		 * Grunt global vars
+		 * Many of the Grunt tasks use these vars
 		 */
 		config : {
 			src: "_grunt-configs/*.js",
 
-			scss : {
-				cssFile : 'kickoff' // <%=config.scss.cssFile%>
+			css : {
+				distDir : 'css',     // <%=config.css.distDir%>
+				srcFile : 'kickoff', // <%=config.css.srcFile%>
+				scssDir : 'scss'     // <%=config.css.scssDir%>
 			},
 
 			js : {
-				// <%=config.js.distDir%>
-				distDir  : 'js/dist/',
-
-				// <%=config.js.distFile%>
-				distFile : 'app.min.js',
+				distDir  : 'js/dist/',   // <%=config.js.distDir%>
+				distFile : 'app.min.js', // <%=config.js.distFile%>
 
 				// <%=config.js.fileList%>
 				fileList : [
@@ -42,7 +40,20 @@ module.exports = function (grunt) {
 				]
 			},
 
-			localserver: 'kickoff.dev' // <%=config.localserver%>
+			localserver: 'kickoff.dev', // <%=config.localserver%>
+
+			testing: {
+				visual : {
+					sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
+
+					// <%=config.testing.visual.urls%>
+					urls : [
+						'http://localhost:3000',
+						'http://localhost:3000/_docs/',
+						'http://localhost:3000/_docs/styleguide.html'
+					]
+				}
+			}
 		}
 	};
 
@@ -162,6 +173,7 @@ module.exports = function (grunt) {
 	/**
 	 * GRUNT WATCHER * A task for a static server with a watch
 	 * run connect and watch
+	 * TODO: needs documentation
 	 */
 	grunt.registerTask('watcher', [
 		'shimly',

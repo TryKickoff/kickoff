@@ -4,7 +4,6 @@ module.exports.tasks = {
 	 * Sass compilation using grunt-sass
 	 * https://github.com/gruntjs/grunt-contrib-sass
 	 * Includes kickoff.scss and kickoff-old-ie.scss by default
-	 * Also creates source maps
 	 */
 	sass: {
 		kickoff: {
@@ -14,11 +13,11 @@ module.exports.tasks = {
 				lineNumbers: false,
 				debugInfo : false,
 				precision : 8,
-				loadPath : 'scss/'
+				loadPath : '<%=config.css.scssDir%>/'
 			},
 			files: {
-				'css/temp/<%=config.scss.cssFile%>.css'       : 'scss/<%=config.scss.cssFile%>.scss',
-				'css/temp/<%=config.scss.cssFile%>-old-ie.css': 'scss/<%=config.scss.cssFile%>-old-ie.scss'
+				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
+				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>-old-ie.scss'
 			}
 		},
 		styleguide: {
@@ -26,10 +25,10 @@ module.exports.tasks = {
 				unixNewlines: true,
 				style: 'compressed',
 				precision : 8,
-				loadPath : 'scss/'
+				loadPath : '<%=config.css.scssDir%>/'
 			},
 			files: {
-				'css/styleguide.css': 'scss/styleguide.scss'
+				'<%=config.css.distDir%>/styleguide.css': '<%=config.css.scssDir%>/styleguide.scss'
 			}
 		}
 	},
@@ -52,13 +51,13 @@ module.exports.tasks = {
 		kickoff: {
 			expand: true,
 			flatten: true,
-			src: 'css/temp/*.css',
-			dest: 'css/'
+			src: '<%=config.css.distDir%>/temp/*.css',
+			dest: '<%=config.css.distDir%>/'
 		},
 
 		styleguide : {
-			src: 'css/styleguide.css',
-			dest: 'css/styleguide.css'
+			src: '<%=config.css.distDir%>/styleguide.css',
+			dest: '<%=config.css.distDir%>/styleguide.css'
 		}
 	},
 
@@ -74,11 +73,10 @@ module.exports.tasks = {
 				restructure: false //turns structural optimisations off as can mess up fallbacks http://bem.info/tools/optimizers/csso/description/
 			},
 			files: {
-				'css/<%=config.scss.cssFile%>.css'       : 'css/<%=config.scss.cssFile%>.css',
-				'css/<%=config.scss.cssFile%>-old-ie.css': 'css/<%=config.scss.cssFile%>-old-ie.css'
+				'<%=config.css.distDir%>/<%=config.css.srcFile%>.css'       : '<%=config.css.distDir%>/<%=config.css.srcFile%>.css',
+				'<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css'
 			},
 
 		}
 	}
-
 };
