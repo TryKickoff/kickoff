@@ -207,11 +207,8 @@
 	&[size] {
 		height: auto;
 	}
-
 }
 
-.form-input--fileWrapper {
-}
 .form-input-file {
 	display: inline-block;
 	width: 100%;
@@ -225,38 +222,6 @@
 	}
 }
 
-.form-input--fileWrapper--styled {
-	position: relative;
-	overflow: hidden;
-
-	&:before {
-		content: 'Choose file...';
-	}
-	&:after {
-		content:'Browse';
-		cursor: pointer;
-
-		display: inline-block;
-		position: absolute;
-		top: 0;
-		right: -1px;
-		bottom: 0;
-
-		padding: 0.44em 1em 0;
-
-		background-color: lighten($input-border, 5%);
-	}
-
-	.form-input-file {
-		opacity: 0;
-		position: absolute;
-	}
-}
-
-
-/*
- * Unedited code below here
- */
 // Help out input buttons
 button,
 input[type="button"],
@@ -342,7 +307,6 @@ input[type="submit"] {
 }
 
 
-
 /**
  * Form field feedback states
  */
@@ -368,26 +332,6 @@ input[type="submit"] {
  * Gets special styles; can't be bundled together though for some reason
  */
 @include placeholder($placeholder-text);
-
-
-
-// HELP TEXT
-// ---------
-.form-helpBlock,
-.form-helpInline {
-	color: $gray; // lighten the text some for contrast
-}
-
-.form-helpBlock {
-	display: block; // account for any element using help-block
-	margin-bottom: $baseline / 2;
-}
-
-.form-helpInline {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 5px;
-}
 
 // === <$bp-single-col ===
 @include respond-min($bp-single-col) {
@@ -418,7 +362,7 @@ input[type="submit"] {
 			margin-left: 160px;
 
 			&:first-child {
-				*padding-left: 160px;
+				padding-left: 160px;
 			}
 		}
 
