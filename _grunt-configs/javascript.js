@@ -57,6 +57,7 @@ module.exports.tasks = {
 		all: ['js/**/*.js', '!js/dist/*.js', '!js/**/*.min.js']
 	},
 
+
 	/**
 	 * Custom jQuery builder
 	 * Check build numbers at jquery.com
