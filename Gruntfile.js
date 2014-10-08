@@ -217,7 +217,7 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT JSFILESEXIST to check existence of js files before uglify
+	 * GRUNT DOFILESEXIST * Check for the existence of specific files and fail if not found
 	 */
 	grunt.registerMultiTask('dofilesexist', function () {
 
