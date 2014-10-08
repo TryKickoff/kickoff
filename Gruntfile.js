@@ -162,6 +162,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('serve', [
 		'shimly',
+		'dofilesexist:js',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff',
@@ -213,4 +214,30 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass:kickoff'
 	]);
+
+
+	/**
+	 * GRUNT JSFILESEXIST to check existence of js files before uglify
+	 */
+	grunt.registerMultiTask('dofilesexist', function () {
+
+		var filePaths = this.data;
+		var numFailedFiles = 0;
+
+		if (Array.isArray(filePaths)) {
+
+			filePaths.forEach(function(path) {
+
+				if (!grunt.file.exists(path))
+				{
+					grunt.log.warn("Source file: '" + path + "' not found.");
+					numFailedFiles++;
+				}
+			});
+
+			if (numFailedFiles > 0) grunt.fail.warn("Please add the missing files.");
+		}
+	});
+
+	
 };
