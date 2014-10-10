@@ -209,7 +209,7 @@ module.exports = function (grunt) {
 	 * Travis CI to test build
 	 */
 	grunt.registerTask('travis', [
-		'jshint:all',
+		'jshint:project',
 		'uglify',
 		'sass:kickoff'
 	]);
