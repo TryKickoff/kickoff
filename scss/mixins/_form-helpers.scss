@@ -1,9 +1,7 @@
 // Mixin for form field states
 @mixin formFieldState($color) {
 	// Set the text color
-	.form-label,
-	.help-block,
-	.help-inline {
+	.form-label {
 		color: $color;
 	}
 
