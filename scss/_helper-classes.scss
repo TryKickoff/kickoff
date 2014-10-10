@@ -84,14 +84,6 @@
  * Responsive Utilities
  */
 
-// IE10 Metro responsive
-// Required for Windows 8 Metro split-screen snapping with IE10
-//
-// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-@-ms-viewport{
-	width: device-width;
-}
-
 * {
 	-webkit-tap-highlight-color: $color-primary !important;
 }
@@ -102,17 +94,4 @@ textarea[contenteditable] {
 }
 
 
-// IE10 on Windows Phone 8
-// IE10 on WP8 doesn't report CSS pixels, but actual device pixels. In
-// other words, say on a Lumia, you'll get 768px as the device width,
-// meaning users will see the tablet styles and not phone styles.
-//
-// Alternatively you can override this with JS (see source below), but
-// we won't be doing that here given our limited scope.
-//
-// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
-@media screen and (max-width: 400px) {
-	@-ms-viewport{
-		width: 320px;
-	}
 }
