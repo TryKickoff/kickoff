@@ -68,7 +68,7 @@ $bp-huge              : 1600; // Set in px
 
 // Special breakpoints
 $bp-single-col        : $bp-mid; // Break to single column (used in the grid)
-$bp-block-grid-narrow : $bp-mid; // Breakpoint for narrow block grids
+$bp-block-grid-narrow : $bp-narrow; // Breakpoint for narrow block grids
 $bp-rwd-text          : $bp-mid; // Reduce text size below this width
 
 
