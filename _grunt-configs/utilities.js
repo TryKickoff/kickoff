@@ -34,5 +34,9 @@ module.exports.tasks = {
 			urls        : '<%=config.testing.visual.urls%>'
 			}
 		}
+	},
+
+	dofilesexist : {
+		js : "<%=config.js.fileList%>"
 	}
 };
