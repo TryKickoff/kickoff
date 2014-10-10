@@ -2287,8 +2287,8 @@ textarea[contenteditable] {
   #perfmatters
   */
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-       backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 /**
