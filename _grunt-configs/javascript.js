@@ -21,6 +21,7 @@ module.exports.tasks = {
 			sourceMappingURL: '/<%=config.js.distFile%>.map',
 		},
 		js: {
+			nonull: true,
 			src: '<%=config.js.fileList%>',
 			dest: '<%=config.js.distDir%><%=config.js.distFile%>'
 		}
