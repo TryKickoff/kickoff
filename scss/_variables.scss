@@ -27,7 +27,6 @@ $baseline                      : $line-height-base * 1px;
 
 $type-scale                    : 1.25; // Major third
 
-// Funny order because of how Sass parses vars
 $type-micro                    : modular-scale($font-size-base, -4, $type-scale);
 $type-smallest                 : modular-scale($font-size-base, -3, $type-scale);
 $type-smaller                  : modular-scale($font-size-base, -2, $type-scale);
