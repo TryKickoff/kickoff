@@ -134,13 +134,3 @@
 	resize: $direction; // Options are horizontal, vertical, both
 	overflow: auto; // Safari fix
 }
-
-
-// @include tab-focus();
-@mixin tab-focus {
-	// Default
-	outline: thin dotted #333;
-	// Webkit
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
-}
