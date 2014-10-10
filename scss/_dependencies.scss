@@ -2,15 +2,6 @@
  * Site dependencies
  */
 
-/**
- * Core variables
- * =================================
- * Edit your color palette and app vars before your begin
- */
-@import "color-palette";
-@import "variables";
-
-
 /*
  * Mixins, helpers and functions
  * =================================
@@ -20,6 +11,18 @@
  */
 @import "functions/functions";
 @import "mixins/mixins";
+
+
+
+/**
+ * Core variables
+ * =================================
+ * Edit your color palette and app vars before your begin
+ */
+@import "color-palette";
+@import "variables";
+
+
 
 
 /* CSS Reset  */
