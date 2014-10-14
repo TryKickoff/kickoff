@@ -88,6 +88,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('default', [
 		'shimly',
+		'dofilesexist:js',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff',
@@ -98,12 +99,12 @@ module.exports = function (grunt) {
 
 	/**
 	 * GRUNT START * Run this to
-	 * run jquery builder, uglify, sass and autoprefixer
+	 * run bower install, uglify, sass and autoprefixer
 	 */
 	grunt.registerTask('start', [
-		'jquery',
 		'shell:bowerinstall',
 		'shimly',
+		'dofilesexist:js',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
@@ -120,6 +121,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('dev', [
 		'shimly',
+		'dofilesexist:js',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:kickoff'
@@ -132,10 +134,11 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('deploy', [
 		'shimly',
-		'newer:uglify',
-		'newer:sass:kickoff',
-		'newer:autoprefixer:kickoff',
-		'newer:csso'
+		'dofilesexist:js',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:kickoff',
+		'csso'
 	]);
 
 
@@ -145,6 +148,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('styleguide', [
 		'shimly',
+		'dofilesexist:js',
 		'uglify',
 		'sass:kickoff',
 		'sass:styleguide',
@@ -166,21 +170,6 @@ module.exports = function (grunt) {
 		'sass:kickoff',
 		'autoprefixer:kickoff',
 		'browserSync:serve',
-		'watch'
-	]);
-
-
-	/**
-	 * GRUNT WATCHER * A task for a static server with a watch
-	 * run connect and watch
-	 * TODO: needs documentation
-	 */
-	grunt.registerTask('watcher', [
-		'shimly',
-		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff',
-		'browserSync:watch',
 		'watch'
 	]);
 
@@ -238,5 +227,5 @@ module.exports = function (grunt) {
 		}
 	});
 
-	
+
 };
