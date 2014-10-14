@@ -15,7 +15,7 @@ css/temp/*.css
 
 # Random
 # bower dependencies directory. comment this line to commit them.
-js/bower
+bower_modules
 # Sublime Text project files
 *.sublime-*
 # Jekyll compilation directory
