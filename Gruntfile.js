@@ -74,7 +74,6 @@ module.exports = function (grunt) {
 	 * grunt watch      : run sass:kickoff, uglify and livereload
 	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
 	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
-	 * grunt jquery     : build custom version of jquery
 	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
 	 * grunt serve      : watch js & scss and run a local server
 	 * grunt icons      : generate the icons. uses svgmin and grunticon
