@@ -273,7 +273,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
   line-height: 1.4;
   color: #444;
   -webkit-font-feature-settings: "liga","dlig";
@@ -287,7 +287,7 @@ body {
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 28px;
 }
@@ -307,22 +307,22 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 h1, .h1, .alpha {
-  font-size: 48.828125px;
-  font-size: strip-unit(48.828125)/20rem;
+  font-size: 39.0625px;
+  font-size: 1.953125rem;
   margin-top: 0;
   margin-bottom: 56px;
 }
 
 h2, .h2, .beta {
-  font-size: 39.0625px;
-  font-size: strip-unit(39.0625)/20rem;
+  font-size: 31.25px;
+  font-size: 1.5625rem;
   margin-top: 0;
   margin-bottom: 28px;
 }
 
 h3, .h3, .gamma {
-  font-size: 31.25px;
-  font-size: strip-unit(31.25)/20rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   margin-top: 0;
   margin-bottom: 28px;
 }
@@ -332,13 +332,13 @@ h5, .h5, .epsilon,
 h6, .h6, .zeta {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 25px;
-  font-size: strip-unit(25)/20rem;
+  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 h4, .h4, .delta {
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
 }
 
 h6, .h6, .zeta {
@@ -490,7 +490,7 @@ blockquote {
 blockquote p {
   margin-bottom: 0;
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 blockquote small {
@@ -499,16 +499,6 @@ blockquote small {
 }
 blockquote small:before {
   content: '\2014 \00A0';
-}
-blockquote.pull-right {
-  float: right;
-  padding-left: 0;
-  padding-right: 10px;
-  border-left: 0;
-  border-right: 4px solid #cccccc;
-}
-blockquote.pull-right, blockquote.pull-right p, blockquote.pull-right small {
-  text-align: right;
 }
 
 q:before, q:after,
@@ -687,8 +677,8 @@ samp {
 }
 
 .btn--large {
-  font-size: 31.25px;
-  font-size: strip-unit(31.25)/20rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   line-height: 3;
   height: 3em;
   padding-right: 2em;
@@ -697,8 +687,8 @@ samp {
 }
 
 .btn--small {
-  font-size: 25px;
-  font-size: strip-unit(25)/20rem;
+  font-size: 16px;
+  font-size: 0.8rem;
   line-height: 1.5;
   height: 1.5em;
   padding-right: 0.75em;
@@ -1000,8 +990,8 @@ input[type="button"].btn--block {
   width: 100%;
   padding: 0;
   margin-bottom: 28px;
-  font-size: 31.25px;
-  font-size: strip-unit(31.25)/20rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   line-height: 1.4;
   color: #444;
   border: 0;
@@ -1009,8 +999,8 @@ input[type="button"].btn--block {
   white-space: normal;
 }
 .form-legend small {
-  font-size: 25px;
-  font-size: strip-unit(25)/20rem;
+  font-size: 16px;
+  font-size: 0.8rem;
   color: #b3b3b3;
 }
 
@@ -1044,7 +1034,7 @@ input[type="button"].btn--block {
   height: 2.5em;
   padding: 0.5em;
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
   color: #444;
@@ -1130,7 +1120,7 @@ input[type="button"].btn--block {
   display: inline-block;
   width: 100%;
   font-size: 20px;
-  font-size: strip-unit(20)/20rem;
+  font-size: 1rem;
   margin: 0;
   vertical-align: middle;
   line-height: 1em;
@@ -1913,8 +1903,8 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 25px;
-  font-size: strip-unit(25)/20rem;
+  font-size: 16px;
+  font-size: 0.8rem;
   color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;

@@ -15,7 +15,7 @@
 // REM
 // @include rem(margin, $font-size-base);
 @mixin rem($property, $sizeValue: $font-size-base){
-	$remValue: (strip-unit($sizeValue) / $font-size-base);
+	$remValue: (strip-units($sizeValue) / $font-size-base);
 	#{$property}: $sizeValue + px;
 	#{$property}: $remValue + rem;
 }
