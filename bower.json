@@ -23,6 +23,7 @@
   "dependencies": {
     "swiftclick": "*",
     "trak": "*",
-    "cookies-js": "*"
+    "cookies-js": "*",
+    "jquery": "1.11.1"
   }
 }

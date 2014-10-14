@@ -25,16 +25,16 @@ module.exports = function (grunt) {
 				// <%=config.js.fileList%>
 				fileList : [
 					// if you would like to remove jQuery from your concatenated JS, comment out the line below
-					'js/libs/jquery/jquery-1.10.2.js',
+					'bower_modules/jquery/dist/jquery.js',
 
 					// if you would like some basic JS shims (when not using jQuery),
 					// uncomment the line below to compile Shimly output
 					//'js/helpers/shims.js',
 
 					'js/helpers/console.js',
-					'js/bower/trak/dist/trak.js',
-					'js/bower/swiftclick/js/libs/swiftclick.js',
-					'js/bower/cookies-js/src/cookies.js',
+					'bower_modules/trak/dist/trak.js',
+					'bower_modules/swiftclick/js/libs/swiftclick.js',
+					'bower_modules/cookies-js/src/cookies.js',
 
 					'js/script.js'
 				]
