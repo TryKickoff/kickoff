@@ -23,7 +23,7 @@ module.exports.tasks = {
 		},
 
 		js: {
-			files: ['<%=config.js.fileList%>', 'Gruntfile.js'],
+			files: ['<%=config.js.fileList%>'],
 			tasks: ['uglify']
 		},
 
@@ -41,6 +41,10 @@ module.exports.tasks = {
 				'svgmin',
 				'grunticon'
 			]
+		},
+
+		grunt: {
+			files: ['_grunt-configs/*.js', 'Gruntfile.js']
 		}
 	}
 };
