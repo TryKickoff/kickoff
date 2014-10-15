@@ -47,17 +47,6 @@ module.exports.tasks = {
 					baseDir: "./"
 				}
 			}
-		},
-
-		watch: {
-			bsFiles: {
-				src: ['css/*.css', '<%=config.js.distDir%>/*.js']
-			},
-			options: {
-				watchTask: true,
-				proxy: '<%=config.localserver%>'
-			}
 		}
 	}
-
 };

@@ -40,8 +40,6 @@ module.exports = function (grunt) {
 				]
 			},
 
-			localserver: 'kickoff.dev', // <%=config.localserver%>
-
 			testing: {
 				visual : {
 					sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
