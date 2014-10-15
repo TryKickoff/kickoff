@@ -18,7 +18,7 @@
 @import "mixins/css3";
 @import "mixins/linear-gradient";
 @import "mixins/radial-gradient";
-@import "mixins/keyframes";
+@import "mixins/vertical-center";
 
 /**
  * Utility mixins
@@ -30,4 +30,4 @@
 @import "mixins/hidpi";
 
 /* FORMS */
-@import "mixins/forms";
+@import "mixins/form-helpers";

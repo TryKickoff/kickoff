@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Kickoff Grid helpers
+   ========================================================================== */
+
+/*
+   Grid columns width calcs
+   ========================================================================== */
+@function gridColumnWidthCalc($column-span: 1, $show-unit: true) {
+	$number-of-blocks-in-container: $grid-column-count / $column-span;
+	$total-width-of-all-gutters:    gutterCalc(false) * ($number-of-blocks-in-container - 1);
+	$total-width-of-all-blocks:     1 - $total-width-of-all-gutters;
+	$width-of-a-single-block:       $total-width-of-all-blocks / $number-of-blocks-in-container;
+
+	@if $show-unit == true {
+		@return percentage( $width-of-a-single-block );
+	} @else {
+		@return $width-of-a-single-block;
+	}
+}
+
+/**
+ * Column width mixin
+ * Usage:
+ * @include column(2);
+ */
+@mixin column($column-span: 1) {
+	width: gridColumnWidthCalc($column-span, true);
+}
+
+
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+@function gutterCalc($show-unit: true) {
+	@if $show-unit == true {
+		@return percentage( $grid-gutter-width / ( $layout-max-width - ($layout-margin * 2) ) );
+	} @else {
+		@return $grid-gutter-width / ( $layout-max-width - ($layout-margin * 2) );
+	}
+}
+
+
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+@function paddingCalc() {
+	@if $grid-column-padding-unit == '%' {
+		@return percentage( $grid-column-padding / $layout-max-width );
+	} @else if $grid-column-padding-unit == 'px' {
+		@return $grid-column-padding + px;
+	}
+}
+
+
+
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+@mixin shunt($shuntSpan: 1) {
+	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
+}
+@mixin offset($columnOffset: 1) {
+	margin-left: gutterCalc() + gridColumnWidthCalc($columnOffset, true) + gutterCalc();
+}
+@mixin offsetFirstChild($columnOffset: 1) {
+	margin-left: gridColumnWidthCalc($columnOffset, true) + gutterCalc();
+}
+@mixin push($pushOffset: 1) {
+	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
+	position: relative;
+}
+@mixin pull($pullOffset: 1) {
+	right: gridColumnWidthCalc($pullOffset, true) + gutterCalc();
+	position: relative;
+}

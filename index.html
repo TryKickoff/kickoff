@@ -20,43 +20,499 @@
 			 * http://iconifier.net
 		-->
 
+		<script>window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var a=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];a.rel="stylesheet",a.href=e[o&&n?0:o?1:2],a.media="only x",r.parentNode.insertBefore(a,r),setTimeout(function(){a.media="all"})},a=new t.Image;a.onerror=function(){o(!1)},a.onload=function(){o(1===a.width&&1===a.height)},a.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};grunticon(["/img/icons/icons.data.svg.css", "/img/icons/icons.data.png.css", "/img/icons/icons.fallback.css"]);</script>
+		<noscript><link href="/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
+
 		<script src="/js/libs/modernizr.min.js"></script>
 	</head>
 	<body>
-
-		<!--  ==============  -->
-		<!--  === Masthead ===  -->
-		<!--  ==============  -->
-		<header class="masthead" role="banner">
-
-		</header>
-
-
-		<!--  ====================  -->
-		<!--  === Main content ===  -->
-		<!--  ====================  -->
-		<div class="g-container" role="main">
-
+		<div class="skipToContent">
+			<a href="#mainContent" class="btn btn--primary">Skip to main content</a>
 		</div>
 
 
-		<!--  ==============  -->
-		<!--  === Footer ===  -->
-		<!--  ==============  -->
-		<footer class="footer" role="contentinfo">
+		<header class="masthead" role="banner">
+			<h1>Kickoff v4.0.0</h1>
+		</header>
 
-		</footer>
+
+		<div id="mainContent" class="l-container" role="main">
+			<h4>Components: form</h4>
+			<div class="g-row">
+				<div class="g-span12 g-col">
+					<form action="#" class="form">
+						<fieldset class="form-fieldset">
+							<legend class="form-legend">Your form</legend>
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4">
+									<label for="text" class="form-label">Text</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="email" class="form-label">Email</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="password" class="form-label">Password</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" />
+									</div>
+								</div>
+							</div>
+
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--success">
+									<label for="text" class="form-label">Text (Success)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--error">
+									<label for="email" class="form-label">Email (Error)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--warning">
+									<label for="password" class="form-label">Password (Warning)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" value="A value" />
+									</div>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Textarea</label>
+								<div class="form-controlGroup-inputWrapper">
+									<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
+								</div>
+							</div>
+							<div class="form-controlGroup">
+								<label for="text" class="form-label">Disabled Text</label>
+								<div class="form-controlGroup-inputWrapper">
+									<input type="text" id="text" placeholder="Zander Martineau" class="form-input" disabled/>
+								</div>
+							</div>
+							<div class="form-controlGroup">
+								<label for="file" class="form-label">File upload <br>
+									<small>Firefox uses the <code>size</code> attribute to determine width.</small>
+								</label>
+
+								<div class="form-controlGroup-inputWrapper">
+									<label class="form-input form-input--fileWrapper">
+										<input type="file" id="file" accept="image/*" size="14" class="form-input-file" />
+									</label>
+								</div>
+							</div>
+							<div class="form-controlGroup">
+								<label for="file" class="form-label">File upload (alt)<br>
+									<small>This version hides the default file input, you will need js to change the 'Choose file..' copy </small>
+								</label>
+
+								<div class="form-controlGroup-inputWrapper">
+									<label class="form-input form-input--fileWrapper--styled">
+										<input type="file" id="file" accept="image/*" size="14" class="form-input-file" />
+									</label>
+								</div>
+							</div>
+							<div class="g-row">
+								<div class="form-controlGroup g-span6 g-col">
+									<label for="comments" class="form-label">Checkboxes</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="checkbox" value="check1">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check2">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check3" disabled>
+											This is a checkbox
+										</label>
+										<label class="control control--custom control--checkbox">
+											<input type="checkbox" value="check4">
+											<span class="control-indicator"></span>
+											This is a custom checkbox
+										</label>
+									</div>
+								</div>
+
+								<div class="form-controlGroup g-span6 g-col">
+									<label for="comments" class="form-label">Radio buttons</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											This is a radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											This is another radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option4" disabled>
+											This is another radio
+										</label>
+										<label class="control control--custom control--radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+											<span class="control-indicator"></span>
+											This is a custom radio button
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Inline Checkboxes</label>
+								<div class="form-controlGroup-inputWrapper">
+									<label class="control control--inline">
+										<input type="checkbox" value="check1">
+										This is a checkbox
+									</label>
+									<label class="control control--inline">
+										<input type="checkbox" value="check2">
+										This is a checkbox
+									</label>
+									<label class="control control--inline">
+										<input type="checkbox" value="check3" disabled>
+										This is a checkbox
+									</label>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Inline radio buttons</label>
+								<div class="form-controlGroup-inputWrapper">
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										This is a radio
+									</label>
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										This is another radio
+									</label>
+									<label class="control control--inline">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+										This is another radio
+									</label>
+								</div>
+							</div>
+
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Select element</label>
+									<div class="form-controlGroup-inputWrapper">
+										<select id="choice" class="form-input form-input--select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Custom select element</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="form-input form-input--selectWrapper">
+											<select id="choice2" class="form-input">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="choice" class="form-label">Choice (mulitple)</label>
+								<div class="form-controlGroup-inputWrapper">
+									<select id="choicemulitple" multiple class="form-input form-input--select">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="search" class="form-label">Search</label>
+								<div class="form-controlGroup-inputWrapper">
+									<input type="search" id="search" placeholder="Zander Martineau" class="form-input form-input--search">
+								</div>
+							</div>
+
+						</fieldset>
+
+						<div class="form-actions text_centre">
+							<input type="submit" value="Submit" class="btn btn--primary" />
+							<input type="reset" class="btn" value="Cancel" />
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Component: Block-grid</h4>
+			<ul class="l-blockGrid l-blockGrid--3up l-blockGrid--2up--narrow">
+					<li>1sdfsdf</li>
+					<li>2sdfsdf</li>
+					<li>3sdsdfdsdfsdf</li>
+					<li>4sdfdsfsdf</li>
+					<li>5sdfdsfsdf</li>
+					<li>6sdfdsfsdf</li>
+					<li>7sdfdsfsdf</li>
+					<li>8sdfdsfsdf</li>
+			</ul>
+
+			<hr>
+
+			<h1>Heading 1 <small>small</small></h1>
+			<h2>Heading 2</h2>
+			<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h3>Heading 3</h3>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras <a href="">mattis consectetur purus</a> sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h4>Heading 4</h4>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante <a href="">venenatis dapibus</a> posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h5>Heading 5</h5>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h6>Heading 6</h6>
+			<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+			<hr>
+
+			<h4>Grid: Normal columns</h4>
+			<div class="g-row">
+				<div class="g-col g-span3">
+					<img src="http://farm5.staticflickr.com/4119/4851237770_cfac73865d_z.jpg">
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+				<div class="g-col g-span3">
+					<img src="http://farm5.staticflickr.com/4094/4850604091_63fca411ab_z.jpg">
+				</div>
+				<div class="g-col g-span3">
+					<img src="http://farm5.staticflickr.com/4119/4851237770_cfac73865d_z.jpg">
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+				<div class="g-col g-span3">
+					<img src="http://farm5.staticflickr.com/4119/4851237770_cfac73865d_z.jpg">
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+			</div>
+			<div class="g-row">
+				<div class="g-col g-span4">
+					<img src="http://farm5.staticflickr.com/4094/4850624425_a5bb88e97c_z.jpg">
+				</div>
+				<div class="g-col g-span4">
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+				<div class="g-col g-span4">
+					<img src="http://farm5.staticflickr.com/4094/4850624425_a5bb88e97c_z.jpg">
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Grid: Offset columns</h4>
+			<div class="g-row">
+				<div class="g-col g-span4">
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+				<div class="g-col g-span4 g-offset2">
+					<p><b>This is offset by 2 column widths</b></p>
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Grid: source ordering</h4>
+			<div class="g-row">
+				<div class="g-col g-span4">
+					1st column
+				</div>
+				<div class="g-col g-span3 g-push5">
+					2nd column
+				</div>
+				<div class="g-col g-span5 g-pull3">
+					3rd column
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Grid: centred columns</h4>
+			<div class="g-row">
+				<div class="g-col g-span8 g-col--centered text-center">
+					8
+				</div>
+			</div>
+
+			<div class="g-row">
+				<div class="g-col g-span4 g-col--centered text-center">
+					4
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Media object</h4>
+			<div class="media">
+				<div class="media-img">
+					<img src="http://placekitten.com/g/200/200">
+				</div>
+				<div class="media-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<div class="media media--rev">
+				<div class="media-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="media-img">
+					<img src="http://placekitten.com/g/300/200">
+				</div>
+			</div>
+
+			<hr>
+
+			<h4>Tables</h4>
+
+			<table class="table table--bordered table--striped table--hover table--rounded">
+				<thead>
+					<th>Table Cell</th>
+					<th>Table Cell</th>
+					<th>Table Cell</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+				</tfoot>
+			</table>
+
+			<h5>Simple responsive tables</h5>
+			<div class="tableResponsive">
+				<table class="table">
+					<thead>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+						</tr>
+						<tr>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+						</tr>
+						<tr>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+						</tr>
+						<tr>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+						</tr>
+						<tr>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+							<td>Table Cell</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tfoot>
+				</table>
+			</div>
+
+
+			<pre>
+&lt;table class="table">
+	&lt;tbody>
+		&lt;tr>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+			&lt;td>Table Cell&lt;/td>
+		&lt;/tr>
+	&lt;/tbody>
+&lt;/table></pre>
+
+<p>Lorem ipsum dolor sit amet, <code>consectetur adipisicing elit</code>. Repellat id dicta soluta sequi saepe!</p>
+
+
+
+
+		</div><!-- Close .l-container -->
 
 
 		<!-- JavaScript at the bottom for fast page loading -->
-		<!--[if lte IE 8]>
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
-		<![endif]-->
-		<!--[if gt IE 8]><!-->
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
-		<!--<![endif]-->
+
+		<!-- If you would like to include jQuery as a separate script request, rather than using the grunt-jquery-builder task and grunt
+			to compile it into one JS file, then replace this comment with the code at this gist – https://gist.github.com/ashleynolan/65596c15b31de0d160bf -->
 
 		<script src="/js/dist/app.min.js"></script>
 

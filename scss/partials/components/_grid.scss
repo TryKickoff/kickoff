@@ -1,0 +1,115 @@
+/**
+ * The Kickoff Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ * Centred columns
+ */
+
+/* Import Grid helpers and mixins */
+@import "../../mixins/grid-helpers";
+
+
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g-row">
+		<div class="g-col g-span4"></div>
+		<div class="g-col g-span8"></div>
+	</div>
+ */
+
+
+.g-row {
+	width: 100%;
+	margin: 0 auto;
+	@include clearfix;
+
+	// Nested rows
+	.g-row {
+		min-width: 0;
+
+		@if $nested-column-padding == false {
+			.g-col {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.g-col {
+	@if $grid-column-padding > 0 {
+		padding: paddingCalc();
+	}
+
+	@include respond-min($bp-single-col) {
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
+		box-sizing: border-box;
+
+		@if $grid-gutter-width > 0 {
+			margin-left: gutterCalc();
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+
+		& + &:last-child { float: right; }
+		& + &.end { float: left; }
+	}
+}
+
+
+@include respond-min($bp-single-col) {
+	// Create the relevant classes
+	@for $i from 1 to $grid-column-count + 1 {
+		.g-span#{$i} {
+			@include column($i);
+		}
+	}
+
+	/**
+	 * Offset columns
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#offset
+	 */
+	@if $using-offsetcolumns == true {
+		@for $i from 1 to $grid-column-count {
+			.g-row > .g-offset#{$i} {
+				@include offset($i);
+
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+
+	/**
+	 * Source ordering (push & pull)
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
+	 */
+	@if $using-push-pull-columns == true {
+		@for $i from 2 to $grid-column-count {
+			.g-row > .g-push#{$i} {
+				@include push($i);
+			}
+		}
+		@for $i from 2 to $grid-column-count {
+			.g-row > .g-pull#{$i} {
+				@include pull($i);
+			}
+		}
+	}
+}
+
+
+/**
+ * Centred columns
+ */
+.g-col.g-col--centered,
+.g-col.g-col--centred {
+	float: none;
+	margin: 0 auto;
+}

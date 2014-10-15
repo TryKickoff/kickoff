@@ -1,31 +1,22 @@
-/* ==========================================================================
-   Normalize - CSS reset
-
-   http://github.com/necolas/normalize.css
-   Kickoff uses an amended version of this file.
-   ========================================================================== */
-
-*,
-*:before,
-*:after {
-	@include box-sizing(border-box);
+/**
+ * Kickoff reset
+ */
+html {
+	box-sizing: border-box;
 }
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/**
+ * Normalize - CSS reset
+ * http://github.com/necolas/normalize.css
+ * Kickoff uses an amended version of this file.
+ */
 
 // HTML5 display definitions
 // Corrects block display not defined in IE6/7/8/9 & FF3
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary,
-main {
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,main {
 	display: block;
 }
 
@@ -88,10 +79,8 @@ input {
 }
 
 // 1. Addresses appearance set to searchfield in Safari 5, Chrome
-// 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
 input[type="search"] {
 	-webkit-appearance: textfield; // 1
-	// @include box-sizing(content-box);
 }
 
 // Removes inner padding and search cancel button in S5, Chrome on OS X

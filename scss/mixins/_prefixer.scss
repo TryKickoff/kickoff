@@ -6,6 +6,7 @@ $prefix-for-opera:     true !default;
 $prefix-for-spec:      true !default; // required for keyframe mixin
 
 @mixin prefixer($property, $value, $prefixes) {
+	@warn "DEPRECATION: If you are using autoprefixer there is no need for this mixin, this will be removed in the next version of Kickoff";
 	@each $prefix in $prefixes {
 
 		@if $prefix == webkit and $prefix-for-webkit == true {

@@ -16,7 +16,7 @@ $fix-mqs: false !default; //assign false if no value set already
    * Argument is a pixel value WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-min($width) {
-	$width-em: em($width);
+	$width-em: em(strip-units($width));
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -42,7 +42,7 @@ $fix-mqs: false !default; //assign false if no value set already
    * Argument is a pixel value WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-max($width) {
-	$width-em: em($width);
+	$width-em: em(strip-units($width));
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -70,8 +70,8 @@ $fix-mqs: false !default; //assign false if no value set already
    * Arguments are pixel values WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-min-max($min-width, $max-width) {
-	$min-width-em: em($min-width);
-	$max-width-em: em($max-width);
+	$min-width-em: em(strip-units($min-width));
+	$max-width-em: em(strip-units($max-width));
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {

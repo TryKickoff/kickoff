@@ -1,3 +1,8 @@
+/**
+ * position
+ * Usage:
+ * @include position(absolute, 10px 20px 30px 10px);
+ */
 @mixin position ($position: relative, $coordinates: 0 0 0 0) {
 
 	@if type-of($position) == list {

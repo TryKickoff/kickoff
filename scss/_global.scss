@@ -1,49 +1,21 @@
-/* ==========================================================================
-   Global app/site styles
-   ========================================================================== */
+/**
+ * Global app/site styles
+ */
 body {
-	background-color: $color-background;
+	background-color: $color-bg;
 }
 
+/**
+ * Default layout container
+ */
+.l-container {
+	padding-left: #{$layout-margin}px;
+	padding-right: #{$layout-margin}px;
+	width: 95%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
 
-
-/* ==========================================================================
-   Media queries for responsive design
-   ========================================================================== */
-
-/*
-   Retina media query
-   ========================================================================== */
-@include hidpi() {
-
+	.lt-ie9 & {
+		min-width: #{$layout-min-width}px;
+	}
 }
-
-
-
-// === $breakpoint-narrow> ===
-@include respond-min($breakpoint-narrow) {
-
-}
-// === end $breakpoint-narrow> ===
-
-
-
-// === $breakpoint-mid> ===
-@include respond-min($breakpoint-mid) {
-
-}
-// === end $breakpoint-mid> ===
-
-
-// === $breakpoint-wide> ===
-@include respond-min($breakpoint-wide) {
-
-}
-// === end $breakpoint-wide> ===
-
-
-// === $breakpoint-huge> ===
-@include respond-min($breakpoint-huge) {
-
-}
-// === end $breakpoint-huge> ===

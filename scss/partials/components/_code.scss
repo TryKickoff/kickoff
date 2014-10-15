@@ -1,16 +1,16 @@
-/* ==========================================================================
-   Preformatted code
-   Code typography styles for the <code> and <pre> elements
-   ========================================================================== */
+/**
+ * Preformatted code
+ * Code typography styles for the <code> and <pre> elements
+ */
 
 // Inline and block code styles
 code,
 pre {
 	padding: 0 3px 2px;
-	font-family: $mono-font-family;
-	@include font-size(13);
+	font-family: $font-family-mono;
+	@include font-size($type-small);
 	color: $color-code;
-	@include border-radius(3px);
+	border-radius: 3px;
 	tab-size: 3;
 }
 
@@ -18,35 +18,28 @@ pre {
 code {
 	padding: 2px 4px;
 	color: $color-code;
-	background-color: $color-code-background;
+	background-color: $color-code-bg;
 }
 
 // Blocks of code
 pre {
 	display: block;
-	padding: ($base-line-height - 1) / 2 + px;
-	margin: 0 0 ($base-line-height / 2 + px);
-	line-height: $base-leading;
+	padding: $baseline / 2;
+	margin: 0 0 $baseline;
+	// line-height: $leading-base;
 	color: $color-pre;
-	background-color: $color-pre-background;
-	border: 1px solid #ccc; // fallback for IE7-8
-	border: 1px solid rgba(0,0,0,.15);
-	@include border-radius(4px);
+	background-color: $color-pre-bg;
+	border-radius: 4px;
 	white-space: pre;
-	white-space: pre-wrap;
-	word-break: break-all;
-	word-wrap: break-word;
-
-	// Make prettyprint styles more spaced out for readability
-	&.prettyprint {
-		margin-bottom: $base-line-height + px;
-	}
+	// white-space: pre-wrap;
+	// word-break: break-all;
+	// word-wrap: break-word;
 
 	// Account for some code outputs that place code tags in pre tags
 	& code {
 		padding: 0;
 		color: $color-pre;
-		background-color: $color-pre-background;
+		background-color: $color-pre-bg;
 		border: 0;
 	}
 }

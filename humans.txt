@@ -3,12 +3,16 @@
 
 # TEAM
 
-    Zander Martineau -- Creative Technologist -- http://twitter.com/MrMartineau
-    Ashley Nolan -- Creative Technologist -- http://twitter.com/AshNolan_
+    Zander Martineau -- @MrMartineau
+    Ashley Nolan     -- @AshNolan_
+    Nic Bell         -- @nicbell
+
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML
+    CSS
+    Sass
     Grunt.js
-    Normalize.css, jQuery, Modernizr
-    Sublime Text
+    Bower
+    BrowserSync

@@ -15,38 +15,44 @@
 			<link rel="stylesheet" href="../css/kickoff.css">
 		<!--<![endif]-->
 		<link rel="stylesheet" href="../css/styleguide.css">
+		<link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 
-		<div class="g-container">
+		<div class="l-container">
 			<header class="masthead" role="banner">
 				<h1 class="interfaceType">Project Styleguide</h1>
-				<p>Please refer to <a href="http://tmwagency.github.io/kickoff/">Kickoff documentation</a> for markup info</p>
+				<nav class="docsNav l-list--floated interfaceType">
+					<ul>
+						<li><a href="index.html">Setup checklist / getting started</a></li>
+						<li><a href="styleguide.html" class="is-active">Project Styleguide</a></li>
+					</ul>
+				</nav>
+				<p class="interfaceType">Please refer to <a href="http://tmwagency.github.io/kickoff/">Kickoff documentation</a> for markup info</p>
 			</header>
 
 			<h2 class="section-heading">Colours</h2>
 			<div class="g-row colors">
-				<div class="g-span6 g-col">
-					<div class="well swatch bg color-text">
+				<div class="g-span3 g-col">
+					<div class="swatch bg color-text">
 						<h3 class="interfaceType">Text</h3>
 					</div>
 					<p class="color-text interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="g-span6 g-col">
-					<div class="well swatch bg color-background">
+				<div class="g-span3 g-col">
+					<div class="swatch bg color-background">
 						<h3 class="interfaceType">Background</h3>
 					</div>
+					<p class="color-text interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-			</div>
-			<div class="g-row colors">
-				<div class="g-span6 g-col">
-					<div class="well swatch bg color-link">
+				<div class="g-span3 g-col">
+					<div class="swatch bg color-link">
 						<h3 class="interfaceType">:link</h3>
 					</div>
 					<p class="color-link interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="g-span6 g-col">
-					<div class="well swatch bg color-link-hover">
+				<div class="g-span3 g-col">
+					<div class="swatch bg color-link-hover">
 						<h3 class="interfaceType">:hover</h3>
 					</div>
 					<p class="color-link-hover interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -55,19 +61,19 @@
 
 			<div class="g-row colors">
 				<div class="g-span4 g-col">
-					<div class="well swatch bg color-primary">
+					<div class="swatch bg color-primary">
 						<h3 class="interfaceType">Primary</h3>
 					</div>
 					<p class="color-primary interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
 				<div class="g-span4 g-col">
-					<div class="well swatch bg color-secondary">
+					<div class="swatch bg color-secondary">
 						<h3 class="interfaceType">Secondary</h3>
 					</div>
 					<p class="color-secondary interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
 				<div class="g-span4 g-col">
-					<div class="well swatch bg color-highlight">
+					<div class="swatch bg color-highlight">
 						<h3 class="interfaceType">Highlight</h3>
 					</div>
 					<p class="color-highlight interfaceType">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -111,67 +117,205 @@
 
 						<hr>
 
-						<h3 class="interfaceType interfaceType-subtle">Ordered list</h3>
+						<div class="g-row">
+							<div class="g-span6 g-col">
+								<h3 class="interfaceType interfaceType-subtle">Ordered list</h3>
+								<ol class="normal">
+									<li>list item 1</li>
+									<li>list item 1
+									<ul>
+										<li>list item 2
+										<ul>
+											<li>list item 3</li>
+										</ul>
+										</li>
+										<li>list item 2</li>
+									</ul>
+									</li>
+									<li>list item 1</li>
+								</ol>
+							</div>
+							<div class="g-span6 g-col">
+								<h3 class="interfaceType interfaceType-subtle">Unordered list</h3>
 
-						<ol class="normal">
-							<li>list item 1</li>
-							<li>list item 1
-							<ul>
-								<li>list item 2
-								<ul>
-									<li>list item 3</li>
+								<ul class="normal">
+									<li>list item 1</li>
+									<li>list item 1
+									<ul>
+										<li>list item 2
+										<ul>
+											<li>list item 3</li>
+										</ul>
+										</li>
+										<li>list item 2</li>
+									</ul>
+									</li>
+									<li>list item 1</li>
 								</ul>
-								</li>
-								<li>list item 2</li>
-							</ul>
-							</li>
-							<li>list item 1</li>
-						</ol>
 
-						<hr>
+							</div>
+						</div>
 
-						<h3 class="interfaceType interfaceType-subtle">Unordered list</h3>
-
-						<ul class="normal">
-							<li>list item 1</li>
-							<li>list item 1
-							<ul>
-								<li>list item 2
-								<ul>
-									<li>list item 3</li>
-								</ul>
-								</li>
-								<li>list item 2</li>
-							</ul>
-							</li>
-							<li>list item 1</li>
-						</ul>
-
-						<hr>
-
-						<h3 class="interfaceType interfaceType-subtle">Definition list</h3>
-
-						<dl>
-							<dt>Definition name</dt>
-							<dd>Definition value</dd>
-							<dt>Definition name</dt>
-							<dd>Definition value</dd>
-							<dd>Definition value</dd>
-							<dt>Definition name</dt>
-							<dt>Definition name</dt>
-							<dd>Definition value</dd>
-						</dl>
 				</div>
 			</div>
+
+			<hr>
 
 			<h2 class="section-heading">Components</h2>
 			<div class="g-row components">
 				<div class="g-span12 g-col example">
 					<h3 class="interfaceType interfaceType-subtle">Buttons</h3>
 					<a href="#" class="btn btn--primary btn--large">Large</a> <a href="#" class="btn btn--primary">Normal</a> <a href="#" class="btn btn--primary btn--small">Small</a>
+
+					<hr>
+
+					<h3 class="interfaceType interfaceType-subtle">Forms</h3>
+
+					<form action="#" class="form">
+						<fieldset class="form-fieldset">
+							<legend class="form-legend">Your form</legend>
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4">
+									<label for="text" class="form-label">Text</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="email" class="form-label">Email</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4">
+									<label for="password" class="form-label">Password</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" />
+									</div>
+								</div>
+							</div>
+
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--success">
+									<label for="text" class="form-label">Text (Success)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="text" id="text" placeholder="Zander Martineau" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--error">
+									<label for="email" class="form-label">Email (Error)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="email" id="email" placeholder="zander@martineau.tv" class="form-input" value="A value" required/>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span4 form-controlGroup--warning">
+									<label for="password" class="form-label">Password (Warning)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<input type="password" id="password" placeholder="Your password" class="form-input" value="A value" />
+									</div>
+								</div>
+							</div>
+
+							<div class="form-controlGroup">
+								<label for="comments" class="form-label">Textarea</label>
+								<div class="form-controlGroup-inputWrapper">
+									<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
+								</div>
+							</div>
+							<div class="form-controlGroup">
+								<label for="text" class="form-label">Disabled Text</label>
+								<div class="form-controlGroup-inputWrapper">
+									<input type="text" id="text" placeholder="Zander Martineau" class="form-input" disabled/>
+								</div>
+							</div>
+							<div class="g-row">
+								<div class="form-controlGroup g-span6 g-col">
+									<label for="comments" class="form-label">Checkboxes</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="checkbox" value="check1">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check2">
+											This is a checkbox
+										</label>
+										<label class="control">
+											<input type="checkbox" value="check3" disabled>
+											This is a checkbox
+										</label>
+										<label class="control control--custom control--checkbox">
+											<input type="checkbox" value="check4">
+											<span class="control-indicator"></span>
+											This is a custom checkbox
+										</label>
+									</div>
+								</div>
+
+								<div class="form-controlGroup g-span6 g-col">
+									<label for="comments" class="form-label">Radio buttons</label>
+									<div class="form-controlGroup-inputWrapper">
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											This is a radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											This is another radio
+										</label>
+										<label class="control">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
+											This is another radio
+										</label>
+										<label class="control control--custom control--radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+											<span class="control-indicator"></span>
+											This is a custom radio button
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="g-row">
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Choice</label>
+									<div class="form-controlGroup-inputWrapper">
+										<select id="choice" class="form-input form-input--select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-controlGroup g-col g-span6">
+									<label for="choice" class="form-label">Choice (mulitple)</label>
+									<div class="form-controlGroup-inputWrapper">
+										<select id="choicemulitple" multiple class="form-input form-input--select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+
+						<div class="form-actions text_centre">
+							<input type="submit" value="Submit" class="btn btn--primary" />
+							<input type="reset" class="btn" value="Cancel" />
+						</div>
+
+					</form>
 				</div>
 			</div>
 
+			<footer class="footer text-centre interfaceType">
+				Kickoff is <a href="http://github.com/tmwagency/kickoff">free and open-source</a> and made by the <a href="http://twitter.com/tmwTechTeam">@tmwTechTeam</a>.
+			</footer>
 		</div> <!-- /.container -->
 
 		<!-- Please add more to this to keep your styleguide useful -->
