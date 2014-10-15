@@ -7,7 +7,7 @@ module.exports.tasks = {
 	*/
 	watch: {
 		scss: {
-			files: ['scss/**/*.scss', '!scss/styleguide.scss'],
+			files: ['<%=config.css.scssDir%>/**/*.scss', '!<%=config.css.scssDir%>/styleguide.scss'],
 			tasks: [
 				'sass:kickoff',
 				'autoprefixer:kickoff'
@@ -15,7 +15,7 @@ module.exports.tasks = {
 		},
 
 		"styleguide_scss": {
-			files: ['scss/styleguide.scss'],
+			files: ['<%=config.css.scssDir%>/styleguide.scss'],
 			tasks: [
 				'sass:styleguide',
 				'autoprefixer:styleguide'
@@ -30,7 +30,7 @@ module.exports.tasks = {
 		livereload: {
 			options: { livereload: true },
 			files: [
-				'css/*.css'
+				'<%=config.css.distDir%>/*.css'
 			]
 		},
 
