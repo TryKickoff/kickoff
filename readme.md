@@ -2,8 +2,6 @@
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
 
-# Kickoff
-
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at tech@tmw.co.uk
