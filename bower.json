@@ -1,6 +1,6 @@
 {
   "name": "kickoff",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "homepage": "https://github.com/tmwagency/kickoff",
   "authors": [
     {
@@ -17,8 +17,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "app/components"
+    "bower_modules"
   ],
   "dependencies": {
     "swiftclick": "*",
