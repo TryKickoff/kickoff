@@ -1,4 +1,4 @@
-[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/tmwagency/kickoff.svg?branch=master)](https://travis-ci.org/tmwagency/kickoff) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/tmwagency/kickoff.svg?branch=master)](https://travis-ci.org/tmwagency/kickoff) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/tmwagency/kickoff?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
 
