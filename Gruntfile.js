@@ -40,6 +40,10 @@ module.exports = function (grunt) {
 				]
 			},
 
+			img : {
+				dir : 'img' // <%=config.img.dir%>
+			},
+
 			testing: {
 				visual : {
 					sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>

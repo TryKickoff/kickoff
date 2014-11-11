@@ -7,9 +7,9 @@ module.exports.tasks = {
 		myIcons: {
 			files: [{
 				expand: true,
-				cwd   : 'img/src-min',
+				cwd   : '<%=config.img.dir%>/src-min',
 				src   : ['*.svg', '*.png'],
-				dest  : 'img/icons'
+				dest  : '<%=config.img.dir%>/icons'
 			}],
 			options: {
 				// customselectors: {
@@ -34,9 +34,9 @@ module.exports.tasks = {
 		dist: {
 			files: [{
 				expand : true,
-				cwd    : 'img/src',
+				cwd    : '<%=config.img.dir%>/src',
 				src    : ['**/*.svg'],
-				dest   : 'img/src-min',
+				dest   : '<%=config.img.dir%>/src-min',
 				ext    : '.svg'
 			}]
 		}
