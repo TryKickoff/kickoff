@@ -19,7 +19,6 @@
 	</div>
  */
 
-
 .g-row {
 	width: 100%;
 	margin: 0 auto;
@@ -52,6 +51,7 @@
 		@if $grid-gutter-width > 0 {
 			margin-left: gutterCalc();
 		}
+
 		&:first-child {
 			margin-left: 0;
 		}

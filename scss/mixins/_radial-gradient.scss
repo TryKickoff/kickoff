@@ -6,7 +6,7 @@
 	@warn "DEPRECATION: If you are using autoprefixer there is no need for this mixin, this will be removed in the next version of Kickoff.";
 
 	background-color: $toColor; // Fallback Color
-	background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($fromColor), color-stop($toColor)); // Saf4+, Chrome
+	background-image: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop($fromColor), color-stop($toColor)); // Saf4+, Chrome
 	background-image: -webkit-radial-gradient(center, ellipse cover, $fromColor 0%, $toColor 100%); // Chrome 10+, Saf5.1+, iOS 5+
 	background-image:    -moz-radial-gradient(center, ellipse cover, $fromColor 0%, $toColor 100%); // FF3.6
 	background-image:     -ms-radial-gradient(center, ellipse cover, $fromColor 0%, $toColor 100%); // IE10

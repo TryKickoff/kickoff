@@ -45,7 +45,7 @@
 	white-space: normal;
 
 	// Small
-	& small {
+	small {
 		@include font-size($type-small);
 		color: lighten(#000, 70%);
 	}
@@ -73,7 +73,7 @@
 	color: $label-color;
 	font-weight: bold;
 
-	& small {
+	small {
 		font-weight: normal;
 		color: lighten($label-color, 30%);
 	}
@@ -84,7 +84,7 @@
 	display: block;
 	width: 100%;
 	height: 2.5em;
-	padding: 0.5em;
+	padding: .5em;
 
 	@include font-size($type-base);
 	font-family: $font-family-base;
@@ -136,12 +136,6 @@
 		background-color: initial;
 	}
 
-	// Remove shadow from image inputs
-	&[type="image"],
-	&[type="range"],
-	&[type="range"]:focus {
-	}
-
 	// Hidden inputs
 	&[type="hidden"] {
 		display: none;
@@ -163,8 +157,8 @@
 		width: 100%;
 	}
 
-	& > .radio:first-child,
-	& > .checkbox:first-child {
+	> .radio:first-child,
+	> .checkbox:first-child {
 		padding-top: 5px; // has to be padding because margin collapses
 	}
 
@@ -192,6 +186,7 @@
 	height: auto;
 	resize: vertical;
 }
+
 .form-input--textarea--uneditable {
 	width: auto;
 	height: auto;
@@ -262,12 +257,13 @@ input[type="submit"] {
 	input[type="radio"],
 	input[type="checkbox"] {
 		vertical-align: middle;
-		margin-right: 0.5em;
-		margin-top: -0.1em;
+		margin-right: .5em;
+		margin-top: -.1em;
 		display: inline;
 		line-height: normal;
 	}
 }
+
 // Radios and checkboxes on same line
 .control--inline {
 	display: inline-block;
@@ -297,7 +293,7 @@ input[type="submit"] {
 	background-color: $form-actions-bg;
 	border-top: 1px solid #ddd;
 
-	& .btn {
+	.btn {
 		margin-right: 10px;
 
 		&:last-child {
@@ -344,13 +340,13 @@ input[type="submit"] {
 	 */
 	.form--horizontal {
 		// Increase spacing between groups
-		& .form-controlGroup {
+		.form-controlGroup {
 			margin-bottom: $baseline;
 			@include clearfix;
 		}
 
 		// Float the labels left
-		& .form-label {
+		.form-label {
 			float: left;
 			width: 140px;
 			padding-top: 5px;
@@ -358,7 +354,7 @@ input[type="submit"] {
 		}
 
 		// Move over all input controls and content
-		& .form-controlGroup-inputWrapper {
+		.form-controlGroup-inputWrapper {
 			margin-left: 160px;
 
 			&:first-child {
@@ -366,20 +362,21 @@ input[type="submit"] {
 			}
 		}
 
-		& .form-controlGroup .form-input--fileWrapper {
+		.form-controlGroup .form-input--fileWrapper {
 			margin-left: 0;
 		}
 
 		// Remove bottom margin on block level help text since that's accounted for on .form--control-group
-		& .form-helpBlock {
+		.form-helpBlock {
 			margin-top: $baseline / 2;
 			margin-bottom: 0;
 		}
 
 		// Move over buttons in .form-actions to align with .form-controlGroup-inputWrapper
-		& .form-actions {
+		.form-actions {
 			padding-left: 160px;
 		}
 	}
 }
+
 // === end <$bp-single-col ===
