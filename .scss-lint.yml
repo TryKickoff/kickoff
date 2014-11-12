@@ -1,22 +1,25 @@
-# Default application configuration that all configurations inherit from.
 linters:
+  BangFormat:
+    space_before_bang: true
+    space_after_bang: false
+
   BorderZero:
     enabled: true
 
-  CapitalizationInSelector:
-    enabled: true
-
   ColorKeyword:
-    enabled: true
+    enabled: false
 
   Comment:
-    enabled: true
+    enabled: false
+
+  Compass::*:
+    enabled: false
 
   DebugStatement:
     enabled: true
 
   DeclarationOrder:
-    enabled: true
+    enabled: false
 
   DuplicateProperty:
     enabled: true
@@ -37,7 +40,7 @@ linters:
     present: true
 
   HexLength:
-    enabled: true
+    enabled: false
     style: short # or 'long'
 
   HexNotation:
@@ -50,10 +53,14 @@ linters:
   IdWithExtraneousSelector:
     enabled: true
 
+  ImportPath:
+    leading_underscore: false
+    filename_extension: false
+
   Indentation:
-    enabled: true
-    character: space # or 'tab'
-    width: 2
+    enabled: false
+    character: tab
+    width: 1
 
   LeadingZero:
     enabled: true
@@ -64,30 +71,42 @@ linters:
     force_nesting: true
 
   NameFormat:
-    enabled: true
+    enabled: false
     convention: hyphenated_lowercase # or 'BEM', or a regex pattern
 
+  NestingDepth:
+    max_depth: 3
+
   PlaceholderInExtend:
-    enabled: true
+    enabled: false
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
     ignore_unspecified: false
 
   PropertySpelling:
     enabled: true
     extra_properties: []
 
+  QualifyingElement:
+    allow_element_with_attribute: true
+    allow_element_with_class: false
+    allow_element_with_id: false
+
   SelectorDepth:
     enabled: true
     max_depth: 3
+
+  SelectorFormat:
+    enabled: false
+  #   convention: /^[a-z]([-]?[a-z0-9]+)*(--[a-z0-9]([-]?[a-z0-9]+)*)?((_[a-z0-9]([-]?[a-z0-9]+)*){2})?$/x
 
   Shorthand:
     enabled: true
 
   SingleLinePerProperty:
     enabled: true
-    allow_single_line_rule_sets: true
+    allow_single_line_rule_sets: false
 
   SingleLinePerSelector:
     enabled: true
@@ -104,21 +123,27 @@ linters:
 
   SpaceBeforeBrace:
     enabled: true
-    allow_single_line_padding: false
+    allow_single_line_padding: true
 
   SpaceBetweenParens:
     enabled: true
     spaces: 0
 
   StringQuotes:
-    enabled: true
+    enabled: false
     style: single_quotes # or double_quotes
 
   TrailingSemicolonAfterPropertyValue:
     enabled: true
 
+  TrailingZero:
+    enabled: true
+
   UnnecessaryMantissa:
     enabled: true
+
+  UnnecessaryParentReference:
+    enable: true
 
   UrlFormat:
     enabled: true
@@ -126,8 +151,8 @@ linters:
   UrlQuotes:
     enabled: true
 
-  ZeroUnit:
+  VendorPrefixes:
     enabled: true
 
-  Compass::*:
-    enabled: false
+  ZeroUnit:
+    enabled: true
