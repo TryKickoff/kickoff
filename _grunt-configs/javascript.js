@@ -42,19 +42,5 @@ module.exports.tasks = {
 
 		// minify the output (true or false)
 		minify: false
-	},
-
-
-	/**
-	 * JSHint
-	 * https://github.com/gruntjs/grunt-contrib-jshint
-	 * Manage the options inside .jshintrc file
-	 */
-	jshint: {
-		options: {
-			jshintrc: '.jshintrc'
-		},
-		project: '<%=config.js.fileList%>',
-		all: ['js/**/*.js', '!js/dist/*.js', '!js/**/*.min.js']
 	}
 };

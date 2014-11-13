@@ -8,7 +8,7 @@
 .l-list--centred, .l-list--centered {
 	text-align: center;
 
-	& li {
+	li {
 		display: inline;
 	}
 }
@@ -24,7 +24,7 @@
 .l-list--floated {
 	@include clearfix;
 
-	& li {
+	li {
 		float: left;
 		display: inline-block;
 	}

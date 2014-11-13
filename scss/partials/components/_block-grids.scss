@@ -34,6 +34,7 @@
 			height: auto;
 			float: left;
 		}
+
 		@for $i from 1 to $grid-column-count + 1 {
 			&.l-blockGrid--#{$i}up--narrow > li {
 				width: percentage(1 / $i);

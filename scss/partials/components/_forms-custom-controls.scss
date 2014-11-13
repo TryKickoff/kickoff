@@ -48,23 +48,25 @@
 	color: #555;
 	cursor: pointer;
 
-	& input {
+	input {
 		position: absolute;
 		opacity: 0;
 		z-index: -1; /* Put the input behind the label so it doesn't overlay text */
 	}
 
 	/* Focus */
-	& input:focus ~ .control-indicator {
+	input:focus ~ .control-indicator {
 		box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em lighten($gray, 5%);
 	}
+
 	/* Checked state */
-	& input:checked ~ .control-indicator {
+	input:checked ~ .control-indicator {
 		color: #fff;
 		background-color: lighten($gray, 5%);
 	}
+
 	/* Active */
-	& input:active ~ .control-indicator {
+	input:active ~ .control-indicator {
 		color: #fff;
 		background-color: lighten($gray, 20%);
 	}
@@ -74,6 +76,7 @@
 .control--checkbox .control-indicator {
 	border-radius: 25%;
 }
+
 .control--checkbox input:checked ~ .control-indicator {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
 }
@@ -82,6 +85,7 @@
 .control--radio .control-indicator {
 	border-radius: 50%;
 }
+
 .control--radio input:checked ~ .control-indicator {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
 }
@@ -97,8 +101,9 @@
 	&:before {
 		content: 'Choose file...';
 	}
+
 	&:after {
-		content:'Browse';
+		content: 'Browse';
 		cursor: pointer;
 
 		display: inline-block;
@@ -107,7 +112,7 @@
 		right: -1px;
 		bottom: 0;
 
-		padding: 0.44em 1em 0;
+		padding: .44em 1em 0;
 
 		background-color: lighten($input-border, 5%);
 	}
@@ -124,19 +129,18 @@
  */
 .form-input--selectWrapper {
 	position: relative;
-	display:block;
-	// margin-top:0.5em;
-	padding:0;
+	display: block;
+	padding: 0;
 }
 
 /* This is the native select, we're making everything the text invisible so we can see the button styles in the wrapper */
 .form-input--selectWrapper select {
-	width:100%;
-	max-width:100%;
-	min-width:100%;
-	margin:0;
-	background:none;
-	border: none;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	margin: 0;
+	background: none;
+	border: 0;
 	outline: none;
 	/* Remove select styling */
 	appearance: none;
@@ -150,7 +154,7 @@
 
 /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	 .form-input--selectWrapper select::-ms-expand {
+	.form-input--selectWrapper select::-ms-expand {
 		display: none;
 	}
 }
@@ -161,14 +165,15 @@
 	color: #bbb;
 	content: "\25BC";
 	font-size: .7em;
-	padding:0;
+	padding: 0;
 	position: absolute;
 	right: 1.2em;
 	top: 50%;
 	margin-top: -9px;
 	z-index: 2;
+
 	/* These hacks make the select behind the arrow clickable in some browsers */
-	pointer-events:none;
+	pointer-events: none;
 	background: url(#);
 }
 
@@ -176,20 +181,21 @@
 .form-input--selectWrapper,
 x:-moz-any-link,
 x:default {
-	overflow:hidden;
-	width:100%;
+	overflow: hidden;
+	width: 100%;
 }
+
 .form-input--selectWrapper select,
 x:-moz-any-link,
 x:default {
-	width:110%;
-	max-width:110%;
-	min-width:110%;
+	width: 110%;
+	max-width: 110%;
+	min-width: 110%;
 	/* A zero right padding is needed or the native arrow can show up. Downside is the text will run over the arrow */
 	padding: .6em 0 .5em .8em;
 	/* Window is a Firefox way of hiding the arrow, sometimes works */
 	-moz-appearance: window;
-	text-indent: 0.01px;
+	text-indent: .01px;
 	text-overflow: "";
 }
 
@@ -215,5 +221,5 @@ x:default {
 }
 
 option {
-	font-weight:normal;
+	font-weight: normal;
 }

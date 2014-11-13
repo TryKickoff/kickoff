@@ -9,9 +9,9 @@
  * See mixins/_utility.scss for a mixin version of this
  */
 .clearfix:after {
-	content:"";
-	display:table;
-	clear:both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 
@@ -25,11 +25,12 @@
 	overflow: hidden;
 	text-align: left;
 	text-indent: -999em;
+
+	br {
+		display: none;
+	}
 }
 
-.ir br {
-	display: none;
-}
 
 
 // Hide from both screenreaders and browsers: h5bp.com/u
@@ -37,6 +38,7 @@
 	display: none !important;
 	visibility: hidden !important;
 }
+
 .is-shown { display: block; }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
@@ -66,14 +68,16 @@
 .is-invisible { visibility: hidden; }
 
 .l-floatLeft {
-	float:left;
+	float: left;
 }
+
 .l-floatRight {
-	float:right;
+	float: right;
 }
+
 .l-clear {
-	clear:both;
-	float:none;
+	clear: both;
+	float: none;
 }
 
 .l-mb0 { margin-bottom: 0 !important;}

@@ -21,7 +21,7 @@
 
 html {
 	font-size: $font-size-base-narrow-px;
-	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 
 	@include respond-min($bp-rwd-text) {
 		font-size: $font-size-base-px;
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: $line-height-headings;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 
-	& small {
+	small {
 		font-weight: normal;
 	}
 }
@@ -145,10 +145,12 @@ a {
 		color: $color-link-visited;
 		text-decoration: none;
 	}
+
 	&:hover, &:focus {
 		color: $color-link-hover;
 		//text-decoration: underline;
 	}
+
 	&:active {
 		color: $color-link-active;
 		//text-decoration: underline;
@@ -162,6 +164,7 @@ a {
 ul {
 	list-style-type: disc;
 }
+
 ol {
 	list-style-type: decimal;
 }
@@ -193,8 +196,7 @@ ul, ol {
 		}
 	}
 
-	ul,
-	ol {
+	ul, ol {
 		margin-bottom: 0;
 	}
 }
@@ -214,15 +216,9 @@ nav ul, nav ol {
 /**
  * Definition lists
  */
-dl {
-	margin-bottom: $baseline;
-}
-dt {
-	font-weight: $font-weight-bold;
-}
-dd {
-	margin-left: $baseline;
-}
+dl { margin-bottom: $baseline; }
+dt { font-weight: $font-weight-bold; }
+dd { margin-left: $baseline; }
 
 .dl-horizontal {
 	@include clearfix;
@@ -256,6 +252,7 @@ hr {
 strong, b {
 	font-weight: $font-weight-bold;
 }
+
 em, i {
 	font-style: italic;
 }
@@ -274,13 +271,13 @@ blockquote {
 	margin: $baseline;
 	border-left: 4px solid lighten(#000, 80%);
 
-	& p {
+	p {
 		margin-bottom: 0;
 		@include font-size($type-base);
 		font-weight: 300;
 	}
 
-	& small {
+	small {
 		display: block;
 		color: lighten(#000, 70%);
 
@@ -331,8 +328,8 @@ sub, sup {
 	vertical-align: baseline;
 }
 
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup { top: -.5em; }
+sub { bottom: -.25em; }
 
 samp {
 	font-family: $font-family-mono;
@@ -346,9 +343,11 @@ samp {
 .text-center {
 	text-align: center;
 }
+
 .text-left {
 	text-align: left;
 }
+
 .text-right {
 	text-align: right;
 }

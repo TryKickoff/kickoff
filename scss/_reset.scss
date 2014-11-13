@@ -4,6 +4,7 @@
 html {
 	box-sizing: border-box;
 }
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -31,9 +32,9 @@ audio:not([controls]) {
 	display: none;
 	height: 0;
 }
+
 // Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
 // Hide the `template` element in IE, Safari, and Firefox < 22.
-
 [hidden],
 template {
 	display: none;

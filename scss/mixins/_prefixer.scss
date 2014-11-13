@@ -11,20 +11,15 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 
 		@if $prefix == webkit and $prefix-for-webkit == true {
 			-webkit-#{$property}: $value;
-		}
-		@else if $prefix == moz and $prefix-for-mozilla == true {
+		} @else if $prefix == moz and $prefix-for-mozilla == true {
 			-moz-#{$property}: $value;
-		}
-		@else if $prefix == ms and $prefix-for-microsoft == true {
+		} @else if $prefix == ms and $prefix-for-microsoft == true {
 			-ms-#{$property}: $value;
-		}
-		@else if $prefix == o and $prefix-for-opera == true {
+		} @else if $prefix == o and $prefix-for-opera == true {
 			-o-#{$property}: $value;
-		}
-		@else if $prefix == spec and $prefix-for-spec == true {
+		} @else if $prefix == spec and $prefix-for-spec == true {
 			#{$property}: $value;
-		}
-		@else  {
+		} @else  {
 			@warn "Unrecognized prefix: #{$prefix}";
 		}
 	}

@@ -25,7 +25,7 @@
 	border-bottom: 2px solid $active-tab;
 
 	&.tabs--alignRight {
-		& li {
+		li {
 			float: right;
 		}
 	}
@@ -34,13 +34,13 @@
 	&.tabs--alignCenter {
 		text-align: center;
 
-		& > li {
+		> li {
 			display: inline;
 			float: none;
 		}
 	}
 
-	& > li {
+	> li {
 		float: left;
 		margin: 0 5px;
 	}
@@ -59,11 +59,12 @@
 
 .l-tabsContent {
 	@extend .unstyled;
-	& > li {
-		display: none;
-	}
 
-	& > li.is-active {
-		display: block;
+	> li {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
 	}
 }

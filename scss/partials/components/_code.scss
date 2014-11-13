@@ -36,7 +36,7 @@ pre {
 	// word-wrap: break-word;
 
 	// Account for some code outputs that place code tags in pre tags
-	& code {
+	code {
 		padding: 0;
 		color: $color-pre;
 		background-color: $color-pre-bg;
