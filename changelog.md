@@ -2,18 +2,27 @@
 All latest changes are documented on our site at http://tmwagency.github.io/kickoff/
 
 ## Version 4.0.3 - scss linting
+13/11/2014
+
 scss linting has been added which meant refactoring many of Kickoff's `*.scss` files. Some minor changes to `_tables.scss` were also needed.
 
 To try the linter, you can use the Sublime Text plugin or through grunt using `grunt scsslint`. **We did our best to remove all warning and errors, that will need to be done in future releases**
 
 ## Version 4.0.2
+11/11/2014
+
 Added a new Grunt variable for the images directory. Usage: `<%=config.img.dir%>`
 
 ## Version 4.0.1
+26/10/2014
+
 Darn! missed something in the 4.0.0 release.
+
 Removed `.btn--link` and changed `.btn-close` to `.btnClose`
 
 ## Version 4.0.0
+26/10/2014
+
 ### Typography
  * Font sizes use a modular scale throughout (but can easily be overridden)
  * Sass vars fonts etc are shorter and more intuitive to use - hopefully they'll be easier to remember when developing.
