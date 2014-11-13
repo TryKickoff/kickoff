@@ -192,7 +192,8 @@ module.exports = function (grunt) {
 	 * run jshint
 	 */
 	grunt.registerTask('checks', [
-		'jshint:project'
+		'jshint:project',
+		'scsslint'
 	]);
 
 
