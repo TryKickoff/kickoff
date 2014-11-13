@@ -154,7 +154,7 @@
 
 /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	 .form-input--selectWrapper select::-ms-expand {
+	.form-input--selectWrapper select::-ms-expand {
 		display: none;
 	}
 }
