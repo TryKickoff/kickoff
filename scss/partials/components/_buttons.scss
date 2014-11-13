@@ -129,12 +129,14 @@
 	width: 100%;
 	padding-left: 0;
 	padding-right: 0;
+
+	// Vertically space out multiple block buttons
+	// same ad .btn--block + .btn--block
+	& + & {
+		margin-top: 10px;
+	}
 }
 
-// Vertically space out multiple block buttons
-.btn--block + .btn--block {
-	margin-top: 10px;
-}
 
 // Specificity overrides
 input[type="submit"],

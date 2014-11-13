@@ -343,6 +343,10 @@ input[type="submit"] {
 		.form-controlGroup {
 			margin-bottom: $baseline;
 			@include clearfix;
+
+			.form-input--fileWrapper {
+				margin-left: 0;
+			}
 		}
 
 		// Float the labels left
@@ -360,10 +364,6 @@ input[type="submit"] {
 			&:first-child {
 				padding-left: 160px;
 			}
-		}
-
-		.form-controlGroup .form-input--fileWrapper {
-			margin-left: 0;
 		}
 
 		// Remove bottom margin on block level help text since that's accounted for on .form--control-group

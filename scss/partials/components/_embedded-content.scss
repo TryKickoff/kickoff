@@ -19,6 +19,6 @@ img {
 svg:not(:root) { overflow: hidden; }
 
 // Images, Flash & video
-img, object, embed, video{
+img, object, embed, video {
 	max-width: 100%;
 }
