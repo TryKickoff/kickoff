@@ -85,6 +85,21 @@
 
 
 /**
+ * Vertical Spacing
+ */
+
+@for $i from 1 to 6 {
+    .l-mb#{$i} {
+        margin-bottom: #{$i*$baseline};
+    }
+    
+    .l-mt#{$i} {
+        margin-top: #{$i*$baseline};
+    }
+}
+
+
+/**
  * Responsive Utilities
  */
 
