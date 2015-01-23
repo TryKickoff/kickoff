@@ -8,12 +8,9 @@ module.exports.tasks = {
 	sass: {
 		kickoff: {
 			options: {
-				unixNewlines: true,
-				style: 'expanded',
-				lineNumbers: false,
-				debugInfo : false,
+				outputStyle: 'nested',
 				precision : 8,
-				loadPath : '<%=config.css.scssDir%>/'
+				sourceMap : true
 			},
 			files: {
 				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
@@ -22,10 +19,8 @@ module.exports.tasks = {
 		},
 		styleguide: {
 			options: {
-				unixNewlines: true,
-				style: 'compressed',
+				outputStyle: 'compressed',
 				precision : 8,
-				loadPath : '<%=config.css.scssDir%>/'
 			},
 			files: {
 				'<%=config.css.distDir%>/styleguide.css': '<%=config.css.scssDir%>/styleguide.scss'
