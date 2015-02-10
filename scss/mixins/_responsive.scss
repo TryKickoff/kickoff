@@ -9,6 +9,19 @@
    ========================================================================== */
 $fix-mqs: false !default; //assign false if no value set already
 
+/**
+ * $mq-base var:
+ * This is needed because browsers do not calculate em-based
+ * media queries correctly. It is set to 16 because we think
+ * the majority of users will have their browser set to 100%
+ * zoom level.
+ *
+ * See below for an explanation:
+ * http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+ *
+ */
+$mq-base: 16;
+
 /*
    Min-width media query:
    * Equivalent to: @media screen and (min-width: 20em) { ... }
@@ -16,7 +29,7 @@ $fix-mqs: false !default; //assign false if no value set already
    * Argument is a pixel value WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-min($width) {
-	$width-em: em(strip-units($width));
+	$width-em: em(strip-units($width), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -41,7 +54,7 @@ $fix-mqs: false !default; //assign false if no value set already
    * Argument is a pixel value WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-max($width) {
-	$width-em: em(strip-units($width));
+	$width-em: em(strip-units($width), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
@@ -68,8 +81,8 @@ $fix-mqs: false !default; //assign false if no value set already
    * Arguments are pixel values WITHOUT a unit of measurement
    ========================================================================== */
 @mixin respond-min-max($min-width, $max-width) {
-	$min-width-em: em(strip-units($min-width));
-	$max-width-em: em(strip-units($max-width));
+	$min-width-em: em(strip-units($min-width), $mq-base);
+	$max-width-em: em(strip-units($max-width), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
