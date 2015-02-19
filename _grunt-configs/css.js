@@ -2,14 +2,14 @@ module.exports.tasks = {
 
 	/**
 	 * Sass compilation using grunt-sass
-	 * https://github.com/gruntjs/grunt-contrib-sass
+	 * https://github.com/sindresorhus/grunt-sass
 	 * Includes kickoff.scss and kickoff-old-ie.scss by default
 	 */
 	sass: {
 		kickoff: {
 			options: {
 				outputStyle: 'nested',
-				precision : 8,
+				precision : 10,
 				sourceMap : true
 			},
 			files: {
@@ -20,7 +20,7 @@ module.exports.tasks = {
 		styleguide: {
 			options: {
 				outputStyle: 'compressed',
-				precision : 8,
+				precision : 10,
 			},
 			files: {
 				'<%=config.css.distDir%>/styleguide.css': '<%=config.css.scssDir%>/styleguide.scss'
@@ -32,12 +32,12 @@ module.exports.tasks = {
 	/**
 	 * Autoprefixer
 	 * https://github.com/nDmitry/grunt-autoprefixer
-	 * https://github.com/ai/autoprefixer
+	 * https://github.com/postcss/autoprefixer
 	 * Auto prefixes your CSS using caniuse data
 	 */
 	autoprefixer: {
 		options: {
-			// We are supporting the last 2 browsers, any browsers with >1% market share,
+			// We are supporting the last 2 browsers, any browsers with >5% market share,
 			// and ensuring we support IE8+ with prefixes
 			browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 7'],
 			map: true
