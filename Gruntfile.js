@@ -101,7 +101,7 @@ module.exports = function (grunt) {
 
 	/**
 	 * GRUNT START * Run this to
-	 * run bower install, uglify, sass and autoprefixer
+	 * run bower install, uglify, sass, autoprefixer & then start a server/watch
 	 */
 	grunt.registerTask('start', [
 		'shell:bowerinstall',
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
 		'sass:styleguide',
 		'autoprefixer:kickoff',
 		'autoprefixer:styleguide',
-		'connect:start',
+		'browserSync:start',
 		'watch'
 	]);
 
@@ -146,7 +146,7 @@ module.exports = function (grunt) {
 
 	/**
 	 * GRUNT STYLEGUIDE * A task for the styleguide
-	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:kickoff, autoprefixer:styleguide, connect:styleguide & watch
+	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:kickoff, autoprefixer:styleguide, browserSync:styleguide & watch
 	 */
 	grunt.registerTask('styleguide', [
 		'shimly',
@@ -156,14 +156,14 @@ module.exports = function (grunt) {
 		'sass:styleguide',
 		'autoprefixer:kickoff',
 		'autoprefixer:styleguide',
-		'connect:styleguide',
+		'browserSync:styleguide',
 		'watch'
 	]);
 
 
 	/**
 	 * GRUNT SERVE * A task for a static server with a watch
-	 * run connect and watch
+	 * run browserSync and watch
 	 */
 	grunt.registerTask('serve', [
 		'shimly',
