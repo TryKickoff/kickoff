@@ -14,6 +14,7 @@ module.exports.tasks = {
 			},
 			files: {
 				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
+				// Remove the line below if you are supporting <IE9
 				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>-old-ie.scss'
 			}
 		},
@@ -69,9 +70,9 @@ module.exports.tasks = {
 			},
 			files: {
 				'<%=config.css.distDir%>/<%=config.css.srcFile%>.css'       : '<%=config.css.distDir%>/<%=config.css.srcFile%>.css',
+				// Remove the line below if you are supporting <IE9
 				'<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css'
 			},
-
 		}
 	}
 };
