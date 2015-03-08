@@ -13,7 +13,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at tech@tmw
 * Sass compilation uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about it. We still have many Sass mixins for many CSS3 features including gradients, REMs with fallbacks
 * Starter content styles, including clean typography, lists, tables, etc
 * Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
-* Grunt used extensively to ease common development bottlenecks
+* **[Grunt](http://gruntjs.com)** used extensively to ease common development bottlenecks
  * Sass compilation using [node-sass](https://github.com/sass/node-sass) ([grunt-sass](https://github.com/sindresorhus/grunt-sass))
  * Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
  * Simple server using [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
