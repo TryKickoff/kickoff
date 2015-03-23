@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Site dependencies
  */
@@ -16,6 +17,15 @@
  * Usage:
  * font-size : em(12);
  * font-size : em(12, 24);
+ */
+/**
+ * Convert pixels to rems
+ * For a relational value of 12px write rem(12) when the parent is 16px
+ * If the parent is another value say 24px write rem(12, 24)
+ *
+ * Usage:
+ * font-size : rem(12);
+ * font-size : rem(12, 24);
  */
 /**
  * Strips the units from a value. e.g. 12px -> 12
@@ -41,6 +51,17 @@
    * kickoff-old-ie.scss ignores any content in media-queries with values less
      than the $fix-mqs var value
    ========================================================================== */
+/**
+ * $mq-base var:
+ * This is needed because browsers do not calculate em-based
+ * media queries correctly. It is set to 16 because we think
+ * the majority of users will have their browser set to 100%
+ * zoom level.
+ *
+ * See below for an explanation:
+ * http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+ *
+ */
 /*
    Min-width media query:
    * Equivalent to: @media screen and (min-width: 20em) { ... }
@@ -243,8 +264,10 @@ textarea {
  */
 html {
   font-size: 18px;
-  -webkit-text-size-adjust: 100%;
-  font-size: 20px; }
+  -webkit-text-size-adjust: 100%; }
+  @media screen and (min-width: 48em) {
+    html {
+      font-size: 20px; } }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -252,9 +275,9 @@ body {
   font-size: 1rem;
   line-height: 1.4;
   color: #444;
-  -webkit-font-feature-settings: "liga", "dlig";
-     -moz-font-feature-settings: "liga", "dlig";
-          font-feature-settings: "liga", "dlig"; }
+  -webkit-font-feature-settings: "liga","dlig";
+     -moz-font-feature-settings: "liga","dlig";
+          font-feature-settings: "liga","dlig"; }
 
 /**
  * Paragraphs
@@ -453,10 +476,10 @@ sub, sup {
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em; }
+  top: -.5em; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -.25em; }
 
 samp {
   font-family: Menlo, Monaco, "Courier New", monospace; }
@@ -567,7 +590,7 @@ samp {
   .btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
     cursor: default;
     background-image: none;
-    opacity: 0.65; }
+    opacity: .65; }
 
 .btn--primary {
   background-color: #3498db; }
@@ -590,8 +613,8 @@ samp {
   font-size: 0.8rem;
   line-height: 1.5;
   height: 1.5em;
-  padding-right: 0.75em;
-  padding-left: 0.75em;
+  padding-right: .75em;
+  padding-left: .75em;
   border-radius: 3px; }
 
 .btn--pill {
@@ -615,8 +638,8 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   font-size: inherit;
   line-height: inherit;
   height: auto;
-  padding-right: 0.5em;
-  padding-left: 0.5em; }
+  padding-right: .5em;
+  padding-left: .5em; }
 
 /**
  * Close Button: for lightboxes etc
@@ -695,65 +718,57 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
       padding: 0; }
 
 .g-col {
-  padding: 10px;
-  float: left;
-  min-height: 1px;
-  position: relative;
-  clear: none;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  margin-left: 2%; }
-  .g-col:first-child {
-    margin-left: 0; }
-  .g-col + .g-col:last-child {
-    float: right; }
-  .g-col + .g-col.end {
-    float: left; }
+  padding: 10px; }
+  @media screen and (min-width: 48em) {
+    .g-col {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      clear: none;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+      margin-left: 2%; }
+      .g-col:first-child {
+        margin-left: 0; }
+      .g-col + .g-col:last-child {
+        float: right; }
+      .g-col + .g-col.end {
+        float: left; } }
 
-.g-span1 {
-  width: 6.5%; }
-
-.g-span2 {
-  width: 15%; }
-
-.g-span3 {
-  width: 23.5%; }
-
-.g-span4 {
-  width: 32%; }
-
-.g-span5 {
-  width: 40.5%; }
-
-.g-span6 {
-  width: 49%; }
-
-.g-span7 {
-  width: 57.5%; }
-
-.g-span8 {
-  width: 66%; }
-
-.g-span9 {
-  width: 74.5%; }
-
-.g-span10 {
-  width: 83%; }
-
-.g-span11 {
-  width: 91.5%; }
-
-.g-span12 {
-  width: 100%; }
-
-/**
+@media screen and (min-width: 48em) {
+  .g-span1 {
+    width: 6.5%; }
+  .g-span2 {
+    width: 15%; }
+  .g-span3 {
+    width: 23.5%; }
+  .g-span4 {
+    width: 32%; }
+  .g-span5 {
+    width: 40.5%; }
+  .g-span6 {
+    width: 49%; }
+  .g-span7 {
+    width: 57.5%; }
+  .g-span8 {
+    width: 66%; }
+  .g-span9 {
+    width: 74.5%; }
+  .g-span10 {
+    width: 83%; }
+  .g-span11 {
+    width: 91.5%; }
+  .g-span12 {
+    width: 100%; }
+  /**
 	 * Offset columns
 	 * http://tmwagency.github.io/kickoff/demos/grids.html#offset
 	 */
-/**
+  /**
 	 * Source ordering (push & pull)
 	 * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
-	 */
+	 */ }
+
 /**
  * Centred columns
  */
@@ -859,7 +874,7 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   display: block;
   width: 100%;
   height: 2.5em;
-  padding: 0.5em;
+  padding: .5em;
   font-size: 20px;
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -971,8 +986,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   display: block; }
   .control input[type="radio"], .control input[type="checkbox"] {
     vertical-align: middle;
-    margin-right: 0.5em;
-    margin-top: -0.1em;
+    margin-right: .5em;
+    margin-top: -.1em;
     display: inline;
     line-height: normal; }
 
@@ -1048,35 +1063,36 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 ::-webkit-input-placeholder {
   color: #b3b3b3; }
 
-/**
+@media screen and (min-width: 48em) {
+  /**
 	 * Horizontal-specific styles
 	 * =================================
 	 * add .form--horizontal to the <form> element
 	 * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
 	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
 	 */
-.form--horizontal .form-controlGroup {
-  margin-bottom: 28px; }
-  .form--horizontal .form-controlGroup:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .form--horizontal .form-controlGroup .form-input--fileWrapper {
-    margin-left: 0; }
-.form--horizontal .form-label {
-  float: left;
-  width: 140px;
-  padding-top: 5px;
-  text-align: right; }
-.form--horizontal .form-controlGroup-inputWrapper {
-  margin-left: 160px; }
-  .form--horizontal .form-controlGroup-inputWrapper:first-child {
-    padding-left: 160px; }
-.form--horizontal .form-helpBlock {
-  margin-top: 14px;
-  margin-bottom: 0; }
-.form--horizontal .form-actions {
-  padding-left: 160px; }
+  .form--horizontal .form-controlGroup {
+    margin-bottom: 28px; }
+    .form--horizontal .form-controlGroup:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .form--horizontal .form-controlGroup .form-input--fileWrapper {
+      margin-left: 0; }
+  .form--horizontal .form-label {
+    float: left;
+    width: 140px;
+    padding-top: 5px;
+    text-align: right; }
+  .form--horizontal .form-controlGroup-inputWrapper {
+    margin-left: 160px; }
+    .form--horizontal .form-controlGroup-inputWrapper:first-child {
+      padding-left: 160px; }
+  .form--horizontal .form-helpBlock {
+    margin-top: 14px;
+    margin-bottom: 0; }
+  .form--horizontal .form-actions {
+    padding-left: 160px; } }
 
 /**
  * Custom Checkboxes and radios - modified from WTF forms – http://wtfforms.com/
@@ -1104,7 +1120,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
  * ================================= */
 .control-indicator {
   position: absolute;
-  top: 0.25em;
+  top: .25em;
   left: 0;
   display: block;
   width: 19px;
@@ -1137,7 +1153,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     z-index: -1;
     /* Put the input behind the label so it doesn't overlay text */ }
   .control--custom input:focus ~ .control-indicator {
-    box-shadow: 0 0 0 0.075em #fff, 0 0 0 0.2em #a3b1b2; }
+    box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em #a3b1b2; }
   .control--custom input:checked ~ .control-indicator {
     color: #fff;
     background-color: #a3b1b2; }
@@ -1175,7 +1191,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     top: 0;
     right: -1px;
     bottom: 0;
-    padding: 0.44em 1em 0;
+    padding: .44em 1em 0;
     background-color: #d9d9d9; }
   .form-input--fileWrapper--styled .form-input-file {
     opacity: 0;
@@ -1203,22 +1219,21 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   appearance: none;
   -webkit-appearance: none;
   /* Magic font size number to prevent iOS text zoom */
-  padding: 0.5em;
+  padding: .5em;
   height: 2.3em;
   line-height: 1; }
 
 /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .form-input--selectWrapper select::-ms-expand {
-    display: none; }
- }
+    display: none; } }
 
 /* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
 .form-input--selectWrapper:after {
   background: none;
   color: #bbb;
   content: "\25BC";
-  font-size: 0.7em;
+  font-size: .7em;
   padding: 0;
   position: absolute;
   right: 1.2em;
@@ -1239,10 +1254,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   max-width: 110%;
   min-width: 110%;
   /* A zero right padding is needed or the native arrow can show up. Downside is the text will run over the arrow */
-  padding: 0.6em 0 0.5em 0.8em;
+  padding: .6em 0 .5em .8em;
   /* Window is a Firefox way of hiding the arrow, sometimes works */
   -moz-appearance: window;
-  text-indent: 0.01px;
+  text-indent: .01px;
   text-overflow: ""; }
 
 /* Focus style - TODO: Fix in FF */
@@ -1304,27 +1319,26 @@ img, object, embed, video {
   display: table;
   width: 100%; }
 
-.media-img, .media-body {
-  display: table-cell;
-  vertical-align: middle; }
-  .media--top .media-img, .media--top .media-body {
-    vertical-align: top; }
-  .media--bottom .media-img, .media--bottom .media-body {
-    vertical-align: bottom; }
-  .media-img :last-child, .media-body :last-child {
-    margin-bottom: 0; }
-
-.media-body {
-  width: 100%; }
-
-.media-img {
-  padding-right: 10px; }
-  .media-img > img {
-    display: block;
-    max-width: none; }
-  .media--rev .media-img {
-    padding-right: 0;
-    padding-left: 10px; }
+@media screen and (min-width: 25em) {
+  .media-img, .media-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .media--top .media-img, .media--top .media-body {
+      vertical-align: top; }
+    .media--bottom .media-img, .media--bottom .media-body {
+      vertical-align: bottom; }
+    .media-img :last-child, .media-body :last-child {
+      margin-bottom: 0; }
+  .media-body {
+    width: 100%; }
+  .media-img {
+    padding-right: 10px; }
+    .media-img > img {
+      display: block;
+      max-width: none; }
+    .media--rev .media-img {
+      padding-right: 0;
+      padding-left: 10px; } }
 
 /*
    Fluid width video
@@ -1370,34 +1384,100 @@ img, object, embed, video {
     display: block;
     height: auto;
     padding: 10px; }
-  .l-blockGrid > li {
-    display: block;
-    height: auto;
-    float: left; }
-  .l-blockGrid.l-blockGrid--1up > li {
-    width: 100%; }
-  .l-blockGrid.l-blockGrid--2up > li {
-    width: 50%; }
-  .l-blockGrid.l-blockGrid--3up > li {
-    width: 33.33333333%; }
-  .l-blockGrid.l-blockGrid--4up > li {
-    width: 25%; }
-  .l-blockGrid.l-blockGrid--5up > li {
-    width: 20%; }
-  .l-blockGrid.l-blockGrid--6up > li {
-    width: 16.66666667%; }
-  .l-blockGrid.l-blockGrid--7up > li {
-    width: 14.28571429%; }
-  .l-blockGrid.l-blockGrid--8up > li {
-    width: 12.5%; }
-  .l-blockGrid.l-blockGrid--9up > li {
-    width: 11.11111111%; }
-  .l-blockGrid.l-blockGrid--10up > li {
-    width: 10%; }
-  .l-blockGrid.l-blockGrid--11up > li {
-    width: 9.09090909%; }
-  .l-blockGrid.l-blockGrid--12up > li {
-    width: 8.33333333%; }
+  @media screen and (min-width: 25em) and (max-width: 48em) {
+    .l-blockGrid[class*="up--narrow"] > li {
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--1up--narrow > li {
+      width: 100%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--2up--narrow > li {
+      width: 50%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--3up--narrow > li {
+      width: 33.3333333333%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--4up--narrow > li {
+      width: 25%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--5up--narrow > li {
+      width: 20%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--6up--narrow > li {
+      width: 16.6666666667%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--7up--narrow > li {
+      width: 14.2857142857%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--8up--narrow > li {
+      width: 12.5%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--9up--narrow > li {
+      width: 11.1111111111%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--10up--narrow > li {
+      width: 10%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--11up--narrow > li {
+      width: 9.0909090909%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--12up--narrow > li {
+      width: 8.3333333333%;
+      display: block;
+      height: auto;
+      float: left; } }
+  @media screen and (min-width: 48em) {
+    .l-blockGrid > li {
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--1up > li {
+      width: 100%; }
+    .l-blockGrid.l-blockGrid--2up > li {
+      width: 50%; }
+    .l-blockGrid.l-blockGrid--3up > li {
+      width: 33.3333333333%; }
+    .l-blockGrid.l-blockGrid--4up > li {
+      width: 25%; }
+    .l-blockGrid.l-blockGrid--5up > li {
+      width: 20%; }
+    .l-blockGrid.l-blockGrid--6up > li {
+      width: 16.6666666667%; }
+    .l-blockGrid.l-blockGrid--7up > li {
+      width: 14.2857142857%; }
+    .l-blockGrid.l-blockGrid--8up > li {
+      width: 12.5%; }
+    .l-blockGrid.l-blockGrid--9up > li {
+      width: 11.1111111111%; }
+    .l-blockGrid.l-blockGrid--10up > li {
+      width: 10%; }
+    .l-blockGrid.l-blockGrid--11up > li {
+      width: 9.0909090909%; }
+    .l-blockGrid.l-blockGrid--12up > li {
+      width: 8.3333333333%; } }
 
 /*
 	Tabs
@@ -1530,6 +1610,28 @@ th {
  * If you need more responsive tables, consider Tablesaw by the Filament Group:
  * https://github.com/filamentgroup/tablesaw
  */
+@media screen and (max-width: 48em) {
+  .tableResponsive {
+    width: 100%;
+    margin-bottom: 21px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch; }
+    .tableResponsive > .table {
+      margin-bottom: 0; }
+      .tableResponsive > .table > thead th, .tableResponsive > .table > thead td, .tableResponsive > .table > tbody th, .tableResponsive > .table > tbody td, .tableResponsive > .table > tfoot th, .tableResponsive > .table > tfoot td {
+        white-space: nowrap; }
+    .tableResponsive > .table-bordered {
+      border: 0; }
+      .tableResponsive > .table-bordered > thead th:first-child, .tableResponsive > .table-bordered > thead td:first-child, .tableResponsive > .table-bordered > tbody th:first-child, .tableResponsive > .table-bordered > tbody td:first-child, .tableResponsive > .table-bordered > tfoot th:first-child, .tableResponsive > .table-bordered > tfoot td:first-child {
+        border-left: 0; }
+      .tableResponsive > .table-bordered > thead th:last-child, .tableResponsive > .table-bordered > thead td:last-child, .tableResponsive > .table-bordered > tbody th:last-child, .tableResponsive > .table-bordered > tbody td:last-child, .tableResponsive > .table-bordered > tfoot th:last-child, .tableResponsive > .table-bordered > tfoot td:last-child {
+        border-right: 0; }
+      .tableResponsive > .table-bordered > tbody > th, .tableResponsive > .table-bordered > tbody > td, .tableResponsive > .table-bordered > tfoot tr:last-child > th, .tableResponsive > .table-bordered > tfoot tr:last-child > td {
+        border-bottom: 0; } }
+
 /**
  * Preformatted code
  * Code typography styles for the <code> and <pre> elements
@@ -1754,43 +1856,33 @@ textarea[contenteditable] {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a:visited {
     text-decoration: underline; }
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
 	 * Don't show links for images, or javascript/internal links
 	 */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: ""; }
-
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
-
   tr, img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   @page {
-    margin: 0.5cm; }
+    margin: .5cm; }
 
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
-
   h2, h3 {
-    page-break-after: avoid; }
- }
-/*# sourceMappingURL=kickoff-old-ie.css.map */
+    page-break-after: avoid; } }
+/*# sourceMappingURL=kickoff.css.map */
