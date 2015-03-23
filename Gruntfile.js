@@ -10,17 +10,20 @@ module.exports = function (grunt) {
 		 * Many of the Grunt tasks use these vars
 		 */
 		config : {
-			src: "_grunt-configs/*.js",
+			src : "_grunt-configs/*.js",
+
+			assetsDir : 'assets',                     // <%=config.assetsDir%>
+			distDir   : '<%=config.assetsDir%>/dist', // <%=config.distDir%>
 
 			css : {
-				distDir : 'css',     // <%=config.css.distDir%>
-				srcFile : 'kickoff', // <%=config.css.srcFile%>
-				scssDir : 'scss'     // <%=config.css.scssDir%>
+				srcFile : 'kickoff',                    // <%=config.css.srcFile%>
+				scssDir : '<%=config.assetsDir%>/scss', // <%=config.css.scssDir%>
+				distDir : '<%=config.distDir%>/css'     // <%=config.css.distDir%>
 			},
 
 			js : {
-				distDir  : 'js/dist/',   // <%=config.js.distDir%>
-				distFile : 'app.min.js', // <%=config.js.distFile%>
+				distDir  : '<%=config.distDir%>/js/',   // <%=config.js.distDir%>
+				distFile : 'app.min.js',                // <%=config.js.distFile%>
 
 				// <%=config.js.fileList%>
 				fileList : [
@@ -31,17 +34,17 @@ module.exports = function (grunt) {
 					// uncomment the line below to compile Shimly output
 					//'js/helpers/shims.js',
 
-					'js/helpers/console.js',
+					'<%=config.assetsDir%>/js/helpers/console.js',
 					'bower_modules/trak/dist/trak.js',
 					'bower_modules/swiftclick/js/libs/swiftclick.js',
 					'bower_modules/cookies-js/dist/cookies.js',
 
-					'js/script.js'
+					'<%=config.assetsDir%>/js/script.js'
 				]
 			},
 
 			img : {
-				dir : 'img' // <%=config.img.dir%>
+				dir : '<%=config.assetsDir%>/img' // <%=config.img.dir%>
 			},
 
 			testing: {
@@ -182,7 +185,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('icons', [
 		'clean:icons',
-		'svgmin',
+		'imagemin:grunticon',
 		'grunticon'
 	]);
 

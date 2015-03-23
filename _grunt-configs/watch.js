@@ -27,19 +27,22 @@ module.exports.tasks = {
 			tasks: ['uglify']
 		},
 
-		livereload: {
-			options: { livereload: true },
-			files: [
-				'<%=config.css.distDir%>/*.css'
+		grunticon : {
+			files: ['<%=config.img.dir%>/grunticon/source/*.{svg,png,jpg,gif}'],
+			tasks: [
+				'clean:icons',
+				'newer:imagemin:grunticon',
+				'grunticon'
 			]
 		},
 
-		grunticon : {
-			files: ['<%=config.img.dir%>/src/*.svg', '<%=config.img.dir%>/src/*.png'],
+		images : {
+			files: [
+				'<%=config.img.dir%>/**/*.{svg,png,jpg,gif}',
+				'!<%=config.img.dir%>/grunticon/**/*.{svg,png,jpg,gif}'
+			],
 			tasks: [
-				'clean:icons',
-				'svgmin',
-				'grunticon'
+				'newer:imagemin:images'
 			]
 		},
 

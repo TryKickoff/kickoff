@@ -13,9 +13,9 @@ module.exports.tasks = {
 				sourceMap : true
 			},
 			files: {
-				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
+				'<%=config.assetsDir%>/css/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
 				// Remove the line below if you are supporting <IE9
-				'<%=config.css.distDir%>/temp/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>-old-ie.scss'
+				'<%=config.assetsDir%>/css/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>-old-ie.scss'
 			}
 		},
 		styleguide: {
@@ -47,7 +47,7 @@ module.exports.tasks = {
 		kickoff: {
 			expand: true,
 			flatten: true,
-			src: '<%=config.css.distDir%>/temp/*.css',
+			src: '<%=config.assetsDir%>/css/*.css',
 			dest: '<%=config.css.distDir%>/'
 		},
 

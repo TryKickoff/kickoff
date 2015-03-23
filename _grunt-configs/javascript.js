@@ -38,7 +38,7 @@ module.exports.tasks = {
 		shim: ['Array.forEach', 'Array.filter', 'Array.map', 'Function.bind', 'EventListener'],
 
 		// output location (relative to your grunt.js file location)
-		dest: 'js/helpers/shims.js',
+		dest: '<%=config.assetsDir%>/js/helpers/shims.js',
 
 		// minify the output (true or false)
 		minify: false
