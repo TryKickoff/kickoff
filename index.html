@@ -12,7 +12,7 @@
 			<link rel="stylesheet" href="css/kickoff-old-ie.css">
 		<![endif]-->
 		<!--[if gt IE 8]><!-->
-			<link rel="stylesheet" href="css/kickoff.css">
+			<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 		<!--<![endif]-->
 
 		<!-- For mobile icons etc, consider:
@@ -22,8 +22,9 @@
 
 		<script>window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var a=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];a.rel="stylesheet",a.href=e[o&&n?0:o?1:2],a.media="only x",r.parentNode.insertBefore(a,r),setTimeout(function(){a.media="all"})},a=new t.Image;a.onerror=function(){o(!1)},a.onload=function(){o(1===a.width&&1===a.height)},a.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};grunticon(["/img/icons/icons.data.svg.css", "/img/icons/icons.data.png.css", "/img/icons/icons.fallback.css"]);</script>
 		<noscript><link href="/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
+		<noscript><link href="/assets/dist/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
 
-		<script src="/js/libs/modernizr.min.js"></script>
+		<script src="/assets/js/libs/modernizr.min.js"></script>
 	</head>
 	<body>
 		<div class="skipToContent">
@@ -46,7 +47,7 @@
 		<!-- If you would like to include jQuery as a separate script request, rather than using the grunt-jquery-builder task and grunt
 			to compile it into one JS file, then replace this comment with the code at this gist – https://gist.github.com/ashleynolan/65596c15b31de0d160bf -->
 
-		<script src="/js/dist/app.min.js"></script>
+		<script src="/assets/dist/js/app.min.js"></script>
 
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
