@@ -9,25 +9,25 @@
    ========================================================================== */
 
 /* Vendor prefixer */
-@import "mixins/prefixer";
+@import "prefixer";
 
 /* Responsive mixins */
-@import "mixins/responsive";
+@import "responsive";
 
 /* CSS3 */
-@import "mixins/css3";
-@import "mixins/linear-gradient";
-@import "mixins/radial-gradient";
-@import "mixins/vertical-center";
+@import "css3";
+@import "linear-gradient";
+@import "radial-gradient";
+@import "vertical-center";
 
 /**
  * Utility mixins
  * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
  */
-@import "mixins/utility";
+@import "utility";
 
 /* HiDPI */
-@import "mixins/hidpi";
+@import "hidpi";
 
 /* FORMS */
-@import "mixins/form-helpers";
+@import "form-helpers";

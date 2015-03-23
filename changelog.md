@@ -1,6 +1,16 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://tmwagency.github.io/kickoff/
 
+## Version 4.1.0 - Libsass
+18/05/2015
+
+As [node-sass](https://github.com/sass/node-sass) has been updated to v2, we can now use [grunt-sass](https://github.com/sindresorhus/grunt-sass) with Kickoff. It is faster and removes the dependency on Ruby from Kickoff.
+
+## Version 4.0.4 - Media query bugfix
+18/02/2015
+
+Fixes a strange bug with our [media-query mixins](https://github.com/tmwagency/kickoff/blob/master/scss/mixins/_responsive.scss). Apparently `em`-based media-queries do not calculate correctly if the font-size differs from the user's default — usually 16px. At this point, we have hard-coded 16 into our media-query mixins until we can find a better solution.
+
 ## Version 4.0.3 - scss linting
 13/11/2014
 
