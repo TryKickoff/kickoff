@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
 	 * grunt serve      : watch js & scss and run a local server
 	 * grunt icons      : generate the icons. uses svgmin and grunticon
-	 * grunt check      : run jshint
+	 * grunt checks     : run jshint & scsslint
 	 * grunt travis     : used by travis ci only
 	 */
 
@@ -128,37 +128,35 @@ module.exports = function (grunt) {
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff'
+		'sass',
+		'autoprefixer'
 	]);
 
 
 	/**
 	 * GRUNT DEPLOY * A task for your production environment
-	 * run uglify, sass:kickoff, autoprefixer:kickoff and csso
+	 * run uglify, sass, autoprefixer and csso
 	 */
 	grunt.registerTask('deploy', [
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff',
+		'sass',
+		'autoprefixer',
 		'csso'
 	]);
 
 
 	/**
 	 * GRUNT STYLEGUIDE * A task for the styleguide
-	 * run uglify, sass:kickoff, sass:styleguide, autoprefixer:kickoff, autoprefixer:styleguide, browserSync:styleguide & watch
+	 * run uglify, sass, autoprefixer, browserSync:styleguide & watch
 	 */
 	grunt.registerTask('styleguide', [
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'sass:styleguide',
-		'autoprefixer:kickoff',
-		'autoprefixer:styleguide',
+		'sass',
+		'autoprefixer',
 		'browserSync:styleguide',
 		'watch'
 	]);
@@ -172,8 +170,8 @@ module.exports = function (grunt) {
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff',
+		'sass',
+		'autoprefixer',
 		'browserSync:serve',
 		'watch'
 	]);
