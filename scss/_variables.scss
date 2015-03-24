@@ -5,7 +5,6 @@
  * Breakpoints
  * Paths
  * Grid setup
- * Colour palette
  * Components
  */
 
@@ -84,8 +83,8 @@ $img-path                     : "/img"; // Usage: background: url('#{$img-path}/
 
 // Setup grid defaults
 $layout-margin                : 0     !default; // [in pixels] Space outside the grid
-$layout-max-width               : 1000  !default; // [in pixels]
-$layout-min-width               : 1000  !default; // [in pixels] Minimum width for layout in <IE9
+$layout-max-width             : 1000  !default; // [in pixels]
+$layout-min-width             : 1000  !default; // [in pixels] Minimum width for layout in <IE9
 
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
@@ -100,13 +99,6 @@ $using-push-pull-columns      : false !default; // Allow columns to be pushed & 
 $using-offsetcolumns          : false !default; // Allow columns to be offset
 $using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
 
-
-/**
- * Tables
- * Customizes the `.table` component with basic values, each used across all table variations.
- */
-$table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
-$table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-condensed`.
 
 
 /**

@@ -3,13 +3,21 @@
  * Code typography styles for the <code> and <pre> elements
  */
 
+/**
+ * Define associated Code variables
+ */
+$code-textColor               : #444;
+$code-bgColor                 : #ddd;
+$pre-textColor                : #444;
+$pre-bgColor                  : #ddd;
+
 // Inline and block code styles
 code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $font-family-mono;
 	@include font-size($type-small);
-	color: $color-code;
+	color: $code-textColor;
 	border-radius: 3px;
 	tab-size: 3;
 }
@@ -17,8 +25,8 @@ pre {
 // Inline code
 code {
 	padding: 2px 4px;
-	color: $color-code;
-	background-color: $color-code-bg;
+	color: $code-textColor;
+	background-color: $code-bgColor;
 }
 
 // Blocks of code
@@ -27,8 +35,8 @@ pre {
 	padding: $baseline / 2;
 	margin: 0 0 $baseline;
 	// line-height: $leading-base;
-	color: $color-pre;
-	background-color: $color-pre-bg;
+	color: $pre-textColor;
+	background-color: $pre-bgColor;
 	border-radius: 4px;
 	white-space: pre;
 	// white-space: pre-wrap;
@@ -38,8 +46,8 @@ pre {
 	// Account for some code outputs that place code tags in pre tags
 	& code {
 		padding: 0;
-		color: $color-pre;
-		background-color: $color-pre-bg;
+		color: $pre-textColor;
+		background-color: $pre-bgColor;
 		border: 0;
 	}
 }

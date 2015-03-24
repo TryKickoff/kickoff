@@ -1,12 +1,31 @@
 /**
  * Forms
  * =================================
- * Generic form styles
- * Form inputs and groups
- * Form field feedback states
- * Horizontal & vertical forms
- * Horizontal-specific styles
+ * Index:
+ * - Associated Form Variables
+ * - Generic form styles
+ * - Form inputs and groups
+ * - Form field feedback states
+ * - Horizontal & vertical forms
+ * - Horizontal-specific styles
  */
+
+/**
+ * Define associated Form variables
+ */
+
+$input-bgColor                : #fff;					// Colour of input background
+$input-borderColor            : #ccc;					// Colour of input borders
+$form-actions-bgColor         : #f5f5f5;			// Background colour of form actions container (i.e. submit)
+$label-textColor              : $color-text;	// Text colour of form labels and legends
+$input-textColor              : $color-text;	// Text colour of form inputs
+
+$placeholder-textColor        : lighten(#000, 70%); // Text colour of input placeholder
+
+// Messages & form states and alerts
+$color-warning                : darken($yellow, 5%);	// base colour for warning input state
+$color-error                  : darken($red, 5%);			// base colour for error input state
+$color-success                : $green;								// base colour for success input state
 
 
 /**
@@ -39,7 +58,7 @@
 	margin-bottom: $baseline;
 	@include font-size($type-large);
 	line-height: $leading-base;
-	color: $label-color;
+	color: $label-textColor;
 	border: 0;
 	border-bottom: 1px solid #eee;
 	white-space: normal;
@@ -70,12 +89,12 @@
 .form-label {
 	display: block;
 	// margin-bottom: $baseline / 2;
-	color: $label-color;
+	color: $label-textColor;
 	font-weight: bold;
 
 	& small {
 		font-weight: normal;
-		color: lighten($label-color, 30%);
+		color: lighten($label-textColor, 30%);
 	}
 }
 
@@ -89,18 +108,18 @@
 	@include font-size($type-base);
 	font-family: $font-family-base;
 	line-height: $leading-base;
-	color: $input-color;
+	color: $input-textColor;
 	font-weight: normal;
 	vertical-align: baseline;
 
-	background-color: $input-bg;
-	border: 2px solid $input-border;
+	background-color: $input-bgColor;
+	border: 2px solid $input-borderColor;
 	border-radius: 5px;
 
 	transition: border 200ms ease-in-out;
 
 	&:focus {
-		border-color: darken($input-border, 20%);
+		border-color: darken($input-borderColor, 20%);
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
@@ -132,7 +151,7 @@
 		padding: initial;
 		line-height: initial;
 		border: initial;
-		background-color: $input-bg;
+		background-color: $input-bgColor;
 		background-color: initial;
 	}
 
@@ -171,8 +190,8 @@
 	// Disabled State
 	&[disabled],
 	&[readonly] {
-		background-color: darken($input-bg, 10%);
-		border-color: $input-border;
+		background-color: darken($input-bgColor, 10%);
+		border-color: $input-borderColor;
 		cursor: not-allowed;
 	}
 
@@ -200,7 +219,7 @@
 // Set the height of select and file controls to match text inputs
 .form-input--select {
 	// Chrome on Linux and Mobile Safari need background-color
-	background-color: $input-bg;
+	background-color: $input-bgColor;
 
 	// Make multiple select elements height not fixed
 	&[multiple],
@@ -294,7 +313,7 @@ input[type="submit"] {
 	padding: $baseline 20px;
 	margin-top: $baseline;
 	margin-bottom: $baseline;
-	background-color: $form-actions-bg;
+	background-color: $form-actions-bgColor;
 	border-top: 1px solid #ddd;
 
 	& .btn {
@@ -331,7 +350,7 @@ input[type="submit"] {
  * =================================
  * Gets special styles; can't be bundled together though for some reason
  */
-@include placeholder($placeholder-text);
+@include placeholder($placeholder-textColor);
 
 // === <$bp-single-col ===
 @include respond-min($bp-single-col) {

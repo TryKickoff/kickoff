@@ -1,9 +1,40 @@
 /**
  * Tables
+ * =================================
+ * Index:
+ * - Associated Table Variables
+ * - Default table Styles
+ * – Table modifiers:
+ *   - .table--condensed
+ *   - .table--bordered
+ *   - .table--rounded
+ *   - .table--striped
+ *   – .table--hover
+ * – .tableResponsive
  */
 
+/**
+ * Define associated Table variables
+ */
+$table-bgColor                : $color-bg !default; // Default background color used for all tables.
+$table-bgColor--accent        : #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bgColor--hover         : #f5f5f5 !default; // Background color used for `.table-hover`.
+$table-bgColor--active        : $table-bgColor--hover !default;
+$table-borderColor           : #ddd !default; // Border color for table and cell borders.
+
+/**
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
+$table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
+$table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-condensed`.
+
+
+/**
+ * Default Table styles
+ **/
+
 table {
-	background-color: $table-bg;
+	background-color: $table-bgColor;
 }
 th {
 	text-align: left;
@@ -28,7 +59,7 @@ th {
 				padding: $table-cell-padding;
 				line-height: $baseline;
 				vertical-align: top;
-				border-top: 1px solid $table-border-color;
+				border-top: 1px solid $table-borderColor;
 			}
 		}
 	}
@@ -37,11 +68,11 @@ th {
 	> thead > tr > th,
 	> thead > tr > td {
 		vertical-align: bottom;
-		border-bottom: 2px solid $table-border-color;
+		border-bottom: 2px solid $table-borderColor;
 	}
 
 	> tfoot > tr > td {
-		border-top: 3px solid $table-border-color;
+		border-top: 3px solid $table-borderColor;
 	}
 
 	// Remove top border from thead by default
@@ -57,7 +88,7 @@ th {
 	}
 	// Account for multiple tbody instances
 	> tbody + tbody {
-		border-top: 2px solid $table-border-color;
+		border-top: 2px solid $table-borderColor;
 	}
 
 	// Nesting
@@ -86,14 +117,14 @@ th {
  * Add borders all around the table and between all the columns.
  */
 .table--bordered {
-	border: 2px solid $table-border-color;
+	border: 2px solid $table-borderColor;
 	> thead,
 	> tbody,
 	> tfoot {
 		> tr {
 			> th,
 			> td {
-				border: 1px solid $table-border-color;
+				border: 1px solid $table-borderColor;
 			}
 		}
 	}
@@ -149,7 +180,7 @@ th {
 	> tbody > tr:nth-child(odd) {
 		> td,
 		> th {
-			background-color: $table-bg-accent;
+			background-color: $table-bgColor--accent;
 		}
 	}
 }
@@ -161,7 +192,7 @@ th {
 	> tbody > tr:hover {
 		> td,
 		> th {
-			background-color: $table-bg-hover;
+			background-color: $table-bgColor--hover;
 		}
 	}
 }
@@ -200,7 +231,7 @@ table {
 		overflow-y: hidden;
 		overflow-x: auto;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
-		border: 1px solid $table-border-color;
+		border: 1px solid $table-borderColor;
 		-webkit-overflow-scrolling: touch;
 
 		// Tighten up spacing

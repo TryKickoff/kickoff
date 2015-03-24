@@ -1,8 +1,35 @@
 /**
  * Buttons
- * Based on csswizardry.com/beautons
+ * =================================
+ * Index:
+ * - Associated Button Variables
+ * - Base button styling
+ * – Button Modifiers
+ * 	 – btn--primary
+ *   – btn--large
+ *   – btn--small
+ *   – btn--pill
+ *   – btn--block
+ *   – btn--natural
+ *   – btn--link
+ *   – btn--close
+ */
+
+
+/**
+ * Define associated Button variables
+ */
+
+$btn-default-bgColor             : $gray;
+$btn-default-bgColor--highlight  : darken($btn-default-bgColor, 10%);
+
+$btn-primary-bgColor             : $color-link-default;
+$btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
+
+
+/**
+ * Base button styles – Based on csswizardry.com/beautons
  *
- * Base button styles:
  * 1. Allow us to better style box model properties.
  * 2. Line different sized buttons up a little nicer.
  * 3. Stop buttons wrapping and looking broken.
@@ -18,25 +45,25 @@
  */
 
 .btn {
-	display:inline-block;       /* [1] */
-	vertical-align:middle;      /* [2] */
-	white-space:nowrap;         /* [3] */
-	font-family:inherit;        /* [4] */
-	font-size:100%;             /* [4] */
-	cursor:pointer;             /* [5] */
-	border:none;                /* [6] */
-	margin:0;                   /* [6] */
-	padding-top:   0;           /* [6] */
-	padding-bottom:0;           /* [6] */
+	display: inline-block;      /* [1] */
+	vertical-align: middle;     /* [2] */
+	white-space: nowrap;        /* [3] */
+	font-family: inherit;       /* [4] */
+	font-size: 100%;            /* [4] */
+	cursor: pointer;            /* [5] */
+	border: none;               /* [6] */
+	margin: 0;                  /* [6] */
+	padding-top:    0;          /* [6] */
+	padding-bottom: 0;          /* [6] */
 	line-height: 2.5;           /* [7] */
 	height:      2.5em;         /* [7] */
-	padding-right:1.5em;        /* [7] */
+	padding-right: 1.5em;       /* [7] */
 	padding-left: 1.5em;        /* [7] */
-	overflow:visible;           /* [8] */
+	overflow: visible;          /* [8] */
 	text-align: center;
 
 	// You may want to change this
-	background-color: $btn-default-bg;
+	background-color: $btn-default-bgColor;
 
 	&,
 	&:link,
@@ -50,7 +77,7 @@
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: $btn-default-bg-highlight;
+		background-color: $btn-default-bgColor--highlight;
 	}
 
 	&,
@@ -79,7 +106,7 @@
 // Set the backgrounds
 // -------------------------
 .btn--primary {
-	background-color: $btn-primary-bg;
+	background-color: $btn-primary-bgColor;
 
 	&,
 	&:link,
@@ -90,7 +117,7 @@
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: $btn-primary-bg-highlight;
+		background-color: $btn-primary-bgColor--highlight;
 	}
 }
 
