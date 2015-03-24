@@ -1,37 +1,6 @@
 module.exports.tasks = {
 
 	/**
-	 * Connect
-	 * https://github.com/gruntjs/grunt-contrib-connect
-	 * Start a static web server
-	 */
-	connect: {
-		site: {
-			options: {
-				open: true,
-				livereload: true
-			}
-		},
-		styleguide: {
-			options: {
-				open: {
-					target: 'http://0.0.0.0:8000/_docs/styleguide.html'
-				},
-				livereload: true
-			}
-		},
-		start: {
-			options: {
-				open: {
-					target: 'http://0.0.0.0:8000/_docs/index.html'
-				},
-				livereload: true
-			}
-		}
-	},
-
-
-	/**
 	 * browserSync
 	 * http://www.browsersync.io/docs/options/
 	 * http://www.browsersync.io/docs/grunt/
@@ -39,12 +8,50 @@ module.exports.tasks = {
 	browserSync: {
 		serve: {
 			bsFiles: {
-				src: ['css/*.css', '<%=config.js.distDir%>/*.js', '*.html']
+				src: [
+					'<%=config.distDir%>/**/*.*',
+					'*.html'
+				]
 			},
 			options: {
 				watchTask: true,
 				server: {
 					baseDir: "./"
+				}
+			}
+		},
+
+
+		start: {
+			bsFiles: {
+				src: [
+					'<%=config.distDir%>/**/*.*',
+					'*.html'
+				]
+			},
+			options: {
+				watchTask: true,
+				server: {
+					baseDir: "./",
+					// index: "_docs/index.html",
+					directory: true
+				}
+			}
+		},
+
+
+		styleguide: {
+			bsFiles: {
+				src: [
+					'<%=config.distDir%>/**/*.*',
+					'*.html'
+				]
+			},
+			options: {
+				watchTask: true,
+				server: {
+					baseDir: "./",
+					index: "_docs/styleguide.html"
 				}
 			}
 		}

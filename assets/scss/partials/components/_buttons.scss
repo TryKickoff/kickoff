@@ -1,0 +1,212 @@
+/**
+ * Buttons
+ * =================================
+ * Index:
+ * - Associated Button Variables
+ * - Base button styling
+ * – Button Modifiers
+ * 	 – btn--primary
+ *   – btn--large
+ *   – btn--small
+ *   – btn--pill
+ *   – btn--block
+ *   – btn--natural
+ *   – btn--link
+ *   – btn--close
+ */
+
+
+/**
+ * Define associated Button variables
+ */
+
+$btn-default-bgColor             : $gray;
+$btn-default-bgColor--highlight  : darken($btn-default-bgColor, 10%);
+
+$btn-primary-bgColor             : $color-link-default;
+$btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
+
+
+/**
+ * Base button styles – Based on csswizardry.com/beautons
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Fixes odd inner spacing in IE7.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ *10. Prevents from inheriting default anchor styles.
+ */
+
+.btn {
+	display: inline-block;      /* [1] */
+	vertical-align: middle;     /* [2] */
+	white-space: nowrap;        /* [3] */
+	font-family: inherit;       /* [4] */
+	font-size: 100%;            /* [4] */
+	cursor: pointer;            /* [5] */
+	border: none;               /* [6] */
+	margin: 0;                  /* [6] */
+	padding-top:    0;          /* [6] */
+	padding-bottom: 0;          /* [6] */
+	line-height: 2.5;           /* [7] */
+	height:      2.5em;         /* [7] */
+	padding-right: 1.5em;       /* [7] */
+	padding-left: 1.5em;        /* [7] */
+	overflow: visible;          /* [8] */
+	text-align: center;
+
+	// You may want to change this
+	background-color: $btn-default-bgColor;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
+
+	border-radius: 5px;
+	user-select: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $btn-default-bgColor--highlight;
+	}
+
+	&,
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited {
+		text-decoration: none;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		background-image: none;
+		opacity: .65;
+	}
+}
+
+// Set the backgrounds
+// -------------------------
+.btn--primary {
+	background-color: $btn-primary-bgColor;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $btn-primary-bgColor--highlight;
+	}
+}
+
+// Button Modifiers
+// --------------------------------------------------
+// These all follow the same sizing rules as above; text is 1em, space around it
+// Large
+.btn--large {
+	@include font-size($type-large);
+	line-height: 3;
+	height: 3em;
+	padding-right: 2em;
+	padding-left: 2em;
+	border-radius: 6px;
+}
+
+// Small
+.btn--small {
+	@include font-size($type-small);
+	line-height: 1.5;
+	height: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	border-radius: 3px;
+}
+
+.btn--pill {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	border-radius: 100em;
+}
+
+// Block button
+// -------------------------
+.btn--block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+	// Vertically space out multiple block buttons
+	// same ad .btn--block + .btn--block
+	& + & {
+		margin-top: 10px;
+	}
+}
+
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn--block {
+		width: 100%;
+	}
+}
+
+// Make the button inherit sizing from its parent.
+.btn--natural {
+	vertical-align: baseline;
+	font-size: inherit;
+	line-height: inherit;
+	height: auto;
+	padding-right: .5em;
+	padding-left: .5em;
+}
+
+
+/**
+ * Close Button: for lightboxes etc
+ */
+.btnClose {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+
+	display: block;
+	height: 20px;
+	width: 20px;
+	line-height: 17px;
+
+	background: #000;
+	color: $color-primary;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		color: #fff;
+		border-radius: 50px;
+	}
+}

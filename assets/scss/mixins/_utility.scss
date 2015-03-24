@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Utility Mixins
+   ========================================================================== */
+// Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// REM
+// @include rem(margin, $font-size-base);
+@mixin rem($property, $sizeValue: $font-size-base) {
+	$remValue: (strip-units($sizeValue) / $font-size-base);
+	#{$property}: $sizeValue + px;
+	#{$property}: $remValue + rem;
+}
+
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
+// REM font size
+// @include font-size(16);
+@mixin font-size($sizeValue: $font-size-base) {
+	@include rem(font-size, $sizeValue);
+}
+
+// REM line height
+// @include line-height(16);
+@mixin line-height($sizeValue: $line-height-base) {
+	@include rem(line-height, $sizeValue);
+}
+
+// EM font size
+// @include font-size-ems(20, 16);
+@mixin font-size-ems($target-px-size, $context-px-size:$font-size-base) {
+	font-size: ($target-px-size / $context-px-size) * 1em;
+}
+
+// @font-face
+// @include font-face(proxima-nova, /css/fonts/proxima-nova, normal, italic, false);
+@mixin font-face($family-name, $font-path, $font-weight: normal, $font-style: normal, $include-svg: false) {
+	@font-face {
+		font-family: $family-name;
+		src: url('#{$font-path}.eot');
+		src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+			url('#{$font-path}.woff') format('woff'),
+			url('#{$font-path}.ttf') format('truetype'),
+			// @if $include-svg == true {
+			url('#{$font-path}.svg##{$family-name}') format('svg');
+			// }
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+// Centre-align a block level element
+// @include center-block
+@mixin center-block() {
+	display: block;
+	margin: 0 auto;
+}
+
+// SIZING SHORTCUTS
+// @include size(10px, 30px);
+@mixin size($width: 5px, $height: 5px) {
+	height: $height;
+	width: $width;
+}
+
+// @include square(50px);
+@mixin square($size: 5px) {
+	@include size($size, $size);
+}
+
+// INPUT PLACEHOLDER TEXT
+@mixin placeholder($color: lighten(#000, 70%)) {
+	:-ms-input-placeholder {
+		color: $color;
+	}
+
+	:-moz-placeholder {
+		color: $color;
+	}
+
+	::-webkit-input-placeholder {
+		color: $color;
+	}
+}
+
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+	::-moz-selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
+	}
+
+	::selection {
+		color: $color-selection;
+		background: $color-selection-bg;
+		text-shadow: none;
+	}
+}
+
+// Vertical align
+// @include vertical-align(50px);
+@mixin vertical-align($argument) {
+	line-height: $argument;
+	height: $argument;
+}
+
+// Text truncation
+// @include truncate(300px);
+// @include truncate(100%);
+@mixin truncate($truncation-boundary) {
+	max-width: $truncation-boundary;
+	@include text-overflow();
+}
+
+// Text overflow
+// @include text-overflow();
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Make any element resizable for prototyping
+// @include resizable();
+@mixin resizable($direction: both) {
+	resize: $direction; // Options are horizontal, vertical, both
+	overflow: auto; // Safari fix
+}

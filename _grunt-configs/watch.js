@@ -7,7 +7,7 @@ module.exports.tasks = {
 	*/
 	watch: {
 		scss: {
-			files: ['scss/**/*.scss', '!scss/styleguide.scss'],
+			files: ['<%=config.css.scssDir%>/**/*.scss', '!<%=config.css.scssDir%>/styleguide.scss'],
 			tasks: [
 				'sass:kickoff',
 				'autoprefixer:kickoff'
@@ -15,7 +15,7 @@ module.exports.tasks = {
 		},
 
 		"styleguide_scss": {
-			files: ['scss/styleguide.scss'],
+			files: ['<%=config.css.scssDir%>/styleguide.scss'],
 			tasks: [
 				'sass:styleguide',
 				'autoprefixer:styleguide'
@@ -23,24 +23,31 @@ module.exports.tasks = {
 		},
 
 		js: {
-			files: ['<%=config.js.fileList%>', 'Gruntfile.js'],
+			files: ['<%=config.js.fileList%>'],
 			tasks: ['uglify']
 		},
 
-		livereload: {
-			options: { livereload: true },
-			files: [
-				'css/*.css'
+		grunticon : {
+			files: ['<%=config.img.dir%>/grunticon/source/*.{svg,png,jpg,gif}'],
+			tasks: [
+				'clean:icons',
+				'newer:imagemin:grunticon',
+				'grunticon'
 			]
 		},
 
-		grunticon : {
-			files: ['img/src/*.svg', 'img/src/*.png'],
+		images : {
+			files: [
+				'<%=config.img.dir%>/**/*.{svg,png,jpg,gif}',
+				'!<%=config.img.dir%>/grunticon/**/*.{svg,png,jpg,gif}'
+			],
 			tasks: [
-				'clean:icons',
-				'svgmin',
-				'grunticon'
+				'newer:imagemin:images'
 			]
+		},
+
+		grunt: {
+			files: ['_grunt-configs/*.js', 'Gruntfile.js']
 		}
 	}
 };

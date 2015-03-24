@@ -1,0 +1,15 @@
+/**
+ * Scrollbar styling (only in webkit)
+ */
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: darken($color-bg, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+	background: darken($color-bg, 40%);
+	cursor: pointer;
+	border-radius: 5px;
+}

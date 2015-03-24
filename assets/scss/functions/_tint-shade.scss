@@ -1,0 +1,13 @@
+// Add percentage of white to a color
+// Usage:
+// background-color: tint(blue, 20%);
+@function tint($color, $percent) {
+	@return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+// Usage:
+// background-color: shade(blue, 20%);
+@function shade($color, $percent) {
+	@return mix(black, $color, $percent);
+}

@@ -1,0 +1,1950 @@
+@charset "UTF-8";
+/**
+ * Site dependencies
+ */
+/*
+ * Mixins, helpers and functions
+ * =================================
+ * Most CSS3 vendor prefixed items have a mixin,
+ * but we should not need them if autoprefixer is being used
+ * See mixins/css3.scss for the full list
+ */
+/**
+ * Convert pixels to ems
+ * For a relational value of 12px write em(12) when the parent is 16px
+ * If the parent is another value say 24px write em(12, 24)
+ *
+ * Usage:
+ * font-size : em(12);
+ * font-size : em(12, 24);
+ */
+/**
+ * Convert pixels to rems
+ * For a relational value of 12px write rem(12) when the parent is 16px
+ * If the parent is another value say 24px write rem(12, 24)
+ *
+ * Usage:
+ * font-size : rem(12);
+ * font-size : rem(12, 24);
+ */
+/**
+ * Strips the units from a value. e.g. 12px -> 12
+ * Usage: strip-units(400px)
+ */
+/* ==========================================================================
+   Sass Mixins
+   * Vendor Prefixer
+   * Responsive
+   * CSS3
+   * Utility Mixins
+   * hiDpi
+   * Forms
+   ========================================================================== */
+/* Vendor prefixer */
+/* Responsive mixins */
+/* ==========================================================================
+   Responsive media query mixins
+   * These are used so that we can define separate media-query content
+     for <IE9 and browsers with support for media queries
+   * These are directly related to the global $fix-mqs var defined in
+     kickoff-old-ie.scss
+   * kickoff-old-ie.scss ignores any content in media-queries with values less
+     than the $fix-mqs var value
+   ========================================================================== */
+/**
+ * $mq-base var:
+ * This is needed because browsers do not calculate em-based
+ * media queries correctly. It is set to 16 because we think
+ * the majority of users will have their browser set to 100%
+ * zoom level.
+ *
+ * See below for an explanation:
+ * http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+ *
+ */
+/*
+   Min-width media query:
+   * Equivalent to: @media screen and (min-width: 20em) { ... }
+   * Usage: @include respond-min(500) { ... };
+   * Argument is a pixel value WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Max-width media query:
+   * Equivalent to: @media screen and (max-width: 20em) { ... }
+   * Usage: @include respond-max(500) { ... };
+   * Argument is a pixel value WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Min-max-width media query:
+   * Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
+   * Usage: @include respond-min-max(500, 600) { ... };
+   * Arguments are pixel values WITHOUT a unit of measurement
+   ========================================================================== */
+/*
+   Old IE specific mixin
+   * Only use this content if we're dealing with old IE
+   * Usage: @include oldie() { ... }
+   ========================================================================== */
+/* CSS3 */
+/**
+ * Linear Gradient
+ * Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+ */
+/* ==========================================================================
+   Radial Gradient
+   Usage: @include radial-gradient(#000, #BADA55, true);
+   ========================================================================== */
+/**
+ * vertical-center
+ * Vertically center any element. Needs support for CSS tranforms.
+ * Usage:
+ * @include vertical-center;
+ */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ */
+/* ==========================================================================
+   Utility Mixins
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
+/* HiDPI */
+/**
+ * HiDPI mixin.
+ * @include hidpi-min() { ... };
+ * Default value set to 1.3 to target Google Nexus 7 (http://bjango.com/articles/min-device-pixel-ratio/)
+ */
+/**
+ * Hidpi with a minimum width media query
+ * @include hidpi-min($bp-mid, 1.5) { ... };
+ */
+/**
+ * Hidpi with a max width media query
+ * @include hidpi-max($bp-mid, 1.3) { ... };
+ */
+/* FORMS */
+/**
+ * Core variables
+ * =================================
+ * Edit your color palette and app vars before your begin
+ */
+/**
+ * Colour palette (yeah we're British!)
+ */
+/**
+ * Variables
+ * =================================
+ * Typography
+ * Breakpoints
+ * Paths
+ * Grid setup
+ * Colour palette
+ * Components
+ */
+/**
+ * Typography
+ * =================================
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
+/* Font stacks */
+/**
+ *  Breakpoints
+ * =================================
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+/**
+ * Path vars
+ */
+/**
+ * Layout setup
+ * Settings here override & affect the output in scss/partials/components/grid.scss
+ */
+/**
+ * Tables
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
+/**
+ * App-specific variables
+ * =================================
+ * Add common vars below here
+ */
+/* CSS Reset  */
+/**
+ * Kickoff reset
+ */
+html {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit; }
+
+/**
+ * Normalize - CSS reset
+ * http://github.com/necolas/normalize.css
+ * Kickoff uses an amended version of this file.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, main {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+/* ============ */
+/* === BASE === */
+/* ============ */
+body {
+  margin: 0; }
+
+a {
+  background: transparent; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+figure {
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* Global typography styles */
+/**
+ * Typography
+ * =================================
+ * Base
+ * Paragraphs
+ * Headings
+ * Links
+ * Lists
+ * Definition lists
+ * Blockquotes
+ * Misc
+ * Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ * Resources:
+ * http://www.gridlover.net/
+ * http://modularscale.com/
+ * http://lamb.cc/typograph/
+ *
+ */
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%; }
+  @media screen and (min-width: 48em) {
+    html {
+      font-size: 20px; } }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #444;
+  -webkit-font-feature-settings: "liga","dlig";
+     -moz-font-feature-settings: "liga","dlig";
+          font-feature-settings: "liga","dlig"; }
+
+/**
+ * Paragraphs
+ */
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 28px; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1.1;
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal; }
+
+h1, .h1, .alpha {
+  font-size: 39.0625px;
+  font-size: 1.95312rem;
+  margin-top: 0;
+  margin-bottom: 56px; }
+
+h2, .h2, .beta {
+  font-size: 31.25px;
+  font-size: 1.5625rem;
+  margin-top: 0;
+  margin-bottom: 28px; }
+
+h3, .h3, .gamma {
+  font-size: 25px;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 28px; }
+
+h4, .h4, .delta, h5, .h5, .epsilon, h6, .h6, .zeta {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 0.8rem; }
+
+h4, .h4, .delta {
+  font-size: 20px;
+  font-size: 1rem; }
+
+h6, .h6, .zeta {
+  text-transform: uppercase; }
+
+* + h1, * + .h1, * + .alpha, * + h2, * + .h2, * + .beta, * + h3, * + .h3, * + .gamma, * + h4, * + .h4, * + .delta {
+  margin-top: 28px; }
+
+small {
+  font-size: 80%; }
+
+/**
+ * Links
+ */
+a, a:link {
+  color: #3498db;
+  text-decoration: none; }
+a:visited {
+  color: #3498db;
+  text-decoration: none; }
+a:hover, a:focus {
+  color: #196090; }
+a:active {
+  color: #196090; }
+
+/**
+ * Lists
+ */
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 28px 28px; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-left: 56px; }
+  ul ul, ol ul {
+    list-style-type: circle; }
+    ul ul ul, ol ul ul {
+      list-style-type: square; }
+  ul ol, ol ol {
+    list-style-type: upper-roman; }
+    ul ol ol, ol ol ol {
+      list-style-type: lower-roman; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-bottom: 0; }
+
+/**
+ * Unstyled lists
+ */
+.unstyled, .tabs, .l-tabsContent, nav ul, nav ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none; }
+
+/**
+ * Definition lists
+ */
+dl {
+  margin-bottom: 28px; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 28px; }
+
+.dl-horizontal:after {
+  content: "";
+  display: table;
+  clear: both; }
+.dl-horizontal dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  clear: left;
+  width: 220px;
+  text-align: right; }
+.dl-horizontal dd {
+  margin-left: 240px; }
+
+/**
+ * Miscellaneous
+ */
+hr {
+  margin: 28px 0;
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #fff; }
+
+strong, b {
+  font-weight: bold; }
+
+em, i {
+  font-style: italic; }
+
+abbr[title] {
+  border-bottom: 1px dotted #ddd;
+  cursor: help; }
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  padding-left: 10px;
+  margin: 28px;
+  border-left: 4px solid #cccccc; }
+  blockquote p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-size: 1rem;
+    font-weight: 300; }
+  blockquote small {
+    display: block;
+    color: #b3b3b3; }
+    blockquote small:before {
+      content: '\2014 \00A0'; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: ""; }
+
+address {
+  display: block;
+  margin-bottom: 28px;
+  font-style: normal; }
+
+cite {
+  font-style: normal; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #f1c40f;
+  padding: 2px 4px;
+  border-radius: 3px; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+samp {
+  font-family: Menlo, Monaco, "Courier New", monospace; }
+
+/**
+ * Utilities
+ */
+.text-centre, .text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+::-moz-selection {
+  color: #fff;
+  background: #3498db;
+  text-shadow: none; }
+
+::selection {
+  color: #fff;
+  background: #3498db;
+  text-shadow: none; }
+
+/**
+ * Components:
+ * =================================
+ * Buttons
+ * Grid
+ * Lists
+ * Forms
+ * Embedded content
+ * Media Object
+ * Block grids
+ * Fluid video
+ * Tabs
+ * Tables
+ * Code
+ * Skip navigation
+ * Scrollbars
+ */
+/**
+ * Buttons
+ * =================================
+ * Index:
+ * - Associated Button Variables
+ * - Base button styling
+ * – Button Modifiers
+ * 	 – btn--primary
+ *   – btn--large
+ *   – btn--small
+ *   – btn--pill
+ *   – btn--block
+ *   – btn--natural
+ *   – btn--link
+ *   – btn--close
+ */
+/**
+ * Define associated Button variables
+ */
+/**
+ * Base button styles – Based on csswizardry.com/beautons
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Fixes odd inner spacing in IE7.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ *10. Prevents from inheriting default anchor styles.
+ */
+.btn, .tabs a {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: 0;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 2.5;
+  /* [7] */
+  height: 2.5em;
+  /* [7] */
+  padding-right: 1.5em;
+  /* [7] */
+  padding-left: 1.5em;
+  /* [7] */
+  overflow: visible;
+  /* [8] */
+  text-align: center;
+  background-color: #95a5a6;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .btn, .tabs a, .btn:link, .tabs a:link, .btn:visited, .tabs a:visited {
+    color: #fff; }
+  .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+    background-color: #798d8f; }
+  .btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
+    text-decoration: none; }
+  .btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+    outline: none; }
+  .btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: .65; }
+
+.btn--primary {
+  background-color: #3498db; }
+  .btn--primary, .btn--primary:link, .btn--primary:visited {
+    color: #fff; }
+  .btn--primary:hover, .btn--primary:active, .btn--primary:focus {
+    background-color: #217dbb; }
+
+.btn--large {
+  font-size: 25px;
+  font-size: 1.25rem;
+  line-height: 3;
+  height: 3em;
+  padding-right: 2em;
+  padding-left: 2em;
+  border-radius: 6px; }
+
+.btn--small {
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  height: 1.5em;
+  padding-right: .75em;
+  padding-left: .75em;
+  border-radius: 3px; }
+
+.btn--pill {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 100em; }
+
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0; }
+  .btn--block + .btn--block {
+    margin-top: 10px; }
+
+input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="button"].btn--block {
+  width: 100%; }
+
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: .5em;
+  padding-left: .5em; }
+
+/**
+ * Close Button: for lightboxes etc
+ */
+.btnClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 17px;
+  background: #000;
+  color: #3498db;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .btnClose:hover {
+    color: #fff;
+    border-radius: 50px; }
+
+/**
+ * The Kickoff Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ * Centred columns
+ */
+/* Import Grid helpers and mixins */
+/* ==========================================================================
+   Kickoff Grid helpers
+   ========================================================================== */
+/*
+   Grid columns width calcs
+   ========================================================================== */
+/**
+ * Column width mixin
+ * Usage:
+ * @include column(2);
+ */
+/*
+   Gutter calcs
+   * Default: percent
+   * Usage: gutterCalc() or gutterCalc(false)
+   ========================================================================== */
+/*
+   Column padding (gutter)
+   * Default: percent (can be pixels though)
+   * Usage: paddingCalc() or paddingCalc(px)
+   ========================================================================== */
+/*
+   Shunts, offset columns, column source order calculations
+   ========================================================================== */
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g-row">
+		<div class="g-col g-span4"></div>
+		<div class="g-col g-span8"></div>
+	</div>
+ */
+.g-row {
+  width: 100%;
+  margin: 0 auto; }
+  .g-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .g-row .g-row {
+    min-width: 0; }
+    .g-row .g-row .g-col {
+      padding: 0; }
+
+.g-col {
+  padding: 10px; }
+  @media screen and (min-width: 48em) {
+    .g-col {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      clear: none;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+      margin-left: 2%; }
+      .g-col:first-child {
+        margin-left: 0; }
+      .g-col + .g-col:last-child {
+        float: right; }
+      .g-col + .g-col.end {
+        float: left; } }
+
+@media screen and (min-width: 48em) {
+  .g-span1 {
+    width: 6.5%; }
+  .g-span2 {
+    width: 15%; }
+  .g-span3 {
+    width: 23.5%; }
+  .g-span4 {
+    width: 32%; }
+  .g-span5 {
+    width: 40.5%; }
+  .g-span6 {
+    width: 49%; }
+  .g-span7 {
+    width: 57.5%; }
+  .g-span8 {
+    width: 66%; }
+  .g-span9 {
+    width: 74.5%; }
+  .g-span10 {
+    width: 83%; }
+  .g-span11 {
+    width: 91.5%; }
+  .g-span12 {
+    width: 100%; }
+  /**
+	 * Offset columns
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#offset
+	 */
+  /**
+	 * Source ordering (push & pull)
+	 * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
+	 */ }
+
+/**
+ * Centred columns
+ */
+.g-col.g-col--centered, .g-col.g-col--centred {
+  float: none;
+  margin: 0 auto; }
+
+/*
+	Centred lists
+
+	<ul class="l-list--centred">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--centred, .l-list--centered {
+  text-align: center; }
+  .l-list--centred li, .l-list--centered li {
+    display: inline; }
+
+/*
+	Floated lists
+
+	<ul class="l-list--floated">
+		<li></li>
+	</ul>
+	========================================================================== */
+.l-list--floated:after {
+  content: "";
+  display: table;
+  clear: both; }
+.l-list--floated li {
+  float: left;
+  display: inline-block; }
+
+/**
+ * Forms
+ * =================================
+ * Index:
+ * - Associated Form Variables
+ * - Generic form styles
+ * - Form inputs and groups
+ * - Form field feedback states
+ * - Horizontal & vertical forms
+ * - Horizontal-specific styles
+ */
+/**
+ * Define associated Form variables
+ */
+/**
+ * Generic form styles
+ * =================================
+ * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ */
+.form {
+  margin: 0 0 28px; }
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+.form-legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 28px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #444;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  white-space: normal; }
+  .form-legend small {
+    font-size: 16px;
+    font-size: 0.8rem;
+    color: #b3b3b3; }
+
+/**
+ * Form inputs and groups
+ */
+.form-controlGroup {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  list-style-type: none; }
+
+.form-legend + .form-controlGroup {
+  margin-top: 28px;
+  -webkit-margin-top-collapse: separate; }
+
+.form-label {
+  display: block;
+  color: #444;
+  font-weight: bold; }
+  .form-label small {
+    font-weight: normal;
+    color: #919191; }
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  padding: .5em;
+  font-size: 20px;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #444;
+  font-weight: normal;
+  vertical-align: baseline;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  -webkit-transition: border 200ms ease-in-out;
+     -moz-transition: border 200ms ease-in-out;
+          transition: border 200ms ease-in-out; }
+  .form-input:focus {
+    border-color: #999999;
+    outline: 0;
+    outline: thin dotted \9; }
+  .form-input[type="image"], .form-input[type="checkbox"], .form-input[type="radio"], .form-input[type="range"] {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 3px 0;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box; }
+  .form-input[type="image"] {
+    border: 0; }
+  .form-input[type="file"] {
+    width: auto;
+    height: 28px;
+    padding: initial;
+    line-height: initial;
+    border: initial;
+    background-color: #fff;
+    background-color: initial; }
+  .form-input[type="hidden"] {
+    display: none; }
+  .form-input[type="color"] {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    padding: 2px; }
+  .form-input[type="password"] {
+    font-family: sans-serif; }
+  .form-input[type="range"] {
+    width: 100%; }
+  .form-input > .radio:first-child, .form-input > .checkbox:first-child {
+    padding-top: 5px; }
+  .form-input[disabled], .form-input[readonly] {
+    background-color: #e6e6e6;
+    border-color: #ccc;
+    cursor: not-allowed; }
+
+.form-input--textarea {
+  height: auto;
+  resize: vertical; }
+
+.form-input--textarea--uneditable {
+  width: auto;
+  height: auto; }
+
+.form-input--select {
+  background-color: #fff; }
+  .form-input--select[multiple], .form-input--select[size] {
+    height: auto; }
+
+.form-input-file {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  font-size: 1rem;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1em; }
+  .form-input-file:focus {
+    outline: none; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+/**
+ * Checkboxes:
+ * =================================
+	<label class="control">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+	<label class="control control--inline">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+
+ * Radios:
+ * =================================
+	<label class="control">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		This is a radio
+	</label>
+	<label class="control control--inline">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
+		This is a radio
+	</label>
+ */
+.control {
+  display: block; }
+  .control input[type="radio"], .control input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: .5em;
+    margin-top: -.1em;
+    display: inline;
+    line-height: normal; }
+
+.control--inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.5em; }
+
+/**
+ * Search input
+ */
+.form-input--search {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  border-radius: 100px; }
+
+/**
+ * Form actions
+ */
+.form-actions {
+  padding: 28px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd; }
+  .form-actions .btn, .form-actions .tabs a, .tabs .form-actions a {
+    margin-right: 10px; }
+    .form-actions .btn:last-child, .form-actions .tabs a:last-child, .tabs .form-actions a:last-child {
+      margin-right: 0; }
+
+/**
+ * Form field feedback states
+ */
+.form-controlGroup--warning .form-label {
+  color: #dab10d; }
+.form-controlGroup--warning .form-input {
+  color: #dab10d;
+  border-color: #dab10d;
+  background-color: #fcf1c6; }
+  .form-controlGroup--warning .form-input:focus {
+    border-color: #aa8a0a; }
+
+.form-controlGroup--error .form-label {
+  color: #e43725; }
+.form-controlGroup--error .form-input {
+  color: #e43725;
+  border-color: #e43725;
+  background-color: #fceae9; }
+  .form-controlGroup--error .form-input:focus {
+    border-color: #bf2718; }
+
+.form-controlGroup--success .form-label {
+  color: #2ecc71; }
+.form-controlGroup--success .form-input {
+  color: #2ecc71;
+  border-color: #2ecc71;
+  background-color: #def8e9; }
+  .form-controlGroup--success .form-input:focus {
+    border-color: #25a25a; }
+
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
+:-ms-input-placeholder {
+  color: #b3b3b3; }
+
+:-moz-placeholder {
+  color: #b3b3b3; }
+
+::-webkit-input-placeholder {
+  color: #b3b3b3; }
+
+@media screen and (min-width: 48em) {
+  /**
+	 * Horizontal-specific styles
+	 * =================================
+	 * add .form--horizontal to the <form> element
+	 * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+	 */
+  .form--horizontal .form-controlGroup {
+    margin-bottom: 28px; }
+    .form--horizontal .form-controlGroup:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .form--horizontal .form-controlGroup .form-input--fileWrapper {
+      margin-left: 0; }
+  .form--horizontal .form-label {
+    float: left;
+    width: 140px;
+    padding-top: 5px;
+    text-align: right; }
+  .form--horizontal .form-controlGroup-inputWrapper {
+    margin-left: 160px; }
+    .form--horizontal .form-controlGroup-inputWrapper:first-child {
+      padding-left: 160px; }
+  .form--horizontal .form-helpBlock {
+    margin-top: 14px;
+    margin-bottom: 0; }
+  .form--horizontal .form-actions {
+    padding-left: 160px; } }
+
+/**
+ * Custom Checkboxes and radios - modified from WTF forms – http://wtfforms.com/
+ *
+ * --------------------------------
+ *
+ * Checkbox button example HTML
+ *
+ *	 <label class="control control--custom control--checkbox">
+ *		<input type="checkbox" name="myCheckbox" />
+ *		<span class="control-indicator"></span>
+ *		My Checkbox Label Text
+ *	</label>
+ *
+ * -------------------------------
+ *
+ * Radio button example HTML
+ *
+ *	<label class="control control--custom control--radio">
+ *		<input type="radio" id="radio1" name="myRadioBtn" />
+ *		<span class="control-indicator"></span>
+ *		My Radio Button Label Text
+ * 	</label>
+ *
+ * ================================= */
+.control-indicator {
+  position: absolute;
+  top: .25em;
+  left: 0;
+  display: block;
+  width: 19px;
+  height: 19px;
+  line-height: 1;
+  color: #eee;
+  text-align: center;
+  background-color: #ddd;
+  background-size: 50% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.control--custom {
+  position: relative;
+  display: block;
+  padding-left: 2em;
+  margin-left: 0;
+  color: #555;
+  cursor: pointer;
+  /* Focus */
+  /* Checked state */
+  /* Active */ }
+  .control--custom input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    /* Put the input behind the label so it doesn't overlay text */ }
+  .control--custom input:focus ~ .control-indicator {
+    box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em #a3b1b2; }
+  .control--custom input:checked ~ .control-indicator {
+    color: #fff;
+    background-color: #a3b1b2; }
+  .control--custom input:active ~ .control-indicator {
+    color: #fff;
+    background-color: #ccd4d5; }
+
+/* Checkbox modifiers */
+.control--checkbox .control-indicator {
+  border-radius: 25%; }
+
+.control--checkbox input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=); }
+
+/* Radio modifiers */
+.control--radio .control-indicator {
+  border-radius: 50%; }
+
+.control--radio input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==); }
+
+/**
+ * Custom file input
+ */
+.form-input--fileWrapper--styled {
+  position: relative;
+  overflow: hidden; }
+  .form-input--fileWrapper--styled:before {
+    content: 'Choose file...'; }
+  .form-input--fileWrapper--styled:after {
+    content: 'Browse';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    padding: .44em 1em 0;
+    background-color: #d9d9d9; }
+  .form-input--fileWrapper--styled .form-input-file {
+    opacity: 0;
+    position: absolute; }
+
+/**
+ * Custom select element
+ * http://jsbin.com/juvixufu/165/edit
+ */
+.form-input--selectWrapper {
+  position: relative;
+  display: block;
+  padding: 0; }
+
+/* This is the native select, we're making everything the text invisible so we can see the button styles in the wrapper */
+.form-input--selectWrapper select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0;
+  background: none;
+  border: 0;
+  outline: none;
+  /* Remove select styling */
+  appearance: none;
+  -webkit-appearance: none;
+  /* Magic font size number to prevent iOS text zoom */
+  padding: .5em;
+  height: 2.3em;
+  line-height: 1; }
+
+/* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-input--selectWrapper select::-ms-expand {
+    display: none; } }
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
+.form-input--selectWrapper:after {
+  background: none;
+  color: #bbb;
+  content: "\25BC";
+  font-size: .7em;
+  padding: 0;
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -9px;
+  z-index: 2;
+  /* These hacks make the select behind the arrow clickable in some browsers */
+  pointer-events: none;
+  background: url(#); }
+
+/* This selector targets Firefox only with the trick of making the select 110% but clipped by the container at 100% to hide the arrow. We have to do this because getting rid of select appearance isn't supported consistently */
+.form-input--selectWrapper, x:-moz-any-link, x:default {
+  overflow: hidden;
+  width: 100%; }
+
+.form-input--selectWrapper select, x:-moz-any-link, x:default {
+  width: 110%;
+  max-width: 110%;
+  min-width: 110%;
+  /* A zero right padding is needed or the native arrow can show up. Downside is the text will run over the arrow */
+  padding: .6em 0 .5em .8em;
+  /* Window is a Firefox way of hiding the arrow, sometimes works */
+  -moz-appearance: window;
+  text-indent: .01px;
+  text-overflow: ""; }
+
+/* Focus style - TODO: Fix in FF */
+/* Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text */
+.form-input--selectWrapper:focus::-ms-value {
+  background: transparent;
+  color: #222; }
+
+/* Firefox focus has odd artifacts around the text, this kills that */
+.form-input--selectWrapper:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+option {
+  font-weight: normal; }
+
+/*
+	Embedded content
+	========================================================================== */
+img {
+  font-style: italic;
+  color: #c00;
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+  img.img--left {
+    margin: 0 20px 0 0; }
+  img.img--right {
+    margin: 0 0 0 20px; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+img, object, embed, video {
+  max-width: 100%; }
+
+/*
+	Media Object
+
+	* Place any image- and text-like content side-by-side, as per:
+	* http://csswizardry.com/2013/05/the-flag-object/
+	*
+	* +---------+
+  * |         | ~~~~ ~~~~~~~~~~~
+  * |         | ~~~~~~~ ~~~~~ ~~
+  * |         | ~~~~~~~~~~~~
+  * +---------+
+	*
+	* Markup:
+	<div class="media">
+		<div class="media-img">
+			<img src="http://placekitten.com/100/100">
+		</div>
+		<div class="media-body">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+	</div>
+	========================================================================== */
+.media {
+  display: table;
+  width: 100%; }
+
+@media screen and (min-width: 25em) {
+  .media-img, .media-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .media--top .media-img, .media--top .media-body {
+      vertical-align: top; }
+    .media--bottom .media-img, .media--bottom .media-body {
+      vertical-align: bottom; }
+    .media-img :last-child, .media-body :last-child {
+      margin-bottom: 0; }
+  .media-body {
+    width: 100%; }
+  .media-img {
+    padding-right: 10px; }
+    .media-img > img {
+      display: block;
+      max-width: none; }
+    .media--rev .media-img {
+      padding-right: 0;
+      padding-left: 10px; } }
+
+/*
+   Fluid width video
+   * 16:9 aspect ratio by default
+   * Usage:
+   * <div class="fluidVideo"><iframe src="..."/></div>
+   ========================================================================== */
+.fluidVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+  .fluidVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/**
+ * Block grids
+ * These are suited for repeating blocks of content. See below for usage
+ *
+ * Usage:
+ * <ul class="l-blockGrid l-blockGrid--3up">
+ *     <li></li>
+ * </ul>
+ *
+ * Mobile Usage:
+ * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
+ *     <li></li>
+ * </ul>
+ */
+.l-blockGrid {
+  display: block;
+  list-style-type: none;
+  margin: 0; }
+  .l-blockGrid:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .l-blockGrid > li {
+    display: block;
+    height: auto;
+    padding: 10px; }
+  @media screen and (min-width: 25em) and (max-width: 48em) {
+    .l-blockGrid[class*="up--narrow"] > li {
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--1up--narrow > li {
+      width: 100%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--2up--narrow > li {
+      width: 50%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--3up--narrow > li {
+      width: 33.3333333333%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--4up--narrow > li {
+      width: 25%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--5up--narrow > li {
+      width: 20%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--6up--narrow > li {
+      width: 16.6666666667%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--7up--narrow > li {
+      width: 14.2857142857%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--8up--narrow > li {
+      width: 12.5%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--9up--narrow > li {
+      width: 11.1111111111%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--10up--narrow > li {
+      width: 10%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--11up--narrow > li {
+      width: 9.0909090909%;
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--12up--narrow > li {
+      width: 8.3333333333%;
+      display: block;
+      height: auto;
+      float: left; } }
+  @media screen and (min-width: 48em) {
+    .l-blockGrid > li {
+      display: block;
+      height: auto;
+      float: left; }
+    .l-blockGrid.l-blockGrid--1up > li {
+      width: 100%; }
+    .l-blockGrid.l-blockGrid--2up > li {
+      width: 50%; }
+    .l-blockGrid.l-blockGrid--3up > li {
+      width: 33.3333333333%; }
+    .l-blockGrid.l-blockGrid--4up > li {
+      width: 25%; }
+    .l-blockGrid.l-blockGrid--5up > li {
+      width: 20%; }
+    .l-blockGrid.l-blockGrid--6up > li {
+      width: 16.6666666667%; }
+    .l-blockGrid.l-blockGrid--7up > li {
+      width: 14.2857142857%; }
+    .l-blockGrid.l-blockGrid--8up > li {
+      width: 12.5%; }
+    .l-blockGrid.l-blockGrid--9up > li {
+      width: 11.1111111111%; }
+    .l-blockGrid.l-blockGrid--10up > li {
+      width: 10%; }
+    .l-blockGrid.l-blockGrid--11up > li {
+      width: 9.0909090909%; }
+    .l-blockGrid.l-blockGrid--12up > li {
+      width: 8.3333333333%; } }
+
+/**
+ * Tabs
+ * =================================
+ */
+/**
+ * Define associated tab variables
+ */
+/**
+ * Tabs base styling
+ *
+ * Usage:
+	<ul class="tabs">
+		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
+		<li><a href="#tabs-example-2">Tab 2</a></li>
+	</ul>
+
+	<!-- Tabs Content -->
+	<ul class="l-tabsContent">
+		<li id="tabs-example-1" class="is-active">
+			Tab 1 content
+		</li>
+
+		<li id="tabs-example-2">
+			Tab 2 content
+		</li>
+	</ul>
+	========================================================================== */
+.tabs {
+  margin-bottom: 28px;
+  border-bottom: 2px solid #2ecc71; }
+  .tabs:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .tabs.tabs--alignRight li {
+    float: right; }
+  .tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
+    text-align: center; }
+    .tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
+      display: inline;
+      float: none; }
+  .tabs > li {
+    float: left;
+    margin: 0 5px; }
+  .tabs a {
+    background-color: #95a5a6;
+    border-radius: 4px 4px 0 0;
+    color: #fff; }
+    .tabs a.is-active {
+      background-color: #2ecc71; }
+
+.l-tabsContent > li {
+  display: none; }
+  .l-tabsContent > li.is-active {
+    display: block; }
+
+/**
+ * Tables
+ * =================================
+ * Index:
+ * - Associated Table Variables
+ * - Default table Styles
+ * – Table modifiers:
+ *   - .table--condensed
+ *   - .table--bordered
+ *   - .table--rounded
+ *   - .table--striped
+ *   – .table--hover
+ * – .tableResponsive
+ */
+/**
+ * Define associated Table variables
+ */
+<<<<<<< HEAD:css/kickoff.css
+/**
+ * Default Table styles
+ **/
+table {
+  background-color: #f1f1f1;
+}
+
+th {
+  text-align: left;
+}
+
+=======
+>>>>>>> abbd1dbd9ce9a919cd7d7f800f0090a04121503e:assets/dist/css/kickoff.css
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 28px;
+  border-spacing: 0;
+  background-color: #f1f1f1; }
+  .table > thead th, .table > thead td, .table > tbody th, .table > tbody td, .table > tfoot th, .table > tfoot td {
+    padding: 8px;
+    line-height: 28px;
+    vertical-align: top;
+    border-top: 1px solid #ddd; }
+  .table > thead th, .table > thead td {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd; }
+  .table > tfoot td {
+    border-top: 3px solid #ddd; }
+  .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  .table > tbody + tbody {
+    border-top: 2px solid #ddd; }
+  .table .table {
+    background-color: #f1f1f1; }
+
+th {
+  text-align: left; }
+
+.table--condensed > thead th, .table--condensed > thead td, .table--condensed > tbody th, .table--condensed > tbody td, .table--condensed > tfoot th, .table--condensed > tfoot td {
+  padding: 5px; }
+
+/**
+ * Bordered version
+ * Add borders all around the table and between all the columns.
+ */
+.table--bordered {
+  border: 2px solid #ddd; }
+  .table--bordered > thead th, .table--bordered > thead td, .table--bordered > tbody th, .table--bordered > tbody td, .table--bordered > tfoot th, .table--bordered > tfoot td {
+    border: 1px solid #ddd; }
+  .table--bordered > thead th:first-child, .table--bordered > thead td:first-child, .table--bordered > tbody th:first-child, .table--bordered > tbody td:first-child, .table--bordered > tfoot th:first-child, .table--bordered > tfoot td:first-child {
+    border-left: 0; }
+  .table--bordered > thead th:last-child, .table--bordered > thead td:last-child, .table--bordered > tbody th:last-child, .table--bordered > tbody td:last-child, .table--bordered > tfoot th:last-child, .table--bordered > tfoot td:last-child {
+    border-right: 0; }
+  .table--bordered > thead th, .table--bordered > thead td {
+    border-bottom-width: 2px; }
+  .table--bordered > tfoot th, .table--bordered > tfoot td {
+    border-top-width: 2px;
+    border-bottom: 0; }
+
+/**
+ * Rounded version
+ */
+.table--rounded {
+  border-radius: 10px; }
+  .table--rounded.table--bordered th:first-child, .table--rounded.table--bordered td:first-child {
+    border-left: 0; }
+  .table--rounded.table--bordered th:last-child, .table--rounded.table--bordered td:last-child {
+    border-right: 0; }
+  .table--rounded.table--bordered > tfoot th, .table--rounded.table--bordered > tfoot td {
+    border-bottom: 0; }
+
+/**
+ * Zebra-striping
+ * Default zebra-stripe styles (alternating gray and transparent backgrounds)
+ */
+.table--striped tbody :nth-child(odd) th, .table--striped tbody :nth-child(odd) td {
+  background-color: #f9f9f9 !important; }
+
+/**
+ * Hover effect
+ */
+.table--hover tr:hover td, .table--hover tr:hover th {
+  background-color: #f5f5f5; }
+
+/**
+ * Responsive tables
+ * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ *
+ * If you need more responsive tables, consider Tablesaw by the Filament Group:
+ * https://github.com/filamentgroup/tablesaw
+ */
+@media screen and (max-width: 48em) {
+  .tableResponsive {
+    width: 100%;
+    margin-bottom: 21px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch; }
+    .tableResponsive > .table {
+      margin-bottom: 0; }
+      .tableResponsive > .table > thead th, .tableResponsive > .table > thead td, .tableResponsive > .table > tbody th, .tableResponsive > .table > tbody td, .tableResponsive > .table > tfoot th, .tableResponsive > .table > tfoot td {
+        white-space: nowrap; }
+    .tableResponsive > .table-bordered {
+      border: 0; }
+      .tableResponsive > .table-bordered > thead th:first-child, .tableResponsive > .table-bordered > thead td:first-child, .tableResponsive > .table-bordered > tbody th:first-child, .tableResponsive > .table-bordered > tbody td:first-child, .tableResponsive > .table-bordered > tfoot th:first-child, .tableResponsive > .table-bordered > tfoot td:first-child {
+        border-left: 0; }
+      .tableResponsive > .table-bordered > thead th:last-child, .tableResponsive > .table-bordered > thead td:last-child, .tableResponsive > .table-bordered > tbody th:last-child, .tableResponsive > .table-bordered > tbody td:last-child, .tableResponsive > .table-bordered > tfoot th:last-child, .tableResponsive > .table-bordered > tfoot td:last-child {
+        border-right: 0; }
+      .tableResponsive > .table-bordered > tbody > th, .tableResponsive > .table-bordered > tbody > td, .tableResponsive > .table-bordered > tfoot tr:last-child > th, .tableResponsive > .table-bordered > tfoot tr:last-child > td {
+        border-bottom: 0; } }
+
+/**
+ * Preformatted code
+ * Code typography styles for the <code> and <pre> elements
+ */
+<<<<<<< HEAD:css/kickoff.css
+/**
+ * Define associated Code variables
+ */
+code,
+pre {
+=======
+code, pre {
+>>>>>>> abbd1dbd9ce9a919cd7d7f800f0090a04121503e:assets/dist/css/kickoff.css
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 16px;
+  font-size: 0.8rem;
+  color: #444;
+  border-radius: 3px;
+  -moz-tab-size: 3;
+       tab-size: 3; }
+
+code {
+  padding: 2px 4px;
+  color: #444;
+  background-color: #ddd; }
+
+pre {
+  display: block;
+  padding: 14px;
+  margin: 0 0 28px;
+  color: #444;
+  background-color: #ddd;
+  border-radius: 4px;
+  white-space: pre; }
+  pre code {
+    padding: 0;
+    color: #444;
+    background-color: #ddd;
+    border: 0; }
+
+.pre--scrollable {
+  max-height: 340px;
+  overflow-y: scroll; }
+
+/**
+ * Skip to main content link
+ * <div class="skipToContent"><a href="#mainContent" class="btn btn--primary">Skip to main content</a></div>
+ */
+.skipToContent {
+  position: relative;
+  text-align: center;
+  height: 0; }
+  .skipToContent a {
+    position: relative;
+    top: -100px;
+    z-index: 100;
+    background-color: #fff;
+    -webkit-transition: all 100ms ease-in-out;
+       -moz-transition: all 100ms ease-in-out;
+            transition: all 100ms ease-in-out; }
+    .skipToContent a:focus {
+      top: 5px; }
+
+/**
+ * Scrollbar styling (only in webkit)
+ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #d7d7d7; }
+
+::-webkit-scrollbar-thumb {
+  background: #8b8b8b;
+  cursor: pointer;
+  border-radius: 5px; }
+
+/**
+ * Your app styles
+ * =================================
+ * Global styles
+ * Example partial for masthead & footer
+ * Icons - used in conjunction with grunticon
+ */
+/**
+ * Global app/site styles
+ */
+body {
+  background-color: #f1f1f1; }
+
+/**
+ * Default layout container
+ */
+.l-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .lt-ie9 .l-container {
+    min-width: 1000px; }
+
+/*
+   Icons
+   ========================================================================== */
+[class^="icon-"], [class*=" icon-"] {
+  speak: none; }
+
+.icon-large {
+  display: block;
+  width: 120px;
+  height: 120px; }
+
+.icon-small {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: top; }
+
+/**
+ * Views
+ * =================================
+ */
+/**
+ * Helper/utility classes
+ * =================================
+ */
+/**
+ * Utilities
+ * Non-semantic helper classes
+ */
+/**
+ * Clearfix
+ * http://www.cssmojo.com/latest_new_clearfix_so_far/
+ * See mixins/_utility.scss for a mixin version of this
+ */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em; }
+  .ir br {
+    display: none; }
+
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+.is-shown {
+  display: block; }
+
+.is-visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .is-visuallyHidden.focusable:active, .is-visuallyHidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.is-invisible {
+  visibility: hidden; }
+
+.l-floatLeft {
+  float: left; }
+
+.l-floatRight {
+  float: right; }
+
+.l-clear {
+  clear: both;
+  float: none; }
+
+.l-mb0 {
+  margin-bottom: 0 !important; }
+
+.l-mt0 {
+  margin-top: 0 !important; }
+
+/**
+ * Responsive Utilities
+ */
+* {
+  -webkit-tap-highlight-color: #3498db !important; }
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none; }
+
+.promote-layer {
+  /*
+  This may promote the layer to a composited
+  layer.
+
+  Replace with will-change when available
+
+  #perfmatters
+  */
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+/**
+ * Print styles
+ */
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+	 * Don't show links for images, or javascript/internal links
+	 */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: .5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; } }
+/*# sourceMappingURL=kickoff.css.map */

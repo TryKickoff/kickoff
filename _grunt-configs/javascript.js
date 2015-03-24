@@ -38,23 +38,9 @@ module.exports.tasks = {
 		shim: ['Array.forEach', 'Array.filter', 'Array.map', 'Function.bind', 'EventListener'],
 
 		// output location (relative to your grunt.js file location)
-		dest: 'js/helpers/shims.js',
+		dest: '<%=config.assetsDir%>/js/helpers/shims.js',
 
 		// minify the output (true or false)
 		minify: false
-	},
-
-
-	/**
-	 * JSHint
-	 * https://github.com/gruntjs/grunt-contrib-jshint
-	 * Manage the options inside .jshintrc file
-	 */
-	jshint: {
-		options: {
-			jshintrc: '.jshintrc'
-		},
-		project: '<%=config.js.fileList%>',
-		all: ['js/**/*.js', '!js/dist/*.js', '!js/**/*.min.js']
 	}
 };

@@ -1,0 +1,109 @@
+/**
+ * Variables
+ * =================================
+ * Typography
+ * Breakpoints
+ * Paths
+ * Grid setup
+ * Components
+ */
+
+/**
+ * Typography
+ * =================================
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
+$font-size-base                : 20;
+$font-size-base-px             : $font-size-base * 1px;
+$font-size-base-narrow         : $font-size-base - 2;
+$font-size-base-narrow-px      : $font-size-base-narrow * 1px;
+
+$leading-base                  : 1.4;
+$line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
+$baseline                      : $line-height-base * 1px;
+
+$type-scale                    : 1.25; // Major third
+
+$type-micro                    : modular-scale($font-size-base, -4, $type-scale);
+$type-smallest                 : modular-scale($font-size-base, -3, $type-scale);
+$type-smaller                  : modular-scale($font-size-base, -2, $type-scale);
+$type-small                    : modular-scale($font-size-base, -1, $type-scale); // h5, h6
+$type-base                     : modular-scale($font-size-base, 0, $type-scale);  // p, h4
+$type-large                    : modular-scale($font-size-base, 1, $type-scale);  // h3
+$type-larger                   : modular-scale($font-size-base, 2, $type-scale);  // h2
+$type-largest                  : modular-scale($font-size-base, 3, $type-scale);  // h1
+$type-jumbo                    : modular-scale($font-size-base, 4, $type-scale);
+
+
+// Useful to set here when bold webfonts come as 400 font-weight.
+$font-weight-bold             : bold;
+
+/* Font stacks */
+$font-family-sans             : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif            : Georgia, "Times New Roman", Times, serif;
+$font-family-mono             : Menlo, Monaco, "Courier New", monospace;
+
+$font-family-base             : $font-family-sans;
+$font-family-alt              : $font-family-serif;
+
+$font-family-headings         : inherit; // using inherit will use $font-family-base for all headings
+$font-weight-headings         : bold;    // instead of browser default, bold
+$line-height-headings         : 1.1;
+
+
+/**
+ *  Breakpoints
+ * =================================
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+$bp-narrow            : 400;  // Set in px
+$bp-mid               : 768;  // Set in px
+$bp-wide              : 992;  // Set in px
+$bp-huge              : 1600; // Set in px
+
+// Special breakpoints
+$bp-single-col        : $bp-mid; // Break to single column (used in the grid)
+$bp-block-grid-narrow : $bp-narrow; // Breakpoint for narrow block grids
+$bp-rwd-text          : $bp-mid; // Reduce text size below this width
+
+
+/**
+ * Path vars
+ */
+$img-path                     : "/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+
+
+/**
+ * Layout setup
+ * Settings here override & affect the output in scss/partials/components/grid.scss
+ */
+
+// Setup grid defaults
+$layout-margin                : 0     !default; // [in pixels] Space outside the grid
+$layout-max-width             : 1000  !default; // [in pixels]
+$layout-min-width             : 1000  !default; // [in pixels] Minimum width for layout in <IE9
+
+$grid-column-count            : 12    !default; // Total column count
+$grid-gutter-width            : 20    !default; // [in pixels]
+
+// Column Padding
+$grid-column-padding          : 10    !default; // [in pixels]
+$grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
+$nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+// Choose your grid options
+$using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
+$using-offsetcolumns          : false !default; // Allow columns to be offset
+$using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
+
+
+
+/**
+ * App-specific variables
+ * =================================
+ * Add common vars below here
+ */
+$link-transition: all 100ms ease-in-out;

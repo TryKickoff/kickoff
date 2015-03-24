@@ -4,32 +4,36 @@
 
 
 # Comment these if we are building js/Sass on the server
-js/dist/*.js
-# css/*.css
-css/temp/*.css
+assets/dist/**.*
 **/*.map
 
-# SASS
+
+# CSS & Sass
+# css/*.css
+assets/css/
 .sass-cache/
 *.scssc
 
-# Random
-# bower dependencies directory. comment this line to commit them.
-bower_modules
+
+# Dependencies
+ # Bower dependencies directory. comment this line to commit them.
+bower_modules/*
+ # Node modules directory. comment this line to commit them.
+node_modules/*
+logs
+*.log
+
+
+# Tooling
+# Photobox visual regression testing
+photobox/
+
+
 # Sublime Text project files
 *.sublime-*
 # Jekyll compilation directory
 _site/
 
-# Node
- # node modules directory
-node_modules/
-logs
-*.log
-
-# Tooling
-# Photobox visual regression testing
-photobox/
 
 # OS generated files
 .DS_Store

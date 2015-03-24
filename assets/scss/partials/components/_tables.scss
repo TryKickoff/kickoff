@@ -1,0 +1,260 @@
+/**
+ * Tables
+ * =================================
+ * Index:
+ * - Associated Table Variables
+ * - Default table Styles
+ * – Table modifiers:
+ *   - .table--condensed
+ *   - .table--bordered
+ *   - .table--rounded
+ *   - .table--striped
+ *   – .table--hover
+ * – .tableResponsive
+ */
+
+/**
+ * Define associated Table variables
+ */
+$table-bgColor                : $color-bg !default; // Default background color used for all tables.
+$table-bgColor--accent        : #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bgColor--hover         : #f5f5f5 !default; // Background color used for `.table-hover`.
+$table-bgColor--active        : $table-bgColor--hover !default;
+$table-borderColor           : #ddd !default; // Border color for table and cell borders.
+
+/**
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
+$table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
+$table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-condensed`.
+
+
+
+// Baseline styles
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: $baseline;
+	border-spacing: 0;
+	background-color: $table-bg;
+
+	// Cells
+	> thead,
+	> tbody,
+	> tfoot {
+		> th,
+		> td {
+			padding: $table-cell-padding;
+			line-height: $baseline;
+			vertical-align: top;
+			border-top: 1px solid $table-borderColor;
+		}
+	}
+
+	// Bottom align for column headings
+	> thead th,
+	> thead td {
+		vertical-align: bottom;
+		border-bottom: 2px solid $table-borderColor;
+	}
+
+	> tfoot td {
+		border-top: 3px solid $table-borderColor;
+	}
+
+	// Remove top border from thead by default
+	> caption + thead,
+	> colgroup + thead,
+	> thead:first-child {
+		> tr:first-child {
+			> th,
+			> td {
+				border-top: 0;
+			}
+		}
+	}
+
+	// Account for multiple tbody instances
+	> tbody + tbody {
+		border-top: 2px solid $table-borderColor;
+	}
+
+	// Nesting
+	.table {
+		background-color: $color-bg;
+	}
+}
+
+th {
+	text-align: left;
+}
+
+
+// Condensed table w/ half padding
+.table--condensed {
+	> thead,
+	> tbody,
+	> tfoot {
+		th,
+		td {
+			padding: $table-condensed-cell-padding;
+		}
+	}
+}
+
+/**
+ * Bordered version
+ * Add borders all around the table and between all the columns.
+ */
+.table--bordered {
+	border: 2px solid $table-borderColor;
+
+	> thead,
+	> tbody,
+	> tfoot {
+		th,
+		td {
+			border: 1px solid $table-borderColor;
+		}
+
+		th:first-child,
+		td:first-child {
+			border-left: 0;
+		}
+
+		th:last-child,
+		td:last-child {
+			border-right: 0;
+		}
+
+	}
+
+	> thead {
+		th,
+		td {
+			border-bottom-width: 2px;
+		}
+	}
+
+	> tfoot {
+		th,
+		td {
+			border-top-width: 2px;
+			border-bottom: 0;
+		}
+	}
+}
+
+/**
+ * Rounded version
+ */
+.table--rounded {
+	border-radius: 10px;
+
+	&.table--bordered {
+			th:first-child,
+			td:first-child {
+				border-left: 0;
+			}
+
+			th:last-child,
+			td:last-child {
+				border-right: 0;
+			}
+
+		> tfoot th,
+		> tfoot td {
+			border-bottom: 0;
+		}
+	}
+}
+
+/**
+ * Zebra-striping
+ * Default zebra-stripe styles (alternating gray and transparent backgrounds)
+ */
+.table--striped {
+	tbody :nth-child(odd) th,
+	tbody :nth-child(odd) td {
+		background-color: $table-bgColor--accent !important;
+	}
+}
+
+
+/**
+ * Hover effect
+ */
+.table--hover {
+	tr:hover {
+		td, th {
+			background-color: $table-bgColor--hover;
+		}
+	}
+}
+
+
+/**
+ * Responsive tables
+ * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ *
+ * If you need more responsive tables, consider Tablesaw by the Filament Group:
+ * https://github.com/filamentgroup/tablesaw
+ */
+.tableResponsive {
+	@include respond-max($bp-single-col) {
+		width: 100%;
+		margin-bottom: ($line-height-base * .75) + px;
+		overflow-y: hidden;
+		overflow-x: auto;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid $table-borderColor;
+		-webkit-overflow-scrolling: touch;
+
+		// Tighten up spacing
+		> .table {
+			margin-bottom: 0;
+
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+				th,
+				td {
+					white-space: nowrap;
+				}
+			}
+		}
+
+		// Special overrides for the bordered tables
+		> .table-bordered {
+			border: 0;
+
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot {
+				th:first-child,
+				td:first-child {
+					border-left: 0;
+				}
+
+				th:last-child,
+				td:last-child {
+					border-right: 0;
+				}
+			}
+
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot tr:last-child {
+				> th,
+				> td {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+

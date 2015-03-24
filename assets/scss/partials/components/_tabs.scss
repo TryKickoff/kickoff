@@ -1,0 +1,81 @@
+/**
+ * Tabs
+ * =================================
+ */
+
+/**
+ * Define associated tab variables
+ */
+$tab-inactiveColor                 : #95a5a6;
+$tab-activeColor                   : $green;
+
+/**
+ * Tabs base styling
+ *
+ * Usage:
+	<ul class="tabs">
+		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
+		<li><a href="#tabs-example-2">Tab 2</a></li>
+	</ul>
+
+	<!-- Tabs Content -->
+	<ul class="l-tabsContent">
+		<li id="tabs-example-1" class="is-active">
+			Tab 1 content
+		</li>
+
+		<li id="tabs-example-2">
+			Tab 2 content
+		</li>
+	</ul>
+	========================================================================== */
+.tabs {
+	@include clearfix;
+	@extend .unstyled;
+	margin-bottom: $line-height-base + px;
+	border-bottom: 2px solid $tab-activeColor;
+
+	&.tabs--alignRight {
+		li {
+			float: right;
+		}
+	}
+
+	&.tabs--alignCentre,
+	&.tabs--alignCenter {
+		text-align: center;
+
+		> li {
+			display: inline;
+			float: none;
+		}
+	}
+
+	> li {
+		float: left;
+		margin: 0 5px;
+	}
+
+	a {
+		background-color: $tab-inactiveColor;
+		@extend .btn;
+		border-radius: 4px 4px 0 0;
+		color: #fff;
+
+		&.is-active {
+			background-color: $tab-activeColor;
+		}
+	}
+}
+
+.l-tabsContent {
+	@extend .unstyled;
+
+	> li {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+	}
+}

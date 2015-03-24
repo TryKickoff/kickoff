@@ -1,0 +1,62 @@
+/**
+ * Block grids
+ * These are suited for repeating blocks of content. See below for usage
+ *
+ * Usage:
+ * <ul class="l-blockGrid l-blockGrid--3up">
+ *     <li></li>
+ * </ul>
+ *
+ * Mobile Usage:
+ * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
+ *     <li></li>
+ * </ul>
+ */
+.l-blockGrid {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	@include clearfix;
+
+	> li {
+		display: block;
+		height: auto;
+
+		@if $grid-column-padding > 0 {
+			padding: $grid-column-padding + px;
+		}
+	}
+
+	// Narrow block-grid
+	@include respond-min-max($bp-block-grid-narrow, $bp-single-col) {
+		&[class*="up--narrow"] > li {
+			display: block;
+			height: auto;
+			float: left;
+		}
+
+		@for $i from 1 to $grid-column-count + 1 {
+			&.l-blockGrid--#{$i}up--narrow > li {
+				width: percentage(1 / $i);
+				display: block;
+				height: auto;
+				float: left;
+			}
+		}
+	}
+
+	@include respond-min($bp-single-col) {
+		> li {
+			display: block;
+			height: auto;
+			float: left;
+		}
+
+		// Wide block-grid
+		@for $i from 1 to $grid-column-count + 1 {
+			&.l-blockGrid--#{$i}up > li {
+				width: percentage(1 / $i);
+			}
+		}
+	}
+}
