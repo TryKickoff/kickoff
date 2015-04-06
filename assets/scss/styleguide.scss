@@ -1,11 +1,12 @@
 /**
  * Setup styleguide imports
  */
+@import "functions/functions";
+@import "mixins/mixins";
+
 @import "color-palette";
 @import "variables";
 
-@import "functions/functions";
-@import "mixins/mixins";
 $interface-type : 'Karla', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* ==========================================================================
