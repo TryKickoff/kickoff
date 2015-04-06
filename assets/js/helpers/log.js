@@ -1,9 +1,12 @@
-/* ==========================================================================
-   Log.js - Lightweight wrapper for console.log
+/**
+ * Log.js - Lightweight wrapper for console.log
+ *
+ * Usage:
+ * log('inside coolFunc', this, arguments);
+ *
+ * paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
+ */
 
-   Usage: log('inside coolFunc', this, arguments);
-   * paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-   ========================================================================== */
 window.log = function f() {
 	log.history = log.history || [];
 	log.history.push(arguments);
