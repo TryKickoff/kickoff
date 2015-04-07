@@ -1,6 +1,7 @@
-/*	Author:
-		TMW - (Author Name Here)
-*/
+/**
+ * Author:
+ * TMW - (Author Name Here)
+ */
 
 // Create a closure to maintain scope of the '$' and KO (Kickoff)
 ;(function(KO, $) {
