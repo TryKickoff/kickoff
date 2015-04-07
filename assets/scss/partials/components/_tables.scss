@@ -36,7 +36,7 @@ $table-condensed-cell-padding : 5px !default; // Padding for cells in `.table-co
 	max-width: 100%;
 	margin-bottom: $baseline;
 	border-spacing: 0;
-	background-color: $table-bg;
+	background-color: $table-bgColor;
 
 	// Cells
 	> thead,
