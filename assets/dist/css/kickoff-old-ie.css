@@ -131,7 +131,7 @@
  * Edit your color palette and app vars before your begin
  */
 /**
- * Colour palette (yeah we're British!)
+ * Color palette
  */
 /**
  * Variables
@@ -140,7 +140,6 @@
  * Breakpoints
  * Paths
  * Grid setup
- * Colour palette
  * Components
  */
 /**
@@ -163,10 +162,6 @@
 /**
  * Layout setup
  * Settings here override & affect the output in scss/partials/components/grid.scss
- */
-/**
- * Tables
- * Customizes the `.table` component with basic values, each used across all table variations.
  */
 /**
  * App-specific variables
@@ -566,7 +561,7 @@ samp {
   /* [4] */
   cursor: pointer;
   /* [5] */
-  border: 0;
+  border: none;
   /* [6] */
   margin: 0;
   /* [6] */
@@ -1511,27 +1506,16 @@ img, object, embed, video {
 /**
  * Define associated Table variables
  */
-<<<<<<< HEAD:css/kickoff-old-ie.css
 /**
- * Default Table styles
- **/
-table {
-  background-color: #f1f1f1;
-}
-
-th {
-  text-align: left;
-}
-
-=======
->>>>>>> abbd1dbd9ce9a919cd7d7f800f0090a04121503e:assets/dist/css/kickoff-old-ie.css
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 28px;
   border-spacing: 0;
   background-color: #f1f1f1; }
-  .table > thead th, .table > thead td, .table > tbody th, .table > tbody td, .table > tfoot th, .table > tfoot td {
+  .table > thead > th, .table > thead > td, .table > tbody > th, .table > tbody > td, .table > tfoot > th, .table > tfoot > td {
     padding: 8px;
     line-height: 28px;
     vertical-align: top;
@@ -1608,15 +1592,10 @@ th {
  * Preformatted code
  * Code typography styles for the <code> and <pre> elements
  */
-<<<<<<< HEAD:css/kickoff-old-ie.css
 /**
  * Define associated Code variables
  */
-code,
-pre {
-=======
 code, pre {
->>>>>>> abbd1dbd9ce9a919cd7d7f800f0090a04121503e:assets/dist/css/kickoff-old-ie.css
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 16px;
