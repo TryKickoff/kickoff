@@ -35,7 +35,14 @@ module.exports.tasks = {
 	},
 
 
-	dofilesexist : {
-		js : "<%=config.js.fileList%>"
+	/**
+	 * Chotto
+	 * Checks for the existence of files and halts the Grunt build if they don't exist
+	 * https://www.npmjs.com/package/chotto
+	 */
+	chotto : {
+		js : {
+			filePaths: '<%=config.js.fileList%>'
+		}
 	}
 };
