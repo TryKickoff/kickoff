@@ -1,6 +1,16 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://tmwagency.github.io/kickoff/
 
+## Version 5.0.0
+Date
+
+* Completely restructured the static files directories.
+	- Moved all CSS, images & js into the `./assets` directory
+	- The 'dist' directory for all compiled files (CSS, images & JS) is at `./assets/dist`
+	- Grunticon's folders are now more intuitive. Uncompressed SVGs, jpgs & PNGs should be saved to `./assets/img/grunticon/source`. They will then be compressed to `./assets/img/grunticon/compressed` before Grunticon does it's thing and compiles them to `./assets/dist/img/icons`.
+* Removed 404
+* Removed `./js/helpers.js` as redundant. Have provided [some info](https://github.com/tmwagency/kickoff/tree/master/assets/js/helpers) if you need those files again.
+
 ## Version 4.1.0 - Libsass
 18/05/2015
 
