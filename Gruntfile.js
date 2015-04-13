@@ -44,8 +44,9 @@ module.exports = function (grunt) {
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'autoprefixer:kickoff',
+		'sass',
+		'autoprefixer',
+		'clean:tempCSS',
 		'browserSync:serve',
 		'watch'
 	]);
@@ -60,10 +61,9 @@ module.exports = function (grunt) {
 		'shimly',
 		'dofilesexist:js',
 		'uglify',
-		'sass:kickoff',
-		'sass:styleguide',
-		'autoprefixer:kickoff',
-		'autoprefixer:styleguide',
+		'sass',
+		'autoprefixer',
+		'clean:tempCSS',
 		'browserSync:start',
 		'watch'
 	]);
@@ -78,7 +78,8 @@ module.exports = function (grunt) {
 		'dofilesexist:js',
 		'uglify',
 		'sass',
-		'autoprefixer'
+		'autoprefixer',
+		'clean:tempCSS'
 	]);
 
 
@@ -92,7 +93,8 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass',
 		'autoprefixer',
-		'csso'
+		'csso',
+		'clean:tempCSS'
 	]);
 
 
@@ -106,6 +108,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass',
 		'autoprefixer',
+		'clean:tempCSS',
 		'browserSync:styleguide',
 		'watch'
 	]);
@@ -121,6 +124,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass',
 		'autoprefixer',
+		'clean:tempCSS',
 		'browserSync:serve',
 		'watch'
 	]);
