@@ -69,7 +69,8 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
-		'copy:modernizr'
+		'copy:modernizr',
+		'browserSync:start'
 	]);
 
 

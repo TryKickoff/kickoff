@@ -15,9 +15,7 @@ module.exports.tasks = {
 			},
 			options: {
 				watchTask: true,
-				server: {
-					baseDir: "./"
-				}
+				server: './'
 			}
 		},
 
@@ -30,11 +28,9 @@ module.exports.tasks = {
 				]
 			},
 			options: {
-				watchTask: true,
 				server: {
-					baseDir: "./",
-					// index: "_docs/index.html",
-					directory: true
+					baseDir: './',
+					index: '_docs/index.html'
 				}
 			}
 		},
@@ -50,8 +46,8 @@ module.exports.tasks = {
 			options: {
 				watchTask: true,
 				server: {
-					baseDir: "./",
-					index: "_docs/styleguide.html"
+					baseDir: './',
+					index: '_docs/styleguide.html'
 				}
 			}
 		}
