@@ -13,18 +13,19 @@ module.exports.tasks = {
 				sourceMap : true
 			},
 			files: {
-				'<%=config.assetsDir%>/css/<%=config.css.srcFile%>.css'       : '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
+				'<%=config.tempDir%>/css/<%=config.css.distFile%>.css'       : '<%=config.css.scssDir%>/kickoff.scss',
 				// Remove the line below if you are supporting <IE9
-				'<%=config.assetsDir%>/css/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>-old-ie.scss'
+				'<%=config.tempDir%>/css/<%=config.css.distFile%>-old-ie.css': '<%=config.css.scssDir%>/kickoff-old-ie.scss'
 			}
 		},
+
 		styleguide: {
 			options: {
 				outputStyle: 'compressed',
 				precision : 10,
 			},
 			files: {
-				'<%=config.css.distDir%>/styleguide.css': '<%=config.css.scssDir%>/styleguide.scss'
+				'<%=config.tempDir%>/css/styleguide.css' : '<%=config.css.scssDir%>/styleguide.scss'
 			}
 		}
 	},
@@ -38,22 +39,15 @@ module.exports.tasks = {
 	 */
 	autoprefixer: {
 		options: {
-			// We are supporting the last 2 browsers, any browsers with >5% market share,
-			// and ensuring we support IE8+ with prefixes
-			browsers: ['> 5%', 'last 4 versions', 'firefox > 3.6', 'ie > 7'],
+			browsers: '<%=config.css.autoprefixer%>',
 			map: true
 		},
 
 		kickoff: {
 			expand: true,
 			flatten: true,
-			src: '<%=config.assetsDir%>/css/*.css',
+			src: '<%=config.tempDir%>/css/*.css',
 			dest: '<%=config.css.distDir%>/'
-		},
-
-		styleguide : {
-			src: '<%=config.css.distDir%>/styleguide.css',
-			dest: '<%=config.css.distDir%>/styleguide.css'
 		}
 	},
 
@@ -69,9 +63,9 @@ module.exports.tasks = {
 				restructure: false //turns structural optimisations off as can mess up fallbacks http://bem.info/tools/optimizers/csso/description/
 			},
 			files: {
-				'<%=config.css.distDir%>/<%=config.css.srcFile%>.css'       : '<%=config.css.distDir%>/<%=config.css.srcFile%>.css',
+				'<%=config.css.distDir%>/<%=config.css.distFile%>.css'       : '<%=config.css.distDir%>/<%=config.css.distFile%>.css',
 				// Remove the line below if you are supporting <IE9
-				'<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css': '<%=config.css.distDir%>/<%=config.css.srcFile%>-old-ie.css'
+				'<%=config.css.distDir%>/<%=config.css.distFile%>-old-ie.css': '<%=config.css.distDir%>/<%=config.css.distFile%>-old-ie.css'
 			},
 		}
 	}
