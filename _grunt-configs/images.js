@@ -26,18 +26,18 @@ module.exports.tasks = {
 			},
 			files: [{
 				expand: true,
-				cwd: '<%=config.img.dir%>/grunticon/source',
+				cwd: '<%=config.img.grunticonDir%>',
 				src: ['**/*.{svg,png,jpg,gif}'],
-				dest: '<%=config.img.dir%>/grunticon/compressed'
+				dest: '<%=config.tempDir%>/icons'
 			}]
 		},
 
-		others: {
+		images: {
 			files: [{
 				expand: true,
 				cwd: '<%=config.img.dir%>/',
-				src: ['**/*.{svg,png,jpg,gif}', '!<%=config.img.dir%>/grunticon/**/*.{svg,png,jpg,gif}'],
-				dest: '<%=config.assetsDir%>/dist/img'
+				src: ['**/*.{svg,png,jpg,gif}'],
+				dest: '<%=config.distDir%>/img'
 			}]
 		}
 	},
@@ -51,11 +51,12 @@ module.exports.tasks = {
 		myIcons: {
 			files: [{
 				expand: true,
-				cwd   : '<%=config.img.dir%>/grunticon/compressed',
+				cwd   : '<%=config.tempDir%>/icons',
 				src   : ['*.{svg,png,jpg,gif}'],
 				dest  : '<%=config.distDir%>/img/icons'
 			}],
 			options: {
+				// https://github.com/filamentgroup/grunticon#optionscustomselectors
 				// customselectors: {
 				// 	"arrow": [".icon-arrow:before"]
 				// }
