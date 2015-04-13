@@ -1,15 +1,17 @@
 /**
- * Grunt global vars
- * Many of the Grunt tasks use these vars
+ * Global Grunt vars
+ * Many of the Grunt tasks use these vars. Change as much as you like :)
  */
 
 module.exports = {
-	src : "./_grunt-configs/*.js",
+	src : "./_grunt-configs/*.js", // This directory. Has all the Grunt tasks grouped into specific js files
 
 	srcDir  : './assets/src',  // <%=config.srcDir%>
 	distDir : './assets/dist', // <%=config.distDir%>
 	tempDir : './assets/temp', // <%=config.tempDir%>
 
+
+	// CSS-related Grunt vars
 	css : {
 		scssDir  : '<%=config.srcDir%>/scss', // <%=config.css.scssDir%>
 		distDir  : '<%=config.distDir%>/css', // <%=config.css.distDir%>
@@ -23,9 +25,14 @@ module.exports = {
 		autoprefixer : ['> 5%', 'last 2 versions', 'firefox > 3.6', 'ie > 7'] // <%=config.css.autoprefixer%>
 	},
 
+
+	// Javascript-related Grunt vars
 	js : {
 		distDir  : '<%=config.distDir%>/js/', // <%=config.js.distDir%>
-		distFile : 'app.min.js',              // <%=config.js.distFile%>
+
+		// Renaming this changes the name of the generated JS file
+		// Make sure you update your template file
+		distFile : 'script.js', // <%=config.js.distFile%>
 
 		// The files in this array will be concatinated and minified by our build
 		// Remove any files that you don't want, & add any that you need
@@ -48,12 +55,20 @@ module.exports = {
 		]
 	},
 
+
+	// Image-related Grunt vars
 	img : {
 		dir          : '<%=config.srcDir%>/img',      // <%=config.img.dir%>
 		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
 	},
 
+
+	// Testing-related Grunt vars
+	// Add any other test vars in here
 	testing: {
+
+		// Used by Photobox at the moment
+		// http://tmwagency.github.io/kickoff/learn/grunt.html#task-photobox
 		visual : {
 			sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
