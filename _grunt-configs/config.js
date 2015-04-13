@@ -6,18 +6,29 @@
 module.exports = {
 	src : "./_grunt-configs/*.js",
 
-	assetsDir : './assets',                   // <%=config.assetsDir%>
-	distDir   : '<%=config.assetsDir%>/dist', // <%=config.distDir%>
+	srcDir  : './assets/src',  // <%=config.srcDir%>
+	distDir : './assets/dist', // <%=config.distDir%>
+	tempDir : './assets/temp', // <%=config.tempDir%>
 
 	css : {
-		srcFile : 'kickoff',                    // <%=config.css.srcFile%>
-		scssDir : '<%=config.assetsDir%>/scss', // <%=config.css.scssDir%>
-		distDir : '<%=config.distDir%>/css'     // <%=config.css.distDir%>
+		scssDir  : '<%=config.srcDir%>/scss', // <%=config.css.scssDir%>
+		distDir  : '<%=config.distDir%>/css', // <%=config.css.distDir%>
+
+		// Renaming this changes the name of the generated CSS file
+		// Make sure you update your template file
+		distFile : 'kickoff', // <%=config.css.srcFile%>
+
+		// We are supporting the last 2 browsers, any browsers with >5% market share,
+		// and ensuring we support IE8+ with prefixes
+		autoprefixer : ['> 5%', 'last 2 versions', 'firefox > 3.6', 'ie > 7'] // <%=config.css.autoprefixer%>
 	},
 
 	js : {
-		distDir  : '<%=config.distDir%>/js/',   // <%=config.js.distDir%>
-		distFile : 'app.min.js',                // <%=config.js.distFile%>
+		distDir  : '<%=config.distDir%>/js/', // <%=config.js.distDir%>
+		distFile : 'app.min.js',              // <%=config.js.distFile%>
+
+		// The files in this array will be concatinated and minified by our build
+		// Remove any files that you don't want, & add any that you need
 
 		// <%=config.js.fileList%>
 		fileList : [
@@ -26,19 +37,20 @@ module.exports = {
 
 			// if you would like some basic JS shims (when not using jQuery),
 			// uncomment the line below to compile Shimly output
-			//'js/helpers/shims.js',
+			//'<%=config.srcDir%>/js/helpers/shims.js',
 
-			'<%=config.assetsDir%>/js/helpers/console.js',
+			'<%=config.srcDir%>/js/helpers/console.js',
 			'bower_modules/trak/dist/trak.js',
 			'bower_modules/swiftclick/js/libs/swiftclick.js',
 			'bower_modules/cookies-js/dist/cookies.js',
 
-			'<%=config.assetsDir%>/js/script.js'
+			'<%=config.srcDir%>/js/script.js'
 		]
 	},
 
 	img : {
-		dir : '<%=config.assetsDir%>/img' // <%=config.img.dir%>
+		dir          : '<%=config.srcDir%>/img',      // <%=config.img.dir%>
+		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
 	},
 
 	testing: {
