@@ -6,7 +6,8 @@ module.exports.tasks = {
 	 * Clean some files
 	 */
 	clean: {
-		icons: ['<%=config.distDir%>/img/icons']
+		icons   : ['<%=config.distDir%>/img/icons', '<%=config.tempDir%>/icons'],
+		tempCSS : ['<%=config.tempDir%>/css']
 	},
 
 
