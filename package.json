@@ -52,7 +52,7 @@
     "imagemin-gifsicle": "^4.1.0",
     "imagemin-mozjpeg": "^4.0.0",
     "imagemin-pngquant": "^4.0.0",
-    "load-grunt-configs": "~0.4.2",
+    "load-grunt-configs": "~0.4.3",
     "load-grunt-tasks": "~3.1.0"
   },
   "keywords": [],
