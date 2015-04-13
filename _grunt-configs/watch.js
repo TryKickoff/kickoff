@@ -9,16 +9,9 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss', '!<%=config.css.scssDir%>/styleguide.scss'],
 			tasks: [
-				'sass:kickoff',
-				'autoprefixer:kickoff'
-			]
-		},
-
-		"styleguide_scss": {
-			files: ['<%=config.css.scssDir%>/styleguide.scss'],
-			tasks: [
-				'sass:styleguide',
-				'autoprefixer:styleguide'
+				'sass',
+				'autoprefixer',
+				'clean:tempCSS'
 			]
 		},
 
@@ -31,22 +24,17 @@ module.exports.tasks = {
 		},
 
 		grunticon : {
-			files: ['<%=config.img.dir%>/grunticon/source/*.{svg,png,jpg,gif}'],
+			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
 			tasks: [
 				'clean:icons',
-				'newer:imagemin:grunticon',
+				'imagemin:grunticon',
 				'grunticon'
 			]
 		},
 
 		images : {
-			files: [
-				'<%=config.img.dir%>/**/*.{svg,png,jpg,gif}',
-				'!<%=config.img.dir%>/grunticon/**/*.{svg,png,jpg,gif}'
-			],
-			tasks: [
-				'newer:imagemin:images'
-			]
+			files: ['<%=config.img.dir%>/**/*.{svg,png,jpg,gif}'],
+			tasks: ['imagemin:images']
 		},
 
 		grunt: {
