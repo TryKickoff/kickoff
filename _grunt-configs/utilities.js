@@ -12,6 +12,18 @@ module.exports.tasks = {
 
 
 	/**
+	 * Copy files
+	 * https://github.com/gruntjs/grunt-contrib-copy
+	 */
+	copy: {
+		modernizr: {
+			src: '<%=config.srcDir%>/js/libs/modernizr.min.js',
+			dest: '<%=config.distDir%>/js/libs/modernizr.min.js'
+		},
+	},
+
+
+	/**
 	 * Shell
 	 * https://github.com/sindresorhus/grunt-shell
 	 * Run shell commands

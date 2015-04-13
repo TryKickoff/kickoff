@@ -24,7 +24,10 @@ module.exports.tasks = {
 
 		js: {
 			files: ['<%=config.js.fileList%>'],
-			tasks: ['uglify']
+			tasks: [
+				'uglify',
+				'newer:copy:modernizr'
+			]
 		},
 
 		grunticon : {

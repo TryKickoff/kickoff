@@ -64,8 +64,7 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
-		'browserSync:start',
-		'watch'
+		'copy:modernizr'
 	]);
 
 
@@ -79,7 +78,8 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass',
 		'autoprefixer',
-		'clean:tempCSS'
+		'clean:tempCSS',
+		'copy:modernizr'
 	]);
 
 
@@ -94,7 +94,8 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'csso',
-		'clean:tempCSS'
+		'clean:tempCSS',
+		'copy:modernizr'
 	]);
 
 
@@ -125,6 +126,7 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
+		'copy:modernizr',
 		'browserSync:serve',
 		'watch'
 	]);
