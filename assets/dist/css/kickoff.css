@@ -899,9 +899,8 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 5px;
-  -webkit-transition: border 200ms ease-in-out;
-     -moz-transition: border 200ms ease-in-out;
-          transition: border 200ms ease-in-out; }
+  -moz-transition: border 200ms ease-in-out;
+       transition: border 200ms ease-in-out; }
   .form-input:focus {
     border-color: #999999;
     outline: 0;
@@ -1723,9 +1722,8 @@ pre {
     top: -100px;
     z-index: 100;
     background-color: #fff;
-    -webkit-transition: all 100ms ease-in-out;
-       -moz-transition: all 100ms ease-in-out;
-            transition: all 100ms ease-in-out; }
+    -moz-transition: all 100ms ease-in-out;
+         transition: all 100ms ease-in-out; }
     .skipToContent a:focus {
       top: 5px; }
 
