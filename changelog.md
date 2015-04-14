@@ -5,9 +5,14 @@ All latest changes are documented on our site at http://tmwagency.github.io/kick
 Date
 
 * Completely restructured the static files directories.
-	- Moved all CSS, images & js into the `./assets` directory
-	- The 'dist' directory for all compiled files (CSS, images & JS) is at `./assets/dist`
-	- Grunticon's folders are now more intuitive. Uncompressed SVGs, jpgs & PNGs should be saved to `./assets/img/grunticon/source`. They will then be compressed to `./assets/img/grunticon/compressed` before Grunticon does it's thing and compiles them to `./assets/dist/img/icons`.
+	- Moved all CSS, images & js into the `./assets` directory 
+		+ The `src` directory for source files (SCSS, javascript, images & grunticon)
+		+ The `dist` directory for all compiled files (CSS, images & JS) is at `./assets/dist`
+		+ Grunticon's folders are now more intuitive. Uncompressed SVGs, jpgs & PNGs should be saved to `./assets/src/grunticon/source`. They will then be compressed to `./assets/temp/icons` before Grunticon does it's thing and compiles them to `./assets/dist/img/icons`.
+* Grunt & build tasks - Much has been streamlined.
+	- Connect has been removed & BrowserSync is now the only way to serve a static site & reload changes
+	- Our config variables are now in their own file at `./_grunt-configs/config.js` & have been made more intuitive
+	- Images now are automatically compressed by [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) & are delivered to `./assets/dist/img`
 * Removed 404
 * Removed `./js/helpers.js` as redundant. Have provided [some info](https://github.com/tmwagency/kickoff/tree/master/assets/js/helpers) if you need those files again.
 
