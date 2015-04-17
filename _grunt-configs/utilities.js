@@ -24,18 +24,6 @@ module.exports.tasks = {
 
 
 	/**
-	 * Shell
-	 * https://github.com/sindresorhus/grunt-shell
-	 * Run shell commands
-	 */
-	shell: {
-		bowerinstall: {
-			command: 'bower install'
-		}
-	},
-
-
-	/**
 	 * Chotto
 	 * Checks for the existence of files and halts the Grunt build if they don't exist
 	 * https://www.npmjs.com/package/chotto

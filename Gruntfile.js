@@ -62,7 +62,6 @@ module.exports = function (grunt) {
 	 * run bower install, uglify, sass, autoprefixer
 	 */
 	grunt.registerTask('start', [
-		'shell:bowerinstall',
 		'shimly',
 		'chotto:js',
 		'uglify',
