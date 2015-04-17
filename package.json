@@ -59,6 +59,9 @@
   },
   "keywords": [],
   "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt travis --verbose",
+
+    "grunt": "grunt",
+    "pregrunt": "npm install -g grunt-cli && npm install -g bower && npm install && bower install"
   }
 }
