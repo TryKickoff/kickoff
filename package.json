@@ -63,7 +63,7 @@
   "scripts": {
     "test": "grunt travis --verbose",
 
-    "grunt": "grunt",
-    "pregrunt": "npm install -g grunt-cli && npm install -g bower && npm install && bower install"
+    "kickoff": "grunt start",
+    "prekickoff": "npm install -g grunt-cli && npm install"
   }
 }
