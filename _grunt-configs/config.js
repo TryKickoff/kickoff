@@ -40,16 +40,16 @@ module.exports = {
 		// <%=config.js.fileList%>
 		fileList : [
 			// if you would like to remove jQuery from your concatenated JS, comment out the line below
-			'bower_modules/jquery/dist/jquery.js',
+			'./node_modules/jquery/dist/jquery.js',
 
 			// if you would like some basic JS shims (when not using jQuery),
 			// uncomment the line below to compile Shimly output
 			//'<%=config.srcDir%>/js/helpers/shims.js',
 
 			'<%=config.srcDir%>/js/helpers/console.js',
-			'bower_modules/trak/dist/trak.js',
-			'bower_modules/swiftclick/js/libs/swiftclick.js',
-			'bower_modules/cookies-js/dist/cookies.js',
+			'./node_modules/trak.js/dist/trak.js',
+			'./node_modules/swiftclick/js/libs/swiftclick.js',
+			'./node_modules/cookies-js/dist/cookies.js',
 
 			'<%=config.srcDir%>/js/script.js'
 		]
