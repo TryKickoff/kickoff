@@ -62,28 +62,5 @@ module.exports.tasks = {
 				// }
 			}
 		}
-	},
-
-
-	/**
-	 * SVGmin
-	 * https://github.com/sindresorhus/grunt-svgmin
-	 */
-	svgmin: {
-		options: {
-			plugins: [
-				{ removeViewBox: false },
-				{ removeUselessStrokeAndFill: false }
-			]
-		},
-		dist: {
-			files: [{
-				expand : true,
-				cwd    : '<%=config.img.dir%>/grunticon/source',
-				src    : ['**/*.svg'],
-				dest   : '<%=config.img.dir%>/grunticon/compressed',
-				ext    : '.svg'
-			}]
-		}
 	}
 };
