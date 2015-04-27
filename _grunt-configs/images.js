@@ -35,7 +35,7 @@ module.exports.tasks = {
 		images: {
 			files: [{
 				expand: true,
-				cwd: '<%=config.img.dir%>/',
+				cwd: '<%=config.img.srcDir%>/',
 				src: ['**/*.{svg,png,jpg,gif}'],
 				dest: '<%=config.distDir%>/img'
 			}]

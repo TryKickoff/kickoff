@@ -58,7 +58,7 @@ module.exports = {
 
 	// Image-related Grunt vars
 	img : {
-		dir          : '<%=config.srcDir%>/img',      // <%=config.img.dir%>
+		srcDir       : '<%=config.srcDir%>/img',      // <%=config.img.srcDir%>
 		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
 	},
 

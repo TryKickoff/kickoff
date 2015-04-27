@@ -7,12 +7,15 @@ module.exports.tasks = {
 	*/
 	watch: {
 		scss: {
-			files: ['<%=config.css.scssDir%>/**/*.scss', '!<%=config.css.scssDir%>/styleguide.scss'],
+			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
 				'sass',
 				'autoprefixer',
 				'clean:tempCSS'
-			]
+			],
+			options: {
+				interrupt: true,
+			}
 		},
 
 		js: {
@@ -20,7 +23,15 @@ module.exports.tasks = {
 			tasks: [
 				'uglify',
 				'newer:copy:modernizr'
-			]
+			],
+			options: {
+				interrupt: true,
+			}
+		},
+
+		images : {
+			files: ['<%=config.img.srcDir%>/**/*.{svg,png,jpg,gif}'],
+			tasks: ['imagemin:images']
 		},
 
 		grunticon : {
@@ -29,16 +40,17 @@ module.exports.tasks = {
 				'clean:icons',
 				'imagemin:grunticon',
 				'grunticon'
-			]
-		},
-
-		images : {
-			files: ['<%=config.img.dir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['imagemin:images']
+			],
+			options: {
+				interrupt: true,
+			}
 		},
 
 		grunt: {
-			files: ['_grunt-configs/*.js', 'Gruntfile.js']
+			files: ['_grunt-configs/*.js', 'Gruntfile.js'],
+			options: {
+				reload: true
+			}
 		}
 	}
 };
