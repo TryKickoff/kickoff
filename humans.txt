@@ -1,11 +1,12 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+# KICKOFF TEAM
 
     Zander Martineau -- @MrMartineau
     Ashley Nolan     -- @AshNolan_
     Nic Bell         -- @nicbell
+    Contributors     -- https://github.com/tmwagency/kickoff/graphs/contributors
 
 
 # TECHNOLOGY COLOPHON
@@ -17,3 +18,4 @@
     Bower
     BrowserSync
     Node.js / NPM
+    Sublime Text
