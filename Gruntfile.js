@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 	 * Available tasks:
 	 * grunt            : Alias for 'serve' task, below
 	 * grunt serve      : watch js, images & scss and run a local server
-	 * grunt start      : run this before starting development
+	 * grunt start      : run this to show the start page before starting development
 	 * grunt watch      : run sass:kickoff, uglify and livereload
 	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
 	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
@@ -58,8 +58,7 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT START * Run this to
-	 * run bower install, uglify, sass, autoprefixer
+	 * GRUNT START * Run this to show the start page before starting development
 	 */
 	grunt.registerTask('start', [
 		'shimly',
