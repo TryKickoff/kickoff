@@ -15,6 +15,7 @@ module.exports.tasks = {
 			],
 			options: {
 				interrupt: true,
+				spawn: false
 			}
 		},
 
@@ -26,6 +27,7 @@ module.exports.tasks = {
 			],
 			options: {
 				interrupt: true,
+				spawn: false
 			}
 		},
 
