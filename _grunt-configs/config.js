@@ -72,11 +72,10 @@ module.exports = {
 		visual : {
 			sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
+			// Change these urls to test your app
 			// <%=config.testing.visual.urls%>
 			urls : [
-				'http://localhost:3000',
-				'http://localhost:3000/_docs/',
-				'http://localhost:3000/_docs/styleguide.html'
+				'http://localhost:3000'
 			]
 		}
 	}
