@@ -47,7 +47,7 @@ module.exports.tasks = {
 				watchTask: true,
 				server: {
 					baseDir: './',
-					index: '_docs/styleguide.html'
+					index: 'styleguide/index.html'
 				}
 			}
 		}
