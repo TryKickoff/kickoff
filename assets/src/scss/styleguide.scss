@@ -7,20 +7,59 @@
 @import "color-palette";
 @import "variables";
 
-$interface-type : 'Karla', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$styleguide-color-primary: $color-primary;
+$styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* ==========================================================================
    Styleguide styles
    ========================================================================== */
 body {
-	background-color: #f1f1f1;
+	background-color: #fff;
 }
 
-.g-container {
-	padding: 30px;
-	background-color: #fff;
-	margin-top: 3%;
-	margin-bottom: 3%;
+/**
+ * Styleguide type styles
+ */
+.interfaceType {
+	font-family: $styleguide-type;
+	font-weight: 300;
+}
+
+.interfaceType--subtle {
+	color: #888;
+}
+
+.sectionHeading {
+	@extend .interfaceType;
+	color: $styleguide-color-primary;
+}
+
+.styleguide-code {
+
+}
+
+
+/**
+ * Styleguide navigation style
+ */
+
+/**
+ * Styleguide .page styles
+ */
+.page {
+	overflow: hidden;
+	padding: 8% 0;
+}
+
+.page--start {
+	background-color: $styleguide-color-primary;
+	padding: 15% 0;
+	color: #fff;
+}
+
+.l-container {
+	// padding: 30px;
+	// background-color: #fff;
 }
 
 .g-row + .g-row {
@@ -42,21 +81,6 @@ body {
 .well--inner {
 	margin-left: 0;
 	margin-right: 0;
-}
-
-.interfaceType {
-	font-family: $interface-type;
-}
-
-.section-heading {
-	border-bottom: 1px solid rgba(#000, .2);
-	padding-bottom: .3em;
-	@extend .interfaceType;
-	margin-top: 1em;
-}
-
-.interfaceType-subtle {
-	color: #888;
 }
 
 /**
@@ -106,40 +130,73 @@ body {
 }
 
 
-/*
-   Colours
-   ========================================================================== */
+/**
+ * Colour swatches
+ */
 .swatch {
-	height: 120px;
+	// text-align: center;
+	margin-bottom: 30px;
+
+	code {
+		border: 1px solid #ddd;
+		background-color: #F9F8F8;
+		@include font-size(11);
+	}
+}
+
+.swatch-color {
+	height: 60px;
 	padding: 15px;
-	margin-bottom: .5em;
+	margin-bottom: 5px;
+	@include font-size(13);
+	font-family: $font-family-mono;
 }
 
 @mixin swatch($color) {
 	color: $color;
 
-	&.bg {
+	.swatch-color {
 		background-color: $color;
+
 		@if lightness($color) < 60 {
 			color: #fff;
 		} @else {
 			color: #444;
 		}
 
-		&:after {
+		&:before {
 			content: '#{$color}';
+			display: block;
 		}
 	}
 }
 
-.color-text { @include swatch($color-text); }
-.color-background { @include swatch($color-bg); }
-.color-link { @include swatch($color-link-default); }
-.color-link-hover { @include swatch($color-link-hover); }
-.color-primary { @include swatch($color-primary); }
-.color-secondary { @include swatch($color-secondary); }
-.color-highlight { @include swatch($color-highlight); }
+.color-text {
+	@include swatch($color-text);
+}
+.color-background {
+	@include swatch($color-bg);
+}
+.color-link {
+	@include swatch($color-link-default);
+}
+.color-link-hover {
+	@include swatch($color-link-hover);
+}
+.color-primary {
+	@include swatch($color-primary);
+}
+.color-secondary {
+	@include swatch($color-secondary);
+}
+.color-highlight {
+	@include swatch($color-highlight);
+}
 
+
+/**
+ * Typography
+ */
 .typography {
 	.info {
 		p {
@@ -185,8 +242,25 @@ body {
 	}
 }
 
-h1.typeSpecimen:after { content: "Font stack: #{$font-family-headings}"; }
-p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
+// h1.typeSpecimen:after { content: "Font stack: #{$font-family-headings}"; }
+// p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
+
+.typeSpecimen--heading {
+	@include font-size(30);
+	font-family: $font-family-headings;
+	font-weight: $font-weight-headings;
+
+}
+
+.typeSpecimen--body {
+	@include font-size(30);
+	font-family: $font-family-base;
+}
+
+.typeSpecimen--giant {
+	@include font-size(120);
+	line-height: 1;
+}
 
 
 /**
