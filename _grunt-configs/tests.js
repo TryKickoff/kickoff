@@ -25,10 +25,9 @@ module.exports.tasks = {
 			jshintrc: '.jshintrc'
 		},
 		project: [
-			'<%=config.assetsDir%>/js/**/*.js',
-			'!<%=config.assetsDir%>/js/{libs,helpers}/**/*.js',
-			'!<%=config.assetsDir%>/js/**/*.min.js',
-			'!<%=config.distDir%>/dist/js/*.js',
+			'<%=config.srcDir%>/js/**/*.js',
+			'!<%=config.srcDir%>/js/{libs,helpers}/**/*.js',
+			'!<%=config.srcDir%>/js/**/*.min.js'
 		]
 	},
 
