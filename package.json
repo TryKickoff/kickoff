@@ -1,69 +1,69 @@
 {
-	"name": "kickoff",
-	"title": "Kickoff",
-	"description": "A lightweight front-end framework for creating scalable, responsive sites",
-	"version": "5.0.0",
-	"homepage": "http://tmwagency.github.io/kickoff/",
-	"authors": [
-		{
-			"name": "Zander Martineau",
-			"url": "http://martineau.tv"
-		},
-		{
-			"name": "Ashley Nolan",
-			"url": "http://ashleynolan.co.uk"
-		},
-		{
-			"name": "Contributors",
-			"url": "https://github.com/tmwagency/kickoff/graphs/contributors"
-		}
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/tmwagency/kickoff.git"
-	},
-	"bugs": {
-		"url": "https://github.com/tmwagency/kickoff/issues"
-	},
-	"license": "MIT",
-	"engines": {
-		"node": ">=0.11"
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"chotto": "^0.1.0",
-		"cookies-js": "^1.2.1",
-		"glob": "^5.0.5",
-		"grunt": "^0.4.5",
-		"grunt-autoprefixer": "^3.0.0",
-		"grunt-browser-sync": "^1.9.2",
-		"grunt-contrib-clean": "^0.6.0",
-		"grunt-contrib-copy": "^0.8.0",
-		"grunt-contrib-imagemin": "^0.9.4",
-		"grunt-contrib-jshint": "^0.11.2",
-		"grunt-contrib-uglify": "^0.9.1",
-		"grunt-contrib-watch": "^0.6.1",
-		"grunt-csso": "^0.7.1",
-		"grunt-grunticon": "^2.1.6",
-		"grunt-newer": "^1.1.0",
-		"grunt-photobox": "^0.8.1",
-		"grunt-sass": "^0.18.1",
-		"grunt-scss-lint": "^0.3.6",
-		"grunt-shimly": "^0.0.7",
-		"imagemin-gifsicle": "^4.1.0",
-		"imagemin-mozjpeg": "^5.1.0",
-		"imagemin-pngquant": "^4.1.0",
-		"jquery": "^1.11.1",
-		"load-grunt-configs": "^0.4.3",
-		"load-grunt-tasks": "^3.1.0",
-		"swiftclick": "^1.1.5",
-		"trak.js": "^0.4.0"
-	},
-	"keywords": [],
-	"scripts": {
-		"test": "grunt travis --verbose",
-
-		"kickoff": "grunt start",
-		"prekickoff": "npm install -g grunt-cli && npm install"
-	}
+  "name": "kickoff",
+  "title": "Kickoff",
+  "description": "A lightweight front-end framework for creating scalable, responsive sites",
+  "version": "5.0.0",
+  "homepage": "http://trykickoff.github.io",
+  "authors": [
+    {
+      "name": "Zander Martineau",
+      "url": "http://martineau.tv"
+    },
+    {
+      "name": "Ashley Nolan",
+      "url": "http://ashleynolan.co.uk"
+    },
+    {
+      "name": "Contributors",
+      "url": "https://github.com/trykickoff/kickoff/graphs/contributors"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trykickoff/kickoff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trykickoff/kickoff/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.11"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chotto": "^0.1.0",
+    "cookies-js": "^1.2.1",
+    "glob": "^5.0.5",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-browser-sync": "^1.9.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csso": "^0.7.1",
+    "grunt-grunticon": "^2.1.6",
+    "grunt-newer": "^1.1.0",
+    "grunt-photobox": "^0.8.1",
+    "grunt-sass": "^0.18.1",
+    "grunt-scss-lint": "^0.3.6",
+    "grunt-shimly": "^0.0.7",
+    "imagemin-gifsicle": "^4.1.0",
+    "imagemin-mozjpeg": "^5.1.0",
+    "imagemin-pngquant": "^4.1.0",
+    "jquery": "^1.11.1",
+    "load-grunt-configs": "^0.4.3",
+    "load-grunt-tasks": "^3.1.0",
+    "opn": "^1.0.2",
+    "swiftclick": "^1.1.5",
+    "trak.js": "^0.5.0"
+  },
+  "keywords": [],
+  "scripts": {
+    "test": "grunt travis --verbose",
+    "kickoff": "grunt start",
+    "prekickoff": "npm install -g grunt-cli && npm install"
+  }
 }

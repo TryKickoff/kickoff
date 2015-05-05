@@ -19,23 +19,6 @@ module.exports.tasks = {
 			}
 		},
 
-
-		start: {
-			bsFiles: {
-				src: [
-					'<%=config.distDir%>/**/*.*',
-					'*.html'
-				]
-			},
-			options: {
-				server: {
-					baseDir: './',
-					index: '_docs/index.html'
-				}
-			}
-		},
-
-
 		styleguide: {
 			bsFiles: {
 				src: [

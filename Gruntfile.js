@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
-
 	'use strict';
+
+	var opn = require('opn');
 
 	var options = {
 		pkg: require('./package'), // <%=pkg.name%>
@@ -23,7 +24,7 @@ module.exports = function (grunt) {
 	 * Available tasks:
 	 * grunt            : Alias for 'serve' task, below
 	 * grunt serve      : watch js, images & scss and run a local server
-	 * grunt start      : run this to show the start page before starting development
+	 * grunt start      : Opens the post-install setup checklist on the Kickoff site
 	 * grunt watch      : run sass:kickoff, uglify and livereload
 	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
 	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
@@ -58,18 +59,12 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT START * Run this to show the start page before starting development
+	 * GRUNT START
+	 * Opens the post-install setup checklist on the Kickoff site
 	 */
-	grunt.registerTask('start', [
-		'shimly',
-		'chotto:js',
-		'uglify',
-		'sass',
-		'autoprefixer',
-		'clean:tempCSS',
-		'copy:modernizr',
-		'browserSync:start'
-	]);
+	grunt.registerTask('start', [], function(){
+		opn('http://trykickoff.github.io/learn/checklist.html');
+	});
 
 
 	/**
