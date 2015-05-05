@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 	 * GRUNT START
 	 * Opens the post-install setup checklist on the Kickoff site
 	 */
-	grunt.registerTask('start', [], function(){
+	grunt.registerTask('start', function(){
 		opn('http://trykickoff.github.io/learn/checklist.html');
 	});
 
