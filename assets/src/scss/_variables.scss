@@ -48,7 +48,7 @@ $font-family-mono             : Menlo, Monaco, "Courier New", monospace;
 $font-family-base             : $font-family-sans;
 $font-family-alt              : $font-family-serif;
 
-$font-family-headings         : inherit; // using inherit will use $font-family-base for all headings
+$font-family-headings         : $font-family-serif; // using inherit will use $font-family-base for all headings
 $font-weight-headings         : bold;    // instead of browser default, bold
 $line-height-headings         : 1.1;
 
