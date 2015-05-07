@@ -14,8 +14,7 @@ module.exports.tasks = {
 				'clean:tempCSS'
 			],
 			options: {
-				interrupt: true,
-				spawn: false
+				interrupt: true
 			}
 		},
 
