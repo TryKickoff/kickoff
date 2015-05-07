@@ -68,7 +68,7 @@ module.exports = {
 	testing: {
 
 		// Used by Photobox at the moment
-		// http://tmwagency.github.io/kickoff/learn/grunt.html#task-photobox
+		// http://trykickoff.github.io/learn/grunt.html#task-photobox
 		visual : {
 			sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
