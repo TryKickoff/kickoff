@@ -183,30 +183,3 @@ input[type="button"] {
 	padding-right: .5em;
 	padding-left: .5em;
 }
-
-
-/**
- * Close Button: for lightboxes etc
- */
-.btnClose {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-
-	display: block;
-	height: 20px;
-	width: 20px;
-	line-height: 17px;
-
-	background: #000;
-	color: $color-primary;
-	text-align: center;
-	border-radius: 5px;
-	cursor: pointer;
-	user-select: none;
-
-	&:hover {
-		color: #fff;
-		border-radius: 50px;
-	}
-}

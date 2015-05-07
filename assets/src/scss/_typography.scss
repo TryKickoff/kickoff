@@ -204,8 +204,7 @@ ul, ol {
 /**
  * Unstyled lists
  */
-.unstyled,
-nav ul, nav ol {
+.unstyled {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -219,22 +218,6 @@ nav ul, nav ol {
 dl { margin-bottom: $baseline; }
 dt { font-weight: $font-weight-bold; }
 dd { margin-left: $baseline; }
-
-.dl-horizontal {
-	@include clearfix;
-
-	dt {
-		@include text-overflow();
-		float: left;
-		clear: left;
-		width: 220px;
-		text-align: right;
-	}
-
-	dd {
-		margin-left: 240px;
-	}
-}
 
 
 /**
@@ -294,13 +277,6 @@ blockquote {
 	&:after {
 		content: "";
 	}
-}
-
-// Addresses
-address {
-	display: block;
-	margin-bottom: $baseline;
-	font-style: normal;
 }
 
 cite {
