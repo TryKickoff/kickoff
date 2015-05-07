@@ -10,9 +10,10 @@
 $styleguide-color-primary: $color-primary;
 $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-/* ==========================================================================
-   Styleguide styles
-   ========================================================================== */
+/**
+ * Styleguide styles
+ * Where possible, prefix all classnames with .sg
+ */
 body {
 	background-color: #fff;
 }
@@ -20,22 +21,18 @@ body {
 /**
  * Styleguide type styles
  */
-.interfaceType {
+.sg-interfaceType {
 	font-family: $styleguide-type;
 	font-weight: 300;
 }
 
-.interfaceType--subtle {
+.sg-interfaceType--subtle {
 	color: #888;
 }
 
-.sectionHeading {
-	@extend .interfaceType;
+.sg-sectionHeading {
+	@extend .sg-interfaceType;
 	color: $styleguide-color-primary;
-}
-
-.styleguide-code {
-
 }
 
 
@@ -46,29 +43,24 @@ body {
 /**
  * Styleguide .page styles
  */
-.page {
+.sg-page {
 	overflow: hidden;
 	padding: 8% 0;
 }
 
-.page--start {
+.sg-page--start {
 	background-color: $styleguide-color-primary;
 	padding: 15% 0;
 	color: #fff;
 }
 
-.l-container {
-	// padding: 30px;
-	// background-color: #fff;
-}
+// .g-row + .g-row {
+// 	margin-top: 30px;
+// }
 
-.g-row + .g-row {
-	margin-top: 30px;
-}
-
-.g-span12 + .g-span12 {
-	margin-top: 30px;
-}
+// .g-span12 + .g-span12 {
+// 	margin-top: 30px;
+// }
 
 .well {
 	min-height: 90px;
@@ -87,11 +79,11 @@ body {
  * Masthead
  */
 
-.masthead, .footer {
-	background-color: slategray;
+.footer {
+	background-color: #181830;
 	color: #fff;
 	padding: 30px;
-	margin: 0 -30px 30px;
+	// margin: 0 -30px 30px;
 
 	h1 {
 		margin-bottom: .2em;
@@ -133,18 +125,13 @@ body {
 /**
  * Colour swatches
  */
-.swatch {
-	// text-align: center;
-	margin-bottom: 30px;
-
-	code {
-		border: 1px solid #ddd;
-		background-color: #F9F8F8;
-		@include font-size(11);
-	}
+.sg-swatch {
+	text-align: center;
+	line-height: 30px;
+	margin-bottom: 10px;
 }
 
-.swatch-color {
+.sg-swatch-color {
 	height: 60px;
 	padding: 15px;
 	margin-bottom: 5px;
@@ -155,7 +142,7 @@ body {
 @mixin swatch($color) {
 	color: $color;
 
-	.swatch-color {
+	.sg-swatch-color {
 		background-color: $color;
 
 		@if lightness($color) < 60 {
@@ -171,32 +158,84 @@ body {
 	}
 }
 
-.color-text {
-	@include swatch($color-text);
-}
-.color-background {
-	@include swatch($color-bg);
-}
-.color-link {
-	@include swatch($color-link-default);
-}
-.color-link-hover {
+.sg-color-link-hover {
 	@include swatch($color-link-hover);
 }
-.color-primary {
+.sg-color-primary {
 	@include swatch($color-primary);
 }
-.color-secondary {
+.sg-color-secondary {
 	@include swatch($color-secondary);
 }
-.color-highlight {
+.sg-color-highlight {
 	@include swatch($color-highlight);
+}
+.sg-color-text {
+	@include swatch($color-text);
+}
+.sg-color-background {
+	@include swatch($color-bg);
+}
+.sg-color-border {
+	@include swatch($color-border);
+}
+.sg-color-link {
+	@include swatch($color-link-default);
 }
 
 
 /**
  * Typography
  */
+.sg-type {
+	margin-bottom: 1em;
+}
+code {
+	border: 1px solid #ddd;
+	background-color: #F9F8F8;
+	@include font-size(11);
+}
+
+@mixin sgTypeTest($size) {
+	.sg-type-item {
+		@include font-size($size);
+	}
+
+	code {
+			&:after { content: ' :: #{$size}px'; }
+	}
+}
+
+
+.sg-type-micro {
+	@include sgTypeTest($type-micro);
+}
+.sg-type-smallest {
+	@include sgTypeTest($type-smallest);
+}
+.sg-type-smaller {
+	@include sgTypeTest($type-smaller);
+}
+.sg-type-small {
+	@include sgTypeTest($type-small);
+}
+.sg-type-base {
+	@include sgTypeTest($type-base);
+}
+.sg-type-large {
+	@include sgTypeTest($type-large);
+}
+.sg-type-larger {
+	@include sgTypeTest($type-larger);
+}
+.sg-type-largest {
+	@include sgTypeTest($type-largest);
+}
+.sg-type-jumbo {
+	@include sgTypeTest($type-jumbo);
+}
+
+
 .typography {
 	.info {
 		p {
@@ -225,7 +264,7 @@ body {
 	}
 }
 
-.typeSpecimen {
+.sg-typeSpecimen {
 	margin-bottom: 0;
 	margin-top: 0;
 	-ms-word-wrap: break-word;
@@ -245,23 +284,35 @@ body {
 // h1.typeSpecimen:after { content: "Font stack: #{$font-family-headings}"; }
 // p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
 
-.typeSpecimen--heading {
+.sg-typeSpecimen--primary {
 	@include font-size(30);
 	font-family: $font-family-headings;
 	font-weight: $font-weight-headings;
 
 }
 
-.typeSpecimen--body {
+.sg-typeSpecimen--secondary {
 	@include font-size(30);
 	font-family: $font-family-base;
 }
 
-.typeSpecimen--giant {
+.sg-typeSpecimen--giant {
 	@include font-size(120);
 	line-height: 1;
 }
 
+
+/**
+ * Icons
+ */
+.icon-sg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
 
 /**
  * Starter page
