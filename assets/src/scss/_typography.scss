@@ -114,13 +114,14 @@ h4, .h4, .delta {
 	@include font-size($type-base);
 }
 
-// h5, .h5, .epsilon {
-// }
+h5, .h5, .epsilon {
+}
 
 h6, .h6, .zeta {
 	text-transform: uppercase;
 }
 
+// Only give these headings a margin-top if they are after other elements
 * + h1, * + .h1, * + .alpha,
 * + h2, * + .h2, * + .beta,
 * + h3, * + .h3, * + .gamma,
