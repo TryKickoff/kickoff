@@ -227,72 +227,39 @@
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Form elements</h2>
 
-				<form action="#" class="form">
+				<form action="#" class="form form--horizontal">
 					<fieldset class="form-fieldset">
-						<legend class="form-legend">Form label</legend>
-
-						<div class="g-row">
-							<div class="form-controlGroup g-col g-span4">
-								<label for="text" class="form-label">Text</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="text" id="text" placeholder="Joe Bloggs" class="form-input" required/>
-								</div>
-							</div>
-							<div class="form-controlGroup g-col g-span4">
-								<label for="email" class="form-label">Email</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="email" id="email" placeholder="joe@bloggs.com" class="form-input" required/>
-								</div>
-							</div>
-							<div class="form-controlGroup g-col g-span4">
-								<label for="password" class="form-label">Password</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="password" id="password" placeholder="Your password" class="form-input" />
-								</div>
+						<div class="form-controlGroup">
+							<label for="text" class="form-label">Text</label>
+							<div class="form-controlGroup-inputWrapper">
+								<input type="text" id="text" placeholder="Joe Bloggs" class="form-input" required/>
 							</div>
 						</div>
-
-						<div class="g-row">
-							<div class="form-controlGroup g-col g-span4 form-controlGroup--success">
-								<label for="text" class="form-label">Text (Success)</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="text" id="text" placeholder="Joe Bloggs" class="form-input" value="A value" required/>
-								</div>
-							</div>
-							<div class="form-controlGroup g-col g-span4 form-controlGroup--error">
-								<label for="email" class="form-label">Email (Error)</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="email" id="email" placeholder="joe@bloggs.com" class="form-input" value="A value" required/>
-								</div>
-							</div>
-							<div class="form-controlGroup g-col g-span4 form-controlGroup--warning">
-								<label for="password" class="form-label">Password (Warning)</label>
-								<div class="form-controlGroup-inputWrapper">
-									<input type="password" id="password" placeholder="Your password" class="form-input" value="A value" />
-								</div>
-							</div>
-						</div>
-
 						<div class="form-controlGroup">
 							<label for="comments" class="form-label">Textarea</label>
 							<div class="form-controlGroup-inputWrapper">
 								<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
 							</div>
 						</div>
+						<div class="form-controlGroup">
+							<label for="choice" class="form-label">Choice</label>
+							<div class="form-controlGroup-inputWrapper">
+								<select id="choice" class="form-input form-input--select">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+									<option>Option 4</option>
+									<option>Option 5</option>
+								</select>
+							</div>
+						</div>
+
 						<div class="g-row">
 							<div class="form-controlGroup g-span6 g-col">
 								<label for="comments" class="form-label">Checkboxes</label>
 								<div class="form-controlGroup-inputWrapper">
 									<label class="control">
 										<input type="checkbox" value="check1">
-										This is a checkbox
-									</label>
-									<label class="control">
-										<input type="checkbox" value="check2">
-										This is a checkbox
-									</label>
-									<label class="control">
-										<input type="checkbox" value="check3" disabled>
 										This is a checkbox
 									</label>
 									<label class="control control--custom control--checkbox">
@@ -310,14 +277,6 @@
 										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
 										This is a radio
 									</label>
-									<label class="control">
-										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-										This is another radio
-									</label>
-									<label class="control">
-										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option3" disabled>
-										This is another radio
-									</label>
 									<label class="control control--custom control--radio">
 										<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
 										<span class="control-indicator"></span>
@@ -326,36 +285,53 @@
 								</div>
 							</div>
 						</div>
+					</fieldset>
 
-						<div class="g-row">
-							<div class="form-controlGroup g-col g-span6">
-								<label for="choice" class="form-label">Choice</label>
-								<div class="form-controlGroup-inputWrapper">
-									<select id="choice" class="form-input form-input--select">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
+					<h3 class="sg-interfaceType sg-interfaceType--subtle">Validation information</h3>
+					<fieldset class="form-fieldset">
+						<div class="form-controlGroup has-success">
+							<label for="text" class="form-label">Input with success</label>
+							<div class="form-controlGroup-inputWrapper">
+								<input type="text" id="text" class="form-input" value="A value"/>
+								<div class="form-message">
+									Yay!
 								</div>
 							</div>
-							<div class="form-controlGroup g-col g-span6">
-								<label for="choice" class="form-label">Choice (mulitple)</label>
-								<div class="form-controlGroup-inputWrapper">
-									<select id="choicemulitple" multiple class="form-input form-input--select">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
+						</div>
+						<div class="form-controlGroup has-error">
+							<label for="text" class="form-label">Input with error</label>
+							<div class="form-controlGroup-inputWrapper">
+								<input type="text" id="text" class="form-input" value="A value"/>
+								<div class="form-message">
+									Please correct the error
+								</div>
+							</div>
+						</div>
+						<div class="form-controlGroup has-warning">
+							<label for="text" class="form-label">Input with warning</label>
+							<div class="form-controlGroup-inputWrapper">
+								<input type="text" id="text" class="form-input" value="A value"/>
+								<div class="form-message">
+									Something may have gone wrong
+								</div>
+							</div>
+						</div>
+						<div class="form-controlGroup has-info">
+							<label for="text" class="form-label">Input with info</label>
+							<div class="form-controlGroup-inputWrapper">
+								<input type="text" id="text" class="form-input" value="A value"/>
+								<div class="form-message">
+									Username is taken
 								</div>
 							</div>
 						</div>
 					</fieldset>
 
 					<div class="form-actions text_centre">
+						<div class="form-message has-warning is-hidden">
+							Some fields need attention
+						</div>
+
 						<input type="submit" value="Submit" class="btn btn--primary" />
 						<input type="reset" class="btn" value="Cancel" />
 					</div>
@@ -392,12 +368,12 @@
 						<code>.icon-social-facebook</code>
 					</li>
 					<li>
-						<div class="icon-sg icon-social-email"></div>
-						<code>.icon-social-email</code>
-					</li>
-					<li>
 						<div class="icon-sg icon-social-youtube"></div>
 						<code>.icon-social-youtube</code>
+					</li>
+					<li>
+						<div class="icon-sg icon-email"></div>
+						<code>.icon-email</code>
 					</li>
 				</ul>
 
