@@ -53,6 +53,8 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'clean:tempCSS',
 		'copy:modernizr',
+		'icons',
+		'imagemin:images',
 		'browserSync:serve',
 		'watch'
 	]);
@@ -78,7 +80,9 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
-		'copy:modernizr'
+		'copy:modernizr',
+		'icons',
+		'imagemin:images',
 	]);
 
 
@@ -94,7 +98,9 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'csso',
 		'clean:tempCSS',
-		'copy:modernizr'
+		'copy:modernizr',
+		'icons',
+		'imagemin:images'
 	]);
 
 
@@ -109,6 +115,8 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
+		'icons',
+		'imagemin:images',
 		'browserSync:styleguide',
 		'watch'
 	]);
