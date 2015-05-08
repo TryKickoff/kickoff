@@ -108,3 +108,8 @@ textarea[contenteditable] {
   */
   backface-visibility: hidden;
 }
+
+// Add the default transition to any element
+.transition {
+	transition: $default-transition;
+}
