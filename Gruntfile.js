@@ -53,6 +53,8 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'clean:tempCSS',
 		'copy:modernizr',
+		'icons',
+		'imagemin:images',
 		'browserSync:serve',
 		'watch'
 	]);
