@@ -6,13 +6,7 @@
  * - Base button styling
  * – Button Modifiers
  * 	 – btn--primary
- *   – btn--large
- *   – btn--small
- *   – btn--pill
  *   – btn--block
- *   – btn--natural
- *   – btn--link
- *   – btn--close
  */
 
 
@@ -120,35 +114,6 @@ $btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
 	}
 }
 
-// Button Modifiers
-// --------------------------------------------------
-// These all follow the same sizing rules as above; text is 1em, space around it
-// Large
-.btn--large {
-	@include font-size($type-large);
-	line-height: 3;
-	height: 3em;
-	padding-right: 2em;
-	padding-left: 2em;
-	border-radius: 6px;
-}
-
-// Small
-.btn--small {
-	@include font-size($type-small);
-	line-height: 1.5;
-	height: 1.5em;
-	padding-right: .75em;
-	padding-left: .75em;
-	border-radius: 3px;
-}
-
-.btn--pill {
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	border-radius: 100em;
-}
-
 // Block button
 // -------------------------
 .btn--block {
@@ -172,14 +137,4 @@ input[type="button"] {
 	&.btn--block {
 		width: 100%;
 	}
-}
-
-// Make the button inherit sizing from its parent.
-.btn--natural {
-	vertical-align: baseline;
-	font-size: inherit;
-	line-height: inherit;
-	height: auto;
-	padding-right: .5em;
-	padding-left: .5em;
 }
