@@ -139,7 +139,8 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('checks', [
 		'jshint:project',
-		'scsslint'
+		'scsslint',
+		'validation'
 	]);
 
 
