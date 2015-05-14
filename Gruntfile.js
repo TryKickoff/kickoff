@@ -105,8 +105,7 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * GRUNT STYLEGUIDE * A task for the styleguide
-	 * run uglify, sass, autoprefixer, browserSync:styleguide & watch
+	 * GRUNT STYLEGUIDE * A task to view the styleguide
 	 */
 	grunt.registerTask('styleguide', [
 		'shimly',

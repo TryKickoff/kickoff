@@ -37,13 +37,9 @@ module.exports.tasks = {
 
 		grunticon : {
 			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: [
-				'clean:icons',
-				'imagemin:grunticon',
-				'grunticon'
-			],
+			tasks: ['icons'],
 			options: {
-				interrupt: true,
+				interrupt: true
 			}
 		},
 

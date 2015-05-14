@@ -54,36 +54,11 @@ body {
 	color: #fff;
 }
 
-// .g-row + .g-row {
-// 	margin-top: 30px;
-// }
-
-// .g-span12 + .g-span12 {
-// 	margin-top: 30px;
-// }
-
-.well {
-	min-height: 90px;
-	padding: 30px;
-	background-color: #dbdbdb;
-	margin: 30px -30px 50px;
-	color: #333;
-}
-
-.well--inner {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-/**
- * Masthead
- */
-
-.footer {
+.sg-footer {
 	background-color: #181830;
 	color: #fff;
 	padding: 30px;
-	// margin: 0 -30px 30px;
+	margin-top: 30px;
 
 	h1 {
 		margin-bottom: .2em;
@@ -103,23 +78,6 @@ body {
 	}
 }
 
-.footer {
-	margin-top: 30px;
-	margin-bottom: -30px;
-}
-
-.docsNav {
-	margin-bottom: 1em;
-
-	li {
-		margin-right: 1em;
-	}
-
-	.is-active {
-		// font-weight: bold;
-		border-bottom: 2px solid #fff;
-	}
-}
 
 
 /**
@@ -128,7 +86,7 @@ body {
 .sg-swatch {
 	text-align: center;
 	line-height: 30px;
-	margin-bottom: 10px;
+	margin: 10px 10px 0;
 }
 
 .sg-swatch-color {
@@ -148,6 +106,10 @@ body {
 			color: #fff;
 		} @else {
 			color: #444;
+		}
+
+		@if lightness($color) > 90 {
+			border: #f1f1f1 solid 1px;
 		}
 
 		&:before {
@@ -234,35 +196,6 @@ code {
 	@include sgTypeTest($type-jumbo);
 }
 
-
-.typography {
-	.info {
-		p {
-			-ms-word-wrap: break-word;
-			word-wrap: break-word;
-		}
-	}
-
-	.example {
-		margin: 1em 0;
-
-		// h1:after { content: ' - #{$type-largest}px'; }
-		// h2:after { content: ' - #{$type-larger}px'; }
-		// h3:after { content: ' - #{$type-large}px'; }
-		// h4:after { content: ' - #{$type-base}px'; }
-		// h5:after { content: ' - #{$type-small}px'; }
-		// h6:after { content: ' - #{$type-small}px'; }
-
-		h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
-			text-transform: lowercase;
-		}
-
-		.interfaceType:after {
-			content: "";
-		}
-	}
-}
-
 .sg-typeSpecimen {
 	margin-bottom: 0;
 	margin-top: 0;
@@ -319,25 +252,5 @@ code {
 	img {
 		vertical-align: middle;
 		margin-right: 15px;
-	}
-}
-
-
-/**
- * Starter page
- */
-.checklistInfo {
-	margin-bottom: 15px;
-	margin-left: 30px;
-	font-size: $font-size-base-px - 3;
-
-	li {
-		margin-bottom: .2em;
-	}
-
-	code,
-	pre {
-		@include font-size(14);
-		background-color: #cacaca; /* alpha: 1 */
 	}
 }
