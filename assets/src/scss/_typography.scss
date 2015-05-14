@@ -76,6 +76,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $font-weight-headings;
 	line-height: $line-height-headings;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	margin-top: 0;
+	margin-bottom: $baseline;
 
 	small {
 		font-weight: normal;
@@ -86,40 +88,33 @@ h1, h2, h3, h4, h5, h6 {
 // For example: h3.h1 or h3.alpha
 h1, .h1, .alpha {
 	@include font-size($type-largest);
-	margin-top: 0;
 	margin-bottom: $baseline * 2;
 }
 
 h2, .h2, .beta {
 	@include font-size($type-larger);
-	margin-top: 0;
-	margin-bottom: $baseline;
 }
 
 h3, .h3, .gamma {
 	@include font-size($type-large);
-	margin-top: 0;
-	margin-bottom: $baseline;
-}
-
-h4, .h4, .delta,
-h5, .h5, .epsilon,
-h6, .h6, .zeta {
-	margin-top: 0;
-	margin-bottom: 0;
-	@include font-size($type-small);
 }
 
 h4, .h4, .delta {
 	@include font-size($type-base);
 }
 
-h5, .h5, .epsilon {
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+	@include font-size($type-small);
+	margin-bottom: 0;
 }
 
-h6, .h6, .zeta {
-	text-transform: uppercase;
-}
+
+// h5, .h5, .epsilon {
+// }
+
+// h6, .h6, .zeta {
+// }
 
 // Only give these headings a margin-top if they are after other elements
 * + h1, * + .h1, * + .alpha,
