@@ -77,6 +77,8 @@ module.exports = {
 			urls : [
 				'http://localhost:3000'
 			]
-		}
+		},
+
+		validationDir  : './testing',  // <%=config.tests.validationDir%>
 	}
 };

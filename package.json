@@ -45,6 +45,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-csso": "^0.7.1",
     "grunt-grunticon": "^2.1.6",
+    "grunt-html-validation": "^0.1.18",
     "grunt-newer": "^1.1.0",
     "grunt-photobox": "^0.8.1",
     "grunt-sass": "^1.0.0",

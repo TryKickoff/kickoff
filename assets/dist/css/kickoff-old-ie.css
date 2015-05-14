@@ -195,7 +195,8 @@ audio:not([controls]) {
   display: none;
   height: 0; }
 
-[hidden], template {
+[hidden],
+template {
   display: none; }
 
 /* ============ */
@@ -216,16 +217,19 @@ a:hover, a:active {
 figure {
   margin: 0; }
 
-button, input {
+button,
+input {
   line-height: normal; }
 
 input[type="search"] {
   -webkit-appearance: textfield; }
 
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -284,7 +288,7 @@ p {
  */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: inherit;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   line-height: 1.1;
   text-rendering: optimizelegibility; }
@@ -293,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1, .alpha {
   font-size: 39.0625px;
-  font-size: 1.95312rem;
+  font-size: 1.953125rem;
   margin-top: 0;
   margin-bottom: 56px; }
 
@@ -309,7 +313,9 @@ h3, .h3, .gamma {
   margin-top: 0;
   margin-bottom: 28px; }
 
-h4, .h4, .delta, h5, .h5, .epsilon, h6, .h6, .zeta {
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -322,7 +328,10 @@ h4, .h4, .delta {
 h6, .h6, .zeta {
   text-transform: uppercase; }
 
-* + h1, * + .h1, * + .alpha, * + h2, * + .h2, * + .beta, * + h3, * + .h3, * + .gamma, * + h4, * + .h4, * + .delta {
+* + h1, * + .h1, * + .alpha,
+* + h2, * + .h2, * + .beta,
+* + h3, * + .h3, * + .gamma,
+* + h4, * + .h4, * + .delta {
   margin-top: 28px; }
 
 small {
@@ -332,15 +341,18 @@ small {
  * Links
  */
 a, a:link {
-  color: #3498db;
+  color: #16c98d;
   text-decoration: none; }
+
 a:visited {
-  color: #3498db;
+  color: #16c98d;
   text-decoration: none; }
+
 a:hover, a:focus {
-  color: #196090; }
+  color: #0c6d4d; }
+
 a:active {
-  color: #196090; }
+  color: #0c6d4d; }
 
 /**
  * Lists
@@ -354,7 +366,9 @@ ol {
 ul, ol {
   padding: 0;
   margin: 0 0 28px 28px; }
-  ul ul, ul ol, ol ul, ol ol {
+  ul ul,
+  ul ol, ol ul,
+  ol ol {
     margin-left: 56px; }
   ul ul, ol ul {
     list-style-type: circle; }
@@ -370,7 +384,7 @@ ul, ol {
 /**
  * Unstyled lists
  */
-.unstyled, .tabs, .l-tabsContent, nav ul, nav ol {
+.unstyled, .tabs, .l-tabsContent {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -387,21 +401,6 @@ dt {
 
 dd {
   margin-left: 28px; }
-
-.dl-horizontal:after {
-  content: "";
-  display: table;
-  clear: both; }
-.dl-horizontal dt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  float: left;
-  clear: left;
-  width: 220px;
-  text-align: right; }
-.dl-horizontal dd {
-  margin-left: 240px; }
 
 /**
  * Miscellaneous
@@ -440,13 +439,11 @@ blockquote {
     blockquote small:before {
       content: '\2014 \00A0'; }
 
-q:before, q:after, blockquote:before, blockquote:after {
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
   content: ""; }
-
-address {
-  display: block;
-  margin-bottom: 28px;
-  font-style: normal; }
 
 cite {
   font-style: normal; }
@@ -455,7 +452,7 @@ dfn {
   font-style: italic; }
 
 mark {
-  background: #f1c40f;
+  background: #feef6d;
   padding: 2px 4px;
   border-radius: 3px; }
 
@@ -488,12 +485,12 @@ samp {
 
 ::-moz-selection {
   color: #fff;
-  background: #3498db;
+  background: #16c98d;
   text-shadow: none; }
 
 ::selection {
   color: #fff;
-  background: #3498db;
+  background: #16c98d;
   text-shadow: none; }
 
 /**
@@ -521,13 +518,7 @@ samp {
  * - Base button styling
  * – Button Modifiers
  * 	 – btn--primary
- *   – btn--large
- *   – btn--small
- *   – btn--pill
  *   – btn--block
- *   – btn--natural
- *   – btn--link
- *   – btn--close
  */
 /**
  * Define associated Button variables
@@ -586,48 +577,49 @@ samp {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .btn, .tabs a, .btn:link, .tabs a:link, .btn:visited, .tabs a:visited {
+  .btn,
+  .tabs a,
+  .btn:link,
+  .tabs a:link,
+  .btn:visited, .tabs a:visited {
     color: #fff; }
-  .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+  .btn:hover,
+  .tabs a:hover,
+  .btn:active,
+  .tabs a:active,
+  .btn:focus, .tabs a:focus {
     background-color: #798d8f; }
-  .btn, .tabs a, .btn:hover, .tabs a:hover, .btn:active, .tabs a:active, .btn:focus, .tabs a:focus, .btn:visited, .tabs a:visited {
+  .btn,
+  .tabs a,
+  .btn:hover,
+  .tabs a:hover,
+  .btn:active,
+  .tabs a:active,
+  .btn:focus,
+  .tabs a:focus,
+  .btn:visited, .tabs a:visited {
     text-decoration: none; }
-  .btn:active, .tabs a:active, .btn:focus, .tabs a:focus {
+  .btn:active,
+  .tabs a:active,
+  .btn:focus, .tabs a:focus {
     outline: none; }
-  .btn.disabled, .tabs a.disabled, .btn[disabled], .tabs a[disabled] {
+  .btn.disabled,
+  .tabs a.disabled,
+  .btn[disabled], .tabs a[disabled] {
     cursor: default;
     background-image: none;
     opacity: .65; }
 
 .btn--primary {
-  background-color: #3498db; }
-  .btn--primary, .btn--primary:link, .btn--primary:visited {
+  background-color: #16c98d; }
+  .btn--primary,
+  .btn--primary:link,
+  .btn--primary:visited {
     color: #fff; }
-  .btn--primary:hover, .btn--primary:active, .btn--primary:focus {
-    background-color: #217dbb; }
-
-.btn--large {
-  font-size: 25px;
-  font-size: 1.25rem;
-  line-height: 3;
-  height: 3em;
-  padding-right: 2em;
-  padding-left: 2em;
-  border-radius: 6px; }
-
-.btn--small {
-  font-size: 16px;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  height: 1.5em;
-  padding-right: .75em;
-  padding-left: .75em;
-  border-radius: 3px; }
-
-.btn--pill {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  border-radius: 100em; }
+  .btn--primary:hover,
+  .btn--primary:active,
+  .btn--primary:focus {
+    background-color: #119b6d; }
 
 .btn--block {
   display: block;
@@ -637,40 +629,10 @@ samp {
   .btn--block + .btn--block {
     margin-top: 10px; }
 
-input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="button"].btn--block {
+input[type="submit"].btn--block,
+input[type="reset"].btn--block,
+input[type="button"].btn--block {
   width: 100%; }
-
-.btn--natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  height: auto;
-  padding-right: .5em;
-  padding-left: .5em; }
-
-/**
- * Close Button: for lightboxes etc
- */
-.btnClose {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 17px;
-  background: #000;
-  color: #3498db;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  .btnClose:hover {
-    color: #fff;
-    border-radius: 50px; }
 
 /**
  * The Kickoff Grid
@@ -725,7 +687,6 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
       padding: 0; }
 
 .g-col {
-  padding: 10px;
   float: left;
   min-height: 1px;
   position: relative;
@@ -778,16 +739,17 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
 
 /**
 	 * Offset columns
-	 * http://tmwagency.github.io/kickoff/demos/grids.html#offset
+	 * http://trykickoff.github.io/demos/grids.html#offset
 	 */
 /**
 	 * Source ordering (push & pull)
-	 * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
+	 * http://trykickoff.github.io/demos/grids.html#source-ordering
 	 */
 /**
  * Centred columns
  */
-.g-col.g-col--centered, .g-col.g-col--centred {
+.g-col.g-col--centered,
+.g-col.g-col--centred {
   float: none;
   margin: 0 auto; }
 
@@ -814,6 +776,7 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   content: "";
   display: table;
   clear: both; }
+
 .l-list--floated li {
   float: left;
   display: inline-block; }
@@ -835,7 +798,7 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
 /**
  * Generic form styles
  * =================================
- * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+ * Demo: http://trykickoff.github.io/demos/forms.html#layout-example-labels-above
  * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
  * Usage:
   	<div class="form-controlGroup">
@@ -905,13 +868,17 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 5px;
-  -moz-transition: border 200ms ease-in-out;
-       transition: border 200ms ease-in-out; }
+  -webkit-transition: border 200ms ease-in-out;
+     -moz-transition: border 200ms ease-in-out;
+          transition: border 200ms ease-in-out; }
   .form-input:focus {
     border-color: #999999;
     outline: 0;
     outline: thin dotted \9; }
-  .form-input[type="image"], .form-input[type="checkbox"], .form-input[type="radio"], .form-input[type="range"] {
+  .form-input[type="image"],
+  .form-input[type="checkbox"],
+  .form-input[type="radio"],
+  .form-input[type="range"] {
     width: auto;
     height: auto;
     padding: 0;
@@ -942,9 +909,11 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
     font-family: sans-serif; }
   .form-input[type="range"] {
     width: 100%; }
-  .form-input > .radio:first-child, .form-input > .checkbox:first-child {
+  .form-input > .radio:first-child,
+  .form-input > .checkbox:first-child {
     padding-top: 5px; }
-  .form-input[disabled], .form-input[readonly] {
+  .form-input[disabled],
+  .form-input[readonly] {
     background-color: #e6e6e6;
     border-color: #ccc;
     cursor: not-allowed; }
@@ -959,7 +928,8 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
 
 .form-input--select {
   background-color: #fff; }
-  .form-input--select[multiple], .form-input--select[size] {
+  .form-input--select[multiple],
+  .form-input--select[size] {
     height: auto; }
 
 .form-input-file {
@@ -973,7 +943,10 @@ input[type="submit"].btn--block, input[type="reset"].btn--block, input[type="but
   .form-input-file:focus {
     outline: none; }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   width: auto;
   cursor: pointer;
   -webkit-appearance: button; }
@@ -1003,7 +976,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
  */
 .control {
   display: block; }
-  .control input[type="radio"], .control input[type="checkbox"] {
+  .control input[type="radio"],
+  .control input[type="checkbox"] {
     vertical-align: middle;
     margin-right: .5em;
     margin-top: -.1em;
@@ -1039,34 +1013,81 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       margin-right: 0; }
 
 /**
+ * Form validation messages
+ */
+.form-controlGroup .form-message {
+  padding-top: 0.5em;
+  padding-left: 0.5em; }
+
+.form-actions .form-message {
+  padding: 0.5em; }
+
+/**
  * Form field feedback states
  */
-.form-controlGroup--warning .form-label {
-  color: #dab10d; }
-.form-controlGroup--warning .form-input {
-  color: #dab10d;
-  border-color: #dab10d;
-  background-color: #fcf1c6; }
-  .form-controlGroup--warning .form-input:focus {
-    border-color: #aa8a0a; }
+.has-warning {
+  color: #f4aa47; }
 
-.form-controlGroup--error .form-label {
-  color: #e43725; }
-.form-controlGroup--error .form-input {
-  color: #e43725;
-  border-color: #e43725;
-  background-color: #fceae9; }
-  .form-controlGroup--error .form-input:focus {
-    border-color: #bf2718; }
+.form-controlGroup.has-warning .form-label {
+  color: #f4aa47; }
 
-.form-controlGroup--success .form-label {
-  color: #2ecc71; }
-.form-controlGroup--success .form-input {
-  color: #2ecc71;
-  border-color: #2ecc71;
-  background-color: #def8e9; }
-  .form-controlGroup--success .form-input:focus {
-    border-color: #25a25a; }
+.form-controlGroup.has-warning .form-input {
+  color: #f4aa47;
+  border-color: #f4aa47; }
+  .form-controlGroup.has-warning .form-input:focus {
+    border-color: #f19417; }
+
+.form-controlGroup.has-warning .form-controlGroup-message {
+  display: block;
+  color: #f4aa47; }
+
+.has-error {
+  color: #B94A4D; }
+
+.form-controlGroup.has-error .form-label {
+  color: #B94A4D; }
+
+.form-controlGroup.has-error .form-input {
+  color: #B94A4D;
+  border-color: #B94A4D; }
+  .form-controlGroup.has-error .form-input:focus {
+    border-color: #963a3c; }
+
+.form-controlGroup.has-error .form-controlGroup-message {
+  display: block;
+  color: #B94A4D; }
+
+.has-success {
+  color: #16c98d; }
+
+.form-controlGroup.has-success .form-label {
+  color: #16c98d; }
+
+.form-controlGroup.has-success .form-input {
+  color: #16c98d;
+  border-color: #16c98d; }
+  .form-controlGroup.has-success .form-input:focus {
+    border-color: #119b6d; }
+
+.form-controlGroup.has-success .form-controlGroup-message {
+  display: block;
+  color: #16c98d; }
+
+.has-info {
+  color: #288ad6; }
+
+.form-controlGroup.has-info .form-label {
+  color: #288ad6; }
+
+.form-controlGroup.has-info .form-input {
+  color: #288ad6;
+  border-color: #288ad6; }
+  .form-controlGroup.has-info .form-input:focus {
+    border-color: #206eab; }
+
+.form-controlGroup.has-info .form-controlGroup-message {
+  display: block;
+  color: #288ad6; }
 
 /**
  * Placeholder text
@@ -1086,7 +1107,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	 * Horizontal-specific styles
 	 * =================================
 	 * add .form--horizontal to the <form> element
-	 * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+	 * Demo: http://trykickoff.github.io/demos/forms.html#layout-example-labels-inline
 	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
 	 */
 .form--horizontal .form-controlGroup {
@@ -1097,18 +1118,22 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     clear: both; }
   .form--horizontal .form-controlGroup .form-input--fileWrapper {
     margin-left: 0; }
+
 .form--horizontal .form-label {
   float: left;
   width: 140px;
   padding-top: 5px;
   text-align: right; }
+
 .form--horizontal .form-controlGroup-inputWrapper {
   margin-left: 160px; }
   .form--horizontal .form-controlGroup-inputWrapper:first-child {
     padding-left: 160px; }
+
 .form--horizontal .form-helpBlock {
   margin-top: 14px;
   margin-bottom: 0; }
+
 .form--horizontal .form-actions {
   padding-left: 160px; }
 
@@ -1171,7 +1196,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     z-index: -1;
     /* Put the input behind the label so it doesn't overlay text */ }
   .control--custom input:focus ~ .control-indicator {
-    box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em #a3b1b2; }
+    box-shadow: 0 0 0 0.075em #fff, 0 0 0 0.2em #a3b1b2; }
   .control--custom input:checked ~ .control-indicator {
     color: #fff;
     background-color: #a3b1b2; }
@@ -1209,7 +1234,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     top: 0;
     right: -1px;
     bottom: 0;
-    padding: .44em 1em 0;
+    padding: 0.44em 1em 0;
     background-color: #d9d9d9; }
   .form-input--fileWrapper--styled .form-input-file {
     opacity: 0;
@@ -1263,16 +1288,20 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   background: url(#); }
 
 /* This selector targets Firefox only with the trick of making the select 110% but clipped by the container at 100% to hide the arrow. We have to do this because getting rid of select appearance isn't supported consistently */
-.form-input--selectWrapper, x:-moz-any-link, x:default {
+.form-input--selectWrapper,
+x:-moz-any-link,
+x:default {
   overflow: hidden;
   width: 100%; }
 
-.form-input--selectWrapper select, x:-moz-any-link, x:default {
+.form-input--selectWrapper select,
+x:-moz-any-link,
+x:default {
   width: 110%;
   max-width: 110%;
   min-width: 110%;
   /* A zero right padding is needed or the native arrow can show up. Downside is the text will run over the arrow */
-  padding: .6em 0 .5em .8em;
+  padding: 0.6em 0 0.5em 0.8em;
   /* Window is a Firefox way of hiding the arrow, sometimes works */
   -moz-appearance: window;
   text-indent: .01px;
@@ -1337,14 +1366,18 @@ img, object, embed, video {
   display: table;
   width: 100%; }
 
-.media-img, .media-body {
+.media-img,
+.media-body {
   display: table-cell;
   vertical-align: middle; }
-  .media--top .media-img, .media--top .media-body {
+  .media--top .media-img,
+  .media--top .media-body {
     vertical-align: top; }
-  .media--bottom .media-img, .media--bottom .media-body {
+  .media--bottom .media-img,
+  .media--bottom .media-body {
     vertical-align: bottom; }
-  .media-img :last-child, .media-body :last-child {
+  .media-img :last-child,
+  .media-body :last-child {
     margin-bottom: 0; }
 
 .media-body {
@@ -1401,8 +1434,7 @@ img, object, embed, video {
     clear: both; }
   .l-blockGrid > li {
     display: block;
-    height: auto;
-    padding: 10px; }
+    height: auto; }
   .l-blockGrid > li {
     display: block;
     height: auto;
@@ -1461,16 +1493,18 @@ img, object, embed, video {
 	========================================================================== */
 .tabs {
   margin-bottom: 28px;
-  border-bottom: 2px solid #2ecc71; }
+  border-bottom: 2px solid #16c98d; }
   .tabs:after {
     content: "";
     display: table;
     clear: both; }
   .tabs.tabs--alignRight li {
     float: right; }
-  .tabs.tabs--alignCentre, .tabs.tabs--alignCenter {
+  .tabs.tabs--alignCentre,
+  .tabs.tabs--alignCenter {
     text-align: center; }
-    .tabs.tabs--alignCentre > li, .tabs.tabs--alignCenter > li {
+    .tabs.tabs--alignCentre > li,
+    .tabs.tabs--alignCenter > li {
       display: inline;
       float: none; }
   .tabs > li {
@@ -1481,7 +1515,7 @@ img, object, embed, video {
     border-radius: 4px 4px 0 0;
     color: #fff; }
     .tabs a.is-active {
-      background-color: #2ecc71; }
+      background-color: #16c98d; }
 
 .l-tabsContent > li {
   display: none; }
@@ -1514,17 +1548,28 @@ img, object, embed, video {
   margin-bottom: 28px;
   border-spacing: 0;
   background-color: #f1f1f1; }
-  .table > thead > th, .table > thead > td, .table > tbody > th, .table > tbody > td, .table > tfoot > th, .table > tfoot > td {
+  .table > thead > th,
+  .table > thead > td,
+  .table > tbody > th,
+  .table > tbody > td,
+  .table > tfoot > th,
+  .table > tfoot > td {
     padding: 8px;
     line-height: 28px;
     vertical-align: top;
     border-top: 1px solid #ddd; }
-  .table > thead th, .table > thead td {
+  .table > thead th,
+  .table > thead td {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd; }
   .table > tfoot td {
     border-top: 3px solid #ddd; }
-  .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > th,
+  .table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
@@ -1534,7 +1579,12 @@ img, object, embed, video {
 th {
   text-align: left; }
 
-.table--condensed > thead th, .table--condensed > thead td, .table--condensed > tbody th, .table--condensed > tbody td, .table--condensed > tfoot th, .table--condensed > tfoot td {
+.table--condensed > thead th,
+.table--condensed > thead td,
+.table--condensed > tbody th,
+.table--condensed > tbody td,
+.table--condensed > tfoot th,
+.table--condensed > tfoot td {
   padding: 5px; }
 
 /**
@@ -1543,15 +1593,32 @@ th {
  */
 .table--bordered {
   border: 2px solid #ddd; }
-  .table--bordered > thead th, .table--bordered > thead td, .table--bordered > tbody th, .table--bordered > tbody td, .table--bordered > tfoot th, .table--bordered > tfoot td {
+  .table--bordered > thead th,
+  .table--bordered > thead td,
+  .table--bordered > tbody th,
+  .table--bordered > tbody td,
+  .table--bordered > tfoot th,
+  .table--bordered > tfoot td {
     border: 1px solid #ddd; }
-  .table--bordered > thead th:first-child, .table--bordered > thead td:first-child, .table--bordered > tbody th:first-child, .table--bordered > tbody td:first-child, .table--bordered > tfoot th:first-child, .table--bordered > tfoot td:first-child {
+  .table--bordered > thead th:first-child,
+  .table--bordered > thead td:first-child,
+  .table--bordered > tbody th:first-child,
+  .table--bordered > tbody td:first-child,
+  .table--bordered > tfoot th:first-child,
+  .table--bordered > tfoot td:first-child {
     border-left: 0; }
-  .table--bordered > thead th:last-child, .table--bordered > thead td:last-child, .table--bordered > tbody th:last-child, .table--bordered > tbody td:last-child, .table--bordered > tfoot th:last-child, .table--bordered > tfoot td:last-child {
+  .table--bordered > thead th:last-child,
+  .table--bordered > thead td:last-child,
+  .table--bordered > tbody th:last-child,
+  .table--bordered > tbody td:last-child,
+  .table--bordered > tfoot th:last-child,
+  .table--bordered > tfoot td:last-child {
     border-right: 0; }
-  .table--bordered > thead th, .table--bordered > thead td {
+  .table--bordered > thead th,
+  .table--bordered > thead td {
     border-bottom-width: 2px; }
-  .table--bordered > tfoot th, .table--bordered > tfoot td {
+  .table--bordered > tfoot th,
+  .table--bordered > tfoot td {
     border-top-width: 2px;
     border-bottom: 0; }
 
@@ -1560,18 +1627,22 @@ th {
  */
 .table--rounded {
   border-radius: 10px; }
-  .table--rounded.table--bordered th:first-child, .table--rounded.table--bordered td:first-child {
+  .table--rounded.table--bordered th:first-child,
+  .table--rounded.table--bordered td:first-child {
     border-left: 0; }
-  .table--rounded.table--bordered th:last-child, .table--rounded.table--bordered td:last-child {
+  .table--rounded.table--bordered th:last-child,
+  .table--rounded.table--bordered td:last-child {
     border-right: 0; }
-  .table--rounded.table--bordered > tfoot th, .table--rounded.table--bordered > tfoot td {
+  .table--rounded.table--bordered > tfoot th,
+  .table--rounded.table--bordered > tfoot td {
     border-bottom: 0; }
 
 /**
  * Zebra-striping
  * Default zebra-stripe styles (alternating gray and transparent backgrounds)
  */
-.table--striped tbody :nth-child(odd) th, .table--striped tbody :nth-child(odd) td {
+.table--striped tbody :nth-child(odd) th,
+.table--striped tbody :nth-child(odd) td {
   background-color: #f9f9f9 !important; }
 
 /**
@@ -1594,7 +1665,8 @@ th {
 /**
  * Define associated Code variables
  */
-code, pre {
+code,
+pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 16px;
@@ -1640,8 +1712,9 @@ pre {
     top: -100px;
     z-index: 100;
     background-color: #fff;
-    -moz-transition: all 100ms ease-in-out;
-         transition: all 100ms ease-in-out; }
+    -webkit-transition: all 100ms ease-in-out;
+       -moz-transition: all 100ms ease-in-out;
+            transition: all 100ms ease-in-out; }
     .skipToContent a:focus {
       top: 5px; }
 
@@ -1655,8 +1728,7 @@ pre {
 
 ::-webkit-scrollbar-thumb {
   background: #8b8b8b;
-  cursor: pointer;
-  border-radius: 5px; }
+  cursor: pointer; }
 
 /**
  * Your app styles
@@ -1687,7 +1759,9 @@ body {
    Icons
    ========================================================================== */
 [class^="icon-"], [class*=" icon-"] {
-  speak: none; }
+  speak: none;
+  background-size: contain;
+  background-position: center center; }
 
 .icon-large {
   display: block;
@@ -1750,7 +1824,8 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
-  .is-visuallyHidden.focusable:active, .is-visuallyHidden.focusable:focus {
+  .is-visuallyHidden.focusable:active,
+  .is-visuallyHidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -1781,7 +1856,7 @@ body {
  * Responsive Utilities
  */
 * {
-  -webkit-tap-highlight-color: #3498db !important; }
+  -webkit-tap-highlight-color: #16c98d !important; }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
 textarea[contenteditable] {
@@ -1799,6 +1874,11 @@ textarea[contenteditable] {
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;
           backface-visibility: hidden; }
+
+.transition {
+  -webkit-transition: all 100ms ease-in-out;
+     -moz-transition: all 100ms ease-in-out;
+          transition: all 100ms ease-in-out; }
 
 /**
  * Print styles
@@ -1822,21 +1902,24 @@ textarea[contenteditable] {
   /*
 	 * Don't show links for images, or javascript/internal links
 	 */
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: ""; }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
   @page {
     margin: .5cm; }
-
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
