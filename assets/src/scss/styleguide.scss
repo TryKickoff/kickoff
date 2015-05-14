@@ -108,6 +108,10 @@ body {
 			color: #444;
 		}
 
+		@if lightness($color) > 90 {
+			border: #f1f1f1 solid 1px;
+		}
+
 		&:before {
 			content: '#{$color}';
 			display: block;
