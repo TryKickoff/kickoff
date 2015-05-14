@@ -27,6 +27,8 @@ logs
 # Tooling
 # Photobox visual regression testing
 photobox/
+# Generated test files
+testing/
 
 
 # Sublime Text project files
