@@ -29,6 +29,7 @@ module.exports = function (grunt) {
 	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
 	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
 	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
+	 * grunt images     : compress all non-grunticon images & then run `grunt icons`
 	 * grunt icons      : generate the icons. uses svgmin and grunticon
 	 * grunt checks     : run jshint & scsslint
 	 * grunt travis     : used by travis ci only
@@ -53,8 +54,7 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'clean:tempCSS',
 		'copy:modernizr',
-		'icons',
-		'imagemin:images',
+		'images',
 		'browserSync:serve',
 		'watch'
 	]);
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'clean:tempCSS',
 		'copy:modernizr',
-		'icons',
+		'images',
 		'imagemin:images',
 	]);
 
@@ -99,8 +99,7 @@ module.exports = function (grunt) {
 		'csso',
 		'clean:tempCSS',
 		'copy:modernizr',
-		'icons',
-		'imagemin:images'
+		'images'
 	]);
 
 
@@ -114,16 +113,23 @@ module.exports = function (grunt) {
 		'sass',
 		'autoprefixer',
 		'clean:tempCSS',
-		'icons',
-		'imagemin:images',
+		'images',
 		'browserSync:styleguide',
 		'watch'
 	]);
 
 
 	/**
+	 * GRUNT IMAGES * A task to compress all non-grunticon images
+	 */
+	grunt.registerTask('images', [
+		'imagemin:images',
+		'icons'
+	]);
+
+
+	/**
 	 * GRUNT ICONS * A task to create all icons using grunticon
-	 * run clean, svgmin and grunticon
 	 */
 	grunt.registerTask('icons', [
 		'clean:icons',
