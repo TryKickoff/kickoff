@@ -48,10 +48,8 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('serve', [
 		'shimly',
-		'chotto:js',
-		'uglify',
-		'sass',
-		'autoprefixer',
+		'compileJS',
+		'compileCSS',
 		'clean:tempCSS',
 		'copy:modernizr',
 		'images',
@@ -75,14 +73,11 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('dev', [
 		'shimly',
-		'chotto:js',
-		'uglify',
-		'sass',
-		'autoprefixer',
+		'compileJS',
+		'compileCSS',
 		'clean:tempCSS',
 		'copy:modernizr',
-		'icons',
-		'imagemin:images'
+		'images'
 	]);
 
 
@@ -92,10 +87,8 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('deploy', [
 		'shimly',
-		'chotto:js',
-		'uglify',
-		'sass',
-		'autoprefixer',
+		'compileJS',
+		'compileCSS',
 		'csso',
 		'clean:tempCSS',
 		'copy:modernizr',
@@ -108,10 +101,8 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('styleguide', [
 		'shimly',
-		'chotto:js',
-		'uglify',
-		'sass',
-		'autoprefixer',
+		'compileJS',
+		'compileCSS',
 		'clean:tempCSS',
 		'images',
 		'browserSync:styleguide',
@@ -158,4 +149,18 @@ module.exports = function (grunt) {
 		'sass:kickoff'
 	]);
 
+	/**
+	 * Utility classes
+	 */
+	// Compile JS
+	grunt.registerTask('compileJS', [
+		'chotto:js',
+		'uglify',
+	]);
+
+	// Compile CSS
+	grunt.registerTask('compileCSS', [
+		'sass',
+		'autoprefixer'
+	]);
 };

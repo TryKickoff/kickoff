@@ -9,8 +9,7 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'sass',
-				'autoprefixer',
+				'compileCSS',
 				'clean:tempCSS'
 			],
 			options: {
