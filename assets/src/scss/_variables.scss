@@ -4,8 +4,8 @@
  * Typography
  * Breakpoints
  * Paths
- * Grid setup
- * Components
+ * Layout & Grid
+ * App-specific
  */
 
 /**
@@ -73,7 +73,7 @@ $bp-rwd-text          : $bp-mid; // Reduce text size below this width
 /**
  * Path vars
  */
-$img-path                     : "/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$img-path                     : "/assets/dist/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 
 
 /**
