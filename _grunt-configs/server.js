@@ -10,7 +10,7 @@ module.exports.tasks = {
 			bsFiles: {
 				src: [
 					'<%=config.distDir%>/**/*.*',
-					'*.html'
+					'**/*.html'
 				]
 			},
 			options: {
