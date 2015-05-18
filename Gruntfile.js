@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 
 	/**
 	 * Available tasks:
-	 * grunt            : Alias for 'serve' task, below
+	 * grunt            : Alias for 'serve' task, below (the default task)
 	 * grunt serve      : watch js, images & scss and run a local server
 	 * grunt start      : Opens the post-install setup checklist on the Kickoff site
 	 * grunt watch      : run sass:kickoff, uglify and livereload
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
 	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
 	 * grunt icons      : generate the icons. uses svgmin and grunticon
-	 * grunt checks     : run jshint & scsslint
+	 * grunt checks     : run jshint, scsslint and html validator
 	 * grunt travis     : used by travis ci only
 	 */
 
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
 	 * GRUNT START
 	 * Opens the post-install setup checklist on the Kickoff site
 	 */
-	grunt.registerTask('start', function(){
+	grunt.registerTask('start', function() {
 		opn('http://trykickoff.github.io/learn/checklist.html');
 	});
 
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 		'clean:tempCSS',
 		'copy:modernizr',
 		'icons',
-		'imagemin:images',
+		'imagemin:images'
 	]);
 
 

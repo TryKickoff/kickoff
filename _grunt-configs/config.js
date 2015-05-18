@@ -18,7 +18,7 @@ module.exports = {
 
 		// Renaming this changes the name of the generated CSS file
 		// Make sure you update your template file
-		distFile : 'kickoff', // <%=config.css.srcFile%>
+		distFile : 'kickoff', // <%=config.css.distFile%>
 
 		// We are supporting the last 2 browsers, any browsers with >5% market share,
 		// and ensuring we support IE8+ with prefixes

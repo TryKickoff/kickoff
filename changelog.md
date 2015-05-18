@@ -21,6 +21,8 @@ This release focuses on improving the UX of the framework. Files are now in more
 * Running `npm run kickoff` now installs all package dependencies, including Grunt if you don't have it, and is a great way to start a Kickoff project
 * Removed 404
 * Removed `./js/helpers.js` as redundant. Have provided [some info](https://github.com/trykickoff/kickoff/tree/master/assets/js/helpers) if you need those files again.
+* Added HTML Validation check to the checks performed when running `grunt checks` task.
+	- This outputs the results of the check to your terminal as well as to a JSON file located at `./testing/validation/validation-results.json`
 
 ## Version 4.1.0 - Libsass
 18/05/2015
