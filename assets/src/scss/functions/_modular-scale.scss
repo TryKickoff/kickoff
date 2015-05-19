@@ -63,5 +63,5 @@ $double-octave    : 4;
     }
   }
 
-  @return $value;
+  @return ceil($value);
 }
