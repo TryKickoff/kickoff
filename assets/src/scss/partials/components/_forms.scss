@@ -116,6 +116,7 @@ $color-info         : $blue;                  // base colour for info input stat
 	background-color: $input-bgColor;
 	border: 2px solid $input-borderColor;
 	border-radius: 5px;
+	background-clip: padding-box;
 
 	transition: border 200ms ease-in-out;
 
@@ -124,7 +125,6 @@ $color-info         : $blue;                  // base colour for info input stat
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
-
 
 	&[type="image"],
 	&[type="checkbox"],
