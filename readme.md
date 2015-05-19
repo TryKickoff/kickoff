@@ -1,4 +1,4 @@
-[![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/tmwagency/kickoff.svg?branch=master)](https://travis-ci.org/tmwagency/kickoff) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/tmwagency/kickoff?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/trykickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/trykickoff/kickoff?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
 # Kickoff
@@ -6,7 +6,7 @@
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
-If you're using Kickoff we'd love to hear about it; please e-mail us at tech@tmw.co.uk
+If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
 
 ### Features
 * Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
@@ -20,10 +20,10 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at tech@tmw
  * SVG Icon generation using [grunticon](https://github.com/filamentgroup/grunticon)
 
 ## Demos and documentation
-Kickoff's demo and documentation site is hosted at [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/).
+Kickoff's demo and documentation site is hosted at [trykickoff.github.io](http://trykickoff.github.io/).
 
 ## Bugs and feature requests
-Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/tmwagency/kickoff/issues/new).
+Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/trykickoff/kickoff/issues/new).
 
 ### Browser Compatibility
 Kickoff has been tested in the following browsers:
@@ -34,7 +34,7 @@ Kickoff has been tested in the following browsers:
 - Internet Explorer 8+
 
 ### Yeoman generator
-There is also a Yeoman generator for Kickoff, visit [tmwagency.github.io/kickoff/docs/yeoman.html](http://tmwagency.github.io/kickoff/docs/yeoman.html) for more info.
+There is also a Yeoman generator for Kickoff, visit [trykickoff.github.io/docs/yeoman.html](http://trykickoff.github.io/docs/yeoman.html) for more info.
 
 ## Creators
 
