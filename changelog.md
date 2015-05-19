@@ -2,7 +2,7 @@
 All latest changes are documented on our site at http://trykickoff.github.io/
 
 ## Version 5.0.0
-Date
+Date 19/05/2015
 
 This release focuses on improving the UX of the framework. Files are now in more intuitive places and grunt configs are clearer as well.
 
