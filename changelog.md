@@ -10,12 +10,12 @@ This release focuses on improving the UX of the framework. Files are now in more
 	- Moved all CSS, images & js into the `./assets` directory 
 		+ The `./assets/src` directory for source files (SCSS, javascript, images & grunticon)
 		+ The `./assets/dist` directory for all compiled files (CSS, images & JS) is at `./assets/dist`
-		+ Grunticon's folders are now more intuitive. Uncompressed SVGs, jpgs & PNGs should be saved to `./assets/src/grunticon/source`. They will then be compressed to `./assets/temp/icons` before Grunticon does it's thing and compiles them to `./assets/dist/img/icons`.
+		+ Grunticon's folders are now in more intuitive places. Uncompressed SVGs, jpgs & PNGs should be saved to `./assets/src/grunticon/source`. They will then be compressed to `./assets/temp/icons` before Grunticon does it's thing and compiles them to `./assets/dist/img/icons`.
 * Grunt & build tasks - Much has been streamlined.
-	- Connect has been removed & BrowserSync is now the only way to serve a static site & reload changes
+	- Connect has been removed & BrowserSync is now the only way to serve a static site & reload changes. Run `grunt serve` to test this.
 	- Our config variables are now in their own file at `./_grunt-configs/config.js` & have been made more intuitive
 	- Images now are automatically compressed by [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) & are delivered to `./assets/dist/img`
-* Scss updates
+* Sass updates
 	- Many style rules have been removed with a primary focus on making the framework leaner & more useful. 
 * The styleguide has had a massive improvement & the start page has been removed. The styleguide has been moved to `.styleguide/index.html`
 * Running `npm run kickoff` now installs all package dependencies, including Grunt if you don't have it, and is a great way to start a Kickoff project
