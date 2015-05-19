@@ -37,7 +37,7 @@ module.exports.tasks = {
 				expand: true,
 				cwd: '<%=config.img.srcDir%>/',
 				src: ['**/*.{svg,png,jpg,gif}'],
-				dest: '<%=config.distDir%>/img'
+				dest: '<%=config.img.distDir%>'
 			}]
 		}
 	},
@@ -53,7 +53,7 @@ module.exports.tasks = {
 				expand: true,
 				cwd   : '<%=config.tempDir%>/icons',
 				src   : ['*.{svg,png,jpg,gif}'],
-				dest  : '<%=config.distDir%>/img/icons'
+				dest  : '<%=config.img.distDir%>/icons'
 			}],
 			options: {
 				// https://github.com/filamentgroup/grunticon#optionscustomselectors
