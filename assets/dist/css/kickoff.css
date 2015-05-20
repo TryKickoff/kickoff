@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /**
+ * Developed with Kickoff v5.0.0
+ * http://trykickoff.github.io/
+ * =================================
+ *
  * Site dependencies
  */
 /*
@@ -139,8 +143,8 @@
  * Typography
  * Breakpoints
  * Paths
- * Grid setup
- * Components
+ * Layout & Grid
+ * App-specific
  */
 /**
  * Typography
@@ -293,42 +297,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   line-height: 1.1;
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+  margin-top: 0;
+  margin-bottom: 28px; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal; }
 
 h1, .h1, .alpha {
-  font-size: 39.0625px;
-  font-size: 1.953125rem;
-  margin-top: 0;
+  font-size: 40px;
+  font-size: 2rem;
   margin-bottom: 56px; }
 
 h2, .h2, .beta {
-  font-size: 31.25px;
-  font-size: 1.5625rem;
-  margin-top: 0;
-  margin-bottom: 28px; }
+  font-size: 32px;
+  font-size: 1.6rem; }
 
 h3, .h3, .gamma {
   font-size: 25px;
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 28px; }
-
-h4, .h4, .delta,
-h5, .h5, .epsilon,
-h6, .h6, .zeta {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-  font-size: 0.8rem; }
+  font-size: 1.25rem; }
 
 h4, .h4, .delta {
   font-size: 20px;
   font-size: 1rem; }
 
+h5, .h5, .epsilon,
 h6, .h6, .zeta {
-  text-transform: uppercase; }
+  font-size: 16px;
+  font-size: 0.8rem;
+  margin-bottom: 0; }
 
 * + h1, * + .h1, * + .alpha,
 * + h2, * + .h2, * + .beta,
@@ -861,6 +857,7 @@ input[type="button"].btn--block {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 5px;
+  background-clip: padding-box;
   -webkit-transition: border 200ms ease-in-out;
      -moz-transition: border 200ms ease-in-out;
           transition: border 200ms ease-in-out; }
