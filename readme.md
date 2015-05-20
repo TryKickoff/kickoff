@@ -6,8 +6,6 @@
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
-If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
-
 ### Features
 * Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
 * Sass compilation uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about it. We still have many Sass mixins for many CSS3 features including gradients, REMs with fallbacks
@@ -36,6 +34,8 @@ Kickoff has been tested in the following browsers:
 ### Yeoman generator
 There is also a Yeoman generator for Kickoff, visit [trykickoff.github.io/docs/yeoman.html](http://trykickoff.github.io/docs/yeoman.html) for more info.
 
+If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
+
 ## Creators
 
 **Zander Martineau**
@@ -52,7 +52,7 @@ There is also a Yeoman generator for Kickoff, visit [trykickoff.github.io/docs/y
 
 Keep track of development and community news.
 
-- Follow [@TMWKickoff on Twitter](http://twitter.com/TMWKickoff).
+- Follow [@TryKickoff on Twitter](http://twitter.com/TryKickoff).
 
 ### Versioning
 
@@ -65,5 +65,4 @@ For transparency into our release cycle and in striving to maintain backward com
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
-
 
