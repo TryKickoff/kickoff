@@ -50,9 +50,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at trykicko
 
 ### Community
 
-Keep track of development and community news.
-
-- Follow [@TryKickoff on Twitter](http://twitter.com/TryKickoff).
+Keep track of development and community news by following [@TryKickoff on Twitter](http://twitter.com/TryKickoff).
 
 ### Versioning
 
