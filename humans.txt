@@ -6,7 +6,7 @@
     Zander Martineau -- @MrMartineau
     Ashley Nolan     -- @AshNolan_
     Nic Bell         -- @nicbell
-    Contributors     -- https://github.com/tmwagency/kickoff/graphs/contributors
+    Contributors     -- https://github.com/TryKickoff/kickoff/graphs/contributors
 
 
 # TECHNOLOGY COLOPHON
