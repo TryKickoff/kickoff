@@ -45,7 +45,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at trykicko
 
 **Ashley Nolan**
 
-- <http://twitter.com/AshleyNolan_>
+- <http://twitter.com/AshNolan_>
 - <http://github.com/ashleynolan>
 
 ### Community
