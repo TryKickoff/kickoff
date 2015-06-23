@@ -3,84 +3,13 @@
  * Developed with Kickoff v5.0.0
  * http://trykickoff.github.io/
  * =================================
- *
- * Site dependencies
  */
-/*
- * Mixins, helpers and functions
- * =================================
- * Most CSS3 vendor prefixed items have a mixin,
- * but we should not need them if autoprefixer is being used
- * See mixins/css3.scss for the full list
- */
-/**
- * Convert pixels to ems
- * For a relational value of 12px write em(12) when the parent is 16px
- * If the parent is another value say 24px write em(12, 24)
- *
- * Usage:
- * font-size : em(12);
- * font-size : em(12, 24);
- */
-/**
- * Convert pixels to rems
- * For a relational value of 12px write rem(12) when the parent is 16px
- * If the parent is another value say 24px write rem(12, 24)
- *
- * Usage:
- * font-size : rem(12);
- * font-size : rem(12, 24);
- */
-/**
- * Strips the units from a value. e.g. 12px -> 12
- * Usage: strip-units(400px)
- */
-/**
- * Core variables
- * =================================
- * Edit your color palette and app vars before your begin
- */
-/**
- * Color palette
- */
-/**
- * Variables
- * =================================
- * Typography
- * Breakpoints
- * Paths
- * Layout & Grid
- * App-specific
- */
-/**
- * Typography
- * =================================
- * Base sizes:
- * Set this in pixels (but do not add px),
- * the font-size mixin will convert to REMS
- */
-/* Font stacks */
-/**
- *  Breakpoints
- * =================================
- * There are no common breakpoints so these are just a suggestions
- * You'll need to define your own breakpoints to suit your design
- */
-/**
- * Path vars
- */
-/**
- * Layout setup
- * Settings here override & affect the output in scss/partials/components/grid.scss
- */
-/**
- * App-specific variables
- * =================================
- * Add common vars below here
- */
-/* CSS Reset  */
 /**
  * Kickoff reset
+ *
+ * Kickoff uses an amended version of Normalize.css by Nicholas Gallagher
+ * http://github.com/necolas/normalize.css
+ *
  */
 html {
   -moz-box-sizing: border-box;
@@ -124,15 +53,64 @@ a:focus {
 a:hover, a:active {
   outline: 0; }
 
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
 figure {
   margin: 0; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
 button,
 input {
   line-height: normal; }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
 input[type="search"] {
-  -webkit-appearance: textfield; }
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+  /* 2 */ }
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
@@ -143,11 +121,31 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
 textarea {
   overflow: auto;
   vertical-align: top; }
 
-/* Global typography styles */
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
 /**
  * Typography
  * =================================
