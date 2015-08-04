@@ -1,7 +1,7 @@
 # TravisCI
 # This is used for Kickoff and can be safely removed
-
 language: node_js
+sudo: false
 node_js:
 - '0.10'
 before_script:
