@@ -89,7 +89,7 @@ $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
 
 // Column Padding
-$grid-column-padding          : 0    !default; // [in pixels]
+$grid-column-padding          : 0     !default; // [in pixels]
 $grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
 $nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
