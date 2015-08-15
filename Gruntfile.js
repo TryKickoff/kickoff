@@ -114,7 +114,7 @@ module.exports = function (grunt) {
 	 * GRUNT IMAGES * A task to compress all non-grunticon images
 	 */
 	grunt.registerTask('images', [
-		'imagemin:images',
+		'newer:imagemin:images',
 		'icons'
 	]);
 
@@ -124,7 +124,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask('icons', [
 		'clean:icons',
-		'imagemin:grunticon',
+		'newer:imagemin:grunticon',
 		'grunticon'
 	]);
 

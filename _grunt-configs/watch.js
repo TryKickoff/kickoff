@@ -31,7 +31,7 @@ module.exports.tasks = {
 
 		images : {
 			files: ['<%=config.img.srcDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['imagemin:images']
+			tasks: ['newer:imagemin:images']
 		},
 
 		grunticon : {
