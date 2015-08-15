@@ -6,15 +6,17 @@ module.exports.tasks = {
 	* Watches your scss, js etc for changes and compiles them
 	*/
 	watch: {
+		options: {
+			interrupt: true,
+			spawn: false
+		},
+
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
 				'compileCSS',
 				'clean:tempCSS'
-			],
-			options: {
-				interrupt: true
-			}
+			]
 		},
 
 		js: {
@@ -22,11 +24,7 @@ module.exports.tasks = {
 			tasks: [
 				'uglify',
 				'newer:copy:modernizr'
-			],
-			options: {
-				interrupt: true,
-				spawn: false
-			}
+			]
 		},
 
 		images : {
@@ -36,10 +34,7 @@ module.exports.tasks = {
 
 		grunticon : {
 			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['icons'],
-			options: {
-				interrupt: true
-			}
+			tasks: ['icons']
 		},
 
 		grunt: {
