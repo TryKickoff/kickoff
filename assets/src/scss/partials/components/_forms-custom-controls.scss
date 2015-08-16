@@ -24,13 +24,16 @@
  * 	</label>
  *
  * ================================= */
-$custom-input-bg          : #A3B1B2;
-$custom-input-bg-selected : #fff;
+$custom-input-border      : #A3B1B2;
+$custom-input-bg          : $custom-input-border;
+$custom-input-selected    : $color-bg;
+$checkbox-indicator-width : .1em;
 
 .control--custom {
 	position: relative;
 	display: block;
 	cursor: pointer;
+	user-select: none;
 }
 
 // Give inline elements some space to the right
@@ -43,7 +46,7 @@ $custom-input-bg-selected : #fff;
 .control--custom-input {
 	position: absolute;
 	opacity: 0;
-	z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+	z-index: -1; // Put the input behind the label so it doesn't overlay text
 }
 
 // The new checkbox/radio
@@ -52,13 +55,12 @@ $custom-input-bg-selected : #fff;
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	user-select: none;
 	transition: $default-transition;
-	border: 2px solid $custom-input-bg;
+	border: $checkbox-indicator-width solid $custom-input-border;
 	background-color: $custom-input-bg;
-	box-shadow: 0 0 0 2px transparent, 0 0 0 0px transparent;
 	vertical-align: middle;
 	margin-top: -.1em;
+	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
 }
 
 // :focus styles
@@ -68,16 +70,17 @@ $custom-input-bg-selected : #fff;
 
 // Checkbox modifiers
 .control-indicator--checkbox {
+	border-radius: .2em;
 
 	&:before,
 	&:after {
-		content:'';
+		content: '';
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		width: 90%;
-		height: .14em;
-		background-color: $custom-input-bg-selected;
+		height: $checkbox-indicator-width;
+		background-color: $custom-input-selected;
 		display: block;
 		opacity: 0;
 		transition: $default-transition;
@@ -97,9 +100,9 @@ $custom-input-bg-selected : #fff;
 	&:before {
 		top: 0;
 		transform: translateX(-50%) rotate(45deg);
-		border: .15em solid $custom-input-bg-selected;
+		border: $checkbox-indicator-width solid $custom-input-selected;
 		background-color: transparent;
-		width: 50%;
+		width: 40%;
 		height: 80%;
 		border-top: 0;
 		border-left: 0;
@@ -111,6 +114,9 @@ $custom-input-bg-selected : #fff;
 }
 
 .control--custom-input:checked ~ .control-indicator--checkbox {
+	// Uncomment to make checkboxes circular when checked
+	// border-radius: 50%;
+
 	&:before,
 	&:after {
 		opacity: 1;
@@ -124,8 +130,8 @@ $custom-input-bg-selected : #fff;
 }
 
 .control--custom-input:checked ~ .control-indicator--radio {
-	background-color: $custom-input-bg-selected;
-	border: .3em solid $custom-input-bg;
+	background-color: $custom-input-selected;
+	border: .3em solid $custom-input-border;
 }
 
 
