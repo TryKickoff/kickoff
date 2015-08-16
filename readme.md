@@ -1,38 +1,43 @@
-[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/trykickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/trykickoff/kickoff?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/TryKickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
 # Kickoff
-## A lightweight front-end framework for creating scalable, responsive sites
+## A lightweight front-end framework for creating scalable and performant, responsive sites
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
 ### Features
-* Built in a mobile-first, responsive philosophy *(but can easily be used for fixed sites as well)*
-* Sass compilation uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about it. We still have many Sass mixins for many CSS3 features including gradients, REMs with fallbacks
-* Starter content styles, including clean typography, lists, tables, etc
-* Starter form element styles: stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice
+* Mobile-first, responsive philosophy
+* Rock-solid **CSS** framework using **Sass** (`.scss`) preprocessor
+ * Starter content styles: [typography](http://trykickoff.github.io/demos/typography.html), [grids](http://trykickoff.github.io/demos/grids.html) & [components](http://trykickoff.github.io/demos/components.html)
+ * Starter form element styles ([see demo](http://trykickoff.github.io/demos/forms.html)): stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice, validation states
+ * Lots of helper classes & Sass mixins for many CSS3 features like [media-queries](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss)
+* Simple **Javascript** boilerplate that makes very little assumptions about your chosen style or workflow.
+ * The default method uses a [list of files](https://github.com/TryKickoff/kickoff/blob/master/_grunt-configs/config.js#L41-L55) that are concatinated & compressed with Uglify
+ * If you prefer something more advanced, our [Yeoman generator](http://trykickoff.github.io/docs/yeoman.html) allows you to use Browserify instead :)
 * **[Grunt](http://gruntjs.com)** used extensively to ease common development bottlenecks
- * Sass compilation using [libsass](https://github.com/sass/libsass) (using [grunt-sass](https://github.com/sindresorhus/grunt-sass))
- * Concatenation and minification of JS files with and [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
- * Simple server using [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
+ * Sass compilation using [libsass](https://github.com/sass/libsass) (using [grunt-sass](https://github.com/sindresorhus/grunt-sass)) and uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
+ * Concatenation and minification of JS files
+ * Simple server using [BrowserSync](http://browsersync.io)
  * SVG Icon generation using [grunticon](https://github.com/filamentgroup/grunticon)
 
 ## Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.github.io](http://trykickoff.github.io/).
 
+![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1)
+## Yeoman generator
+There is also a Yeoman generator for Kickoff, visit [trykickoff.github.io/docs/yeoman.html](http://trykickoff.github.io/docs/yeoman.html) for more info.
+
 ## Bugs and feature requests
 Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/trykickoff/kickoff/issues/new).
 
-### Browser Compatibility
+### Browser compatibility
 Kickoff has been tested in the following browsers:
 - Chrome
 - Safari
 - Firefox 3+
 - Opera 10+
-- Internet Explorer 8+
-
-### Yeoman generator
-There is also a Yeoman generator for Kickoff, visit [trykickoff.github.io/docs/yeoman.html](http://trykickoff.github.io/docs/yeoman.html) for more info.
+- Internet Explorer 8+ (an extra CSS file is generated if you need IE8 support)
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
 
