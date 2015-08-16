@@ -61,12 +61,12 @@ $custom-input-bg-selected : #fff;
 	margin-top: -.1em;
 }
 
-/* Focus */
+// :focus styles
 .control--custom-input:focus ~ .control-indicator {
 	box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $input-borderColor--focus;
 }
 
-/* Checkbox modifiers */
+// Checkbox modifiers
 .control-indicator--checkbox {
 
 	&:before,
@@ -95,7 +95,8 @@ $custom-input-bg-selected : #fff;
 .control-indicator--checkbox--tick {
 
 	&:before {
-		transform: translate(-50%, -50%) rotate(45deg);
+		top: 0;
+		transform: translateX(-50%) rotate(45deg);
 		border: .15em solid $custom-input-bg-selected;
 		background-color: transparent;
 		width: 50%;
@@ -117,7 +118,7 @@ $custom-input-bg-selected : #fff;
 }
 
 
-/* Radio modifiers */
+// Radio modifiers
 .control-indicator--radio {
 	border-radius: 50%;
 }
