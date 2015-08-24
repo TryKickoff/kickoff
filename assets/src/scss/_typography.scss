@@ -4,7 +4,6 @@
  * Base
  * Paragraphs
  * Headings
- * Links
  * Lists
  * Definition lists
  * Blockquotes
@@ -126,31 +125,6 @@ h6, .h6, .zeta {
 
 small {
 	font-size: 80%;
-}
-
-/**
- * Links
- */
-a {
-	&, &:link {
-		color: $color-link-default;
-		text-decoration: none;
-	}
-
-	&:visited {
-		color: $color-link-visited;
-		text-decoration: none;
-	}
-
-	&:hover, &:focus {
-		color: $color-link-hover;
-		//text-decoration: underline;
-	}
-
-	&:active {
-		color: $color-link-active;
-		//text-decoration: underline;
-	}
 }
 
 
