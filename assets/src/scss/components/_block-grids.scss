@@ -60,3 +60,16 @@
 		}
 	}
 }
+
+
+/**
+ * Guttered block grid
+ */
+.l-blockGrid--guttered {
+    margin-left: -#{$grid-gutter-width}px;
+
+    > li {
+        padding-left: #{$grid-gutter-width}px;
+		padding-bottom: #{$grid-gutter-width}px;
+    }
+}
