@@ -1,4 +1,4 @@
-var mozjpeg = require('imagemin-mozjpeg');
+var mozjpeg  = require('imagemin-mozjpeg');
 var pngquant = require('imagemin-pngquant');
 var gifsicle = require('imagemin-gifsicle');
 
@@ -10,6 +10,15 @@ module.exports.tasks = {
 	 * Minify PNG, SVG, gif & JPEG images
 	 */
 	imagemin: {
+		images: {
+			files: [{
+				expand: true,
+				cwd: '<%=config.img.srcDir%>/',
+				src: ['**/*.{svg,png,jpg,gif}'],
+				dest: '<%=config.img.distDir%>'
+			}]
+		},
+
 		grunticon: {
 			options: {
 				optimizationLevel: 3,
@@ -31,15 +40,6 @@ module.exports.tasks = {
 				dest: '<%=config.tempDir%>/icons'
 			}]
 		},
-
-		images: {
-			files: [{
-				expand: true,
-				cwd: '<%=config.img.srcDir%>/',
-				src: ['**/*.{svg,png,jpg,gif}'],
-				dest: '<%=config.img.distDir%>'
-			}]
-		}
 	},
 
 
