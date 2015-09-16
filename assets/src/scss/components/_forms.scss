@@ -58,7 +58,7 @@ $color-info               : $blue;               // base colour for info input s
 	width: 100%;
 	padding: 0;
 	margin-bottom: $baseline;
-	@include font-size($type-large);
+	@include font-size($type-mid);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;

@@ -91,11 +91,11 @@ h1, .h1, .alpha {
 }
 
 h2, .h2, .beta {
-	@include font-size($type-larger);
+	@include font-size($type-large);
 }
 
 h3, .h3, .gamma {
-	@include font-size($type-large);
+	@include font-size($type-mid);
 }
 
 h4, .h4, .delta {

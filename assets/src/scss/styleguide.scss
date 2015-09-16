@@ -187,11 +187,11 @@ code {
 .sg-type-base {
 	@include sgTypeTest($type-base);
 }
+.sg-type-mid {
+	@include sgTypeTest($type-mid);
+}
 .sg-type-large {
 	@include sgTypeTest($type-large);
-}
-.sg-type-larger {
-	@include sgTypeTest($type-larger);
 }
 .sg-type-largest {
 	@include sgTypeTest($type-largest);
