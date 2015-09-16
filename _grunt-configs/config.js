@@ -49,19 +49,6 @@ module.exports = {
 	// Testing-related Grunt vars
 	// Add any other test vars in here
 	testing: {
-
-		// Used by Photobox at the moment
-		// http://trykickoff.github.io/learn/grunt.html#task-photobox
-		visual : {
-			sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
-
-			// Change these urls to test your app
-			// <%=config.testing.visual.urls%>
-			urls : [
-				'http://localhost:3000'
-			]
-		},
-
 		validationDir  : './testing',  // <%=config.tests.validationDir%>
 	}
 };
