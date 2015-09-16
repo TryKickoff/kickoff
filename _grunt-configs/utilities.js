@@ -20,17 +20,5 @@ module.exports.tasks = {
 			src: '<%=config.srcDir%>/js/libs/modernizr.min.js',
 			dest: '<%=config.distDir%>/js/libs/modernizr.min.js'
 		}
-	},
-
-
-	/**
-	 * Chotto
-	 * Checks for the existence of files and halts the Grunt build if they don't exist
-	 * https://www.npmjs.com/package/chotto
-	 */
-	chotto : {
-		js : {
-			filePaths: '<%=config.js.fileList%>'
-		}
 	}
 };
