@@ -27,32 +27,14 @@ module.exports = {
 
 
 	// Javascript-related Grunt vars
-	js : {
-		distDir  : '<%=config.distDir%>/js/', // <%=config.js.distDir%>
+	js: {
+		srcFile: '<%=config.srcDir%>/js/script.js',// <%=config.js.srcFile%>
+
+		distDir: '<%=config.distDir%>/js/', // <%=config.js.distDir%>
 
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
-		distFile : 'script.js', // <%=config.js.distFile%>
-
-		// The files in this array will be concatinated and minified by our build
-		// Remove any files that you don't want, & add any that you need
-
-		// <%=config.js.fileList%>
-		fileList : [
-			// if you would like to remove jQuery from your concatenated JS, comment out the line below
-			'./node_modules/jquery/dist/jquery.js',
-
-			// if you would like some basic JS shims (when not using jQuery),
-			// uncomment the line below to compile Shimly output
-			//'<%=config.srcDir%>/js/helpers/shims.js',
-
-			'<%=config.srcDir%>/js/helpers/console.js',
-			'./node_modules/trak.js/dist/trak.js',
-			'./node_modules/swiftclick/js/libs/swiftclick.js',
-			'./node_modules/cookies-js/dist/cookies.js',
-
-			'<%=config.srcDir%>/js/script.js'
-		]
+		distFile: 'script.js' // <%=config.js.distFile%>
 	},
 
 
