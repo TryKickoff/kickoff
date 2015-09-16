@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 	 * Available tasks:
 	 * grunt            : Alias for 'serve' task, below (the default task)
 	 * grunt serve      : watch js, images & scss and run a local server
+	 * grunt watcher    : run compile JS/CSS then watch
 	 * grunt start      : Opens the post-install setup checklist on the Kickoff site
 	 * grunt watch      : run sass:kickoff, uglify and livereload
 	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
@@ -54,6 +55,21 @@ module.exports = function (grunt) {
 		'copy:modernizr',
 		'images',
 		'browserSync:serve',
+		'watch'
+	]);
+
+
+	/**
+	 * GRUNT WATCHER * A task for compiling & watching.
+	 * Useful for development when not using the browserSync server
+	 * run compile JS/CSS then watch
+	 */
+	grunt.registerTask('watcher', [
+		'shimly',
+		'compileJS',
+		'compileCSS',
+		'copy:modernizr',
+		'images',
 		'watch'
 	]);
 
