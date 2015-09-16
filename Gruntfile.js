@@ -27,12 +27,12 @@ module.exports = function (grunt) {
 	 * grunt watcher    : run compile JS/CSS then watch
 	 * grunt start      : Opens the post-install setup checklist on the Kickoff site
 	 * grunt watch      : run sass:kickoff, uglify and livereload
-	 * grunt dev        : run uglify, sass:kickoff & autoprefixer:kickoff
-	 * grunt deploy     : run jshint, uglify, sass:kickoff and csso
+	 * grunt dev        : run browserify, sass:kickoff & autoprefixer:kickoff
+	 * grunt deploy     : run browserify, sass:kickoff and csso
 	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
 	 * grunt images     : compress all non-grunticon images & then run `grunt icons`
 	 * grunt icons      : generate the icons. uses svgmin and grunticon
-	 * grunt checks     : run jshint, scsslint and html validator
+	 * grunt checks     : run html validator
 	 * grunt travis     : used by travis ci only
 	 */
 
@@ -51,7 +51,6 @@ module.exports = function (grunt) {
 		'shimly',
 		'compileJS',
 		'compileCSS',
-		'clean:tempCSS',
 		'copy:modernizr',
 		'images',
 		'browserSync:serve',
@@ -91,7 +90,6 @@ module.exports = function (grunt) {
 		'shimly',
 		'compileJS',
 		'compileCSS',
-		'clean:tempCSS',
 		'copy:modernizr',
 		'images'
 	]);
@@ -106,7 +104,6 @@ module.exports = function (grunt) {
 		'compileJS',
 		'compileCSS',
 		'csso',
-		'clean:tempCSS',
 		'copy:modernizr',
 		'images'
 	]);
@@ -119,7 +116,6 @@ module.exports = function (grunt) {
 		'shimly',
 		'compileJS',
 		'compileCSS',
-		'clean:tempCSS',
 		'images',
 		'browserSync:styleguide',
 		'watch'
@@ -150,8 +146,6 @@ module.exports = function (grunt) {
 	 * run jshint
 	 */
 	grunt.registerTask('checks', [
-		'jshint:project',
-		'scsslint',
 		'validation'
 	]);
 
@@ -160,23 +154,22 @@ module.exports = function (grunt) {
 	 * Travis CI to test build
 	 */
 	grunt.registerTask('travis', [
-		'jshint:project',
-		'uglify',
 		'sass:kickoff'
 	]);
+
 
 	/**
 	 * Utility classes
 	 */
 	// Compile JS
 	grunt.registerTask('compileJS', [
-		'chotto:js',
-		'uglify',
+		'browserify'
 	]);
 
 	// Compile CSS
 	grunt.registerTask('compileCSS', [
 		'sass',
-		'autoprefixer'
+		'autoprefixer',
+		'clean:tempCSS'
 	]);
 };

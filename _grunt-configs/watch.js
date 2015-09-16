@@ -14,16 +14,7 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'compileCSS',
-				'clean:tempCSS'
-			]
-		},
-
-		js: {
-			files: ['<%=config.js.fileList%>'],
-			tasks: [
-				'uglify',
-				'newer:copy:modernizr'
+				'compileCSS'
 			]
 		},
 
