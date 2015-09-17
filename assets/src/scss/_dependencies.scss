@@ -5,7 +5,6 @@
 
 /*
  * Mixins, helpers and functions
- * =================================
  * Most CSS3 vendor prefixed items have a mixin,
  * but we should not need them if autoprefixer is being used
  * See mixins/css3.scss for the full list
@@ -15,7 +14,6 @@
 
 /**
  * Core variables
- * =================================
  * Edit your color palette and app vars before your begin
  */
 @import "color-palette";
@@ -48,22 +46,19 @@
 @import "components/tables";
 @import "components/code";
 @import "components/skip-navigation";
-@import "components/scrollbars";
+// @import "components/scrollbars";x
+
 
 /**
  * Your app styles
- * =================================
- * Global styles
- * Example partial for masthead & footer
- * Icons - used in conjunction with grunticon
  */
-@import "global";
-@import "partials/masthead";
-@import "partials/footer";
+@import "global"; // Global styles
+@import "partials/masthead"; // Example partial for masthead
+@import "partials/footer"; // Example partial for footer
+
 
 /**
  * Views
- * =================================
  */
 //@import "views/home";
 //@import "views/contact";

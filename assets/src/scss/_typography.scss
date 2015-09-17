@@ -1,14 +1,13 @@
 /**
  * Typography
- * =================================
- * Base
- * Paragraphs
- * Headings
- * Lists
- * Definition lists
- * Blockquotes
- * Misc
- * Utilities
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Lists
+ * - Definition lists
+ * - Blockquotes
+ * - Misc
+ * - Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -38,7 +37,6 @@ body {
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
-	// =========================================
 	// 1.
 	// -webkit-font-smoothing: antialiased;
 	//    -moz-font-smoothing: antialiased;
@@ -58,7 +56,6 @@ p {
 	margin-bottom: $baseline;
 
 	// Measure - ideally about 65 chars per line
-	// =========================================
 	// max-width: $type-base * 30 + px;
 
 	// & small {
@@ -107,7 +104,6 @@ h6, .h6, .zeta {
 	@include font-size($type-small);
 	margin-bottom: 0;
 }
-
 
 // h5, .h5, .epsilon {
 // }

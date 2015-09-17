@@ -1,6 +1,13 @@
-// =================================
-// Color palette
-// =================================
+/**
+ * Global Color palette
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Text selection
+ * - <hr>
+ * - Any others..
+ */
 
 // Generic colors
 $blue                         : #288ad6;
@@ -22,16 +29,16 @@ $color-text                   : #444;
 $color-bg                     : #f1f1f1;
 $color-border                 : #ddd;
 
-// Text Selection
-$color-selection              : #fff;
-$color-selection-bg           : $color-primary;
-
 
 // Links
 $color-link-default           : $color-primary;
 $color-link-visited           : $color-primary;
 $color-link-hover             : darken($color-primary, 20%);
 $color-link-active            : darken($color-primary, 20%);
+
+// Text Selection
+$color-selection              : #fff;
+$color-selection-bg           : $color-primary;
 
 
 // <hr> border color

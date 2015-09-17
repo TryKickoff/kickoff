@@ -1,10 +1,18 @@
-/*
-	Centred lists
+/**
+ * Lists
+ * - Centred lists
+ * - Floated lists
+ */
 
+/**
+ * Centred lists
+ *
+ * Usage:
 	<ul class="l-list--centred">
 		<li></li>
 	</ul>
-	========================================================================== */
+ */
+
 .l-list--centred, .l-list--centered {
 	text-align: center;
 
@@ -14,13 +22,14 @@
 }
 
 
-/*
-	Floated lists
-
+/**
+ * Floated lists
+ * Usage:
 	<ul class="l-list--floated">
 		<li></li>
 	</ul>
-	========================================================================== */
+ */
+
 .l-list--floated {
 	@include clearfix;
 

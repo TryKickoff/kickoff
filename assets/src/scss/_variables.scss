@@ -1,19 +1,20 @@
-// ==========================================================================
-// Variables
-// ==========================================================================
-// * Typography
-// * Breakpoints
-// * Paths
-// * Layout & Grid
-// * App-specific
+/**
+ * Variables
+ * - Typography
+ * - Breakpoints
+ * - Paths
+ * - Layout & Grid
+ * - App-specific
+ */
 
 
-// Typography
-// ==========================================================================
-// Base sizes:
-// Set this in pixels (but do not add px),
-// the font-size mixin will convert to REMS
-
+/**
+ * Typography
+ *
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
 $font-size-base                : 20;
 $font-size-base-px             : $font-size-base * 1px;
 $font-size-base-narrow         : $font-size-base - 2;
@@ -51,33 +52,32 @@ $font-weight-headings         : bold;    // instead of browser default, bold
 $line-height-headings         : 1.1;
 
 
-
-//  Breakpoints
-// ==========================================================================
-// There are no common breakpoints so these are just a suggestions
-// You'll need to define your own breakpoints to suit your design
-
-$bp-narrow            : 400;  // Set in px
-$bp-mid               : 768;  // Set in px
-$bp-wide              : 992;  // Set in px
-$bp-huge              : 1600; // Set in px
+/**
+ * Breakpoints
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+$bp-narrow                    : 400;  // Set in px
+$bp-mid                       : 750;  // Set in px
+$bp-wide                      : 1000;  // Set in px
+$bp-huge                      : 1250; // Set in px
 
 // Special breakpoints
-$bp-single-col        : $bp-mid; // Break to single column (used in the grid)
-$bp-block-grid-narrow : $bp-narrow; // Breakpoint for narrow block grids
-$bp-rwd-text          : $bp-mid; // Reduce text size below this width
+$bp-single-col                : $bp-mid; // Break to single column (used in the grid)
+$bp-block-grid-narrow         : $bp-narrow; // Breakpoint for narrow block grids TODO: is this needed if the new block grids cover it?
+$bp-rwd-text                  : $bp-mid; // Reduce text size below this width
 
 
-
-// Path vars
-// ==========================================================================
+/**
+ * Path vars
+ */
 $img-path                     : "/assets/dist/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 
 
-
-// Layout setup
-// Settings here override & affect the output in scss/partials/components/grid.scss
-// ==========================================================================
+/**
+ * Layout setup
+ * Settings here override & affect the output in scss/partials/components/grid.scss
+ */
 
 // Setup grid defaults
 $layout-margin                : 0     !default; // [in pixels] Space outside the grid
@@ -92,15 +92,14 @@ $grid-column-padding          : 0     !default; // [in pixels]
 $grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
 $nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
-// Choose your grid options
+// Choose your grid options, see http://trykickoff.github.io/learn/grid.html for more info
 $using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
 $using-offsetcolumns          : false !default; // Allow columns to be offset
 $using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
 
 
-
-// App-specific variables
-// ==========================================================================
-// Add common vars below here
-
+/**
+ * App-specific variables
+ */
 $default-transition: all 100ms ease-in-out;
+// Add your own :)

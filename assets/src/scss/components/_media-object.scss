@@ -1,16 +1,16 @@
-/*
-	Media Object
-
-	* Place any image- and text-like content side-by-side, as per:
-	* http://csswizardry.com/2013/05/the-flag-object/
-	*
-	* +---------+
-  * |         | ~~~~ ~~~~~~~~~~~
-  * |         | ~~~~~~~ ~~~~~ ~~
-  * |         | ~~~~~~~~~~~~
-  * +---------+
-	*
-	* Markup:
+/**
+ * Media Object
+ *
+ * Place any image- and text-like content side-by-side, as per:
+ * http://csswizardry.com/2013/05/the-flag-object/
+ *
+ * +---------+
+ * |         | ~~~~ ~~~~~~~~~~~
+ * |         | ~~~~~~~ ~~~~~ ~~
+ * |         | ~~~~~~~~~~~~
+ * +---------+
+ *
+ * Markup:
 	<div class="media">
 		<div class="media-img">
 			<img src="http://placekitten.com/100/100">
@@ -19,7 +19,7 @@
 			<p>Lorem ipsum dolor sit amet.</p>
 		</div>
 	</div>
-	========================================================================== */
+ */
 
 .media {
 	display: table;

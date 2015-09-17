@@ -1,7 +1,7 @@
-// ==========================================================================
-// Radial Gradient
-// Usage: @include radial-gradient(#000, #BADA55, true);
-// ==========================================================================
+/**
+ * Radial Gradient
+ * Usage: @include radial-gradient(#000, #BADA55, true);
+ */
 @mixin radial-gradient($fromColor, $toColor, $ie: false) {
 	@warn "DEPRECATION: If you are using autoprefixer there is no need for this mixin, this will be removed in the next version of Kickoff.";
 

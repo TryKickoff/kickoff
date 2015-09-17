@@ -1,12 +1,11 @@
-// ==========================================================================
-// Sass Mixins
-// * Vendor Prefixer
-// * Responsive
-// * CSS3
-// * Utility Mixins
-// * hiDpi
-// * Forms
-// ==========================================================================
+/**
+ * Sass Mixins
+ * - Vendor prefixer
+ * - Responsive
+ * - CSS3
+ * - Utility Mixins
+ * - hiDpi
+ * - Forms */
 
 // Vendor prefixer
 @import "prefixer";
@@ -20,16 +19,16 @@
 @import "radial-gradient";
 @import "vertical-center";
 
-
-// Utility mixins
-// Clearfix, REM + fallbacks,
-// @font-face, sizing shortcuts,
-// and other helpers
-// =================================
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks,
+ * @font-face, sizing shortcuts,
+ * and other helpers
+ */
 @import "utility";
 
 // HiDPI
 @import "hidpi";
 
-// FORMS
+// Forms
 @import "form-helpers";

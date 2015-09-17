@@ -1,6 +1,7 @@
-// ==========================================================================
-// Utility Mixins
-// ==========================================================================
+/**
+ * Utility Mixins
+ */
+
 // Clearfix
 // http://www.cssmojo.com/latest_new_clearfix_so_far/
 // Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
@@ -21,9 +22,10 @@
 }
 
 
-// ==========================================================================
-// Typography mixins
-// ==========================================================================
+/**
+ * Typography mixins
+ */
+
 // REM font size
 // @include font-size(16);
 @mixin font-size($sizeValue: $font-size-base) {
@@ -78,7 +80,7 @@
 	@include size($size, $size);
 }
 
-// INPUT PLACEHOLDER TEXT
+// Input placeholder text
 @mixin placeholder($color: lighten(#000, 70%)) {
 	:-ms-input-placeholder {
 		color: $color;
