@@ -5,15 +5,136 @@
  */
 /*
  * Mixins, helpers and functions
- * =================================
  * Most CSS3 vendor prefixed items have a mixin,
  * but we should not need them if autoprefixer is being used
  * See mixins/css3.scss for the full list
  */
 /**
+ * Sass Mixins
+ * - Vendor prefixer
+ * - Responsive
+ * - CSS3
+ * - Utility Mixins
+ * - hiDpi
+ * - Forms */
+/**
+ * Vendor prefixer
+ * Usage: @include prefixer(border-radius, $radii, webkit ms spec);
+ */
+/**
+ * Responsive media query mixins
+ * - These are used so that we can define separate media-query content
+ *   for <IE9 and browsers with support for media queries
+ * - These are directly related to the global $fix-mqs var defined in
+ *   kickoff-old-ie.scss
+ * - kickoff-old-ie.scss ignores any content in media-queries with values less
+ *   than the $fix-mqs var value
+ */
+/**
+ * Min-width media query:
+ * - Equivalent to: @media screen and (min-width: 20em) { ... }
+ * - Usage: @include respond-min(500) { ... };
+ * - Argument is a pixel value WITHOUT a unit of measurement
+ */
+/**
+ * Max-width media query:
+ * - Equivalent to: @media screen and (max-width: 20em) { ... }
+ * - Usage: @include respond-max(500) { ... };
+ * - Argument is a pixel value WITHOUT a unit of measurement
+ */
+/**
+ * Min-max-width media query:
+ * - Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
+ * - Usage: @include respond-min-max(500, 600) { ... };
+ * - Arguments are pixel values WITHOUT a unit of measurement
+ */
+/**
+ * Old IE specific mixin
+ * - Only use this content if we're dealing with old IE
+ * - Usage: @include oldie() { ... }
+ */
+/**
+ * Linear Gradient
+ * Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+ */
+/**
+ * Radial Gradient
+ * Usage: @include radial-gradient(#000, #BADA55, true);
+ */
+/**
+ * vertical-center
+ * Vertically center any element. Needs support for CSS tranforms.
+ * Usage:
+ * @include vertical-center;
+ */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks,
+ * @font-face, sizing shortcuts,
+ * and other helpers
+ */
+/**
+ * Utility Mixins
+ */
+/**
+ * Typography mixins
+ */
+/**
+ *  HiDPI mixin.
+ *  @include hidpi-min() { ... };
+ *  Default value set to 1.3 to target Google Nexus 7 (http://bjango.com/articles/min-device-pixel-ratio/)
+ */
+/**
+ * Hidpi with a minimum width media query
+ * @include hidpi-min($bp-mid, 1.5) { ... };
+ */
+/**
+ * Hidpi with a max width media query
+ * @include hidpi-max($bp-mid, 1.3) { ... };
+ */
+/**
  * Core variables
- * =================================
  * Edit your color palette and app vars before your begin
+ */
+/**
+ * Global Color palette
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Text selection
+ * - <hr>
+ * - Any others..
+ */
+/**
+ * Variables
+ * - Typography
+ * - Breakpoints
+ * - Paths
+ * - Layout & Grid
+ * - App-specific
+ */
+/**
+ * Typography
+ *
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
+/**
+ * Breakpoints
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+/**
+ * Path vars
+ */
+/**
+ * Layout setup
+ * Settings here override & affect the output in scss/partials/components/grid.scss
+ */
+/**
+ * App-specific variables
  */
 /* CSS Reset - Normalize etc */
 /**
@@ -395,15 +516,14 @@ th {
  */
 /**
  * Typography
- * =================================
- * Base
- * Paragraphs
- * Headings
- * Lists
- * Definition lists
- * Blockquotes
- * Misc
- * Utilities
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Lists
+ * - Definition lists
+ * - Blockquotes
+ * - Misc
+ * - Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -513,7 +633,7 @@ ul, ol {
 /**
  * Unstyled lists
  */
-.unstyled, .tabs, .l-tabsContent {
+.unstyled {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -853,9 +973,9 @@ input[type="submit"] {
   margin-bottom: 28px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd; }
-  .form-actions .btn, .form-actions .tabs a, .tabs .form-actions a {
+  .form-actions .btn {
     margin-right: 10px; }
-    .form-actions .btn:last-child, .form-actions .tabs a:last-child, .tabs .form-actions a:last-child {
+    .form-actions .btn:last-child {
       margin-right: 0; }
 
 /**
@@ -1203,6 +1323,25 @@ option {
   font-weight: normal; }
 
 /**
+ * Icons
+ */
+[class^="icon-"], [class*=" icon-"] {
+  speak: none;
+  background-size: contain;
+  background-position: center center; }
+
+.icon-large {
+  display: block;
+  width: 120px;
+  height: 120px; }
+
+.icon-small {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: top; }
+
+/**
  * Links
  */
 a {
@@ -1249,7 +1388,7 @@ a {
  * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
  *10. Prevents from inheriting default anchor styles.
  */
-.btn, .tabs a {
+.btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -1288,34 +1427,24 @@ a {
       -ms-user-select: none;
           user-select: none; }
   .btn,
-  .tabs a,
   .btn:link,
-  .tabs a:link,
-  .btn:visited, .tabs a:visited {
+  .btn:visited {
     color: #fff; }
   .btn:hover,
-  .tabs a:hover,
   .btn:active,
-  .tabs a:active,
-  .btn:focus, .tabs a:focus {
+  .btn:focus {
     background-color: #798d8f; }
   .btn,
-  .tabs a,
   .btn:hover,
-  .tabs a:hover,
   .btn:active,
-  .tabs a:active,
   .btn:focus,
-  .tabs a:focus,
-  .btn:visited, .tabs a:visited {
+  .btn:visited {
     text-decoration: none; }
   .btn:active,
-  .tabs a:active,
-  .btn:focus, .tabs a:focus {
+  .btn:focus {
     outline: none; }
   .btn.disabled,
-  .tabs a.disabled,
-  .btn[disabled], .tabs a[disabled] {
+  .btn[disabled] {
     cursor: default;
     background-image: none;
     opacity: .65; }
@@ -1352,6 +1481,30 @@ input[type="button"].btn--block {
  * Centred columns
  */
 /* Import Grid helpers and mixins */
+/**
+ * Kickoff grid helpers
+ */
+/**
+ * Grid columns width calcs
+ */
+/**
+ * Column width mixin
+ * Usage:
+ * @include column(2);
+ */
+/**
+ * Gutter calcs
+ * Default: percent
+ * Usage: gutterCalc() or gutterCalc(false)
+ */
+/**
+ * Column padding (gutter)
+ * Default: percent (can be pixels though)
+ * Usage: paddingCalc() or paddingCalc(px)
+ */
+/**
+ * Shunts, offset columns, column source order calculations
+ */
 /**
  * Basic Usage:
  * =================================
@@ -1493,25 +1646,40 @@ input[type="button"].btn--block {
   .l-blockGrid.l-blockGrid--12up > li {
     width: 8.3333333333%; }
 
-/*
-	Centred lists
+/**
+ * Guttered block grid
+ */
+.l-blockGrid--guttered {
+  margin-left: -20px; }
+  .l-blockGrid--guttered > li {
+    padding-left: 20px;
+    padding-bottom: 20px; }
 
+/**
+ * Lists
+ * - Centred lists
+ * - Floated lists
+ */
+/**
+ * Centred lists
+ *
+ * Usage:
 	<ul class="l-list--centred">
 		<li></li>
 	</ul>
-	========================================================================== */
+ */
 .l-list--centred, .l-list--centered {
   text-align: center; }
   .l-list--centred li, .l-list--centered li {
     display: inline; }
 
-/*
-	Floated lists
-
+/**
+ * Floated lists
+ * Usage:
 	<ul class="l-list--floated">
 		<li></li>
 	</ul>
-	========================================================================== */
+ */
 .l-list--floated:after {
   content: "";
   display: table;
@@ -1521,9 +1689,9 @@ input[type="button"].btn--block {
   float: left;
   display: inline-block; }
 
-/*
-	Embedded content
-	========================================================================== */
+/**
+ * Embedded content
+ */
 img {
   font-style: italic;
   color: #c00;
@@ -1540,19 +1708,19 @@ svg:not(:root) {
 img, object, embed, video {
   max-width: 100%; }
 
-/*
-	Media Object
-
-	* Place any image- and text-like content side-by-side, as per:
-	* http://csswizardry.com/2013/05/the-flag-object/
-	*
-	* +---------+
-  * |         | ~~~~ ~~~~~~~~~~~
-  * |         | ~~~~~~~ ~~~~~ ~~
-  * |         | ~~~~~~~~~~~~
-  * +---------+
-	*
-	* Markup:
+/**
+ * Media Object
+ *
+ * Place any image- and text-like content side-by-side, as per:
+ * http://csswizardry.com/2013/05/the-flag-object/
+ *
+ * +---------+
+ * |         | ~~~~ ~~~~~~~~~~~
+ * |         | ~~~~~~~ ~~~~~ ~~
+ * |         | ~~~~~~~~~~~~
+ * +---------+
+ *
+ * Markup:
 	<div class="media">
 		<div class="media-img">
 			<img src="http://placekitten.com/100/100">
@@ -1561,7 +1729,7 @@ img, object, embed, video {
 			<p>Lorem ipsum dolor sit amet.</p>
 		</div>
 	</div>
-	========================================================================== */
+ */
 .media {
   display: table;
   width: 100%; }
@@ -1576,9 +1744,6 @@ img, object, embed, video {
   .media--bottom .media-img,
   .media--bottom .media-body {
     vertical-align: bottom; }
-  .media-img :last-child,
-  .media-body :last-child {
-    margin-bottom: 0; }
 
 .media-body {
   width: 100%; }
@@ -1592,12 +1757,16 @@ img, object, embed, video {
     padding-right: 0;
     padding-left: 10px; }
 
-/*
-   Fluid width video
-   * 16:9 aspect ratio by default
-   * Usage:
-   * <div class="fluidVideo"><iframe src="..."/></div>
-   ========================================================================== */
+.media--stackOnWide .media-img,
+.media--stackOnWide .media-body {
+  display: block; }
+
+/**
+ * Fluid width video
+ * - 16:9 aspect ratio by default
+ * Usage:
+ * <div class="fluidVideo"><iframe src="..."/></div>
+ */
 .fluidVideo {
   position: relative;
   padding-bottom: 56.25%;
@@ -1609,64 +1778,6 @@ img, object, embed, video {
     left: 0;
     width: 100%;
     height: 100%; }
-
-/**
- * Tabs
- * =================================
- */
-/**
- * Define associated tab variables
- */
-/**
- * Tabs base styling
- *
- * Usage:
-	<ul class="tabs">
-		<li><a href="#tabs-example-1" class="is-active">Tab 1</a></li>
-		<li><a href="#tabs-example-2">Tab 2</a></li>
-	</ul>
-
-	<!-- Tabs Content -->
-	<ul class="l-tabsContent">
-		<li id="tabs-example-1" class="is-active">
-			Tab 1 content
-		</li>
-
-		<li id="tabs-example-2">
-			Tab 2 content
-		</li>
-	</ul>
-	========================================================================== */
-.tabs {
-  margin-bottom: 28px;
-  border-bottom: 2px solid #16c98d; }
-  .tabs:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .tabs.tabs--alignRight li {
-    float: right; }
-  .tabs.tabs--alignCentre,
-  .tabs.tabs--alignCenter {
-    text-align: center; }
-    .tabs.tabs--alignCentre > li,
-    .tabs.tabs--alignCenter > li {
-      display: inline;
-      float: none; }
-  .tabs > li {
-    float: left;
-    margin: 0 5px; }
-  .tabs a {
-    background-color: #95a5a6;
-    border-radius: 4px 4px 0 0;
-    color: #fff; }
-    .tabs a.is-active {
-      background-color: #16c98d; }
-
-.l-tabsContent > li {
-  display: none; }
-  .l-tabsContent > li.is-active {
-    display: block; }
 
 /**
  * Tables
@@ -1820,6 +1931,7 @@ pre {
   color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;
+    -o-tab-size: 3;
        tab-size: 3; }
 
 code {
@@ -1865,23 +1977,7 @@ pre {
       top: 5px; }
 
 /**
- * Scrollbar styling (only in webkit)
- */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background-color: #d7d7d7; }
-
-::-webkit-scrollbar-thumb {
-  background: #8b8b8b;
-  cursor: pointer; }
-
-/**
  * Your app styles
- * =================================
- * Global styles
- * Example partial for masthead & footer
- * Icons - used in conjunction with grunticon
  */
 /**
  * Global app/site styles
@@ -1901,28 +1997,8 @@ body {
   .lt-ie9 .l-container {
     min-width: 1000px; }
 
-/*
-   Icons
-   ========================================================================== */
-[class^="icon-"], [class*=" icon-"] {
-  speak: none;
-  background-size: contain;
-  background-position: center center; }
-
-.icon-large {
-  display: block;
-  width: 120px;
-  height: 120px; }
-
-.icon-small {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  vertical-align: top; }
-
 /**
  * Views
- * =================================
  */
 /* Helper/utility classes */
 /**
