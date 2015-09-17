@@ -1,41 +1,26 @@
 /**
+ * Project Name:
+ * Client:
  * Author:
- * TMW - (Author Name Here)
+ * Company:
  */
 
-// Create a closure to maintain scope of the '$' and KO (Kickoff)
-;(function(KO, $) {
+'use-strict';
 
-	$(function() {
-		// Any globals go here in CAPS (but avoid if possible)
+// npm modules
+var SwiftClick = require('swiftclick');
+var trak = require('trak.js');
 
-		// follow a singleton pattern
-		// (http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript)
+// Our own modules
+var ready = require('./modules/ready'); // DOM ready
 
-		KO.Config.init();
+// Bundle global libs that don't return a value
+require('console');
 
-	});// END DOC READY
 
+// DOM ready code goes in here
+ready.add(function () {
+	trak.start();
+	var swiftclick = SwiftClick.attach(document.body);
 
-	KO.Config = {
-		variableX : '', // please don't keep me - only for example syntax!
-
-		init : function () {
-			console.debug('Kickoff is running');
-		}
-	};
-
-	// Example module
-	/*
-	KO.MyExampleModule = {
-		init : function () {
-			KO.MyExampleModule.setupEvents();
-		},
-
-		setupEvents : function () {
-			//do some more stuff in here
-		}
-	};
-	*/
-
-})(window.KO = window.KO || {}, jQuery);
+});
