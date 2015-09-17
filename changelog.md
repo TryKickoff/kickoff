@@ -1,6 +1,18 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://trykickoff.github.io/
 
+## Version 6.0.0
+Date 23/09/2015
+
+* This release's major change is that we switched to use Browserify as the way to bundle all our javascript. If you would like to continue using the old style, please use either our [Yeoman generator](http://trykickoff.github.io/learn/yeoman.html) or the Grunt config from [Kickoff v5.0.0](https://github.com/TryKickoff/kickoff/tree/5.0.0)
+* Removed a few rarely-used grunt plugins
+  - Grunt Photobox
+  - grunt-contrib-scss-lint
+  - grunt-contrib-jshint
+* The [media object](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/components/_media-object.scss) has been updated to ensure that it doesn't stack it's columns on skinny viewports by default but by the use of modifier classes. See the code [here](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/components/_media-object.scss)
+* [Block grids](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/components/_block.scss) have had many improvements thanks to @nicbell. There are now different modifier classes for each breakpoint which be adde
+
+
 ## Version 5.0.0
 Date 19/05/2015
 
