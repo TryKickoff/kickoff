@@ -30,6 +30,7 @@
     "node": ">=0.12"
   },
   "dependencies": {
+    "console": "^0.5.2",
     "cookies-js": "^1.2.1",
     "swiftclick": "^1.1.5",
     "trak.js": "^0.5.2"
@@ -64,7 +65,6 @@
   "keywords": [],
   "scripts": {
     "test": "grunt travis --verbose",
-
     "prekickoff": "npm install -g grunt-cli && npm install",
     "kickoff": "grunt start"
   }
