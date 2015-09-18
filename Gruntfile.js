@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 	};
 
 	// Load grunt tasks automatically
-	require('load-grunt-tasks')(grunt, {pattern: ["grunt-*", "chotto"]});
+	require('load-grunt-tasks')(grunt, {pattern: ["grunt-*"]});
 
 	// Load grunt configurations automatically
 	var configs = require('load-grunt-configs')(grunt, options);
