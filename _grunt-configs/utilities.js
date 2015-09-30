@@ -19,6 +19,15 @@ module.exports.tasks = {
 		modernizr: {
 			src: '<%=config.srcDir%>/js/libs/modernizr.min.js',
 			dest: '<%=config.distDir%>/js/libs/modernizr.min.js'
+		},
+
+		jsStandalone: {
+			files: [{
+				expand: true,
+				cwd: '<%=config.srcDir%>/js/standalone',
+				src: ['./**/*.*'],
+				dest: '<%=config.js.distDir%>/standalone'
+			}]
 		}
 	}
 };
