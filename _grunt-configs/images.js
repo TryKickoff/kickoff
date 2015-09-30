@@ -56,6 +56,8 @@ module.exports.tasks = {
 				dest  : '<%=config.img.distDir%>/icons'
 			}],
 			options: {
+				enhanceSVG: true,
+				template: "./_grunt-configs/grunticon-tpl.hbs"
 				// https://github.com/filamentgroup/grunticon#optionscustomselectors
 				// customselectors: {
 				// 	"arrow": [".icon-arrow:before"]
