@@ -6,15 +6,31 @@ module.exports.tasks = {
 	 * http://www.browsersync.io/docs/grunt/
 	 */
 	browserSync: {
+		options: {
+			watchTask: true,
+			notify: {
+				styles: [
+					'pointer-events: none',
+					'position: fixed',
+					'bottom: 0',
+					'left: 0',
+					'right: 0',
+					'text-align: center',
+					'background-color: #181830',
+					'color: #fff',
+					'padding: 15px'
+				]
+			}
+		},
+
 		serve: {
 			bsFiles: {
 				src: [
-					'<%=config.distDir%>/**/*.*',
+					'<%=config.distDir%>/{js,img}/*.*',
 					'**/*.html'
 				]
 			},
 			options: {
-				watchTask: true,
 				server: './'
 			}
 		},
@@ -22,12 +38,11 @@ module.exports.tasks = {
 		styleguide: {
 			bsFiles: {
 				src: [
-					'<%=config.distDir%>/**/*.*',
+					'<%=config.distDir%>/{js,img}/*.*',
 					'*.html'
 				]
 			},
 			options: {
-				watchTask: true,
 				server: {
 					baseDir: './',
 					index: 'styleguide/index.html'
