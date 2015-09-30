@@ -30,8 +30,13 @@
     "node": ">=0.12"
   },
   "dependencies": {
+    "browser-sync": "^2.9.7",
     "console": "^0.5.2",
+    "glob": "^5.0.15",
+    "grunt-sass": "^1.0.0",
     "lite-ready": "^1.0.3",
+    "load-grunt-tasks": "^3.3.0",
+    "minifyify": "^7.1.0",
     "swiftclick": "^1.1.5",
     "trak.js": "^0.5.2"
   },
