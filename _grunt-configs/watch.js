@@ -39,7 +39,7 @@ module.exports.tasks = {
 	// Browsersync reload
 	bsReload: {
 		css: {
-			reload: "<%=config.distDir%>/css/*.css"
+			reload: '<%=config.distDir%>/css/*.css'
 		},
 		all: {
 			reload: true
@@ -49,7 +49,7 @@ module.exports.tasks = {
 	// Browsersync notify
 	bsNotify: {
 		sassStart: {
-			notify: "Please wait, compiling Sass!"
+			notify: 'Please wait, compiling Sass!'
 		}
 	}
 };
