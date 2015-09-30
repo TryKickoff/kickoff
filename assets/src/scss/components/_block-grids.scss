@@ -12,14 +12,14 @@
  *     <li></li>
  * </ul>
  */
- 
+
  @mixin blockGridHelper($mutator){
 	&[class*="up--#{$mutator}"] > li {
 		display: block;
 		height: auto;
 		float: left;
 	}
-	
+
 	@for $i from 1 to $grid-column-count + 1 {
 		&.l-blockGrid--#{$i}up--#{$mutator} > li {
 			width: percentage(1 / $i);
@@ -29,7 +29,7 @@
 		}
 	}
 }
- 
+
 .l-blockGrid {
 	display: block;
 	list-style-type: none;
@@ -64,12 +64,17 @@
 			}
 		}
 	}
-	
+
+	// Wide block-grid
+	@include respond-min($bp-mid) {
+		@include blockGridHelper('mid');
+	}
+
 	// Wide block-grid
 	@include respond-min($bp-wide) {
 		@include blockGridHelper('wide');
 	}
-	
+
 	// Huge block-grid
 	@include respond-min($bp-huge) {
 		@include blockGridHelper('huge');
@@ -81,10 +86,10 @@
  * Guttered block grid
  */
 .l-blockGrid--guttered {
-    margin-left: -#{$grid-gutter-width}px;
+	margin-left: -#{$grid-gutter-width}px;
 
-    > li {
-        padding-left: #{$grid-gutter-width}px;
+	> li {
+		padding-left: #{$grid-gutter-width}px;
 		padding-bottom: #{$grid-gutter-width}px;
-    }
+	}
 }
