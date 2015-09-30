@@ -10,7 +10,6 @@ assets/temp/**/*
 
 
 # CSS & Sass
-# css/*.css
 .sass-cache/
 *.scssc
 
@@ -22,6 +21,13 @@ bower_modules/*
 node_modules/*
 logs
 *.log
+
+
+# PHP
+.idea
+
+
+# .NET
 
 
 # Tooling
