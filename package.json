@@ -58,7 +58,7 @@
     "opn": "^3.0.2"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.8.2",
+    "browser-sync": "^2.9.7",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^0.6.1"
   },
