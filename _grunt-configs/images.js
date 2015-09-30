@@ -1,7 +1,3 @@
-var mozjpeg  = require('imagemin-mozjpeg');
-var pngquant = require('imagemin-pngquant');
-var gifsicle = require('imagemin-gifsicle');
-
 module.exports.tasks = {
 
 	/**
@@ -26,11 +22,6 @@ module.exports.tasks = {
 				svgoPlugins: [
 					{ removeViewBox: false },
 					{ removeUselessStrokeAndFill: false }
-				],
-				use: [
-					mozjpeg(),
-					pngquant(),
-					gifsicle()
 				]
 			},
 			files: [{
