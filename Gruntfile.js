@@ -168,8 +168,10 @@ module.exports = function (grunt) {
 
 	// Compile CSS
 	grunt.registerTask('compileCSS', [
+		'bsNotify:sassStart',
 		'sass',
 		'autoprefixer',
+		'bsReload:css',
 		'clean:tempCSS'
 	]);
 };

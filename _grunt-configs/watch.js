@@ -34,5 +34,22 @@ module.exports.tasks = {
 				reload: true
 			}
 		}
+	},
+
+	// Browsersync reload
+	bsReload: {
+		css: {
+			reload: '<%=config.distDir%>/css/*.css'
+		},
+		all: {
+			reload: true
+		}
+	},
+
+	// Browsersync notify
+	bsNotify: {
+		sassStart: {
+			notify: 'Please wait, compiling Sass!'
+		}
 	}
 };
