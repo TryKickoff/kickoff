@@ -30,18 +30,13 @@
     "node": ">=0.12"
   },
   "dependencies": {
-    "browser-sync": "^2.9.7",
     "console": "^0.5.2",
-    "glob": "^5.0.15",
-    "grunt-sass": "^1.0.0",
     "lite-ready": "^1.0.3",
-    "load-grunt-tasks": "^3.3.0",
-    "minifyify": "^7.1.0",
     "swiftclick": "^1.1.5",
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
-    "glob": "^5.0.5",
+    "glob": "^5.0.15",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.0",
     "grunt-browserify": "^4.0.0",
@@ -55,19 +50,18 @@
     "grunt-sass": "^1.0.0",
     "grunt-shimly": "^0.0.11",
     "load-grunt-configs": "^0.4.3",
-    "load-grunt-tasks": "^3.1.0",
-    "minifyify": "^7.0.5",
+    "load-grunt-tasks": "^3.3.0",
+    "minifyify": "^7.1.0",
     "opn": "^3.0.2"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.8.2",
+    "browser-sync": "^2.9.7",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^0.6.1"
   },
   "keywords": [],
   "scripts": {
     "test": "grunt travis --verbose",
-
     "prestart": "npm install -g grunt-cli && npm install",
     "start": "grunt start"
   }
