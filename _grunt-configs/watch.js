@@ -14,7 +14,8 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'compileCSS'
+				'compileCSS',
+				'filesizegzip:css'
 			]
 		},
 

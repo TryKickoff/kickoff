@@ -29,5 +29,15 @@ module.exports.tasks = {
 				dest: '<%=config.js.distDir%>/standalone'
 			}]
 		}
-	}
+	},
+
+	filesizegzip: {
+		js: {
+			src: '<%=config.js.distDir%><%=config.js.distFile%>'
+		},
+
+		css: {
+			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css'
+		}
+	},
 };

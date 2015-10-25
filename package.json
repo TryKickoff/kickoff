@@ -44,6 +44,7 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-csso": "^0.7.1",
+    "grunt-filesizegzip": "^0.2.0",
     "grunt-grunticon": "^2.1.6",
     "grunt-html-validation": "^0.1.18",
     "grunt-newer": "^1.1.0",
