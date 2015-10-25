@@ -36,7 +36,6 @@
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
-    "glob": "^5.0.15",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.0",
     "grunt-browserify": "^4.0.0",
@@ -44,7 +43,6 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-csso": "^0.7.1",
-    "grunt-filesizegzip": "^0.2.0",
     "grunt-grunticon": "^2.1.6",
     "grunt-html-validation": "^0.1.18",
     "grunt-newer": "^1.1.0",
@@ -52,13 +50,14 @@
     "grunt-shimly": "^0.0.11",
     "load-grunt-configs": "^0.4.3",
     "load-grunt-tasks": "^3.3.0",
-    "minifyify": "^7.1.0",
-    "opn": "^3.0.2"
+    "minifyify": "^7.1.0"
   },
   "optionalDependencies": {
     "browser-sync": "^2.9.7",
     "grunt-browser-sync": "^2.1.3",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-filesizegzip": "^0.2.0",
+    "opn": "^3.0.2"
   },
   "keywords": [],
   "scripts": {
