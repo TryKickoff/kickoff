@@ -13,19 +13,26 @@
  * </ul>
  */
 
- @mixin blockGridHelper($mutator){
-	&[class*="up--#{$mutator}"] > li {
-		display: block;
-		height: auto;
-		float: left;
+@mixin blockGridHelper($mutator: false) {
+	$suffix: up;
+
+	@if($mutator) {
+		$suffix: up--#{$mutator};
 	}
 
 	@for $i from 1 to $grid-column-count + 1 {
-		&.l-blockGrid--#{$i}up--#{$mutator} > li {
-			width: percentage(1 / $i);
-			display: block;
-			height: auto;
+		&.l-blockGrid--#{$i}#{$suffix} > li {
 			float: left;
+			width: percentage(1 / $i);
+
+			//Clear incase of height difference of block items.
+			&:nth-of-type(#{$i}n + 1) {
+				clear: left;
+			}
+
+			&:not(:nth-of-type(#{$i}n + 1)) {
+				clear: none;
+			}
 		}
 	}
 }
@@ -50,22 +57,12 @@
 		@include blockGridHelper('narrow');
 	}
 
+	// Standard block-grid (which is wider than mid on this proj)
 	@include respond-min($bp-single-col) {
-		> li {
-			display: block;
-			height: auto;
-			float: left;
-		}
-
-		// Wide block-grid
-		@for $i from 1 to $grid-column-count + 1 {
-			&.l-blockGrid--#{$i}up > li {
-				width: percentage(1 / $i);
-			}
-		}
+		@include blockGridHelper();
 	}
 
-	// Wide block-grid
+	// Mid block-grid
 	@include respond-min($bp-mid) {
 		@include blockGridHelper('mid');
 	}
