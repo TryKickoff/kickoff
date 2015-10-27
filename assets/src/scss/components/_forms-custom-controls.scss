@@ -83,7 +83,7 @@ $checkbox-indicator-width : .1em;
 		background-color: $custom-input-selected;
 		display: block;
 		opacity: 0;
-		transition: $default-transition;
+		transition: all 250ms ease-in-out;
 	}
 
 	&:before {
@@ -169,65 +169,53 @@ $checkbox-indicator-width : .1em;
  * Custom select element
  * http://jsbin.com/juvixufu/165/edit
  */
-.form-input--selectWrapper {
+.form-input--customSelectWrapper {
 	position: relative;
 	display: block;
 	padding: 0;
+
+	/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
+	&:after {
+		background: none;
+		color: #bbb;
+		content: "\25BC";
+		font-size: .7em;
+		padding: 0;
+		position: absolute;
+		right: 1.2em;
+		top: 50%;
+		margin-top: -9px;
+		z-index: 2;
+
+		/* These hacks make the select behind the arrow clickable in some browsers */
+		pointer-events: none;
+		background: url(#);
+	}
 }
 
 /* This is the native select, we're making everything the text invisible so we can see the button styles in the wrapper */
-.form-input--selectWrapper select {
-	width: 100%;
-	max-width: 100%;
-	min-width: 100%;
-	margin: 0;
-	background: none;
-	border: 0;
-	outline: none;
-	/* Remove select styling */
-	appearance: none;
+.form-input--select--custom {
 	-webkit-appearance: none;
-	/* Magic font size number to prevent iOS text zoom */
-	// font-size:16px;
-	padding: .5em;
-	height: 2.3em;
-	line-height: 1;
+	appearance: none;
 }
 
 /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.form-input--selectWrapper select::-ms-expand {
+	.form-input--select--custom::-ms-expand {
 		display: none;
 	}
 }
 
-/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
-.form-input--selectWrapper:after {
-	background: none;
-	color: #bbb;
-	content: "\25BC";
-	font-size: .7em;
-	padding: 0;
-	position: absolute;
-	right: 1.2em;
-	top: 50%;
-	margin-top: -9px;
-	z-index: 2;
-
-	/* These hacks make the select behind the arrow clickable in some browsers */
-	pointer-events: none;
-	background: url(#);
-}
 
 /* This selector targets Firefox only with the trick of making the select 110% but clipped by the container at 100% to hide the arrow. We have to do this because getting rid of select appearance isn't supported consistently */
-.form-input--selectWrapper,
+.form-input--customSelectWrapper,
 x:-moz-any-link,
 x:default {
 	overflow: hidden;
 	width: 100%;
 }
 
-.form-input--selectWrapper select,
+.form-input--select--custom,
 x:-moz-any-link,
 x:default {
 	width: 110%;
@@ -251,13 +239,13 @@ x:default {
 // }
 
 /* Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text */
-.form-input--selectWrapper:focus::-ms-value {
+.form-input--customSelectWrapper:focus::-ms-value {
 	background: transparent;
 	color: #222;
 }
 
 /* Firefox focus has odd artifacts around the text, this kills that */
-.form-input--selectWrapper:-moz-focusring {
+.form-input--customSelectWrapper:-moz-focusring {
 	color: transparent;
 	text-shadow: 0 0 0 #000;
 }
