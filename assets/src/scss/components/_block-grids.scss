@@ -8,7 +8,7 @@
  * </ul>
  *
  * Mobile Usage:
- * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
+ * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--6up--wide">
  *     <li></li>
  * </ul>
  */
@@ -57,7 +57,7 @@
 		@include blockGridHelper('narrow');
 	}
 
-	// Standard block-grid (which is wider than mid on this proj)
+	// Standard block-grid
 	@include respond-min($bp-single-col) {
 		@include blockGridHelper();
 	}
