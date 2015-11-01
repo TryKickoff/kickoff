@@ -12,10 +12,13 @@
     {
       "name": "Ashley Nolan",
       "url": "http://ashleynolan.co.uk"
+    },
+    {
+      "name": "Nic Bell",
+      "url": "http://nicbell.net"
     }
   ],
   "contributors": [
-    "Nic Bell",
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
   "repository": {
