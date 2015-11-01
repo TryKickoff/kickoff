@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "console": "^0.5.2",
-    "lite-ready": "^1.0.3",
-    "swiftclick": "^1.1.5",
+    "lite-ready": "^1.0.4",
+    "swiftclick": "^1.2.0",
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
@@ -40,20 +40,20 @@
     "grunt-autoprefixer": "^3.0.0",
     "grunt-browserify": "^4.0.0",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-csso": "^0.7.1",
+    "grunt-csso": "^0.8.0",
     "grunt-grunticon": "^2.1.6",
     "grunt-html-validation": "^0.1.18",
     "grunt-newer": "^1.1.0",
-    "grunt-sass": "^1.0.0",
-    "grunt-shimly": "^0.0.11",
+    "grunt-sass": "^1.1.0",
+    "grunt-shimly": "^1.0.1",
     "load-grunt-configs": "^0.4.3",
     "load-grunt-tasks": "^3.3.0",
     "minifyify": "^7.1.0"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.9.7",
+    "browser-sync": "^2.9.11",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filesizegzip": "^0.2.0",
