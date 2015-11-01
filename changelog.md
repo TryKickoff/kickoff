@@ -6,7 +6,7 @@ All latest changes are documented on our site at http://trykickoff.github.io
 ### Changed
 
 #### Javascript
-- Switched to use Browserify as the way to bundle all our javascript. If you would like to continue using the old style, please use either our [Yeoman generator](http://trykickoff.github.io/learn/yeoman.html) or the Grunt config from [Kickoff v5.0.0](https://github.com/TryKickoff/kickoff/tree/5.0.0)
+- Switched to use Browserify as the way to bundle all our javascript. If you would like to continue using the old style, please use either our [Yeoman generator](http://trykickoff.github.io/learn/yeoman.html) or the Grunt config from [Kickoff v5.0.0](https://github.com/TryKickoff/kickoff/tree/5.0.0). See the discussion about the change [here](https://github.com/TryKickoff/kickoff/issues/53).
 
 #### CSS/Scss
 - Ref #53 - Move all components from `scss/partials/components/*.scss` to `scss/components`
