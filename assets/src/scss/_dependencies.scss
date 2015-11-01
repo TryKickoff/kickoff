@@ -33,7 +33,9 @@
  * See http://trykickoff.github.io/demos/components.html for more info
  */
 @import "components/forms"; // http://trykickoff.github.io/demos/forms.html
-@import "components/forms-custom-controls";
+@import "components/forms-custom-radioscheckboxes"; // Custom radio & checkbox inputs
+@import "components/forms-custom-select"; // Custom select element
+// @import "components/forms-custom-file"; // Custom file input
 @import "components/icons";
 @import "components/links";
 @import "components/buttons";
