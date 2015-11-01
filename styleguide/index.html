@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>Kickoff Styleguide</title>
 		<meta name="description" content="A simple styleguide to use with your project">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,7 @@
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Logo</h2>
+				<img src="http://i.imgur.com/PiqudTY.png">
 			</div>
 		</div>
 
@@ -186,12 +187,6 @@
 					</div>
 				</div>
 
-				<h3 class="sg-interfaceType sg-interfaceType--subtle">Blockquote</h3>
-				<blockquote>
-					<p>Of all the gin joints in all the towns in all the world, she walks into mine.</p>
-					<small>Rick Blaine</small>
-				</blockquote>
-
 			</div>
 		</div>
 
@@ -234,43 +229,15 @@
 								<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
 							</div>
 						</div>
-						<div class="form-controlGroup">
-							<label for="choice" class="form-label">Choice</label>
-							<div class="form-controlGroup-inputWrapper">
-								<select id="choice" class="form-input form-input--select">
-									<option>Option 1</option>
-									<option>Option 2</option>
-									<option>Option 3</option>
-									<option>Option 4</option>
-									<option>Option 5</option>
-								</select>
-							</div>
-						</div>
 
 						<div class="form-controlGroup">
 								<label for="cs-choice" class="form-label">Custom select</label>
-								<div class="form-controlGroup-inputWrapper">
-									<label class="form-input--customSelectWrapper">
-										<select id="cs-choice" name="cs-choice" class="form-input form-input--select form-input--select--custom">
-												<option value="--">Select title</option>
-												<option value="Mr">Mr</option>
-												<option value="Mrs">Mrs</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-												<option value="Ms">Ms</option>
-										</select>
-									</label>
+								<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+									<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+										<option value="--">Select title</option>
+										<option value="Mr">Mr</option>
+										<option value="Mrs">Mrs</option>
+									</select>
 								</div>
 						</div>
 
@@ -278,19 +245,15 @@
 							<div class="form-controlGroup g-span6 g-col">
 								<label class="form-label">Checkboxes</label>
 								<div class="form-controlGroup-inputWrapper">
-									<label class="control">
-										<input type="checkbox" value="check1">
-										This is a checkbox
+									<label class="control control--custom">
+										<input class="control--custom-input" type="checkbox" name="myCheckbox" />
+										<span class="control-indicator control-indicator--tickbox"></span>
+										Check 1
 									</label>
 									<label class="control control--custom">
 										<input class="control--custom-input" type="checkbox" name="myCheckbox" />
-										<span class="control-indicator control-indicator--checkbox"></span>
-										My Checkbox Label Text
-									</label>
-									<label class="control control--custom">
-										<input class="control--custom-input" type="checkbox" name="myCheckbox" />
-										<span class="control-indicator control-indicator--checkbox control-indicator--checkbox--tick"></span>
-										My Tickbox Label Text
+										<span class="control-indicator control-indicator--tickbox"></span>
+										Check 2
 									</label>
 								</div>
 							</div>
@@ -298,12 +261,13 @@
 							<div class="form-controlGroup g-span6 g-col">
 								<label class="form-label">Radio buttons</label>
 								<div class="form-controlGroup-inputWrapper">
-									<label class="control">
-										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-										This is a radio
+									<label class="control control--custom">
+										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
+										<span class="control-indicator control-indicator--radio"></span>
+										My Radio Button Label Text
 									</label>
 									<label class="control control--custom">
-										<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" />
+										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
 										<span class="control-indicator control-indicator--radio"></span>
 										My Radio Button Label Text
 									</label>
@@ -311,46 +275,6 @@
 							</div>
 						</div>
 
-					</fieldset>
-
-					<h3 class="sg-interfaceType sg-interfaceType--subtle">Validation information</h3>
-					<fieldset class="form-fieldset">
-						<div class="form-controlGroup has-success">
-							<label for="textSuccess" class="form-label">Input with success</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="textSuccess" class="form-input" value="A value"/>
-								<div class="form-message">
-									Yay!
-								</div>
-							</div>
-						</div>
-						<div class="form-controlGroup has-error">
-							<label for="textError" class="form-label">Input with error</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="textError" class="form-input" value="A value"/>
-								<div class="form-message">
-									Please correct the error
-								</div>
-							</div>
-						</div>
-						<div class="form-controlGroup has-warning">
-							<label for="textWarning" class="form-label">Input with warning</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="textWarning" class="form-input" value="A value"/>
-								<div class="form-message">
-									Something may have gone wrong
-								</div>
-							</div>
-						</div>
-						<div class="form-controlGroup has-info">
-							<label for="textInfo" class="form-label">Input with info</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="textInfo" class="form-input" value="A value"/>
-								<div class="form-message">
-									Username is taken
-								</div>
-							</div>
-						</div>
 					</fieldset>
 
 					<div class="form-actions">
