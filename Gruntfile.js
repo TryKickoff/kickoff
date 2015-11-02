@@ -1,7 +1,19 @@
+/**
+ * Grunt tasks:
+ * - grunt                   : The default task. Alias for `grunt serve` task below
+ * - grunt serve             : watch files and run a static server
+ * - grunt watcher           : watch files without static server
+ * - grunt compile           : compile scss, js & compress images
+ * - grunt compile --release : same as above, but compress CSS as well
+ * - grunt icons             : generate the icons using grunticon
+ * - grunt images            : compress all non-grunticon images & then run `grunt icons`
+ */
+
+var opn = require('opn')
+
 module.exports = function (grunt) {
 	'use strict';
 
-	var opn = require('opn');
 
 	var options = {
 		pkg: require('./package'), // <%=pkg.name%>
@@ -21,119 +33,60 @@ module.exports = function (grunt) {
 
 
 	/**
-	 * Available tasks:
-	 * grunt            : Alias for 'serve' task, below (the default task)
-	 * grunt serve      : watch js, images & scss and run a local server
-	 * grunt watcher    : run compile JS/CSS then watch
-	 * grunt start      : Opens the post-install setup checklist on the Kickoff site
-	 * grunt watch      : run sass:kickoff, uglify and livereload
-	 * grunt dev        : run browserify, sass:kickoff & autoprefixer:kickoff
-	 * grunt deploy     : run browserify, sass:kickoff and csso
-	 * grunt styleguide : watch js & scss, run a local server for editing the styleguide
-	 * grunt images     : compress all non-grunticon images & then run `grunt icons`
-	 * grunt icons      : generate the icons. uses svgmin and grunticon
-	 * grunt checks     : run html validator
-	 * grunt travis     : used by travis ci only
+	 * The tasks
 	 */
 
-
-	/**
-	 * GRUNT * Alias for 'serve' task, below
-	 */
+	// grunt
 	grunt.registerTask('default', ['serve']);
 
 
-	/**
-	 * GRUNT SERVE * A task for a static server with a watch
-	 * run browserSync and watch
-	 */
+	// grunt serve
 	grunt.registerTask('serve', [
-		'shimly',
-		'compileJS',
-		'compileCSS',
-		'copy:modernizr',
-		'images',
+		'compile',
 		'browserSync:serve',
 		'watch'
-	]);
+	])
 
 
-	/**
-	 * GRUNT WATCHER * A task for compiling & watching.
-	 * Useful for development when not using the browserSync server
-	 * run compile JS/CSS then watch
-	 */
+	// grunt watcher
 	grunt.registerTask('watcher', [
-		'shimly',
-		'compileJS',
-		'compileCSS',
-		'copy:modernizr',
-		'images',
+		'compile',
 		'watch'
 	]);
 
 
-	/**
-	 * GRUNT START
-	 * Opens the post-install setup checklist on the Kickoff site
-	 */
+	// grunt compile
+	grunt.registerTask('compile', [
+		'shimly',
+		'copy:modernizr',
+		'browserify',
+		'postscss',
+		'images'
+	]);
+
+
+	// grunt start
 	grunt.registerTask('start', function() {
 		opn('http://trykickoff.github.io/learn/checklist.html');
 	});
 
 
-	/**
-	 * GRUNT DEV * A task for development
-	 * run uglify, sass:kickoff & autoprefixer:kickoff
-	 */
-	grunt.registerTask('dev', [
-		'shimly',
-		'compileJS',
-		'compileCSS',
-		'copy:modernizr',
-		'images'
-	]);
-
-
-	/**
-	 * GRUNT DEPLOY * A task for your production environment
-	 * run uglify, sass, autoprefixer and csso
-	 */
-	grunt.registerTask('deploy', [
-		'shimly',
-		'compileJS',
-		'compileCSS',
-		'csso',
-		'copy:modernizr',
-		'images'
-	]);
-
-
-	/**
-	 * GRUNT STYLEGUIDE * A task to view the styleguide
-	 */
+	// grunt styleguide
 	grunt.registerTask('styleguide', [
-		'shimly',
-		'compileJS',
-		'compileCSS',
-		'images',
+		'compile',
 		'browserSync:styleguide',
 		'watch'
 	]);
 
 
-	/**
-	 * GRUNT IMAGES * A task to compress all non-grunticon images
-	 */
+	// grunt images
 	grunt.registerTask('images', [
 		'newer:imagemin:images',
 		'icons'
 	]);
 
 
-	/**
-	 * GRUNT ICONS * A task to create all icons using grunticon
-	 */
+	// grunt icons
 	grunt.registerTask('icons', [
 		'clean:icons',
 		'newer:imagemin:grunticon',
@@ -141,37 +94,14 @@ module.exports = function (grunt) {
 	]);
 
 
-	/**
-	 * GRUNT CHECKS * Check code for errors
-	 * run jshint
-	 */
+	// grunt checks
 	grunt.registerTask('checks', [
 		'validation'
 	]);
 
 
-	/**
-	 * Travis CI to test build
-	 */
+	// grunt travis
 	grunt.registerTask('travis', [
-		'sass:kickoff'
-	]);
-
-
-	/**
-	 * Utility classes
-	 */
-	// Compile JS
-	grunt.registerTask('compileJS', [
-		'browserify'
-	]);
-
-	// Compile CSS
-	grunt.registerTask('compileCSS', [
-		'bsNotify:sassStart',
-		'sass',
-		'autoprefixer',
-		'bsReload:css',
-		'clean:tempCSS'
+		'postscss'
 	]);
 };

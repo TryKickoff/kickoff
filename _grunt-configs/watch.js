@@ -14,8 +14,19 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'compileCSS',
+				'bsNotify:sassStart',
+				'postscss',
+				'bsReload:css',
 				'filesizegzip:css'
+			]
+		},
+
+		js: {
+			files: [
+				'<%=config.js.distDir%>/**/*.js'
+			],
+			tasks: [
+				'filesizegzip:js'
 			]
 		},
 
