@@ -69,7 +69,11 @@
   "keywords": [],
   "scripts": {
     "test": "grunt travis --verbose",
-    "prestart": "npm install -g grunt-cli && npm install",
-    "start": "grunt start"
+
+    "prestart": "npm install -g grunt-cli && npm prune && npm install",
+    "start": "grunt start",
+
+    "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
+    "deploy": "grunt compile --release"
   }
 }
