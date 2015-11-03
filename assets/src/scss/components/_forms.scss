@@ -330,6 +330,7 @@ input[type="submit"] {
 .form-message {
 
 	.form-controlGroup & {
+		display: none;
 		padding-top: 0.5em;
 		padding-left: 0.5em;
 	}
