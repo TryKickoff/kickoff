@@ -22,7 +22,7 @@ module.exports = {
 
 		// We are supporting the last 2 browsers, any browsers with >5% market share,
 		// and ensuring we support IE8+ with prefixes
-		autoprefixer : ['> 5%', 'last 2 versions', 'firefox > 3.6', 'ie > 7'] // <%=config.css.autoprefixer%>
+		autoprefixer : ['> 5%', 'last 2 versions', 'ie > 7'] // <%=config.css.autoprefixer%>
 	},
 
 

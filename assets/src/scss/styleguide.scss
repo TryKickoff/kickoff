@@ -167,7 +167,7 @@ code {
 	}
 
 	code {
-			&:after { content: ' :: #{$size}px'; }
+			&:after { content: ' = #{$size}px'; }
 	}
 }
 
@@ -222,14 +222,12 @@ code {
 
 .sg-typeSpecimen--primary {
 	@include font-size(30);
-	font-family: $font-family-headings;
-	font-weight: $font-weight-headings;
-
+	font-family: $font-family-base;
 }
 
 .sg-typeSpecimen--secondary {
 	@include font-size(30);
-	font-family: $font-family-base;
+	font-family: $font-family-alt;
 }
 
 .sg-typeSpecimen--giant {

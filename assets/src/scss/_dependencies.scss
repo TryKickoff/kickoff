@@ -33,7 +33,9 @@
  * See http://trykickoff.github.io/demos/components.html for more info
  */
 @import "components/forms"; // http://trykickoff.github.io/demos/forms.html
-@import "components/forms-custom-controls";
+@import "components/forms-custom-radioscheckboxes"; // Custom radio & checkbox inputs
+@import "components/forms-custom-select"; // Custom select element
+// @import "components/forms-custom-file"; // Custom file input
 @import "components/icons";
 @import "components/links";
 @import "components/buttons";
@@ -46,7 +48,7 @@
 @import "components/tables";
 @import "components/code";
 @import "components/skip-navigation";
-// @import "components/scrollbars";x
+// @import "components/scrollbars";
 
 
 /**
@@ -55,6 +57,8 @@
 @import "global"; // Global styles
 @import "partials/masthead"; // Example partial for masthead
 @import "partials/footer"; // Example partial for footer
+
+@import "partials/browser-upgrade"; // Styles to show an upgrade message to users on old browsers
 
 
 /**
