@@ -40,17 +40,18 @@
 	.form-input--select {
 		appearance: none;
 
-		/* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
+		// IE 10 & 11: http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			// This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select
 			&::-ms-expand {
 				display: none;
 			}
-		}
 
-		/* Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text */
-		&:focus::-ms-value {
-			background: transparent;
-			color: #222;
+			// Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text
+			&:focus::-ms-value {
+				background: transparent;
+				color: #222;
+			}
 		}
 	}
 }
