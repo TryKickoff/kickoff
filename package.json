@@ -45,7 +45,6 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-grunticon": "^2.1.6",
-    "grunt-html-validation": "^0.1.18",
     "grunt-newer": "^1.1.0",
     "grunt-shimly": "^1.0.1",
     "load-grunt-configs": "^0.4.3",
