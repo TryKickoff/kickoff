@@ -17,6 +17,7 @@ All latest changes are documented on our site at http://trykickoff.github.io
   - custom checkboxes don't depend on SVGs and a tick variant has been added
 - Create new `_links.scss` and remove relevant code from `_typography.scss`
 - move (un)ordered & definition lists into _lists.scss
+- Simplified tables – now has sensible default values rather than classes as they are usually used as content
 
 #### Tooling
 - add [grunt-filesizegzip](https://github.com/mrmartineau/grunt-filesizegzip) to show file size and gzipped file size on save

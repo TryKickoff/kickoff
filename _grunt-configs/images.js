@@ -21,7 +21,9 @@ module.exports.tasks = {
 				progressive : true,
 				svgoPlugins: [
 					{ removeViewBox: false },
-					{ removeUselessStrokeAndFill: false }
+					{ removeUselessStrokeAndFill: false },
+					{ removeTitle: true },
+					{ removeXMLProcInst: false },
 				]
 			},
 			files: [{

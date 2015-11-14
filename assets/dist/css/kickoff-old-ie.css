@@ -782,7 +782,7 @@ hr {
   border-radius: 5px;
   background-clip: padding-box;
   -webkit-transition: border 200ms ease-in-out;
-          transition: border 200ms ease-in-out; }
+  transition: border 200ms ease-in-out; }
   .form-input:focus {
     border-color: #181830;
     outline: 0;
@@ -1086,7 +1086,6 @@ input[type="submit"] {
 .control--custom-input {
   position: absolute;
   opacity: 0;
-  visibility: hidden;
   z-index: -1; }
 
 .control-indicator {
@@ -1095,7 +1094,7 @@ input[type="submit"] {
   width: 1em;
   height: 1em;
   -webkit-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   border: 0.1em solid #181830;
   background-color: #181830;
   vertical-align: middle;
@@ -1119,7 +1118,7 @@ input[type="submit"] {
     display: block;
     opacity: 0;
     -webkit-transition: all 250ms ease-in-out;
-            transition: all 250ms ease-in-out; }
+    transition: all 250ms ease-in-out; }
 
 .control-indicator--checkbox:before, .control-indicator--checkbox:after {
   top: 50%;
@@ -1199,21 +1198,17 @@ input[type="submit"] {
     -ms-pointer-events: none;
     pointer-events: none;
     background: url(#); }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .form-controlGroup-inputWrapper--select:after {
+      display: none; } }
   .form-controlGroup-inputWrapper--select .form-input--select {
     -webkit-appearance: none;
        -moz-appearance: none;
-            appearance: none;
-    /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
-    /* Removes the odd blue bg color behind the text in IE 10/11 and sets the text to match the focus style text */ }
+            appearance: none; }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      .form-controlGroup-inputWrapper--select .form-input--select::-ms-expand {
-        display: none; } }
-    .form-controlGroup-inputWrapper--select .form-input--select:focus::-ms-value {
-      background: transparent;
-      color: #222; }
-
-.lt-ie10 .form-input--selectWrapper:after {
-  display: none; }
+      .form-controlGroup-inputWrapper--select .form-input--select:focus::-ms-value {
+        background: transparent;
+        color: #222; } }
 
 option {
   font-weight: normal; }
@@ -1243,7 +1238,7 @@ option {
  */
 a {
   -webkit-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out; }
+  transition: all 100ms ease-in-out; }
   a, a:link {
     color: #288ad6;
     text-decoration: none; }
@@ -1957,7 +1952,7 @@ video {
  *   - .table--rounded
  *   - .table--striped
  *   – .table--hover
- * – .tableResponsive
+ * – .responsiveTable
  */
 /**
  * Define associated Table variables
@@ -1965,100 +1960,45 @@ video {
 /**
  * Customizes the `.table` component with basic values, each used across all table variations.
  */
-.table {
+table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 28px;
   border-spacing: 0;
+  border: 2px solid #ccc;
   background-color: #f1f1f1; }
-  .table > thead > th,
-  .table > thead > td,
-  .table > tbody > th,
-  .table > tbody > td,
-  .table > tfoot > th,
-  .table > tfoot > td {
+  table th,
+  table td {
     padding: 8px;
     line-height: 28px;
     vertical-align: top;
-    border-top: 1px solid #ddd; }
-  .table > thead th,
-  .table > thead td {
+    border: 1px solid #ccc; }
+    table th:first-child,
+    table td:first-child {
+      border-left: 0; }
+    table th:last-child,
+    table td:last-child {
+      border-right: 0; }
+  table > thead th,
+  table > thead td {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd; }
-  .table > tfoot td {
-    border-top: 3px solid #ddd; }
-  .table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td {
+    border-bottom: 2px solid #ccc; }
+  table > tfoot td {
+    border-top: 2px solid #ccc;
+    border-bottom: 0; }
+  table > thead:first-child > tr:first-child > th,
+  table > thead:first-child > tr:first-child > td {
     border-top: 0; }
-  .table > tbody + tbody {
-    border-top: 2px solid #ddd; }
-  .table .table {
+  table tr:hover td, table tr:hover th {
+    background-color: inherit; }
+  table > tbody + tbody {
+    border-top: 2px solid #ccc; }
+  table table,
+  table .table {
     background-color: #f1f1f1; }
 
 th {
   text-align: left; }
-
-.table--condensed > thead th,
-.table--condensed > thead td,
-.table--condensed > tbody th,
-.table--condensed > tbody td,
-.table--condensed > tfoot th,
-.table--condensed > tfoot td {
-  padding: 5px; }
-
-/**
- * Bordered version
- * Add borders all around the table and between all the columns.
- */
-.table--bordered {
-  border: 2px solid #ddd; }
-  .table--bordered > thead th,
-  .table--bordered > thead td,
-  .table--bordered > tbody th,
-  .table--bordered > tbody td,
-  .table--bordered > tfoot th,
-  .table--bordered > tfoot td {
-    border: 1px solid #ddd; }
-  .table--bordered > thead th:first-child,
-  .table--bordered > thead td:first-child,
-  .table--bordered > tbody th:first-child,
-  .table--bordered > tbody td:first-child,
-  .table--bordered > tfoot th:first-child,
-  .table--bordered > tfoot td:first-child {
-    border-left: 0; }
-  .table--bordered > thead th:last-child,
-  .table--bordered > thead td:last-child,
-  .table--bordered > tbody th:last-child,
-  .table--bordered > tbody td:last-child,
-  .table--bordered > tfoot th:last-child,
-  .table--bordered > tfoot td:last-child {
-    border-right: 0; }
-  .table--bordered > thead th,
-  .table--bordered > thead td {
-    border-bottom-width: 2px; }
-  .table--bordered > tfoot th,
-  .table--bordered > tfoot td {
-    border-top-width: 2px;
-    border-bottom: 0; }
-
-/**
- * Rounded version
- */
-.table--rounded {
-  border-radius: 10px; }
-  .table--rounded.table--bordered th:first-child,
-  .table--rounded.table--bordered td:first-child {
-    border-left: 0; }
-  .table--rounded.table--bordered th:last-child,
-  .table--rounded.table--bordered td:last-child {
-    border-right: 0; }
-  .table--rounded.table--bordered > tfoot th,
-  .table--rounded.table--bordered > tfoot td {
-    border-bottom: 0; }
 
 /**
  * Zebra-striping
@@ -2069,14 +2009,8 @@ th {
   background-color: #f9f9f9 !important; }
 
 /**
- * Hover effect
- */
-.table--hover tr:hover td, .table--hover tr:hover th {
-  background-color: #f5f5f5; }
-
-/**
  * Responsive tables
- * Wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ * Wrap your tables in `.responsiveTable` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
  *
  * If you need more responsive tables, consider Tablesaw by the Filament Group:
  * https://github.com/filamentgroup/tablesaw
@@ -2137,7 +2071,7 @@ pre {
     z-index: 100;
     background-color: #fff;
     -webkit-transition: all 100ms ease-in-out;
-            transition: all 100ms ease-in-out; }
+    transition: all 100ms ease-in-out; }
     .skipToContent a:focus {
       top: 5px; }
 
@@ -2265,7 +2199,7 @@ textarea[contenteditable] {
 
 .transition {
   -webkit-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out; }
+  transition: all 100ms ease-in-out; }
 
 /* Print styles */
 /**
