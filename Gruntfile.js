@@ -67,7 +67,7 @@ module.exports = function (grunt) {
 
 	// grunt start
 	grunt.registerTask('start', function() {
-		opn('http://trykickoff.github.io/learn/checklist.html');
+		opn('http://trykickoff.com/learn/checklist.html');
 	});
 
 
