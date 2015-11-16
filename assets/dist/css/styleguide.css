@@ -211,12 +211,12 @@ body {
       display: block; }
 
 .sg-color-secondary {
-  color: #FE7C08; }
+  color: #fe7c08; }
   .sg-color-secondary .sg-swatch-color {
-    background-color: #FE7C08;
+    background-color: #fe7c08;
     color: #fff; }
     .sg-color-secondary .sg-swatch-color:before {
-      content: "#FE7C08";
+      content: "#fe7c08";
       display: block; }
 
 .sg-color-highlight {
