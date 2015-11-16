@@ -43,12 +43,5 @@ module.exports = {
 		srcDir       : '<%=config.srcDir%>/img',      // <%=config.img.srcDir%>
 		distDir      : '<%=config.distDir%>/img',     // <%=config.img.distDir%>
 		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
-	},
-
-
-	// Testing-related Grunt vars
-	// Add any other test vars in here
-	testing: {
-		validationDir  : './testing',  // <%=config.tests.validationDir%>
 	}
 };

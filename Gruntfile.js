@@ -14,7 +14,6 @@ var opn = require('opn')
 module.exports = function (grunt) {
 	'use strict';
 
-
 	var options = {
 		pkg: require('./package'), // <%=pkg.name%>
 
@@ -57,11 +56,11 @@ module.exports = function (grunt) {
 
 	// grunt compile
 	grunt.registerTask('compile', [
-		'shimly',
-		'copy:modernizr',
 		'browserify',
 		'postscss',
-		'images'
+		'images',
+		'shimly',
+		'copy:jsStandalone'
 	]);
 
 
@@ -91,12 +90,6 @@ module.exports = function (grunt) {
 		'clean:icons',
 		'newer:imagemin:grunticon',
 		'grunticon'
-	]);
-
-
-	// grunt checks
-	grunt.registerTask('checks', [
-		'validation'
 	]);
 
 
