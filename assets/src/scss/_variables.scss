@@ -92,7 +92,7 @@ $grid-column-padding          : 0     !default; // [in pixels]
 $grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
 $nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
-// Choose your grid options, see http://trykickoff.github.io/learn/grid.html for more info
+// Choose your grid options, see http://trykickoff.com/learn/grid.html for more info
 $using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
 $using-offsetcolumns          : false !default; // Allow columns to be offset
 $using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design

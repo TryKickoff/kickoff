@@ -26,7 +26,7 @@ module.exports.tasks = {
 		serve: {
 			bsFiles: {
 				src: [
-					'<%=config.distDir%>/{js,img}/*.*',
+					'<%=config.distDir%>/{js,img}/**/*.*',
 					'**/*.html'
 				]
 			},

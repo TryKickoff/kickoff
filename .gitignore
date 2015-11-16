@@ -15,12 +15,8 @@ assets/temp/**/*
 
 
 # Dependencies
- # Bower dependencies directory. comment this line to commit them.
-bower_modules/*
- # Node modules directory. comment this line to commit them.
+# # Node modules directory. comment this line to commit them.
 node_modules/*
-logs
-*.log
 
 
 # PHP
@@ -30,15 +26,9 @@ logs
 # .NET
 
 
-# Tooling
-# Generated test files
-testing/
-
-
-# Sublime Text project files
+# IDE generated files
 *.sublime-*
-# Jekyll compilation directory
-_site/
+.vscode
 
 
 # OS generated files
@@ -49,3 +39,9 @@ _site/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# Miscellaneous
+_site/ # Jekyll compilation directory
+logs
+*.log

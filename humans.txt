@@ -15,7 +15,6 @@
     CSS
     Sass
     Grunt.js
-    Bower
     BrowserSync
-    Node.js / NPM
-    Sublime Text
+    NPM
+    Browserify

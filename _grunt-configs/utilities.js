@@ -16,11 +16,6 @@ module.exports.tasks = {
 	 * https://github.com/gruntjs/grunt-contrib-copy
 	 */
 	copy: {
-		modernizr: {
-			src: '<%=config.srcDir%>/js/libs/modernizr.min.js',
-			dest: '<%=config.distDir%>/js/libs/modernizr.min.js'
-		},
-
 		jsStandalone: {
 			files: [{
 				expand: true,
@@ -31,6 +26,12 @@ module.exports.tasks = {
 		}
 	},
 
+
+	/**
+	 * grunt-filesizegzip
+	 * https://github.com/mrmartineau/grunt-filesizegzip
+	 * Output the normal & gzipped file size of a given file
+	 */
 	filesizegzip: {
 		js: {
 			src: '<%=config.js.distDir%><%=config.js.distFile%>'
@@ -38,6 +39,10 @@ module.exports.tasks = {
 
 		css: {
 			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css'
+		},
+
+		grunticon: {
+			src: '<%=config.img.distDir%>/icons/icons.data.svg.css'
 		}
 	},
 };
