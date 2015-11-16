@@ -16,7 +16,6 @@ var ready = require('lite-ready');
 // Bundle global libs that don't return a value
 require('console');
 
-
 // DOM ready code goes in here
 ready(function () {
 	trak.start();
