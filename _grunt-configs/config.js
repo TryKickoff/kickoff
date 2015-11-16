@@ -6,9 +6,9 @@
 module.exports = {
 	src : "./_grunt-configs/*.js", // This directory. Has all the Grunt tasks grouped into specific js files
 
-	srcDir  : './assets/src',  // <%=config.srcDir%>
-	distDir : './assets/dist', // <%=config.distDir%>
-	tempDir : './assets/temp', // <%=config.tempDir%>
+	srcDir  : 'assets/src',  // <%=config.srcDir%>
+	distDir : 'assets/dist', // <%=config.distDir%>
+	tempDir : 'assets/temp', // <%=config.tempDir%>
 
 
 	// CSS-related Grunt vars
@@ -34,7 +34,7 @@ module.exports = {
 
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
-		distFile: 'script.js' // <%=config.js.distFile%>
+		distFile: 'bundle.js' // <%=config.js.distFile%>
 	},
 
 

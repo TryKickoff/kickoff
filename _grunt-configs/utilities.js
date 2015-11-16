@@ -26,6 +26,12 @@ module.exports.tasks = {
 		}
 	},
 
+
+	/**
+	 * grunt-filesizegzip
+	 * https://github.com/mrmartineau/grunt-filesizegzip
+	 * Output the normal & gzipped file size of a given file
+	 */
 	filesizegzip: {
 		js: {
 			src: '<%=config.js.distDir%><%=config.js.distFile%>'
@@ -33,6 +39,10 @@ module.exports.tasks = {
 
 		css: {
 			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css'
+		},
+
+		grunticon: {
+			src: '<%=config.img.distDir%>/icons/icons.data.svg.css'
 		}
 	},
 };
