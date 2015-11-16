@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 		'compile',
 		'browserSync:serve',
 		'watch'
-	])
+	]);
 
 
 	// grunt watcher
