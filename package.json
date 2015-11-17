@@ -39,24 +39,27 @@
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "cssnano": "^3.2.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.3",
     "grunt-grunticon": "^2.1.6",
     "grunt-newer": "^1.1.0",
+    "grunt-scss-lint": "^0.3.8",
     "grunt-shimly": "^1.0.1",
-    "load-grunt-configs": "^0.4.3",
-    "load-grunt-tasks": "^3.3.0",
-    "minifyify": "^7.1.0",
-    "postscss": "^1.2.2",
-    "autoprefixer": "^6.0.3",
-    "cssnano": "^3.2.0",
     "imagemin-gifsicle": "^4.2.0",
     "imagemin-jpegtran": "^4.3.1",
     "imagemin-optipng": "^4.3.0",
-    "imagemin-svgo": "^4.1.2"
+    "imagemin-svgo": "^4.1.2",
+    "jshint-stylish": "^2.1.0",
+    "load-grunt-configs": "^0.4.3",
+    "load-grunt-tasks": "^3.3.0",
+    "minifyify": "^7.1.0",
+    "postscss": "^1.2.2"
   },
   "optionalDependencies": {
     "browser-sync": "^2.9.11",
@@ -68,10 +71,8 @@
   "keywords": [],
   "scripts": {
     "test": "grunt travis --verbose",
-
     "prestart": "npm install -g grunt-cli && npm prune && npm install",
     "start": "grunt start",
-
     "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
     "deploy": "grunt compile --release"
   }

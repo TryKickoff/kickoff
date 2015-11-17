@@ -15,6 +15,7 @@ module.exports.tasks = {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
 				'bsNotify:sassStart',
+				// 'scsslint', // uncomment this line if you want to run linting checks on your SCSS as part of your watch build
 				'postscss',
 				'bsReload:css',
 				'filesizegzip:css'
@@ -26,6 +27,7 @@ module.exports.tasks = {
 				'<%=config.js.distDir%>/**/*.js'
 			],
 			tasks: [
+				// 'jshint:project', // uncomment this line if you want to run linting checks on your JS as part of your watch build
 				'filesizegzip:js'
 			]
 		},
