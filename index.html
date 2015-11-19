@@ -24,6 +24,25 @@
 		<!-- For mobile icons & social metatags etc, see http://trykickoff.com/learn/html.html#socialmeta
 		-->
 
+		<script>
+			var doc = window.document,
+			docElem = doc.documentElement;
+
+			// Replace 'no-js'/'js' class on <html>
+			docElem.className = docElem.className.replace(/\bno-js\b/g, '') + ' js ';
+
+			// loadJS: load a JS file asynchronously. Included from https://github.com/filamentgroup/loadJS/
+			function loadJS(e,t){"use strict";var n=window.document.getElementsByTagName("script")[0],o=window.document.createElement("script");return o.src=e,o.async=!0,n.parentNode.insertBefore(o,n),t&&"function"==typeof t&&(o.onload=t),o}
+			window.loadJS = loadJS;
+
+			// Enhancements for qualified browsers - "Cutting the Mustard"
+			if( !('addEventListener' in window && 'classList' in docElem) ){
+				// basic browsers: last stop here!
+				loadJS('/assets/dist/js/standalone/shims.js');
+				return;
+			}
+		</script>
+
 		<!-- Grunticon SVG detection script. http://github.com/filamentgroup/grunticon
 				 Remove if not using Grunticon. -->
 		<script>
@@ -53,9 +72,6 @@
 
 
 		<!-- JavaScript at the bottom for fast page loading -->
-		<!--[if lte IE 9]>
-			<script src="/assets/dist/js/standalone/shims.js"></script>
-		<![endif]-->
 		<script src="/assets/dist/js/bundle.js"></script>
 
 		<script>
