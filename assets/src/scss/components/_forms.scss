@@ -14,25 +14,26 @@
  * Define associated Form variables
  */
 
-$input-bgColor         : #fff;                // Colour of input background
-$input-borderColor     : #ccc;                // Colour of input borders
-$form-actions-bgColor  : #f5f5f5;             // Background colour of form actions container (i.e. submit)
-$label-textColor       : $color-text;         // Text colour of form labels and legends
-$input-textColor       : $color-text;         // Text colour of form inputs
+$input-bgColor            : #fff;                // Colour of input background
+$input-borderColor        : #ccc;                // Colour of input borders
+$input-borderColor--focus : $color-primary;      // Colour of input borders when focused
+$form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
+$label-textColor          : $color-text;         // Text colour of form labels and legends
+$input-textColor          : $color-text;         // Text colour of form inputs
 
-$placeholder-textColor : lighten(#000, 70%);  // Text colour of input placeholder
+$placeholder-textColor    : lighten(#000, 70%);  // Text colour of input placeholder
 
 // Messages & form states and alerts
-$color-warning         : #f4aa47; // base colour for warning input state
-$color-error           : #B94A4D;    // base colour for error input state
-$color-success         : $green;              // base colour for success input state
-$color-info         : $blue;                  // base colour for info input state
+$color-warning            : #f4aa47;             // base colour for warning input state
+$color-error              : #B94A4D;             // base colour for error input state
+$color-success            : $green;              // base colour for success input state
+$color-info               : $blue;               // base colour for info input state
 
 
 /**
  * Generic form styles
  * =================================
- * Demo: http://trykickoff.github.io/demos/forms.html#layout-example-labels-above
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
  * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
  * Usage:
   	<div class="form-controlGroup">
@@ -57,7 +58,7 @@ $color-info         : $blue;                  // base colour for info input stat
 	width: 100%;
 	padding: 0;
 	margin-bottom: $baseline;
-	@include font-size($type-large);
+	@include font-size($type-mid);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -121,7 +122,7 @@ $color-info         : $blue;                  // base colour for info input stat
 	transition: border 200ms ease-in-out;
 
 	&:focus {
-		border-color: darken($input-borderColor, 20%);
+		border-color: $input-borderColor--focus;
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
@@ -329,6 +330,7 @@ input[type="submit"] {
 .form-message {
 
 	.form-controlGroup & {
+		display: none;
 		padding-top: 0.5em;
 		padding-left: 0.5em;
 	}
@@ -392,7 +394,7 @@ input[type="submit"] {
 	 * Horizontal-specific styles
 	 * =================================
 	 * add .form--horizontal to the <form> element
-	 * Demo: http://trykickoff.github.io/demos/forms.html#layout-example-labels-inline
+	 * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-inline
 	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
 	 */
 	.form--horizontal {

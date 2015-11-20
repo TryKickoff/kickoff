@@ -1,4 +1,8 @@
-// @include prefixer(border-radius, $radii, webkit ms spec);
+/**
+ * Vendor prefixer
+ * Usage: @include prefixer(border-radius, $radii, webkit ms spec);
+ */
+
 $prefix-for-webkit:    true !default;
 $prefix-for-mozilla:   true !default;
 $prefix-for-microsoft: true !default;

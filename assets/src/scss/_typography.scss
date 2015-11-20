@@ -1,15 +1,11 @@
 /**
  * Typography
- * =================================
- * Base
- * Paragraphs
- * Headings
- * Links
- * Lists
- * Definition lists
- * Blockquotes
- * Misc
- * Utilities
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
  * Resources:
@@ -39,7 +35,6 @@ body {
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
-	// =========================================
 	// 1.
 	// -webkit-font-smoothing: antialiased;
 	//    -moz-font-smoothing: antialiased;
@@ -59,7 +54,6 @@ p {
 	margin-bottom: $baseline;
 
 	// Measure - ideally about 65 chars per line
-	// =========================================
 	// max-width: $type-base * 30 + px;
 
 	// & small {
@@ -92,11 +86,11 @@ h1, .h1, .alpha {
 }
 
 h2, .h2, .beta {
-	@include font-size($type-larger);
+	@include font-size($type-large);
 }
 
 h3, .h3, .gamma {
-	@include font-size($type-large);
+	@include font-size($type-mid);
 }
 
 h4, .h4, .delta {
@@ -108,7 +102,6 @@ h6, .h6, .zeta {
 	@include font-size($type-small);
 	margin-bottom: 0;
 }
-
 
 // h5, .h5, .epsilon {
 // }
@@ -129,103 +122,8 @@ small {
 }
 
 /**
- * Links
- */
-a {
-	&, &:link {
-		color: $color-link-default;
-		text-decoration: none;
-	}
-
-	&:visited {
-		color: $color-link-visited;
-		text-decoration: none;
-	}
-
-	&:hover, &:focus {
-		color: $color-link-hover;
-		//text-decoration: underline;
-	}
-
-	&:active {
-		color: $color-link-active;
-		//text-decoration: underline;
-	}
-}
-
-
-/**
- * Lists
- */
-ul {
-	list-style-type: disc;
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-// Unordered and Ordered lists
-// Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
-ul, ol {
-	padding: 0;
-	margin: 0 0 $baseline $baseline;
-
-	ul,
-	ol {
-		margin-left: $baseline * 2;
-	}
-
-	ul {
-		list-style-type: circle;
-
-		ul {
-			list-style-type: square;
-		}
-	}
-
-	ol {
-		list-style-type: upper-roman;
-
-		ol {
-			list-style-type: lower-roman;
-		}
-	}
-
-	ul, ol {
-		margin-bottom: 0;
-	}
-}
-
-/**
- * Unstyled lists
- */
-.unstyled {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	list-style-image: none;
-}
-
-
-/**
- * Definition lists
- */
-dl { margin-bottom: $baseline; }
-dt { font-weight: $font-weight-bold; }
-dd { margin-left: $baseline; }
-
-
-/**
  * Miscellaneous
  */
-// Horizontal rules
-hr {
-	margin: ($baseline) 0;
-	border: 0;
-	border-top: 1px solid $hr-border;
-	border-bottom: 1px solid #fff;
-}
 
 // Emphasis
 strong, b {
@@ -325,3 +223,11 @@ samp {
 }
 
 @include text-selection($color-selection, $color-selection-bg);
+
+// Horizontal rules
+hr {
+	margin: ($baseline) 0;
+	border: 0;
+	border-top: 1px solid $hr-border;
+	border-bottom: 1px solid #fff;
+}

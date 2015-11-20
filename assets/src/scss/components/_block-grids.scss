@@ -1,0 +1,98 @@
+/**
+ * Block grids
+ * These are suited for repeating blocks of content. See below for usage
+ *
+ * Usage:
+ * <ul class="l-blockGrid l-blockGrid--3">
+ *     <li class="l-blockGrid-item"></li>
+ * </ul>
+ *
+ * <div class="l-blockGrid l-blockGrid--4 l-blockGrid--2--narrow l-blockGrid--6--wide">
+ *     <div class="l-blockGrid-item"></div>
+ * </div>
+ */
+ 
+ 
+/**
+ * Block grid breakpoints
+ * Add or remove any breakpoints that you may or may not need.
+ * Note: Reorder these if your breakpoints aren't in this order, 
+ * should be smallest to largest.
+ */
+$block-grid-breakpoints: (
+	narrow: $bp-narrow,
+	default: $bp-single-col,
+	//mid: $bp-mid,
+	//wide: $bp-wide,
+	//huge: $bp-huge
+);
+
+
+/**
+ * Generate block grids based on colum count
+ */
+@mixin blockGridHelper($mutator: false) {
+	$suffix: '';
+
+	// default doesn't need a mutator
+	@if($mutator and not ($mutator == default)) {
+		$suffix: '--' + #{$mutator};
+	}
+
+	@for $i from 1 to $grid-column-count + 1 {
+		.l-blockGrid--#{$i}#{$suffix} {
+			.l-blockGrid-item {
+				float: left;
+				width: percentage(1 / $i);
+	
+				/**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */
+				&:nth-of-type(#{$i}n + 1) {
+					clear: left;
+				}
+	
+				&:not(:nth-of-type(#{$i}n + 1)) {
+					clear: none;
+				}
+			}
+		}
+	}
+}
+
+
+.l-blockGrid {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	@include clearfix;
+}
+
+.l-blockGrid-item {
+	display: block;
+	height: auto;
+	
+	@if $grid-column-padding > 0 {
+		padding: $grid-column-padding + px;
+	}
+}
+
+@each $name, $value in $block-grid-breakpoints {
+	@include respond-min($value) {
+		@include blockGridHelper($name);
+	}
+}
+
+
+/**
+ * Guttered block grid mutator
+ */
+.l-blockGrid--guttered {
+	margin-left: -#{$grid-gutter-width}px;
+
+	.l-blockGrid-item {
+		padding-left: #{$grid-gutter-width}px;
+		padding-bottom: #{$grid-gutter-width}px;
+	}
+}

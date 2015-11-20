@@ -14,16 +14,21 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'compileCSS',
-				'clean:tempCSS'
+				'bsNotify:sassStart',
+				// 'scsslint', // uncomment this line if you want to run linting checks on your SCSS as part of your watch build
+				'postscss',
+				'bsReload:css',
+				'filesizegzip:css'
 			]
 		},
 
 		js: {
-			files: ['<%=config.js.fileList%>'],
+			files: [
+				'<%=config.js.distDir%>/**/*.js'
+			],
 			tasks: [
-				'uglify',
-				'newer:copy:modernizr'
+				// 'jshint:project', // uncomment this line if you want to run linting checks on your JS as part of your watch build
+				'filesizegzip:js'
 			]
 		},
 
@@ -42,6 +47,23 @@ module.exports.tasks = {
 			options: {
 				reload: true
 			}
+		}
+	},
+
+	// Browsersync reload
+	bsReload: {
+		css: {
+			reload: '<%=config.distDir%>/css/*.css'
+		},
+		all: {
+			reload: true
+		}
+	},
+
+	// Browsersync notify
+	bsNotify: {
+		sassStart: {
+			notify: 'Please wait, compiling Sass!'
 		}
 	}
 };
