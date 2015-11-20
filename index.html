@@ -35,7 +35,10 @@
 
 			// Enhancements for qualified browsers - "Cutting the Mustard"
 			if( !('addEventListener' in win && 'classList' in docElem) ){
+				// Load shims for browsers that don't pass the test
 				loadJS('/assets/dist/js/standalone/shims.js');
+
+				// Add your own enhancements here, see https://github.com/filamentgroup/enhance for more info
 			}
 		</script>
 
