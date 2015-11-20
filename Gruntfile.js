@@ -7,7 +7,7 @@
  * - grunt compile --release : same as above, but compress CSS as well
  * - grunt icons             : generate the icons using grunticon
  * - grunt images            : compress all non-grunticon images & then run `grunt icons`
- * * grunt checks            : run jshint and scsslint
+ * - grunt checks            : run jshint and scsslint
  */
 
 var opn = require('opn')
