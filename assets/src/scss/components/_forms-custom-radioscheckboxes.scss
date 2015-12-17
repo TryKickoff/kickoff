@@ -7,8 +7,8 @@
  *
  * Checkbox button example HTML
  *
- *	<label class="control control--custom">
- *		<input class="control--custom-input" type="checkbox" name="myCheckbox" />
+ *	<label class="control control--custom" for="checkbox1">
+ *		<input class="control--custom-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
  *		<span class="control-indicator control-indicator--checkbox"></span>
  *		My Checkbox Label Text
  *	</label>
@@ -17,8 +17,8 @@
  *
  * Radio button example HTML
  *
- *	<label class="control control--custom">
- *		<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" />
+ *	<label class="control control--custom" for="radio1">
+ *		<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" value="A value"/>
  *		<span class="control-indicator control-indicator--radio"></span>
  *		My Radio Button Label Text
  * 	</label>
