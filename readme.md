@@ -12,14 +12,14 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
  * Starter content styles: [typography](http://trykickoff.com/demos/typography.html), [grids](http://trykickoff.com/demos/grids.html) & [components](http://trykickoff.com/demos/components.html)
  * Starter form element styles ([see demo](http://trykickoff.com/demos/forms.html)): stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice, validation states
  * Lots of helper classes & Sass mixins for many CSS3 features like [media-queries](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss)
-* Simple **Javascript** boilerplate that makes very little assumptions about your chosen style or workflow.
- * The default method uses a [list of files](https://github.com/TryKickoff/kickoff/blob/master/_grunt-configs/config.js#L41-L55) that are concatinated & compressed with Uglify
- * If you prefer something more advanced, our [Yeoman generator](http://trykickoff.com/docs/yeoman.html) allows you to use Browserify instead :)
-* **[Grunt](http://gruntjs.com)** used extensively to ease common development bottlenecks
- * Sass compilation using [libsass](https://github.com/sass/libsass) (using [grunt-sass](https://github.com/sindresorhus/grunt-sass)) and uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
- * Concatenation and minification of JS files
- * Simple server using [BrowserSync](http://browsersync.io)
- * SVG Icon generation using [grunticon](https://github.com/filamentgroup/grunticon)
+* Simple **Javascript** [boilerplate](https://github.com/TryKickoff/kickoff/blob/master/assets/src/js/script.js) that makes very little assumptions about your chosen style or workflow.
+ * JS bundled with [Browserify](http://browserify.org)
+ * ES2015/ES6 syntax supported using the Babel transpiler
+* **[Grunt](http://gruntjs.com)** task runner used extensively to ease common development bottlenecks
+ * Sass is compiled using [node-sass](https://github.com/sass/node-sass) and we use [Autoprefixer](https://github.com/postcss/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
+ * PostCSS plugins can also be used to transform your CSS
+* Simple server using [BrowserSync](http://browsersync.io)
+* SVG Icon generation using [Grunticon](https://github.com/filamentgroup/grunticon)
 
 ## Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.com](http://trykickoff.com/).
