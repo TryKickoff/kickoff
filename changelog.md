@@ -1,7 +1,15 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://trykickoff.com
 
-## [6.0.0] - 23/09/2015
+## [6.1.0] - 17/02/2016
+
+### Changed
+
+#### Javascript
+- Updated js to use ES6/ES2015 syntax to be transpiled using Babel (babelify Browserify transform)
+- Switched from jshint & jscs to [ESLint](http://eslint.org). ESLint config is custom but heavily based on [Airbnb's ESLint style guides](https://github.com/airbnb/javascript).
+
+## [6.0.0] - 20/11/2015
 
 ### Changed
 
