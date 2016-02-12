@@ -8,18 +8,16 @@
 'use-strict';
 
 // npm modules
-var SwiftClick = require('swiftclick');
-var trak = require('trak.js');
-var ready = require('lite-ready');
+import SwiftClick from 'swiftclick';
+import trak from 'trak.js';
+import ready from 'lite-ready';
 
 
 // Bundle global libs that don't return a value
-require('console');
+import 'console';
 
 // DOM ready code goes in here
-ready(function () {
-
+ready(function() {
+	const swiftclick = SwiftClick.attach(document.body);
 	trak.start();
-	var swiftclick = SwiftClick.attach(document.body);
-
 });
