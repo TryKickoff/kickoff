@@ -17,7 +17,7 @@ import ready from 'lite-ready';
 import 'console';
 
 // DOM ready code goes in here
-ready(function() {
+ready(() => {
 	const swiftclick = SwiftClick.attach(document.body);
 	trak.start();
 });
