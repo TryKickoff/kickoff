@@ -9,7 +9,7 @@ module.exports.tasks = {
 		],
 		options: {
 			config: '.scss-lint.yml',
-			reporterOutput: null
+			reporterOutput: null,
 		},
 	},
 
@@ -23,7 +23,7 @@ module.exports.tasks = {
 	eslint: {
 		target: [
 			'<%=config.srcDir%>/js/*.js',
-			'<%=config.srcDir%>/js/modules/*.js'
-		]
+			'<%=config.srcDir%>/js/modules/*.js',
+		],
 	},
 };
