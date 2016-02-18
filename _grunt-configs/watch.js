@@ -28,18 +28,25 @@ module.exports.tasks = {
 			],
 			tasks: [
 				// 'jshint:project', // uncomment this line if you want to run linting checks on your JS as part of your watch build
+				'bsReload:all',
 				'filesizegzip:js'
 			]
 		},
 
 		images : {
 			files: ['<%=config.img.srcDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['newer:imagemin:images']
+			tasks: [
+				'newer:imagemin:images',
+				'bsReload:all'
+			]
 		},
 
 		grunticon : {
 			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['icons']
+			tasks: [
+				'icons'
+				'bsReload:all'
+			]
 		},
 
 		grunt: {
