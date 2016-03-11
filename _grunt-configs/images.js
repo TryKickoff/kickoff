@@ -1,3 +1,6 @@
+var pngquant = require('imagemin-pngquant');
+var mozjpeg = require('imagemin-mozjpeg');
+
 module.exports.tasks = {
 
 	/**
@@ -7,6 +10,15 @@ module.exports.tasks = {
 	 */
 	imagemin: {
 		images: {
+			options: {
+				optimizationLevel: 3,
+				progressive: true,
+				use: [
+					pngquant({ quality: '40-50', speed: 4 }),
+					mozjpeg({ quality: 70 }),
+				],
+			},
+
 			files: [{
 				expand: true,
 				cwd: '<%=config.img.srcDir%>/',
