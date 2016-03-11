@@ -26,18 +26,25 @@ module.exports.tasks = {
 				'<%=config.js.distDir%>/**/*.js'
 			],
 			tasks: [
+				'bsReload:all',
 				'filesizegzip:js'
 			]
 		},
 
 		images : {
 			files: ['<%=config.img.srcDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['newer:imagemin:images']
+			tasks: [
+				'newer:imagemin:images',
+				'bsReload:all'
+			]
 		},
 
 		grunticon : {
 			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: ['icons']
+			tasks: [
+				'icons',
+				'bsReload:all'
+			]
 		},
 
 		grunt: {
