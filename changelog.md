@@ -23,8 +23,6 @@ All latest changes are documented on our site at http://trykickoff.com
 - add [grunt-filesizegzip](https://github.com/mrmartineau/grunt-filesizegzip) to show file size and gzipped file size on save
 - Removed a few rarely-used grunt plugins
   - Grunt Photobox
-  - grunt-contrib-scss-lint
-  - grunt-contrib-jshint
 
 
 ## [5.0.0] - Date 19/05/2015

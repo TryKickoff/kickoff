@@ -10,8 +10,6 @@
  * - grunt checks            : run jshint and scsslint
  */
 
-var opn = require('opn')
-
 module.exports = function (grunt) {
 	'use strict';
 
@@ -67,6 +65,7 @@ module.exports = function (grunt) {
 
 	// grunt start
 	grunt.registerTask('start', function() {
+		var opn = require('opn');
 		opn('http://trykickoff.com/learn/checklist.html');
 	});
 
