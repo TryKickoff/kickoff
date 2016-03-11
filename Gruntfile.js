@@ -57,7 +57,6 @@ module.exports = function (grunt) {
 
 	// grunt compile
 	grunt.registerTask('compile', [
-		// 'checks', // uncomment this line if you want to run linting checks on your SCSS/JS as part of your build
 		'browserify',
 		'postscss',
 		'images',
