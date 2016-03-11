@@ -18,8 +18,7 @@ require('console');
 
 // DOM ready code goes in here
 ready(function () {
-
-	trak.start();
 	var swiftclick = SwiftClick.attach(document.body);
+	trak.start();
 
 });
