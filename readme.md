@@ -12,9 +12,7 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
  * Starter content styles: [typography](http://trykickoff.com/demos/typography.html), [grids](http://trykickoff.com/demos/grids.html) & [components](http://trykickoff.com/demos/components.html)
  * Starter form element styles ([see demo](http://trykickoff.com/demos/forms.html)): stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice, validation states
  * Lots of helper classes & Sass mixins for many CSS3 features like [media-queries](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss)
-* Simple **Javascript** boilerplate that makes very little assumptions about your chosen style or workflow.
- * The default method uses a [list of files](https://github.com/TryKickoff/kickoff/blob/master/_grunt-configs/config.js#L41-L55) that are concatinated & compressed with Uglify
- * If you prefer something more advanced, our [Yeoman generator](http://trykickoff.com/docs/yeoman.html) allows you to use Browserify instead :)
+* Simple **Javascript** boilerplate that makes very little assumptions about your chosen style or workflow. It uses Browserify to bundle your js.
 * **[Grunt](http://gruntjs.com)** used extensively to ease common development bottlenecks
  * Sass compilation using [libsass](https://github.com/sass/libsass) (using [grunt-sass](https://github.com/sindresorhus/grunt-sass)) and uses [autoprefixer](https://github.com/ai/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
  * Concatenation and minification of JS files
@@ -33,11 +31,11 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 
 ### Browser compatibility
 Kickoff has been tested in the following browsers:
-- Chrome
-- Safari
-- Firefox 3+
-- Opera 10+
-- Internet Explorer 8+ (an extra CSS file is generated if you need IE8 support)
+- Chrome (latest)
+- Safari (latest)
+- Firefox (latest)
+- Opera (latest)
+- Internet Explorer 9+
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
 
