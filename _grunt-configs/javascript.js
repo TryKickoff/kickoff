@@ -16,8 +16,8 @@ module.exports.tasks = {
 				},
 				plugin: [
 					['minifyify', {
-						output: '<%=config.js.distDir%>script.map',
-						map: 'script.map'
+						output: '<%=config.js.distDir%><%=config.js.distFile%>.map',
+						map: '<%=config.js.distFile%>.map'
 					}]
 				],
 				watch: true
