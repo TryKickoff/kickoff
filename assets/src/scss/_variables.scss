@@ -101,5 +101,8 @@ $using-splits-and-shunts      : false !default; // Use Splits & Shunts for respo
 /**
  * App-specific variables
  */
-$default-transition: all 100ms ease-in-out;
+$default-transition-timing: cubic-bezier(.77, 0, .175, 1);
+$default-transition-duration: 300ms;
+$default-transition: all $default-transition-duration $default-transition-timing;
+
 // Add your own :)
