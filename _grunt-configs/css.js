@@ -36,7 +36,9 @@ module.exports = function (grunt, options) {
 				from: scssDir + '/styleguide.scss',
 				to: cssDir + '/styleguide.css'
 			}
-		]).then(done).catch(function(error) {
+		])
+		.then(done)
+		.catch(function(error) {
 			console.error('\n' + error.formatted + '\n');
 		});
 	});
