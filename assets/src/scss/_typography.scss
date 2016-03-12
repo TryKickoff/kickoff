@@ -31,7 +31,8 @@ body {
 	color: $color-text;
 
 	// Add ligatures
-	font-feature-settings: "liga","dlig";
+	font-feature-settings: "liga","dlig", "hist";
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
