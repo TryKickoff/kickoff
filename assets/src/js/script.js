@@ -8,16 +8,17 @@
 'use-strict';
 
 // npm modules
-import SwiftClick from 'swiftclick';
-import trak from 'trak.js';
 import ready from 'lite-ready';
-
 
 // Bundle global libs that don't return a value
 import 'console';
 
-// DOM ready code goes in here
+// Add your project-specific modules here
+// import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
+
+
+// Your DOM ready code goes in here
 ready(() => {
-	const swiftclick = SwiftClick.attach(document.body);
-	trak.start();
+	// moduleTest(); // this is a test, uncomment this line to try it
+
 });

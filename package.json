@@ -34,9 +34,7 @@
   },
   "dependencies": {
     "console": "^0.5.2",
-    "lite-ready": "^1.0.4",
-    "swiftclick": "^1.2.0",
-    "trak.js": "^0.5.2"
+    "lite-ready": "^1.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
