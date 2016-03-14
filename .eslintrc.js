@@ -12,6 +12,8 @@ module.exports = {
 		'prefer-arrow-callback': 1,
 		'space-before-function-paren': [2, 'never'], // http://eslint.org/docs/rules/space-before-function-paren
 		'strict': [2, 'global'],
+		'no-console': 0, // http://eslint.org/docs/rules/no-console
+		'no-use-before-define': 0, // http://eslint.org/docs/rules/no-console
 	},
 
 	env: {
