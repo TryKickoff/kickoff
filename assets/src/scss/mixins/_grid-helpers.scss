@@ -2,13 +2,54 @@
  * Kickoff grid helpers
  */
 
+@mixin gridSpanHelper($mutator: false) {
+	$suffix: '';
+
+	// default doesn't need a mutator
+	@if($mutator and not ($mutator == default)) {
+		$suffix: '--' + #{$mutator};
+	}
+
+	@for $i from 1 to $grid-column-count + 1 {
+		.g-span#{$i}#{$suffix} {
+			flex-basis: gridColumnWidthCalc($i, true) !important;
+			flex-grow: 0;
+
+			// maybe have an option to include this in a variable
+			&.g-holdWidth#{$suffix} {
+          @include pixelMinWidth($i);
+      }
+
+			// used in combination with modernizr – should wrap this in an if statement and switch on for people who want it there
+			.no-flexbox & {
+				float: left;
+				width: gridColumnWidthCalc($i, true) !important;
+
+				/**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */
+				&:nth-of-type(#{$i}n + 1) {
+					clear: left;
+				}
+
+				&:not(:nth-of-type(#{$i}n + 1)) {
+					clear: none;
+				}
+			}
+		}
+	}
+}
+
 /**
  * Grid columns width calcs
  */
 @function gridColumnWidthCalc($column-span: 1, $show-unit: true) {
 	$number-of-blocks-in-container : $grid-column-count / $column-span;
-	$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
-	$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
+	//may need these lines for old ie gutters with floats, but will need to test
+	//$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
+	//$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
+	$total-width-of-all-blocks     : 1;
 	$width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
 
 	@if $show-unit == true {
@@ -16,6 +57,10 @@
 	} @else {
 		@return $width-of-a-single-block;
 	}
+}
+
+@mixin pixelMinWidth($column-span: 1) {
+    min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) + px;
 }
 
 

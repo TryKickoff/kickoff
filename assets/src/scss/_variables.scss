@@ -67,6 +67,17 @@ $bp-huge                      : 1250; // Set in px
 $bp-single-col                : $bp-mid; // Break to single column (used in the grid)
 $bp-rwd-text                  : $bp-mid; // Reduce text size below this width
 
+// Add your breakpoints to this Sass map
+// Used in the suitcss-component-grid
+$breakpoints: (
+	default: 0,
+	narrow: $bp-narrow,
+	mid: $bp-mid,
+	singleCol: $bp-single-col,
+	wide: $bp-wide,
+	huge: $bp-huge
+);
+
 
 /**
  * Path vars

@@ -1,0 +1,79 @@
+/**
+ * The Kickoff Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ * Centred columns
+ */
+
+/* Import Grid helpers and mixins */
+@import "../mixins/grid-helpers";
+
+
+
+.g {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+	.g-col {
+		display: block;
+		flex: 1 0 0; // By default, evenly distribute columns – n.b. to support non-flexbox browsers, you should always add .g-spanx
+
+		.g--stacked > & {
+			flex-basis: 100%;
+		}
+	}
+
+
+		//and then for each breakpoint
+		@each $name, $value in $breakpoints {
+			// if we have a default, then don’t bother with the media-query
+			@if $value == 0 {
+	        @include gridSpanHelper($name);
+	    }
+	    @else {
+	    	@include respond-min($value) {
+					@include gridSpanHelper($name);
+				}
+	    }
+		}
+
+
+
+// apply gutter to the grid columns in our grid (direct descendants only)
+$g-gutter-half: $grid-gutter-width / 2;
+
+.g--gutter {
+	margin-left: - $g-gutter-half + px;
+	margin-right: - $g-gutter-half + px;
+
+	& > .g-col {
+		margin-left: $g-gutter-half + px;
+		margin-right: $g-gutter-half + px;
+	}
+}
+
+.g--equalHeight {
+	> .g-col {
+		display: flex;
+
+		& > * {
+			flex-basis: 100%;
+		}
+	}
+}
+
+
+
+
+//Alignment
+.g--alignBottom { align-items: flex-end; }
+.g--alignRight { justify-content: flex-end; }
+.g--alignCenter { justify-content: center;   }
+.g--alignCenter--v { align-items: center;   }
+
+.g-col--centered {
+	margin: 0 auto;
+}

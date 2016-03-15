@@ -70,8 +70,244 @@
 
 		</header>
 
+		<style>.g-col { background-color: gray; border: 1px solid black; } .padBox { background: darkgoldenrod; min-height: 50px; } .padBox--tall { min-height: 100px; } </style>
 
 		<div id="mainContent" class="l-container" role="main">
+
+			<h2>Basic Grid – multiple cols, with and without gutters</h2>
+			<p>By default, when using the grid, with g-cols, the cells will fill the space available to them.</p>
+			<p>Note that for backwards compatibility with browsers that don’t support flexbox, you need to specify g-span{x}, else the cols will have zero width</p>
+			<h3>2 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+			<h3>3 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>4 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>5 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>6 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>7 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>8 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>9 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>10 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>11 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h3>12 col</h3>
+			<div class="g">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+			<div class="g g--gutter">
+				<div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div><div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h2>Equal Height Cols (flexbox by default)</h2>
+			<p>By using flexbox, anything you apply the grid to will have equal height columns (note the content divs within those boxes won’t be equal height)</p>
+			<div class="g">
+				<div class="g-col"><div class="padBox">Lorem ipsum Eu irure Duis culpa exercitation laboris culpa dolor do adipisicing cupidatat esse nostrud ad proident et ex minim dolor qui sint pariatur Excepteur eu sit Ut veniam ut Ut velit minim mollit elit est in esse</div></div>
+				<div class="g-col"><div class="padBox"></div></div>
+				<div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+			<h2>Equal Height Child Content</h2>
+			<p>Not sure exactly on the use case for this, as the bg is usually on the column itself, but I added it anyway :)</p>
+			<div class="g g--equalHeight">
+				<div class="g-col"><div class="padBox"></div></div>
+				<div class="g-col"><div class="padBox">Lorem ipsum Eu irure Duis culpa exercitation laboris culpa dolor do adipisicing cupidatat esse nostrud ad proident et ex minim dolor qui sint pariatur Excepteur eu sit Ut veniam ut Ut velit minim mollit elit est in esse</div></div>
+				<div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+			<h2>Row Wrapping</h2>
+			<div class="g">
+				<div class="g-col g-span3"><div class="padBox padBox--tall"></div></div>
+				<div class="g-col g-span3"><div class="padBox"></div></div>
+				<div class="g-col g-span3"><div class="padBox padBox--tall"></div></div>
+				<div class="g-col g-span3"><div class="padBox"></div></div>
+				<div class="g-col g-span9"><div class="padBox"></div></div>
+				<div class="g-col g-span3"><div class="padBox padBox--tall"></div></div>
+			</div>
+
+			<h2>Auto fits width by default when no span classes specified</h2>
+			<div class="g">
+				<div class="g-col g-span3"><div class="padBox"></div></div>
+				<div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+
+
+<!-- Nesting -->
+			<h2>Nested Grids</h2>
+			<div class="g">
+				<div class="g-col g-span9"><div class="padBox"></div></div>
+				<div class="g-col g-span9">
+					<div class="g">
+						<div class="g-col"><div class="padBox"></div></div>
+						<div class="g-col"><div class="padBox"></div></div>
+						<div class="g-col"><div class="padBox"></div></div>
+					</div>
+				</div>
+				<div class="g-col g-span9">
+					<div class="g g--gutter">
+						<div class="g-col"><div class="padBox"></div></div>
+						<div class="g-col"><div class="padBox"></div></div>
+						<div class="g-col"><div class="padBox"></div></div>
+					</div>
+				</div>
+			</div>
+
+<!-- Allignment -->
+			<h2>Alignment</h2>
+			<h3>Align Cells Bottom</h3>
+			<div class="g g--alignBottom">
+				<div class="g-col"><div class="padBox padBox--tall">Cell</div></div>
+				<div class="g-col"><div class="padBox">Cell</div></div>
+				<div class="g-col"><div class="padBox">Cell</div></div>
+			</div>
+
+			<h3>Center Cells Vertically (y-axis)</h3>
+			<div class="g g--alignCenter--v">
+				<div class="g-col"><div class="padBox padBox--tall">Cell</div></div>
+				<div class="g-col"><div class="padBox">Cell</div></div>
+				<div class="g-col"><div class="padBox">Cell</div></div>
+			</div>
+
+			<h3>Align Cells Right</h3>
+			<div class="g g--alignRight">
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+			</div>
+
+			<h3>Center Cells Horizontally (x-axis)</h3>
+			<div class="g g--alignCenter">
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+				<div class="g-col g-span3"><div class="padBox">Cell</div></div>
+			</div>
+
+			<h3>Individual Cell Centering</h3>
+			<p>Cneter just one cell, rather than the whole grid</p>
+			<div class="g">
+				<div class="g-col g-span6"><div class="padBox">Cell</div></div>
+				<div class="g-col g-span6"><div class="padBox">Cell</div></div>
+				<div class="g-col g-col--centered g-span9"><div class="padBox">Cell</div></div>
+			</div>
+
+			<h2>Stack as base default (if required)</h2>
+			<div class="g g--stacked">
+				<div class="g-col"><div class="padBox"></div></div>
+				<div class="g-col"><div class="padBox"></div></div>
+			</div>
+
+			<h2>Stack as base default (with some overrides)</h2>
+			<div class="g g--stacked">
+				<div class="g-col g-span9--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span3--mid"><div class="padBox"></div></div>
+			</div>
+
+			<h2>Split Cols – modifiers</h2>
+
+			<h3>9 / 3 > mid, stacked at lower widths</h3>
+			<div class="g">
+				<div class="g-col g-span12 g-span9--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span12 g-span3--mid"><div class="padBox"></div></div>
+			</div>
+
+			<h3>4 / 4 / 4 > mid, 6 / 6 / 12 at lower breakpoints</h3>
+			<div class="g">
+				<div class="g-col g-span6 g-span4--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span6 g-span4--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span12 g-span4--mid"><div class="padBox"></div></div>
+			</div>
+
+			<h3>Holding the width of a column between breakpoints</h3>
+			<p> So for example, you want only 2 cols, but you want the second col to hold it’s width (relative to preefined overall grid size) rather than gradually decreasing in size when the viewport decreases in size.</p>
+			<div class="g">
+				<div class="g-col g-span6 g-span3--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span6 g-span6--mid g-holdWidth--mid"><div class="padBox"></div></div>
+			</div>
+
+			<p>And a similar example, but with the narrower column holding it’s width</p>
+			<div class="g">
+				<div class="g-col g-span6 g-span3--mid g-holdWidth--mid"><div class="padBox"></div></div>
+				<div class="g-col g-span6 g-span6--mid"><div class="padBox"></div></div>
+			</div>
+
 
 		</div><!-- Close .l-container -->
 
