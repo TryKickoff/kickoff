@@ -1,16 +1,22 @@
 /**
- * The Kickoff Grid
+ * The Kickoff Flexbox Grid
  * =================================
  * Default grid styles
  * Media queries
- * Centred columns
  */
 
 /* Import Grid helpers and mixins */
 @import "../mixins/grid-helpers";
 
 
-
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g">
+		<div class="g-col g-span4 g-span6--mid"></div>
+		<div class="g-col g-span8 g-span6--mid"></div>
+	</div>
+ */
 .g {
 	display: flex;
 	flex-wrap: wrap;
@@ -26,23 +32,26 @@
 		}
 	}
 
-
-		//and then for each breakpoint
-		@each $name, $value in $breakpoints {
-			// if we have a default, then don’t bother with the media-query
-			@if $value == 0 {
-	        @include gridSpanHelper($name);
-	    }
-	    @else {
-	    	@include respond-min($value) {
-					@include gridSpanHelper($name);
-				}
-	    }
+/**
+ * Span classes (for different breakpoints)
+ */
+@each $name, $value in $breakpoints { //loop through our breakpoints
+	// if we have a default, then don’t bother with the media-query (as it’s our default mobile-first state)
+	@if $value == 0 {
+      @include gridSpanHelper($name);
+  }
+  @else {
+  	@include respond-min($value) {
+			@include gridSpanHelper($name);
 		}
+  }
+}
 
-
-
-// apply gutter to the grid columns in our grid (direct descendants only)
+/**
+ * Gutter calcs – applied to grid columns in our grid (direct descendants only)
+ * Default: pixels (can look at changing to percentage)
+ * Usage: gutterCalc() or gutterCalc(false)
+ */
 $g-gutter-half: $grid-gutter-width / 2;
 
 .g--gutter {
@@ -55,6 +64,9 @@ $g-gutter-half: $grid-gutter-width / 2;
 	}
 }
 
+/**
+ * .g--equalHeight – Equal Height Child Elements
+ */
 .g--equalHeight {
 	> .g-col {
 		display: flex;
@@ -65,15 +77,19 @@ $g-gutter-half: $grid-gutter-width / 2;
 	}
 }
 
-
-
-
-//Alignment
+/**
+ * Alignment
+ * Modifier classes to move our grid elements around
+ */
 .g--alignBottom { align-items: flex-end; }
 .g--alignRight { justify-content: flex-end; }
 .g--alignCenter { justify-content: center;   }
 .g--alignCenter--v { align-items: center;   }
 
+/**
+ * Centering
+ * Centers an individual column, rather than the entire grid
+ */
 .g-col--centered {
 	margin: 0 auto;
 }
