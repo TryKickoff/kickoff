@@ -31,8 +31,10 @@
 			flex-basis: 100%;
 		}
 
-		.no-flexbox & {
-			float: left;
+		@if $use-legacy-grid {
+			.no-flexbox & {
+				float: left;
+			}
 		}
 	}
 
