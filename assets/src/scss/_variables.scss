@@ -70,10 +70,10 @@ $bp-rwd-text                  : $bp-mid; // Reduce text size below this width
 // Add your breakpoints to this Sass map
 // Used in the suitcss-component-grid
 $breakpoints: (
-	narrow: $bp-narrow,
-	mid: $bp-mid,
-	wide: $bp-wide,
-	huge: $bp-huge
+	narrow: 400px,
+	mid: 750px,
+	wide: 1000px,
+	huge: 1250px
 );
 
 
