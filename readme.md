@@ -33,11 +33,11 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 
 ### Browser compatibility
 Kickoff has been tested in the following browsers:
-- Chrome
-- Safari
-- Firefox 3+
-- Opera 10+
-- Internet Explorer 8+ (an extra CSS file is generated if you need IE8 support)
+- Chrome (latest)
+- Safari (latest)
+- Firefox (latest)
+- Opera (latest)
+- Internet Explorer 9+
 
 If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
 

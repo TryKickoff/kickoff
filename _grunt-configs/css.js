@@ -29,10 +29,6 @@ module.exports = function (grunt, options) {
 				to: cssDir + '/kickoff.css'
 			},
 			{
-				from: scssDir + '/kickoff-old-ie.scss',
-				to: cssDir + '/kickoff-old-ie.css'
-			},
-			{
 				from: scssDir + '/styleguide.scss',
 				to: cssDir + '/styleguide.css'
 			}
