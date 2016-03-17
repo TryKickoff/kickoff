@@ -30,22 +30,12 @@
 		.g--stacked > & {
 			flex-basis: 100%;
 		}
+
+		.no-flexbox & {
+			float: left;
+		}
 	}
 
-/**
- * Span classes (for different breakpoints)
- */
-@each $name, $value in $breakpoints { //loop through our breakpoints
-	// if we have a default, then don’t bother with the media-query (as it’s our default mobile-first state)
-	@if $value == 0 {
-      @include gridSpanHelper($name);
-  }
-  @else {
-  	@include respond-min($value) {
-			@include gridSpanHelper($name);
-		}
-  }
-}
 
 /**
  * Gutter calcs – applied to grid columns in our grid (direct descendants only)
@@ -93,6 +83,23 @@ $g-gutter-half: $grid-gutter-width / 2;
 .g-col--centered {
 	margin: 0 auto;
 }
+
+
+/**
+ * Span classes (for different breakpoints)
+ */
+@each $name, $value in $breakpoints { //loop through our breakpoints
+	// if we have a default, then don’t bother with the media-query (as it’s our default mobile-first state)
+	@if $value == 0 {
+		@include gridSpanHelper($name);
+	}
+	@else {
+		@include respond-min($value) {
+			@include gridSpanHelper($name);
+		}
+	}
+}
+
 @each $name, $value in $breakpoints {
 	.g--stack--#{$name} {
 		@include grid-stack($value);
