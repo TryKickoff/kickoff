@@ -31,12 +31,28 @@
 			flex-basis: 100%;
 		}
 
-		@if $use-legacy-grid {
-			.no-flexbox & {
-				float: left;
-			}
-		}
+/**
+ * Add fallbacks for non-flexbox supporting browsers
+ */
+@if $use-legacy-grid {
+	.no-flexbox .g {
+		width: 100%;
+		margin: 0 auto;
+		@include clearfix;
 	}
+
+	.no-flexbox .g-col {
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
+		box-sizing: border-box;
+	}
+
+	.no-flexbox .g--stacked .g-col {
+		width: 100%;
+	}
+}
 
 
 /**
