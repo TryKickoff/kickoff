@@ -17,26 +17,30 @@
 
 			// maybe have an option to include this in a variable
 			&.g-holdWidth#{$suffix} {
-          @include pixelMinWidth($i);
-      }
-
-			// used in combination with modernizr – should wrap this in an if statement and switch on for people who want it there
-			.no-flexbox & {
-				float: left;
-				width: gridColumnWidthCalc($i, true) !important;
-
-				/**
-				 * Clear incase of height difference of block items.
-				 * Note: Remove these if all your items are the same height.
-				 */
-				&:nth-of-type(#{$i}n + 1) {
-					clear: left;
-				}
-
-				&:not(:nth-of-type(#{$i}n + 1)) {
-					clear: none;
-				}
+					@include pixelMinWidth($i);
 			}
+
+			@if $use-legacy-grid {
+
+				// used in combination with modernizr – should wrap this in an if statement and switch on for people who want it there
+				.no-flexbox & {
+					width: gridColumnWidthCalc($i, true) !important;
+
+					/**
+					 * Clear incase of height difference of block items.
+					 * Note: Remove these if all your items are the same height.
+					 */
+					&:nth-of-type(#{$i}n + 1) {
+						clear: left;
+					}
+
+					&:not(:nth-of-type(#{$i}n + 1)) {
+						clear: none;
+					}
+				}
+
+			} // @if $use-legacy-grid
+
 		}
 	}
 }
@@ -77,7 +81,7 @@
 }
 
 @mixin pixelMinWidth($column-span: 1) {
-    min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) + px;
+	min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) + px;
 }
 
 
