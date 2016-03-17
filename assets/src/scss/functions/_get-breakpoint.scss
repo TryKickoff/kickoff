@@ -1,0 +1,7 @@
+@function bp($val) {
+	@if type-of($val) == number {
+		@return $val;
+	} @else {
+		@return map-get($breakpoints, $val);
+	}
+}
