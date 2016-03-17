@@ -96,19 +96,8 @@ $layout-min-width             : 1000  !default; // [in pixels] Minimum width for
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
 
-$responsive-grid-sizes: true; // Disable this if you don't want grid sizes for each breakpoint
-$use-legacy-grid: true;
-
-// Column Padding
-$grid-column-padding          : 0     !default; // [in pixels]
-$grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
-$nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
-
-// Choose your grid options, see http://trykickoff.com/learn/grid.html for more info
-$using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
-$using-offsetcolumns          : false !default; // Allow columns to be offset
-$using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
-
+$responsive-grid-sizes        : true  !default; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid              : true  !default;
 
 /**
  * App-specific variables
