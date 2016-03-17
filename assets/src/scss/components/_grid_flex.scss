@@ -25,11 +25,15 @@
 
 	.g-col {
 		display: block;
-		flex: 1 0 0; // By default, evenly distribute columns – n.b. to support non-flexbox browsers, you should always add .g-spanx
+
+		// By default, evenly distribute columns
+		// n.b. to support non-flexbox browsers, you should always add .g-spanx
+		flex: 1 0 0;
 
 		.g--stacked > & {
 			flex-basis: 100%;
 		}
+	}
 
 /**
  * Add fallbacks for non-flexbox supporting browsers
@@ -72,6 +76,7 @@ $g-gutter-half: $grid-gutter-width / 2;
 	}
 }
 
+
 /**
  * .g--equalHeight – Equal Height Child Elements
  */
@@ -85,6 +90,7 @@ $g-gutter-half: $grid-gutter-width / 2;
 	}
 }
 
+
 /**
  * Alignment
  * Modifier classes to move our grid elements around
@@ -93,6 +99,7 @@ $g-gutter-half: $grid-gutter-width / 2;
 .g--alignRight     { justify-content: flex-end; }
 .g--alignCenter    { justify-content: center; }
 .g--alignCenter--v { align-items: center; }
+
 
 /**
  * Centering
@@ -107,9 +114,9 @@ $g-gutter-half: $grid-gutter-width / 2;
  * Span classes (for different breakpoints)
  */
 
-// Default sizes
-@include gridSpanHelper;
+@include gridSpanHelper; // Default sizes
 
+// Responsive sizes only generated if $responsive-grid-sizes == true
 @if $responsive-grid-sizes {
 	//loop through our breakpoints
 	@each $name, $value in $breakpoints {
