@@ -90,12 +90,13 @@ $g-gutter-half: $grid-gutter-width / 2;
 /**
  * Span classes (for different breakpoints)
  */
-@each $name, $value in $breakpoints { //loop through our breakpoints
-	// if we have a default, then don’t bother with the media-query (as it’s our default mobile-first state)
-	@if $value == 0 {
-		@include gridSpanHelper($name);
-	}
-	@else {
+
+// Default sizes
+@include gridSpanHelper;
+
+@if $responsive-grid-sizes {
+	//loop through our breakpoints
+	@each $name, $value in $breakpoints {
 		@include respond-min($value) {
 			@include gridSpanHelper($name);
 		}

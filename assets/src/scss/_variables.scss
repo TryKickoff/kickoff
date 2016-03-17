@@ -70,14 +70,12 @@ $bp-rwd-text                  : $bp-mid; // Reduce text size below this width
 // Add your breakpoints to this Sass map
 // Used in the suitcss-component-grid
 $breakpoints: (
-	default: 0,
 	narrow: $bp-narrow,
 	mid: $bp-mid,
 	wide: $bp-wide,
 	huge: $bp-huge
 );
 
-$use-legacy-grid: true;
 
 /**
  * Path vars
@@ -97,6 +95,9 @@ $layout-min-width             : 1000  !default; // [in pixels] Minimum width for
 
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
+
+$responsive-grid-sizes: true; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid: true;
 
 // Column Padding
 $grid-column-padding          : 0     !default; // [in pixels]

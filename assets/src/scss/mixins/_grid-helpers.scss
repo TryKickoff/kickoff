@@ -2,12 +2,11 @@
  * Kickoff grid helpers
  */
 
-@mixin gridSpanHelper($mutator: false) {
-	$suffix: '';
+@mixin gridSpanHelper($breakpoint: null) {
+	$suffix: null;
 
-	// default doesn't need a mutator
-	@if($mutator and not ($mutator == default)) {
-		$suffix: '--' + #{$mutator};
+	@if $breakpoint {
+		$suffix: '--' + #{$breakpoint};
 	}
 
 	@for $i from 1 to $grid-column-count + 1 {
