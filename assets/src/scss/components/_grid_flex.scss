@@ -71,10 +71,10 @@ $g-gutter-half: $grid-gutter-width / 2;
  * Alignment
  * Modifier classes to move our grid elements around
  */
-.g--alignBottom { align-items: flex-end; }
-.g--alignRight { justify-content: flex-end; }
-.g--alignCenter { justify-content: center;   }
-.g--alignCenter--v { align-items: center;   }
+.g--alignBottom    { align-items: flex-end; }
+.g--alignRight     { justify-content: flex-end; }
+.g--alignCenter    { justify-content: center; }
+.g--alignCenter--v { align-items: center; }
 
 /**
  * Centering
