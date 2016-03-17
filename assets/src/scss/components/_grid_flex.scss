@@ -93,3 +93,8 @@ $g-gutter-half: $grid-gutter-width / 2;
 .g-col--centered {
 	margin: 0 auto;
 }
+@each $name, $value in $breakpoints {
+	.g--stack--#{$name} {
+		@include grid-stack($value);
+	}
+}

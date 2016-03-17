@@ -42,6 +42,23 @@
 }
 
 /**
+ * Grid stacking
+ * Stack grids based on a given breakpoint
+ *
+ * Usage:
+ * .g--stack--narrow
+ * .g--stack--wide
+ */
+@mixin grid-stack($breakpoint: $bp-wide) {
+	@include respond-max($breakpoint) {
+		flex-flow: column nowrap;
+	}
+}
+
+
+
+
+/**
  * Grid columns width calcs
  */
 @function gridColumnWidthCalc($column-span: 1, $show-unit: true) {
