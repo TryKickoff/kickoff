@@ -10,6 +10,7 @@ module.exports.tasks = {
 			src: ['<%=config.js.srcFile%>'],
 			dest: '<%=config.js.distDir%><%=config.js.distFile%>',
 			options: {
+				transform: ['babelify'],
 				browserifyOptions: {
 					debug: true,
 					fullPaths: false

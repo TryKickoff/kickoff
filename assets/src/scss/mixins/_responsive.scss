@@ -96,17 +96,3 @@ $mq-base: 16;
 		}
 	}
 }
-
-
-/**
- * Old IE specific mixin
- * - Only use this content if we're dealing with old IE
- * - Usage: @include oldie() { ... }
- */
-$old-ie: false !default;
-
-@mixin old-ie {
-	@if $old-ie {
-		@content;
-	}
-}

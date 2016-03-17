@@ -42,14 +42,14 @@ module.exports = function (grunt) {
 	grunt.registerTask('serve', [
 		'compile',
 		'browserSync:serve',
-		'watch'
+		'watch',
 	]);
 
 
 	// grunt watcher
 	grunt.registerTask('watcher', [
 		'compile',
-		'watch'
+		'watch',
 	]);
 
 
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
 		'postscss',
 		'images',
 		'shimly',
-		'copy:jsStandalone'
+		'copy:jsStandalone',
 	]);
 
 
@@ -74,14 +74,14 @@ module.exports = function (grunt) {
 	grunt.registerTask('styleguide', [
 		'compile',
 		'browserSync:styleguide',
-		'watch'
+		'watch',
 	]);
 
 
 	// grunt images
 	grunt.registerTask('images', [
 		'newer:imagemin:images',
-		'icons'
+		'icons',
 	]);
 
 
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('icons', [
 		'clean:icons',
 		'newer:imagemin:grunticon',
-		'grunticon'
+		'grunticon',
 	]);
 
 
@@ -97,13 +97,14 @@ module.exports = function (grunt) {
 	 * grunt checks
 	 */
 	grunt.registerTask('checks', [
-		'jshint:project',
-		'scsslint'
+		'eslint',
+		'scsslint',
 	]);
 
 
 	// grunt travis
 	grunt.registerTask('travis', [
-		'postscss'
+		'postscss',
+		'eslint',
 	]);
 };
