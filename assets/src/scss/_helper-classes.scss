@@ -115,3 +115,9 @@ textarea[contenteditable] {
 .transition {
 	transition: $default-transition;
 }
+
+// Faster taps on mobile devices
+// See https://adactio.com/journal/10019 for more info
+a, button, input, select, textarea, label, summary {
+	touch-action: manipulation;
+}
