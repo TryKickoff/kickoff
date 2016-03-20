@@ -37,6 +37,7 @@ table {
 	border-spacing: 0;
 	border: 2px solid $table-borderColor;
 	background-color: $table-bgColor;
+	table-layout: fixed; // https://css-tricks.com/fixing-tables-long-strings/
 
 	// Cells
 	th,
