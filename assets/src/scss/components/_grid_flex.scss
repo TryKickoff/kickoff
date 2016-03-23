@@ -36,43 +36,19 @@
 	}
 
 /**
- * Add fallbacks for non-flexbox supporting browsers
- */
-@if $use-legacy-grid {
-	.no-flexbox .g {
-		width: 100%;
-		margin: 0 auto;
-		@include clearfix;
-	}
-
-	.no-flexbox .g-col {
-		float: left;
-		min-height: 1px;
-		position: relative;
-		clear: none;
-		box-sizing: border-box;
-	}
-
-	.no-flexbox .g--stacked .g-col {
-		width: 100%;
-	}
-}
-
-
-/**
  * Gutter calcs – applied to grid columns in our grid (direct descendants only)
  * Default: pixels (can look at changing to percentage)
  * Usage: gutterCalc() or gutterCalc(false)
  */
-$g-gutter-half: $grid-gutter-width / 2;
+$g-gutter-half: gutterCalc() / 2;
 
 .g--gutter {
-	margin-left: - $g-gutter-half + px;
-	margin-right: - $g-gutter-half + px;
+	margin-left: - $g-gutter-half;
+	margin-right: - $g-gutter-half;
 
 	& > .g-col {
-		margin-left: $g-gutter-half + px;
-		margin-right: $g-gutter-half + px;
+		margin-left: $g-gutter-half;
+		margin-right: $g-gutter-half;
 	}
 }
 
@@ -111,7 +87,59 @@ $g-gutter-half: $grid-gutter-width / 2;
 
 
 /**
- * Span classes (for different breakpoints)
+ * Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
+ */
+@if $use-legacy-grid {
+	.no-flexbox {
+		.g {
+			width: 100%;
+			margin: 0 auto;
+			@include clearfix;
+		}
+
+		.g-col {
+			float: left;
+			min-height: 1px;
+			position: relative;
+			clear: none;
+			box-sizing: border-box;
+
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.g--stacked .g-col {
+			width: 100%;
+		}
+
+		// For guttering, we remove negative margins and switch to only using left margins, taking these off on the first-child
+		.g--gutter {
+			margin-left: 0;
+			margin-right: 0;
+
+			& > .g-col {
+				margin-left: gutterCalc();
+				margin-right: 0;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	} //end .no-flexbox
+
+}
+
+
+
+/**
+ * Grid Span classes (for different breakpoints)
+ *
+ * Applied by using .g-spanx to .g-col elements, where x is the number of columns
  */
 
 @include gridSpanHelper; // Default sizes

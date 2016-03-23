@@ -10,6 +10,10 @@
 	}
 
 	@for $i from 1 to $grid-column-count + 1 {
+		// gutter calculations, one for usual guttering, the other for legacy .no-flexbox support
+		$col-width-guttered: gridColumnWidthCalc($i, true, true);
+		$col-width-guttered--legacy: gridColumnWidthCalc($i, true, true, true);
+
 		.g-span#{$i}#{$suffix} {
 			flex-basis: gridColumnWidthCalc($i, true) !important;
 			flex-grow: 0;
@@ -19,23 +23,22 @@
 					@include pixelMinWidth($i);
 			}
 
+			.g--gutter & {
+				flex-basis: $col-width-guttered !important;
+				// need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
+				// see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
+				max-width: $col-width-guttered;
+			}
+
 			@if $use-legacy-grid {
 
-				// used in combination with modernizr – should wrap this in an if statement and switch on for people who want it there
+				// used in combination with modernizr or another detection mechanism
 				.no-flexbox & {
 					width: gridColumnWidthCalc($i, true) !important;
-
-					/**
-					 * Clear incase of height difference of block items.
-					 * Note: Remove these if all your items are the same height.
-					 */
-					&:nth-of-type(#{$i}n + 1) {
-						clear: left;
-					}
-
-					&:not(:nth-of-type(#{$i}n + 1)) {
-						clear: none;
-					}
+				}
+				.no-flexbox .g--gutter & {
+					width: $col-width-guttered--legacy !important;
+					max-width: $col-width-guttered--legacy;
 				}
 
 			} // @if $use-legacy-grid
@@ -55,21 +58,56 @@
 @mixin grid-stack($breakpoint: $bp-wide) {
 	@include respond-max($breakpoint) {
 		flex-flow: column nowrap;
+
+		@if $use-legacy-grid {
+			& > .g-col {
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+/**
+ * Gutter Calculations
+ * Default: percent
+ * Usage: gutterCalc() or gutterCalc(false)
+ * When show-unit is true, returns the percentage, otherwise return a decimal
+ */
+@function gutterCalc($show-unit: true) {
+	@if $show-unit == true {
+		@return percentage($grid-gutter-width / ($layout-max-width - ($layout-margin * 2)));
+	} @else {
+		@return $grid-gutter-width / ($layout-max-width - ($layout-margin * 2));
 	}
 }
 
 
 
-
 /**
- * Grid columns width calcs
+ * Grid columns width calculations
+ * This is where the magic of working out the column widths happens
+ *
+ * $column-span: define the width for the number of columns required
+ * $show-unit: Switch return value between percentage (default) and decimal
+ * $include-gutters: if gutters should be included in the calculations. Default = false
+ * $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
  */
-@function gridColumnWidthCalc($column-span: 1, $show-unit: true) {
+@function gridColumnWidthCalc($column-span: 1, $show-unit: true, $include-gutters: false, $legacy-calc: false) {
 	$number-of-blocks-in-container : $grid-column-count / $column-span;
-	//may need these lines for old ie gutters with floats, but will need to test
-	//$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
-	//$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
 	$total-width-of-all-blocks     : 1;
+
+	// when including gutters, we need to adjust our % width or flex-basis appropriately
+	@if $include-gutters {
+		//may need these lines for old ie gutters with floats, but will need to test
+		$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container);
+		$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
+	}
+	// For legacy support, we need to calculate gutters slightly differently to make the grid proportions correct
+	@if $include-gutters and $legacy-calc {
+		$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
+		$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
+	}
+
 	$width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
 
 	@if $show-unit == true {
