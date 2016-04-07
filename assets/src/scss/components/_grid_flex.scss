@@ -113,6 +113,14 @@
   margin: 0 auto;
 }
 
+/**
+ * Shrinking Content
+ * Shrink a .g-col down to only the space it needs (flexbox only)
+ */
+.g-col--shrink {
+	flex-grow: 0;
+}
+
 
 /**
  * Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
@@ -121,7 +129,8 @@
   .no-flexbox {
     .g {
       width: 100%;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
       @include clearfix;
     }
 

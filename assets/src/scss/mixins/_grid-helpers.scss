@@ -17,6 +17,7 @@
 		.g-span#{$i}#{$suffix} {
 			flex-basis: $col-width-noGutter !important;
 			flex-grow: 0;
+			max-width: $col-width-noGutter;
 
 			// maybe have an option to include this in a variable
 			&.g-holdWidth#{$suffix} {
