@@ -43,21 +43,23 @@
 // .g--gutter
 // Uses padding and fixed gutter px values.
 // Pros = Margins will be equal to your $grid-gutter-width (even at larger/smaller container sizes), if that’s what you require
-// Cons = Can’t set a border directly to a g-col, as uses padding, not margins.  Need extra child element to get the desired effect
+// Cons = Can’t set a border directly to grid containers, as uses negative margins.  Need extra element to get the desired effect
+
+$g-gutter-half: ($grid-gutter-width / 2) + px;
 
 .g--gutter {
-  & > .g-col {
-    padding-left: $grid-gutter-width + px;
+	margin-left: -$g-gutter-half;
+	margin-right: -$g-gutter-half;
 
-    &:first-child {
-      padding-left: 0;
-    }
+  & > .g-col {
+    padding-left: $g-gutter-half;
+    padding-right: $g-gutter-half;
   }
 }
 
 // .g--gutter--scaled
 // Uses margin and percentage values.  Scales the margin as the viewport gets smaller (for RWD)
-// Pro = Good for when your container is always the $layout-max-width.  Means can apply borders to grid elements without more markup
+// Pro = Good for when your container is always the $layout-max-width.  Means can apply borders to grid elements without extra markup
 // Cons = If container isn’t same size as $layout-max-width, the gutters will also scale (so larger container width === larger gutters and vice versa)
 
 .g--gutter--scaled {
@@ -74,6 +76,7 @@
 .g--stacked {
   & > .g-col {
     flex-basis: 100%;
+    max-width: 100%;
     margin-left: 0;
     padding-left: 0;
   }
@@ -128,9 +131,6 @@
 @if $use-legacy-grid {
   .no-flexbox {
     .g {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
       @include clearfix;
     }
 

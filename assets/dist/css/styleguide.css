@@ -1,2 +1,394 @@
-body{background-color:#fff}.sg-interfaceType,.sg-sectionHeading{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:300}.sg-interfaceType--subtle{color:#888}.sg-sectionHeading{color:#181830}.sg-page{overflow:hidden;padding:8% 0}.sg-page--start{background-color:#181830;padding:70px 0 60px;color:#fff}.sg-spacer{padding:20px}.sg-footer{background-color:#181830;color:#fff;padding:30px;margin-top:30px}.sg-footer h1{margin-bottom:.2em}.sg-footer a{color:#fff;border-bottom:2px dashed hsla(0,0%,100%,.3)}.sg-footer a:hover{border-bottom:2px solid #fff}.sg-footer :last-child{margin-bottom:0}.sg-swatch{text-align:center;line-height:30px;margin:10px 10px 0}.sg-swatch-color{height:60px;padding:15px;font-size:13px;font-size:.65rem;font-family:Menlo,Monaco,Courier New,monospace}.sg-color-link-hover{color:#185380}.sg-color-link-hover .sg-swatch-color{background-color:#185380;color:#fff}.sg-color-link-hover .sg-swatch-color:before{content:"#185380";display:block}.sg-color-primary{color:#181830}.sg-color-primary .sg-swatch-color{background-color:#181830;color:#fff}.sg-color-primary .sg-swatch-color:before{content:"#181830";display:block}.sg-color-secondary{color:#fe7c08}.sg-color-secondary .sg-swatch-color{background-color:#fe7c08;color:#fff}.sg-color-secondary .sg-swatch-color:before{content:"#fe7c08";display:block}.sg-color-highlight{color:#288ad6}.sg-color-highlight .sg-swatch-color{background-color:#288ad6;color:#fff}.sg-color-highlight .sg-swatch-color:before{content:"#288ad6";display:block}.sg-color-text{color:#444}.sg-color-text .sg-swatch-color{background-color:#444;color:#fff}.sg-color-text .sg-swatch-color:before{content:"#444";display:block}.sg-color-background{color:#f1f1f1}.sg-color-background .sg-swatch-color{background-color:#f1f1f1;color:#444;border:1px solid #f1f1f1}.sg-color-background .sg-swatch-color:before{content:"#f1f1f1";display:block}.sg-color-border{color:#ddd}.sg-color-border .sg-swatch-color{background-color:#ddd;color:#444}.sg-color-border .sg-swatch-color:before{content:"#ddd";display:block}.sg-color-link{color:#288ad6}.sg-color-link .sg-swatch-color{background-color:#288ad6;color:#fff}.sg-color-link .sg-swatch-color:before{content:"#288ad6";display:block}.sg-type{margin-bottom:1em}code{border:1px solid #ddd;background-color:#f9f8f8;font-size:11px;font-size:.55rem}.sg-type-micro .sg-type-item{font-size:9px;font-size:.45rem}.sg-type-micro code:after{content:" = 9px"}.sg-type-smallest .sg-type-item{font-size:11px;font-size:.55rem}.sg-type-smallest code:after{content:" = 11px"}.sg-type-smaller .sg-type-item{font-size:13px;font-size:.65rem}.sg-type-smaller code:after{content:" = 13px"}.sg-type-small .sg-type-item{font-size:16px;font-size:.8rem}.sg-type-small code:after{content:" = 16px"}.sg-type-base .sg-type-item{font-size:20px;font-size:1rem}.sg-type-base code:after{content:" = 20px"}.sg-type-mid .sg-type-item{font-size:25px;font-size:1.25rem}.sg-type-mid code:after{content:" = 25px"}.sg-type-large .sg-type-item{font-size:32px;font-size:1.6rem}.sg-type-large code:after{content:" = 32px"}.sg-type-largest .sg-type-item{font-size:40px;font-size:2rem}.sg-type-largest code:after{content:" = 40px"}.sg-type-jumbo .sg-type-item{font-size:49px;font-size:2.45rem}.sg-type-jumbo code:after{content:" = 49px"}.sg-typeSpecimen{margin-bottom:0;margin-top:0;-ms-word-wrap:break-word;word-wrap:break-word}.sg-typeSpecimen:after{display:block;font-size:16px;font-size:.8rem;margin-top:5px;border-top:1px solid #ddd;font-weight:400}.sg-typeSpecimen--primary{font-size:30px;font-size:1.5rem;font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.sg-typeSpecimen--secondary{font-size:30px;font-size:1.5rem;font-family:Georgia,Times New Roman,Times,serif}.sg-typeSpecimen--giant{font-size:120px;font-size:6rem;line-height:1}.icon-sg{display:inline-block;width:50px;height:50px;vertical-align:middle;margin-right:10px;margin-bottom:10px}.sg-favicon{padding:5px}.sg-favicon img{vertical-align:middle;margin-right:15px}
+/**
+ * Setup styleguide imports
+ */
+/**
+ * Sass Mixins
+ * - Vendor prefixer
+ * - Responsive
+ * - CSS3
+ * - Utility Mixins
+ * - hiDpi
+ * - Forms */
+/**
+ * Vendor prefixer
+ * Usage: @include prefixer(border-radius, $radii, webkit ms spec);
+ */
+/**
+ * Responsive media query mixins
+ * - These are used so that we can define separate media-query content
+ *   for <IE9 and browsers with support for media queries
+ * - These are directly related to the global $fix-mqs var defined in
+ *   kickoff-old-ie.scss
+ * - kickoff-old-ie.scss ignores any content in media-queries with values less
+ *   than the $fix-mqs var value
+ */
+/**
+ * Min-width media query:
+ * - Equivalent to: @media screen and (min-width: 20em) { ... }
+ * - Usage: @include respond-min(500) { ... };
+ * - Argument is a pixel value WITHOUT a unit of measurement
+ */
+/**
+ * Max-width media query:
+ * - Equivalent to: @media screen and (max-width: 20em) { ... }
+ * - Usage: @include respond-max(500) { ... };
+ * - Argument is a pixel value WITHOUT a unit of measurement
+ */
+/**
+ * Min-max-width media query:
+ * - Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
+ * - Usage: @include respond-min-max(500, 600) { ... };
+ * - Arguments are pixel values WITHOUT a unit of measurement
+ */
+/**
+ * Old IE specific mixin
+ * - Only use this content if we're dealing with old IE
+ * - Usage: @include oldie() { ... }
+ */
+/**
+ * Linear Gradient
+ * Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
+ */
+/**
+ * Radial Gradient
+ * Usage: @include radial-gradient(#000, #BADA55, true);
+ */
+/**
+ * vertical-center
+ * Vertically center any element. Needs support for CSS tranforms.
+ * Usage:
+ * @include vertical-center;
+ */
+/**
+ * Utility mixins
+ * Clearfix, REM + fallbacks,
+ * @font-face, sizing shortcuts,
+ * and other helpers
+ */
+/**
+ * Utility Mixins
+ */
+/**
+ * Typography mixins
+ */
+/**
+ *  HiDPI mixin.
+ *  @include hidpi { ... };
+ *  Default value set to 1.3 to target Google Nexus 7 (http://bjango.com/articles/min-device-pixel-ratio/)
+ */
+/**
+ * Hidpi with a minimum width media query
+ * @include hidpi-min(bp(mid), 1.5) { ... };
+ */
+/**
+ * Hidpi with a max width media query
+ * @include hidpi-max(bp(mid), 1.3) { ... };
+ */
+/**
+ * bemify [modified for Kickoff]
+ * https://gtihub.com/franzheidl/bemify
+ * Franz Heidl 2015
+ *
+ * Usage: https://gist.github.com/mrmartineau/0cd2010bf265d712bafbhttps://gist.github.com/mrmartineau/0cd2010bf265d712bafb
+ */
+/**
+ * Global Color palette
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Text selection
+ * - <hr>
+ * - Any others..
+ */
+/**
+ * Variables
+ * - Typography
+ * - Breakpoints
+ * - Paths
+ * - Layout & Grid
+ * - App-specific
+ */
+/**
+ * Typography
+ *
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
+/**
+ * Breakpoints
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+/**
+ * Path vars
+ */
+/**
+ * Layout setup
+ * Settings here override & affect the output in scss/partials/components/grid.scss
+ */
+/**
+ * App-specific variables
+ */
+/**
+ * Styleguide styles
+ * Where possible, prefix all classnames with .sg
+ */
+body {
+  background-color: #fff; }
+
+/**
+ * Styleguide type styles
+ */
+.sg-interfaceType, .sg-sectionHeading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
+
+.sg-interfaceType--subtle {
+  color: #888; }
+
+.sg-sectionHeading {
+  color: #181830; }
+
+/**
+ * Styleguide navigation style
+ */
+/**
+ * Styleguide .page styles
+ */
+.sg-page {
+  overflow: hidden;
+  padding: 8% 0; }
+
+.sg-page--start {
+  background-color: #181830;
+  padding: 70px 0 60px;
+  color: #fff; }
+
+.sg-spacer {
+  padding: 20px; }
+
+.sg-footer {
+  background-color: #181830;
+  color: #fff;
+  padding: 30px;
+  margin-top: 30px; }
+  .sg-footer h1 {
+    margin-bottom: .2em; }
+  .sg-footer a {
+    color: #fff;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.3); }
+    .sg-footer a:hover {
+      border-bottom: 2px solid #fff; }
+  .sg-footer :last-child {
+    margin-bottom: 0; }
+
+/**
+ * Colour swatches
+ */
+.sg-swatch {
+  text-align: center;
+  line-height: 30px;
+  margin: 10px 10px 0; }
+
+.sg-swatch-color {
+  height: 60px;
+  padding: 15px;
+  font-size: 13px;
+  font-size: 0.65rem;
+  font-family: Menlo, Monaco, "Courier New", monospace; }
+
+.sg-color-link-hover {
+  color: #185380; }
+  .sg-color-link-hover .sg-swatch-color {
+    background-color: #185380;
+    color: #fff; }
+    .sg-color-link-hover .sg-swatch-color:before {
+      content: "#185380";
+      display: block; }
+
+.sg-color-primary {
+  color: #181830; }
+  .sg-color-primary .sg-swatch-color {
+    background-color: #181830;
+    color: #fff; }
+    .sg-color-primary .sg-swatch-color:before {
+      content: "#181830";
+      display: block; }
+
+.sg-color-secondary {
+  color: #fe7c08; }
+  .sg-color-secondary .sg-swatch-color {
+    background-color: #fe7c08;
+    color: #fff; }
+    .sg-color-secondary .sg-swatch-color:before {
+      content: "#fe7c08";
+      display: block; }
+
+.sg-color-highlight {
+  color: #288ad6; }
+  .sg-color-highlight .sg-swatch-color {
+    background-color: #288ad6;
+    color: #fff; }
+    .sg-color-highlight .sg-swatch-color:before {
+      content: "#288ad6";
+      display: block; }
+
+.sg-color-text {
+  color: #444; }
+  .sg-color-text .sg-swatch-color {
+    background-color: #444;
+    color: #fff; }
+    .sg-color-text .sg-swatch-color:before {
+      content: "#444";
+      display: block; }
+
+.sg-color-background {
+  color: #f1f1f1; }
+  .sg-color-background .sg-swatch-color {
+    background-color: #f1f1f1;
+    color: #444;
+    border: #f1f1f1 solid 1px; }
+    .sg-color-background .sg-swatch-color:before {
+      content: "#f1f1f1";
+      display: block; }
+
+.sg-color-border {
+  color: #ddd; }
+  .sg-color-border .sg-swatch-color {
+    background-color: #ddd;
+    color: #444; }
+    .sg-color-border .sg-swatch-color:before {
+      content: "#ddd";
+      display: block; }
+
+.sg-color-link {
+  color: #288ad6; }
+  .sg-color-link .sg-swatch-color {
+    background-color: #288ad6;
+    color: #fff; }
+    .sg-color-link .sg-swatch-color:before {
+      content: "#288ad6";
+      display: block; }
+
+/**
+ * Typography
+ */
+.sg-type {
+  margin-bottom: 1em; }
+
+code {
+  border: 1px solid #ddd;
+  background-color: #F9F8F8;
+  font-size: 11px;
+  font-size: 0.55rem; }
+
+.sg-type-micro .sg-type-item {
+  font-size: 9px;
+  font-size: 0.45rem; }
+
+.sg-type-micro code:after {
+  content: " = 9px"; }
+
+.sg-type-smallest .sg-type-item {
+  font-size: 11px;
+  font-size: 0.55rem; }
+
+.sg-type-smallest code:after {
+  content: " = 11px"; }
+
+.sg-type-smaller .sg-type-item {
+  font-size: 13px;
+  font-size: 0.65rem; }
+
+.sg-type-smaller code:after {
+  content: " = 13px"; }
+
+.sg-type-small .sg-type-item {
+  font-size: 16px;
+  font-size: 0.8rem; }
+
+.sg-type-small code:after {
+  content: " = 16px"; }
+
+.sg-type-base .sg-type-item {
+  font-size: 20px;
+  font-size: 1rem; }
+
+.sg-type-base code:after {
+  content: " = 20px"; }
+
+.sg-type-mid .sg-type-item {
+  font-size: 25px;
+  font-size: 1.25rem; }
+
+.sg-type-mid code:after {
+  content: " = 25px"; }
+
+.sg-type-large .sg-type-item {
+  font-size: 32px;
+  font-size: 1.6rem; }
+
+.sg-type-large code:after {
+  content: " = 32px"; }
+
+.sg-type-largest .sg-type-item {
+  font-size: 40px;
+  font-size: 2rem; }
+
+.sg-type-largest code:after {
+  content: " = 40px"; }
+
+.sg-type-jumbo .sg-type-item {
+  font-size: 49px;
+  font-size: 2.45rem; }
+
+.sg-type-jumbo code:after {
+  content: " = 49px"; }
+
+.sg-typeSpecimen {
+  margin-bottom: 0;
+  margin-top: 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+  .sg-typeSpecimen:after {
+    display: block;
+    font-size: 16px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    border-top: 1px solid #ddd;
+    font-weight: normal; }
+
+.sg-typeSpecimen--primary {
+  font-size: 30px;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.sg-typeSpecimen--secondary {
+  font-size: 30px;
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+.sg-typeSpecimen--giant {
+  font-size: 120px;
+  font-size: 6rem;
+  line-height: 1; }
+
+/**
+ * Icons
+ */
+.icon-sg {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 10px; }
+
+.sg-favicon {
+  padding: 5px; }
+  .sg-favicon img {
+    vertical-align: middle;
+    margin-right: 15px; }
 /*# sourceMappingURL=styleguide.css.map */

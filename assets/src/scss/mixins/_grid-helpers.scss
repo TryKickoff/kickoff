@@ -11,25 +11,26 @@
 
 	@for $i from 1 to $grid-column-count + 1 {
 		// gutter calculations, one for usual guttering, the other for legacy .no-flexbox support
-		$col-width-noGutter: gridColumnWidthCalc($i, true);
+		$col-width: gridColumnWidthCalc($i, true);
 		$col-width-guttered: gridColumnWidthCalc($i, true, true);
+		$g-gutter-half: ($grid-gutter-width / 2) + px;
 
 		.g-span#{$i}#{$suffix} {
-			flex-basis: $col-width-noGutter !important;
+			flex-basis: $col-width !important;
 			flex-grow: 0;
-			max-width: $col-width-noGutter;
+			// need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
+			// see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
+			max-width: $col-width;
 
-			// maybe have an option to include this in a variable
+			// holds the width of a column (which can be useful on wider viewports)
 			&.g-holdWidth#{$suffix} {
 				@include pixelMinWidth($i);
 			}
 
+			// These are set here again so that if g--stacked is set as default, it overrides the resetting of padding that causes
 			.g--gutter & {
-				// need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
-				// see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
-				max-width: $col-width-noGutter;
-
-				padding-left: $grid-gutter-width + px;
+				padding-left: $g-gutter-half;
+				padding-right: $g-gutter-half;
 			}
 			.g--gutter--scaled & {
 				flex-basis: $col-width-guttered !important;
@@ -59,6 +60,7 @@
 					// }
 				}
 
+
 			}
 			// @if $use-legacy-grid
 
@@ -74,13 +76,14 @@
  * .g--stack--narrow
  * .g--stack--wide
  */
-@mixin grid-stack($breakpoint: $bp-wide) {
+@mixin grid-stack($breakpoint: bp(wide)) {
 	@include respond-max($breakpoint) {
 		flex-flow: column nowrap;
 
 		@if $use-legacy-grid {
 			& > .g-col {
 				width: 100% !important;
+				max-width: 100% !important;
 			}
 		}
 	}
