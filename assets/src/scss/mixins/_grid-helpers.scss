@@ -3,69 +3,58 @@
  */
 
 @mixin gridSpanHelper($breakpoint: null) {
-	$suffix: null;
+  $suffix: null;
 
-	@if $breakpoint {
-		$suffix: '--' + #{$breakpoint};
-	}
+  @if $breakpoint {
+    $suffix: '--' + #{$breakpoint};
+  }
 
-	@for $i from 1 to $grid-column-count + 1 {
-		// gutter calculations, one for usual guttering, the other for legacy .no-flexbox support
-		$col-width: gridColumnWidthCalc($i, true);
-		$col-width-guttered: gridColumnWidthCalc($i, true, true);
-		$g-gutter-half: ($grid-gutter-width / 2) + px;
+  @for $i from 1 to $grid-column-count + 1 {
+    $col-width: gridColumnWidthCalc($i, true);
+    $col-width-guttered: gridColumnWidthCalc($i, true, true);
 
-		.g-span#{$i}#{$suffix} {
-			flex-basis: $col-width !important;
-			flex-grow: 0;
-			// need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
-			// see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
-			max-width: $col-width;
+    .g-span#{$i}#{$suffix} {
+      flex-basis: $col-width !important;
+      flex-grow: 0;
+      // need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
+      // see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
+      max-width: $col-width !important;
 
-			// holds the width of a column (which can be useful on wider viewports)
-			&.g-holdWidth#{$suffix} {
-				@include pixelMinWidth($i);
-			}
+      // maybe have an option to include this in a variable
+      &.g-holdWidth#{$suffix} {
+        @include pixelMinWidth($i);
 
-			// These are set here again so that if g--stacked is set as default, it overrides the resetting of padding that causes
-			.g--gutter & {
-				padding-left: $g-gutter-half;
-				padding-right: $g-gutter-half;
-			}
-			.g--gutter--scaled & {
-				flex-basis: $col-width-guttered !important;
-				// need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
-				// see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
-				max-width: $col-width-guttered;
+        .g--gutter--scaled & {
+          @include pixelMinWidth($i, true); // get the hold-width minus the gutter
+        }
+      }
 
-				margin-left: gutterCalc();
-			}
+      .g--gutter--scaled & {
+        flex-basis: $col-width-guttered !important;
+        // need this next line for a weird IE9/10/11 bug, where adding padding to a flex-item can throw out the flex-basis and wrap the columns incorrectly
+        // see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
+        max-width: $col-width-guttered;
 
-			@if $use-legacy-grid {
+        @if $i < $grid-column-count {
+          margin-left: gutterCalc();
+        }
+        @else {
+          margin-left: 0;
+        }
+      }
 
-				// used in combination with modernizr or another detection mechanism
-				.no-flexbox & {
-					width: gridColumnWidthCalc($i, true) !important;
+      @if $use-legacy-grid {
 
-						/**
-					 * Clear incase of height difference of block items.
-					 * Note: Remove these if all your items are the same height.
-					 */
-					// &:nth-of-type(#{$i}n + 1) {
-					//     clear: left;
-					// }
+        // used in combination with modernizr or another detection mechanism
+        .no-flexbox & {
+          width: gridColumnWidthCalc($i, true) !important;
+        }
 
-					// &:not(:nth-of-type(#{$i}n + 1)) {
-					//     clear: none;
-					// }
-				}
+      }
+      // @if $use-legacy-grid
 
-
-			}
-			// @if $use-legacy-grid
-
-		}
-	}
+    }
+  }
 }
 
 /**
@@ -76,17 +65,22 @@
  * .g--stack--narrow
  * .g--stack--wide
  */
-@mixin grid-stack($breakpoint: bp(wide)) {
-	@include respond-max($breakpoint) {
-		flex-flow: column nowrap;
+@mixin grid-stack($breakpoint: $bp-wide) {
+  @include respond-max($breakpoint) {
+    flex-flow: column nowrap;
 
-		@if $use-legacy-grid {
-			& > .g-col {
-				width: 100% !important;
-				max-width: 100% !important;
-			}
-		}
-	}
+    & > .g-col {
+      flex-basis: auto !important;
+      max-width: 100% !important;
+      margin-left: 0; // get rid of any grid margins if there are any
+
+      @if $use-legacy-grid {
+        .no-flexbox & {
+          width: 100% !important;
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -96,11 +90,11 @@
  * When show-unit is true, returns the percentage, otherwise return a decimal
  */
 @function gutterCalc($show-unit: true) {
-	@if $show-unit == true {
-		@return percentage($grid-gutter-width / ($layout-max-width - ($layout-margin * 2)));
-	} @else {
-		@return $grid-gutter-width / ($layout-max-width - ($layout-margin * 2));
-	}
+  @if $show-unit == true {
+    @return percentage($grid-gutter-width / ($layout-max-width - ($layout-margin * 2)));
+  } @else {
+    @return $grid-gutter-width / ($layout-max-width - ($layout-margin * 2));
+  }
 }
 
 
@@ -115,26 +109,31 @@
  * $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
  */
 @function gridColumnWidthCalc($column-span: 1, $show-unit: true, $include-gutters: false) {
-	$number-of-blocks-in-container : $grid-column-count / $column-span;
-	$total-width-of-all-blocks     : 1;
+  $number-of-blocks-in-container : $grid-column-count / $column-span;
+  $total-width-of-all-blocks     : 1;
 
-	// when including gutters, we need to adjust our % width or flex-basis appropriately
-	@if $include-gutters {
-		$total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
-		$total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
-	}
+  // when including gutters, we need to adjust our % width or flex-basis appropriately
+  @if $include-gutters {
+    $total-width-of-all-gutters    : gutterCalc(false) * ($number-of-blocks-in-container - 1);
+    $total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
+  }
 
-	$width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
+  $width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
 
-	@if $show-unit == true {
-		@return percentage($width-of-a-single-block);
-	} @else {
-		@return $width-of-a-single-block;
-	}
+  @if $show-unit == true {
+    @return percentage($width-of-a-single-block);
+  } @else {
+    @return $width-of-a-single-block;
+  }
 }
 
-@mixin pixelMinWidth($column-span: 1) {
-	min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) + px;
+@mixin pixelMinWidth($column-span: 1, $minusGutter: false) {
+  @if $minusGutter == true {
+    min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) - ($layout-max-width * gutterCalc(false)) + px;
+  }
+  @else {
+    min-width: ($layout-max-width * gridColumnWidthCalc($column-span, false)) + px;
+  }
 }
 
 
@@ -144,5 +143,5 @@
  * @include column(2);
  */
 @mixin column($column-span: 1) {
-	width: gridColumnWidthCalc($column-span, true);
+  width: gridColumnWidthCalc($column-span, true);
 }

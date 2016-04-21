@@ -18,7 +18,7 @@
   </div>
  */
 .g {
-  display: flex;
+  display: flex !important; // force display: flex, as otherwise may clash with other components display properties (and the grid won’t work)
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -48,8 +48,8 @@
 $g-gutter-half: ($grid-gutter-width / 2) + px;
 
 .g--gutter {
-	margin-left: -$g-gutter-half;
-	margin-right: -$g-gutter-half;
+  margin-left: -$g-gutter-half;
+  margin-right: -$g-gutter-half;
 
   & > .g-col {
     padding-left: $g-gutter-half;
@@ -59,7 +59,7 @@ $g-gutter-half: ($grid-gutter-width / 2) + px;
 
 // .g--gutter--scaled
 // Uses margin and percentage values.  Scales the margin as the viewport gets smaller (for RWD)
-// Pro = Good for when your container is always the $layout-max-width.  Means can apply borders to grid elements without extra markup
+// Pro = Good for when your container is always the $layout-max-width.  Means can apply borders to grid elements without more markup
 // Cons = If container isn’t same size as $layout-max-width, the gutters will also scale (so larger container width === larger gutters and vice versa)
 
 .g--gutter--scaled {
@@ -78,7 +78,6 @@ $g-gutter-half: ($grid-gutter-width / 2) + px;
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0;
-    padding-left: 0;
   }
 }
 
@@ -121,7 +120,7 @@ $g-gutter-half: ($grid-gutter-width / 2) + px;
  * Shrink a .g-col down to only the space it needs (flexbox only)
  */
 .g-col--shrink {
-	flex-grow: 0;
+  flex-grow: 0;
 }
 
 
@@ -131,6 +130,7 @@ $g-gutter-half: ($grid-gutter-width / 2) + px;
 @if $use-legacy-grid {
   .no-flexbox {
     .g {
+      display: block !important; // need this for old Safari, as it thinks it understands flexbox but doesn’t really
       @include clearfix;
     }
 
@@ -145,9 +145,14 @@ $g-gutter-half: ($grid-gutter-width / 2) + px;
     .g--stacked .g-col {
       width: 100%;
     }
+
+    .g--equalHeight {
+      > .g-col {
+        display: block; // again need to overide old safari thinking it knows flexbox, when it doesn’t really
+      }
+    }
   }
   //end .no-flexbox
-
 }
 
 
