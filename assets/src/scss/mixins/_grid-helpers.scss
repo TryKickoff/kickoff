@@ -6,7 +6,7 @@
   $suffix: null;
 
   @if $breakpoint {
-    $suffix: '--' + #{$breakpoint};
+    $suffix: --#{$breakpoint};
   }
 
   @for $i from 1 to $grid-column-count + 1 {
