@@ -29,12 +29,13 @@ $mq-base: 16;
  * - Argument is a pixel value WITHOUT a unit of measurement
  */
 @mixin respond-min($width) {
-	$width-em: em(strip-units($width), $mq-base);
+
+	$width-em: em(strip-units(bp($width)), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs >= $width {
+		@if $fix-mqs >= bp($width) {
 			// ...output the content the user gave us.
 			@content;
 		}
@@ -54,12 +55,12 @@ $mq-base: 16;
  * - Argument is a pixel value WITHOUT a unit of measurement
  */
 @mixin respond-max($width) {
-	$width-em: em(strip-units($width), $mq-base);
+	$width-em: em(strip-units(bp($width)), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs <= $width {
+		@if $fix-mqs <= bp($width) {
 			// ...output the content the user gave us.
 			@content;
 		}
@@ -79,13 +80,13 @@ $mq-base: 16;
  * - Arguments are pixel values WITHOUT a unit of measurement
  */
 @mixin respond-min-max($min-width, $max-width) {
-	$min-width-em: em(strip-units($min-width), $mq-base);
-	$max-width-em: em(strip-units($max-width), $mq-base);
+	$min-width-em: em(strip-units(bp($min-width)), $mq-base);
+	$max-width-em: em(strip-units(bp($max-width)), $mq-base);
 
 	// If we're outputting for a fixed media query set...
 	@if $fix-mqs {
 		// ...and if we should apply these rules...
-		@if $fix-mqs >= $min-width and $fix-mqs <= $max-width {
+		@if $fix-mqs >= bp($min-width) and $fix-mqs <= bp($max-width) {
 			// ...output the content the user gave us.
 			@content;
 		}

@@ -58,15 +58,19 @@ $line-height-headings         : 1.1;
  * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
  */
-$bp-narrow                    : 400;  // Set in px
-$bp-mid                       : 750;  // Set in px
-$bp-wide                      : 1000;  // Set in px
-$bp-huge                      : 1250; // Set in px
+
+// Add your breakpoints to this Sass map
+// Used in the suitcss-component-grid
+$breakpoints: (
+	narrow: 400px,
+	mid: 750px,
+	wide: 1000px,
+	huge: 1250px
+);
 
 // Special breakpoints
-$bp-single-col                : $bp-mid; // Break to single column (used in the grid)
-$bp-rwd-text                  : $bp-mid; // Reduce text size below this width
-
+$bp-single-col                : bp(mid); // Break to single column (used in the grid)
+$bp-rwd-text                  : bp(mid); // Reduce text size below this width
 
 /**
  * Path vars
@@ -87,16 +91,8 @@ $layout-min-width             : 1000  !default; // [in pixels] Minimum width for
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]
 
-// Column Padding
-$grid-column-padding          : 0     !default; // [in pixels]
-$grid-column-padding-unit     : 'px'  !default; // [in pixels or percent] Specify your unit of measurement for column padding
-$nested-column-padding        : false !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
-
-// Choose your grid options, see http://trykickoff.com/learn/grid.html for more info
-$using-push-pull-columns      : false !default; // Allow columns to be pushed & pulled
-$using-offsetcolumns          : false !default; // Allow columns to be offset
-$using-splits-and-shunts      : false !default; // Use Splits & Shunts for responsive web design
-
+$responsive-grid-sizes        : true  !default; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid              : true  !default;
 
 /**
  * App-specific variables
