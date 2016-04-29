@@ -51,7 +51,7 @@
     "grunt-newer": "^1.1.2",
     "grunt-scss-lint": "^0.3.8",
     "grunt-shimly": "^1.0.1",
-    "imagemin-gifsicle": "^4.2.0",
+    "imagemin-gifsicle": "^5.0.0",
     "imagemin-jpegtran": "^4.3.1",
     "imagemin-mozjpeg": "^5.1.0",
     "imagemin-optipng": "^4.3.0",
