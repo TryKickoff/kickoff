@@ -69,7 +69,7 @@ $breakpoints: (
 );
 
 // Special breakpoints
-$bp-single-col                : bp(mid); // Break to single column (used in the grid)
+$bp-single-col                : bp(mid); // Standard break for narrow viewports (used by various components i.e. form, mediaElement)
 $bp-rwd-text                  : bp(mid); // Reduce text size below this width
 
 /**

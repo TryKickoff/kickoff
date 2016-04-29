@@ -39,14 +39,6 @@ module.exports.tasks = {
 			]
 		},
 
-		grunticon : {
-			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
-			tasks: [
-				'icons',
-				'bsReload:all'
-			]
-		},
-
 		grunt: {
 			files: ['_grunt-configs/*.js', 'Gruntfile.js'],
 			options: {

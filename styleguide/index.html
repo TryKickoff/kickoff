@@ -17,14 +17,6 @@
 			<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 		<!--<![endif]-->
 		<link rel="stylesheet" href="/assets/dist/css/styleguide.css">
-
-		<!-- Grunticon SVG detection script. http://github.com/filamentgroup/ Remove if not using Grunticon. -->
-		<script>
-			(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,t=0;m.length>t;t++)m[t].href&&m[t].href.indexOf(i.href)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),c=n||e.document.getElementsByTagName("script")[0],m=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",o&&(i.onload=o),c.parentNode.insertBefore(i,c),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,c=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),m=new i;m.onerror=function(){n.method="png",n.href=r[2],t(r[2])},m.onload=function(){var e=1===m.width&&1===m.height,a=r[e&&c?0:e?1:2];n.method=e&&c?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},m.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);
-			grunticon(["/assets/dist/img/icons/icons.data.svg.css", "/assets/dist/img/icons/icons.data.png.css", "/assets/dist/img/icons/icons.fallback.css"]);
-		</script>
-		<noscript><link href="/assets/dist/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
-		<!-- /End Grunticon detection & injection script -->
 	</head>
 
 	<body>
@@ -52,50 +44,50 @@
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Swatches</h2>
 
-				<div class="l-blockGrid l-blockGrid--3 l-blockGrid--2--narrow">
-					<div class="l-blockGrid-item">
+				<div class="g">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-primary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-primary</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-secondary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-secondary</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-highlight">
 							<div class="sg-swatch-color"></div>
 							<code>$color-highlight</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-text">
 							<div class="sg-swatch-color"></div>
 							<code>$color-text</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-background">
 							<div class="sg-swatch-color"></div>
 							<code>$color-bg</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-border">
 							<div class="sg-swatch-color"></div>
 							<code>$color-border</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-link">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-default</code>
 						</div>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="sg-swatch sg-color-link-hover">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-hover</code>
@@ -114,7 +106,7 @@
 
 				<!-- Headings -->
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Primary typeface</h3>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
 						ABC
 					</div>
@@ -129,7 +121,7 @@
 
 				<!-- Body -->
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Secondary typeface</h3>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--secondary sg-typeSpecimen--giant">
 						ABC
 					</div>
@@ -152,7 +144,7 @@
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Typography examples</h2>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span6 g-col">
 						<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
 						<h1>Heading 1</h1>
@@ -170,7 +162,7 @@
 				</div>
 
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Typeface sizes</h3>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span6 g-col">
 						<div class="sg-type sg-type-micro"><div class="sg-type-item">Example text</div> <code>$type-micro</code></div>
 						<div class="sg-type sg-type-smallest"><div class="sg-type-item">Example text</div> <code>$type-smallest</code></div>
@@ -242,7 +234,7 @@
 								</div>
 						</div>
 
-						<div class="g-row">
+						<div class="g g--stack--mid">
 							<div class="form-controlGroup g-span6 g-col">
 								<label class="form-label">Checkboxes</label>
 								<div class="form-controlGroup-inputWrapper">
@@ -298,28 +290,28 @@
 				<h2 class="sg-sectionHeading">Icons</h2>
 
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Interface icons</h3>
-				<div class="l-blockGrid l-blockGrid--3 l-blockGrid--2--narrow">
-					<div class="l-blockGrid-item">
+				<div class="g">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-social-instagram"></div>
 						<code>.icon-social-instagram</code>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-social-twitter"></div>
 						<code>.icon-social-twitter</code>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-social-pinterest"></div>
 						<code>.icon-social-pinterest</code>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-social-facebook"></div>
 						<code>.icon-social-facebook</code>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-social-youtube"></div>
 						<code>.icon-social-youtube</code>
 					</div>
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--narrow g-span4--mid">
 						<div class="icon-sg icon-email"></div>
 						<code>.icon-email</code>
 					</div>

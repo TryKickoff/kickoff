@@ -6,7 +6,6 @@ module.exports.tasks = {
 	 * Clean some files
 	 */
 	clean: {
-		icons   : ['<%=config.distDir%>/img/icons', '<%=config.tempDir%>/icons'],
 		tempCSS : ['<%=config.tempDir%>/css']
 	},
 
@@ -39,10 +38,6 @@ module.exports.tasks = {
 
 		css: {
 			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css'
-		},
-
-		grunticon: {
-			src: '<%=config.img.distDir%>/icons/icons.data.svg.css'
 		}
 	},
 };

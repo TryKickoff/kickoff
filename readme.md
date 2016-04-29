@@ -19,7 +19,6 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
  * Sass is compiled using [node-sass](https://github.com/sass/node-sass) and we use [Autoprefixer](https://github.com/postcss/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
  * PostCSS plugins can also be used to transform your CSS
 * Simple server using [BrowserSync](http://browsersync.io)
-* SVG Icon generation using [Grunticon](https://github.com/filamentgroup/grunticon)
 
 ## Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.com](http://trykickoff.com/).

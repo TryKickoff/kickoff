@@ -47,7 +47,6 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-grunticon": "^2.2.2",
     "grunt-newer": "^1.1.2",
     "grunt-shimly": "^1.0.1",
     "imagemin-gifsicle": "^4.2.0",
@@ -55,8 +54,8 @@
     "imagemin-mozjpeg": "^5.1.0",
     "imagemin-optipng": "^4.3.0",
     "imagemin-pngquant": "^4.2.2",
-    "jshint-stylish": "^2.1.0",
     "imagemin-svgo": "^4.2.0",
+    "jshint-stylish": "^2.1.0",
     "load-grunt-configs": "^0.4.3",
     "load-grunt-tasks": "^3.4.1",
     "minifyify": "^7.3.2",
@@ -75,10 +74,8 @@
   "keywords": [],
   "scripts": {
     "test": "grunt travis --verbose",
-
     "prestart": "npm install -g grunt-cli && npm prune && npm install",
     "start": "grunt start",
-
     "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
     "deploy": "grunt compile --release"
   },

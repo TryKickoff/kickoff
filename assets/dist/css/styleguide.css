@@ -10,10 +10,6 @@
  * - hiDpi
  * - Forms */
 /**
- * Vendor prefixer
- * Usage: @include prefixer(border-radius, $radii, webkit ms spec);
- */
-/**
  * Responsive media query mixins
  * - These are used so that we can define separate media-query content
  *   for <IE9 and browsers with support for media queries
@@ -39,19 +35,6 @@
  * - Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
  * - Usage: @include respond-min-max(500, 600) { ... };
  * - Arguments are pixel values WITHOUT a unit of measurement
- */
-/**
- * Old IE specific mixin
- * - Only use this content if we're dealing with old IE
- * - Usage: @include oldie() { ... }
- */
-/**
- * Linear Gradient
- * Usage: @include linear-gradient(#000, #BADA55, horizontal, true);
- */
-/**
- * Radial Gradient
- * Usage: @include radial-gradient(#000, #BADA55, true);
  */
 /**
  * vertical-center
@@ -141,11 +124,11 @@ body {
 /**
  * Styleguide type styles
  */
-.sg-interfaceType, .sg-sectionHeading {
+.sg-interfaceType, .sg-sectionHeading, .sg-typeSpecimen:after {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
-.sg-interfaceType--subtle {
+.sg-interfaceType--subtle, .sg-typeSpecimen:after {
   color: #888; }
 
 .sg-sectionHeading {
@@ -195,7 +178,6 @@ body {
 .sg-swatch-color {
   height: 60px;
   padding: 15px;
-  font-size: 13px;
   font-size: 0.65rem;
   font-family: Menlo, Monaco, "Courier New", monospace; }
 
@@ -281,67 +263,57 @@ body {
 code {
   border: 1px solid #ddd;
   background-color: #F9F8F8;
-  font-size: 11px;
   font-size: 0.55rem; }
 
 .sg-type-micro .sg-type-item {
-  font-size: 9px;
   font-size: 0.45rem; }
 
 .sg-type-micro code:after {
   content: " = 9px"; }
 
 .sg-type-smallest .sg-type-item {
-  font-size: 11px;
   font-size: 0.55rem; }
 
 .sg-type-smallest code:after {
   content: " = 11px"; }
 
 .sg-type-smaller .sg-type-item {
-  font-size: 13px;
   font-size: 0.65rem; }
 
 .sg-type-smaller code:after {
   content: " = 13px"; }
 
 .sg-type-small .sg-type-item {
-  font-size: 16px;
   font-size: 0.8rem; }
 
 .sg-type-small code:after {
   content: " = 16px"; }
 
 .sg-type-base .sg-type-item {
-  font-size: 20px;
   font-size: 1rem; }
 
 .sg-type-base code:after {
   content: " = 20px"; }
 
 .sg-type-mid .sg-type-item {
-  font-size: 25px;
   font-size: 1.25rem; }
 
 .sg-type-mid code:after {
   content: " = 25px"; }
 
 .sg-type-large .sg-type-item {
-  font-size: 32px;
   font-size: 1.6rem; }
 
 .sg-type-large code:after {
   content: " = 32px"; }
 
 .sg-type-largest .sg-type-item {
-  font-size: 40px;
   font-size: 2rem; }
 
 .sg-type-largest code:after {
   content: " = 40px"; }
 
 .sg-type-jumbo .sg-type-item {
-  font-size: 49px;
   font-size: 2.45rem; }
 
 .sg-type-jumbo code:after {
@@ -354,24 +326,20 @@ code {
   word-wrap: break-word; }
   .sg-typeSpecimen:after {
     display: block;
-    font-size: 16px;
     font-size: 0.8rem;
     margin-top: 5px;
     border-top: 1px solid #ddd;
     font-weight: normal; }
 
 .sg-typeSpecimen--primary {
-  font-size: 30px;
   font-size: 1.5rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .sg-typeSpecimen--secondary {
-  font-size: 30px;
   font-size: 1.5rem;
   font-family: Georgia, "Times New Roman", Times, serif; }
 
 .sg-typeSpecimen--giant {
-  font-size: 120px;
   font-size: 6rem;
   line-height: 1; }
 

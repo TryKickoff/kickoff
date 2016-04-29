@@ -5,8 +5,8 @@
  * - grunt watcher           : watch files without static server
  * - grunt compile           : compile scss, js & compress images
  * - grunt compile --release : same as above, but compress CSS as well
- * - grunt icons             : generate the icons using grunticon
- * - grunt images            : compress all non-grunticon images & then run `grunt icons`
+ * - grunt styleguide        :
+ * - grunt images            : compress all images
  * - grunt checks            : run jshint and scsslint
  */
 
@@ -80,17 +80,9 @@ module.exports = function (grunt) {
 
 	// grunt images
 	grunt.registerTask('images', [
-		'newer:imagemin:images',
-		'icons',
+		'newer:imagemin:images'
 	]);
 
-
-	// grunt icons
-	grunt.registerTask('icons', [
-		'clean:icons',
-		'newer:imagemin:grunticon',
-		'grunticon',
-	]);
 
 
 	/**
