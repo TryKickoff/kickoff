@@ -1,0 +1,159 @@
+/**
+ * Tables
+ * =================================
+ * Index:
+ * - Associated Table Variables
+ * - Default table Styles
+ * – Table modifiers:
+ *   - .table--striped
+ * – .responsiveTable
+ */
+
+// scss-lint:disable SelectorDepth
+
+/**
+ * Define associated Table variables
+ */
+$table-bgColor                : $color-bg !default; // Default background color used for all tables.
+$table-bgColor--accent        : #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bgColor--hover         : inherit !default; // Background color used for `.table-hover` – set to 'inherit' by default (so no hover effect)
+$table-borderColor            : #ccc !default; // Border color for table and cell borders.
+
+/**
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
+$table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
+
+
+// Baseline styles
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: $baseline;
+	border-spacing: 0;
+	border: 2px solid $table-borderColor;
+	background-color: $table-bgColor;
+	table-layout: fixed; // https://css-tricks.com/fixing-tables-long-strings/
+
+	// Cells
+	th,
+	td {
+		padding: $table-cell-padding;
+		line-height: $baseline;
+		vertical-align: top;
+		border: 1px solid $table-borderColor;
+
+		&:first-child {	border-left: 0;	}
+		&:last-child {	border-right: 0;	}
+	}
+
+	// Bottom align for column headings
+	> thead {
+		th,
+		td {
+			vertical-align: bottom;
+			border-bottom: 2px solid $table-borderColor;
+		}
+	}
+
+	> tfoot td {
+		border-top: 2px solid $table-borderColor;
+		border-bottom: 0;
+	}
+
+	// Remove top border from thead by default
+	> thead:first-child {
+		> tr:first-child {
+			> th,
+			> td {
+				border-top: 0;
+			}
+		}
+	}
+
+	// if a hover color has been set in the variables
+	tr:hover {
+		td, th {
+			background-color: $table-bgColor--hover;
+		}
+	}
+
+	// Account for multiple tbody instances
+	> tbody + tbody {
+		border-top: 2px solid $table-borderColor;
+	}
+
+	// Nesting
+	& table,
+	& .table {
+		background-color: $color-bg;
+	}
+}
+
+th {
+	text-align: left;
+}
+
+
+/**
+ * Zebra-striping
+ * Default zebra-stripe styles (alternating gray and transparent backgrounds)
+ */
+.table--striped {
+	tbody :nth-child(odd) th,
+	tbody :nth-child(odd) td {
+		background-color: $table-bgColor--accent !important;
+	}
+}
+
+
+/**
+ * Responsive tables
+ * Wrap your tables in `.responsiveTable` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies <768px. Everything above that will display normally.
+ *
+ * If you need more responsive tables, consider Tablesaw by the Filament Group:
+ * https://github.com/filamentgroup/tablesaw
+ */
+.responsiveTable {
+	@include respond-max(mid) {
+		width: 100%;
+		margin-bottom: ($line-height-base * .75) + px;
+		overflow-y: hidden;
+		overflow-x: auto;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid $table-borderColor;
+		-webkit-overflow-scrolling: touch;
+
+		// Tighten up spacing
+		> table {
+			margin-bottom: 0;
+			border: 0;
+
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+				th,
+				td {
+					white-space: nowrap;
+
+					// Nuke the appropriate borders so that the parent can handle them
+					&:first-child {	border-left: 0; }
+					&:last-child {	border-right: 0; }
+				}
+			}
+
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot tr:last-child {
+				> th,
+				> td {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+

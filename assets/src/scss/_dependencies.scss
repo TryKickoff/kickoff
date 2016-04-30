@@ -1,0 +1,71 @@
+/**
+ * Site dependencies
+ * See http://trykickoff.com/demos/ for more info
+ */
+
+/*
+ * Mixins, helpers and functions
+ * Most CSS3 vendor prefixed items have a mixin,
+ * but we should not need them if autoprefixer is being used
+ * See mixins/css3.scss for the full list
+ */
+@import "functions/functions";
+@import "mixins/mixins";
+
+/**
+ * Core variables
+ * Edit your color palette and app vars before your begin
+ */
+@import "color-palette";
+@import "variables";
+
+/* CSS Reset - Normalize etc */
+@import "reset";
+
+/**
+ * Global typography styles
+ * See http://trykickoff.com/demos/typography.html for more info
+ */
+@import "typography";
+
+/**
+ * Components:
+ * See http://trykickoff.com/demos/components.html for more info
+ */
+@import "components/forms/forms"; // http://trykickoff.com/demos/forms.html
+@import "components/grid/grid"; // http://trykickoff.com/docs/grid.html & http://trykickoff.com/demos/grids.html
+@import "components/links";
+@import "components/buttons";
+@import "components/lists";
+@import "components/embedded-content";
+@import "components/media-object";
+@import "components/fluid-video";
+@import "components/icons";
+@import "components/skip-navigation";
+@import "components/code";
+@import "components/tables";
+// @import "components/scrollbars";
+
+
+/**
+ * Your app styles
+ */
+@import "global"; // Global styles
+@import "partials/masthead"; // Example partial for masthead
+@import "partials/footer"; // Example partial for footer
+
+@import "partials/browser-upgrade"; // Styles to show an upgrade message to users on old browsers
+
+
+/**
+ * Views
+ */
+//@import "views/home";
+//@import "views/contact";
+
+
+/* Helper/utility classes */
+@import "helper-classes";
+
+/* Print styles */
+@import "views/print";

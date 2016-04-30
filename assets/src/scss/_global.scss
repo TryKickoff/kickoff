@@ -1,0 +1,21 @@
+/**
+ * Global app/site styles
+ */
+body {
+	background-color: $color-bg;
+}
+
+/**
+ * Default layout container
+ */
+.l-container {
+	padding-left: #{$layout-margin}px;
+	padding-right: #{$layout-margin}px;
+	width: 95%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
+
+	.lt-ie9 & {
+		min-width: #{$layout-min-width}px;
+	}
+}

@@ -1,0 +1,241 @@
+/**
+ * Typography
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ * Resources:
+ * http://www.gridlover.net/
+ * http://modularscale.com/
+ * http://lamb.cc/typograph/
+ *
+ */
+
+html {
+	font-size: $font-size-base-narrow-px;
+	-webkit-text-size-adjust: 100%;
+
+	@include respond-min($bp-rwd-text) {
+		font-size: $font-size-base-px;
+	}
+}
+
+body {
+	font-family: $font-family-base;
+	@include font-size($type-base);
+	line-height: $leading-base;
+	color: $color-text;
+
+	// Add ligatures
+	font-feature-settings: "liga","dlig", "hist";
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+
+	// Two ways to smoothen type, they are disabled by default
+	// Enable only one of them if you need them
+	// 1.
+	// -webkit-font-smoothing: antialiased;
+	//    -moz-font-smoothing: antialiased;
+	// font-smooth:always;
+
+	// 2.
+	// opacity: 0.99;
+}
+
+/**
+ * Paragraphs
+ */
+p {
+	font-family: $font-family-base;
+	@include font-size($type-base);
+	margin-top: 0;
+	margin-bottom: $baseline;
+
+	// Measure - ideally about 65 chars per line
+	// max-width: $type-base * 30 + px;
+
+	// & small {
+	// 	color: lighten($color-text, 10%);
+	// }
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $font-family-headings;
+	font-weight: $font-weight-headings;
+	line-height: $line-height-headings;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	margin-top: 0;
+	margin-bottom: $baseline;
+
+	small {
+		font-weight: normal;
+	}
+}
+
+// Use the helper classes to emulate styles for another element
+// For example: h3.h1 or h3.alpha
+h1, .h1, .alpha {
+	@include font-size($type-largest);
+	margin-bottom: $baseline * 2;
+}
+
+h2, .h2, .beta {
+	@include font-size($type-large);
+}
+
+h3, .h3, .gamma {
+	@include font-size($type-mid);
+}
+
+h4, .h4, .delta {
+	@include font-size($type-base);
+}
+
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+	@include font-size($type-small);
+	margin-bottom: 0;
+}
+
+// h5, .h5, .epsilon {
+// }
+
+// h6, .h6, .zeta {
+// }
+
+// Only give these headings a margin-top if they are after other elements
+* + h1, * + .h1, * + .alpha,
+* + h2, * + .h2, * + .beta,
+* + h3, * + .h3, * + .gamma,
+* + h4, * + .h4, * + .delta {
+	margin-top: $baseline;
+}
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Miscellaneous
+ */
+
+// Emphasis
+strong, b {
+	font-weight: $font-weight-bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+	border-bottom: 1px dotted #ddd;
+	cursor: help;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+	padding-left: 10px;
+	margin: $baseline;
+	border-left: 4px solid lighten(#000, 80%);
+
+	p {
+		margin-bottom: 0;
+		@include font-size($type-base);
+		font-weight: 300;
+	}
+
+	small {
+		display: block;
+		color: lighten(#000, 70%);
+
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+}
+
+// Quotes
+q,
+blockquote {
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+cite {
+	font-style: normal;
+}
+
+// Addresses styling not present in S5, Chrome
+dfn {
+	font-style: italic;
+}
+
+// Addresses styling not present in IE6/7/8/9
+mark {
+	background: $yellow;
+	padding: 2px 4px;
+	border-radius: 3px;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup { top: -.5em; }
+sub { bottom: -.25em; }
+
+samp {
+	font-family: $font-family-mono;
+}
+
+
+/**
+ * Utilities
+ */
+.text-centre, // British or US English spellings..
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+@include text-selection($color-selection, $color-selection-bg);
+
+// Horizontal rules
+hr {
+	margin: ($baseline) 0;
+	border: 0;
+	border-top: 1px solid $hr-border;
+	border-bottom: 1px solid #fff;
+}
+
+// https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
+.hyphenate {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}

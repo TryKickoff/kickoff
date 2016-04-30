@@ -1,0 +1,23 @@
+/**
+ * Icons
+ */
+
+[class^="icon-"], [class*=" icon-"] {
+	speak: none;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.icon-large {
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+
+.icon-small {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	vertical-align: top;
+}

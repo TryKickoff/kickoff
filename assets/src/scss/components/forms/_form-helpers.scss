@@ -1,0 +1,21 @@
+// Mixin for form field states
+@mixin formFieldState($color) {
+	// Set the label color
+	.form-label {
+		color: $color;
+	}
+
+	.form-input {
+		color: $color;
+		border-color: $color;
+
+		&:focus {
+			border-color: darken($color, 10%);
+		}
+	}
+
+	.form-message {
+		display: block;
+		color: $color;
+	}
+}
