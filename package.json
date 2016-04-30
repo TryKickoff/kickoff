@@ -80,9 +80,7 @@
     "start": "grunt start",
 
     "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "grunt compile --release",
-
-    "submodules": "git submodule update --init --recursive"
+    "deploy": "grunt compile --release"
   },
   "babel": {
     "presets": [
