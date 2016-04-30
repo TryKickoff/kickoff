@@ -5,9 +5,7 @@ module.exports.tasks = {
 	 * https://github.com/gruntjs/grunt-contrib-clean
 	 * Clean some files
 	 */
-	clean: {
-		tempCSS : ['<%=config.tempDir%>/css']
-	},
+	clean: {},
 
 
 	/**
