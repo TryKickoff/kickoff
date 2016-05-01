@@ -58,7 +58,7 @@
     "imagemin-pngquant": "^4.2.2",
     "imagemin-svgo": "^4.1.2",
     "jshint-stylish": "^2.1.0",
-    "load-grunt-configs": "^0.4.3",
+    "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.4.1",
     "minifyify": "^7.3.2",
     "postscss": "^1.2.3"
