@@ -22,8 +22,8 @@ module.exports.tasks = {
 	 */
 	eslint: {
 		target: [
-			'<%=config.srcDir%>/js/*.js',
-			'<%=config.srcDir%>/js/modules/*.js',
+			'<%=config.srcDir%>/js/**/*.js',
+			'!<%=config.srcDir%>/js/standalone/**/*.js',
 		],
 	},
 };
