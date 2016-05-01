@@ -13,6 +13,8 @@
 module.exports = function (grunt) {
 	'use strict';
 
+	require('time-grunt')(grunt); // Record how long tasks take
+
 	var options = {
 		pkg: require('./package'), // <%=pkg.name%>
 
@@ -21,7 +23,7 @@ module.exports = function (grunt) {
 	};
 
 	// Load grunt tasks automatically
-	require('load-grunt-tasks')(grunt, {pattern: ["grunt-*"]});
+	require('load-grunt-tasks')(grunt);
 
 	// Load grunt configurations automatically
 	var configs = require('load-grunt-configs')(grunt, options);
