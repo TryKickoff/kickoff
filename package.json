@@ -67,7 +67,7 @@
     "browser-sync": "^2.11.1",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-filesizegzip": "^0.2.0",
+    "grunt-filesizegzip": "^0.3.0",
     "opn": "^3.0.3"
   },
   "keywords": [],
