@@ -392,8 +392,8 @@ input[type="submit"] {
  */
 @include placeholder($placeholder-textColor);
 
-// === <$bp-single-col ===
-@include respond-min($bp-single-col) {
+// === <mid ===
+@include respond-min(mid) {
 	/**
 	 * Horizontal-specific styles
 	 * =================================
@@ -442,4 +442,4 @@ input[type="submit"] {
 	}
 }
 
-// === end <$bp-single-col ===
+// === end <mid ===
