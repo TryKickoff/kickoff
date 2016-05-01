@@ -15,7 +15,7 @@ module.exports = function (grunt, options) {
 		var cssDir = grunt.config.process(options.config.css.distDir);
 
 		var plugins = [
-			autoprefixer({ browsers: options.config.css.autoprefixer })
+			autoprefixer({ browsers: options.config.css.autoprefixer }),
 		];
 
 		// Release flag, use cssnano
@@ -26,12 +26,12 @@ module.exports = function (grunt, options) {
 		postscss(plugins).processMany([
 			{
 				from: scssDir + '/kickoff.scss',
-				to: cssDir + '/kickoff.css'
+				to: cssDir + '/kickoff.css',
 			},
 			{
 				from: scssDir + '/styleguide.scss',
-				to: cssDir + '/styleguide.css'
-			}
+				to: cssDir + '/styleguide.css',
+			},
 		])
 		.then(done)
 		.catch(function(error) {

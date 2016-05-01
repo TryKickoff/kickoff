@@ -4,7 +4,7 @@
  */
 
 module.exports = {
-	src: "./_grunt-configs/*.js", // This directory. Has all the Grunt tasks grouped into specific js files
+	src: './_grunt-configs/*.js', // This directory. Has all the Grunt tasks grouped into specific js files
 
 	srcDir: 'assets/src',   // <%=config.srcDir%>
 	distDir: 'assets/dist', // <%=config.distDir%>
@@ -12,7 +12,7 @@ module.exports = {
 
 
 	// CSS-related Grunt vars
-	css : {
+	css: {
 		scssDir: '<%=config.srcDir%>/scss', // <%=config.css.scssDir%>
 		distDir: '<%=config.distDir%>/css', // <%=config.css.distDir%>
 
@@ -22,7 +22,7 @@ module.exports = {
 
 		// We are supporting the last 2 browsers, any browsers with >5% market share,
 		// and ensuring we support IE8+ with prefixes
-		autoprefixer: ['> 5%', 'last 2 versions', 'ie > 8'] // <%=config.css.autoprefixer%>
+		autoprefixer: ['> 5%', 'last 2 versions', 'ie > 8'], // <%=config.css.autoprefixer%>
 	},
 
 
@@ -33,13 +33,13 @@ module.exports = {
 
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
-		distFile: 'bundle.js' // <%=config.js.distFile%>
+		distFile: 'bundle.js', // <%=config.js.distFile%>
 	},
 
 
 	// Image-related Grunt vars
-	img : {
-		srcDir: '<%=config.srcDir%>/img',  // <%=config.img.srcDir%>
-		distDir: '<%=config.distDir%>/img' // <%=config.img.distDir%>
-	}
+	img: {
+		srcDir: '<%=config.srcDir%>/img',   // <%=config.img.srcDir%>
+		distDir: '<%=config.distDir%>/img', // <%=config.img.distDir%>
+	},
 };

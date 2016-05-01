@@ -23,8 +23,8 @@ module.exports.tasks = {
 				expand: true,
 				cwd: '<%=config.img.srcDir%>/',
 				src: ['**/*.{svg,png,jpg,gif}'],
-				dest: '<%=config.img.distDir%>'
-			}]
-		}
-	}
+				dest: '<%=config.img.distDir%>',
+			}],
+		},
+	},
 };
