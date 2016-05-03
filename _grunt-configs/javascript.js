@@ -13,17 +13,17 @@ module.exports.tasks = {
 				transform: ['babelify'],
 				browserifyOptions: {
 					debug: true,
-					fullPaths: false
+					fullPaths: false,
 				},
 				plugin: [
 					['minifyify', {
 						output: '<%=config.js.distDir%><%=config.js.distFile%>.map',
-						map: '<%=config.js.distFile%>.map'
-					}]
+						map: '<%=config.js.distFile%>.map',
+					}],
 				],
-				watch: true
-			}
-		}
+				watch: true,
+			},
+		},
 	},
 
 
