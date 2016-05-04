@@ -1,3 +1,10 @@
+/**
+ * Usage:
+ *
+ * bp(100)
+ * bp(mid) - uses the $breakpoints map
+ */
+
 @function bp($val) {
 	@if type-of($val) == number {
 		@return $val;

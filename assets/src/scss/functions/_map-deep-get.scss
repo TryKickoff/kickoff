@@ -1,3 +1,21 @@
+/**
+ * Usage:
+ *
+ $grid-configuration: (
+   'columns': 12,
+   'layouts': (
+     'small': 800px,
+     'medium': 1000px,
+     'large': 1200px,
+   ),
+ );
+
+ div {
+   font-size: map-deep-get($grid-configuration, 'columns');
+   width: map-deep-get($grid-configuration, 'layouts', 'medium');
+ }
+ */
+
 @function map-deep-get($map, $keys...) {
 	@each $key in $keys {
 		$map: map-get($map, $key);
