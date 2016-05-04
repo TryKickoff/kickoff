@@ -57,18 +57,17 @@ $line-height-headings     : 1.1;
  * Breakpoints
  * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
+ * Add your breakpoints to this Sass map
+ * Used in the Kickoff grid
  */
-
-// Add your breakpoints to this Sass map
-// Used in the suitcss-component-grid
 $breakpoints: (
-	narrow: 400px,
-	mid: 750px,
-	wide: 1000px,
-	huge: 1250px
+	narrow                  : 400px,
+	mid                     : 750px,
+	wide                    : 1000px,
+	huge                    : 1250px
 );
 
-// Special breakpoints
+// Special breakpoints - add any more here
 $bp-rwd-text              : bp(mid); // Reduce text size below this width
 
 /**
@@ -95,8 +94,8 @@ $use-legacy-grid          : true  !default;
 /**
  * App-specific variables
  */
-$default-transition-timing: cubic-bezier(.77, 0, .175, 1);
-$default-transition-duration: 300ms;
-$default-transition: all $default-transition-duration $default-transition-timing;
+$default-transition-timing   : cubic-bezier(.77, 0, .175, 1);
+$default-transition-duration : 300ms;
+$default-transition          : all $default-transition-duration $default-transition-timing;
 
 // Add your own :)
