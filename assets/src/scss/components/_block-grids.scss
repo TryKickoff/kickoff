@@ -36,7 +36,7 @@ $block-grid-breakpoints: (
 
 	// default doesn't need a mutator
 	@if($mutator and not ($mutator == default)) {
-		$suffix: '--' + #{$mutator};
+		$suffix: '--' + $mutator;
 	}
 
 	@for $i from 1 to $grid-column-count + 1 {
