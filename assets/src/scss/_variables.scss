@@ -83,9 +83,8 @@ $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$im
  */
 
 // Setup grid defaults
-$layout-margin            : 0     !default; // [in pixels] Space outside the grid
-$layout-max-width         : 1000  !default; // [in pixels]
-$layout-min-width         : 1000  !default; // [in pixels] Minimum width for layout in <IE9
+$layout-margin            : 0px     !default; // [in pixels] Space outside the grid
+$layout-max-width         : 1000px  !default; // [in pixels]
 
 $grid-column-count        : 12    !default; // Total column count
 $grid-gutter-width        : 20    !default; // [in pixels]
