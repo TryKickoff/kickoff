@@ -1,9 +1,8 @@
 /**
  * $$
- * Loop over DOM elements more easily
+ * @description Loop over DOM elements more easily
  *
- * Usage:
- * $$('.foo').forEach(function(item) { // do something });
+ * @usage $$('.foo').forEach(function(item) { // do something });
  */
 
 export default window.$$ = function $$(selector, context) {
