@@ -21,6 +21,26 @@
   "contributors": [
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
+  "scripts": {
+    "test": "grunt travis --verbose",
+
+    "prestart": "npm prune && npm install",
+    "start": "grunt start",
+
+    "predeploy": "npm prune && npm install --no-optional",
+    "deploy": "grunt compile --release",
+
+    "info": "npm-scripts-info"
+  },
+  "scripts-info": {
+    "test": "Run Travis CI checks",
+
+    "prestart": "Install npm dependencies",
+    "start": "Open starter checklist on trykickoff.com",
+
+    "predeploy": "Install non-optional npm dependencies",
+    "deploy": "Compile all assets for production deployment"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/trykickoff/kickoff.git"
@@ -70,18 +90,10 @@
     "grunt-eslint": "^18.1.0",
     "grunt-filesizegzip": "^0.3.0",
     "grunt-scss-lint": "^0.3.8",
+    "npm-scripts-info": "^0.3.6",
     "opn": "^4.0.1"
   },
   "keywords": [],
-  "scripts": {
-    "test": "grunt travis --verbose",
-
-    "prestart": "npm prune && npm install",
-    "start": "grunt start",
-
-    "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "grunt compile --release"
-  },
   "babel": {
     "presets": [
       "es2015"
