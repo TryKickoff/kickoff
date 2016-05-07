@@ -7,7 +7,7 @@
  * - grunt compile --release : same as above, but compress CSS as well
  * - grunt styleguide        :
  * - grunt images            : compress all images
- * - grunt checks            : run jshint and scsslint
+ * - grunt test              : run jshint and scsslint
  */
 
 module.exports = function (grunt) {
@@ -82,14 +82,14 @@ module.exports = function (grunt) {
 
 	// grunt images
 	grunt.registerTask('images', [
-		'newer:imagemin:images'
+		'newer:imagemin:images',
 	]);
 
 
 	/**
-	 * grunt checks
+	 * grunt test
 	 */
-	grunt.registerTask('checks', [
+	grunt.registerTask('test', [
 		'eslint',
 		'scsslint',
 	]);
