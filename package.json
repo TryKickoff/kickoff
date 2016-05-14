@@ -82,6 +82,8 @@
   },
   "optionalDependencies": {
     "browser-sync": "^2.12.5",
+    "commitizen": "^2.8.1",
+    "cz-conventional-changelog": "^1.1.6",
     "eslint": "^2.8.0",
     "eslint-config-airbnb-base": "^2.0.0",
     "eslint-plugin-import": "^1.6.1",
@@ -101,5 +103,10 @@
     "plugins": [
       "transform-object-assign"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
