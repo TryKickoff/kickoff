@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "console": "^0.5.2",
+    "eslint-plugin-import": "^1.6.1",
     "lite-ready": "^1.0.4"
   },
   "devDependencies": {
