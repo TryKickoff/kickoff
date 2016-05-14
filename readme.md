@@ -1,12 +1,13 @@
+# Kickoff
+> A lightweight front-end framework for creating scalable and performant, responsive sites
+
 [![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/TryKickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
-# Kickoff
-## A lightweight front-end framework for creating scalable and performant, responsive sites
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
-### Features
+## Features
 * Mobile-first, responsive philosophy
 * Rock-solid **CSS** framework using **Sass** (`.scss`) preprocessor
  * Starter content styles: [typography](http://trykickoff.com/demos/typography.html), [grids](http://trykickoff.com/demos/grids.html) & [components](http://trykickoff.com/demos/components.html)
@@ -23,48 +24,41 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
 ## Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.com](http://trykickoff.com/).
 
-![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1)
-## Yeoman generator
-There is also a Yeoman generator for Kickoff, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/docs/yeoman.html) for more info.
+## ![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1) Yeoman generator
+Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/docs/yeoman.html) for more info.
+
+## ![Slack logo](http://i.imgur.com/1LNs3Q6.png?1) [Need real-time help? Find us on Slack](https://slackin-trykickoff.herokuapp.com/)
 
 ## Bugs and feature requests
 Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/trykickoff/kickoff/issues/new).
 
-### Browser compatibility
+## Browser compatibility
 Kickoff has been tested in the following browsers:
-- Chrome (latest)
-- Safari (latest)
-- Firefox (latest)
-- Opera (latest)
-- Internet Explorer 9+
 
-If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
+| [Chrome](https://www.google.com/chrome/) (latest)                                                               | [Firefox](https://www.mozilla.org/en-GB/firefox/new/) (latest)                                                     | [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer_9) (9+)                                                       | [Safari](https://www.apple.com/safari/) (latest)                                                                | [Safari (iOS)](https://www.apple.com/safari/) (latest)                                                                 | [Opera](https://www.opera.com/) (latest)                                                                     |
+|:---------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------:|
+| <img src="https://github.com/alrra/browser-logos/raw/master/chrome/chrome_256x256.png" width="80" alt="Chrome"> | <img src="https://github.com/alrra/browser-logos/raw/master/firefox/firefox_256x256.png" width="80" alt="Firefox"> | <img src="https://github.com/alrra/browser-logos/raw/master/internet-explorer/internet-explorer_256x256.png" width="80" alt="IE"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari/safari_256x256.png" width="80" alt="Safari"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari-ios/safari-ios_256x256.png" width="80" alt="Safari">| <img src="https://github.com/alrra/browser-logos/raw/master/opera/opera_256x256.png" width="80" alt="Opera"> |
 
-## Creators
-
-**Zander Martineau**
-
-- <http://twitter.com/mrmartineau>
-- <http://github.com/mrmartineau>
-
-**Ashley Nolan**
-
-- <http://twitter.com/AshNolan_>
-- <http://github.com/ashleynolan>
+## Maintainers and contributors
+|                           Zander Martineau                          |                             Ashley Nolan                             |                              Nic Bell                             |
+|:-------------------------------------------------------------------:|:--------------------------------------------------------------------:|:-----------------------------------------------------------------:|
+| ![Zander](https://avatars0.githubusercontent.com/u/64883?v=3&s=100) | ![Ashley](https://avatars3.githubusercontent.com/u/805184?v=3&s=100) | ![Nic](https://avatars3.githubusercontent.com/u/151842?v=3&s=100) |
+| [Twitter](http://twitter.com/mrmartineau)                           | [Twitter](http://twitter.com/AshNolan_)                              | [Twitter](http://twitter.com)                                     |
+| [Github](https://github.com/mrmartineau/)                           | [Github](https://github.com/ashleynolan)                             | [Github](https://github.com/nicbell/)                             |
+| [Site](http://martineau.tv)                                         | [Site](http://ashleynolan.co.uk)                                     | [Site](http://nicbell.net)                                        |
 
 ### Community
+If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
 
 Keep track of development and community news by following [@TryKickoff on Twitter](http://twitter.com/TryKickoff).
-
-### Versioning
-
-For transparency into our release cycle and in striving to maintain backward compatibility, Kickoff is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
 
 ### Contributing
 Please read our [contribution guidelines](CONTRIBUTING.md) before contributing to Kickoff.
 
-### Sponsored by TMW Unlimited...
+### Versioning
+For transparency into our release cycle and in striving to maintain backward compatibility, Kickoff is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+
+### Sponsored by
 ![TMW Unlimited...](http://i.imgur.com/KIUIgi8.png?1)
 
 Kickoff was created by Ash and Zander while working at TMW. TMW continue to provide sponsorship for the development of the project as well as trykickoff.com domain renewals and stickers.
-
