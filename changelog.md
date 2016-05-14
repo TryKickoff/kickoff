@@ -1,13 +1,36 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://trykickoff.com
 
-## [6.1.0] - 17/02/2016
+## [7.0.0] - 21/05/2016
 
-### Changed
-
-#### Javascript
+### Javascript
 - Updated js to use ES6/ES2015 syntax to be transpiled using Babel (babelify Browserify transform)
 - Switched from jshint & jscs to [ESLint](http://eslint.org). ESLint config is custom but heavily based on [Airbnb's ESLint style guides](https://github.com/airbnb/javascript).
+- Trak.js and Swiftclick not installed by default anymore
+- Included [double-dollar](https://github.com/mrmartineau/double-dollar) to make life a little easier when looping over DOM elements
+
+
+### Scss
+- Replaced the existing grid with a flexbox-based grid with fallbacks for browsers that do not support flexbox. Learn about the grid [here]()
+- Removed `$bp-single-col` and moved all other breakpoint variables into a Sass map. The `respond-*` mixins were also improved to allow for different types of arguments, e.g. `@include respond-min(mid) {...}` or `@include respond-min(500) {...}` or `@include respond-min(400px) {...}`
+- Updated to Nomalize@4.0.0
+
+### Tooling
+- Added Commitizen to help enforce consistent git commits. 
+- Run `npm run info` to show information about all our npm run scripts.
+- `grunt checks` task renamed to `grunt test`
+- Updated to latest version of all npm dependencies that comply with our browser support requirements
+- Updated to grunt@1.0.1
+- Removed Grunticon. Currently there is no icon replacement but we will provide instructions on how to add a better system soon
+
+
+### HTML
+- Changed `#mainContent` ID to be `#main`
+- 
+
+### Browser Support
+- Dropped support for Internet Explorer 8. Expect Kickoff to drop support for IE 9-11 within 6-12 months.
+
 
 ## [6.0.0] - 20/11/2015
 
