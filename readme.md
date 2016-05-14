@@ -61,10 +61,6 @@ Keep track of development and community news by following [@TryKickoff on Twitte
 For transparency into our release cycle and in striving to maintain backward compatibility, Kickoff is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
 
 ### Contributing
+Please read our [contribution guidelines](CONTRIBUTING.md) before contributing to Kickoff.
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
 
