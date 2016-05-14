@@ -63,4 +63,7 @@ For transparency into our release cycle and in striving to maintain backward com
 ### Contributing
 Please read our [contribution guidelines](CONTRIBUTING.md) before contributing to Kickoff.
 
+### Sponsored by TMW Unlimited...
+![TMW Unlimited...](http://i.imgur.com/KIUIgi8.png)
+Kickoff was created by Ash and Zander while working at TMW. TMW continue to provide sponsorship for the development of the project as well as trykickoff.com domain renewals and stickers.
 
