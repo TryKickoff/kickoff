@@ -38,8 +38,6 @@ module.exports.tasks = {
 
 		// output location (relative to your grunt.js file location)
 		dest: '<%=config.srcDir%>/js/standalone/shims.js',
-
-		// minify the output (true or false)
-		minify: true
+		minify: true,
 	}
 };
