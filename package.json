@@ -23,23 +23,20 @@
   ],
   "scripts": {
     "test": "grunt travis --verbose",
-
     "prestart": "npm prune && npm install",
     "start": "grunt start",
-
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "grunt compile --release",
-
-    "info": "npm-scripts-info"
+    "info": "npm-scripts-info",
+    "commit": "git-cz"
   },
   "scripts-info": {
     "test": "Run Travis CI checks",
-
     "prestart": "Install npm dependencies",
     "start": "Open starter checklist on trykickoff.com",
-
     "predeploy": "Install non-optional npm dependencies",
-    "deploy": "Compile all assets for production deployment"
+    "deploy": "Compile all assets for production deployment",
+    "commit": "Commit using our standard git commit message format"
   },
   "repository": {
     "type": "git",
