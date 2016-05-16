@@ -7,6 +7,8 @@
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
+---
+
 ## Features
 * Mobile-first, responsive philosophy
 * Rock-solid **CSS** framework using **Sass** (`.scss`) preprocessor
@@ -21,16 +23,26 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
  * PostCSS plugins can also be used to transform your CSS
 * Simple server using [BrowserSync](http://browsersync.io)
 
+---
+
 ## Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.com](http://trykickoff.com/).
+
+---
 
 ## ![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1) Yeoman generator
 Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/docs/yeoman.html) for more info.
 
-## ![Slack logo](http://i.imgur.com/1LNs3Q6.png?1) [Need real-time help? Find us on Slack](https://slackin-trykickoff.herokuapp.com/)
+---
+
+### ![Slack logo](http://i.imgur.com/1LNs3Q6.png?1) [Need real-time help? Find us on Slack](https://slackin-trykickoff.herokuapp.com/)
+
+---
 
 ## Bugs and feature requests
 Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/trykickoff/kickoff/issues/new).
+
+---
 
 ## Browser compatibility
 Kickoff has been tested in the following browsers:
@@ -38,6 +50,8 @@ Kickoff has been tested in the following browsers:
 | [Chrome](https://www.google.com/chrome/) (latest)                                                               | [Firefox](https://www.mozilla.org/en-GB/firefox/new/) (latest)                                                     | [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer_9) (9+)                                                       | [Safari](https://www.apple.com/safari/) (latest)                                                                | [Safari (iOS)](https://www.apple.com/safari/) (latest)                                                                 | [Opera](https://www.opera.com/) (latest)                                                                     |
 |:---------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------:|
 | <img src="https://github.com/alrra/browser-logos/raw/master/chrome/chrome_256x256.png" width="80" alt="Chrome"> | <img src="https://github.com/alrra/browser-logos/raw/master/firefox/firefox_256x256.png" width="80" alt="Firefox"> | <img src="https://github.com/alrra/browser-logos/raw/master/internet-explorer/internet-explorer_256x256.png" width="80" alt="IE"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari/safari_256x256.png" width="80" alt="Safari"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari-ios/safari-ios_256x256.png" width="80" alt="Safari">| <img src="https://github.com/alrra/browser-logos/raw/master/opera/opera_256x256.png" width="80" alt="Opera"> |
+
+---
 
 ## Maintainers and contributors
 |                           Zander Martineau                          |                             Ashley Nolan                             |                              Nic Bell                             |
@@ -57,6 +71,8 @@ Please read our [contribution guidelines](CONTRIBUTING.md) before contributing t
 
 ### Versioning
 For transparency into our release cycle and in striving to maintain backward compatibility, Kickoff is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+
+---
 
 ### Sponsored by
 ![TMW Unlimited...](http://i.imgur.com/KIUIgi8.png?1)
