@@ -24,7 +24,7 @@ module.exports = function (grunt, options) {
 		// Release flag, use cssnano
 		// e.g. `grunt compile --release`
 		if (grunt.option('release')) {
-			plugins.push(cssnano());
+			plugins.push(cssnano({discardComments: {removeAll: true}}));
 		}
 
 		postscss(plugins).processMany([
