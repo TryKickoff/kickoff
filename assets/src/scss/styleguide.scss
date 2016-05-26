@@ -167,37 +167,37 @@ code {
 	}
 
 	code {
-			&:after { content: ' = #{$size}px'; }
+			&:after { content: ' = #{type($size)}px'; }
 	}
 }
 
 
 .sg-type-micro {
-	@include sgTypeTest($type-micro);
+	@include sgTypeTest(micro);
 }
 .sg-type-smallest {
-	@include sgTypeTest($type-smallest);
+	@include sgTypeTest(smallest);
 }
 .sg-type-smaller {
-	@include sgTypeTest($type-smaller);
+	@include sgTypeTest(smaller);
 }
 .sg-type-small {
-	@include sgTypeTest($type-small);
+	@include sgTypeTest(small);
 }
 .sg-type-base {
-	@include sgTypeTest($type-base);
+	@include sgTypeTest(base);
 }
 .sg-type-mid {
-	@include sgTypeTest($type-mid);
+	@include sgTypeTest(mid);
 }
 .sg-type-large {
-	@include sgTypeTest($type-large);
+	@include sgTypeTest(large);
 }
 .sg-type-largest {
-	@include sgTypeTest($type-largest);
+	@include sgTypeTest(largest);
 }
 .sg-type-jumbo {
-	@include sgTypeTest($type-jumbo);
+	@include sgTypeTest(jumbo);
 }
 
 .sg-typeSpecimen {

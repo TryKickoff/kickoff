@@ -62,7 +62,7 @@ $color-info               : $blue;               // base colour for info input s
 	width: 100%;
 	padding: 0;
 	margin-bottom: $baseline;
-	@include font-size($type-mid);
+	@include font-size(mid);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -71,7 +71,7 @@ $color-info               : $blue;               // base colour for info input s
 
 	// Small
 	small {
-		@include font-size($type-small);
+		@include font-size(small);
 		color: lighten(#000, 70%);
 	}
 }
@@ -111,7 +111,7 @@ $color-info               : $blue;               // base colour for info input s
 	height: 2.5em;
 	padding: .5em;
 
-	@include font-size($type-base);
+	@include font-size(base);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-textColor;
@@ -232,7 +232,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-input-file {
 	display: inline-block;
 	width: 100%;
-	@include font-size($type-base);
+	@include font-size(base);
 	margin: 0;
 	vertical-align: middle;
 	line-height: 1em;
