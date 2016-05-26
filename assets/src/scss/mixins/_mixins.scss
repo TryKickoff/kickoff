@@ -1,28 +1,27 @@
 /**
  * Sass Mixins
- * - Vendor prefixer
  * - Responsive
- * - CSS3
- * - Utility Mixins
- * - hiDpi
- * - Forms */
+ * - Dimensions
+ * - Positioning
+ * - Utility
+ * - Forms
+ * - Module Naming Helpers
+ */
 
 // Responsive mixins
 @import "responsive";
+@import "hidpi";
 
-// Vertical Centering
+// Sizing mixins
+// Font-sizing, REM mixins and other sizing mixins
+@import "units";
+
+// Positioning mixins
+@import "position";
 @import "vertical-center";
 
-/**
- * Utility mixins
- * Clearfix, REM + fallbacks,
- * @font-face, sizing shortcuts,
- * and other helpers
- */
+// Utility mixins - Clearfix and other helpers
 @import "utility";
-
-// HiDPI
-@import "hidpi";
 
 // Module naming helpers
 @import "module-naming-helpers";
