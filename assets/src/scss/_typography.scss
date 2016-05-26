@@ -55,11 +55,7 @@ p {
 	margin-bottom: $baseline;
 
 	// Measure - ideally about 65 chars per line
-	// max-width: $type-base * 30 + px;
-
-	// & small {
-	// 	color: lighten($color-text, 10%);
-	// }
+	// max-width: #{type(base) * 30}px;
 }
 
 /**
@@ -104,11 +100,9 @@ h6, .h6, .zeta {
 	margin-bottom: 0;
 }
 
-// h5, .h5, .epsilon {
-// }
+// h5, .h5, .epsilon {}
 
-// h6, .h6, .zeta {
-// }
+// h6, .h6, .zeta {}
 
 // Only give these headings a margin-top if they are after other elements
 * + h1, * + .h1, * + .alpha,
