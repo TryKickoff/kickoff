@@ -1,8 +1,13 @@
-// ==========================================================================
-// Strips the units from a value. e.g. 12px -> 12
-// Usage: strip-units(400px)
-// ==========================================================================
-
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+/// @example strip-units(400px)
 @function strip-units($val) {
-	@return ($val / ($val * 0 + 1));
+	$newVal: 0;
+	@if $val == null {
+		$newVal: 0;
+	} @else {
+		$newVal: $val;
+	}
+	@return ($newVal / ($newVal * 0 + 1));
 }
