@@ -88,14 +88,6 @@
     "npm-scripts-info": "^0.3.6"
   },
   "keywords": [],
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "transform-object-assign"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
