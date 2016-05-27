@@ -1,6 +1,6 @@
 # Contributing to Kickoff
 
-We'd love for you to contribute to our source code and to make AngularJS even better than it is
+We'd love for you to contribute to our source code and to make Kickoff even better than it is
 today! Here are the guidelines we'd like you to follow:
 
  - [Commit Message Guidelines](#commit)
@@ -86,13 +86,6 @@ If you find a bug in the source code or a mistake in the documentation, you can 
 submitting an issue to our [GitHub Repository][github]. Even better you can submit a Pull Request
 with a fix.
 
-**Localization Issues:** Angular.js uses the [Google Closure I18N library] to generate
-its own I18N files (the ngLocale module). This means that any changes to these files would be lost
-the next time that we import the library.
-Since the Closure library i18n data is itself auto-generated from the data of the
-[Common Locale Data Repository (CLDR)] project, errors in the data should
-be reported there. See also the [Closure guide to i18n changes].
-
 **Please see the Submission Guidelines below**.
 
 ## <a name="feature"></a> Want a Feature?
@@ -151,7 +144,7 @@ Before you submit your pull request consider the following guidelines:
 * Build your changes locally to ensure all the tests pass:
 
     ```shell
-    grunt
+    gulp
     ```
 
 * Push your branch to GitHub:

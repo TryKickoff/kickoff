@@ -6,7 +6,7 @@ It’s important to become familiar with all of these files so you can make full
 
 ### `kickoff.scss`
 
-All roads lead to here. Both these files are used and compile with Grunt. Inspecting the source of these files reveals only one @import, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
+All roads lead to here. Both these files are used and compile with Gulp. Inspecting the source of these files reveals only one @import, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
 
 ### `_dependencies.scss`
 This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project. If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.

@@ -1,7 +1,7 @@
 # Kickoff
 > A lightweight front-end framework for creating scalable and performant, responsive sites
 
-[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/TryKickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
+[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build Status](https://travis-ci.org/TryKickoff/kickoff.svg?branch=master)](https://travis-ci.org/trykickoff/kickoff) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
 
 ![Kickoff](http://i61.tinypic.com/1zyitqe.png)
 
@@ -16,12 +16,12 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
  * Starter form element styles ([see demo](http://trykickoff.com/demos/forms.html)): stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice, validation states
  * Lots of helper classes & Sass mixins for many CSS3 features like [media-queries](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss)
 * Simple **Javascript** [boilerplate](https://github.com/TryKickoff/kickoff/blob/master/assets/src/js/script.js) that makes very little assumptions about your chosen style or workflow.
- * JS bundled with [Browserify](http://browserify.org)
+ * JS bundled with [Webpack](https://webpack.github.io/)
  * ES2015/ES6 syntax supported using the Babel transpiler
-* **[Grunt](http://gruntjs.com)** task runner used extensively to ease common development bottlenecks
- * Sass is compiled using [node-sass](https://github.com/sass/node-sass) and we use [Autoprefixer](https://github.com/postcss/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
+* **[Gulp](gulpjs.com/)** task runner used extensively to ease common development bottlenecks
+ * Sass is compiled using [sass-loader](https://github.com/jtangelder/sass-loader) and we use [Autoprefixer](https://github.com/postcss/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
  * PostCSS plugins can also be used to transform your CSS
-* Simple server using [BrowserSync](http://browsersync.io)
+* Simple server using [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html)
 
 ---
 
