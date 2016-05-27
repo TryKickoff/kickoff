@@ -3,6 +3,8 @@
 
 module.exports = {
 
+	parser: 'babel-eslint',
+
 	extends: 'airbnb-base', // Extending the AirBnB ES2015 config: https://www.npmjs.com/package/eslint-config-airbnb
 
 	// Rule overrides: see http://eslint.org/docs/rules/
