@@ -60,7 +60,6 @@ module.exports = function (grunt) {
 		'browserify',
 		'postscss',
 		'images',
-		'shimly',
 		'copy:jsStandalone',
 	]);
 

@@ -27,20 +27,14 @@
 			// Replace 'no-js'/'js' class on <html>
 			docElem.className = docElem.className.replace(/\bno-js\b/g, '') + ' js ';
 
-			// loadJS: load a JS file asynchronously. From https://github.com/filamentgroup/loadJS/
-			function loadJS(e,t){"use strict";var n=doc.getElementsByTagName("script")[0],o=doc.createElement("script");return o.src=e,o.async=!0,n.parentNode.insertBefore(o,n),t&&"function"==typeof t&&(o.onload=t),o}
-			win.loadJS = loadJS;
-
-			// Enhancements for qualified browsers - "Cutting the Mustard"
-			if( !('addEventListener' in win && 'classList' in docElem) ){
-				// Load shims for browsers that don't pass the test
-				loadJS('/assets/dist/js/standalone/shims.js');
-
-				// Add your own enhancements here, see https://github.com/filamentgroup/enhance for more info
-			}
+			/*
+				Dynamically load scripts / cutting the mustard test
+				https://gist.github.com/nicbell/9a9c919e6d69aff47e285945550b445c
+			*/
 		</script>
-		<!-- /End injection script for shims -->
-
+		
+		<!-- Configure Polyfills https://cdn.polyfill.io/ -->
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 	</head>
 	<body>
 		<div class="skipToContent">

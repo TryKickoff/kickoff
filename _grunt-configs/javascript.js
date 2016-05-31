@@ -24,20 +24,5 @@ module.exports.tasks = {
 				watch: true,
 			},
 		},
-	},
-
-
-	/**
-	 * Shimly
-	 * https://github.com/nicbell/shimly
-	 * Load in a base set of JS shims for use in a project
-	 */
-	shimly: {
-		// things you would like to shim (an array of items from the list above)
-		shim: ['EventListener', 'Element.classList'],
-
-		// output location (relative to your grunt.js file location)
-		dest: '<%=config.srcDir%>/js/standalone/shims.js',
-		minify: true,
 	}
 };
