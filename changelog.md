@@ -8,28 +8,35 @@ All latest changes are documented on our site at http://trykickoff.com
 - Switched from jshint & jscs to [ESLint](http://eslint.org). ESLint config is custom but heavily based on [Airbnb's ESLint style guides](https://github.com/airbnb/javascript).
 - Trak.js and Swiftclick not installed by default anymore
 - Included [double-dollar](https://github.com/mrmartineau/double-dollar) to make life a little easier when looping over DOM elements
-
+- Polyfill.io now used instead of shimly for all browser shims [[9eb6a83](https://github.com/TryKickoff/kickoff/commit/9eb6a834f12a2e885e78ae4fa30f6aadb2e8a957)]
 
 ### Scss
-- Replaced the existing grid with a flexbox-based grid with fallbacks for browsers that do not support flexbox. Learn about the grid [here]()
+- Type vars are now in `$type` Sass map and reduced the number of items in the list.
+- Replaced the existing grid with a flexbox-based grid with fallbacks for browsers that do not support flexbox. Learn about the grid [here](http://trykickoff.com/learn/grid.html)
 - Removed `$bp-single-col` and moved all other breakpoint variables into a Sass map. The `respond-*` mixins were also improved to allow for different types of arguments, e.g. `@include respond-min(mid) {...}` or `@include respond-min(500) {...}` or `@include respond-min(400px) {...}`
 - Updated to Nomalize@4.0.0
+- Fixed an IE Print bug [[111c0ce](https://github.com/TryKickoff/kickoff/commit/111c0cef5b343218a804474eacff8595d27c8708)]
+- Add hypehenate helper class [[c09b3d2](https://github.com/TryKickoff/kickoff/commit/c09b3d2cd0590fca24017c50d726ff5c848cfb9c)]
 
 ### Tooling
-- Added Commitizen to help enforce consistent git commits. 
-- Run `npm run info` to show information about all our npm run scripts.
+- Added [Commitizen](https://github.com/commitizen/cz-cli) to help enforce consistent git commits. 
+- Run `npm run info` to show information about all our npm run scripts. [[413b191](https://github.com/TryKickoff/kickoff/commit/413b19100318e666192db9ee17583e994abf9045)]
 - `grunt checks` task renamed to `grunt test`
 - Updated to latest version of all npm dependencies that comply with our browser support requirements
 - Updated to grunt@1.0.1
 - Removed Grunticon. Currently there is no icon replacement but we will provide instructions on how to add a better system soon
-
+- Update .editorconfig, .gitattributes & .gitignore
 
 ### HTML
 - Changed `#mainContent` ID to be `#main`
-- 
+- Styleguide had some minor updates
 
 ### Browser Support
-- Dropped support for Internet Explorer 8. Expect Kickoff to drop support for IE 9-11 within 6-12 months.
+- Dropped support for Internet Explorer 8. **Expect Kickoff to drop support for IE 9-11 within 6-12 months.** [[e70ab08](https://github.com/TryKickoff/kickoff/commit/e70ab083fb902897c773b0b85053e19664f454b0)]
+- 
+
+### Misc
+- Added a code of conduct [[0a276de](https://github.com/TryKickoff/kickoff/commit/0a276debaea760608470283a6036f4fb75c40d54)]
 
 
 ## [6.0.0] - 20/11/2015
