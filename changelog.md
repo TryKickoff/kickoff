@@ -33,7 +33,6 @@ All latest changes are documented on our site at http://trykickoff.com
 
 ### Browser Support
 - Dropped support for Internet Explorer 8. **Expect Kickoff to drop support for IE 9-11 within 6-12 months.** [[e70ab08](https://github.com/TryKickoff/kickoff/commit/e70ab083fb902897c773b0b85053e19664f454b0)]
-- 
 
 ### Misc
 - Added a code of conduct [[0a276de](https://github.com/TryKickoff/kickoff/commit/0a276debaea760608470283a6036f4fb75c40d54)]
