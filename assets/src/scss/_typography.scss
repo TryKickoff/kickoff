@@ -223,8 +223,8 @@ samp {
 hr {
 	margin: ($baseline) 0;
 	border: 0;
-	border-top: 1px solid $hr-border;
-	border-bottom: 1px solid #fff;
+	height: 1px;
+	background-color: $hr-color;
 }
 
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
