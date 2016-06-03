@@ -90,14 +90,22 @@ body {
 .sg-swatch {
 	text-align: center;
 	line-height: 30px;
-	margin: 10px 10px 0;
+	margin: 10px;
+	border: 1px solid #f1f1f1;
+
+	code {
+		margin: 0 10px;
+		display: inline-block;
+		padding: 0;
+	}
 }
 
 .sg-swatch-color {
-	height: 60px;
-	padding: 15px;
+	height: 120px;
+	line-height: 120px;
 	@include font-size(13);
 	font-family: $font-family-mono;
+	font-weight: bold;
 }
 
 @mixin swatch($color) {
@@ -155,19 +163,28 @@ body {
 .sg-type {
 	margin-bottom: 1em;
 }
+
 code {
-	border: 1px solid #ddd;
-	background-color: #F9F8F8;
+	border: 0;
+	background-color: transparent;
 	@include font-size(11);
 }
 
 @mixin sgTypeTest($size) {
 	.sg-type-item {
 		@include font-size($size);
+
+		&:after {
+			content: '@include font-size(#{$size}) / #{type($size)}px';
+			@include font-size(micro);
+			display: block;
+			font-weight: normal;
+			font-family: $font-family-mono;
+			opacity: .6;
+		}
 	}
 
 	code {
-			&:after { content: ' = #{type($size)}px'; }
 	}
 }
 
@@ -256,3 +273,70 @@ code {
 		margin-right: 15px;
 	}
 }
+
+.sg-hr {
+	height: 3px;
+	margin: ($baseline * 2) 0;
+}
+
+.sg-hr--subtle {
+	height: 3px;
+	background-color: fade-out($hr-color, .6)
+}
+
+@mixin sgVar($var) {
+	line-height: 2;
+	font-family: $font-family-mono;
+	border-bottom: 1px solid rgba(#000, .1);
+	@include font-size(small);
+
+	strong {
+		opacity: .6;
+	}
+
+	&:after {
+		content: '#{$var}';
+		padding-left: .2em;
+	}
+}
+
+.sg-var--baseFontSize {
+	@include sgVar($font-size-base);
+}
+
+.sg-var--leadingBase {
+	@include sgVar($leading-base);
+}
+
+.sg-var--typeScale {
+	@include sgVar($type-scale);
+}
+
+.sg-var--fontFamilyMono {
+	@include sgVar($font-family-mono);
+}
+
+.sg-var--fontFamilySans {
+	@include sgVar($font-family-sans);
+}
+
+.sg-var--fontFamilySerif {
+	@include sgVar($font-family-serif);
+}
+
+.sg-var--breakpoints {
+	@include sgVar($breakpoints);
+}
+
+.sg-var--layoutWidth {
+	@include sgVar($layout-max-width);
+}
+
+.sg-var--gridColumns {
+	@include sgVar($grid-column-count);
+}
+
+.sg-var--gridGutter {
+	@include sgVar($grid-gutter-width);
+}
+

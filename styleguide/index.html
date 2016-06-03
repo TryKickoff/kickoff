@@ -44,50 +44,50 @@
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Swatches</h2>
 
-				<div class="g">
-					<div class="g-col g-span6--narrow g-span4--mid">
+				<div class="g g--stack--narrow">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-primary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-primary</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-secondary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-secondary</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-highlight">
 							<div class="sg-swatch-color"></div>
 							<code>$color-highlight</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-text">
 							<div class="sg-swatch-color"></div>
 							<code>$color-text</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-background">
 							<div class="sg-swatch-color"></div>
 							<code>$color-bg</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-border">
 							<div class="sg-swatch-color"></div>
 							<code>$color-border</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-link">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-default</code>
 						</div>
 					</div>
-					<div class="g-col g-span6--narrow g-span4--mid">
+					<div class="g-col g-span6--narrow g-span3--mid">
 						<div class="sg-swatch sg-color-link-hover">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-hover</code>
@@ -98,6 +98,27 @@
 			</div>
 		</div>
 
+
+		<!-- Swatches -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Sass variables</h2>
+
+				<div class="sg-var--baseFontSize"><strong>Base font size:</strong> </div>
+				<div class="sg-var--leadingBase"><strong>Base leading:</strong> </div>
+				<div class="sg-var--typeScale"><strong>Typography scale:</strong> </div>
+				<div class="sg-var--fontFamilySans"><strong>Sans font-family stack:</strong> </div>
+				<div class="sg-var--fontFamilySerif"><strong>Serif font-family stack:</strong> </div>
+				<div class="sg-var--fontFamilyMono"><strong>Mono font-family stack:</strong> </div>
+				<div class="sg-var--breakpoints"><strong>Breakpoints:</strong> </div>
+				<div class="sg-var--layoutWidth"><strong>Max layout width:</strong> </div>
+				<div class="sg-var--gridColumns"><strong>Grid column count:</strong> </div>
+				<div class="sg-var--gridGutter"><strong>Grid gutter width:</strong> </div>
+
+			</div>
+		</div>
+
+		<hr class="sg-hr">
 
 		<!-- Typography -->
 		<div class="sg-page">
@@ -136,45 +157,64 @@
 
 				<!-- Add any more that you need -->
 
-			</div>
-		</div>
+				<hr class="sg-hr sg-hr--subtle">
 
-
-		<!-- Typography examples -->
-		<div class="sg-page">
-			<div class="l-container">
 				<h2 class="sg-sectionHeading">Typography examples</h2>
-				<div class="g g--stack--mid">
-					<div class="g-span6 g-col">
-						<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
-						<h1>Heading 1</h1>
-						<h2>Heading 2</h2>
-						<h3>Heading 3</h3>
-						<h4>Heading 4</h4>
-						<h5>Heading 5</h5>
-						<h6>Heading 6</h6>
-					</div>
-					<div class="g-span6 g-col">
-						<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
-						<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
-						<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
-					</div>
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
+				<!-- <h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6> -->
+
+				<div class="sg-type sg-type-jumbo">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
 				</div>
 
-				<h3 class="sg-interfaceType sg-interfaceType--subtle">Typeface sizes</h3>
-				<div class="sg-type sg-type-jumbo"><div class="sg-type-item">Example text</div> <code>jumbo</code></div>
-				<div class="sg-type sg-type-largest"><div class="sg-type-item">Example text</div> <code>largest</code></div>
-				<div class="sg-type sg-type-large"><div class="sg-type-item">Example text</div> <code>large</code></div>
-				<div class="sg-type sg-type-small"><div class="sg-type-item">Example text</div> <code>small</code></div>
-				<div class="sg-type sg-type-mid"><div class="sg-type-item">Example text</div> <code>mid</code></div>
-				<div class="sg-type sg-type-base"><div class="sg-type-item">Example text</div> <code>base</code></div>
-				<div class="sg-type sg-type-smaller"><div class="sg-type-item">Example text</div> <code>smaller</code></div>
-				<div class="sg-type sg-type-smallest"><div class="sg-type-item">Example text</div> <code>smallest</code></div>
-				<div class="sg-type sg-type-micro"><div class="sg-type-item">Example text</div> <code>micro</code></div>
+				<div class="sg-type sg-type-large">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-mid">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-base">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-small">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-micro">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
+				<div class="sg-type sg-type-micro">
+					<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
+					<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
+
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Blockquote</h3>
+				<div class="sg-type sg-type-micro">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nemo laboriosam aliquid error sunt, expedita nisi dolorem perferendis quae laborum hic, modi fugiat voluptas! Architecto distinctio voluptatem, qui laborum blanditiis.</p>
+						<small>Zander Martineau</small>
+					</blockquote>
+
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Horizontal rule</h3>
+				<hr>
 
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Components -->
 		<div class="sg-page">
@@ -184,99 +224,117 @@
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Buttons</h3>
 
 				<div class="sg-spacer">
-					<a href="#" class="btn">Normal button</a>
+					<a href="#" class="btn">Default</a>
+					<a href="#" class="btn" disabled>disabled</a>
 				</div>
 
 				<div class="sg-spacer">
-					<a href="#" class="btn btn--primary">Primary button</a>
+					<a href="#" class="btn btn--primary">Primary</a>
+					<a href="#" class="btn btn--primary" disabled>disabled</a>
+				</div>
+
+				<div class="sg-spacer">
+					<a href="#" class="btn btn--primary btn--block">Button block</a>
+				</div>
+
+				<hr class="sg-hr sg-hr--subtle">
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Media object</h3>
+
+				<div class="media">
+					<div class="media-img">
+						<img src="http://placekitten.com/100/100">
+					</div>
+					<div class="media-body">
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+				<hr class="sg-hr sg-hr--subtle">
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Lists</h3>
+
+				<div class="sg-spacer">
+					<ul>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+					</ul>
+
+					<hr class="sg-hr sg-hr--subtle">
+
+					<ol>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+					</ol>
 				</div>
 
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Forms -->
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Form elements</h2>
+				<p class="sg-interfaceType sg-interfaceType--subtle">See more examples at <a href="http://trykickoff.com/demos/forms.html">trykickoff.com/demos/forms.html</a></p>
 
-				<form action="#" class="form form--horizontal">
-					<fieldset class="form-fieldset">
+				<div class="sg-spacer">
+					<input type="text" id="text" class="form-input" placeholder="Placeholder content" />
+				</div>
 
-						<div class="form-controlGroup">
-							<label for="text" class="form-label">Text</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="text" placeholder="Joe Bloggs" class="form-input" required/>
-							</div>
-						</div>
+				<div class="sg-spacer">
+					<input type="text" id="text" class="form-input" disabled placeholder="Disabled content" />
+				</div>
 
-						<div class="form-controlGroup">
-							<label for="comments" class="form-label">Textarea</label>
-							<div class="form-controlGroup-inputWrapper">
-								<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
-							</div>
-						</div>
+				<div class="sg-spacer">
+					<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea">Textarea</textarea>
+				</div>
 
-						<div class="form-controlGroup">
-								<label for="cs-choice" class="form-label">Custom select</label>
-								<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
-									<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
-										<option value="--">Select title</option>
-										<option value="Mr">Mr</option>
-										<option value="Mrs">Mrs</option>
-									</select>
-								</div>
-						</div>
-
-						<div class="g g--stack--mid">
-							<div class="form-controlGroup g-span6 g-col">
-								<label class="form-label">Checkboxes</label>
-								<div class="form-controlGroup-inputWrapper">
-									<label class="control control--custom">
-										<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
-										<span class="control-indicator control-indicator--checkbox"></span>
-										Check 1
-									</label>
-									<label class="control control--custom">
-										<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
-										<span class="control-indicator control-indicator--tickbox"></span>
-										Check 2
-									</label>
-								</div>
-							</div>
-
-							<div class="form-controlGroup g-span6 g-col">
-								<label class="form-label">Radio buttons</label>
-								<div class="form-controlGroup-inputWrapper">
-									<label class="control control--custom">
-										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" checked />
-										<span class="control-indicator control-indicator--radio"></span>
-										My Radio Button Label Text
-									</label>
-									<label class="control control--custom">
-										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
-										<span class="control-indicator control-indicator--radio"></span>
-										My Radio Button Label Text
-									</label>
-								</div>
-							</div>
-						</div>
-
-					</fieldset>
-
-					<div class="form-actions">
-						<div class="form-message has-warning is-hidden">
-							Some fields need attention
-						</div>
-
-						<input type="submit" value="Submit" class="btn btn--primary" />
-						<input type="reset" class="btn" value="Cancel" />
+				<div class="sg-spacer">
+					<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+						<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+							<option value="--">Select title</option>
+							<option value="Mr">Mr</option>
+							<option value="Mrs">Mrs</option>
+						</select>
 					</div>
+				</div>
 
-				</form>
+				<div class="sg-spacer">
+					<label class="control control--custom">
+						<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
+						<span class="control-indicator control-indicator--checkbox"></span>
+						Check 1
+					</label>
+					<label class="control control--custom">
+						<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
+						<span class="control-indicator control-indicator--tickbox"></span>
+						Check 2
+					</label>
+				</div>
+
+				<div class="sg-spacer">
+					<label class="control control--custom">
+						<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" checked />
+						<span class="control-indicator control-indicator--radio"></span>
+						My Radio Button Label Text
+					</label>
+					<label class="control control--custom">
+						<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
+						<span class="control-indicator control-indicator--radio"></span>
+						My Radio Button Label Text
+					</label>
+				</div>
+
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Icons -->
 		<div class="sg-page">
