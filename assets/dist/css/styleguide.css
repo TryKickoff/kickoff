@@ -2,57 +2,80 @@
  * Setup styleguide imports
  */
 /**
+ * Usage:
+ *
+ * getVal(100, $map) - uses an integer
+ * getVal(mid, $map) - uses a Sass map
+ * getVal($foo, $map) - uses a Sass variable
+ */
+/**
+ * Get breakpoints
+ *
+ * bp()
+ *
+ * Usage:
+ * bp(100) - uses an integer
+ * bp(mid) - uses the $breakpoints Sass map
+ * bp($foo) - uses a Sass variable
+ */
+/**
+ * Get type size
+ *
+ * type()
+ *
+ * Usage:
+ * type(100) - uses an integer
+ * type(mid) - uses the $type Sass map
+ * type($foo) - uses a Sass variable
+ */
+/**
+ * Usage:
+ *
+ $grid-configuration: (
+   'columns': 12,
+   'layouts': (
+     'small': 800px,
+     'medium': 1000px,
+     'large': 1200px,
+   ),
+ );
+
+ div {
+   font-size: map-deep-get($grid-configuration, 'columns');
+   width: map-deep-get($grid-configuration, 'layouts', 'medium');
+ }
+ */
+/**
  * Sass Mixins
- * - Vendor prefixer
  * - Responsive
- * - CSS3
- * - Utility Mixins
- * - hiDpi
- * - Forms */
+ * - Dimensions
+ * - Positioning
+ * - Utility
+ * - Forms
+ * - Module Naming Helpers
+ */
 /**
  * Responsive media query mixins
  * - These are used so that we can define separate media-query content
- *   for <IE9 and browsers with support for media queries
- * - These are directly related to the global $fix-mqs var defined in
- *   kickoff-old-ie.scss
- * - kickoff-old-ie.scss ignores any content in media-queries with values less
- *   than the $fix-mqs var value
+ * - Arguments can use:
+ *   - a named breakpoint in the $breakpoints map, e.g. mid
+ *   - a pixel value e.g. 500px
+ *   - a unitless value that is eqivalent to a pixel e.g. 500
  */
 /**
  * Min-width media query:
  * - Equivalent to: @media screen and (min-width: 20em) { ... }
- * - Usage: @include respond-min(500) { ... };
- * - Argument is a pixel value WITHOUT a unit of measurement
+ * - Usage: @include respond-min(mid) { ... };
  */
 /**
  * Max-width media query:
  * - Equivalent to: @media screen and (max-width: 20em) { ... }
- * - Usage: @include respond-max(500) { ... };
- * - Argument is a pixel value WITHOUT a unit of measurement
+ * - Usage: @include respond-max(mid) { ... };
  */
 /**
  * Min-max-width media query:
  * - Equivalent to: @media screen and (min-width: 10em) and (max-width: 20em) { ... }
- * - Usage: @include respond-min-max(500, 600) { ... };
- * - Arguments are pixel values WITHOUT a unit of measurement
- */
-/**
- * vertical-center
- * Vertically center any element. Needs support for CSS tranforms.
- * Usage:
- * @include vertical-center;
- */
-/**
- * Utility mixins
- * Clearfix, REM + fallbacks,
- * @font-face, sizing shortcuts,
- * and other helpers
- */
-/**
- * Utility Mixins
- */
-/**
- * Typography mixins
+ * - Usage: @include respond-min-max(narrow, 600) { ... };
  */
 /**
  *  HiDPI mixin.
@@ -68,11 +91,46 @@
  * @include hidpi-max(bp(mid), 1.3) { ... };
  */
 /**
+ * Dimensions-based mixins
+ * - REM calculation
+ * - Typography mixins based on the REM mixin
+ *   - font-size
+ *   - line-height
+ *   - font-size-ems
+ */
+/**
+ * Typography mixins
+ */
+/**
+ * position
+ * Usage:
+ * @include position(absolute, 10px 20px 30px 10px);
+ */
+/**
+ * vertical-center
+ * Vertically center any element. Needs support for CSS tranforms.
+ * Usage:
+ * @include vertical-center;
+ */
+/**
+ * Utility Mixins
+ * - clearfix
+ * - font-face
+ * -
+ * - sizing shortcuts
+ *   - size
+ *   - square
+ * - resizable
+ */
+/**
+ * Sizing shortcuts
+ */
+/**
  * bemify [modified for Kickoff]
  * https://gtihub.com/franzheidl/bemify
  * Franz Heidl 2015
  *
- * Usage: https://gist.github.com/mrmartineau/0cd2010bf265d712bafbhttps://gist.github.com/mrmartineau/0cd2010bf265d712bafb
+ * Usage: https://gist.github.com/mrmartineau/0cd2010bf265d712bafb
  */
 /**
  * Global Color palette
@@ -103,6 +161,8 @@
  * Breakpoints
  * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
+ * Add your breakpoints to this Sass map
+ * Used in the Kickoff grid
  */
 /**
  * Path vars
@@ -173,13 +233,19 @@ body {
 .sg-swatch {
   text-align: center;
   line-height: 30px;
-  margin: 10px 10px 0; }
+  margin: 10px;
+  border: 1px solid #f1f1f1; }
+  .sg-swatch code {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 0; }
 
 .sg-swatch-color {
-  height: 60px;
-  padding: 15px;
+  height: 120px;
+  line-height: 120px;
   font-size: 0.65rem;
-  font-family: Menlo, Monaco, "Courier New", monospace; }
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-weight: bold; }
 
 .sg-color-link-hover {
   color: #185380; }
@@ -261,63 +327,99 @@ body {
   margin-bottom: 1em; }
 
 code {
-  border: 1px solid #ddd;
-  background-color: #F9F8F8;
+  border: 0;
+  background-color: transparent;
   font-size: 0.55rem; }
 
 .sg-type-micro .sg-type-item {
-  font-size: 0.45rem; }
-
-.sg-type-micro code:after {
-  content: " = 9px"; }
+  font-size: 0.65rem; }
+  .sg-type-micro .sg-type-item:after {
+    content: "@include font-size(micro) / 13px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-smallest .sg-type-item {
-  font-size: 0.55rem; }
-
-.sg-type-smallest code:after {
-  content: " = 11px"; }
+  font-size: 0rem; }
+  .sg-type-smallest .sg-type-item:after {
+    content: "@include font-size(smallest) / px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-smaller .sg-type-item {
-  font-size: 0.65rem; }
-
-.sg-type-smaller code:after {
-  content: " = 13px"; }
+  font-size: 0rem; }
+  .sg-type-smaller .sg-type-item:after {
+    content: "@include font-size(smaller) / px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-small .sg-type-item {
   font-size: 0.8rem; }
-
-.sg-type-small code:after {
-  content: " = 16px"; }
+  .sg-type-small .sg-type-item:after {
+    content: "@include font-size(small) / 16px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-base .sg-type-item {
   font-size: 1rem; }
-
-.sg-type-base code:after {
-  content: " = 20px"; }
+  .sg-type-base .sg-type-item:after {
+    content: "@include font-size(base) / 20px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-mid .sg-type-item {
   font-size: 1.25rem; }
-
-.sg-type-mid code:after {
-  content: " = 25px"; }
+  .sg-type-mid .sg-type-item:after {
+    content: "@include font-size(mid) / 25px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-large .sg-type-item {
-  font-size: 1.6rem; }
-
-.sg-type-large code:after {
-  content: " = 32px"; }
+  font-size: 1.25rem; }
+  .sg-type-large .sg-type-item:after {
+    content: "@include font-size(large) / 25px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-largest .sg-type-item {
-  font-size: 2rem; }
-
-.sg-type-largest code:after {
-  content: " = 40px"; }
+  font-size: 0rem; }
+  .sg-type-largest .sg-type-item:after {
+    content: "@include font-size(largest) / px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-type-jumbo .sg-type-item {
-  font-size: 2.45rem; }
-
-.sg-type-jumbo code:after {
-  content: " = 49px"; }
+  font-size: 2rem; }
+  .sg-type-jumbo .sg-type-item:after {
+    content: "@include font-size(jumbo) / 40px";
+    font-size: 0.65rem;
+    display: block;
+    font-weight: normal;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    opacity: .6; }
 
 .sg-typeSpecimen {
   margin-bottom: 0;
@@ -359,4 +461,177 @@ code {
   .sg-favicon img {
     vertical-align: middle;
     margin-right: 15px; }
+
+.sg-hr {
+  height: 3px;
+  margin: 56px 0; }
+
+.sg-hr--subtle {
+  height: 3px;
+  background-color: rgba(179, 179, 179, 0.4); }
+
+.sg-var-item {
+  color: #fe7c08;
+  margin-right: 10px;
+  display: inline-block; }
+
+.sg-var--baseFontSize {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--baseFontSize strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--baseFontSize strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--baseFontSize:after {
+    content: "20"; }
+
+.sg-var--leadingBase {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--leadingBase strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--leadingBase strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--leadingBase:after {
+    content: "1.4"; }
+
+.sg-var--typeScale {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--typeScale strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--typeScale strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--typeScale:after {
+    content: "1.25"; }
+
+.sg-var--fontFamilyMono {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--fontFamilyMono strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--fontFamilyMono strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--fontFamilyMono:after {
+    content: "Menlo, Monaco, Courier New, monospace"; }
+
+.sg-var--fontFamilySans {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--fontFamilySans strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--fontFamilySans strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--fontFamilySans:after {
+    content: "Helvetica Neue, Helvetica, Arial, sans-serif"; }
+
+.sg-var--fontFamilySerif {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--fontFamilySerif strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--fontFamilySerif strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--fontFamilySerif:after {
+    content: "Georgia, Times New Roman, Times, serif"; }
+
+.sg-var--breakpoints {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--breakpoints strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--breakpoints strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--breakpoints:after {
+    content: "(narrow: 400px, mid: 750px, wide: 1000px, huge: 1250px)"; }
+
+.sg-var--layoutWidth {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--layoutWidth strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--layoutWidth strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--layoutWidth:after {
+    content: "1000px"; }
+
+.sg-var--gridColumns {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--gridColumns strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--gridColumns strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--gridColumns:after {
+    content: "12"; }
+
+.sg-var--gridGutter {
+  line-height: 2;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.65rem; }
+  .sg-var--gridGutter strong {
+    opacity: .6;
+    text-transform: uppercase;
+    display: block; }
+    @media screen and (min-width: 46.875em) {
+      .sg-var--gridGutter strong {
+        width: 20%;
+        display: inline-block; } }
+  .sg-var--gridGutter:after {
+    content: "20"; }
 /*# sourceMappingURL=styleguide.css.map */
