@@ -288,16 +288,28 @@ code {
 	line-height: 2;
 	font-family: $font-family-mono;
 	border-bottom: 1px solid rgba(#000, .1);
-	@include font-size(small);
+	@include font-size(micro);
 
 	strong {
 		opacity: .6;
+		text-transform: uppercase;
+		display: block;
+
+		@include respond-min(mid) {
+			width: 20%;
+			display: inline-block;
+		}
 	}
 
 	&:after {
 		content: '#{$var}';
-		padding-left: .2em;
 	}
+}
+
+.sg-var-item {
+	color: $color-secondary;
+	margin-right: 10px;
+	display: inline-block;
 }
 
 .sg-var--baseFontSize {
