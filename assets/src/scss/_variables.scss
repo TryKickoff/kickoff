@@ -77,14 +77,14 @@ $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$im
 
 /**
  * Layout setup
- * Settings here override & affect the output in scss/partials/components/grid.scss
+ * Settings here override & affect the output in scss/partials/components/grid/grid.scss
  */
 
-// Setup grid defaults
-$layout-max-width         : 1000px  !default; // [in pixels]
+// Setup layout & grid defaults
+$layout-max-width         : 1000px  !default;
 
 $grid-column-count        : 12    !default; // Total column count
-$grid-gutter-width        : 20    !default; // [in pixels]
+$grid-gutter-width        : 20    !default; // [in pixels] Value should be unitless
 
 $responsive-grid-sizes    : true  !default; // Disable this if you don't want grid sizes for each breakpoint
 $use-legacy-grid          : true  !default;
