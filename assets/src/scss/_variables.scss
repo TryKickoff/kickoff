@@ -81,13 +81,13 @@ $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$im
  */
 
 // Setup layout & grid defaults
-$layout-max-width         : 1000px  !default;
+$layout-max-width         : 1000px !default;
 
-$grid-column-count        : 12    !default; // Total column count
-$grid-gutter-width        : 20    !default; // [in pixels] Value should be unitless
+$grid-column-count        : 12 !default; // Total column count
+$grid-gutter-width        : 20 !default; // [in pixels] Value should be unitless
 
-$responsive-grid-sizes    : true  !default; // Disable this if you don't want grid sizes for each breakpoint
-$use-legacy-grid          : true  !default;
+$responsive-grid-sizes    : true !default; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid          : true !default;
 
 /**
  * App-specific variables
