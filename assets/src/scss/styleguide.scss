@@ -90,7 +90,7 @@ body {
 .sg-swatch {
 	text-align: center;
 	line-height: 30px;
-	margin: 10px;
+	margin: 5px;
 	border: 1px solid #f1f1f1;
 
 	code {
@@ -101,11 +101,16 @@ body {
 }
 
 .sg-swatch-color {
-	height: 120px;
-	line-height: 120px;
+	height: 80px;
+	line-height: 80px;
 	@include font-size(13);
 	font-family: $font-family-mono;
 	font-weight: bold;
+
+	@include respond-min(narrow) {
+		height: 120px;
+		line-height: 120px;
+	}
 }
 
 @mixin swatch($color) {
@@ -294,6 +299,7 @@ code {
 		opacity: .6;
 		text-transform: uppercase;
 		display: block;
+		user-select: none;
 
 		@include respond-min(mid) {
 			width: 20%;
