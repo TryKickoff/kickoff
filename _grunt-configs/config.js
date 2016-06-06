@@ -32,7 +32,7 @@ module.exports = {
 		srcFile: '<%=config.srcDir%>/js/script.js', // <%=config.js.srcFile%>
 		distDir: '<%=config.distDir%>/js/',         // <%=config.js.distDir%>
 
-		distFile: 'bundle.js', // <%=config.js.distFile%>
+		distFile: 'kickoff.js', // <%=config.js.distFile%>
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
 	},

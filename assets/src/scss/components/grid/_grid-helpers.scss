@@ -91,9 +91,9 @@
  */
 @function gutterCalc($show-unit: true) {
 	@if $show-unit == true {
-		@return percentage(strip-units($grid-gutter-width) / (strip-units($layout-max-width) - (strip-units($layout-margin) * 2)));
+		@return percentage(strip-units($grid-gutter-width) / strip-units($layout-max-width));
 	} @else {
-		@return $grid-gutter-width / ($layout-max-width - ($layout-margin * 2));
+		@return $grid-gutter-width / $layout-max-width;
 	}
 }
 
