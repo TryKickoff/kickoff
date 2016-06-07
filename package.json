@@ -57,14 +57,14 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-plugin-transform-object-assign": "^6.8.0",
-    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
-    "cssnano": "^3.5.2",
+    "cssnano": "^3.7.0",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-newer": "^1.2.0",
     "imagemin-gifsicle": "4.2.0",
     "imagemin-mozjpeg": "5.1.0",
@@ -78,19 +78,19 @@
     "time-grunt": "^1.3.0"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.12.8",
-    "commitizen": "^2.8.1",
+    "browser-sync": "^2.13.0",
+    "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
-    "eslint": "^2.10.0",
+    "eslint": "^2.11.1",
     "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-import": "^1.8.1",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^18.1.0",
     "grunt-filesizegzip": "^0.3.0",
     "grunt-scss-lint": "^0.3.8",
     "npm-scripts-info": "^0.3.6",
-    "opn": "^4.0.1"
+    "opn": "^4.0.2"
   },
   "keywords": [],
   "babel": {
