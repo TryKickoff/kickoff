@@ -169,7 +169,7 @@
  */
 /**
  * Layout setup
- * Settings here override & affect the output in scss/partials/components/grid.scss
+ * Settings here override & affect the output in scss/partials/components/grid/grid.scss
  */
 /**
  * App-specific variables
@@ -233,7 +233,7 @@ body {
 .sg-swatch {
   text-align: center;
   line-height: 30px;
-  margin: 10px;
+  margin: 5px;
   border: 1px solid #f1f1f1; }
   .sg-swatch code {
     margin: 0 10px;
@@ -241,11 +241,15 @@ body {
     padding: 0; }
 
 .sg-swatch-color {
-  height: 120px;
-  line-height: 120px;
+  height: 80px;
+  line-height: 80px;
   font-size: 0.65rem;
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-weight: bold; }
+  @media screen and (min-width: 25em) {
+    .sg-swatch-color {
+      height: 120px;
+      line-height: 120px; } }
 
 .sg-color-link-hover {
   color: #185380; }
@@ -483,7 +487,11 @@ code {
   .sg-var--baseFontSize strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--baseFontSize strong {
         width: 20%;
@@ -499,7 +507,11 @@ code {
   .sg-var--leadingBase strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--leadingBase strong {
         width: 20%;
@@ -515,7 +527,11 @@ code {
   .sg-var--typeScale strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--typeScale strong {
         width: 20%;
@@ -531,7 +547,11 @@ code {
   .sg-var--fontFamilyMono strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--fontFamilyMono strong {
         width: 20%;
@@ -547,7 +567,11 @@ code {
   .sg-var--fontFamilySans strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--fontFamilySans strong {
         width: 20%;
@@ -563,7 +587,11 @@ code {
   .sg-var--fontFamilySerif strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--fontFamilySerif strong {
         width: 20%;
@@ -579,7 +607,11 @@ code {
   .sg-var--breakpoints strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--breakpoints strong {
         width: 20%;
@@ -595,7 +627,11 @@ code {
   .sg-var--layoutWidth strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--layoutWidth strong {
         width: 20%;
@@ -611,7 +647,11 @@ code {
   .sg-var--gridColumns strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--gridColumns strong {
         width: 20%;
@@ -627,7 +667,11 @@ code {
   .sg-var--gridGutter strong {
     opacity: .6;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     @media screen and (min-width: 46.875em) {
       .sg-var--gridGutter strong {
         width: 20%;

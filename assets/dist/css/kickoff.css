@@ -181,7 +181,7 @@
  */
 /**
  * Layout setup
- * Settings here override & affect the output in scss/partials/components/grid.scss
+ * Settings here override & affect the output in scss/partials/components/grid/grid.scss
  */
 /**
  * App-specific variables
@@ -808,11 +808,12 @@ hr {
   height: 1em;
   -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
-  border: 0.1em solid #181830;
-  background-color: #181830;
+  border: 0.1em solid #ccc;
+  background-color: #ccc;
   vertical-align: middle;
   margin-top: -.2em;
-  box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; }
+  box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent;
+  margin-right: .5em; }
 
 .control--custom-input:focus ~ .control-indicator {
   box-shadow: 0 0 0 2px #f1f1f1, 0 0 0 3px #181830; }
@@ -840,20 +841,20 @@ hr {
   background-color: #f1f1f1; }
 
 .control-indicator--checkbox:before {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-      -ms-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg); }
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+          transform: translate(-50%, -50%) rotate(45deg) scale(0); }
 
 .control-indicator--checkbox:after {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-      -ms-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg); }
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+          transform: translate(-50%, -50%) rotate(-45deg) scale(0); }
 
 .control-indicator--tickbox:before {
   top: 0;
-  -webkit-transform: translateX(-50%) rotate(45deg);
-      -ms-transform: translateX(-50%) rotate(45deg);
-          transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg) scale(0);
+      -ms-transform: translateX(-50%) rotate(45deg) scale(0);
+          transform: translateX(-50%) rotate(45deg) scale(0);
   border: 0.1em solid #f1f1f1;
   background-color: transparent;
   width: 40%;
@@ -864,10 +865,29 @@ hr {
 .control-indicator--tickbox:after {
   display: none; }
 
-.control--custom-input:checked ~ .control-indicator--checkbox:before, .control--custom-input:checked ~ .control-indicator--checkbox:after,
-.control--custom-input:checked ~ .control-indicator--tickbox:before,
-.control--custom-input:checked ~ .control-indicator--tickbox:after {
-  opacity: 1; }
+.control--custom-input:checked ~ .control-indicator--checkbox,
+.control--custom-input:checked ~ .control-indicator--tickbox {
+  background-color: #181830;
+  border: 0.1em solid #181830; }
+  .control--custom-input:checked ~ .control-indicator--checkbox:before, .control--custom-input:checked ~ .control-indicator--checkbox:after,
+  .control--custom-input:checked ~ .control-indicator--tickbox:before,
+  .control--custom-input:checked ~ .control-indicator--tickbox:after {
+    opacity: 1; }
+
+.control--custom-input:checked ~ .control-indicator--tickbox:before, .control--custom-input:checked ~ .control-indicator--tickbox:after {
+  -webkit-transform: translateX(-50%) rotate(45deg) scale(1);
+      -ms-transform: translateX(-50%) rotate(45deg) scale(1);
+          transform: translateX(-50%) rotate(45deg) scale(1); }
+
+.control--custom-input:checked ~ .control-indicator--checkbox:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+      -ms-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+          transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+
+.control--custom-input:checked ~ .control-indicator--checkbox:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+          transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
 
 .control-indicator--radio {
   border-radius: 50%; }
@@ -3138,9 +3158,7 @@ body {
  * Default layout container
  */
 .l-container {
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 95%;
+  width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
 
