@@ -1,7 +1,9 @@
-/*
-	moduleTest.js
-	Example module to show how to include other JS files into you browserify build
-*/
+/**
+ * moduleTest
+ * @module moduleTest
+ * @description Example module to show how to include other JS files into you browserify build
+ * @author Zander Martineau
+ */
 
 // dependencies for this module go here
 
@@ -9,8 +11,6 @@ function doSomething() {
 	console.log('Something was done :)');
 }
 
-function init() {
+export default function init() {
 	doSomething();
 }
-
-module.exports = init;

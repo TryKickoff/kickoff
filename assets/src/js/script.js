@@ -1,8 +1,9 @@
 /**
  * Project Name:
- * Client:
- * Author:
- * Company:
+ * @description
+ * @author
+ *
+ * Need help using JSDoc? Find out more at http://usejsdoc.org/
  */
 
 'use-strict';
