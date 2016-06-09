@@ -5,11 +5,7 @@
  * - Associated Table Variables
  * - Default table Styles
  * – Table modifiers:
- *   - .table--condensed
- *   - .table--bordered
- *   - .table--rounded
  *   - .table--striped
- *   – .table--hover
  * – .responsiveTable
  */
 
@@ -37,6 +33,7 @@ table {
 	border-spacing: 0;
 	border: 2px solid $table-borderColor;
 	background-color: $table-bgColor;
+	table-layout: fixed; // https://css-tricks.com/fixing-tables-long-strings/
 
 	// Cells
 	th,
@@ -118,7 +115,7 @@ th {
  * https://github.com/filamentgroup/tablesaw
  */
 .responsiveTable {
-	@include respond-max($bp-single-col) {
+	@include respond-max(mid) {
 		width: 100%;
 		margin-bottom: ($line-height-base * .75) + px;
 		overflow-y: hidden;

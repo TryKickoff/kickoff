@@ -2,7 +2,7 @@
   "name": "kickoff",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "homepage": "http://trykickoff.com",
   "authors": [
     {
@@ -21,6 +21,23 @@
   "contributors": [
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
+  "scripts": {
+    "test": "grunt travis --verbose",
+    "prestart": "npm prune && npm install",
+    "start": "grunt start",
+    "predeploy": "npm prune && npm install --no-optional",
+    "deploy": "grunt compile --release",
+    "info": "npm-scripts-info",
+    "commit": "git-cz"
+  },
+  "scripts-info": {
+    "test": "Run Travis CI checks",
+    "prestart": "Install npm dependencies",
+    "start": "Open starter checklist on trykickoff.com",
+    "predeploy": "Install non-optional npm dependencies",
+    "deploy": "Compile all assets for production deployment",
+    "commit": "Commit using our standard git commit message format"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/trykickoff/kickoff.git"
@@ -34,48 +51,59 @@
   },
   "dependencies": {
     "console": "^0.5.2",
-    "lite-ready": "^1.0.4",
-    "swiftclick": "^1.2.0",
-    "trak.js": "^0.5.2"
+    "double-dollar": "^1.0.0",
+    "lite-ready": "^1.0.4"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "cssnano": "^3.5.2",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^4.0.1",
-    "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-grunticon": "^2.2.2",
-    "grunt-newer": "^1.1.2",
-    "grunt-scss-lint": "^0.3.8",
-    "grunt-shimly": "^1.0.1",
-    "imagemin-gifsicle": "^4.2.0",
-    "imagemin-jpegtran": "^4.3.1",
-    "imagemin-mozjpeg": "^5.1.0",
-    "imagemin-optipng": "^4.3.0",
-    "imagemin-pngquant": "^4.2.2",
-    "imagemin-svgo": "^4.1.2",
-    "jshint-stylish": "^2.1.0",
-    "load-grunt-configs": "^0.4.3",
-    "load-grunt-tasks": "^3.4.1",
-    "minifyify": "^7.3.2",
-    "postscss": "^1.2.3"
+    "autoprefixer": "^6.3.6",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "cssnano": "^3.7.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-newer": "^1.2.0",
+    "imagemin-gifsicle": "4.2.0",
+    "imagemin-mozjpeg": "5.1.0",
+    "imagemin-optipng": "4.3.0",
+    "imagemin-pngquant": "4.2.2",
+    "imagemin-svgo": "4.2.1",
+    "load-grunt-configs": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
+    "minifyify": "^7.3.3",
+    "postscss": "^1.4.1",
+    "time-grunt": "^1.3.0"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.13.0",
+    "commitizen": "^2.8.2",
+    "cz-conventional-changelog": "^1.1.6",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1",
     "grunt-browser-sync": "^2.1.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-filesizegzip": "^0.2.0",
-    "opn": "^3.0.3"
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^18.1.0",
+    "grunt-filesizegzip": "^0.3.0",
+    "grunt-scss-lint": "^0.3.8",
+    "npm-scripts-info": "^0.3.6",
+    "opn": "^4.0.2"
   },
   "keywords": [],
-  "scripts": {
-    "test": "grunt travis --verbose",
-    "prestart": "npm install -g grunt-cli && npm prune && npm install",
-    "start": "grunt start",
-    "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
-    "deploy": "grunt compile --release"
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-assign"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

@@ -5,10 +5,7 @@ module.exports.tasks = {
 	 * https://github.com/gruntjs/grunt-contrib-clean
 	 * Clean some files
 	 */
-	clean: {
-		icons   : ['<%=config.distDir%>/img/icons', '<%=config.tempDir%>/icons'],
-		tempCSS : ['<%=config.tempDir%>/css']
-	},
+	clean: {},
 
 
 	/**
@@ -21,9 +18,9 @@ module.exports.tasks = {
 				expand: true,
 				cwd: '<%=config.srcDir%>/js/standalone',
 				src: ['./**/*.*'],
-				dest: '<%=config.js.distDir%>/standalone'
-			}]
-		}
+				dest: '<%=config.js.distDir%>/standalone',
+			}],
+		},
 	},
 
 
@@ -34,15 +31,11 @@ module.exports.tasks = {
 	 */
 	filesizegzip: {
 		js: {
-			src: '<%=config.js.distDir%><%=config.js.distFile%>'
+			src: '<%=config.js.distDir%><%=config.js.distFile%>',
 		},
 
 		css: {
-			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css'
+			src: '<%=config.css.distDir%>/<%=config.css.distFile%>.css',
 		},
-
-		grunticon: {
-			src: '<%=config.img.distDir%>/icons/icons.data.svg.css'
-		}
 	},
 };

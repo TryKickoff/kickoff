@@ -1,24 +1,27 @@
 /**
  * Project Name:
- * Client:
- * Author:
- * Company:
+ * @description
+ * @author
+ *
+ * Need help using JSDoc? Find out more at http://usejsdoc.org/
  */
 
 'use-strict';
 
 // npm modules
-var SwiftClick = require('swiftclick');
-var trak = require('trak.js');
-var ready = require('lite-ready');
-
+import ready from 'lite-ready';
+import $$ from 'double-dollar';
+window.$$ = $$;
 
 // Bundle global libs that don't return a value
-require('console');
+import 'console';
 
-// DOM ready code goes in here
-ready(function () {
-	var swiftclick = SwiftClick.attach(document.body);
-	trak.start();
+// Add your project-specific modules here
+// import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
+
+
+// Your DOM ready code goes in here
+ready(() => {
+	// moduleTest(); // this is a test, uncomment this line to try it
 
 });

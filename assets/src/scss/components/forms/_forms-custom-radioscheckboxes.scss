@@ -56,11 +56,12 @@ $checkbox-indicator-width: .1em;
 	width: 1em;
 	height: 1em;
 	transition: $default-transition;
-	border: $checkbox-indicator-width solid $custom-input-color;
-	background-color: $custom-input-color;
+	border: $checkbox-indicator-width solid $input-borderColor;
+	background-color: $input-borderColor;
 	vertical-align: middle;
 	margin-top: -.2em;
 	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
+	margin-right: .5em;
 }
 
 // :focus styles
@@ -71,7 +72,7 @@ $checkbox-indicator-width: .1em;
 // Checkbox modifiers
 .control-indicator--checkbox,
 .control-indicator--tickbox {
-	border-radius: .2em;
+	border-radius: .2em; // Change to 50% to make them circular
 
 	&:before,
 	&:after {
@@ -97,11 +98,11 @@ $checkbox-indicator-width: .1em;
 	}
 
 	&:before {
-		transform: translate(-50%, -50%) rotate(45deg);
+		transform: translate(-50%, -50%) rotate(45deg) scale(0);
 	}
 
 	&:after {
-		transform: translate(-50%, -50%) rotate(-45deg);
+		transform: translate(-50%, -50%) rotate(-45deg) scale(0);
 	}
 }
 
@@ -109,7 +110,7 @@ $checkbox-indicator-width: .1em;
 
 	&:before {
 		top: 0;
-		transform: translateX(-50%) rotate(45deg);
+		transform: translateX(-50%) rotate(45deg) scale(0);
 		border: $checkbox-indicator-width solid $custom-input-selected-color;
 		background-color: transparent;
 		width: 40%;
@@ -125,12 +126,29 @@ $checkbox-indicator-width: .1em;
 
 .control--custom-input:checked ~ .control-indicator--checkbox,
 .control--custom-input:checked ~ .control-indicator--tickbox {
-	// Uncomment to make checkboxes circular when checked
-	// border-radius: 50%;
+	background-color: $custom-input-color;
+	border: $checkbox-indicator-width solid $custom-input-color;
 
 	&:before,
 	&:after {
 		opacity: 1;
+	}
+}
+
+.control--custom-input:checked ~ .control-indicator--tickbox {
+	&:before,
+	&:after {
+		transform: translateX(-50%) rotate(45deg) scale(1);
+	}
+}
+
+.control--custom-input:checked ~ .control-indicator--checkbox {
+	&:before {
+		transform: translate(-50%, -50%) rotate(45deg) scale(1);
+	}
+
+	&:after {
+		transform: translate(-50%, -50%) rotate(-45deg) scale(1);
 	}
 }
 

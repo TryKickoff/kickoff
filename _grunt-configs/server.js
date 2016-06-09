@@ -18,36 +18,36 @@ module.exports.tasks = {
 					'text-align: center',
 					'background-color: #181830',
 					'color: #fff',
-					'padding: 15px'
-				]
-			}
+					'padding: 15px',
+				],
+			},
 		},
 
 		serve: {
 			bsFiles: {
 				src: [
 					'<%=config.distDir%>/{js,img}/**/*.*',
-					'**/*.html'
-				]
+					'**/*.html',
+				],
 			},
 			options: {
-				server: './'
-			}
+				server: './',
+			},
 		},
 
 		styleguide: {
 			bsFiles: {
 				src: [
 					'<%=config.distDir%>/{js,img}/*.*',
-					'*.html'
-				]
+					'*.html',
+				],
 			},
 			options: {
 				server: {
 					baseDir: './',
-					index: 'styleguide/index.html'
-				}
-			}
-		}
-	}
+					index: 'styleguide/index.html',
+				},
+			},
+		},
+	},
 };

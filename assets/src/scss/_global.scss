@@ -9,13 +9,7 @@ body {
  * Default layout container
  */
 .l-container {
-	padding-left: #{$layout-margin}px;
-	padding-right: #{$layout-margin}px;
-	width: 95%;
-	max-width: #{$layout-max-width}px;
+	width: 90%;
+	max-width: $layout-max-width;
 	margin: 0 auto;
-
-	.lt-ie9 & {
-		min-width: #{$layout-min-width}px;
-	}
 }

@@ -26,12 +26,13 @@ html {
 
 body {
 	font-family: $font-family-base;
-	@include font-size($type-base);
+	@include font-size(base);
 	line-height: $leading-base;
 	color: $color-text;
 
 	// Add ligatures
-	font-feature-settings: "liga","dlig";
+	font-feature-settings: "liga","dlig", "hist";
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
@@ -49,16 +50,12 @@ body {
  */
 p {
 	font-family: $font-family-base;
-	@include font-size($type-base);
+	@include font-size(base);
 	margin-top: 0;
 	margin-bottom: $baseline;
 
 	// Measure - ideally about 65 chars per line
-	// max-width: $type-base * 30 + px;
-
-	// & small {
-	// 	color: lighten($color-text, 10%);
-	// }
+	// max-width: #{type(base) * 30}px;
 }
 
 /**
@@ -81,33 +78,31 @@ h1, h2, h3, h4, h5, h6 {
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
 h1, .h1, .alpha {
-	@include font-size($type-largest);
+	@include font-size(jumbo);
 	margin-bottom: $baseline * 2;
 }
 
 h2, .h2, .beta {
-	@include font-size($type-large);
+	@include font-size(large);
 }
 
 h3, .h3, .gamma {
-	@include font-size($type-mid);
+	@include font-size(mid);
 }
 
 h4, .h4, .delta {
-	@include font-size($type-base);
+	@include font-size(base);
 }
 
 h5, .h5, .epsilon,
 h6, .h6, .zeta {
-	@include font-size($type-small);
+	@include font-size(base);
 	margin-bottom: 0;
 }
 
-// h5, .h5, .epsilon {
-// }
+// h5, .h5, .epsilon {}
 
-// h6, .h6, .zeta {
-// }
+// h6, .h6, .zeta {}
 
 // Only give these headings a margin-top if they are after other elements
 * + h1, * + .h1, * + .alpha,
@@ -150,7 +145,7 @@ blockquote {
 
 	p {
 		margin-bottom: 0;
-		@include font-size($type-base);
+		@include font-size(base);
 		font-weight: 300;
 	}
 
@@ -228,6 +223,13 @@ samp {
 hr {
 	margin: ($baseline) 0;
 	border: 0;
-	border-top: 1px solid $hr-border;
-	border-bottom: 1px solid #fff;
+	height: 1px;
+	background-color: $hr-color;
+}
+
+// https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
+.hyphenate {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }

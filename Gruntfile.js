@@ -5,13 +5,15 @@
  * - grunt watcher           : watch files without static server
  * - grunt compile           : compile scss, js & compress images
  * - grunt compile --release : same as above, but compress CSS as well
- * - grunt icons             : generate the icons using grunticon
- * - grunt images            : compress all non-grunticon images & then run `grunt icons`
- * - grunt checks            : run jshint and scsslint
+ * - grunt styleguide        :
+ * - grunt images            : compress all images
+ * - grunt test              : run jshint and scsslint
  */
 
 module.exports = function (grunt) {
 	'use strict';
+
+	require('time-grunt')(grunt); // Record how long tasks take
 
 	var options = {
 		pkg: require('./package'), // <%=pkg.name%>
@@ -21,7 +23,7 @@ module.exports = function (grunt) {
 	};
 
 	// Load grunt tasks automatically
-	require('load-grunt-tasks')(grunt, {pattern: ["grunt-*"]});
+	require('load-grunt-tasks')(grunt);
 
 	// Load grunt configurations automatically
 	var configs = require('load-grunt-configs')(grunt, options);
@@ -42,14 +44,14 @@ module.exports = function (grunt) {
 	grunt.registerTask('serve', [
 		'compile',
 		'browserSync:serve',
-		'watch'
+		'watch',
 	]);
 
 
 	// grunt watcher
 	grunt.registerTask('watcher', [
 		'compile',
-		'watch'
+		'watch',
 	]);
 
 
@@ -58,8 +60,7 @@ module.exports = function (grunt) {
 		'browserify',
 		'postscss',
 		'images',
-		'shimly',
-		'copy:jsStandalone'
+		'copy:jsStandalone',
 	]);
 
 
@@ -74,36 +75,28 @@ module.exports = function (grunt) {
 	grunt.registerTask('styleguide', [
 		'compile',
 		'browserSync:styleguide',
-		'watch'
+		'watch',
 	]);
 
 
 	// grunt images
 	grunt.registerTask('images', [
 		'newer:imagemin:images',
-		'icons'
-	]);
-
-
-	// grunt icons
-	grunt.registerTask('icons', [
-		'clean:icons',
-		'newer:imagemin:grunticon',
-		'grunticon'
 	]);
 
 
 	/**
-	 * grunt checks
+	 * grunt test
 	 */
-	grunt.registerTask('checks', [
-		'jshint:project',
-		'scsslint'
+	grunt.registerTask('test', [
+		'eslint',
+		'scsslint',
 	]);
 
 
 	// grunt travis
 	grunt.registerTask('travis', [
-		'postscss'
+		'postscss',
+		'eslint',
 	]);
 };

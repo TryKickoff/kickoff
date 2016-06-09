@@ -17,14 +17,6 @@
 			<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 		<!--<![endif]-->
 		<link rel="stylesheet" href="/assets/dist/css/styleguide.css">
-
-		<!-- Grunticon SVG detection script. http://github.com/filamentgroup/ Remove if not using Grunticon. -->
-		<script>
-			(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,t=0;m.length>t;t++)m[t].href&&m[t].href.indexOf(i.href)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),c=n||e.document.getElementsByTagName("script")[0],m=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",o&&(i.onload=o),c.parentNode.insertBefore(i,c),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,c=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),m=new i;m.onerror=function(){n.method="png",n.href=r[2],t(r[2])},m.onload=function(){var e=1===m.width&&1===m.height,a=r[e&&c?0:e?1:2];n.method=e&&c?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},m.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);
-			grunticon(["/assets/dist/img/icons/icons.data.svg.css", "/assets/dist/img/icons/icons.data.png.css", "/assets/dist/img/icons/icons.fallback.css"]);
-		</script>
-		<noscript><link href="/assets/dist/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
-		<!-- /End Grunticon detection & injection script -->
 	</head>
 
 	<body>
@@ -52,60 +44,81 @@
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Swatches</h2>
 
-				<ul class="l-blockGrid l-blockGrid--3up l-blockGrid--2up--narrow">
-					<li>
+				<div class="g">
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-primary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-primary</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-secondary">
 							<div class="sg-swatch-color"></div>
 							<code>$color-secondary</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-highlight">
 							<div class="sg-swatch-color"></div>
 							<code>$color-highlight</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-text">
 							<div class="sg-swatch-color"></div>
 							<code>$color-text</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-background">
 							<div class="sg-swatch-color"></div>
 							<code>$color-bg</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-border">
 							<div class="sg-swatch-color"></div>
 							<code>$color-border</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-link">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-default</code>
 						</div>
-					</li>
-					<li>
+					</div>
+					<div class="g-col g-span6 g-span3--mid">
 						<div class="sg-swatch sg-color-link-hover">
 							<div class="sg-swatch-color"></div>
 							<code>$color-link-hover</code>
 						</div>
-					</li>
-				</ul>
+					</div>
+				</div>
 
 			</div>
 		</div>
 
+
+		<!-- Swatches -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Sass variables</h2>
+
+				<div class="sg-var--baseFontSize"><strong>Font size base:</strong> <span class="sg-var-item">$font-size-base</span></div>
+				<div class="sg-var--leadingBase"><strong>Leading base:</strong> <span class="sg-var-item">$leading-base</span></div>
+				<div class="sg-var--typeScale"><strong>Typography scale:</strong> <span class="sg-var-item">$type-scale</span></div>
+				<div class="sg-var--fontFamilySans"><strong>Sans font stack:</strong> <span class="sg-var-item">$font-family-sans</span></div>
+				<div class="sg-var--fontFamilySerif"><strong>Serif font stack:</strong> <span class="sg-var-item">$font-family-serif</span></div>
+				<div class="sg-var--fontFamilyMono"><strong>Mono font stack:</strong> <span class="sg-var-item">$font-family-mono</span></div>
+				<div class="sg-var--breakpoints"><strong>Responsive Breakpoints:</strong> <span class="sg-var-item">$breakpoints</span></div>
+				<div class="sg-var--layoutWidth"><strong>Max layout width:</strong> <span class="sg-var-item">$layout-max-width</span></div>
+				<div class="sg-var--gridColumns"><strong>Grid column count:</strong> <span class="sg-var-item">$grid-column-count</span></div>
+				<div class="sg-var--gridGutter"><strong>Grid gutter width:</strong> <span class="sg-var-item">$grid-gutter-width</span></div>
+
+			</div>
+		</div>
+
+		<hr class="sg-hr">
 
 		<!-- Typography -->
 		<div class="sg-page">
@@ -114,7 +127,7 @@
 
 				<!-- Headings -->
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Primary typeface</h3>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
 						ABC
 					</div>
@@ -129,7 +142,7 @@
 
 				<!-- Body -->
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Secondary typeface</h3>
-				<div class="g-row">
+				<div class="g g--stack--mid">
 					<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--secondary sg-typeSpecimen--giant">
 						ABC
 					</div>
@@ -144,186 +157,183 @@
 
 				<!-- Add any more that you need -->
 
-			</div>
-		</div>
+				<hr class="sg-hr sg-hr--subtle">
 
-
-		<!-- Typography examples -->
-		<div class="sg-page">
-			<div class="l-container">
 				<h2 class="sg-sectionHeading">Typography examples</h2>
-				<div class="g-row">
-					<div class="g-span6 g-col">
-						<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
-						<h1>Heading 1</h1>
-						<h2>Heading 2</h2>
-						<h3>Heading 3</h3>
-						<h4>Heading 4</h4>
-						<h5>Heading 5</h5>
-						<h6>Heading 6</h6>
-					</div>
-					<div class="g-span6 g-col">
-						<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
-						<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
-						<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
-					</div>
+				<p class="sg-interfaceType sg-interfaceType--subtle">See more examples at <a href="http://trykickoff.com/demos/typography.html">trykickoff.com/demos/typography.html</a></p>
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
+				<!-- <h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6> -->
+
+				<div class="sg-type sg-type-jumbo">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
 				</div>
 
-				<h3 class="sg-interfaceType sg-interfaceType--subtle">Typeface sizes</h3>
-				<div class="g-row">
-					<div class="g-span6 g-col">
-						<div class="sg-type sg-type-micro"><div class="sg-type-item">Example text</div> <code>$type-micro</code></div>
-						<div class="sg-type sg-type-smallest"><div class="sg-type-item">Example text</div> <code>$type-smallest</code></div>
-						<div class="sg-type sg-type-smaller"><div class="sg-type-item">Example text</div> <code>$type-smaller</code></div>
-						<div class="sg-type sg-type-small"><div class="sg-type-item">Example text</div> <code>$type-small</code></div>
-						<div class="sg-type sg-type-base"><div class="sg-type-item">Example text</div> <code>$type-base</code></div>
-					</div>
-					<div class="g-span6 g-col">
-						<div class="sg-type sg-type-mid"><div class="sg-type-item">Example text</div> <code>$type-mid</code></div>
-						<div class="sg-type sg-type-large"><div class="sg-type-item">Example text</div> <code>$type-large</code></div>
-						<div class="sg-type sg-type-largest"><div class="sg-type-item">Example text</div> <code>$type-largest</code></div>
-						<div class="sg-type sg-type-jumbo"><div class="sg-type-item">Example text</div> <code>$type-jumbo</code></div>
-					</div>
+				<div class="sg-type sg-type-large">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
 				</div>
+
+				<div class="sg-type sg-type-mid">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-base">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-small">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<div class="sg-type sg-type-micro">
+					<div class="sg-type-item">The quick brown fox jumps over the lazy dog</div>
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
+				<div class="sg-type sg-type-micro">
+					<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
+					<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
+
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Lists</h3>
+				<ul>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+				</ul>
+				<ol>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+				</ol>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Blockquote</h3>
+				<div class="sg-type sg-type-micro">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nemo laboriosam aliquid error sunt, expedita nisi dolorem perferendis quae laborum hic, modi fugiat voluptas! Architecto distinctio voluptatem, qui laborum blanditiis.</p>
+						<small>Zander Martineau</small>
+					</blockquote>
+
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Horizontal rule</h3>
+				<hr>
 
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Components -->
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Components</h2>
+				<p class="sg-interfaceType sg-interfaceType--subtle">See more examples at <a href="http://trykickoff.com/demos/components.html">trykickoff.com/demos/components.html</a></p>
 
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Buttons</h3>
 
 				<div class="sg-spacer">
-					<a href="#" class="btn">Normal button</a>
+					<a href="#" class="btn">Default</a>
+					<a href="#" class="btn" disabled>disabled</a>
 				</div>
 
 				<div class="sg-spacer">
-					<a href="#" class="btn btn--primary">Primary button</a>
+					<a href="#" class="btn btn--primary">Primary</a>
+					<a href="#" class="btn btn--primary" disabled>disabled</a>
+				</div>
+
+				<div class="sg-spacer">
+					<a href="#" class="btn btn--primary btn--block">Button block</a>
+				</div>
+
+				<hr class="sg-hr sg-hr--subtle">
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Media object</h3>
+
+				<div class="media">
+					<div class="media-img">
+						<img src="http://placekitten.com/100/100">
+					</div>
+					<div class="media-body">
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
 				</div>
 
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Forms -->
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Form elements</h2>
+				<p class="sg-interfaceType sg-interfaceType--subtle">See more examples at <a href="http://trykickoff.com/demos/forms.html">trykickoff.com/demos/forms.html</a></p>
 
-				<form action="#" class="form form--horizontal">
-					<fieldset class="form-fieldset">
+				<div class="sg-spacer">
+					<input type="text" id="text" class="form-input" placeholder="Placeholder content" />
+				</div>
 
-						<div class="form-controlGroup">
-							<label for="text" class="form-label">Text</label>
-							<div class="form-controlGroup-inputWrapper">
-								<input type="text" id="text" placeholder="Joe Bloggs" class="form-input" required/>
-							</div>
-						</div>
+				<div class="sg-spacer">
+					<input type="text" id="text" class="form-input" disabled placeholder="Disabled content" />
+				</div>
 
-						<div class="form-controlGroup">
-							<label for="comments" class="form-label">Textarea</label>
-							<div class="form-controlGroup-inputWrapper">
-								<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea"></textarea>
-							</div>
-						</div>
+				<div class="sg-spacer">
+					<textarea id="comments" rows="3" cols="50" class="form-input form-input--textarea">Textarea</textarea>
+				</div>
 
-						<div class="form-controlGroup">
-								<label for="cs-choice" class="form-label">Custom select</label>
-								<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
-									<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
-										<option value="--">Select title</option>
-										<option value="Mr">Mr</option>
-										<option value="Mrs">Mrs</option>
-									</select>
-								</div>
-						</div>
-
-						<div class="g-row">
-							<div class="form-controlGroup g-span6 g-col">
-								<label class="form-label">Checkboxes</label>
-								<div class="form-controlGroup-inputWrapper">
-									<label class="control control--custom">
-										<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
-										<span class="control-indicator control-indicator--checkbox"></span>
-										Check 1
-									</label>
-									<label class="control control--custom">
-										<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
-										<span class="control-indicator control-indicator--tickbox"></span>
-										Check 2
-									</label>
-								</div>
-							</div>
-
-							<div class="form-controlGroup g-span6 g-col">
-								<label class="form-label">Radio buttons</label>
-								<div class="form-controlGroup-inputWrapper">
-									<label class="control control--custom">
-										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" checked />
-										<span class="control-indicator control-indicator--radio"></span>
-										My Radio Button Label Text
-									</label>
-									<label class="control control--custom">
-										<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
-										<span class="control-indicator control-indicator--radio"></span>
-										My Radio Button Label Text
-									</label>
-								</div>
-							</div>
-						</div>
-
-					</fieldset>
-
-					<div class="form-actions">
-						<div class="form-message has-warning is-hidden">
-							Some fields need attention
-						</div>
-
-						<input type="submit" value="Submit" class="btn btn--primary" />
-						<input type="reset" class="btn" value="Cancel" />
+				<div class="sg-spacer">
+					<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+						<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+							<option value="--">Select title</option>
+							<option value="Mr">Mr</option>
+							<option value="Mrs">Mrs</option>
+						</select>
 					</div>
+				</div>
 
-				</form>
+				<div class="sg-spacer">
+					<label class="control control--custom">
+						<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
+						<span class="control-indicator control-indicator--checkbox"></span>
+						Checkbox
+					</label>
+					<label class="control control--custom">
+						<input class="control--custom-input" type="checkbox" name="myCheckbox" checked/>
+						<span class="control-indicator control-indicator--tickbox"></span>
+						Tickbox
+					</label>
+				</div>
+
+				<div class="sg-spacer">
+					<label class="control control--custom">
+						<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" checked />
+						<span class="control-indicator control-indicator--radio"></span>
+						My Radio Button Label Text
+					</label>
+					<label class="control control--custom">
+						<input class="control--custom-input" type="radio" id="radio1" name="optionsRadios" />
+						<span class="control-indicator control-indicator--radio"></span>
+						My Radio Button Label Text
+					</label>
+				</div>
+
 			</div>
 		</div>
 
+		<hr class="sg-hr">
 
 		<!-- Icons -->
 		<div class="sg-page">
 			<div class="l-container">
 				<h2 class="sg-sectionHeading">Icons</h2>
-
-				<h3 class="sg-interfaceType sg-interfaceType--subtle">Interface icons</h3>
-				<ul class="l-blockGrid l-blockGrid--3up l-blockGrid--2up--narrow">
-					<li>
-						<div class="icon-sg icon-social-instagram"></div>
-						<code>.icon-social-instagram</code>
-					</li>
-					<li>
-						<div class="icon-sg icon-social-twitter"></div>
-						<code>.icon-social-twitter</code>
-					</li>
-					<li>
-						<div class="icon-sg icon-social-pinterest"></div>
-						<code>.icon-social-pinterest</code>
-					</li>
-					<li>
-						<div class="icon-sg icon-social-facebook"></div>
-						<code>.icon-social-facebook</code>
-					</li>
-					<li>
-						<div class="icon-sg icon-social-youtube"></div>
-						<code>.icon-social-youtube</code>
-					</li>
-					<li>
-						<div class="icon-sg icon-email"></div>
-						<code>.icon-email</code>
-					</li>
-				</ul>
 
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Favicons</h3>
 

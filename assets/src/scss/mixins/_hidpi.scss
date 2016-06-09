@@ -15,10 +15,10 @@
 
 /**
  * Hidpi with a minimum width media query
- * @include hidpi-min($bp-mid, 1.5) { ... };
+ * @include hidpi-min(bp(mid), 1.5) { ... };
  */
 @mixin hidpi-min($width, $ratio: 1.25) {
-	$width-em: em(strip-units($width), $mq-base);
+	$width-em: em(strip-units(bp($width)), $mq-base);
 
 	@media print,
 		screen and (min-width: $width-em) and (-webkit-min-device-pixel-ratio: $ratio),
@@ -31,10 +31,10 @@
 
 /**
  * Hidpi with a max width media query
- * @include hidpi-max($bp-mid, 1.3) { ... };
+ * @include hidpi-max(bp(mid), 1.3) { ... };
  */
 @mixin hidpi-max($width, $ratio: 1.25) {
-	$width-em: em(strip-units($width), $mq-base);
+	$width-em: em(strip-units(bp($width)), $mq-base);
 
 	@media print,
 		screen and (max-width: $width-em) and (-webkit-min-device-pixel-ratio: $ratio),

@@ -1,0 +1,47 @@
+/**
+ * Usage:
+ *
+ * getVal(100, $map) - uses an integer
+ * getVal(mid, $map) - uses a Sass map
+ * getVal($foo, $map) - uses a Sass variable
+ */
+
+@function getValue($val, $map: '') {
+	@if type-of($val) == 'number' {
+		@return $val;
+	} @else if variable-exists($val) {
+		@return $val;
+	} @else {
+		@return map-get($map, $val);
+	}
+}
+
+
+/**
+ * Get breakpoints
+ *
+ * bp()
+ *
+ * Usage:
+ * bp(100) - uses an integer
+ * bp(mid) - uses the $breakpoints Sass map
+ * bp($foo) - uses a Sass variable
+ */
+@function bp($val) {
+	@return getValue($val, $breakpoints);
+}
+
+
+/**
+ * Get type size
+ *
+ * type()
+ *
+ * Usage:
+ * type(100) - uses an integer
+ * type(mid) - uses the $type Sass map
+ * type($foo) - uses a Sass variable
+ */
+@function type($val) {
+	@return getValue($val, $type);
+}

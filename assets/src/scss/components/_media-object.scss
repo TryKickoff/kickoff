@@ -59,7 +59,7 @@
 }
 
 // Stack media-img & media-body on skinny viewports
-@include respond-max($bp-single-col) {
+@include respond-max(mid) {
 	.media--stackOnSkinny {
 		.media-img,
 		.media-body {
@@ -70,7 +70,7 @@
 
 
 // Stack media-img & media-body on wider viewports
-@include respond-min($bp-single-col) {
+@include respond-min(mid) {
 	.media--stackOnWide {
 		.media-img,
 		.media-body {

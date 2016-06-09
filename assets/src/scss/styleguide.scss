@@ -90,14 +90,27 @@ body {
 .sg-swatch {
 	text-align: center;
 	line-height: 30px;
-	margin: 10px 10px 0;
+	margin: 5px;
+	border: 1px solid #f1f1f1;
+
+	code {
+		margin: 0 10px;
+		display: inline-block;
+		padding: 0;
+	}
 }
 
 .sg-swatch-color {
-	height: 60px;
-	padding: 15px;
+	height: 80px;
+	line-height: 80px;
 	@include font-size(13);
 	font-family: $font-family-mono;
+	font-weight: bold;
+
+	@include respond-min(narrow) {
+		height: 120px;
+		line-height: 120px;
+	}
 }
 
 @mixin swatch($color) {
@@ -155,49 +168,58 @@ body {
 .sg-type {
 	margin-bottom: 1em;
 }
+
 code {
-	border: 1px solid #ddd;
-	background-color: #F9F8F8;
+	border: 0;
+	background-color: transparent;
 	@include font-size(11);
 }
 
 @mixin sgTypeTest($size) {
 	.sg-type-item {
 		@include font-size($size);
+
+		&:after {
+			content: '@include font-size(#{$size}) / #{type($size)}px';
+			@include font-size(micro);
+			display: block;
+			font-weight: normal;
+			font-family: $font-family-mono;
+			opacity: .6;
+		}
 	}
 
 	code {
-			&:after { content: ' = #{$size}px'; }
 	}
 }
 
 
 .sg-type-micro {
-	@include sgTypeTest($type-micro);
+	@include sgTypeTest(micro);
 }
 .sg-type-smallest {
-	@include sgTypeTest($type-smallest);
+	@include sgTypeTest(smallest);
 }
 .sg-type-smaller {
-	@include sgTypeTest($type-smaller);
+	@include sgTypeTest(smaller);
 }
 .sg-type-small {
-	@include sgTypeTest($type-small);
+	@include sgTypeTest(small);
 }
 .sg-type-base {
-	@include sgTypeTest($type-base);
+	@include sgTypeTest(base);
 }
 .sg-type-mid {
-	@include sgTypeTest($type-mid);
+	@include sgTypeTest(mid);
 }
 .sg-type-large {
-	@include sgTypeTest($type-large);
+	@include sgTypeTest(large);
 }
 .sg-type-largest {
-	@include sgTypeTest($type-largest);
+	@include sgTypeTest(largest);
 }
 .sg-type-jumbo {
-	@include sgTypeTest($type-jumbo);
+	@include sgTypeTest(jumbo);
 }
 
 .sg-typeSpecimen {
@@ -208,8 +230,8 @@ code {
 
 	&:after {
 		display: block;
-		@extend .interfaceType;
-		@extend .interfaceType-subtle;
+		@extend .sg-interfaceType;
+		@extend .sg-interfaceType--subtle;
 		@include font-size(16);
 		margin-top: 5px;
 		border-top: 1px solid #ddd;
@@ -256,3 +278,83 @@ code {
 		margin-right: 15px;
 	}
 }
+
+.sg-hr {
+	height: 3px;
+	margin: ($baseline * 2) 0;
+}
+
+.sg-hr--subtle {
+	height: 3px;
+	background-color: fade-out($hr-color, .6)
+}
+
+@mixin sgVar($var) {
+	line-height: 2;
+	font-family: $font-family-mono;
+	border-bottom: 1px solid rgba(#000, .1);
+	@include font-size(micro);
+
+	strong {
+		opacity: .6;
+		text-transform: uppercase;
+		display: block;
+		user-select: none;
+
+		@include respond-min(mid) {
+			width: 20%;
+			display: inline-block;
+		}
+	}
+
+	&:after {
+		content: '#{$var}';
+	}
+}
+
+.sg-var-item {
+	color: $color-secondary;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sg-var--baseFontSize {
+	@include sgVar($font-size-base);
+}
+
+.sg-var--leadingBase {
+	@include sgVar($leading-base);
+}
+
+.sg-var--typeScale {
+	@include sgVar($type-scale);
+}
+
+.sg-var--fontFamilyMono {
+	@include sgVar($font-family-mono);
+}
+
+.sg-var--fontFamilySans {
+	@include sgVar($font-family-sans);
+}
+
+.sg-var--fontFamilySerif {
+	@include sgVar($font-family-serif);
+}
+
+.sg-var--breakpoints {
+	@include sgVar($breakpoints);
+}
+
+.sg-var--layoutWidth {
+	@include sgVar($layout-max-width);
+}
+
+.sg-var--gridColumns {
+	@include sgVar($grid-column-count);
+}
+
+.sg-var--gridGutter {
+	@include sgVar($grid-gutter-width);
+}
+

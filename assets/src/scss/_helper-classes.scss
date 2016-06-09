@@ -34,7 +34,6 @@
 }
 
 
-
 // Hide from both screenreaders and browsers: h5bp.com/u
 .is-hidden {
 	display: none !important;
@@ -86,12 +85,8 @@
 .l-mt0 { margin-top:    0 !important;}
 
 
-/**
- * Responsive Utilities
- */
-
 * {
-	-webkit-tap-highlight-color: $color-primary !important;
+	-webkit-tap-highlight-color: rgba($color-primary, 0) !important;
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
@@ -108,10 +103,16 @@ textarea[contenteditable] {
 
   #perfmatters
   */
-  backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 // Add the default transition to any element
 .transition {
 	transition: $default-transition;
+}
+
+// Faster taps on mobile devices
+// See https://adactio.com/journal/10019 for more info
+a, button, input, select, textarea, label, summary {
+	touch-action: manipulation;
 }

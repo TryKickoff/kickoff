@@ -10,24 +10,28 @@
  * - Horizontal-specific styles
  */
 
-/**
- * Define associated Form variables
- */
 
+// Form variables
 $input-bgColor            : #fff;                // Colour of input background
 $input-borderColor        : #ccc;                // Colour of input borders
 $input-borderColor--focus : $color-primary;      // Colour of input borders when focused
 $form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
 $label-textColor          : $color-text;         // Text colour of form labels and legends
 $input-textColor          : $color-text;         // Text colour of form inputs
-
 $placeholder-textColor    : lighten(#000, 70%);  // Text colour of input placeholder
-
 // Messages & form states and alerts
 $color-warning            : #f4aa47;             // base colour for warning input state
 $color-error              : #B94A4D;             // base colour for error input state
 $color-success            : $green;              // base colour for success input state
 $color-info               : $blue;               // base colour for info input state
+
+// Mixins
+@import "form-helpers";
+
+// Custom form elements
+@import "forms-custom-radioscheckboxes"; // Radio & checkbox inputs
+@import "forms-custom-select";           // Select element
+@import "forms-custom-file";             // File input
 
 
 /**
@@ -58,7 +62,7 @@ $color-info               : $blue;               // base colour for info input s
 	width: 100%;
 	padding: 0;
 	margin-bottom: $baseline;
-	@include font-size($type-mid);
+	@include font-size(mid);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -67,7 +71,7 @@ $color-info               : $blue;               // base colour for info input s
 
 	// Small
 	small {
-		@include font-size($type-small);
+		@include font-size(small);
 		color: lighten(#000, 70%);
 	}
 }
@@ -107,7 +111,7 @@ $color-info               : $blue;               // base colour for info input s
 	height: 2.5em;
 	padding: .5em;
 
-	@include font-size($type-base);
+	@include font-size(base);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-textColor;
@@ -228,7 +232,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-input-file {
 	display: inline-block;
 	width: 100%;
-	@include font-size($type-base);
+	@include font-size(base);
 	margin: 0;
 	vertical-align: middle;
 	line-height: 1em;
@@ -388,8 +392,8 @@ input[type="submit"] {
  */
 @include placeholder($placeholder-textColor);
 
-// === <$bp-single-col ===
-@include respond-min($bp-single-col) {
+// === <mid ===
+@include respond-min(mid) {
 	/**
 	 * Horizontal-specific styles
 	 * =================================
@@ -438,4 +442,4 @@ input[type="submit"] {
 	}
 }
 
-// === end <$bp-single-col ===
+// === end <mid ===
