@@ -396,9 +396,9 @@ code {
     opacity: .6; }
 
 .sg-type-large .sg-type-item {
-  font-size: 1.25rem; }
+  font-size: 1.6rem; }
   .sg-type-large .sg-type-item:after {
-    content: "@include font-size(large) / 25px";
+    content: "@include font-size(large) / 32px";
     font-size: 0.65rem;
     display: block;
     font-weight: normal;
@@ -678,4 +678,5 @@ code {
         display: inline-block; } }
   .sg-var--gridGutter:after {
     content: "20"; }
+
 /*# sourceMappingURL=styleguide.css.map */
