@@ -31,7 +31,7 @@ const ConfigOptions = function() {
 		srcFile: config.srcDir + '/js/script.js',
 		distDir: config.distDir + '/js/',
 
-		distFile: 'bundle.js',
+		distFile: 'kickoff.js',
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
 	};
