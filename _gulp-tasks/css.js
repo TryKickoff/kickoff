@@ -6,16 +6,11 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
-/**
- * css
- */
+let processors = [
+  autoprefixer({ browsers: gulpConfig.css.autoprefixer }),
+];
 
-gulp.task('css', () => {
-  const processors = [
-    autoprefixer({ browsers: gulpConfig.css.autoprefixer }),
-    cssnano({ discardComments: { removeAll: true }}),
-  ];
-
+function buildCss() {
   gulp.src(gulpConfig.css.scssDir + '/kickoff.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.init())
@@ -29,4 +24,22 @@ gulp.task('css', () => {
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./' + gulpConfig.css.distDir));
+}
+
+/**
+ * css
+ * Gulp task to compile scss (no minification)
+ */
+
+gulp.task('css', buildCss());
+
+/**
+ * css-release
+ * Gulp task to compile and minify scss
+ */
+
+gulp.task('css-release', () => {
+  const cssNanoConfig = cssnano({ discardComments: { removeAll: true }});
+  processors.push(cssNanoConfig);
+  buildCss();
 });
