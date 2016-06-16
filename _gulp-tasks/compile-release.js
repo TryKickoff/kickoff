@@ -3,7 +3,7 @@ const gutil = require('gulp-util');
 const webpack = require('webpack');
 const webpackConfig = require('./../webpack.config.js');
 
-gulp.task('compile-release', ['clean', 'build-release', 'css', 'images', 'copy']);
+gulp.task('compile-release', ['clean', 'build-release', 'css-release', 'images', 'copy']);
 
 
 /**
