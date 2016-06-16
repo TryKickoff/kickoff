@@ -8,7 +8,7 @@ gulp.task('compile-release', ['clean', 'build-release', 'css-release', 'images',
 
 /**
  * build-release
- * Gulp task to compile and minify scss, js, and images
+ * Gulp task to compile and minify js
  */
 
 gulp.task('build-release', () => {

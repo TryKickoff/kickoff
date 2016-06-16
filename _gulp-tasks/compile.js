@@ -7,7 +7,7 @@ gulp.task('compile', ['clean', 'build', 'css', 'images', 'copy']);
 
 /**
  * build
- * Gulp task to compile scss, js, and images (no minification)
+ * Gulp task to compile js (no minification)
  */
 
 gulp.task('build', () => {
