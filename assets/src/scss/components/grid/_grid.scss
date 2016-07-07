@@ -9,9 +9,20 @@
  * Breakpoint stacking
  */
 
+// Setup layout max-width
+$layout-max-width         : 1000px !default;
+
+// Grid specific variables
+$grid-column-count        : 12    !default; // Total column count
+$grid-gutter-width        : 20    !default; // [in pixels]
+
+//Settings here override & affect the grid classes output
+$responsive-grid-sizes    : true  !default; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid          : true  !default; // Disable this is you on’t want to output .no-flexbox classes for older browsers to use
+
+
 /* Import Grid helpers and mixins */
 @import 'grid-helpers';
-
 
 /**
  * Basic Usage:
