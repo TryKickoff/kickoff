@@ -180,10 +180,6 @@
  * Path vars
  */
 /**
- * Layout setup
- * Settings here override & affect the output in scss/partials/components/grid/grid.scss
- */
-/**
  * App-specific variables
  */
 /* CSS Reset - Normalize etc */
@@ -623,7 +619,7 @@ h1, .h1, .alpha {
   margin-bottom: 56px; }
 
 h2, .h2, .beta {
-  font-size: 1.25rem; }
+  font-size: 1.6rem; }
 
 h3, .h3, .gamma {
   font-size: 1.25rem; }
@@ -3008,7 +3004,6 @@ pre {
   color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;
-    -o-tab-size: 3;
        tab-size: 3; }
 
 code {

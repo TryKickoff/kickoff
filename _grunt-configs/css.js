@@ -39,7 +39,8 @@ module.exports = function (grunt, options) {
 		])
 		.then(done)
 		.catch(function(error) {
-			console.error('\n' + error.formatted + '\n');
+			grunt.log.error('\n' + error.formatted + '\n');
+			done(false);
 		});
 	});
 };
