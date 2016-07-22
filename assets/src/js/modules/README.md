@@ -1,3 +1,3 @@
 ## Modules
 
-Add your preject-specific modules to this directory
+Add your project-specific modules to this directory
