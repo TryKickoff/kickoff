@@ -27,13 +27,16 @@
 // $custom-input-color: $color-primary;
 $custom-input-color: $color-primary;
 $custom-input-selected-color: $color-bg;
-$checkbox-indicator-width: .1em;
+$custom-input-length: 1.3em;
+$custom-input-border-width: 1px;
+$checkbox-indicator-width: 0.1em;
 
 .control--custom {
 	position: relative;
 	display: block;
 	cursor: pointer;
 	user-select: none;
+	padding-left: $custom-input-length + 1em;
 }
 
 // Give inline elements some space to the right
@@ -51,17 +54,17 @@ $checkbox-indicator-width: .1em;
 
 // The new checkbox/radio
 .control-indicator {
-	position: relative;
+	position: absolute;
+	left: 0;
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: $custom-input-length;
+	height: $custom-input-length;
 	transition: $default-transition;
-	border: $checkbox-indicator-width solid $input-borderColor;
+	border: $custom-input-border-width solid $input-borderColor;
 	background-color: $input-borderColor;
 	vertical-align: middle;
-	margin-top: -.2em;
+	margin-top: 0;
 	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
-	margin-right: .5em;
 }
 
 // :focus styles
@@ -93,7 +96,7 @@ $checkbox-indicator-width: .1em;
 	&:after {
 		top: 50%;
 		width: 90%;
-		height: $checkbox-indicator-width;
+		height: 0.1em;
 		background-color: $custom-input-selected-color;
 	}
 
