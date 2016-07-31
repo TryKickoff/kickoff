@@ -81,7 +81,7 @@
     "browser-sync": "^2.13.0",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
-    "eslint": "^2.11.1",
+    "eslint": "^3.2.0",
     "eslint-config-airbnb-base": "^5.0.0",
     "eslint-plugin-import": "^1.8.1",
     "grunt-browser-sync": "^2.1.3",
