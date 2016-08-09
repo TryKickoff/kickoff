@@ -2,7 +2,7 @@
   "name": "kickoff",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "homepage": "http://trykickoff.com",
   "authors": [
     {
@@ -66,11 +66,8 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-newer": "^1.2.0",
-    "imagemin-gifsicle": "4.2.0",
-    "imagemin-mozjpeg": "5.1.0",
-    "imagemin-optipng": "4.3.0",
-    "imagemin-pngquant": "4.2.2",
-    "imagemin-svgo": "4.2.1",
+    "imagemin-pngquant": "^4.2.2",
+    "imagemin-svgo": "^4.2.1",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
     "minifyify": "^7.3.3",
