@@ -5,7 +5,7 @@
  * @author Zander Martineau
  */
 
-// dependencies for this module go here
+// their code - dependencies for this module go here
 
 function doSomething() {
 	console.log('Something was done :)');

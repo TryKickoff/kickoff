@@ -22,7 +22,8 @@
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
-    "test": "grunt travis --verbose",
+    "test": "xo",
+    "travis": "grunt travis --verbose",
     "prestart": "npm prune && npm install",
     "start": "grunt start",
     "predeploy": "npm prune && npm install --no-optional",
@@ -31,7 +32,7 @@
     "commit": "git-cz"
   },
   "scripts-info": {
-    "test": "Run Travis CI checks",
+    "test": "Run js tests",
     "prestart": "Install npm dependencies",
     "start": "Open starter checklist on trykickoff.com",
     "predeploy": "Install non-optional npm dependencies",
@@ -72,15 +73,13 @@
     "load-grunt-tasks": "^3.5.0",
     "minifyify": "^7.3.3",
     "postscss": "^1.4.1",
-    "time-grunt": "^1.3.0"
+    "time-grunt": "^1.3.0",
+    "xo": "^0.16.0"
   },
   "optionalDependencies": {
     "browser-sync": "^2.13.0",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
-    "eslint": "^3.2.0",
-    "eslint-config-airbnb-base": "^5.0.0",
-    "eslint-plugin-import": "^1.8.1",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
@@ -102,5 +101,14 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "xo": {
+    "esnext": true,
+    "ignores": [
+      "**/assets/src/js/standalone/**/*.js",
+      "**/assets/dist/**/*.js",
+      "_grunt-configs/*.js",
+      "Gruntfile.js"
+    ]
   }
 }

@@ -8,20 +8,20 @@
 
 'use-strict';
 
-// npm modules
+// their code e.g. npm modules
 import ready from 'lite-ready';
-import $$ from 'double-dollar';
-window.$$ = $$;
+import $$ from 'double-dollar'; // https://github.com/mrmartineau/double-dollar
 
 // Bundle global libs that don't return a value
 import 'console';
 
-// Add your project-specific modules here
-// import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
+// our code
+// this is a test, uncomment the line below to try it
+// import moduleTest from './modules/moduleTest';
 
+window.$$ = $$;
 
-// Your DOM ready code goes in here
+// DOM ready code goes in here
 ready(() => {
 	// moduleTest(); // this is a test, uncomment this line to try it
-
 });
