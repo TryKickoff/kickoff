@@ -82,7 +82,6 @@
     "cz-conventional-changelog": "^1.1.6",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^19.0.0",
     "grunt-filesizegzip": "^0.3.0",
     "grunt-scss-lint": "^0.3.8",
     "npm-scripts-info": "^0.3.6",

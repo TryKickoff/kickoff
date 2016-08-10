@@ -12,18 +12,4 @@ module.exports.tasks = {
 			reporterOutput: null,
 		},
 	},
-
-
-	/**
-	 * Eslint
-	 * http://eslint.org
-	 * https://github.com/sindresorhus/grunt-eslint
-	 * Manage the options inside .eslintrc.js file
-	 */
-	eslint: {
-		target: [
-			'<%=config.srcDir%>/js/**/*.js',
-			'!<%=config.srcDir%>/js/standalone/**/*.js',
-		],
-	},
 };
