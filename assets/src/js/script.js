@@ -17,7 +17,7 @@ import 'console';
 
 // our code
 // this is a test, uncomment the line below to try it
-// import moduleTest from './modules/moduleTest';
+// import moduleTest from './modules/module-test';
 
 window.$$ = $$; // add double-dollar to global scope
 
