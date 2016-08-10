@@ -1,6 +1,20 @@
 # Kickoff changelog
 All latest changes are documented on our site at http://trykickoff.com
 
+## [7.1.0] - 10/08/2016
+Switch javascript linting rules to use [XO rules](https://github.com/sindresorhus/xo) instead of [AirBnB's rules](https://github.com/airbnb/javascript). This was done to allow developers to enforce a strict code style with the minimal config. See below for the new js linting rules.
+
+### XO Default code style
+
+*Any of these can be [overridden](https://github.com/sindresorhus/xo#rules) if necessary.* See our [package.json](https://github.com/TryKickoff/kickoff/blob/master/package.json#L105-L113) for all XO config.
+
+- Tab indentation
+- Semicolons
+- Single-quotes
+- No unused variables
+- Space after keyword `if (condition) {}`
+- Always `===` instead of `==`
+
 ## [7.0.0] - 21/05/2016
 
 ### Javascript
