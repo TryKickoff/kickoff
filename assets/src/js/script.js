@@ -19,7 +19,7 @@ import 'console';
 // this is a test, uncomment the line below to try it
 // import moduleTest from './modules/moduleTest';
 
-window.$$ = $$;
+window.$$ = $$; // add double-dollar to global scope
 
 // DOM ready code goes in here
 ready(() => {
