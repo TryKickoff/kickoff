@@ -2,7 +2,7 @@
   "name": "kickoff",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
-  "version": "7.0.2",
+  "version": "7.1.0",
   "homepage": "http://trykickoff.com",
   "authors": [
     {
@@ -22,7 +22,7 @@
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
-    "test": "xo",
+    "test": "xo && grunt postscss",
     "travis": "grunt travis --verbose",
     "prestart": "npm prune && npm install",
     "start": "grunt start",
@@ -32,7 +32,7 @@
     "commit": "git-cz"
   },
   "scripts-info": {
-    "test": "Run js tests",
+    "test": "Run tests",
     "prestart": "Install npm dependencies",
     "start": "Open starter checklist on trykickoff.com",
     "predeploy": "Install non-optional npm dependencies",
@@ -87,7 +87,9 @@
     "npm-scripts-info": "^0.3.6",
     "opn": "^4.0.2"
   },
-  "keywords": [],
+  "keywords": [
+    "⚽"
+  ],
   "babel": {
     "presets": [
       "es2015"
@@ -103,6 +105,9 @@
   },
   "xo": {
     "esnext": true,
+    "global": [
+      "window"
+    ],
     "ignores": [
       "**/assets/src/js/standalone/**/*.js",
       "**/assets/dist/**/*.js",
