@@ -40,7 +40,7 @@ Our Yeoman Generator is the best way to get Kickoff each time you want to start 
 ---
 
 ## Bugs and feature requests
-Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/trykickoff/kickoff/issues/new).
+Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/TryKickoff/kickoff/issues/new).
 
 ---
 
@@ -67,7 +67,7 @@ If you're using Kickoff we'd love to hear about it; please e-mail us at trykicko
 Keep track of development and community news by following [@TryKickoff on Twitter](http://twitter.com/TryKickoff).
 
 ### Contributing
-Please read our [contribution guidelines](CONTRIBUTING.md) before contributing to Kickoff.
+Please read our [contribution guidelines](https://github.com/TryKickoff/kickoff/wiki/Contributing-to-Kickoff) before contributing to Kickoff.
 
 ### Versioning
 For transparency into our release cycle and in striving to maintain backward compatibility, Kickoff is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
