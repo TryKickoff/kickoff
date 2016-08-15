@@ -31,7 +31,7 @@ Kickoff's demo and documentation site is hosted at [trykickoff.com](http://tryki
 ---
 
 ## ![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1) Yeoman generator
-Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/docs/yeoman.html) for more info.
+Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/learn/yeoman.html) for more info.
 
 ---
 
