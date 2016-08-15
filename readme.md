@@ -57,7 +57,7 @@ Kickoff has been tested in the following browsers:
 |                           Zander Martineau                          |                             Ashley Nolan                             |                              Nic Bell                             |
 |:-------------------------------------------------------------------:|:--------------------------------------------------------------------:|:-----------------------------------------------------------------:|
 | ![Zander](https://avatars0.githubusercontent.com/u/64883?v=3&s=100) | ![Ashley](https://avatars3.githubusercontent.com/u/805184?v=3&s=100) | ![Nic](https://avatars3.githubusercontent.com/u/151842?v=3&s=100) |
-| [Twitter](http://twitter.com/mrmartineau)                           | [Twitter](http://twitter.com/AshNolan_)                              | [Twitter](http://twitter.com/nicebell)                                     |
+| [Twitter](http://twitter.com/mrmartineau)                           | [Twitter](http://twitter.com/AshNolan_)                              | [Twitter](http://twitter.com/nicbell)                                     |
 | [Github](https://github.com/mrmartineau/)                           | [Github](https://github.com/ashleynolan)                             | [Github](https://github.com/nicbell/)                             |
 | [Site](http://martineau.tv)                                         | [Site](http://ashleynolan.co.uk)                                     | [Site](http://nicbell.net)                                        |
 
