@@ -23,7 +23,6 @@
   ],
   "scripts": {
     "test": "xo && grunt postscss",
-    "travis": "grunt travis --verbose",
     "prestart": "npm prune && npm install",
     "start": "grunt start",
     "predeploy": "npm prune && npm install --no-optional",
