@@ -100,6 +100,8 @@ gulp.task('css', () => {
 		)
 
 		// Write file
-		.pipe(gulp.dest(`${config.css.distDir}`));
+		.pipe(
+			gulp.dest(`${config.css.distDir}`)
+		);
 });
 
