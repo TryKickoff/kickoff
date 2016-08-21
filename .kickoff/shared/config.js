@@ -42,6 +42,13 @@ const ConfigOptions = function() {
 		srcDir: `${config.srcDir}/img`, // config.img.srcDir
 		distDir: `${config.distDir}/img`, // config.img.distDir
 	};
+
+
+	// Icon-related vars
+	config.icons = {
+		srcDir: `${config.srcDir}/icons`, // config.icons.srcDir
+		distDir: `${config.distDir}/img`, // config.icons.distDir
+	};
 };
 
 module.exports = new ConfigOptions();
