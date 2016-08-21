@@ -1,5 +1,5 @@
 /**
- * CSS config
+ * gulp images
  */
 
 const config = require('../shared/config');
@@ -8,9 +8,6 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cached');
 
 
-/**
- * gulp css
- */
 gulp.task('images', () => {
 	// process.env.RELEASE = false;
 

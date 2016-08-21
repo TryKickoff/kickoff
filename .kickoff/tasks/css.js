@@ -1,5 +1,5 @@
 /**
- * CSS config
+ * gulp css
  */
 
 const config = require('../shared/config');
@@ -20,9 +20,6 @@ const doiuse = require('doiuse');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
 
 
-/**
- * gulp css
- */
 gulp.task('css', () => {
 	// process.env.RELEASE = false;
 
