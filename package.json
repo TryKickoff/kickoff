@@ -28,7 +28,10 @@
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "grunt compile --release",
     "info": "npm-scripts-info",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release-patch": "release-it --non-interactive patch",
+    "release-minor": "release-it --non-interactive minor",
+    "release-major": "release-it --non-interactive major"
   },
   "scripts-info": {
     "test": "Run tests",
@@ -55,35 +58,46 @@
     "lite-ready": "^1.0.4"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0",
-    "cssnano": "^3.7.0",
-    "grunt": "^1.0.1",
-    "grunt-browserify": "^5.0.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-newer": "^1.2.0",
     "imagemin-pngquant": "^4.2.2",
     "imagemin-svgo": "^4.2.1",
-    "load-grunt-configs": "^1.0.0",
-    "load-grunt-tasks": "^3.5.0",
     "minifyify": "^7.3.3",
-    "postscss": "^1.4.1",
-    "time-grunt": "^1.3.0",
+    "autoprefixer": "^6.4.0",
+    "cssnano": "^3.7.3",
+    "del": "2.2.1",
+    "doiuse": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-cached": "1.1.0",
+    "gulp-if": "2.0.1",
+    "gulp-imagemin": "3.0.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylelint": "^3.0.0",
+    "gulp-svgstore": "6.0.0",
+    "node-sass": "^3.8.0",
+    "npm-sass": "^1.2.0",
+    "postcss-bem-linter": "^2.5.1",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-reporter": "^1.4.1",
+    "postcss-scss": "^0.1.9",
+    "precss": "^1.4.0",
+    "run-sequence": "1.2.2",
+    "stylelint": "^7.1.0",
+    "stylelint-config-standard": "^12.0.0",
+    "stylelint-selector-bem-pattern": "^1.0.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
     "xo": "^0.16.0"
   },
   "optionalDependencies": {
     "browser-sync": "^2.13.0",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
-    "grunt-browser-sync": "^2.1.3",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-filesizegzip": "^0.3.0",
-    "grunt-scss-lint": "^0.3.8",
     "npm-scripts-info": "^0.3.6",
+    "release-it": "2.4.0",
     "opn": "^4.0.2"
   },
   "keywords": [
@@ -110,8 +124,22 @@
     "ignores": [
       "**/assets/src/js/standalone/**/*.js",
       "**/assets/dist/**/*.js",
-      "_grunt-configs/*.js",
-      "Gruntfile.js"
+      ".kickoff/**/*.js",
+      "gulpfile.js"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": [
+        "tab",
+        {
+          "except": [
+            "value"
+          ]
+        }
+      ],
+      "max-empty-lines": 2
+    }
   }
 }
