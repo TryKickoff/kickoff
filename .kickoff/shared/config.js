@@ -28,9 +28,10 @@ const ConfigOptions = function() {
 
 	// Javascript-related vars
 	config.js = {
-		srcFile: `${config.srcDir}/js/script.js`, // config.js.srcFile
-		distDir: `${config.distDir}/js/`, // config.js.distDir
+		srcDir: `${config.srcDir}/js`, // config.js.srcFile
+		srcFile: 'script.js', // config.js.srcFile
 
+		distDir: `${config.distDir}/js`, // config.js.distDir
 		distFile: 'kickoff.js', // config.js.distFile
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
