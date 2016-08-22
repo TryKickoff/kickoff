@@ -16,6 +16,6 @@ gulp.task('watcher', () => {
 	gulp.watch([`${config.css.scssDir}/**/*.scss`], ['css']);
 	gulp.watch([`${config.icons.srcDir}/**/*`], ['icons']);
 	gulp.watch([`${config.img.srcDir}/**/*`], ['images']);
-	// gulp.watch(`${config.js.srcDir}/**/*.js`, ['webpack']);
+	gulp.watch(`${config.js.srcDir}/**/*.js`, ['javascript']);
 });
 
