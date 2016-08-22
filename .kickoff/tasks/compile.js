@@ -9,4 +9,4 @@ const gulp = require('gulp');
 /**
  * gulp compile
  */
-gulp.task('compile', ['css', 'images', 'icons']);
+gulp.task('compile', ['css', 'images', 'icons', 'javascript']);
