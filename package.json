@@ -26,7 +26,7 @@
     "prestart": "npm prune && npm install",
     "start": "grunt start",
     "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "grunt compile --release",
+    "deploy": "RELEASE=true gulp compile",
     "info": "npm-scripts-info",
     "commit": "git-cz",
     "release-patch": "release-it --non-interactive patch",
