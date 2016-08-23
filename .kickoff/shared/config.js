@@ -64,11 +64,18 @@ const ConfigOptions = function() {
 	// Banners and info
 	config.misc = {
 		banner: `/**
- * <%= pkg.title %> <%= pkg.version %>
+   ██╗  ██╗██╗ ██████╗██╗  ██╗ ██████╗ ███████╗███████╗
+   ██║ ██╔╝██║██╔════╝██║ ██╔╝██╔═══██╗██╔════╝██╔════╝
+   █████╔╝ ██║██║     █████╔╝ ██║   ██║█████╗  █████╗
+   ██╔═██╗ ██║██║     ██╔═██╗ ██║   ██║██╔══╝  ██╔══╝
+   ██║  ██╗██║╚██████╗██║  ██╗╚██████╔╝██║     ██║
+   ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+ * <%= pkg.title %> v<%= pkg.version %>
  * <%= pkg.homepage %>
+ * https://github.com/TryKickoff/kickoff
  */
-`
-	}
+`,
+	};
 };
 
 module.exports = new ConfigOptions();
