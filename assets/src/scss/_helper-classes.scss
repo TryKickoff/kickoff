@@ -10,7 +10,7 @@
  * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix:after {
+.clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -81,8 +81,8 @@
 	float: none;
 }
 
-.l-mb0 { margin-bottom: 0 !important;}
-.l-mt0 { margin-top:    0 !important;}
+.l-mb0 { margin-bottom: 0 !important; }
+.l-mt0 { margin-top: 0 !important; }
 
 
 * {
@@ -95,14 +95,14 @@ textarea[contenteditable] {
 }
 
 .promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
+	/*
+	This may promote the layer to a composited
+	layer.
 
-  Replace with will-change when available
+	Replace with will-change when available
 
-  #perfmatters
-  */
+	#perfmatters
+	*/
 	backface-visibility: hidden;
 }
 
@@ -113,6 +113,12 @@ textarea[contenteditable] {
 
 // Faster taps on mobile devices
 // See https://adactio.com/journal/10019 for more info
-a, button, input, select, textarea, label, summary {
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
 	touch-action: manipulation;
 }

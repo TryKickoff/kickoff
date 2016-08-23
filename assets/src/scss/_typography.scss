@@ -31,7 +31,7 @@ body {
 	color: $color-text;
 
 	// Add ligatures
-	font-feature-settings: "liga","dlig", "hist";
+	font-feature-settings: "liga", "dlig", "hist";
 	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 
 	// Two ways to smoothen type, they are disabled by default
@@ -61,7 +61,12 @@ p {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin: 0;
 	font-family: $font-family-headings;
 	font-weight: $font-weight-headings;
@@ -77,38 +82,62 @@ h1, h2, h3, h4, h5, h6 {
 
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
-h1, .h1, .alpha {
+h1,
+.h1,
+.alpha {
 	@include font-size(jumbo);
 	margin-bottom: $baseline * 2;
 }
 
-h2, .h2, .beta {
+h2,
+.h2,
+.beta {
 	@include font-size(large);
 }
 
-h3, .h3, .gamma {
+h3,
+.h3,
+.gamma {
 	@include font-size(mid);
 }
 
-h4, .h4, .delta {
+h4,
+.h4,
+.delta {
 	@include font-size(base);
 }
 
-h5, .h5, .epsilon,
-h6, .h6, .zeta {
+h5,
+.h5,
+.epsilon,
+h6,
+.h6,
+.zeta {
 	@include font-size(base);
 	margin-bottom: 0;
 }
 
-// h5, .h5, .epsilon {}
+// h5,
+.h5,
+.epsilon {}
 
-// h6, .h6, .zeta {}
+// h6,
+.h6,
+.zeta {}
 
 // Only give these headings a margin-top if they are after other elements
-* + h1, * + .h1, * + .alpha,
-* + h2, * + .h2, * + .beta,
-* + h3, * + .h3, * + .gamma,
-* + h4, * + .h4, * + .delta {
+* + h1,
+* + .h1,
+* + .alpha,
+* + h2,
+* + .h2,
+* + .beta,
+* + h3,
+* + .h3,
+* + .gamma,
+* + h4,
+* + .h4,
+* + .delta {
 	margin-top: $baseline;
 }
 
@@ -121,11 +150,13 @@ small {
  */
 
 // Emphasis
-strong, b {
+strong,
+b {
 	font-weight: $font-weight-bold;
 }
 
-em, i {
+em,
+i {
 	font-style: italic;
 }
 
