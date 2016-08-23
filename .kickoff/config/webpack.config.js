@@ -5,15 +5,12 @@ const config = require('../shared/config');
 const path = require('path');
 const webpack = require('webpack');
 
-const entryPoints = {};
-entryPoints[config.js.distFile] = [`${config.js.srcDir}/${config.js.srcFile}`];
-
 let webpackConfig = {
-	entry: entryPoints,
+	entry: config.js.entryPoints,
 	output: {
 		path: `${config.js.distDir}`,
-		publicPath: `${config.js.distDir}`,
-		filename: '[name]',
+		publicPath: `${config.js.distDir}/`,
+		filename: '[name].js',
 	},
 	devServer: {
 		inline: true,
@@ -23,9 +20,9 @@ let webpackConfig = {
 	module: {
 		loaders: [
 			{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'babel',
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel',
 			},
 		],
 	},
