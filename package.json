@@ -77,6 +77,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^3.0.0",
     "gulp-svgstore": "6.0.0",
+    "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.2",
     "imagemin-svgo": "^4.2.1",
     "minifyify": "^7.3.3",
