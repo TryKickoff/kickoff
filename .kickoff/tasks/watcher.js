@@ -4,8 +4,6 @@
 
 const config = require('../shared/config');
 const gulp = require('gulp');
-const runSequence = require('run-sequence');
-
 
 gulp.task('watcher', ['compile'], () => {
 	gulp.watch([`${config.css.scssDir}/**/*.scss`], ['css']);
