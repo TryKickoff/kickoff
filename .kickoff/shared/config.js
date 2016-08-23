@@ -28,8 +28,15 @@ const ConfigOptions = function() {
 
 	// Javascript-related vars
 	config.js = {
-		srcDir: `${config.srcDir}/js`, // config.js.srcFile
+		srcDir: `${config.srcDir}/js`, // config.js.srcDir
 		srcFile: 'script.js', // config.js.srcFile
+
+		entryPoints: {
+			kickoff: `${this.srcDir}/js/script.js`,
+
+			// Create more entry-points by adding to this array, e.g.
+			// foo: `${this.srcDir}/js/bar.js`,
+		},
 
 		distDir: `${config.distDir}/js`, // config.js.distDir
 		distFile: 'kickoff.js', // config.js.distFile
