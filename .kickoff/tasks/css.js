@@ -9,9 +9,6 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const stylelint = require('gulp-stylelint');
 const gulpIf = require('gulp-if');
-const banner = require('gulp-banner');
-var pkg = require('../../package.json');
-
 
 // PostCSS plugins
 const reporter = require('postcss-reporter');
@@ -28,7 +25,8 @@ gulp.task('css', () => {
 
 	return gulp.src([`${config.css.scssDir}/*.scss`])
 		.pipe(
-			gulpIf(process.env.TEST,
+			gulpIf(
+				process.env.TEST,
 				stylelint({
 					reporters: [
 						{
@@ -42,7 +40,8 @@ gulp.task('css', () => {
 
 
 		.pipe(
-			gulpIf(process.env.TEST,
+			gulpIf(
+				process.env.TEST,
 				postcss([
 					bemLinter(),
 					doiuse({
@@ -52,14 +51,20 @@ gulp.task('css', () => {
 							'node_modules/**'
 						]
 					}),
-					reporter({ clearMessages: true })
+					reporter({
+						clearMessages: true,
+					})
 				],
-				{ syntax: scss })
+				{
+					syntax: scss
+				})
 			)
 		)
 
 		// Init sourcemaps
-		.pipe( gulpIf(!process.env.RELEASE, sourcemaps.init()) )
+		.pipe(
+			gulpIf(!process.env.RELEASE, sourcemaps.init())
+		)
 
 		// Sass Compilation
 		.pipe(
@@ -78,19 +83,22 @@ gulp.task('css', () => {
 
 		// Compress CSS
 		.pipe(
-		  gulpIf(process.env.RELEASE === 'true',
+		  gulpIf(
+				process.env.RELEASE === 'true',
 				postcss([
 					cssnano()
 				])
 			)
 		)
 
-		.pipe(banner(config.misc.banner, { pkg: pkg }))
-
 		// Write sourcemaps
-		.pipe( gulpIf(!process.env.RELEASE, sourcemaps.write()) )
+		.pipe(
+			gulpIf(!process.env.RELEASE, sourcemaps.write())
+		)
 
 		// Write file
-		.pipe( gulp.dest(`${config.css.distDir}`) );
+		.pipe(
+			gulp.dest(`${config.css.distDir}`)
+		);
 });
 

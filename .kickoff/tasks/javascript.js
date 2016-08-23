@@ -11,10 +11,10 @@ const webpackConfig = require('../config/webpack.config.js');
 
 gulp.task('javascript', () => {
 	// additional webpack config options
-	const myConfig = webpackConfig;
+	const myConfig = Object.create(webpackConfig);
 
 	// generate source maps for css and js
-	// myConfig.devtool = 'source-map';
+	myConfig.devtool = 'source-map';
 
 	// myConfig.output.publicPath = './';
 
@@ -27,7 +27,7 @@ gulp.task('javascript', () => {
 	);
 
 	// run webpack
-	return webpack(myConfig, (err) => {
+	webpack(myConfig, (err) => {
 		if (err) throw new gutil.PluginError('compile', err);
 	});
 });

@@ -9,6 +9,8 @@ const cache = require('gulp-cached');
 
 
 gulp.task('images', () => {
+	// process.env.RELEASE = false;
+
 	return gulp.src([`${config.img.srcDir}/**/*`])
 		.pipe(
 			imagemin()
