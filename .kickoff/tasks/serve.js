@@ -12,23 +12,25 @@ const WebpackDevServer = require('webpack-dev-server');
 
 gulp.task('serve', () => {
 	var myConfig = Object.create(webpackConfig);
-  // eval each module (no source maps)
-  myConfig.devtool = 'eval';
+	// eval each module (no source maps)
+	myConfig.devtool = 'eval';
+	myConfig.debug = true;
 
-  myConfig.debug = true;
+	myConfig.plugins.push(
+		new webpack.HotModuleReplacementPlugin()
+	);
 
-  // TODO -- we need something like this for hot module reloading
-  myConfig.entry.kickoff.unshift("webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server");
+	myConfig.entry.kickoff.unshift("webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server");
 
-  // run webpack-dev-server
-  new WebpackDevServer(webpack(myConfig), {
-    publicPath: myConfig.output.publicPath,
-    hot: true,
-    stats: {
+	// run webpack-dev-server
+	new WebpackDevServer(webpack(myConfig), {
+		publicPath: myConfig.output.publicPath,
+		hot: true,
+		stats: {
 			colors: true
 		},
-  }).listen(3000, 'localhost', (err) => {
-    if (err) throw new gutil.PluginError('webpack-dev-server', err);
-    gutil.log("[webpack-dev-server]", "http://localhost:8080/webpack-dev-server/index.html");
-  });
+	}).listen(3000, 'localhost', (err) => {
+		if (err) throw new gutil.PluginError('webpack-dev-server', err);
+		gutil.log("[webpack-dev-server]", "http://localhost:8080/webpack-dev-server/index.html");
+	});
 });
