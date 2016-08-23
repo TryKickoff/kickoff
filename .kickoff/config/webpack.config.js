@@ -43,6 +43,10 @@ if (process.env.RELEASE) {
 			comments: false
 		})
 	);
+} else {
+	webpackConfig.plugins.push(
+		new webpack.HotModuleReplacementPlugin()
+	);
 }
 
 module.exports = webpackConfig;
