@@ -43,10 +43,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/trykickoff/kickoff.git"
+    "url": "git://github.com/TryKickoff/kickoff.git"
   },
   "bugs": {
-    "url": "https://github.com/trykickoff/kickoff/issues"
+    "url": "https://github.com/TryKickoff/kickoff/issues"
   },
   "license": "MIT",
   "engines": {
@@ -130,7 +130,10 @@
       "**/assets/dist/**/*.js",
       ".kickoff/**/*.js",
       "gulpfile.js"
-    ]
+    ],
+    "rules": {
+      "comma-dangle": ["error", "always-multiline"]
+    }
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
