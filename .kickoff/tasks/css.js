@@ -11,6 +11,8 @@ const stylelint = require('gulp-stylelint');
 const gulpIf = require('gulp-if');
 const banner = require('gulp-banner');
 var pkg = require('../../package.json');
+var filesizegzip = require('filesizegzip');
+var tap = require('gulp-tap');
 
 
 // PostCSS plugins
@@ -24,8 +26,6 @@ const flexbugsFixes = require('postcss-flexbugs-fixes');
 
 
 gulp.task('css', () => {
-	// process.env.RELEASE = false;
-
 	return gulp.src([`${config.css.scssDir}/*.scss`])
 		.pipe(
 			gulpIf(process.env.TEST,
@@ -78,7 +78,7 @@ gulp.task('css', () => {
 
 		// Compress CSS
 		.pipe(
-		  gulpIf(process.env.RELEASE === 'true',
+			gulpIf(process.env.RELEASE === 'true',
 				postcss([
 					cssnano()
 				])
@@ -89,6 +89,13 @@ gulp.task('css', () => {
 
 		// Write sourcemaps
 		.pipe( gulpIf(!process.env.RELEASE, sourcemaps.write()) )
+
+		// Output filesize
+		.pipe(
+			tap((file, t) => {
+				console.log('>>', file.relative, filesizegzip(file.contents, true));
+			})
+		)
 
 		// Write file
 		.pipe( gulp.dest(`${config.css.distDir}`) );

@@ -66,9 +66,11 @@
     "cssnano": "^3.7.3",
     "del": "2.2.1",
     "doiuse": "^2.4.1",
+    "filesizegzip": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-banner": "^0.1.3",
     "gulp-cached": "1.1.0",
+    "gulp-debug": "^2.1.2",
     "gulp-if": "2.0.1",
     "gulp-imagemin": "3.0.1",
     "gulp-postcss": "^6.1.1",
@@ -77,10 +79,10 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^3.0.0",
     "gulp-svgstore": "6.0.0",
+    "gulp-tap": "^0.1.3",
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.2",
     "imagemin-svgo": "^4.2.1",
-    "minifyify": "^7.3.3",
     "node-sass": "^3.8.0",
     "npm-sass": "^1.2.0",
     "postcss-bem-linter": "^2.5.1",
@@ -132,7 +134,10 @@
       "gulpfile.js"
     ],
     "rules": {
-      "comma-dangle": ["error", "always-multiline"]
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
     }
   },
   "stylelint": {
