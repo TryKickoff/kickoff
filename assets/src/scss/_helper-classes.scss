@@ -86,7 +86,7 @@
 
 
 * {
-	-webkit-tap-highlight-color: rgba($color-primary, 0) !important;
+	-webkit-tap-highlight-color: transparent !important;
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
@@ -114,11 +114,12 @@ textarea[contenteditable] {
 // Faster taps on mobile devices
 // See https://adactio.com/journal/10019 for more info
 a,
+area,
 button,
 input,
+label,
 select,
 textarea,
-label,
-summary {
+[tabindex] {
 	touch-action: manipulation;
 }
