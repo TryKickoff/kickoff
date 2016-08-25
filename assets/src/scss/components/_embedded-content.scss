@@ -17,7 +17,9 @@ img {
 	}
 }
 
-svg:not(:root) { overflow: hidden; }
+svg {
+    fill: currentColor;
+}
 
 // Images, Flash & video
 img, object, embed, video {
