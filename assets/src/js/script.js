@@ -11,6 +11,7 @@
 // their code e.g. npm modules
 import ready from 'lite-ready';
 import $$ from 'double-dollar'; // https://github.com/mrmartineau/double-dollar
+import svg4everybody from 'svg4everybody';
 
 // Bundle global libs that don't return a value
 import 'console';
@@ -24,4 +25,5 @@ window.$$ = $$; // add double-dollar to global scope
 // DOM ready code goes in here
 ready(() => {
 	// moduleTest(); // this is a test, uncomment this line to try it
+	svg4everybody();
 });
