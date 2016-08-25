@@ -19,8 +19,9 @@
 @import "color-palette";
 @import "variables";
 
-/* CSS Reset - Normalize etc */
+/* CSS Reset etc */
 @import "reset";
+@import "normalize.css/normalize"; // from npm
 
 /**
  * Global typography styles
