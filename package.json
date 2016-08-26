@@ -67,7 +67,7 @@
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-newer": "^1.2.0",
     "imagemin-pngquant": "^4.2.2",
-    "imagemin-svgo": "^4.2.1",
+    "imagemin-svgo": "^5.2.0",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
     "minifyify": "^7.3.3",
