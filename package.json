@@ -55,6 +55,7 @@
   "dependencies": {
     "console": "^0.5.2",
     "double-dollar": "^1.0.0",
+    "kickoff-fluidVideo.css": "^1.0.0",
     "lite-ready": "^1.0.4",
     "normalize.css": "^4.2.0",
     "svg4everybody": "^2.1.0"
