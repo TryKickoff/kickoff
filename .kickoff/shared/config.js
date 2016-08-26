@@ -72,7 +72,7 @@ const ConfigOptions = function() {
    ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
  * <%= pkg.title %> v<%= pkg.version %>
  * <%= pkg.homepage %>
- * https://github.com/TryKickoff/kickoff
+ * <%= pkg.repo %>
  */
 `,
 	};
