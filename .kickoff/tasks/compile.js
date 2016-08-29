@@ -13,5 +13,6 @@ gulp.task('compile', [
 	'css',
 	'javascript',
 	'images',
-	'icons'
+	'icons',
+	'copy'
 ]);
