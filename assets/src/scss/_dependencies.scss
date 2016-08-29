@@ -9,8 +9,7 @@
  * but we should not need them if autoprefixer is being used
  * See mixins/css3.scss for the full list
  */
-@import "functions/functions";
-@import "mixins/mixins";
+@import "kickoff-functions-and-mixins.scss";
 
 /**
  * Core variables
