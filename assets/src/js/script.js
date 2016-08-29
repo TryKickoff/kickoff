@@ -1,7 +1,7 @@
 /**
- * Project Name:
- * @description
- * @author
+ * Project Name: Kickoff
+ * @description The Kickoff boilerplate js file
+ * @author The Kickoff team
  *
  * Need help using JSDoc? Find out more at http://usejsdoc.org/
  */
