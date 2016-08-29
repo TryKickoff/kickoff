@@ -2,7 +2,7 @@
  * CSS config
  */
 
-const config = require('../shared/config');
+const config = require('../config');
 const gulp = require('gulp');
 
 

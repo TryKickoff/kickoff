@@ -2,7 +2,7 @@
  * gulp images
  */
 
-const config = require('../shared/config');
+const config = require('../config');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cached');

@@ -2,7 +2,7 @@
  * gulp css
  */
 
-const config = require('../shared/config');
+const config = require('../config');
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');

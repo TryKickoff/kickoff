@@ -2,7 +2,7 @@
  * gulp watcher
  */
 
-const config = require('../shared/config');
+const config = require('../config');
 const gulp = require('gulp');
 
 gulp.task('watcher', ['compile'], () => {

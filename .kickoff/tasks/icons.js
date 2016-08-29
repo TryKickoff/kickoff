@@ -3,7 +3,7 @@
  * SVG icon creation
  */
 
-const config = require('../shared/config');
+const config = require('../config');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');

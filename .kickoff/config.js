@@ -2,7 +2,7 @@
  * Global Gulp vars
  * Many of the Gulp tasks use these vars. Change as much as you like :)
  */
-var pkg = require('../../package.json');
+var pkg = require('../package.json');
 
 
 const ConfigOptions = function() {
