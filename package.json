@@ -23,7 +23,7 @@
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
-    "test": "xo && grunt postscss",
+    "test": "xo && gulp compile",
     "prestart": "npm prune && npm install",
     "start": "grunt start",
     "predeploy": "npm prune && npm install --no-optional",
