@@ -13,8 +13,9 @@ import ready from 'lite-ready';
 import $$ from 'double-dollar'; // https://github.com/mrmartineau/double-dollar
 import svg4everybody from 'svg4everybody';
 
-// Bundle global libs that don't return a value
+// Global libs that don't return a value
 import 'console';
+import 'kickoff-welcome.js'; // The Kickoff message in the js console. Remove it if you like :)
 
 // our code
 // this is a test, uncomment the line below to try it
