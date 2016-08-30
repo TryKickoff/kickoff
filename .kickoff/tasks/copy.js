@@ -2,10 +2,10 @@
  * gulp copy
  * copy files
  */
-const config = require('../config');
 const gulp = require('gulp');
+const config = require('../config');
 
-gulp.task('copy', ['copy:standaloneJS'], () => {
+gulp.task('copy', ['copy:standaloneJS' /*, 'copy:fonts'*/], () => {
 	console.log('Copying files');
 });
 
@@ -15,3 +15,8 @@ gulp.task('copy:standaloneJS', () => {
 		.pipe(gulp.dest(`${config.js.distDir}/standalone`));
 });
 
+// Copy webfonts
+// gulp.task('copy:fonts', () => {
+// 	return gulp.src(`${config.srcDir}/fonts/*`)
+// 		.pipe(gulp.dest(`${config.distDir}/fonts`));
+// });
