@@ -1,6 +1,5 @@
 /**
  * gulp copy
- * copy files
  */
 const gulp = require('gulp');
 const config = require('../config');

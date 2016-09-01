@@ -2,10 +2,7 @@
  * Global Gulp vars
  * Many of the Gulp tasks use these vars. Change as much as you like :)
  */
-var pkg = require('../package.json');
-
-
-const ConfigOptions = function() {
+const ConfigOptions = function () {
 	const config = this;
 
 
@@ -27,17 +24,16 @@ const ConfigOptions = function() {
 		// and ensuring we support IE9+ with prefixes
 	};
 
-
 	// Javascript-related vars
 	config.js = {
 		srcDir: `${config.srcDir}/js`, // config.js.srcDir
 		srcFile: 'script.js', // config.js.srcFile
 
 		entryPoints: {
-			kickoff: `${this.srcDir}/js/script.js`,
+			kickoff: [`${this.srcDir}/js/script.js`],
 
 			// Create more entry-points by adding to this array, e.g.
-			// foo: `${this.srcDir}/js/bar.js`,
+			// foo: [`${this.srcDir}/js/bar.js`],
 		},
 
 		distDir: `${config.distDir}/js`, // config.js.distDir
@@ -46,20 +42,17 @@ const ConfigOptions = function() {
 		// Make sure you update your template file
 	};
 
-
 	// Image-related vars
 	config.img = {
 		srcDir: `${config.srcDir}/img`, // config.img.srcDir
 		distDir: `${config.distDir}/img`, // config.img.distDir
 	};
 
-
 	// Icon-related vars
 	config.icons = {
 		srcDir: `${config.srcDir}/icons`, // config.icons.srcDir
 		distDir: `${config.distDir}/img`, // config.icons.distDir
 	};
-
 
 	// Banners and info
 	config.misc = {

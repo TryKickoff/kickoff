@@ -1,8 +1,6 @@
 /**
  * gulp css
  */
-
-const config = require('../config');
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
@@ -10,10 +8,8 @@ const sass = require('gulp-sass');
 const stylelint = require('gulp-stylelint');
 const gulpIf = require('gulp-if');
 const banner = require('gulp-banner');
-var pkg = require('../../package.json');
-var filesizegzip = require('filesizegzip');
-var tap = require('gulp-tap');
-
+const filesizegzip = require('filesizegzip');
+const tap = require('gulp-tap');
 
 // PostCSS plugins
 const reporter = require('postcss-reporter');
@@ -24,6 +20,8 @@ const bemLinter = require('postcss-bem-linter');
 const doiuse = require('doiuse');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
 
+const config = require('../config');
+const pkg = require('../../package.json');
 
 gulp.task('css', () => {
 	return gulp.src([`${config.css.scssDir}/*.scss`])
@@ -33,13 +31,12 @@ gulp.task('css', () => {
 					reporters: [
 						{
 							formatter: 'string',
-							console: true
-						}
-					]
+							console: true,
+						},
+					],
 				})
 			)
 		)
-
 
 		.pipe(
 			gulpIf(process.env.TEST,
@@ -52,19 +49,19 @@ gulp.task('css', () => {
 							'node_modules/**'
 						]
 					}),
-					reporter({ clearMessages: true })
+					reporter({clearMessages: true})
 				],
-				{ syntax: scss })
+				{syntax: scss})
 			)
 		)
 
 		// Init sourcemaps
-		.pipe( gulpIf(!process.env.RELEASE, sourcemaps.init()) )
+		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.init()))
 
 		// Sass Compilation
 		.pipe(
 			sass({
-				importer: require('npm-sass').importer
+				importer: require('npm-sass').importer,
 			}).on('error', sass.logError)
 		)
 
@@ -72,7 +69,7 @@ gulp.task('css', () => {
 		.pipe(
 			postcss([
 				flexbugsFixes(),
-				autoprefixer({ browsers: config.css.browsers })
+				autoprefixer({browsers: config.css.browsers}),
 			])
 		)
 
@@ -80,24 +77,25 @@ gulp.task('css', () => {
 		.pipe(
 			gulpIf(process.env.RELEASE === 'true',
 				postcss([
-					cssnano()
+					cssnano(),
 				])
 			)
 		)
 
-		.pipe(banner(config.misc.banner, { pkg: pkg }))
+		// Add a banner
+		.pipe(banner(config.misc.banner, {pkg: pkg}))
 
 		// Write sourcemaps
-		.pipe( gulpIf(!process.env.RELEASE, sourcemaps.write()) )
+		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.write()))
 
 		// Output filesize
 		.pipe(
-			tap((file, t) => {
+			tap((file) => {
 				console.log('>>', file.relative, filesizegzip(file.contents, true));
 			})
 		)
 
 		// Write file
-		.pipe( gulp.dest(`${config.css.distDir}`) );
+		.pipe(gulp.dest(`${config.css.distDir}`));
 });
 

@@ -1,15 +1,15 @@
 /**
  * Webpack config
  */
-const config = require('../shared/config');
 const path = require('path');
 const webpack = require('webpack');
+const config = require('../config');
 
-let webpackConfig = {
+const webpackConfig = {
 	entry: config.js.entryPoints,
 	output: {
-		path: `${config.js.distDir}`,
-		publicPath: `${config.js.distDir}/`,
+		path: path.resolve(`${config.js.distDir}`),
+		publicPath: path.resolve(`${config.js.distDir}/`) + '/',
 		filename: '[name].js',
 	},
 	devServer: {
@@ -26,8 +26,7 @@ let webpackConfig = {
 			},
 		],
 	},
-		plugins: [
-	],
+	plugins: [],
 };
 
 

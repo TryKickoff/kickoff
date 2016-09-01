@@ -1,18 +1,13 @@
 /**
- * CSS config
- */
-
-const config = require('../config');
-const gulp = require('gulp');
-
-
-/**
  * gulp compile
  */
+const gulp = require('gulp');
+const config = require('../config');
+
 gulp.task('compile', [
 	'css',
 	'javascript',
 	'images',
 	'icons',
-	'copy'
+	'copy',
 ]);

@@ -2,11 +2,9 @@
  * gulp images
  */
 
-const config = require('../config');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
-const cache = require('gulp-cached');
-
+const config = require('../config');
 
 gulp.task('images', () => {
 	return gulp.src([`${config.img.srcDir}/**/*`])
