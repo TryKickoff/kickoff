@@ -101,7 +101,10 @@
     "stylelint-config-standard": "^12.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "webpack": "^1.13.1",
+    "webpack-closure-compiler": "^2.0.2",
+    "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.2",
     "xo": "^0.16.0"
   },
   "optionalDependencies": {
@@ -113,6 +116,7 @@
     "opn": "^4.0.2"
   },
   "keywords": [
+    "kickoff",
     "⚽"
   ],
   "babel": {
