@@ -46,10 +46,10 @@ gulp.task('css', () => {
 						browsers: config.css.browsers,
 						ignoreFiles: [
 							'**/_reset.scss',
-							'node_modules/**'
-						]
+							'node_modules/**',
+						],
 					}),
-					reporter({clearMessages: true})
+					reporter({clearMessages: true}),
 				],
 				{syntax: scss})
 			)
@@ -83,7 +83,7 @@ gulp.task('css', () => {
 		)
 
 		// Add a banner
-		.pipe(banner(config.misc.banner, {pkg: pkg}))
+		.pipe(banner(config.misc.banner))
 
 		// Write sourcemaps
 		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.write()))
