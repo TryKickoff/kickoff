@@ -29,19 +29,4 @@ const webpackConfig = {
 	plugins: [],
 };
 
-
-if (process.env.RELEASE) {
-	webpackConfig.plugins.push(
-		new webpack.optimize.DedupePlugin()
-	);
-
-	webpackConfig.plugins.push(
-		new webpack.optimize.UglifyJsPlugin({
-			sourceMap: false,
-			mangle: true,
-			comments: false
-		})
-	);
-}
-
 module.exports = webpackConfig;

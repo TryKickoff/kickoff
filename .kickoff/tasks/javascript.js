@@ -26,6 +26,17 @@ gulp.task('javascript', () => {
 		})
 	);
 
+	if (process.env.RELEASE) {
+		webpackConfig.plugins.push(
+			new webpack.optimize.DedupePlugin(),
+			new webpack.optimize.UglifyJsPlugin({
+				sourceMap: false,
+				mangle: true,
+				comments: false,
+			})
+		);
+	}
+
 	// run webpack
 	return webpack(myConfig, (err) => {
 		if (err) throw new gutil.PluginError('compile', err);
