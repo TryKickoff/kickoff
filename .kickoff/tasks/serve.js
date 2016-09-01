@@ -2,14 +2,14 @@
  * gulp serve
  * Gulp task to run Browsersync server
  */
+const path = require('path');
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const path = require('path');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../config');
-const webpackConfig = require('../config/webpack.config.js');
+const webpackConfig = require('./webpack.config.js');
 
 // const reload = browserSync.reload;
 const compiler = webpack(webpackConfig);

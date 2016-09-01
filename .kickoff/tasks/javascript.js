@@ -6,39 +6,18 @@
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const webpack = require('webpack');
-const webpackConfig = require('../config/webpack.config.js');
-
+const webpackConfig = require('./webpack.config');
+const config = require('../config');
 
 gulp.task('javascript', () => {
-	// additional webpack config options
-	const myConfig = webpackConfig;
+	const wpConfig = Object.create(webpackConfig);
 
-	// generate source maps for css and js
-	// myConfig.devtool = 'source-map';
-
-	// myConfig.output.publicPath = './';
-
-	myConfig.plugins = myConfig.plugins.concat(
-		new webpack.DefinePlugin({
-			'process.env': {
-				NODE_ENV: JSON.stringify('production'),
-			}
-		})
-	);
-
-	if (process.env.RELEASE) {
-		webpackConfig.plugins.push(
-			new webpack.optimize.DedupePlugin(),
-			new webpack.optimize.UglifyJsPlugin({
-				sourceMap: false,
-				mangle: true,
-				comments: false,
-			})
-		);
-	}
+	// wpConfig.output.publicPath = './';
 
 	// run webpack
-	return webpack(myConfig, (err) => {
-		if (err) throw new gutil.PluginError('compile', err);
+	return webpack(wpConfig, err => {
+		if (err) {
+			throw new gutil.PluginError('compile', err);
+		}
 	});
 });
