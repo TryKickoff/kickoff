@@ -56,6 +56,12 @@ const ConfigOptions = function () {
 		distDir: `${config.distDir}/img`, // config.icons.distDir
 	};
 
+	// Webfont-related vars - unused by default
+	config.fonts = {
+		srcDir: `${config.srcDir}/fonts`, // config.fonts.srcDir
+		distDir: `${config.distDir}/fonts`, // config.fonts.distDir
+	};
+
 	// Banners and info
 	config.misc = {
 		banner: `/**
