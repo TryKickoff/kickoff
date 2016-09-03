@@ -13,6 +13,8 @@
 		</div>
 	</div>
  */
+$custom-input-borderColor: #ccc !default;
+
 /**
  * Custom file input
  */
@@ -40,9 +42,9 @@
 	right: -1px;
 	bottom: 0;
 	padding: .44em 1em 0;
-	background-color: lighten($input-borderColor, 5%);
+	background-color: lighten($custom-input-borderColor, 5%);
 
 	&:hover {
-		background-color: $input-borderColor;
+		background-color: $custom-input-borderColor;
 	}
 }

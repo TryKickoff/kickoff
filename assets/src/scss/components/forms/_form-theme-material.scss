@@ -1,0 +1,261 @@
+// Form variables
+$input-bgColor            : #fff;                // Colour of input background
+$input-borderColor        : #ccc;                // Colour of input borders
+$input-borderColor--focus : $color-primary;      // Colour of input borders when focused
+$form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
+$label-textColor          : lighten($color-text, 20%);         // Text colour of form labels and legends
+$input-textColor          : $color-text;         // Text colour of form inputs
+$placeholder-textColor    : lighten($color-text, 20%);  // Text colour of input placeholder
+// Messages & form states and alerts
+$color-warning            : #f4aa47;             // base colour for warning input state
+$color-error              : #B94A4D;             // base colour for error input state
+$color-success            : $green;              // base colour for success input state
+$color-info               : $blue;               // base colour for info input state
+
+.form {
+	margin: 0 0 $baseline;
+}
+
+.form-fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.form-legend {
+	padding: 0;
+	margin-bottom: $baseline;
+	@include font-size(mid);
+	line-height: $leading-base;
+	color: $label-textColor;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	small {
+		@include font-size(small);
+		color: lighten(#000, 70%);
+	}
+}
+
+/**
+ * Form inputs and groups
+ */
+.form-controlGroup {
+	margin-top: $baseline / 2;
+	margin-bottom: $baseline / 2;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+.form-legend + .form-controlGroup {
+	margin-top: $baseline;
+}
+
+// Identify controls by their labels
+.form-label {
+	// margin-bottom: $baseline / 2;
+	color: $label-textColor;
+	@include font-size(micro);
+	font-weight: normal;
+
+	small {
+		font-weight: normal;
+		color: lighten($label-textColor, 30%);
+	}
+}
+
+
+// Any form inputs
+.form-input {
+	height: 2.5em;
+	padding: .5em 0;
+	@include font-size(base);
+	font-family: $font-family-base;
+	line-height: $leading-base;
+	color: $input-textColor;
+	font-weight: normal;
+	background-color: $input-bgColor;
+	border-width: 0 0 1px 0;
+	border-color: $input-borderColor;
+	border-style: solid;
+	border-radius: 0 !important;
+	background-clip: padding-box;
+	// transition: border 200ms ease-in-out;
+
+	&:focus {
+		border-color: $input-borderColor--focus;
+		border-bottom-width: 2px;
+	}
+
+	&[type="image"],
+	&[type="checkbox"],
+	&[type="radio"],
+	&[type="range"] {
+		margin: 3px 0;
+	}
+
+	// Reset the file input to browser defaults
+	&[type="file"] {
+		background-color: $input-bgColor;
+	}
+
+	&[type="color"] {
+		width: 40px;
+		height: 40px;
+		overflow: hidden;
+		padding: 2px;
+	}
+
+	// Disabled State
+	&[disabled],
+	&[readonly] {
+		cursor: not-allowed;
+	}
+
+	// HTML5 invalid states
+	// Uncomment this if you need it
+	// &:focus:required:invalid {
+	// 	color: #b94a48;
+	// 	border-color: #ee5f5b;
+
+	// 	&:focus {
+	// 		border-color: darken(#ee5f5b, 10%);
+	// 	}
+	// }
+}
+
+.form-input--textarea {}
+
+// Set the height of select and file controls to match text inputs
+.form-input--select {
+	// Chrome on Linux and Mobile Safari need background-color
+	background-color: $input-bgColor;
+}
+
+.form-input-file {
+	@include font-size(base);
+}
+
+/**
+ * Checkboxes:
+ * =================================
+	<label class="control">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+	<label class="control control--inline">
+		<input type="checkbox" value="check1">
+		This is a checkbox
+	</label>
+
+ * Radios:
+ * =================================
+	<label class="control">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		This is a radio
+	</label>
+	<label class="control control--inline">
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
+		This is a radio
+	</label>
+ */
+.control {
+	input[type="radio"],
+	input[type="checkbox"] {
+		vertical-align: middle;
+		margin-right: .5em;
+		margin-top: -.1em;
+		display: inline;
+		line-height: normal;
+	}
+}
+
+// Radios and checkboxes on same line
+.control--inline {
+	margin-right: 1.5em;
+}
+
+
+/**
+ * Form actions
+ */
+.form-actions {
+	padding: $baseline 20px;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
+	background-color: $form-actions-bgColor;
+	border-top: 1px solid #ddd;
+
+	.btn {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+/**
+ * Form validation messages
+ */
+.form-message {
+
+	.form-controlGroup & {
+		padding-top: 0.5em;
+		padding-left: 0.5em;
+	}
+
+	.form-actions & {
+		padding: 0.5em;
+	}
+}
+
+
+/**
+ * Form field feedback states
+ */
+// Warning
+.has-warning {
+	color: $color-warning;
+}
+
+.form-controlGroup.has-warning {
+	@include formFieldState($color-warning);
+}
+
+// Error
+.has-error {
+	color: $color-error;
+}
+
+.form-controlGroup.has-error {
+	@include formFieldState($color-error);
+}
+
+// Success
+.has-success {
+	color: $color-success;
+}
+
+.form-controlGroup.has-success {
+	@include formFieldState($color-success);
+}
+
+// Info
+.has-info {
+	color: $color-info;
+}
+
+.form-controlGroup.has-info {
+	@include formFieldState($color-info);
+}
+
+
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
+@include placeholder($placeholder-textColor);
