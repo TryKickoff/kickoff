@@ -92,7 +92,7 @@ $btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
 	&[disabled] {
 		cursor: default;
 		background-image: none;
-		opacity: .65;
+		opacity: .5;
 	}
 }
 
