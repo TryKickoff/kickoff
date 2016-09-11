@@ -6,6 +6,7 @@ $form-actions-bgColor     : #f5f5f5;             // Background colour of form ac
 $label-textColor          : $color-text;         // Text colour of form labels and legends
 $input-textColor          : $color-text;         // Text colour of form inputs
 $placeholder-textColor    : lighten(#000, 70%);  // Text colour of input placeholder
+$form-borderRadius        : 5px;
 // Messages & form states and alerts
 $color-warning            : #f4aa47;             // base colour for warning input state
 $color-error              : #B94A4D;             // base colour for error input state
@@ -76,7 +77,7 @@ $color-info               : $blue;               // base colour for info input s
 	font-weight: normal;
 	background-color: $input-bgColor;
 	border: 2px solid $input-borderColor;
-	border-radius: 5px;
+	border-radius: $form-borderRadius;
 	background-clip: padding-box;
 	transition: border 200ms ease-in-out;
 
