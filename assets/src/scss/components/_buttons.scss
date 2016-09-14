@@ -12,7 +12,7 @@
 /**
  * Define associated Button variables
  */
-
+$btn-borderRadius                : 5px;
 $btn-default-bgColor             : $gray;
 $btn-default-bgColor--highlight  : darken($btn-default-bgColor, 10%);
 
@@ -54,6 +54,8 @@ $btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
 	padding-left: 1.5em;        /* [7] */
 	overflow: visible;          /* [8] */
 	text-align: center;
+	border-radius: $btn-borderRadius;
+	user-select: none;
 
 	// You may want to change this
 	background-color: $btn-default-bgColor;
@@ -63,9 +65,6 @@ $btn-primary-bgColor--highlight  : darken($btn-primary-bgColor, 10%);
 	&:visited {
 		color: #fff;
 	}
-
-	border-radius: 5px;
-	user-select: none;
 
 	&:hover,
 	&:active,
