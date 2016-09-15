@@ -23,13 +23,16 @@
     "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
-    "test": "xo && gulp compile",
     "prestart": "npm prune && npm install",
     "start": "grunt start",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "RELEASE=true gulp compile",
     "info": "npm-scripts-info",
     "commit": "git-cz",
+    "test": "xo && gulp compile",
+    "lint:js": "xo",
+    "lint:css": "gulp test:css",
+    "fix:js": "xo --fix",
     "release-patch": "release-it --non-interactive patch",
     "release-minor": "release-it --non-interactive minor",
     "release-major": "release-it --non-interactive major"
