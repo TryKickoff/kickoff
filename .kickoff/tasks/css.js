@@ -51,7 +51,11 @@ gulp.task('css', () => {
 		)
 
 		// Add a banner
-		.pipe(banner(config.misc.banner))
+		.pipe(
+			gulpIf(process.env.RELEASE === 'true',
+				banner(config.misc.banner)
+			)
+		)
 
 		// Write sourcemaps
 		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.write()))
