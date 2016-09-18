@@ -82,7 +82,7 @@ $color-info               : $blue;               // base colour for info input s
 	border-style: solid;
 	border-radius: $form-borderRadius !important;
 	background-clip: padding-box;
-	// transition: border 200ms ease-in-out;
+	transition: border $default-transition-duration $default-transition-timing;
 
 	&:focus {
 		border-color: $input-borderColor--focus;
