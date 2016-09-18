@@ -29,6 +29,8 @@ $custom-input-color: $color-primary;
 $custom-input-selected-color: $color-bg;
 $custom-input-length: 1.3em;
 $custom-input-border-width: 1px;
+$custom-input-borderColor: #ccc !default;
+$custom-input-borderColor--focus: $color-primary !default;
 $checkbox-indicator-width: 0.1em;
 
 .control--custom {
@@ -60,8 +62,8 @@ $checkbox-indicator-width: 0.1em;
 	width: $custom-input-length;
 	height: $custom-input-length;
 	transition: $default-transition;
-	border: $custom-input-border-width solid $input-borderColor;
-	background-color: $input-borderColor;
+	border: $custom-input-border-width solid $custom-input-borderColor;
+	background-color: $custom-input-borderColor;
 	vertical-align: middle;
 	margin-top: 0;
 	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
@@ -69,7 +71,7 @@ $checkbox-indicator-width: 0.1em;
 
 // :focus styles
 .control--custom-input:focus ~ .control-indicator {
-	box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $input-borderColor--focus;
+	box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $custom-input-borderColor--focus;
 }
 
 // Checkbox modifiers

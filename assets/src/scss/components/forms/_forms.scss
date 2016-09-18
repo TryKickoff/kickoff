@@ -9,30 +9,6 @@
  * - Horizontal-specific styles
  */
 
-
-// Form variables
-$input-bgColor            : #fff;                // Colour of input background
-$input-borderColor        : #ccc;                // Colour of input borders
-$input-borderColor--focus : $color-primary;      // Colour of input borders when focused
-$form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
-$label-textColor          : $color-text;         // Text colour of form labels and legends
-$input-textColor          : $color-text;         // Text colour of form inputs
-$placeholder-textColor    : lighten(#000, 70%);  // Text colour of input placeholder
-// Messages & form states and alerts
-$color-warning            : #f4aa47;             // base colour for warning input state
-$color-error              : #B94A4D;             // base colour for error input state
-$color-success            : $green;              // base colour for success input state
-$color-info               : $blue;               // base colour for info input state
-
-// Mixins
-@import "form-helpers";
-
-// Custom form elements
-@import "forms-custom-radioscheckboxes"; // Radio & checkbox inputs
-@import "forms-custom-select";           // Select element
-@import "forms-custom-file";             // File input
-
-
 /**
  * Generic form styles
  * =================================
@@ -46,86 +22,36 @@ $color-info               : $blue;               // base colour for info input s
   		</div>
   	</div>
  */
-.form {
-	margin: 0 0 $baseline;
-}
 
-.form-fieldset {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
 
 .form-legend {
 	display: block;
 	width: 100%;
-	padding: 0;
-	margin-bottom: $baseline;
-	@include font-size(mid);
-	line-height: $leading-base;
-	color: $label-textColor;
-	border: 0;
-	border-bottom: 1px solid #eee;
-	white-space: normal;
-
-	// Small
-	small {
-		@include font-size(small);
-		color: lighten(#000, 70%);
-	}
 }
 
 /**
  * Form inputs and groups
  */
-.form-controlGroup {
-	margin-top: $baseline / 2;
-	margin-bottom: $baseline / 2;
-	list-style-type: none;
-}
+.form-controlGroup {}
 
 // Legend collapses margin, so next element is responsible for spacing
 .form-legend + .form-controlGroup {
-	margin-top: $baseline;
+	// margin-top: $baseline; // Add this to theme
 	-webkit-margin-top-collapse: separate;
 }
 
 // Identify controls by their labels
 .form-label {
 	display: block;
-	// margin-bottom: $baseline / 2;
-	color: $label-textColor;
-	font-weight: bold;
-
-	small {
-		font-weight: normal;
-		color: lighten($label-textColor, 30%);
-	}
 }
 
 // Any form inputs
 .form-input {
 	display: block;
 	width: 100%;
-	height: 2.5em;
-	padding: .5em;
-
-	@include font-size(base);
-	font-family: $font-family-base;
-	line-height: $leading-base;
-	color: $input-textColor;
-	font-weight: normal;
 	vertical-align: baseline;
 
-	background-color: $input-bgColor;
-	border: 2px solid $input-borderColor;
-	border-radius: 5px;
-	background-clip: padding-box;
-
-	transition: border 200ms ease-in-out;
-
 	&:focus {
-		border-color: $input-borderColor--focus;
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
 	}
@@ -137,7 +63,6 @@ $color-info               : $blue;               // base colour for info input s
 		width: auto;
 		height: auto;
 		padding: 0;
-		margin: 3px 0;
 		line-height: normal;
 		cursor: pointer;
 		border-radius: 0;
@@ -156,20 +81,12 @@ $color-info               : $blue;               // base colour for info input s
 		padding: initial;
 		line-height: initial;
 		border: initial;
-		background-color: $input-bgColor;
 		background-color: initial;
 	}
 
 	// Hidden inputs
 	&[type="hidden"] {
 		display: none;
-	}
-
-	&[type="color"] {
-		width: 40px;
-		height: 40px;
-		overflow: hidden;
-		padding: 2px;
 	}
 
 	// See http://martineau.tv/2013/05/hidden-characters-in-password-inputs/
@@ -189,25 +106,13 @@ $color-info               : $blue;               // base colour for info input s
 	// Disabled State
 	&[disabled],
 	&[readonly] {
-		background-color: darken($input-bgColor, 10%);
-		border-color: $input-borderColor;
 		cursor: not-allowed;
 	}
-
-	// HTML5 invalid states
-	// Uncomment this if you need it
-	// &:focus:required:invalid {
-	// 	color: #b94a48;
-	// 	border-color: #ee5f5b;
-
-	// 	&:focus {
-	// 		border-color: darken(#ee5f5b, 10%);
-	// 	}
-	// }
 }
 
 .form-input--textarea {
 	height: auto;
+	min-height: 5em;
 	resize: vertical;
 }
 
@@ -216,22 +121,9 @@ $color-info               : $blue;               // base colour for info input s
 	height: auto;
 }
 
-// Set the height of select and file controls to match text inputs
-.form-input--select {
-	// Chrome on Linux and Mobile Safari need background-color
-	background-color: $input-bgColor;
-
-	// Make multiple select elements height not fixed
-	&[multiple],
-	&[size] {
-		height: auto;
-	}
-}
-
 .form-input-file {
 	display: inline-block;
 	width: 100%;
-	@include font-size(base);
 	margin: 0;
 	vertical-align: middle;
 	line-height: 1em;
@@ -277,53 +169,12 @@ input[type="submit"] {
  */
 .control {
 	display: block;
-
-	input[type="radio"],
-	input[type="checkbox"] {
-		vertical-align: middle;
-		margin-right: .5em;
-		margin-top: -.1em;
-		display: inline;
-		line-height: normal;
-	}
 }
 
 // Radios and checkboxes on same line
 .control--inline {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 1.5em;
-}
-
-
-/**
- * Search input
- */
-.form-input--search {
-	padding-left: 14px;
-	padding-right: 14px;
-	margin-bottom: 0;
-	border-radius: 100px;
-}
-
-
-/**
- * Form actions
- */
-.form-actions {
-	padding: $baseline 20px;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
-	background-color: $form-actions-bgColor;
-	border-top: 1px solid #ddd;
-
-	.btn {
-		margin-right: 10px;
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
 }
 
 
@@ -334,111 +185,5 @@ input[type="submit"] {
 
 	.form-controlGroup & {
 		display: none;
-		padding-top: 0.5em;
-		padding-left: 0.5em;
-	}
-
-	.form-actions & {
-		padding: 0.5em;
 	}
 }
-
-
-/**
- * Form field feedback states
- */
-// Warning
-.has-warning {
-	color: $color-warning;
-}
-
-.form-controlGroup.has-warning {
-	@include formFieldState($color-warning);
-}
-
-// Error
-.has-error {
-	color: $color-error;
-}
-
-.form-controlGroup.has-error {
-	@include formFieldState($color-error);
-}
-
-// Success
-.has-success {
-	color: $color-success;
-}
-
-.form-controlGroup.has-success {
-	@include formFieldState($color-success);
-}
-
-// Info
-.has-info {
-	color: $color-info;
-}
-
-.form-controlGroup.has-info {
-	@include formFieldState($color-info);
-}
-
-
-/**
- * Placeholder text
- * =================================
- * Gets special styles; can't be bundled together though for some reason
- */
-@include placeholder($placeholder-textColor);
-
-// === <mid ===
-@include respond-min(mid) {
-	/**
-	 * Horizontal-specific styles
-	 * =================================
-	 * add .form--horizontal to the <form> element
-	 * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-inline
-	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
-	 */
-	.form--horizontal {
-		// Increase spacing between groups
-		.form-controlGroup {
-			margin-bottom: $baseline;
-			@include clearfix;
-
-			.form-input--fileWrapper {
-				margin-left: 0;
-			}
-		}
-
-		// Float the labels left
-		.form-label {
-			float: left;
-			width: 140px;
-			padding-top: 5px;
-			text-align: right;
-		}
-
-		// Move over all input controls and content
-		.form-controlGroup-inputWrapper {
-			margin-left: 160px;
-
-			&:first-child {
-				padding-left: 160px;
-			}
-		}
-
-		// Remove bottom margin on block level help text since that's accounted for on .form--control-group
-		.form-helpBlock {
-			margin-top: $baseline / 2;
-			margin-bottom: 0;
-		}
-
-		// Move over buttons in .form-actions to align with .form-controlGroup-inputWrapper
-		.form-actions {
-			padding-left: 160px;
-		}
-	}
-}
-
-// === end <mid ===
