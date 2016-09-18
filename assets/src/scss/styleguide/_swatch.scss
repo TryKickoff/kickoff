@@ -1,0 +1,94 @@
+/**
+ * Colour swatches
+ */
+.sg-swatch {
+	border: 1px solid rgba(#000, .2);
+	border-radius: 4px;
+	padding: 15px;
+	margin: 15px;
+	text-align: center;
+	transition: $default-transition;
+	cursor: pointer;
+
+	&:hover {
+		border-color: rgba(#000, .6);
+	}
+
+	&.is-active {
+		animation: sgSwatch 500ms ease-in-out;
+	}
+}
+
+@keyframes sgSwatch {
+	50% { opacity: .3; }
+}
+
+.sg-swatch-color {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.sg-swatch-text {
+	font-weight: bold;
+	@include font-size(60);
+	line-height: 1;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.sg-swatch-var {
+	width: 100%;
+	font-family: $font-family-mono;
+	margin-top: 15px;
+	font-size: 12px;
+	display: block;
+}
+
+@mixin swatch($color, $bg: #fff) {
+	background-color: $bg;
+
+	.sg-swatch-color {
+		background-color: $color;
+	}
+
+	.sg-swatch-text {
+		color: $color;
+	}
+
+	.sg-swatch-var {
+		&:after {
+			content: '#{$color}';
+			display: block;
+		}
+	}
+}
+
+.sg-color-link-hover {
+	@include swatch($color-link-hover);
+}
+.sg-color-primary {
+	@include swatch($color-primary);
+}
+.sg-color-secondary {
+	@include swatch($color-secondary);
+}
+.sg-color-highlight {
+	@include swatch($color-highlight);
+}
+.sg-color-text {
+	@include swatch($color-text, $color-bg);
+}
+.sg-color-background {
+	@include swatch($color-bg);
+}
+.sg-color-border {
+	@include swatch($color-border);
+}
+.sg-color-link {
+	@include swatch($color-link-default);
+}
