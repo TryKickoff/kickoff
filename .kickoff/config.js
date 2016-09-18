@@ -31,6 +31,7 @@ const ConfigOptions = function () {
 
 		entryPoints: {
 			kickoff: [`${this.srcDir}/js/script.js`],
+			styleguide: [`${this.srcDir}/js/styleguide.js`],
 
 			// Create more entry-points by adding to this array, e.g.
 			// foo: [`${this.srcDir}/js/bar.js`],
@@ -62,7 +63,7 @@ const ConfigOptions = function () {
 
 	// Banners and info
 	config.misc = {
-		banner: `/**
+		banner: `/!**
  * ██╗  ██╗██╗ ██████╗██╗  ██╗ ██████╗ ███████╗███████╗
  * ██║ ██╔╝██║██╔════╝██║ ██╔╝██╔═══██╗██╔════╝██╔════╝
  * █████╔╝ ██║██║     █████╔╝ ██║   ██║█████╗  █████╗
