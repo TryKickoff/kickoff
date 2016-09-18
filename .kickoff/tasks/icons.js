@@ -27,6 +27,7 @@ gulp.task('icons', () => {
 						{removeViewBox: false},
 						{removeUselessStrokeAndFill: false},
 						{removeEmptyAttrs: false},
+						{mergePaths: true},
 					],
 				}),
 			],
