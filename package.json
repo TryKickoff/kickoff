@@ -25,7 +25,7 @@
   "scripts": {
     "test": "xo && gulp compile",
     "prestart": "npm prune && npm install",
-    "start": "grunt start",
+    "start": "gulp",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "RELEASE=true gulp compile",
     "info": "npm-scripts-info",
