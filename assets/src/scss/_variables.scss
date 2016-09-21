@@ -1,5 +1,6 @@
 /**
  * Variables
+ * =================================
  * - Typography
  * - Breakpoints
  * - Paths
@@ -9,6 +10,7 @@
 
 /**
  * Typography
+ * =================================
  *
  * Base sizes:
  * Set this in pixels (but do not add px),
@@ -52,6 +54,7 @@ $line-height-headings     : 1.1;
 
 /**
  * Breakpoints
+ * =================================
  * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
  * Add your breakpoints to this Sass map
@@ -75,6 +78,7 @@ $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$im
 
 /**
  * App-specific variables
+ * =================================
  */
 $default-transition-timing   : cubic-bezier(.77, 0, .175, 1);
 $default-transition-duration : 300ms;

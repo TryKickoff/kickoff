@@ -1,16 +1,14 @@
 /**
- * Global Gulp vars
- * Many of the Gulp tasks use these vars. Change as much as you like :)
+ * Global build task vars
+ * Both Webpack and Gulp use these vars. Change as much as you like :)
  */
 const pkg = require('../package');
 
 const ConfigOptions = function () {
 	const config = this;
 
-
 	config.srcDir = './assets/src'; // config.srcDir
 	config.distDir = './assets/dist'; // config.distDir
-
 
 	// CSS-related vars
 	config.css = {
@@ -33,6 +31,7 @@ const ConfigOptions = function () {
 
 		entryPoints: {
 			kickoff: [`${this.srcDir}/js/script.js`],
+			styleguide: [`${this.srcDir}/js/styleguide.js`],
 
 			// Create more entry-points by adding to this array, e.g.
 			// foo: [`${this.srcDir}/js/bar.js`],

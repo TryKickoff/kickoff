@@ -1,16 +1,16 @@
 /**
  * Gulp tasks:
- * - gulp                    : The default task. Alias for `webpack-dev-server`
-								 and 'open-browser' tasks below
- * - gulp compile            : chain which compiles js, processes scss, minifies images
- * - gulp compile-release    : chain which compiles js, processes scss, minifies images
-							 : with some extra js options
- * - gulp clean              : deletes the assets/dist folder
- * - gulp copy               : moves standalone files to dist folder
+ * - gulp                    : default task. Alias for `gulp compile`
+ * - gulp compile            : compiles js, scss, minifies images etc
  * - gulp css                : processes scss both for kickoff and styleguide
- * - gulp image              : minifies images
- * - gulp serve              : run webpack dev server (with hot module reloading)
- * - gulp open-browser       : opens a browser to trykickoff.com
+ * - gulp javascript         : compile js (using Webpack)
+ * - gulp serve              : run Browsersync server (with hot module reloading)
+ * - gulp icons              : converts SVGs into an SVG sprite-sheet
+ * - gulp images             : minifies images
+ * - gulp copy               : copies files, including standalone js files, to dist folder
+ * - gulp clean              : deletes certain dist directories
+ * - gulp watch              : watches for changes and compile
+ * - gulp test               : various tests. e.g. scss linting
  */
 
 const fs = require('fs');

@@ -1,17 +1,17 @@
 /**
  * Icons
+ * =================================
+ * For an example of how to use these, see
+ * https://gist.github.com/mrmartineau/314b01b300fa20a5a820a4d6889ffd42
+ * http://codepen.io/mrmartineau/pen/amkZBb?editors=1100
+ *
+ * SVG icon usage:
+   <svg title="Whatsapp" class="icon icon--whatsapp">
+     <use xlink:href="/assets/dist/img/icons.svg#logo-whatsapp"/>
+   </svg>
  */
-
-[class^="icon-"], [class*=" icon-"] {
+[class*="icon"] {
 	speak: none;
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
-
-	svg {
-		max-width: 100%;
-		max-height: 100%;
-	}
 }
 
 .icon--large {
@@ -24,5 +24,16 @@
 	display: inline-block;
 	width: 25px;
 	height: 25px;
-	vertical-align: top;
 }
+
+/**
+ * Included Social Media and other icons
+ */
+.icon--twitter { color: $color-twitter; }
+.icon--facebook { color: $color-facebook; }
+.icon--instagram { color: $color-instagram; }
+.icon--pinterest { color: $color-pinterest; }
+.icon--youtube { color: $color-youtube; }
+.icon--whatsapp { color: $color-whatsapp; }
+.icon--email { color: $blue; }
+.icon--kickoff { color: #fff; }

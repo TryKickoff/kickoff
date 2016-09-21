@@ -1,5 +1,6 @@
 /**
  * Embedded content
+ * =================================
  */
 
 img {
@@ -7,18 +8,6 @@ img {
 	color: #c00;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
-
-	&.img--left {
-		margin: 0 20px 0 0;
-	}
-
-	&.img--right {
-		margin: 0 0 0 20px;
-	}
-}
-
-svg {
-    fill: currentColor;
 }
 
 // Images, Flash & video

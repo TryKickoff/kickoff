@@ -1,5 +1,6 @@
 /**
- * Setup styleguide imports
+ * Kickoff Styleguide
+ * =================================
  */
 @import "kickoff-utils.scss";
 
@@ -9,6 +10,8 @@
 
 $styleguide-color-primary: $color-primary;
 $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import "styleguide/swatch";
 
 /**
  * Styleguide styles
@@ -63,6 +66,8 @@ body {
 	color: #fff;
 	padding: 30px;
 	margin-top: 30px;
+	font-family: $font-family-mono;
+	@include font-size(12);
 
 	h1 {
 		margin-bottom: .2em;
@@ -82,83 +87,25 @@ body {
 	}
 }
 
+.sg-kickoffLogo {
+	width: 200px;
+	height: 60px;
+	color: #fff;
+}
 
-
-/**
- * Colour swatches
- */
-.sg-swatch {
+.sg-logo {
+	padding: 1em;
 	text-align: center;
-	line-height: 30px;
-	margin: 5px;
-	border: 1px solid #f1f1f1;
+	color: $color-primary;
 
-	code {
-		margin: 0 10px;
-		display: inline-block;
-		padding: 0;
+	&--dark {
+		background-color: #000;
+		color: #fff;
 	}
-}
 
-.sg-swatch-color {
-	height: 80px;
-	line-height: 80px;
-	@include font-size(13);
-	font-family: $font-family-mono;
-	font-weight: bold;
-
-	@include respond-min(narrow) {
-		height: 120px;
-		line-height: 120px;
+	svg {
+		max-width: 100%;
 	}
-}
-
-@mixin swatch($color) {
-	color: $color;
-
-	.sg-swatch-color {
-		background-color: $color;
-
-		@if lightness($color) < 60 {
-			color: #fff;
-		} @else {
-			color: #444;
-		}
-
-		@if lightness($color) > 90 {
-			border: #f1f1f1 solid 1px;
-		}
-
-		&:before {
-			content: '#{$color}';
-			display: block;
-		}
-	}
-}
-
-.sg-color-link-hover {
-	@include swatch($color-link-hover);
-}
-.sg-color-primary {
-	@include swatch($color-primary);
-}
-.sg-color-secondary {
-	@include swatch($color-secondary);
-}
-.sg-color-highlight {
-	@include swatch($color-highlight);
-}
-.sg-color-text {
-	@include swatch($color-text);
-}
-.sg-color-background {
-	@include swatch($color-bg);
-}
-.sg-color-border {
-	@include swatch($color-border);
-}
-.sg-color-link {
-	@include swatch($color-link-default);
 }
 
 
@@ -172,7 +119,7 @@ body {
 code {
 	border: 0;
 	background-color: transparent;
-	@include font-size(11);
+	@include font-size(12);
 }
 
 @mixin sgTypeTest($size) {
@@ -293,7 +240,7 @@ code {
 	line-height: 2;
 	font-family: $font-family-mono;
 	border-bottom: 1px solid rgba(#000, .1);
-	@include font-size(micro);
+	@include font-size(12);
 
 	strong {
 		opacity: .6;
