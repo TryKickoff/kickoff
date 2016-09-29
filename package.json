@@ -76,7 +76,7 @@
     "xo": "^0.16.0"
   },
   "optionalDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.16.1",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
     "grunt-browser-sync": "^2.1.3",
