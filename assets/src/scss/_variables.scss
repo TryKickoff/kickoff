@@ -71,6 +71,9 @@ $breakpoints: (
 // Special breakpoints - add any more here
 $bp-rwd-text              : mid; // Reduce text size below this width
 
+// Setup layout max-width
+$layout-max-width         : 1000px !default;
+
 /**
  * Path vars
  */
