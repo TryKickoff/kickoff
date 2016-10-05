@@ -48,7 +48,7 @@ gulp.task('serve', ['watcher'], () => {
 			`${config.css.distDir}/**/*.css`,
 			// `${config.js.distDir}/**/*.js`,
 			`${config.img.distDir}/**/*`,
-			`${config.icons.distDir}/**/*`,
+			`${config.svg.distDir}/**/*`,
 			'**/*.html',
 		],
 

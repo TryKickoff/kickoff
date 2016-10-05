@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const del = require('del');
 const config = require('../config');
 
-gulp.task('clean', [/*'clean:images', 'clean:js', 'clean:css', 'clean:icons'*/], () => {
+gulp.task('clean', [/*'clean:images', 'clean:js', 'clean:css', 'clean:svg'*/], () => {
 	console.log('Cleaning files');
 });
 
@@ -24,12 +24,12 @@ gulp.task('clean:js', () => {
 	return del([config.js.distDir]);
 });
 
-// Clean the icons directory
-gulp.task('clean:icons', () => {
-	return del([config.icons.distDir]);
+// Clean the svg directory
+gulp.task('clean:svg', () => {
+	return del([config.svg.distDir]);
 });
 
 // Clean the fonts directory
 // gulp.task('clean:fonts', () => {
-// 	return del([config.icons.distDir]);
+// 	return del([config.fonts.distDir]);
 // });
