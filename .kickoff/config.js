@@ -49,10 +49,10 @@ const ConfigOptions = function () {
 		distDir: `${config.distDir}/img`, // config.img.distDir
 	};
 
-	// Icon-related vars
-	config.icons = {
-		srcDir: `${config.srcDir}/icons`, // config.icons.srcDir
-		distDir: `${config.distDir}/img`, // config.icons.distDir
+	// SVG-related vars
+	config.svg = {
+		srcDir: `${config.srcDir}/svg`, // config.svg.srcDir
+		distDir: `${config.distDir}/svg`, // config.svg.distDir
 	};
 
 	// Webfont-related vars - unused by default

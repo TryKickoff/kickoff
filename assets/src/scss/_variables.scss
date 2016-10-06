@@ -40,6 +40,7 @@ $type: (
 $font-weight-bold         : bold;
 
 // Font stacks
+$font-family-system       : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
 $font-family-sans         : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif        : Georgia, "Times New Roman", Times, serif;
 $font-family-mono         : Menlo, Monaco, "Courier New", monospace;
@@ -69,6 +70,9 @@ $breakpoints: (
 
 // Special breakpoints - add any more here
 $bp-rwd-text              : mid; // Reduce text size below this width
+
+// Setup layout max-width
+$layout-max-width         : 1000px !default;
 
 /**
  * Path vars

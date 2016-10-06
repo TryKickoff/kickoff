@@ -5,7 +5,7 @@
  * - gulp css                : processes scss both for kickoff and styleguide
  * - gulp javascript         : compile js (using Webpack)
  * - gulp serve              : run Browsersync server (with hot module reloading)
- * - gulp icons              : converts SVGs into an SVG sprite-sheet
+ * - gulp svg                : converts SVGs into an SVG sprite-sheet
  * - gulp images             : minifies images
  * - gulp copy               : copies files, including standalone js files, to dist folder
  * - gulp clean              : deletes certain dist directories

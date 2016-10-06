@@ -59,15 +59,24 @@
 @import "components/tables";
 // @import "components/scrollbars";
 
+// yo:start -- component
+// yo:end -- component
+
 
 /**
- * Your app styles
+ * Global styles
  */
 @import "global"; // Global styles
+
+
+/**
+ * Partials
+ */
 @import "partials/masthead"; // Example partial for masthead
 @import "partials/footer"; // Example partial for footer
-
 @import "partials/browser-upgrade"; // Styles to show an upgrade message to users on old browsers
+// yo:start -- partial
+// yo:end -- partial
 
 
 /**
@@ -75,6 +84,8 @@
  */
 //@import "views/home";
 //@import "views/contact";
+// yo:start -- view
+// yo:end -- view
 
 
 /* Helper/utility classes */

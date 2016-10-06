@@ -1,5 +1,5 @@
 /**
- * gulp icons
+ * gulp svg
  * SVG icon creation
  */
 
@@ -9,8 +9,8 @@ const svgstore = require('gulp-svgstore');
 const svgo = require('imagemin-svgo');
 const config = require('../config');
 
-gulp.task('icons', () => {
-	return gulp.src([`${config.icons.srcDir}/*`])
+gulp.task('svg', () => {
+	return gulp.src([`${config.svg.srcDir}/*`])
 		.pipe(
 			imagemin([
 				imagemin.svgo({
@@ -37,7 +37,7 @@ gulp.task('icons', () => {
 			svgstore()
 		)
 		.pipe(
-			gulp.dest(`${config.icons.distDir}`)
+			gulp.dest(`${config.svg.distDir}`)
 		);
 });
 

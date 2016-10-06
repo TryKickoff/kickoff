@@ -8,6 +8,6 @@ gulp.task('compile', [
 	'css',
 	'javascript',
 	'images',
-	'icons',
+	'svg',
 	'copy',
 ]);

@@ -24,12 +24,12 @@
   ],
   "scripts": {
     "prestart": "npm prune && npm install",
-    "start": "gulp",
+    "start": "gulp serve",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "RELEASE=true gulp compile",
     "info": "npm-scripts-info",
     "commit": "git-cz",
-    "test": "xo && gulp compile",
+    "test": "npm run lint:js && npm run lint:css",
     "lint:js": "xo",
     "lint:css": "gulp test:css",
     "fix:js": "xo --fix",
@@ -39,11 +39,12 @@
   },
   "scripts-info": {
     "test": "Run tests",
-    "prestart": "Install npm dependencies",
     "start": "Open starter checklist on trykickoff.com",
-    "predeploy": "Install non-optional npm dependencies",
     "deploy": "Compile all assets for production deployment",
-    "commit": "Commit using our standard git commit message format"
+    "commit": "Commit using our standard git commit message format",
+    "lint:js": "Lint JS using xo",
+    "fix:js": "Fix JS linting issues using xo",
+    "lint:css": "Lint CSS",
   },
   "repository": {
     "type": "git",
@@ -54,7 +55,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=4.0"
+    "node": ">=6.0"
   },
   "dependencies": {
     "console": "^0.5.2",
