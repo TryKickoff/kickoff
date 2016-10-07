@@ -149,6 +149,10 @@
       "comma-dangle": [
         "error",
         "always-multiline"
+      ],
+      "xo/filename-case": [
+        "error",
+        {"case": "camelCase"}
       ]
     }
   },
