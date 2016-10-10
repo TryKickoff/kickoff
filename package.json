@@ -62,7 +62,7 @@
     "copy-js": "^0.1.1",
     "double-dollar": "^1.0.0",
     "kickoff-fluidVideo.css": "^1.0.0",
-    "kickoff-grid.css": "^0.0.2",
+    "kickoff-grid.css": "^0.0.3",
     "kickoff-utils.scss": "^1.0.0",
     "kickoff-welcome.js": "^1.1.0",
     "lite-ready": "^1.0.4",

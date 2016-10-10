@@ -71,11 +71,34 @@ $breakpoints: (
 // Special breakpoints - add any more here
 $bp-rwd-text              : mid; // Reduce text size below this width
 
+
 // Setup layout max-width
-$layout-max-width         : 1000px !default;
+$layout-margin                : 0; // [in pixels] Space outside the grid
+$layout-max-width             : 1000; // [in pixels]
+$layout-min-width             : 960 ; // [in pixels] Minimum width for layout in <IE9
+$layout-max-width--huge       : 1100; // [in pixels]
+$layout-min-width--huge       : 1100; // [in pixels] Minimum width for layout in <IE9
+
 
 /**
- * Path vars
+ * Grid
+ * =================================
+ * These variables will control the grid module.
+ *
+ * if your project doesnt use Kickoff’s default grid, you can delete these
+ */
+
+$grid-column-count        : 12; // Total column count
+$grid-gutter-width        : 20; // [in pixels]
+
+//Settings here override & affect the grid classes output
+$responsive-grid-sizes    : true; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid          : true; // Disable this is you on’t want to output .no-flexbox classes for older browsers to use
+
+
+/**
+ * Path variables
+ * =================================
  */
 $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 
