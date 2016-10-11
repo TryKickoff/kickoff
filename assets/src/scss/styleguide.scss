@@ -114,6 +114,7 @@ body {
  */
 .sg-type {
 	margin-bottom: 1em;
+	overflow-x: auto;
 }
 
 code {
@@ -304,4 +305,3 @@ code {
 .sg-var--gridGutter {
 	@include sgVar($grid-gutter-width);
 }
-
