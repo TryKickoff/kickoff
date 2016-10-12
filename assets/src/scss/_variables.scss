@@ -101,6 +101,15 @@ $img-path                 : "/assets/dist/img"; // Usage: background: url('#{$im
 
 
 /**
+ * Z-index variables
+ * =================================
+ */
+$z-low                       : 10;
+$z-mid                       : 100;
+$z-high                      : 1000;
+
+
+/**
  * App-specific variables
  * =================================
  */
