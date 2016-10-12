@@ -13,9 +13,9 @@
 
 /*
  * Mixins, helpers and functions
- * See https://github.com/mrmartineau/kickoff-utils.scss
  */
-@import "kickoff-utils.scss";
+@import "kickoff-utils.scss"; // https://github.com/mrmartineau/kickoff-utils.scss
+@import "include-media/dist/include-media"; // http://include-media.com/
 
 /**
  * Core variables
@@ -26,7 +26,7 @@
 
 /* CSS Reset etc */
 @import "reset";
-@import "normalize.css/normalize"; // from npm
+@import "normalize.css/normalize"; // https://github.com/necolas/normalize.css
 
 /**
  * Global typography styles
@@ -46,7 +46,7 @@
 @import "components/forms/forms-custom-select";           // Select element
 @import "components/forms/forms-custom-file";             // File input
 
-@import "kickoff-grid.css/scss/index"; // http://trykickoff.com/docs/grid.html & http://trykickoff.com/demos/grids.html
+@import "kickoff-grid.css/scss/index"; // // https://github.com/mrmartineau/kickoff-grid.css, http://trykickoff.com/docs/grid.html & http://trykickoff.com/demos/grids.html
 @import "components/links";
 @import "components/buttons";
 @import "components/lists";

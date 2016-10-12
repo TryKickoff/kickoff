@@ -18,7 +18,7 @@ html {
 	font-size: $font-size-base-narrow-px;
 	-webkit-text-size-adjust: 100%;
 
-	@include respond-min($bp-rwd-text) {
+	@include media('>mid') {
 		font-size: $font-size-base-px;
 	}
 }

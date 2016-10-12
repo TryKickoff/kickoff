@@ -2,11 +2,10 @@
  * Kickoff Styleguide
  * =================================
  */
-@import "kickoff-utils.scss";
-
+@import "kickoff-utils.scss"; // https://github.com/mrmartineau/kickoff-utils.scss
 @import "color-palette";
 @import "variables";
-@import "kickoff-grid.css/scss/index";
+@import "kickoff-grid.css/scss/index";  // https://github.com/mrmartineau/kickoff-grid.css
 
 $styleguide-color-primary: $color-primary;
 $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -249,7 +248,7 @@ code {
 		display: block;
 		user-select: none;
 
-		@include respond-min(mid) {
+		@include media('>mid') {
 			width: 20%;
 			display: inline-block;
 		}

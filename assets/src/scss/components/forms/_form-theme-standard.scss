@@ -259,7 +259,7 @@ $color-info               : $blue;               // base colour for info input s
 
 
 // === <mid ===
-@include respond-min(mid) {
+@include media('>mid') {
 	/**
 	 * Horizontal-specific styles
 	 * =================================
