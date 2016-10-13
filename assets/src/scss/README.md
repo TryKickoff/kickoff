@@ -6,10 +6,7 @@ It’s important to become familiar with all of these files so you can make full
 
 ### `kickoff.scss`
 
-All roads lead to here. Both these files are used and compile with Grunt. Inspecting the source of these files reveals only one @import, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
-
-### `_dependencies.scss`
-This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project. If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.
+All roads lead to here. This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project. If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.
 
 ### `_global.scss`
 This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body’s background styles and the main .l-container styles. Try not to fill this up with all your styles though. Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the components, partials or views directories.
@@ -49,10 +46,6 @@ Used for entire views (or pages). Usually these files consist of small tweaks th
 
 N.b. We recommend that it is better to make reusable components rather than styling based on a view. Therefore, the styles in this folder _should _ be minimal.
 
-### Mixins
+### Mixins & Functions
 
-The mixins directory contains a few mixins that will help you day-to-day. Amongst others, _responsive.scss contains our media query mixins , `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the @include `font-size()` mixin for specifying your font sizes with a px value but outputting both rem and px in your compiled styles.
-
-### Functions
-
-The functions directory contains various Sass functions that are used in the framework and that you might find useful.
+We make use of a lot of these, but they are not stored within the repo. Please visit [github.com/TryKickoff/kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) to find out more about them.
