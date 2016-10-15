@@ -28,12 +28,12 @@ $baseline                 : $line-height-base * 1px;
 $type-scale               : 1.25; // Major third
 
 $type: (
-	micro                   : modular-scale($font-size-base, -2, $type-scale),
-	small                   : modular-scale($font-size-base, -1, $type-scale), // h5, h6
-	base                    : modular-scale($font-size-base, 0, $type-scale),  // p, h4
-	mid                     : modular-scale($font-size-base, 1, $type-scale),  // h3
-	large                   : modular-scale($font-size-base, 2, $type-scale),  // h2
-	jumbo                   : modular-scale($font-size-base, 3, $type-scale)   // h1
+	micro                   : ko-modular-scale($font-size-base, -2, $type-scale),
+	small                   : ko-modular-scale($font-size-base, -1, $type-scale), // h5, h6
+	base                    : ko-modular-scale($font-size-base, 0, $type-scale),  // p, h4
+	mid                     : ko-modular-scale($font-size-base, 1, $type-scale),  // h3
+	large                   : ko-modular-scale($font-size-base, 2, $type-scale),  // h2
+	jumbo                   : ko-modular-scale($font-size-base, 3, $type-scale)   // h1
 );
 
 // Useful to set here when bold webfonts come as 400 font-weight.

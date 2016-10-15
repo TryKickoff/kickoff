@@ -1,5 +1,5 @@
 // Mixin for form field states
-@mixin formFieldState($color) {
+@mixin ko-formFieldState($color) {
 	// Set the label color
 	.form-label {
 		color: $color;

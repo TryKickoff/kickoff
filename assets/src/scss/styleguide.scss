@@ -2,11 +2,11 @@
  * Kickoff Styleguide
  * =================================
  */
-@import "kickoff-utils.scss"; // https://github.com/mrmartineau/kickoff-utils.scss
-@import "include-media/dist/include-media"; // http://include-media.com
+@import "kickoff-utils"; // https://github.com/mrmartineau/kickoff-utils.scss
+@import "include-media"; // http://include-media.com
 @import "color-palette";
 @import "variables";
-@import "kickoff-grid.css/scss/index";  // https://github.com/mrmartineau/kickoff-grid.css
+@import "kickoff-grid";  // https://github.com/mrmartineau/kickoff-grid.css
 
 $styleguide-color-primary: $color-primary;
 $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -67,7 +67,7 @@ body {
 	padding: 30px;
 	margin-top: 30px;
 	font-family: $font-family-mono;
-	@include font-size(12);
+	@include ko-font-size(12);
 
 	h1 {
 		margin-bottom: .2em;
@@ -120,16 +120,16 @@ body {
 code {
 	border: 0;
 	background-color: transparent;
-	@include font-size(12);
+	@include ko-font-size(12);
 }
 
-@mixin sgTypeTest($size) {
+@mixin ko-sgTypeTest($size) {
 	.sg-type-item {
-		@include font-size($size);
+		@include ko-font-size($size);
 
 		&:after {
-			content: '@include font-size(#{$size}) / #{type($size)}px';
-			@include font-size(micro);
+			content: '@include ko-font-size(#{$size}) / #{type($size)}px';
+			@include ko-font-size(micro);
 			display: block;
 			font-weight: normal;
 			font-family: $font-family-mono;
@@ -143,31 +143,31 @@ code {
 
 
 .sg-type-micro {
-	@include sgTypeTest(micro);
+	@include ko-sgTypeTest(micro);
 }
 .sg-type-smallest {
-	@include sgTypeTest(smallest);
+	@include ko-sgTypeTest(smallest);
 }
 .sg-type-smaller {
-	@include sgTypeTest(smaller);
+	@include ko-sgTypeTest(smaller);
 }
 .sg-type-small {
-	@include sgTypeTest(small);
+	@include ko-sgTypeTest(small);
 }
 .sg-type-base {
-	@include sgTypeTest(base);
+	@include ko-sgTypeTest(base);
 }
 .sg-type-mid {
-	@include sgTypeTest(mid);
+	@include ko-sgTypeTest(mid);
 }
 .sg-type-large {
-	@include sgTypeTest(large);
+	@include ko-sgTypeTest(large);
 }
 .sg-type-largest {
-	@include sgTypeTest(largest);
+	@include ko-sgTypeTest(largest);
 }
 .sg-type-jumbo {
-	@include sgTypeTest(jumbo);
+	@include ko-sgTypeTest(jumbo);
 }
 
 .sg-typeSpecimen {
@@ -180,7 +180,7 @@ code {
 		display: block;
 		@extend .sg-interfaceType;
 		@extend .sg-interfaceType--subtle;
-		@include font-size(16);
+		@include ko-font-size(16);
 		margin-top: 5px;
 		border-top: 1px solid #ddd;
 		font-weight: normal;
@@ -191,17 +191,17 @@ code {
 // p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
 
 .sg-typeSpecimen--primary {
-	@include font-size(30);
+	@include ko-font-size(30);
 	font-family: $font-family-base;
 }
 
 .sg-typeSpecimen--secondary {
-	@include font-size(30);
+	@include ko-font-size(30);
 	font-family: $font-family-alt;
 }
 
 .sg-typeSpecimen--giant {
-	@include font-size(120);
+	@include ko-font-size(120);
 	line-height: 1;
 }
 
@@ -237,11 +237,11 @@ code {
 	background-color: fade-out($hr-color, .6)
 }
 
-@mixin sgVar($var) {
+@mixin ko-sgVar($var) {
 	line-height: 2;
 	font-family: $font-family-mono;
 	border-bottom: 1px solid rgba(#000, .1);
-	@include font-size(12);
+	@include ko-font-size(12);
 
 	strong {
 		opacity: .6;
@@ -267,41 +267,41 @@ code {
 }
 
 .sg-var--baseFontSize {
-	@include sgVar($font-size-base);
+	@include ko-sgVar($font-size-base);
 }
 
 .sg-var--leadingBase {
-	@include sgVar($leading-base);
+	@include ko-sgVar($leading-base);
 }
 
 .sg-var--typeScale {
-	@include sgVar($type-scale);
+	@include ko-sgVar($type-scale);
 }
 
 .sg-var--fontFamilyMono {
-	@include sgVar($font-family-mono);
+	@include ko-sgVar($font-family-mono);
 }
 
 .sg-var--fontFamilySans {
-	@include sgVar($font-family-sans);
+	@include ko-sgVar($font-family-sans);
 }
 
 .sg-var--fontFamilySerif {
-	@include sgVar($font-family-serif);
+	@include ko-sgVar($font-family-serif);
 }
 
 .sg-var--breakpoints {
-	@include sgVar($breakpoints);
+	@include ko-sgVar($breakpoints);
 }
 
 .sg-var--layoutWidth {
-	@include sgVar($layout-max-width);
+	@include ko-sgVar($layout-max-width);
 }
 
 .sg-var--gridColumns {
-	@include sgVar($grid-column-count);
+	@include ko-sgVar($grid-column-count);
 }
 
 .sg-var--gridGutter {
-	@include sgVar($grid-gutter-width);
+	@include ko-sgVar($grid-gutter-width);
 }

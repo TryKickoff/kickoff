@@ -34,7 +34,7 @@
 
 .sg-swatch-text {
 	font-weight: bold;
-	@include font-size(60);
+	@include ko-font-size(60);
 	line-height: 1;
 	display: inline-block;
 	vertical-align: middle;
@@ -49,7 +49,7 @@
 	display: block;
 }
 
-@mixin swatch($color, $bg: #fff) {
+@mixin ko-swatch($color, $bg: #fff) {
 	background-color: $bg;
 
 	.sg-swatch-color {
@@ -69,26 +69,26 @@
 }
 
 .sg-color-link-hover {
-	@include swatch($color-link-hover);
+	@include ko-swatch($color-link-hover);
 }
 .sg-color-primary {
-	@include swatch($color-primary);
+	@include ko-swatch($color-primary);
 }
 .sg-color-secondary {
-	@include swatch($color-secondary);
+	@include ko-swatch($color-secondary);
 }
 .sg-color-highlight {
-	@include swatch($color-highlight);
+	@include ko-swatch($color-highlight);
 }
 .sg-color-text {
-	@include swatch($color-text, $color-bg);
+	@include ko-swatch($color-text, $color-bg);
 }
 .sg-color-background {
-	@include swatch($color-bg);
+	@include ko-swatch($color-bg);
 }
 .sg-color-border {
-	@include swatch($color-border);
+	@include ko-swatch($color-border);
 }
 .sg-color-link {
-	@include swatch($color-link-default);
+	@include ko-swatch($color-link-default);
 }

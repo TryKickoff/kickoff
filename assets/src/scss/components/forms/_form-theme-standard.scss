@@ -26,7 +26,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-legend {
 	padding: 0;
 	margin-bottom: $baseline;
-	@include font-size(mid);
+	@include ko-font-size(mid);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -35,7 +35,7 @@ $color-info               : $blue;               // base colour for info input s
 
 	// Small
 	small {
-		@include font-size(small);
+		@include ko-font-size(small);
 		color: lighten(#000, 70%);
 	}
 }
@@ -70,7 +70,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-input {
 	height: 2.5em;
 	padding: .5em;
-	@include font-size(base);
+	@include ko-font-size(base);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-textColor;
@@ -131,7 +131,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-input-file {
-	@include font-size(base);
+	@include ko-font-size(base);
 }
 
 /**
@@ -219,7 +219,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-warning {
-	@include formFieldState($color-warning);
+	@include ko-formFieldState($color-warning);
 }
 
 // Error
@@ -228,7 +228,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-error {
-	@include formFieldState($color-error);
+	@include ko-formFieldState($color-error);
 }
 
 // Success
@@ -237,7 +237,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-success {
-	@include formFieldState($color-success);
+	@include ko-formFieldState($color-success);
 }
 
 // Info
@@ -246,7 +246,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-info {
-	@include formFieldState($color-info);
+	@include ko-formFieldState($color-info);
 }
 
 
@@ -255,7 +255,7 @@ $color-info               : $blue;               // base colour for info input s
  * =================================
  * Gets special styles; can't be bundled together though for some reason
  */
-@include placeholder($placeholder-textColor);
+@include ko-placeholder($placeholder-textColor);
 
 
 // === <mid ===
@@ -271,7 +271,7 @@ $color-info               : $blue;               // base colour for info input s
 		// Increase spacing between groups
 		.form-controlGroup {
 			margin-bottom: $baseline;
-			@include clearfix;
+			@include ko-clearfix;
 
 			.form-input--fileWrapper {
 				margin-left: 0;

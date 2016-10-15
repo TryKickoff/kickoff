@@ -94,7 +94,7 @@ dd { margin-left: $baseline; }
  */
 
 .l-list--floated {
-	@include clearfix;
+	@include ko-clearfix;
 
 	li {
 		float: left;
