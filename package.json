@@ -79,6 +79,7 @@
     "cssnano": "^3.7.3",
     "del": "^2.2.1",
     "doiuse": "^2.4.1",
+    "eyeglass": "^1.1.2",
     "filesizegzip": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-banner": "^0.1.3",
