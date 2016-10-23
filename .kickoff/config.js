@@ -7,6 +7,9 @@ const pkg = require('../package');
 const ConfigOptions = function () {
 	const config = this;
 
+	// Output file-size and gzip file-size. May slow-down build.
+	config.showFileSize = true;
+
 	config.srcDir = './assets/src'; // config.srcDir
 	config.distDir = './assets/dist'; // config.distDir
 
