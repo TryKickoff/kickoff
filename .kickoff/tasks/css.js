@@ -58,9 +58,9 @@ gulp.task('css', () => {
 		// Write sourcemaps
 		.pipe(sourcemaps.write())
 
-		// Output filesize
+		// Output file-size
 		.pipe(
-			gulpIf(config.showFileSize,
+			gulpIf(config.misc.showFileSize,
 				tap(file => {
 					console.log(`❯❯ CSS ${file.relative}`, filesizegzip(file.contents, true));
 				})

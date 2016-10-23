@@ -37,8 +37,8 @@ gulp.task('javascript', () => {
 			console.log();
 		}
 
-		// Output file-size & gzip file-size
-		if (config.showFileSize) {
+		// Output file-size
+		if (config.misc.showFileSize) {
 			for (const prop in config.js.entryPoints) {
 				const item = fs.readFileSync(path.resolve(`${config.js.distDir}/${prop}.js`), 'utf8');
 				console.log(`❯❯ JS  ${prop}.js`, filesizegzip(item, true));
