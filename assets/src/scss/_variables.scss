@@ -8,6 +8,8 @@
  * - App-specific
  */
 
+/* stylelint-disable indentation */
+
 /**
  * Typography
  * =================================
@@ -113,7 +115,7 @@ $z-high                      : 1000;
  * App-specific variables
  * =================================
  */
-$default-transition-timing   : cubic-bezier(.77, 0, .175, 1);
+$default-transition-timing   : cubic-bezier(0.77, 0, 0.175, 1);
 $default-transition-duration : 300ms;
 $default-transition          : all $default-transition-duration $default-transition-timing;
 

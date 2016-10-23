@@ -70,12 +70,12 @@ body {
 	@include ko-font-size(12);
 
 	h1 {
-		margin-bottom: .2em;
+		margin-bottom: 0.2em;
 	}
 
 	a {
 		color: #fff;
-		border-bottom: 2px dashed rgba(#fff, .3);
+		border-bottom: 2px dashed rgba(#fff, 0.3);
 
 		&:hover {
 			border-bottom: 2px solid #fff;
@@ -127,48 +127,27 @@ code {
 	.sg-type-item {
 		@include ko-font-size($size);
 
-		&:after {
+		&::after {
 			content: '@include ko-font-size(#{$size}) / #{type($size)}px';
 			@include ko-font-size(micro);
 			display: block;
 			font-weight: normal;
 			font-family: $font-family-mono;
-			opacity: .6;
+			opacity: 0.6;
 		}
 	}
-
-	code {
-	}
 }
 
 
-.sg-type-micro {
-	@include ko-sgTypeTest(micro);
-}
-.sg-type-smallest {
-	@include ko-sgTypeTest(smallest);
-}
-.sg-type-smaller {
-	@include ko-sgTypeTest(smaller);
-}
-.sg-type-small {
-	@include ko-sgTypeTest(small);
-}
-.sg-type-base {
-	@include ko-sgTypeTest(base);
-}
-.sg-type-mid {
-	@include ko-sgTypeTest(mid);
-}
-.sg-type-large {
-	@include ko-sgTypeTest(large);
-}
-.sg-type-largest {
-	@include ko-sgTypeTest(largest);
-}
-.sg-type-jumbo {
-	@include ko-sgTypeTest(jumbo);
-}
+.sg-type-micro { @include ko-sgTypeTest(micro); }
+.sg-type-smallest { @include ko-sgTypeTest(smallest); }
+.sg-type-smaller { @include ko-sgTypeTest(smaller); }
+.sg-type-small { @include ko-sgTypeTest(small); }
+.sg-type-base { @include ko-sgTypeTest(base); }
+.sg-type-mid { @include ko-sgTypeTest(mid); }
+.sg-type-large { @include ko-sgTypeTest(large); }
+.sg-type-largest { @include ko-sgTypeTest(largest); }
+.sg-type-jumbo { @include ko-sgTypeTest(jumbo); }
 
 .sg-typeSpecimen {
 	margin-bottom: 0;
@@ -176,7 +155,7 @@ code {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 
-	&:after {
+	&::after {
 		display: block;
 		@extend .sg-interfaceType;
 		@extend .sg-interfaceType--subtle;
@@ -187,8 +166,8 @@ code {
 	}
 }
 
-// h1.typeSpecimen:after { content: "Font stack: #{$font-family-headings}"; }
-// p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
+// h1.typeSpecimen::after { content: "Font stack: #{$font-family-headings}"; }
+// p.typeSpecimen::after  { content: "Font stack: #{$font-family-base}"; }
 
 .sg-typeSpecimen--primary {
 	@include ko-font-size(30);
@@ -234,17 +213,17 @@ code {
 
 .sg-hr--subtle {
 	height: 3px;
-	background-color: fade-out($hr-color, .6)
+	background-color: fade-out($hr-color, 0.6);
 }
 
 @mixin ko-sgVar($var) {
 	line-height: 2;
 	font-family: $font-family-mono;
-	border-bottom: 1px solid rgba(#000, .1);
+	border-bottom: 1px solid rgba(#000, 0.1);
 	@include ko-font-size(12);
 
 	strong {
-		opacity: .6;
+		opacity: 0.6;
 		text-transform: uppercase;
 		display: block;
 		user-select: none;
@@ -255,7 +234,7 @@ code {
 		}
 	}
 
-	&:after {
+	&::after {
 		content: '#{$var}';
 	}
 }

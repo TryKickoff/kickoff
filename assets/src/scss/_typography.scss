@@ -116,14 +116,6 @@ h6,
 	margin-bottom: 0;
 }
 
-// h5,
-.h5,
-.epsilon {}
-
-// h6,
-.h6,
-.zeta {}
-
 // Only give these headings a margin-top if they are after other elements
 * + h1,
 * + .h1,
@@ -183,7 +175,7 @@ blockquote {
 		display: block;
 		color: lighten(#000, 70%);
 
-		&:before {
+		&::before {
 			content: '\2014 \00A0';
 		}
 	}
@@ -192,8 +184,8 @@ blockquote {
 // Quotes
 q,
 blockquote {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		content: "";
 	}
 }
@@ -216,19 +208,17 @@ mark {
 
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
-sub, sup {
+sub,
+sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
 
-sup { top: -.5em; }
-sub { bottom: -.25em; }
-
-samp {
-	font-family: $font-family-mono;
-}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+samp { font-family: $font-family-mono; }
 
 
 /**
