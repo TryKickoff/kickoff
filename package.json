@@ -36,7 +36,7 @@
     "release-patch": "release-it --non-interactive patch",
     "release-minor": "release-it --non-interactive minor",
     "release-major": "release-it --non-interactive major",
-    "release-premajor": "release-it premajor --prereleaseId=\"beta\" --dry-run"
+    "release-premajor": "release-it premajor --prereleaseId=\"beta\""
   },
   "repository": {
     "type": "git",
