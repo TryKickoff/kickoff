@@ -1,4 +1,5 @@
 # Kickoff scss
+> Find out more at https://trykickoff.now.sh/learn/css.html
 
 ## Important files
 
