@@ -9,7 +9,7 @@
 @import "kickoff-grid";  // https://github.com/mrmartineau/kickoff-grid.css
 
 $styleguide-color-primary: $color-primary;
-$styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$styleguide-type: $font-family-system;
 
 @import "styleguide/swatch";
 
@@ -280,6 +280,10 @@ code {
 
 .sg-var--fontFamilyMono {
 	@include ko-sgVar($font-family-mono);
+}
+
+.sg-var--fontFamilySystem {
+	@include ko-sgVar($font-family-system);
 }
 
 .sg-var--fontFamilySans {

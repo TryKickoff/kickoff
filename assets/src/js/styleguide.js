@@ -3,15 +3,26 @@ import $$ from 'double-dollar';
 import copy from 'copy-js/src/copy.js';
 
 ready(() => {
+	copyText();
+});
 
-	$$('.sg-swatch').forEach(function(item){
-		item.addEventListener('click', function(e) {
-			var swatchVar = e.currentTarget.querySelector('.sg-swatch-var').innerText;
+/**
+ * copyText
+ *
+ * Usage:
+ * add `data-copy="your text"` to any html element on the styleguide
+ */
+function copyText() {
+	$$('[data-copy]').forEach(item => {
+		item.addEventListener('click', e => {
+			e.preventDefault();
+			e.stopPropagation();
 			const target = e.currentTarget;
+			const copyValue = target.getAttribute('data-copy');
 			target.classList.add('is-active');
 
-			copy(swatchVar, () => {
-				console.log('copied ', swatchVar);
+			copy(copyValue, () => {
+				console.log('copied ', copyValue);
 
 				setTimeout(() => {
 					target.classList.remove('is-active');
@@ -19,5 +30,5 @@ ready(() => {
 			});
 		}, false);
 	});
-});
+}
 
