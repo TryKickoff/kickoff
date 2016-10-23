@@ -12,5 +12,5 @@ gulp.task('watch', ['compile'], () => {
 });
 
 // Alias of watch task
-gulp.task('watcher', ['watch'])
+gulp.task('watcher', ['watch']);
 

@@ -4,9 +4,7 @@
 const gulp = require('gulp');
 const config = require('../config');
 
-gulp.task('copy', ['copy:standaloneJS' /*, 'copy:fonts'*/], () => {
-	console.log('Copying files');
-});
+gulp.task('copy', ['copy:standaloneJS' /*, 'copy:fonts'*/]);
 
 // Copy the standalone js files
 gulp.task('copy:standaloneJS', () => {

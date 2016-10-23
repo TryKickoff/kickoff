@@ -5,9 +5,7 @@ const gulp = require('gulp');
 const del = require('del');
 const config = require('../config');
 
-gulp.task('clean', [/*'clean:images', 'clean:js', 'clean:css', 'clean:svg'*/], () => {
-	console.log('Cleaning files');
-});
+gulp.task('clean', [/*'clean:images', 'clean:js', 'clean:css', 'clean:svg'*/]);
 
 // Clean the image directory
 gulp.task('clean:images', () => {

@@ -9,7 +9,7 @@ const webpack = require('webpack');
 const config = require('../config');
 const webpackConfig = require('./webpack.config.js');
 
-gulp.task('serve', ['watcher'], () => {
+gulp.task('serve', ['watch'], () => {
 	webpackConfig.plugins.push(
 		new webpack.NoErrorsPlugin()
 	);

@@ -26,9 +26,6 @@ const webpackConfig = {
 				//exclude: /node_modules/,
 				loader: 'babel',
 				query: {
-					// presets: [
-					// 	'es2015',
-					// ],
 					cacheDirectory: true,
 				},
 			},
@@ -43,6 +40,11 @@ const webpackConfig = {
 	],
 };
 
+/**
+ * The below plugins are used when `RELEASE=true ...` is used
+ * - minification using uglify
+ * - add a banner using the banner plugin
+ */
 if (process.env.RELEASE) {
 	webpackConfig.plugins.push(
 		new webpack.optimize.DedupePlugin(),
