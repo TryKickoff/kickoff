@@ -25,6 +25,7 @@
   "scripts": {
     "prestart": "npm prune && npm install",
     "start": "gulp serve",
+    "compile": "gulp compile",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "RELEASE=true gulp compile",
     "info": "npm-scripts-info",
