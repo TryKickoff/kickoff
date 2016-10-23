@@ -1,6 +1,6 @@
 import ready from 'lite-ready';
 import $$ from 'double-dollar';
-import copy from 'copy-js/src/copy.js';
+import copy from 'copy-js/src/copy';
 
 ready(() => {
 	copyText();
