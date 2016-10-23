@@ -6,7 +6,6 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
-const svgo = require('imagemin-svgo');
 const config = require('../config');
 
 gulp.task('svg', () => {
