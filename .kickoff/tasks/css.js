@@ -22,7 +22,12 @@ gulp.task('css', () => {
 	return gulp.src([`${config.css.scssDir}/*.scss`])
 
 		// Init sourcemaps
-		.pipe(sourcemaps.init())
+		.pipe(
+			gulpIf(process.env.RELEASE === 'false',
+				sourcemaps.init()
+			)
+		)
+
 
 		// Sass Compilation
 		.pipe(
@@ -56,7 +61,11 @@ gulp.task('css', () => {
 		)
 
 		// Write sourcemaps
-		.pipe(sourcemaps.write())
+		.pipe(
+			gulpIf(process.env.RELEASE === 'false',
+				sourcemaps.write()
+			)
+		)
 
 		// Output file-size
 		.pipe(
