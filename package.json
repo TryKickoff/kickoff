@@ -52,6 +52,7 @@
   "dependencies": {
     "console": "^0.5.2",
     "copy-js": "^0.1.1",
+    "double-dollar": "^1.0.0",
     "include-media": "^1.4.8",
     "kickoff-fluidVideo.css": "^1.1.0",
     "kickoff-grid.css": "^1.0.1",
