@@ -45,7 +45,7 @@ const webpackConfig = {
  * - minification using uglify
  * - add a banner using the banner plugin
  */
-if (process.env.RELEASE) {
+if (config.isRelease) {
 	webpackConfig.plugins.push(
 		new webpack.optimize.DedupePlugin(),
 

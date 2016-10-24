@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const eyeglass = require('eyeglass');
-const gulpIf = require('gulp-if');
+const gutil = require('gulp-util');
 const banner = require('gulp-banner');
 const filesizegzip = require('filesizegzip');
 const tap = require('gulp-tap');
@@ -23,11 +23,8 @@ gulp.task('css', () => {
 
 		// Init sourcemaps
 		.pipe(
-			gulpIf(process.env.RELEASE === 'false',
-				sourcemaps.init()
-			)
+			config.isRelease ? gutil.noop() : sourcemaps.init()
 		)
-
 
 		// Sass Compilation
 		.pipe(
@@ -46,34 +43,26 @@ gulp.task('css', () => {
 
 		// Compress CSS
 		.pipe(
-			gulpIf(process.env.RELEASE === 'true',
-				postcss([
-					cssnano(),
-				])
-			)
+			config.isRelease ? postcss([
+				cssnano(),
+			]) : gutil.noop()
 		)
 
 		// Add a banner
 		.pipe(
-			gulpIf(process.env.RELEASE === 'true',
-				banner(config.misc.banner)
-			)
+			config.isRelease ? banner(config.misc.banner) : gutil.noop()
 		)
 
 		// Write sourcemaps
 		.pipe(
-			gulpIf(process.env.RELEASE === 'false',
-				sourcemaps.write()
-			)
+			config.isRelease ? gutil.noop() : sourcemaps.write()
 		)
 
 		// Output file-size
 		.pipe(
-			gulpIf(config.misc.showFileSize,
-				tap(file => {
-					console.log(`❯❯ CSS ${file.relative}`, filesizegzip(file.contents, true));
-				})
-			)
+			config.misc.showFileSize ? tap(file => {
+				console.log(`❯❯ CSS ${file.relative}`, filesizegzip(file.contents, true));
+			}) : gutil.noop()
 		)
 
 		// Write file

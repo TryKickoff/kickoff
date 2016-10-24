@@ -18,7 +18,7 @@ gulp.task('compile', [
 });
 
 gulp.task('precompile', () => {
-	if (process.env.RELEASE) {
+	if (config.isRelease) {
 		console.log();
 		console.log('❯❯ Creating an optimized production build...');
 		console.log();
