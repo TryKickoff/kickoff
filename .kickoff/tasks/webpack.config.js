@@ -23,7 +23,7 @@ const webpackConfig = {
 		rules: [
 			{
 				test: /\.js$/,
-				//exclude: /node_modules/,
+				exclude: /node_modules/,
 				loader: 'babel',
 				query: {
 					cacheDirectory: true,
@@ -45,7 +45,7 @@ const webpackConfig = {
  * - minification using uglify
  * - add a banner using the banner plugin
  */
-if (process.env.RELEASE) {
+if (config.isRelease) {
 	webpackConfig.plugins.push(
 		new webpack.optimize.DedupePlugin(),
 

@@ -2,10 +2,13 @@
  * Global build task vars
  * Both Webpack and Gulp use these vars. Change as much as you like :)
  */
+const gutil = require('gulp-util');
 const pkg = require('../package');
 
 const ConfigOptions = function () {
 	const config = this;
+
+	config.isRelease = (gutil.env.release ? true : false);
 
 	config.srcDir = './assets/src'; // config.srcDir
 	config.distDir = './assets/dist'; // config.distDir

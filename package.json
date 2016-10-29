@@ -52,11 +52,12 @@
   "dependencies": {
     "console": "^0.5.2",
     "copy-js": "^0.1.1",
+    "double-dollar": "^1.0.0",
     "include-media": "^1.4.8",
     "kickoff-fluidVideo.css": "^1.1.0",
     "kickoff-grid.css": "^1.0.1",
     "kickoff-utils.scss": "^2.0.1",
-    "kickoff-welcome.js": "^1.1.0",
+    "kickoff-welcome.js": "^1.2.0",
     "lite-ready": "^1.0.4",
     "normalize.css": "^5.0.0",
     "svg4everybody": "^2.1.0"
@@ -74,7 +75,6 @@
     "filesizegzip": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-banner": "^0.1.3",
-    "gulp-if": "2.0.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
