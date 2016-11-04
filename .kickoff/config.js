@@ -62,6 +62,13 @@ const ConfigOptions = function () {
 		distDir: `${config.distDir}/fonts`, // config.fonts.distDir
 	};
 
+	config.gulp = {
+    // Reports which file was changed
+    onChange : function(evt) {
+        gutil.log( gutil.colors.cyan.bold('❯❯ File: ' + evt.path.replace(new RegExp('/.*(?=/' + config.srcDir.substr(2) + ')/'), '')), 'was', gutil.colors.magenta(evt.type) );
+    }
+  };
+
 	// Banners and info
 	config.misc = {
 		banner: `/**
