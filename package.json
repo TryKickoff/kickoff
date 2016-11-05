@@ -28,7 +28,6 @@
     "compile": "gulp compile",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "gulp compile --release",
-    "info": "npm-scripts-info",
     "test": "npm run lint:js && npm run lint:css",
     "lint:js": "xo",
     "lint:css": "gulp test:css",
