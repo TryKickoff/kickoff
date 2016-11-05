@@ -18,7 +18,7 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
 | :construction: | Compile | `gulp compile` - Compile all the things |
 | :eyes: | Watch | `gulp watch` - Watch all the things |
 | :fire: | Live updating | `gulp serve` - [Browsersync](http://www.browsersync.io/), [Webpack Dev Middleware](https://github.com/webpack/webpack-dev-middleware), [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware) |
-| :shipit: | Production builds | `RELEASE=true gulp compile` - Set the `RELEASE` environment flag to true to compress everything. This works on individual tasks as well e.g. `RELEASE=true gulp javascript` |
+| :shipit: | Production builds | `gulp compile --release` - Add the ` --release` flag to compress everything. This works on individual tasks as well e.g. `gulp javascript --release` or `gulp css --release` |
 
 ---
 

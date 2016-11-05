@@ -27,7 +27,7 @@
     "start": "gulp serve",
     "compile": "gulp compile",
     "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "RELEASE=true gulp compile",
+    "deploy": "gulp compile --release",
     "info": "npm-scripts-info",
     "test": "npm run lint:js && npm run lint:css",
     "lint:js": "xo",
