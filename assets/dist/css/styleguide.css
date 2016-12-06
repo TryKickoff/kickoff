@@ -281,13 +281,11 @@
 .g--alignTop {
   -webkit-box-align: start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
 .g--alignBottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end; }
 
 .g--alignRight {
@@ -303,7 +301,6 @@
 .g--alignCenter--v {
   -webkit-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center; }
 
 /**
@@ -1660,10 +1657,10 @@ code {
   font-size: 0.55rem; }
 
 .sg-type-micro .sg-type-item {
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-type-micro .sg-type-item:after {
-    content: "@include font-size(micro) / 13px";
-    font-size: 0.65rem;
+    content: "@include font-size(micro) / 12.8px";
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1673,7 +1670,7 @@ code {
   font-size: 0rem; }
   .sg-type-smallest .sg-type-item:after {
     content: "@include font-size(smallest) / px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1683,7 +1680,7 @@ code {
   font-size: 0rem; }
   .sg-type-smaller .sg-type-item:after {
     content: "@include font-size(smaller) / px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1693,7 +1690,7 @@ code {
   font-size: 0.8rem; }
   .sg-type-small .sg-type-item:after {
     content: "@include font-size(small) / 16px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1703,7 +1700,7 @@ code {
   font-size: 1rem; }
   .sg-type-base .sg-type-item:after {
     content: "@include font-size(base) / 20px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1713,17 +1710,17 @@ code {
   font-size: 1.25rem; }
   .sg-type-mid .sg-type-item:after {
     content: "@include font-size(mid) / 25px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
     opacity: .6; }
 
 .sg-type-large .sg-type-item {
-  font-size: 1.6rem; }
+  font-size: 1.5625rem; }
   .sg-type-large .sg-type-item:after {
-    content: "@include font-size(large) / 32px";
-    font-size: 0.65rem;
+    content: "@include font-size(large) / 31.25px";
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1733,17 +1730,17 @@ code {
   font-size: 0rem; }
   .sg-type-largest .sg-type-item:after {
     content: "@include font-size(largest) / px";
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
     opacity: .6; }
 
 .sg-type-jumbo .sg-type-item {
-  font-size: 2rem; }
+  font-size: 1.953125rem; }
   .sg-type-jumbo .sg-type-item:after {
-    content: "@include font-size(jumbo) / 40px";
-    font-size: 0.65rem;
+    content: "@include font-size(jumbo) / 39.0625px";
+    font-size: 0.64rem;
     display: block;
     font-weight: normal;
     font-family: Menlo, Monaco, "Courier New", monospace;
@@ -1807,7 +1804,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--baseFontSize strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1827,7 +1824,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--leadingBase strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1847,7 +1844,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--typeScale strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1867,7 +1864,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--fontFamilyMono strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1887,7 +1884,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--fontFamilySans strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1907,7 +1904,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--fontFamilySerif strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1927,7 +1924,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--breakpoints strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1947,7 +1944,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--layoutWidth strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1967,7 +1964,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--gridColumns strong {
     opacity: .6;
     text-transform: uppercase;
@@ -1987,7 +1984,7 @@ code {
   line-height: 2;
   font-family: Menlo, Monaco, "Courier New", monospace;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.65rem; }
+  font-size: 0.64rem; }
   .sg-var--gridGutter strong {
     opacity: .6;
     text-transform: uppercase;

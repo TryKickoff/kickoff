@@ -41,4 +41,25 @@ module.exports.tasks = {
 			}],
 		},
 	},
+
+
+	/**
+     * grunt-svgstore
+     * https://github.com/FWeinb/grunt-svgstore
+     * Merge SVGs from a folder.
+     */
+	svgstore: {
+	    options: {
+	        prefix: 'icon-',
+	        svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+	            viewBox: '0 0 100 100',
+	            xmlns: 'http://www.w3.org/2000/svg'
+	        }
+	    },
+	    default: {
+	        files: {
+	            '<%=config.img.distDir%>/icons.svg': ['<%=config.img.distDir%>/icons/*.svg'],
+	        },
+	    }
+	}
 };
