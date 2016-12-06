@@ -82,6 +82,7 @@ module.exports = function (grunt) {
 	// grunt images
 	grunt.registerTask('images', [
 		'newer:imagemin:images',
+		'svgstore'
 	]);
 
 

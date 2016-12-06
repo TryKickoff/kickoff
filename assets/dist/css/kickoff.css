@@ -615,11 +615,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal; }
 
 h1, .h1, .alpha {
-  font-size: 2rem;
+  font-size: 1.953125rem;
   margin-bottom: 56px; }
 
 h2, .h2, .beta {
-  font-size: 1.6rem; }
+  font-size: 1.5625rem; }
 
 h3, .h3, .gamma {
   font-size: 1.25rem; }
@@ -1427,13 +1427,11 @@ input[type="submit"] {
 .g--alignTop {
   -webkit-box-align: start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
 .g--alignBottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end; }
 
 .g--alignRight {
@@ -1449,7 +1447,6 @@ input[type="submit"] {
 .g--alignCenter--v {
   -webkit-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center; }
 
 /**
@@ -3005,7 +3002,6 @@ pre {
   color: #444;
   border-radius: 3px;
   -moz-tab-size: 3;
-    -o-tab-size: 3;
        tab-size: 3; }
 
 code {
