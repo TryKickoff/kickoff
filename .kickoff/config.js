@@ -30,7 +30,6 @@ const ConfigOptions = function () {
 	// Javascript-related vars
 	config.js = {
 		srcDir: `${config.srcDir}/js`, // config.js.srcDir
-		srcFile: 'script.js', // config.js.srcFile
 
 		entryPoints: {
 			kickoff: [`${this.srcDir}/js/script.js`],
