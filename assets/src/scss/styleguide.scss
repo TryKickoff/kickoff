@@ -128,7 +128,7 @@ code {
 		@include ko-font-size($size);
 
 		&::after {
-			content: '@include ko-font-size(#{$size}) / #{type($size)}px';
+			content: 'Name: #{$size} // Size: #{ko-getValue($size, $type)}px // Use: @include ko-font-size(#{$size}) ';
 			@include ko-font-size(micro);
 			display: block;
 			font-weight: normal;
