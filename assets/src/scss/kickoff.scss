@@ -22,8 +22,9 @@
  * - Print styles
  *
  * Read about our distinction between views, partials and components at
- * http://trykickoff.com/learn/css.html#views-partials--components
+ * https://trykickoff.com/learn/css.html#views-partials--components
  *
+ * ## Yeoman
  * The Yeoman generator can also be used to add new views, partials and
  * components. e.g. `yo kickoff:sass:component foo` will create a new file:
  * `scss/components/_component.scss` and add the `@import` statement in this
@@ -31,11 +32,13 @@
  *
  */
 
+
 /*
  * Mixins, helpers and functions
  */
-@import "kickoff-utils"; // https://github.com/mrmartineau/kickoff-utils.scss
-@import "include-media"; // http://include-media.com
+@import "kickoff-utils"; // From github.com/mrmartineau/kickoff-utils.scss
+@import "include-media"; // From include-media.com
+
 
 /**
  * Core variables
@@ -44,20 +47,25 @@
 @import "color-palette";
 @import "variables";
 
+
 /**
  * CSS resets
  */
 @import "reset";
 
+
 /**
  * Typography styles
- * See http://trykickoff.com/demos/typography.html for more info
+ * See https://trykickoff.com/demos/typography.html for more info
  */
 @import "typography";
 
+
 /**
  * Components
- * See http://trykickoff.com/demos/components.html for more info
+ * See https://trykickoff.com/demos/components.html for more info
+ *
+ * Note: place all 3rd party components at the top of the list
  */
 @import "kickoff-fluidVideo"; // https://github.com/mrmartineau/kickoff-fluidVideo.css
 @import "kickoff-grid"; // https://github.com/TryKickoff/kickoff-grid.css - docs: trykickoff.com/docs/grid.html & demo: trykickoff.com/demos/grids.html
@@ -66,7 +74,6 @@
 @import "components/buttons";
 @import "components/lists";
 @import "components/embedded-content";
-@import "kickoff-fluidVideo"; // https://github.com/mrmartineau/kickoff-fluidVideo.css
 @import "components/icons";
 @import "components/skip-navigation";
 @import "components/code";
