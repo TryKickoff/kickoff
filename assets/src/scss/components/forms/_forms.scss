@@ -17,10 +17,10 @@
  * - `material`: basic version of Google's Material design forms
  *
  * Usage: (choose from)
- * @import "components/forms/form-theme-standard";
- * @import "components/forms/form-theme-material";
+ * @import "form-theme-standard";
+ * @import "form-theme-material";
  */
-@import "components/forms/form-theme-standard";
+@import "form-theme-standard";
 
 /**
  * Custom controls
@@ -28,9 +28,9 @@
  * - Select element
  * - File upload
  */
-@import "components/forms/forms-custom-radioscheckboxes"; // Radio & checkbox inputs
-@import "components/forms/forms-custom-select"; // Select element
-@import "components/forms/forms-custom-file"; // File input
+@import "forms-custom-radioscheckboxes"; // Radio & checkbox inputs
+@import "forms-custom-select"; // Select element
+@import "forms-custom-file"; // File input
 
 
 /**
