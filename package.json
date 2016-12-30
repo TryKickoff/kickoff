@@ -26,7 +26,7 @@
     "prestart": "npm prune && npm install",
     "start": "gulp serve",
     "compile": "gulp compile",
-    "predeploy": "npm prune && npm install --no-optional",
+    "predeploy": "npm prune && npm install",
     "deploy": "gulp compile --release",
     "test": "npm run lint:js && npm run lint:css",
     "lint:js": "xo",
