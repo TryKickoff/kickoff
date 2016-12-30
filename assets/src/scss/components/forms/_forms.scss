@@ -1,16 +1,40 @@
 /**
  * Forms
  * =================================
- * - Associated Form Variables
- * - Generic form styles
- * - Form inputs and groups
- * - Form field feedback states
- * - Horizontal & vertical forms
- * - Horizontal-specific styles
+ * Kickoff's forms has support for themes. See below for info about them.
+ *
  */
 
+@import "form-helpers"; // Mixins
+
 /**
- * Generic form styles
+ * Form themes
+ * This file contains the base form styles and each theme file contains
+ * overrides and additions.
+ *
+ * Choose from:
+ * - `standard`: the original Kickoff form theme
+ * - `material`: basic version of Google's Material design forms
+ *
+ * Usage: (choose from)
+ * @import "components/forms/form-theme-standard";
+ * @import "components/forms/form-theme-material";
+ */
+@import "components/forms/form-theme-standard";
+
+/**
+ * Custom controls
+ * - Radios/checkboxes
+ * - Select element
+ * - File upload
+ */
+@import "components/forms/forms-custom-radioscheckboxes"; // Radio & checkbox inputs
+@import "components/forms/forms-custom-select"; // Select element
+@import "components/forms/forms-custom-file"; // File input
+
+
+/**
+ * Base form styles
  * =================================
  * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
  * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html

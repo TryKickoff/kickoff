@@ -59,13 +59,9 @@
  * Components
  * See http://trykickoff.com/demos/components.html for more info
  */
-@import "components/forms/form-helpers"; // http://trykickoff.com/demos/forms.html
-@import "components/forms/form-theme-standard"; // or form-theme-material
-@import "components/forms/forms";
-@import "components/forms/forms-custom-radioscheckboxes"; // Radio & checkbox inputs
-@import "components/forms/forms-custom-select";           // Select element
-@import "components/forms/forms-custom-file";             // File input
-@import "kickoff-grid"; // https://github.com/TryKickoff/kickoff-grid.css, http://trykickoff.com/docs/grid.html & http://trykickoff.com/demos/grids.html
+@import "kickoff-fluidVideo"; // https://github.com/mrmartineau/kickoff-fluidVideo.css
+@import "kickoff-grid"; // https://github.com/TryKickoff/kickoff-grid.css - docs: trykickoff.com/docs/grid.html & demo: trykickoff.com/demos/grids.html
+@import "components/forms/forms"; // https://trykickoff.com/demos/forms.html
 @import "components/links";
 @import "components/buttons";
 @import "components/lists";
