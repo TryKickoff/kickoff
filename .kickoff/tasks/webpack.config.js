@@ -24,7 +24,7 @@ const webpackConfig = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				query: {
 					cacheDirectory: true,
 				},
@@ -47,8 +47,6 @@ const webpackConfig = {
  */
 if (config.isRelease) {
 	webpackConfig.plugins.push(
-		new webpack.optimize.DedupePlugin(),
-
 		// Minify the code using Uglify
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
