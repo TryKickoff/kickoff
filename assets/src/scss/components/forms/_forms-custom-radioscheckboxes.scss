@@ -8,10 +8,10 @@
  * Checkbox button example HTML
  *
  *	<label class="control control--custom" for="checkbox1">
- *		<input class="control--custom-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
- *		<span class="control-indicator control-indicator--checkbox"></span>
- *		My Checkbox Label Text
- *	</label>
+		<input class="control--custom-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
+			<span class="control-indicator control-indicator--checkbox"></span>
+			My Checkbox Label Text
+		</label>
  *
  * -------------------------------
  *
@@ -39,6 +39,8 @@ $checkbox-indicator-width: 0.1em;
 	cursor: pointer;
 	user-select: none;
 	padding-left: $custom-input-length + 1em;
+	height: $custom-input-length;
+	line-height: $custom-input-length !important;
 }
 
 // Give inline elements some space to the right

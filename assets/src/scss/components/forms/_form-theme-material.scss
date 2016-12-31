@@ -1,17 +1,37 @@
+/**
+ * Kickoff forms: Material theme
+ * =================================
+ * This is an example theme and does not have the
+ * extensive support that the standard theme does
+ *
+ * Demo: https://codepen.io/mrmartineau/pen/QGwvdL?editors=1000
+ * Usage:
+		<div class="form-controlGroup">
+			<input class="form-input" type="text" name="firstname" id="firstname" required/>
+			<label class="form-label" for="firstname">First name</label>
+			<i class="form-inputBar"></i>
+		</div>
+ *
+ * Contents:
+ * - Theme variables
+ * - Theme styles
+ */
+
 // Form variables
-$input-bgColor            : $color-bg;                // Colour of input background
-$input-borderColor        : #ccc;                // Colour of input borders
-$input-borderColor--focus : $color-primary;      // Colour of input borders when focused
-$form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
-$label-textColor          : lighten($color-text, 20%);         // Text colour of form labels and legends
-$input-textColor          : $color-text;         // Text colour of form inputs
+$input-bgColor            : $color-bg; // Colour of input background
+$input-borderColor        : #ccc; // Colour of input borders
+$input-borderColor--focus : $color-secondary; // Colour of input borders when focused
+$form-actions-bgColor     : #f5f5f5; // Background colour of form actions container (i.e. submit)
+$label-textColor          : lighten($color-text, 20%); // Text colour of form labels and legends
+$input-textColor          : $color-text; // Text colour of form inputs
 $placeholder-textColor    : lighten($color-text, 20%);  // Text colour of input placeholder
 $form-borderRadius        : 0;
 // Messages & form states and alerts
-$color-warning            : #f4aa47;             // base colour for warning input state
-$color-error              : #B94A4D;             // base colour for error input state
-$color-success            : $green;              // base colour for success input state
-$color-info               : $blue;               // base colour for info input state
+$color-warning            : #f4aa47; // base colour for warning input state
+$color-error              : #B94A4D; // base colour for error input state
+$color-success            : $green; // base colour for success input state
+$color-info               : $blue; // base colour for info input state
+
 
 .form {
 	margin: 0 0 $baseline;
@@ -40,12 +60,14 @@ $color-info               : $blue;               // base colour for info input s
 	}
 }
 
+
 /**
  * Form inputs and groups
  */
 .form-controlGroup {
-	margin-top: $baseline / 2;
-	margin-bottom: $baseline / 2;
+	position: relative;
+	margin-top: ko-multiply($baseline, 2);
+	margin-bottom: ko-multiply($baseline, 2);
 }
 
 // Legend collapses margin, so next element is responsible for spacing
@@ -55,17 +77,24 @@ $color-info               : $blue;               // base colour for info input s
 
 // Identify controls by their labels
 .form-label {
-	// margin-bottom: $baseline / 2;
 	color: $label-textColor;
-	@include ko-font-size(micro);
 	font-weight: normal;
+	transition: $default-transition;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	// By default, all labels are above the input,
+	// not inside like true Material
+	// This is so that inputs that are
+	transform: translateY(-100%);
+	font-size: 70%;
 
 	small {
 		font-weight: normal;
 		color: lighten($label-textColor, 30%);
 	}
 }
-
 
 // Any form inputs
 .form-input {
@@ -77,17 +106,9 @@ $color-info               : $blue;               // base colour for info input s
 	color: $input-textColor;
 	font-weight: normal;
 	background-color: $input-bgColor;
-	border-width: 0 0 1px 0;
-	border-color: $input-borderColor;
-	border-style: solid;
 	border-radius: $form-borderRadius !important;
 	background-clip: padding-box;
-	transition: border $default-transition-duration $default-transition-timing;
-
-	&:focus {
-		border-color: $input-borderColor--focus;
-		border-bottom-width: 2px;
-	}
+	border: 0;
 
 	&[type="image"],
 	&[type="checkbox"],
@@ -126,55 +147,66 @@ $color-info               : $blue;               // base colour for info input s
 	// }
 }
 
-.form-input--textarea {}
+.form-input--textarea {
+	min-height: 60px;
+}
+
+// On focus, position the labels above the input
+.form-input:focus:required,
+.form-input:valid:required {
+	~ .form-label {
+		transform: translateY(-100%);
+		font-size: 70%;
+	}
+}
+
+// Style required inputs
+// Position the .form-label down
+.form-input:required {
+	~ .form-label {
+		transform: translateY(0.5em);
+		font-size: 100%;
+	}
+}
+
+.form-input:focus {
+	~ .form-label {
+		color: $input-borderColor--focus;
+	}
+
+	~ .form-inputBar::before {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.form-inputBar {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid $input-borderColor;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -1px;
+		z-index: 2;
+		width: 0;
+		height: 2px;
+		background: $input-borderColor--focus;
+		transition: $default-transition;
+	}
+}
 
 // Set the height of select and file controls to match text inputs
 .form-input--select {
 	// Chrome on Linux and Mobile Safari need background-color
 	background-color: $input-bgColor;
+	border-right: 0;
 }
 
 .form-input-file {
 	@include ko-font-size(base);
-}
-
-/**
- * Checkboxes:
- * =================================
-	<label class="control">
-		<input type="checkbox" value="check1">
-		This is a checkbox
-	</label>
-	<label class="control control--inline">
-		<input type="checkbox" value="check1">
-		This is a checkbox
-	</label>
-
- * Radios:
- * =================================
-	<label class="control">
-		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-		This is a radio
-	</label>
-	<label class="control control--inline">
-		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
-		This is a radio
-	</label>
- */
-.control {
-	input[type="radio"],
-	input[type="checkbox"] {
-		vertical-align: middle;
-		margin-right: .5em;
-		margin-top: -.1em;
-		display: inline;
-		line-height: normal;
-	}
-}
-
-// Radios and checkboxes on same line
-.control--inline {
-	margin-right: 1.5em;
 }
 
 
@@ -223,7 +255,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-warning {
-	@include ko-formFieldState($color-warning);
+	@include ko-formFieldStateMaterial($color-warning);
 }
 
 // Error
@@ -232,7 +264,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-error {
-	@include ko-formFieldState($color-error);
+	@include ko-formFieldStateMaterial($color-error);
 }
 
 // Success
@@ -241,7 +273,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-success {
-	@include ko-formFieldState($color-success);
+	@include ko-formFieldStateMaterial($color-success);
 }
 
 // Info
@@ -250,7 +282,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-controlGroup.has-info {
-	@include ko-formFieldState($color-info);
+	@include ko-formFieldStateMaterial($color-info);
 }
 
 

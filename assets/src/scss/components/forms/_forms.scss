@@ -3,9 +3,12 @@
  * =================================
  * Kickoff's forms has support for themes. See below for info about them.
  *
+ * The styles here are base styles that apply to both themes,
+ * they are more of a reset before you make stylistic amends to form fields
+ *
  */
 
-@import "form-helpers"; // Mixins
+@import "form-helpers"; // Helper mixins
 
 /**
  * Form themes
@@ -193,21 +196,35 @@ input[type="submit"] {
  */
 .control {
 	display: block;
+	line-height: 1;
+
+	& + & {
+		margin-top: ko-multiply($baseline, 0.5);
+	}
+
+	input {
+		vertical-align: top;
+		display: inline;
+		line-height: 1;
+		margin-right: 0.5em;
+	}
 }
 
 // Radios and checkboxes on same line
 .control--inline {
 	display: inline-block;
 	vertical-align: middle;
+
+	& + & {
+		margin-top: 0;
+		margin-left: 1.5em;
+	}
 }
 
 
 /**
  * Form validation messages
  */
-.form-message {
-
-	.form-controlGroup & {
-		display: none;
-	}
+.form-controlGroup .form-message {
+	display: none;
 }

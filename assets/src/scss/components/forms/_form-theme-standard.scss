@@ -1,3 +1,21 @@
+/**
+ * Kickoff forms: Standard theme
+ * ================================= *
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ *
+ * Contents:
+ * - Theme variables
+ * - Theme styles
+ */
+
 // Form variables
 $input-bgColor            : #fff;                // Colour of input background
 $input-borderColor        : #ccc;                // Colour of input borders
@@ -12,6 +30,20 @@ $color-warning            : #f4aa47;             // base colour for warning inpu
 $color-error              : #B94A4D;             // base colour for error input state
 $color-success            : $green;              // base colour for success input state
 $color-info               : $blue;               // base colour for info input state
+
+/**
+ * Generic form styles
+ * =================================
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ */
 
 .form {
 	margin: 0 0 $baseline;
@@ -44,8 +76,8 @@ $color-info               : $blue;               // base colour for info input s
  * Form inputs and groups
  */
 .form-controlGroup {
-	margin-top: $baseline / 2;
-	margin-bottom: $baseline / 2;
+	margin-top: ko-multiply($baseline, 1.5);
+	margin-bottom: ko-multiply($baseline, 1.5);
 }
 
 // Legend collapses margin, so next element is responsible for spacing
@@ -55,9 +87,8 @@ $color-info               : $blue;               // base colour for info input s
 
 // Identify controls by their labels
 .form-label {
-	// margin-bottom: $baseline / 2;
+	// margin-bottom: ko-multiply($baseline, 0.5);
 	color: $label-textColor;
-	font-weight: bold;
 
 	small {
 		font-weight: normal;
@@ -134,45 +165,6 @@ $color-info               : $blue;               // base colour for info input s
 	@include ko-font-size(base);
 }
 
-/**
- * Checkboxes:
- * =================================
-	<label class="control">
-		<input type="checkbox" value="check1">
-		This is a checkbox
-	</label>
-	<label class="control control--inline">
-		<input type="checkbox" value="check1">
-		This is a checkbox
-	</label>
-
- * Radios:
- * =================================
-	<label class="control">
-		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-		This is a radio
-	</label>
-	<label class="control control--inline">
-		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" checked>
-		This is a radio
-	</label>
- */
-.control {
-	input[type="radio"],
-	input[type="checkbox"] {
-		vertical-align: middle;
-		margin-right: .5em;
-		margin-top: -.1em;
-		display: inline;
-		line-height: normal;
-	}
-}
-
-// Radios and checkboxes on same line
-.control--inline {
-	margin-right: 1.5em;
-}
-
 
 /**
  * Form actions
@@ -213,6 +205,7 @@ $color-info               : $blue;               // base colour for info input s
 /**
  * Form field feedback states
  */
+
 // Warning
 .has-warning {
 	color: $color-warning;
@@ -270,40 +263,23 @@ $color-info               : $blue;               // base colour for info input s
 	.form--horizontal {
 		// Increase spacing between groups
 		.form-controlGroup {
-			margin-bottom: $baseline;
-			@include ko-clearfix;
+			display: flex;
 
-			.form-input--fileWrapper {
-				margin-left: 0;
+			> .form-controlGroup-inputWrapper {
+				width: 100%;
 			}
 		}
 
 		// Float the labels left
 		.form-label {
-			float: left;
 			width: 140px;
-			padding-top: 5px;
-			text-align: right;
-		}
-
-		// Move over all input controls and content
-		.form-controlGroup-inputWrapper {
-			margin-left: 160px;
-
-			&:first-child {
-				padding-left: 160px;
-			}
-		}
-
-		// Remove bottom margin on block level help text since that's accounted for on .form--control-group
-		.form-helpBlock {
-			margin-top: $baseline / 2;
-			margin-bottom: 0;
+			margin-right: $baseline;
+			padding-top: 0.6em;
 		}
 
 		// Move over buttons in .form-actions to align with .form-controlGroup-inputWrapper
 		.form-actions {
-			padding-left: 160px;
+			padding-left: 140px + $baseline;
 		}
 	}
 }

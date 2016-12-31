@@ -4,15 +4,15 @@
  * Firefox 39+, IE10+
  *
  *	<div class="form-controlGroup">
- *			<label for="cs-choice" class="form-label">Custom select</label>
- *			<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
- *				<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
- *					<option value="--">Select title</option>
- *					<option value="Mr">Mr</option>
- *					<option value="Mrs">Mrs</option>
- *				</select>
- *			</div>
- *	</div>
+			<label for="cs-choice" class="form-label">Custom select</label>
+			<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+				<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+					<option value="--">Select title</option>
+					<option value="Mr">Mr</option>
+					<option value="Mrs">Mrs</option>
+				</select>
+			</div>
+	</div>
  */
 
 .form-controlGroup-inputWrapper--select {
@@ -28,8 +28,7 @@
 		padding: 0;
 		position: absolute;
 		right: 1.2em;
-		top: 50%;
-		margin-top: -9px;
+		top: 1.2em;
 		z-index: 2;
 
 		/* These hacks make the select behind the arrow clickable in some browsers */
