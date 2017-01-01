@@ -4,6 +4,7 @@
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
   "version": "7.1.0",
   "homepage": "http://trykickoff.com",
+  "repo": "https://github.com/TryKickoff/kickoff/",
   "authors": [
     {
       "name": "Zander Martineau",
@@ -19,7 +20,7 @@
     }
   ],
   "contributors": [
-    "Github contributors <https://github.com/trykickoff/kickoff/graphs/contributors>"
+    "Github contributors <https://github.com/TryKickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
     "start": "gulp serve",
@@ -43,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/trykickoff/kickoff.git"
+    "url": "git://github.com/TryKickoff/kickoff.git"
   },
   "bugs": {
-    "url": "https://github.com/trykickoff/kickoff/issues"
+    "url": "https://github.com/TryKickoff/kickoff/issues"
   },
   "license": "MIT",
   "engines": {
@@ -99,6 +100,7 @@
     "xo": "0.17.1"
   },
   "keywords": [
+    "kickoff",
     "⚽"
   ],
   "babel": {
