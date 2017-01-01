@@ -11,6 +11,6 @@ body {
  */
 .l-container {
 	width: 90%;
-	max-width: $layout-max-width;
+	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
 }
