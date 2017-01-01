@@ -122,8 +122,57 @@
     "ignores": [
       "**/assets/src/js/standalone/**/*.js",
       "**/assets/dist/**/*.js",
-      "_grunt-configs/*.js",
-      "Gruntfile.js"
-    ]
+      ".kickoff/**/*.js",
+      "gulpfile.js"
+    ],
+    "rules": {
+      "comma-dangle": [
+	"error",
+	"always-multiline"
+      ],
+      "xo/filename-case": [
+	"error",
+	{
+	  "case": "camelCase"
+	}
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": [
+	"tab",
+	{
+	  "except": [
+	    "value"
+	  ]
+	}
+      ],
+      "at-rule-empty-line-before": [
+	"always",
+	{
+	  "ignore": [
+	    "blockless-after-same-name-blockless",
+	    "blockless-group"
+	  ]
+	}
+      ],
+      "declaration-empty-line-before": [
+	"never"
+      ],
+      "rule-non-nested-empty-line-before": [
+	"always-multi-line",
+	{
+	  "except": [
+	    "after-single-line-comment"
+	  ],
+	  "ignore": [
+	    "after-comment"
+	  ]
+	}
+      ],
+      "max-empty-lines": 2
+    }
   }
 }
