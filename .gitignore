@@ -12,6 +12,7 @@ assets/dist/**/*
 # - Node modules directory. comment this line to commit them.
 node_modules/*
 
+.eyeglass_cache
 
 # OS or Editor folders
 ._*
