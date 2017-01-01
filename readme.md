@@ -1,31 +1,35 @@
-# 🏈 Kickoff
+![Kickoff](http://i.imgur.com/bfMlVwe.jpg)
+
 > A lightweight front-end framework for creating scalable and performant, responsive sites
 
-[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build status](https://ci.appveyor.com/api/projects/status/g699smb2tsoakc8k/branch/master?svg=true)](https://ci.appveyor.com/project/mrmartineau/kickoff/branch/master) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
-
-![Kickoff](http://i61.tinypic.com/1zyitqe.png)
+[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build status](https://ci.appveyor.com/api/projects/status/g699smb2tsoakc8k/branch/master?svg=true)](https://ci.appveyor.com/project/mrmartineau/kickoff/branch/master) [![Dependency Status](https://dependencyci.com/github/TryKickoff/kickoff/badge)](https://dependencyci.com/github/TryKickoff/kickoff) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)  [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
----
-
 ## Features
-* Mobile-first, responsive philosophy
-* Rock-solid **CSS** framework using **Sass** (`.scss`) preprocessor
- * Starter content styles: [typography](http://trykickoff.com/demos/typography.html), [grids](http://trykickoff.com/demos/grids.html) & [components](http://trykickoff.com/demos/components.html)
- * Starter form element styles ([see demo](http://trykickoff.com/demos/forms.html)): stacked on small-screen to 2-column (if you choose) at the breakpoint of your choice, validation states
- * Lots of helper classes & Sass mixins for many CSS3 features like [media-queries](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss)
-* Simple **Javascript** [boilerplate](https://github.com/TryKickoff/kickoff/blob/master/assets/src/js/script.js) that makes very little assumptions about your chosen style or workflow.
- * JS bundled with [Browserify](http://browserify.org)
- * ES2015/ES6 syntax supported using the Babel transpiler
-* **[Grunt](http://gruntjs.com)** task runner used extensively to ease common development bottlenecks
- * Sass is compiled using [node-sass](https://github.com/sass/node-sass) and we use [Autoprefixer](https://github.com/postcss/autoprefixer) to dynamically add vendor prefixes so you don't even have to think about them :)
- * PostCSS plugins can also be used to transform your CSS
-* Simple server using [BrowserSync](http://browsersync.io)
+|                	| Feature                    	| Description                                                                                   	|
+|----------------	|----------------------------	|-----------------------------------------------------------------------------------------------	|
+| :fast_forward: 	| #webperf                   	| Performance-first, responsive philosophy                                                      	|
+| :oncoming_bus: 	| Rock-solid build tasks     	| We use gulp & webpack to deliver the best task runner & developer experience for your project 	|
+| :eyeglasses:   	| Unopinionated & extendable 	| A few common UI elements, a grid & some other base styles. The rest is up to you.             	|
+| :crystal_ball: 	| Future proof               	| Build complex layouts with flexbox. Our grid                                                  	|
+| :angry:        	| Lean & mean                	| CSS: 8.68 kB gzipped<br> JS: 2 kB gzipped<br> It is a boilerplate after all :wink:                 	|
+
+## Tasks
+|  | Task | Description |
+|---|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|
+| :art: | CSS | `npm run compile:css` - [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Postcss](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano) and more, Source Maps |
+| :elephant: | Javascript | `npm run compile:js` - [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/) |
+| :ferris_wheel: | Images | `npm run compress:images` - Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin) |
+| :fish:	 | Icons | `npm run compile:svg` - Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) |
+| :construction: | Compile | `npm run compile:all` - Compile all the things |
+| :eyes: | Watch | `npm run watch` - Watch all the things |
+| :fire: | Live updating | `npm start` - Basic dev server using [Browsersync](http://www.browsersync.io/) |
+| :shipit: | Production builds | `npm run compile:release`, or add the ` --release` flag to any other task, e.g. `gulp javascript --release` or `gulp css --release` |
 
 ---
 
-## Demos and documentation
+## :memo: Demos and documentation
 Kickoff's demo and documentation site is hosted at [trykickoff.com](http://trykickoff.com/).
 
 ---
@@ -39,7 +43,7 @@ Our Yeoman Generator is the best way to get Kickoff each time you want to start 
 
 ---
 
-## Bugs and feature requests
+## :bug: Bugs and feature requests
 Have a bug or a feature request? Please search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/TryKickoff/kickoff/issues/new).
 
 ---
