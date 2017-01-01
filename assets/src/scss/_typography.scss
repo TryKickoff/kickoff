@@ -1,5 +1,6 @@
 /**
  * Typography
+ * =================================
  * - Base
  * - Paragraphs
  * - Headings
@@ -8,10 +9,8 @@
  * - Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
- * Resources:
- * http://www.gridlover.net/
- * http://modularscale.com/
- * http://lamb.cc/typograph/
+ *
+ * See http://modularscale.com for
  *
  */
 
@@ -19,19 +18,19 @@ html {
 	font-size: $font-size-base-narrow-px;
 	-webkit-text-size-adjust: 100%;
 
-	@include respond-min($bp-rwd-text) {
+	@include media('>mid') {
 		font-size: $font-size-base-px;
 	}
 }
 
 body {
 	font-family: $font-family-base;
-	@include font-size(base);
+	@include ko-font-size(base);
 	line-height: $leading-base;
 	color: $color-text;
 
 	// Add ligatures
-	font-feature-settings: "liga","dlig", "hist";
+	font-feature-settings: "liga", "dlig", "hist";
 	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 
 	// Two ways to smoothen type, they are disabled by default
@@ -50,7 +49,7 @@ body {
  */
 p {
 	font-family: $font-family-base;
-	@include font-size(base);
+	@include ko-font-size(base);
 	margin-top: 0;
 	margin-bottom: $baseline;
 
@@ -61,7 +60,12 @@ p {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin: 0;
 	font-family: $font-family-headings;
 	font-weight: $font-weight-headings;
@@ -77,38 +81,54 @@ h1, h2, h3, h4, h5, h6 {
 
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
-h1, .h1, .alpha {
-	@include font-size(jumbo);
+h1,
+.h1,
+.alpha {
+	@include ko-font-size(jumbo);
 	margin-bottom: $baseline * 2;
 }
 
-h2, .h2, .beta {
-	@include font-size(large);
+h2,
+.h2,
+.beta {
+	@include ko-font-size(large);
 }
 
-h3, .h3, .gamma {
-	@include font-size(mid);
+h3,
+.h3,
+.gamma {
+	@include ko-font-size(mid);
 }
 
-h4, .h4, .delta {
-	@include font-size(base);
+h4,
+.h4,
+.delta {
+	@include ko-font-size(base);
 }
 
-h5, .h5, .epsilon,
-h6, .h6, .zeta {
-	@include font-size(base);
+h5,
+.h5,
+.epsilon,
+h6,
+.h6,
+.zeta {
+	@include ko-font-size(base);
 	margin-bottom: 0;
 }
 
-// h5, .h5, .epsilon {}
-
-// h6, .h6, .zeta {}
-
 // Only give these headings a margin-top if they are after other elements
-* + h1, * + .h1, * + .alpha,
-* + h2, * + .h2, * + .beta,
-* + h3, * + .h3, * + .gamma,
-* + h4, * + .h4, * + .delta {
+* + h1,
+* + .h1,
+* + .alpha,
+* + h2,
+* + .h2,
+* + .beta,
+* + h3,
+* + .h3,
+* + .gamma,
+* + h4,
+* + .h4,
+* + .delta {
 	margin-top: $baseline;
 }
 
@@ -121,11 +141,13 @@ small {
  */
 
 // Emphasis
-strong, b {
+strong,
+b {
 	font-weight: $font-weight-bold;
 }
 
-em, i {
+em,
+i {
 	font-style: italic;
 }
 
@@ -145,7 +167,7 @@ blockquote {
 
 	p {
 		margin-bottom: 0;
-		@include font-size(base);
+		@include ko-font-size(base);
 		font-weight: 300;
 	}
 
@@ -153,7 +175,7 @@ blockquote {
 		display: block;
 		color: lighten(#000, 70%);
 
-		&:before {
+		&::before {
 			content: '\2014 \00A0';
 		}
 	}
@@ -162,8 +184,8 @@ blockquote {
 // Quotes
 q,
 blockquote {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		content: "";
 	}
 }
@@ -186,19 +208,17 @@ mark {
 
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
-sub, sup {
+sub,
+sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
 
-sup { top: -.5em; }
-sub { bottom: -.25em; }
-
-samp {
-	font-family: $font-family-mono;
-}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+samp { font-family: $font-family-mono; }
 
 
 /**
@@ -217,7 +237,7 @@ samp {
 	text-align: right;
 }
 
-@include text-selection($color-selection, $color-selection-bg);
+@include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules
 hr {

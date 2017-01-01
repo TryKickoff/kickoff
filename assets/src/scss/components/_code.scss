@@ -1,5 +1,6 @@
 /**
  * Preformatted code
+ * =================================
  * Code typography styles for the <code> and <pre> elements
  */
 
@@ -16,7 +17,7 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $font-family-mono;
-	@include font-size(small);
+	@include ko-font-size(small);
 	color: $code-textColor;
 	border-radius: 3px;
 	tab-size: 3;

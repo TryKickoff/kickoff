@@ -1,15 +1,12 @@
 /**
  * Tables
  * =================================
- * Index:
  * - Associated Table Variables
  * - Default table Styles
  * – Table modifiers:
  *   - .table--striped
  * – .responsiveTable
  */
-
-// scss-lint:disable SelectorDepth
 
 /**
  * Define associated Table variables
@@ -115,7 +112,7 @@ th {
  * https://github.com/filamentgroup/tablesaw
  */
 .responsiveTable {
-	@include respond-max(mid) {
+	@include media('<mid') {
 		width: 100%;
 		margin-bottom: ($line-height-base * .75) + px;
 		overflow-y: hidden;

@@ -1,5 +1,6 @@
 /**
  * Embedded content
+ * =================================
  */
 
 img {
@@ -7,33 +8,12 @@ img {
 	color: #c00;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
-
-	&.img--left {
-		margin: 0 20px 0 0;
-	}
-
-	&.img--right {
-		margin: 0 0 0 20px;
-	}
 }
-
-svg:not(:root) { overflow: hidden; }
 
 // Images, Flash & video
-img, object, embed, video {
-	max-width: 100%;
-}
-
-/**
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-audio,
-canvas,
-iframe,
 img,
-svg,
+object,
+embed,
 video {
-	vertical-align: middle;
+	max-width: 100%;
 }

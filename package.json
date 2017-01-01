@@ -56,6 +56,11 @@
     "console": "^0.5.2",
     "double-dollar": "^1.0.0",
     "lite-ready": "^1.0.4"
+    "include-media": "1.4.9",
+    "kickoff-fluidVideo.css": "1.1.0",
+    "kickoff-grid.css": "1.1.1",
+    "kickoff-utils.scss": "2.0.3",
+    "normalize-scss": "6.0.0",
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
