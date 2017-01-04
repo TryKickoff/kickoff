@@ -1,9 +1,14 @@
 import ready from 'lite-ready';
 import $$ from 'double-dollar';
 import copy from 'copy-js/src/copy';
+import svg4everybody from 'svg4everybody'; // https://github.com/jonathantneal/svg4everybody
 
 ready(() => {
 	copyText();
+
+	svg4everybody({
+		polyfill: true, // polyfill <use> elements for External Content
+	});
 });
 
 /**
@@ -31,4 +36,3 @@ function copyText() {
 		}, false);
 	});
 }
-
