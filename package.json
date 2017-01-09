@@ -83,7 +83,7 @@
     "gulp-imagemin": "3.1.1",
     "gulp-postcss": "6.2.0",
     "gulp-sass": "2.3.2",
-    "gulp-sourcemaps": "2.2.1",
+    "gulp-sourcemaps": "2.2.2",
     "gulp-stylelint": "3.7.0",
     "gulp-svgmin": "1.2.3",
     "gulp-svgstore": "6.1.0",
@@ -106,10 +106,10 @@
   "babel": {
     "presets": [
       [
-	"es2015",
-	{
-	  "modules": false
-	}
+        "es2015",
+        {
+          "modules": false
+        }
       ]
     ],
     "plugins": [
@@ -129,14 +129,14 @@
     ],
     "rules": {
       "comma-dangle": [
-	"error",
-	"always-multiline"
+        "error",
+        "always-multiline"
       ],
       "xo/filename-case": [
-	"error",
-	{
-	  "case": "camelCase"
-	}
+        "error",
+        {
+          "case": "camelCase"
+        }
       ]
     }
   },
@@ -144,35 +144,35 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "indentation": [
-	"tab",
-	{
-	  "except": [
-	    "value"
-	  ]
-	}
+        "tab",
+        {
+          "except": [
+            "value"
+          ]
+        }
       ],
       "at-rule-empty-line-before": [
-	"always",
-	{
-	  "ignore": [
-	    "blockless-after-same-name-blockless",
-	    "blockless-group"
-	  ]
-	}
+        "always",
+        {
+          "ignore": [
+            "blockless-after-same-name-blockless",
+            "blockless-group"
+          ]
+        }
       ],
       "declaration-empty-line-before": [
-	"never"
+        "never"
       ],
       "rule-non-nested-empty-line-before": [
-	"always-multi-line",
-	{
-	  "except": [
-	    "after-single-line-comment"
-	  ],
-	  "ignore": [
-	    "after-comment"
-	  ]
-	}
+        "always-multi-line",
+        {
+          "except": [
+            "after-single-line-comment"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
       ],
       "max-empty-lines": 2
     }
