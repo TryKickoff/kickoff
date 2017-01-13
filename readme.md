@@ -12,20 +12,29 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
 | :fast_forward: 	| #webperf                   	| Performance-first, responsive philosophy                                                      	|
 | :oncoming_bus: 	| Rock-solid build tasks     	| We use gulp & webpack to deliver the best task runner & developer experience for your project 	|
 | :eyeglasses:   	| Unopinionated & extendable 	| A few common UI elements, a grid & some other base styles. The rest is up to you.             	|
-| :crystal_ball: 	| Future proof               	| Build complex layouts with flexbox. Our grid                                                  	|
+| :crystal_ball: 	| Future proof               	| Build complex layouts with flexbox & use ES2015 (ES6) for your javascript.                                                  	|
 | :angry:        	| Lean & mean                	| CSS: 8.68 kB gzipped<br> JS: 2 kB gzipped<br> It is a boilerplate after all :wink:                 	|
 
 ## Tasks
-|  | Task | Description |
-|---|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|
-| :art: | CSS | `npm run compile:css` - [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Postcss](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano) and more, Source Maps |
-| :elephant: | Javascript | `npm run compile:js` - [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/) |
-| :ferris_wheel: | Images | `npm run compress:images` - Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin) |
-| :fish:	 | Icons | `npm run compile:svg` - Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) |
-| :construction: | Compile | `npm run compile:all` - Compile all the things |
-| :eyes: | Watch | `npm run watch` - Watch all the things |
-| :fire: | Live updating | `npm start` - Basic dev server using [Browsersync](http://www.browsersync.io/) |
-| :shipit: | Production builds | `npm run compile:release`, or add the ` --release` flag to any other task, e.g. `gulp javascript --release` or `gulp css --release` |
+| Command | Description |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `npm run compile:css` | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Postcss](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps & more..  |
+| `npm run compile:js` | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/) |
+| `npm run compile:svg` | Auto-generated [SVG sprites](https://github.com/w0rm/gulp-svgstore) |
+| `npm run compress:images` | Image compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin) |
+| `npm run compile:all` | Compile all the things |
+| `npm run watch` | Watch all files for changes |
+| `npm start` | Basic dev server using [Browsersync](http://www.browsersync.io/) |
+| `npm run lint:js` | Lint JS using [xo](https://github.com/sindresorhus/xo) |
+| `npm run fix:js` | Fix JS linting issues using [xo](https://github.com/sindresorhus/xo) |
+| `npm run lint:css` | Lint CSS using [stylelint](https://github.com/stylelint/stylelint). We use the [https://github.com/stylelint/stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rules for our linting |
+| `npm run compile:release` | Add the `--release` flag to any other task, e.g. `gulp javascript --release` or `gulp css --release` |
+| `npm run deploy` | Compile all assets for production deployment |
+| `npm test` | Run javascript and css tests |
+| `npm run release-patch` | Creates a patch release using [release-it](https://github.com/webpro/release-it)  |
+| `npm run release-minor` | Creates a minor release using [release-it](https://github.com/webpro/release-it) |
+| `npm run release-major` | Creates a major release using [release-it](https://github.com/webpro/release-it) |
+| `npm run release-premajor` | Creates a premajor release using [release-it](https://github.com/webpro/release-it) |
 
 ---
 
