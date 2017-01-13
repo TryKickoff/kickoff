@@ -41,7 +41,7 @@ const webpackConfig = {
 };
 
 /**
- * The below plugins are used when `RELEASE=true ...` is used
+ * The below plugins are used when the `--release` flag is used
  * - minification using uglify
  * - add a banner using the banner plugin
  */
