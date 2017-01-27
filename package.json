@@ -24,6 +24,7 @@
   ],
   "scripts": {
     "start": "gulp serve",
+    "watch": "gulp watch",
     "predeploy": "npm prune && npm install",
     "deploy": "npm run compile:release",
     "test": "npm run lint:js && npm run lint:css",
@@ -33,7 +34,9 @@
     "compile:js": "gulp javascript",
     "compile:svg": "gulp svg",
     "compress:images": "gulp images",
-    "watch": "gulp watch",
+    "clean:all": "gulp clean",
+    "copy:all": "gulp copy",
+    "copy": "gulp copy",
     "lint:js": "xo",
     "lint:css": "gulp test:css",
     "fix:js": "xo --fix",
