@@ -49,9 +49,6 @@ if (config.isRelease) {
 	webpackConfig.plugins.push(
 		// Minify the code using Uglify
 		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-			},
 			output: {
 				comments: false,
 			},
