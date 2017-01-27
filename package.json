@@ -136,10 +136,7 @@
         "always-multiline"
       ],
       "xo/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
+	"off"
       ]
     }
   },
