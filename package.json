@@ -2,13 +2,13 @@
   "name": "kickoff-framework",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
-  "version": "8.0.0-rc.2",
+  "version": "8.0.0-rc.3",
   "homepage": "http://trykickoff.com",
   "repo": "https://github.com/TryKickoff/kickoff/",
   "authors": [
     {
       "name": "Zander Martineau",
-      "url": "http://martineau.tv"
+      "url": "http://zander.wtf"
     },
     {
       "name": "Ashley Nolan",
@@ -136,7 +136,7 @@
         "always-multiline"
       ],
       "xo/filename-case": [
-	"off"
+        "off"
       ]
     }
   },
