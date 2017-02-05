@@ -9,7 +9,7 @@ const svgstore = require('gulp-svgstore');
 const config = require('../config');
 
 gulp.task('svg', () => {
-	return gulp.src([`${config.svg.srcDir}/*`])
+	return gulp.src([`${config.svg.srcDir}/*.svg`])
 		.pipe(
 			imagemin([
 				imagemin.svgo({
