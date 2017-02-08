@@ -36,4 +36,11 @@
 .icon--youtube { color: $color-youtube; }
 .icon--whatsapp { color: $color-whatsapp; }
 .icon--email { color: $blue; }
-.icon--kickoff { color: #fff; }
+.icon--kickoff {
+	fill: $color-kickoff-blue;
+	color: $color-kickoff-orange;
+}
+.icon--tmw {
+	color: #ef7521;
+	fill: #8a8b8c;
+}

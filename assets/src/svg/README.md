@@ -6,7 +6,7 @@ SVG's in Kickoff are converted into an svg spritesheet. They are then used by us
 ```html
 <!-- source file: `logo-twitter.svg` -->
 <svg role="img" title="Twitter" class="icon icon--large">
-	<use xlink:href="/assets/dist/img/icons.svg#logo-twitter"/>
+	<use xlink:href="/assets/dist/svg/svg.svg#logo-twitter"/>
 </svg>
 ```
 
