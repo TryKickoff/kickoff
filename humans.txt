@@ -6,6 +6,7 @@
     Zander Martineau -- @MrMartineau
     Ashley Nolan     -- @AshNolan_
     Nic Bell         -- @nicbell
+    JP Driver        -- @jpdriver
     Contributors     -- https://github.com/TryKickoff/kickoff/graphs/contributors
 
 
@@ -14,7 +15,5 @@
     HTML
     CSS
     Sass
-    Grunt.js
-    BrowserSync
     NPM
-    Browserify
+    Webpack
