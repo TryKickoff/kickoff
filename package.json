@@ -2,7 +2,7 @@
   "name": "kickoff-framework",
   "title": "Kickoff",
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
-  "version": "8.0.0-rc.3",
+  "version": "8.0.0",
   "homepage": "http://trykickoff.com",
   "repo": "https://github.com/TryKickoff/kickoff/",
   "authors": [
