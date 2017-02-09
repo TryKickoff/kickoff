@@ -2,13 +2,10 @@
  * Global build task vars
  * Both Webpack and Gulp use these vars. Change as much as you like :)
  */
-const gutil = require('gulp-util');
-const pkg = require('../package');
+const packageJson = require('package.json');
 
 const ConfigOptions = function () {
 	const config = this;
-
-	config.isRelease = (gutil.env.release ? true : false);
 
 	config.srcDir = './assets/src'; // config.srcDir
 	config.distDir = './assets/dist'; // config.distDir
@@ -60,13 +57,6 @@ const ConfigOptions = function () {
 		distDir: `${config.distDir}/fonts`, // config.fonts.distDir
 	};
 
-	config.gulp = {
-		// Reports which file was changed
-		onChange : function(evt) {
-			gutil.log( gutil.colors.cyan.bold('❯❯ File: ' + evt.path.replace(new RegExp('/.*(?=/' + config.srcDir.substr(2) + ')/'), '')), 'was', gutil.colors.magenta(evt.type) );
-		}
-	};
-
 	// Banners and info
 	config.misc = {
 		banner: `/**
@@ -76,9 +66,9 @@ const ConfigOptions = function () {
  * ██╔═██╗ ██║██║     ██╔═██╗ ██║   ██║██╔══╝  ██╔══╝
  * ██║  ██╗██║╚██████╗██║  ██╗╚██████╔╝██║     ██║
  * ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
- * ${pkg.title} v${pkg.version}
- * ${pkg.homepage}
- * ${pkg.repo}
+ * ${packageJson.title} v${packageJson.version}
+ * ${packageJson.homepage}
+ * ${packageJson.repo}
  */
 `,
 

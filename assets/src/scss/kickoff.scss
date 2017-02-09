@@ -36,8 +36,8 @@
 /*
  * Mixins, helpers and functions
  */
-@import "kickoff-utils"; // From github.com/mrmartineau/kickoff-utils.scss
-@import "include-media"; // From include-media.com
+@import "~kickoff-utils.scss/scss/index"; // From github.com/mrmartineau/kickoff-utils.scss
+@import "~include-media/dist/_include-media"; // From include-media.com
 
 
 /**
@@ -67,8 +67,8 @@
  *
  * Note: place all 3rd party components at the top of the list
  */
-@import "kickoff-fluidVideo"; // https://github.com/mrmartineau/kickoff-fluidVideo.css
-@import "kickoff-grid"; // https://github.com/TryKickoff/kickoff-grid.css - docs: trykickoff.com/docs/grid.html & demo: trykickoff.com/demos/grids.html
+@import "~kickoff-fluidVideo.css"; // https://github.com/mrmartineau/kickoff-fluidVideo.css
+@import "~kickoff-grid.css"; // https://github.com/TryKickoff/kickoff-grid.css - docs: trykickoff.com/docs/grid.html & demo: trykickoff.com/demos/grids.html
 @import "components/forms/forms"; // https://trykickoff.com/demos/forms.html
 @import "components/links";
 @import "components/buttons";
