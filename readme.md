@@ -17,21 +17,23 @@ Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Za
 
 ## Tasks
 | Command | Description |
-|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `npm run compile:css` | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Postcss](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps & more..  |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `npm start` | Basic dev server using [Browsersync](http://www.browsersync.io/) |
+| `npm run watch` | Watch all files for changes |
+| `npm run deploy` | Install all dependencies and compile all assets for production deployment |
+| `npm run compile:all` | Compile the CSS & JS, compress the images and run any other compilation tasks needed to run your app |
+| `npm run compile:release` | Add the `--release` flag to any other task, e.g. `gulp javascript --release` or `gulp css --release` |
+| `npm run compile:css` | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Postcss](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps & more.. |
 | `npm run compile:js` | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/) |
 | `npm run compile:svg` | Auto-generated [SVG sprites](https://github.com/w0rm/gulp-svgstore) |
 | `npm run compress:images` | Image compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin) |
-| `npm run compile:all` | Compile all the things |
-| `npm run watch` | Watch all files for changes |
-| `npm start` | Basic dev server using [Browsersync](http://www.browsersync.io/) |
 | `npm run lint:js` | Lint JS using [xo](https://github.com/sindresorhus/xo) |
 | `npm run fix:js` | Fix JS linting issues using [xo](https://github.com/sindresorhus/xo) |
 | `npm run lint:css` | Lint CSS using [stylelint](https://github.com/stylelint/stylelint). We use the [https://github.com/stylelint/stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rules for our linting |
-| `npm run compile:release` | Add the `--release` flag to any other task, e.g. `gulp javascript --release` or `gulp css --release` |
-| `npm run deploy` | Compile all assets for production deployment |
 | `npm test` | Run javascript and css tests |
-| `npm run release-patch` | Creates a patch release using [release-it](https://github.com/webpro/release-it)  |
+| `npm run clean:all` | Clean the compiled files |
+| `npm run copy:all` | Run the copy tasks - useful for things like webfonts etc |
+| `npm run release-patch` | Creates a patch release using [release-it](https://github.com/webpro/release-it) |
 | `npm run release-minor` | Creates a minor release using [release-it](https://github.com/webpro/release-it) |
 | `npm run release-major` | Creates a major release using [release-it](https://github.com/webpro/release-it) |
 | `npm run release-premajor` | Creates a premajor release using [release-it](https://github.com/webpro/release-it) |
@@ -43,7 +45,7 @@ Kickoff's demo and documentation site is hosted at [trykickoff.com](http://tryki
 
 ---
 
-## ![Kickoff Yeoman generator](http://i.imgur.com/rWftxao.png?1) Yeoman generator
+## Yeoman generator
 Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project, visit [trykickoff.com/docs/yeoman.html](http://trykickoff.com/learn/yeoman.html) for more info.
 
 ---
@@ -60,19 +62,21 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 ## Browser compatibility
 Kickoff has been tested in the following browsers:
 
-| [Chrome](https://www.google.com/chrome/) (latest)                                                               | [Firefox](https://www.mozilla.org/en-GB/firefox/new/) (latest)                                                     | [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer_9) (9+)                                                       | [Safari](https://www.apple.com/safari/) (latest)                                                                | [Safari (iOS)](https://www.apple.com/safari/) (latest)                                                                 | [Opera](https://www.opera.com/) (latest)                                                                     |
-|:---------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------:|
-| <img src="https://github.com/alrra/browser-logos/raw/master/chrome/chrome_256x256.png" width="80" alt="Chrome"> | <img src="https://github.com/alrra/browser-logos/raw/master/firefox/firefox_256x256.png" width="80" alt="Firefox"> | <img src="https://github.com/alrra/browser-logos/raw/master/internet-explorer/internet-explorer_256x256.png" width="80" alt="IE"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari/safari_256x256.png" width="80" alt="Safari"> | <img src="https://github.com/alrra/browser-logos/raw/master/safari-ios/safari-ios_256x256.png" width="80" alt="Safari">| <img src="https://github.com/alrra/browser-logos/raw/master/opera/opera_256x256.png" width="80" alt="Opera"> |
+| [Chrome](https://www.google.com/chrome/) (latest) | [Firefox](https://www.mozilla.org/en-GB/firefox/new/) (latest) | [Safari](https://www.apple.com/safari/) (latest) | [Edge](http://www.microsoft.com/en-us/windows/microsoft-edge) (latest) | [Opera](https://www.opera.com/) (latest) |
+|:----------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------:|------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------:|
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_64x64.png" width="48" alt="Chrome"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_64x64.png" width="48" alt="Firefox"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_64x64.png" width="48" alt="Safari"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_64x64.png" alt="Microsoft Edge"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_64x64.png" width="48" alt="Opera"> |
+
+We also support older versions of Internet Explorer but the support is limited. For example, the Kickoff grid relies on flexbox so Modernizr is needed to detect for it and then we can provide a fallback.
 
 ---
 
 ## Maintainers and contributors
-|                           Zander Martineau                          |                             Ashley Nolan                             |                              Nic Bell                             |
+| Zander Martineau | Ashley Nolan | Nic Bell |
 |:-------------------------------------------------------------------:|:--------------------------------------------------------------------:|:-----------------------------------------------------------------:|
 | ![Zander](https://avatars0.githubusercontent.com/u/64883?v=3&s=100) | ![Ashley](https://avatars3.githubusercontent.com/u/805184?v=3&s=100) | ![Nic](https://avatars3.githubusercontent.com/u/151842?v=3&s=100) |
-| [Twitter](http://twitter.com/mrmartineau)                           | [Twitter](http://twitter.com/AshNolan_)                              | [Twitter](http://twitter.com/nicbell)                                     |
-| [Github](https://github.com/mrmartineau/)                           | [Github](https://github.com/ashleynolan)                             | [Github](https://github.com/nicbell/)                             |
-| [Site](http://martineau.tv)                                         | [Site](http://ashleynolan.co.uk)                                     | [Site](http://nicbell.net)                                        |
+| [Twitter](http://twitter.com/mrmartineau) | [Twitter](http://twitter.com/AshNolan_) | [Twitter](http://twitter.com/nicbell) |
+| [Github](https://github.com/mrmartineau/) | [Github](https://github.com/ashleynolan) | [Github](https://github.com/nicbell/) |
+| [Site](http://zander.wtf) | [Site](http://ashleynolan.co.uk) | [Site](http://nicbell.net) |
 
 ### Community
 If you're using Kickoff we'd love to hear about it; please e-mail us at trykickoff@gmail.com
@@ -90,4 +94,4 @@ For transparency into our release cycle and in striving to maintain backward com
 ### Sponsored by
 ![TMW Unlimited...](http://i.imgur.com/KIUIgi8.png?1)
 
-Kickoff was created by Ash and Zander while working at TMW. TMW continue to provide sponsorship for the development of the project as well as trykickoff.com domain renewals and stickers.
+Kickoff was created by Ash and Zander while working at TMW. TMW continue to provide sponsorship for the development of the project as well as trykickoff.com domain renewals, stickers etc.
