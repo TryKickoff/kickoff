@@ -27,7 +27,7 @@
     "watch": "gulp watch",
     "predeploy": "npm prune && npm install",
     "deploy": "npm run compile:release",
-    "test": "npm run compile",
+    "test": "npm run compile:all",
     "compile:release": "gulp compile --release",
     "compile:all": "gulp compile",
     "compile:css": "gulp css",
