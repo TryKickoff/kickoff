@@ -4,8 +4,8 @@
 
 
 # Comment these if we are building js/Sass on the server
-assets/dist/**/*
-**/*.map
+# assets/dist/**/*
+# **/*.map
 
 
 # Dependencies

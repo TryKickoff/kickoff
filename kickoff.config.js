@@ -2,7 +2,7 @@
  * Global build task vars
  * Both Webpack and Gulp use these vars. Change as much as you like :)
  */
-const packageJson = require('package.json');
+const packageJson = require('./package.json');
 
 const ConfigOptions = function () {
 	const config = this;

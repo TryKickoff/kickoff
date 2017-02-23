@@ -23,12 +23,14 @@
     "Github contributors <https://github.com/TryKickoff/kickoff/graphs/contributors>"
   ],
   "scripts": {
-    "deploy": "npm run compile:release",
+    "build": "npm run compile:all && npm run standalone",
+    "deploy": "npm run compile:release && npm run standalone",
     "test": "npm run lint:js && npm run lint:css",
-    "compile": "webpack",
     "compile:release": "webpack -p",
+    "compile:all": "webpack",
     "lint:js": "xo",
-    "fix:js": "xo --fix"
+    "fix:js": "xo --fix",
+    "standalone": "cp -R assets/src/js/standalone assets/dist/js/standalone"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,8 @@
   },
   "dependencies": {
     "console": "0.5.2",
+    "copy-js": "0.1.1",
+    "double-dollar": "1.0.0",
     "include-media": "1.4.9",
     "kickoff-fluidVideo.css": "1.1.0",
     "kickoff-grid.css": "1.1.1",
@@ -97,8 +101,7 @@
     "ignores": [
       "**/assets/src/js/standalone/**/*.js",
       "**/assets/dist/**/*.js",
-      ".kickoff/**/*.js",
-      "gulpfile.js"
+      ".kickoff/**/*.js"
     ],
     "rules": {
       "comma-dangle": [

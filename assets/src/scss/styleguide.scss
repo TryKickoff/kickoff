@@ -2,11 +2,11 @@
  * Kickoff Styleguide
  * =================================
  */
-@import "kickoff-utils"; // https://github.com/mrmartineau/kickoff-utils.scss
-@import "include-media"; // http://include-media.com
+@import "~kickoff-utils.scss/scss/index"; // https://github.com/mrmartineau/kickoff-utils.scss
+@import "~include-media/dist/_include-media"; // http://include-media.com
 @import "color-palette";
 @import "variables";
-@import "kickoff-grid";  // https://github.com/mrmartineau/kickoff-grid.css
+@import "~kickoff-grid.css";  // https://github.com/mrmartineau/kickoff-grid.css
 
 $styleguide-color-primary: $color-primary;
 $styleguide-type: $font-family-system;
