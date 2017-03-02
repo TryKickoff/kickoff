@@ -67,7 +67,7 @@
     "kickoff-welcome.js": "1.4.0",
     "lite-ready": "1.0.4",
     "normalize-scss": "6.0.0",
-    "svg4everybody": "2.1.5"
+    "svg4everybody": "2.1.6"
   },
   "devDependencies": {
     "autoprefixer": "6.7.6",
