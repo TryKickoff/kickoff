@@ -10,6 +10,7 @@ const gutil = require('gulp-util');
 const banner = require('gulp-banner');
 const filesizegzip = require('filesizegzip');
 const tap = require('gulp-tap');
+const rename = require('gulp-rename');
 
 // PostCSS plugins
 const autoprefixer = require('autoprefixer');
@@ -56,6 +57,11 @@ gulp.task('css', () => {
 		// Write sourcemaps
 		.pipe(
 			config.isRelease ? gutil.noop() : sourcemaps.write()
+		)
+
+		// Rename dist file based on config
+		.pipe(
+			rename(config.css.distFile + '.css')
 		)
 
 		// Output file-size
