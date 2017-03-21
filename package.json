@@ -98,7 +98,7 @@
     "release-it": "^2.5.4",
     "stylelint": "7.9.0",
     "stylelint-config-standard": "16.0.0",
-    "webpack": "2.2.1",
+    "webpack": "2.3.0",
     "xo": "0.18.0"
   },
   "keywords": [
