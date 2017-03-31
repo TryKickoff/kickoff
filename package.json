@@ -76,7 +76,7 @@
     "babel-plugin-transform-object-assign": "6.22.0",
     "babel-preset-es2015": "6.24.0",
     "browser-sync": "2.18.8",
-    "case-sensitive-paths-webpack-plugin": "1.1.4",
+    "case-sensitive-paths-webpack-plugin": "2.0.0",
     "cssnano": "3.10.0",
     "del": "2.2.2",
     "eyeglass": "1.2.1",
