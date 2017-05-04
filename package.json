@@ -93,7 +93,7 @@
     "gulp-tap": "1.0.1",
     "gulp-util": "3.0.8",
     "imagemin-pngquant": "5.0.0",
-    "opn": "4.0.2",
+    "opn": "5.0.0",
     "postcss-flexbugs-fixes": "2.1.1",
     "release-it": "^2.5.4",
     "stylelint": "7.10.1",
