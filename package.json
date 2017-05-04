@@ -90,7 +90,7 @@
     "gulp-stylelint": "3.9.0",
     "gulp-svgmin": "1.2.3",
     "gulp-svgstore": "6.1.0",
-    "gulp-tap": "0.4.2",
+    "gulp-tap": "1.0.1",
     "gulp-util": "3.0.8",
     "imagemin-pngquant": "5.0.0",
     "opn": "4.0.2",
