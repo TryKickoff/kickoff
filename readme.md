@@ -7,6 +7,8 @@
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
 ## Features
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/TryKickoff/kickoff.svg)](https://greenkeeper.io/)
 |                	| Feature                    	| Description                                                                                   	|
 |----------------	|----------------------------	|-----------------------------------------------------------------------------------------------	|
 | :fast_forward: 	| #webperf                   	| Performance-first, responsive philosophy                                                      	|
