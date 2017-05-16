@@ -4,7 +4,6 @@
   "description": "A lightweight front-end framework for creating scalable, responsive websites",
   "version": "8.0.0",
   "homepage": "http://trykickoff.com",
-  "repo": "https://github.com/TryKickoff/kickoff/",
   "authors": [
     {
       "name": "Zander Martineau",
@@ -47,7 +46,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/TryKickoff/kickoff.git"
+    "url": "git://github.com/TryKickoff/kickoff.git",
+    "page": "https://github.com/TryKickoff/kickoff/"
   },
   "bugs": {
     "url": "https://github.com/TryKickoff/kickoff/issues"

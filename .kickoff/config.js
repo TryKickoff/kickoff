@@ -78,7 +78,7 @@ const ConfigOptions = function () {
  * ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
  * ${pkg.title} v${pkg.version}
  * ${pkg.homepage}
- * ${pkg.repo}
+ * ${pkg.repository.page}
  */
 `,
 
