@@ -9,47 +9,36 @@
  * - Utilities
  *
  * Body font size, leadings etc have been set in _variables.scss
- *
- * See http://modularscale.com for
- *
  */
 
 html {
-	font-size: $font-size-base-narrow-px;
+	font-size: #{$font-size-base - 2}px;
 	-webkit-text-size-adjust: 100%;
+	// font-variant-ligatures: common-ligatures;
+	-webkit-font-smoothing: antialiased;
 
-	@include media('>mid') {
-		font-size: $font-size-base-px;
+	// This needs to come after -webkit-font-smoothing
+	// stylelint-disable-next-line declaration-block-properties-order
+	-moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+
+	@include media('>m') {
+		font-size: #{$font-size-base}px;
 	}
 }
 
+html,
 body {
 	font-family: $font-family-base;
-	@include ko-font-size(base);
 	line-height: $leading-base;
-	color: $color-text;
-
-	// Add ligatures
-	font-feature-settings: "liga", "dlig", "hist";
-	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
-
-	// Two ways to smoothen type, they are disabled by default
-	// Enable only one of them if you need them
-	// 1.
-	// -webkit-font-smoothing: antialiased;
-	//    -moz-font-smoothing: antialiased;
-	// font-smooth:always;
-
-	// 2.
-	// opacity: 0.99;
+	color: ko-color(text);
 }
 
 /**
  * Paragraphs
  */
 p {
-	font-family: $font-family-base;
-	@include ko-font-size(base);
 	margin-top: 0;
 	margin-bottom: $baseline;
 
@@ -66,69 +55,65 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
 	font-family: $font-family-headings;
 	font-weight: $font-weight-headings;
 	line-height: $line-height-headings;
-	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	margin-top: 0;
 	margin-bottom: $baseline;
-
-	small {
-		font-weight: normal;
-	}
 }
 
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
-h1,
-.h1,
-.alpha {
-	@include ko-font-size(jumbo);
+h1 {
+	font-size: ko-rem(xl);
 	margin-bottom: $baseline * 2;
+
+	@include media('>m') {
+		font-size: ko-rem(xxl);
+	}
 }
 
-h2,
-.h2,
-.beta {
-	@include ko-font-size(large);
+h2 {
+	font-size: ko-rem(l);
+
+	@include media('>m') {
+		font-size: ko-rem(xl);
+	}
 }
 
-h3,
-.h3,
-.gamma {
-	@include ko-font-size(mid);
+h3 {
+	font-size: ko-rem(m);
+
+	@include media('>m') {
+		font-size: ko-rem(l);
+	}
 }
 
-h4,
-.h4,
-.delta {
-	@include ko-font-size(base);
+h4 {
+	font-size: ko-rem(s);
+
+	@include media('>m') {
+		font-size: ko-rem(m);
+	}
 }
 
 h5,
-.h5,
-.epsilon,
-h6,
-.h6,
-.zeta {
-	@include ko-font-size(base);
+h6 {
+	font-size: ko-rem(s);
 	margin-bottom: 0;
+
+	@include media('>m') {
+		font-size: ko-rem(m);
+	}
 }
 
-// Only give these headings a margin-top if they are after other elements
+// Only give headings a margin-top if they are after other elements
 * + h1,
-* + .h1,
-* + .alpha,
 * + h2,
-* + .h2,
-* + .beta,
 * + h3,
-* + .h3,
-* + .gamma,
 * + h4,
-* + .h4,
-* + .delta {
+* + h5,
+* + h6 {
 	margin-top: $baseline;
 }
 
@@ -167,7 +152,7 @@ blockquote {
 
 	p {
 		margin-bottom: 0;
-		@include ko-font-size(base);
+		font-size: ko-rem(m);
 		font-weight: 300;
 	}
 
@@ -190,22 +175,6 @@ blockquote {
 	}
 }
 
-cite {
-	font-style: normal;
-}
-
-// Addresses styling not present in S5, Chrome
-dfn {
-	font-style: italic;
-}
-
-// Addresses styling not present in IE6/7/8/9
-mark {
-	background: $yellow;
-	padding: 2px 4px;
-	border-radius: 3px;
-}
-
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
 sub,
@@ -218,38 +187,14 @@ sup {
 
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
-samp { font-family: $font-family-mono; }
-
-
-/**
- * Utilities
- */
-.text-centre, // British or US English spellings..
-.text-center {
-	text-align: center;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-right {
-	text-align: right;
-}
+samp { font-family: ko-font(mono); }
 
 @include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules
 hr {
-	margin: ($baseline) 0;
+	margin: $baseline 0;
 	border: 0;
 	height: 1px;
-	background-color: $hr-color;
-}
-
-// https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
-.hyphenate {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	hyphens: auto;
+	background-color: ko-color(dark);
 }
