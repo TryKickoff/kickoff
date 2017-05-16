@@ -30,6 +30,7 @@
     "compile:release": "gulp compile --release",
     "compile:all": "gulp compile",
     "compile:css": "gulp css",
+    "compile:css:debug": "DEBUG=* gulp css",
     "compile:js": "gulp javascript",
     "compile:svg": "gulp svg",
     "compress:images": "gulp images",
