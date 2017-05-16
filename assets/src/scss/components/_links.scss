@@ -6,23 +6,19 @@
 a {
 	transition: $default-transition;
 
-	&, &:link {
-		color: $color-link-default;
-		text-decoration: none;
-	}
-
+	&,
+	&:link,
 	&:visited {
-		color: $color-link-visited;
+		color: ko-color(link);
 		text-decoration: none;
 	}
 
-	&:hover, &:focus {
-		color: $color-link-hover;
-		//text-decoration: underline;
+	&:hover,
+	&:focus {
+		color: ko-color(link, over);
 	}
 
 	&:active {
-		color: $color-link-active;
-		//text-decoration: underline;
+		color: ko-color(link, over);
 	}
 }

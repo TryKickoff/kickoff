@@ -11,15 +11,15 @@
 /**
  * Define associated Table variables
  */
-$table-bgColor                : $color-bg !default; // Default background color used for all tables.
-$table-bgColor--accent        : #f9f9f9 !default; // Background color used for `.table-striped`.
-$table-bgColor--hover         : inherit !default; // Background color used for `.table-hover` – set to 'inherit' by default (so no hover effect)
-$table-borderColor            : #ccc !default; // Border color for table and cell borders.
+$table-bgColor: ko-color(background) !default; // Default background color used for all tables.
+$table-bgColor--accent: #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bgColor--hover: inherit !default; // Background color used for `.table-hover` – set to 'inherit' by default (so no hover effect)
+$table-borderColor: #ccc !default; // Border color for table and cell borders.
 
 /**
  * Customizes the `.table` component with basic values, each used across all table variations.
  */
-$table-cell-padding           : 8px !default; // Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 8px !default; // Padding for `<th>`s and `<td>`s.
 
 
 // Baseline styles
@@ -83,7 +83,7 @@ table {
 	// Nesting
 	& table,
 	& .table {
-		background-color: $color-bg;
+		background-color: ko-color(background);
 	}
 }
 
@@ -112,7 +112,7 @@ th {
  * https://github.com/filamentgroup/tablesaw
  */
 .responsiveTable {
-	@include media('<mid') {
+	@include media('<m') {
 		width: 100%;
 		margin-bottom: ($line-height-base * .75) + px;
 		overflow-y: hidden;

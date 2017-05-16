@@ -8,10 +8,10 @@
 @import "variables";
 @import "kickoff-grid";  // https://github.com/mrmartineau/kickoff-grid.css
 
-$styleguide-color-primary: $color-primary;
-$styleguide-type: $font-family-system;
+$styleguide-color-primary: ko-color(primary);
+$styleguide-type: ko-font(system);
 
-@import "styleguide/swatch";
+@import "components/styleguide/swatch";
 
 /**
  * Styleguide styles
@@ -66,8 +66,8 @@ body {
 	color: #fff;
 	padding: 30px;
 	margin-top: 30px;
-	font-family: $font-family-mono;
-	@include ko-font-size(12);
+	font-family: ko-font(mono);
+	font-size: ko-rem(12);
 
 	h1 {
 		margin-bottom: 0.2em;
@@ -96,11 +96,13 @@ body {
 .sg-logo {
 	padding: 1em;
 	text-align: center;
-	color: $color-primary;
+	color: ko-color(primary);
+	fill: ko-color(dark, lighter);
 
 	&--dark {
-		background-color: #000;
+		background-color: ko-color(dark);
 		color: #fff;
+		fill: ko-color(secondary);
 	}
 
 	svg {
@@ -120,7 +122,7 @@ body {
 code {
 	border: 0;
 	background-color: transparent;
-	@include ko-font-size(12);
+	font-size: ko-rem(12);
 }
 
 [data-copy] {
@@ -134,29 +136,25 @@ code {
 
 @mixin ko-sgTypeTest($size) {
 	.sg-type-item {
-		@include ko-font-size($size);
+		font-size: ko-rem($size);
 
 		&::after {
-			content: 'Name: #{$size} // Size: #{ko-getValue($size, $type)}px // Use: @include ko-font-size(#{$size}) ';
-			@include ko-font-size(micro);
+			content: 'Name: #{$size} // Size: #{ko-getValue($size, $type)}px // Use: font-size: ko-rem(#{$size}) ';
+			font-size: ko-rem(s);
 			display: block;
 			font-weight: normal;
-			font-family: $font-family-mono;
+			font-family: ko-font(mono);
 			opacity: 0.6;
 		}
 	}
 }
 
-
-.sg-type-micro { @include ko-sgTypeTest(micro); }
-.sg-type-smallest { @include ko-sgTypeTest(smallest); }
-.sg-type-smaller { @include ko-sgTypeTest(smaller); }
-.sg-type-small { @include ko-sgTypeTest(small); }
-.sg-type-base { @include ko-sgTypeTest(base); }
-.sg-type-mid { @include ko-sgTypeTest(mid); }
-.sg-type-large { @include ko-sgTypeTest(large); }
-.sg-type-largest { @include ko-sgTypeTest(largest); }
-.sg-type-jumbo { @include ko-sgTypeTest(jumbo); }
+.sg-type-xs { @include ko-sgTypeTest(xs); }
+.sg-type-s { @include ko-sgTypeTest(s); }
+.sg-type-m { @include ko-sgTypeTest(m); }
+.sg-type-l { @include ko-sgTypeTest(l); }
+.sg-type-xl { @include ko-sgTypeTest(xl); }
+.sg-type-xxl { @include ko-sgTypeTest(xxl); }
 
 .sg-typeSpecimen {
 	margin-bottom: 0;
@@ -168,28 +166,28 @@ code {
 		display: block;
 		@extend .sg-interfaceType;
 		@extend .sg-interfaceType--subtle;
-		@include ko-font-size(16);
+		font-size: ko-rem(m);
 		margin-top: 5px;
 		border-top: 1px solid #ddd;
 		font-weight: normal;
 	}
 }
 
-// h1.typeSpecimen::after { content: "Font stack: #{$font-family-headings}"; }
-// p.typeSpecimen::after  { content: "Font stack: #{$font-family-base}"; }
+// h1.typeSpecimen::after { content: "Font stack: #{ko-font(headings)}"; }
+// p.typeSpecimen::after  { content: "Font stack: #{ko-font(base)}"; }
 
-.sg-typeSpecimen--primary {
-	@include ko-font-size(30);
+.sg-typeSpecimen--body {
+	font-size: ko-rem(30);
 	font-family: $font-family-base;
 }
 
-.sg-typeSpecimen--secondary {
-	@include ko-font-size(30);
-	font-family: $font-family-alt;
+.sg-typeSpecimen--headings {
+	font-size: ko-rem(30);
+	font-family: $font-family-headings;
 }
 
 .sg-typeSpecimen--giant {
-	@include ko-font-size(120);
+	font-size: ko-rem(120);
 	line-height: 1;
 }
 
@@ -217,19 +215,19 @@ code {
 
 .sg-hr {
 	height: 3px;
-	margin: ($baseline * 2) 0;
+	margin: ko-multiply($baseline, 2) 0;
 }
 
 .sg-hr--subtle {
 	height: 3px;
-	background-color: fade-out($hr-color, 0.6);
+	background-color: fade-out(ko-color(dark, light), 0.6);
 }
 
 @mixin ko-sgVar($var) {
 	line-height: 2;
-	font-family: $font-family-mono;
+	font-family: ko-font(mono);
 	border-bottom: 1px solid rgba(#000, 0.1);
-	@include ko-font-size(12);
+	font-size: ko-rem(12);
 
 	strong {
 		opacity: 0.6;
@@ -237,7 +235,7 @@ code {
 		display: block;
 		user-select: none;
 
-		@include media('>mid') {
+		@include media('>m') {
 			width: 20%;
 			display: inline-block;
 		}
@@ -249,7 +247,7 @@ code {
 }
 
 .sg-var-item {
-	color: $color-secondary;
+	color: ko-color(secondary);
 	margin-right: 10px;
 	display: inline-block;
 }
@@ -267,19 +265,19 @@ code {
 }
 
 .sg-var--fontFamilyMono {
-	@include ko-sgVar($font-family-mono);
+	@include ko-sgVar(ko-font(mono));
 }
 
 .sg-var--fontFamilySystem {
-	@include ko-sgVar($font-family-system);
+	@include ko-sgVar(ko-font(system));
 }
 
 .sg-var--fontFamilySans {
-	@include ko-sgVar($font-family-sans);
+	@include ko-sgVar(ko-font(sans));
 }
 
 .sg-var--fontFamilySerif {
-	@include ko-sgVar($font-family-serif);
+	@include ko-sgVar(ko-font(serif));
 }
 
 .sg-var--breakpoints {

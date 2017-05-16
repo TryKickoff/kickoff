@@ -22,7 +22,7 @@
 
 	/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select */
 	&:after {
-		color: $color-primary;
+		color: ko-color(primary);
 		content: "\25BC";
 		font-size: .7em;
 		padding: 0;

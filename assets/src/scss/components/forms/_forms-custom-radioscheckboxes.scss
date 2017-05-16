@@ -24,13 +24,12 @@
  * 	</label>
  *
  * ================================= */
-// $custom-input-color: $color-primary;
-$custom-input-color: $color-primary;
-$custom-input-selected-color: $color-bg;
+$custom-input-color: ko-color(primary);
+$custom-input-selected-color: ko-color(background);
 $custom-input-length: 1.3em;
 $custom-input-border-width: 1px;
 $custom-input-borderColor: #ccc !default;
-$custom-input-borderColor--focus: $color-primary !default;
+$custom-input-borderColor--focus: ko-color(primary) !default;
 $checkbox-indicator-width: 0.1em;
 
 .control--custom {
@@ -73,7 +72,7 @@ $checkbox-indicator-width: 0.1em;
 
 // :focus styles
 .control--custom-input:focus ~ .control-indicator {
-	box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $custom-input-borderColor--focus;
+	box-shadow: 0 0 0 2px ko-color(background), 0 0 0 3px $custom-input-borderColor--focus;
 }
 
 // Checkbox modifiers

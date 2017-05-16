@@ -36,7 +36,7 @@
 /*
  * Mixins, helpers and functions
  */
-@import "kickoff-utils"; // From github.com/mrmartineau/kickoff-utils.scss
+@import "kickoff-utils"; // From github.com/TryKickoff/kickoff-utils.scss
 @import "include-media"; // From include-media.com
 
 
@@ -78,7 +78,6 @@
 @import "components/skip-navigation";
 @import "components/code";
 @import "components/tables";
-// @import "components/scrollbars";
 // yo:start -- component
 // yo:end -- component
 

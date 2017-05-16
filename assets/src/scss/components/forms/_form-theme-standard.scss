@@ -17,19 +17,19 @@
  */
 
 // Form variables
-$input-bgColor            : #fff;                // Colour of input background
-$input-borderColor        : #ccc;                // Colour of input borders
-$input-borderColor--focus : $color-primary;      // Colour of input borders when focused
-$form-actions-bgColor     : #f5f5f5;             // Background colour of form actions container (i.e. submit)
-$label-textColor          : $color-text;         // Text colour of form labels and legends
-$input-textColor          : $color-text;         // Text colour of form inputs
-$placeholder-textColor    : lighten(#000, 70%);  // Text colour of input placeholder
-$form-borderRadius        : 5px;
+$input-bgColor: #fff;                // Colour of input background
+$input-borderColor: #ccc;                // Colour of input borders
+$input-borderColor--focus: ko-color(primary);      // Colour of input borders when focused
+$form-actions-bgColor: #f5f5f5;             // Background colour of form actions container (i.e. submit)
+$label-textColor: ko-color(text);         // Text colour of form labels and legends
+$input-textColor: ko-color(text);         // Text colour of form inputs
+$placeholder-textColor: ko-color(text, light);  // Text colour of input placeholder
+$form-borderRadius: 5px;
 // Messages & form states and alerts
-$color-warning            : #f4aa47;             // base colour for warning input state
-$color-error              : #B94A4D;             // base colour for error input state
-$color-success            : $green;              // base colour for success input state
-$color-info               : $blue;               // base colour for info input state
+$color-warning: #f4aa47;             // base colour for warning input state
+$color-error: #B94A4D;             // base colour for error input state
+$color-success: $green;              // base colour for success input state
+$color-info: $blue;               // base colour for info input state
 
 /**
  * Generic form styles
@@ -58,7 +58,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-legend {
 	padding: 0;
 	margin-bottom: $baseline;
-	@include ko-font-size(mid);
+	font-size: ko-rem(m);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -67,8 +67,7 @@ $color-info               : $blue;               // base colour for info input s
 
 	// Small
 	small {
-		@include ko-font-size(small);
-		color: lighten(#000, 70%);
+		color: ko-color(text, light);
 	}
 }
 
@@ -101,7 +100,7 @@ $color-info               : $blue;               // base colour for info input s
 .form-input {
 	height: 2.5em;
 	padding: .5em;
-	@include ko-font-size(base);
+	font-size: ko-rem(m);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-textColor;
@@ -162,7 +161,7 @@ $color-info               : $blue;               // base colour for info input s
 }
 
 .form-input-file {
-	@include ko-font-size(base);
+	font-size: ko-rem(m);
 }
 
 
@@ -252,7 +251,7 @@ $color-info               : $blue;               // base colour for info input s
 
 
 // === <mid ===
-@include media('>mid') {
+@include media('>m') {
 	/**
 	 * Horizontal-specific styles
 	 * =================================

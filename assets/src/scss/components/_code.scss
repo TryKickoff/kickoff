@@ -7,17 +7,17 @@
 /**
  * Define associated Code variables
  */
-$code-textColor               : #444;
-$code-bgColor                 : #ddd;
-$pre-textColor                : #444;
-$pre-bgColor                  : #ddd;
+$code-textColor: #444;
+$code-bgColor: #ddd;
+$pre-textColor: #444;
+$pre-bgColor: #ddd;
 
 // Inline and block code styles
 code,
 pre {
 	padding: 0 3px 2px;
-	font-family: $font-family-mono;
-	@include ko-font-size(small);
+	font-family: ko-font(mono);
+	font-size: ko-rem(s);
 	color: $code-textColor;
 	border-radius: 3px;
 	tab-size: 3;
