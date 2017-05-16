@@ -38,11 +38,7 @@
     "copy": "gulp copy",
     "lint:js": "xo",
     "lint:css": "gulp test:css",
-    "fix:js": "xo --fix",
-    "release-patch": "release-it --non-interactive patch",
-    "release-minor": "release-it --non-interactive minor",
-    "release-major": "release-it --non-interactive major",
-    "release-premajor": "release-it premajor --prereleaseId=\"beta\""
+    "fix:js": "xo --fix"
   },
   "repository": {
     "type": "git",
@@ -94,8 +90,7 @@
     "gulp-util": "3.0.8",
     "imagemin-pngquant": "5.0.0",
     "opn": "5.0.0",
-    "postcss-flexbugs-fixes": "2.1.1",
-    "release-it": "^2.5.4",
+    "postcss-flexbugs-fixes": "^3.0.0",
     "stylelint": "7.10.1",
     "stylelint-config-standard": "16.0.0",
     "webpack": "2.5.0",
