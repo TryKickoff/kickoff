@@ -14,3 +14,7 @@ body {
 	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
 }
+
+// Uncomment to include responsive helper classes
+// See https://github.com/TryKickoff/kickoff-utils.scss#_responsive-revealscss
+// @include ko-rwd-reveal();
