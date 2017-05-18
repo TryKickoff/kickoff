@@ -253,7 +253,7 @@ code {
 }
 
 .sg-var--baseFontSize {
-	@include ko-sgVar($font-size-base);
+	@include ko-sgVar(map-get($font-size, base));
 }
 
 .sg-var--leadingBase {
