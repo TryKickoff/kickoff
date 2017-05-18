@@ -28,15 +28,18 @@ $type-scale: 1.25; // 1.25 === Major third. See modularscale.com
  * Set using a modular scale by default.
  * Values can be changed to px, rem etc if needed
  *
- * Usage: ko-type(s), ko-type(m)
+ * Usage:
+ * font-size: ko-font-size(base);
+ * font-size: ko-font-size(xl);
  */
 $type: (
 	xs: ko-ms(-2),
-	s: ko-ms(-1), // h5, h6
-	m: ko-ms(0), // [default] p, h4
-	l: ko-ms(1), // h3
-	xl: ko-ms(2), // h2
-	xxl: ko-ms(3) // h1
+	s: ko-ms(-1),
+	base: ko-ms(0), // [default] p, h5, h6
+	m: ko-ms(1), // h4
+	l: ko-ms(2), // h3
+	xl: ko-ms(3), // h2
+	xxl: ko-ms(4) // h1
 );
 
 /**
