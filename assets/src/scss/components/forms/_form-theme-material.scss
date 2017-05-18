@@ -205,7 +205,7 @@ $color-info: $blue; // base colour for info input state
 }
 
 .form-input-file {
-	@include ko-font-size(base);
+	font-size: ko-rem(base);
 }
 
 

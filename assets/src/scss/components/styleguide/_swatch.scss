@@ -34,7 +34,7 @@
 
 .sg-swatch-text {
 	font-weight: bold;
-	@include ko-font-size(60);
+	font-size: ko-rem(60);
 	line-height: 1;
 	display: inline-block;
 	vertical-align: middle;
