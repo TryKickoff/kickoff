@@ -19,9 +19,9 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@kickoff/utils.scss@^2.0.14":
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/@kickoff/utils.scss/-/utils.scss-2.0.14.tgz#e9f0059041a1c477f8a05ec9d983ec9ddddea374"
+"@kickoff/utils.scss@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@kickoff/utils.scss/-/utils.scss-2.1.1.tgz#c89faeb4cd9a44be75d7d07e5f9fa356733ddd2d"
   optionalDependencies:
     release-it "^2.7.1"
 
@@ -3204,9 +3204,9 @@ gulp-stylelint@3.9.0:
     stylelint "^7.9.0"
     through2 "^2.0.3"
 
-gulp-svgmin@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/gulp-svgmin/-/gulp-svgmin-1.2.3.tgz#88947b132e15b2de43d1dbccb30455319c5e50b5"
+gulp-svgmin@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/gulp-svgmin/-/gulp-svgmin-1.2.4.tgz#a4aa9e2615cf1105ef555aea86e86296cc20e273"
   dependencies:
     gulp-util "^3.0.4"
     svgo "^0.7.0"
@@ -4871,9 +4871,9 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
-normalize-scss@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-6.0.0.tgz#5e94fc91e3bb279933ae8aaa511ad0912a0cb44d"
+normalize-scss@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.0.tgz#92eaac6554cc376336c06682a0d6a2099bbb0889"
 
 normalize-selector@^0.2.0:
   version "0.2.0"

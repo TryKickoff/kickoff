@@ -54,7 +54,7 @@
     "node": ">=6.0"
   },
   "dependencies": {
-    "@kickoff/utils.scss": "^2.0.14",
+    "@kickoff/utils.scss": "^2.1.1",
     "console": "0.5.2",
     "copy-js": "0.1.1",
     "double-dollar": "1.0.0",
@@ -63,7 +63,7 @@
     "kickoff-grid.css": "1.1.2",
     "kickoff-welcome.js": "1.4.0",
     "lite-ready": "1.0.4",
-    "normalize-scss": "6.0.0",
+    "normalize-scss": "^7.0.0",
     "svg4everybody": "2.1.8"
   },
   "devDependencies": {
@@ -85,7 +85,7 @@
     "gulp-sass": "3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "3.9.0",
-    "gulp-svgmin": "1.2.3",
+    "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "6.1.0",
     "gulp-tap": "1.0.1",
     "gulp-util": "3.0.8",
