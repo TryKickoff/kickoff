@@ -73,7 +73,7 @@ h6 {
 // For example: h3.h1 or h3.alpha
 h1 {
 	font-size: ko-rem(xl);
-	margin-bottom: $baseline * 2;
+	margin-bottom: ko-multiply($baseline, 2);
 
 	@include media('>m') {
 		font-size: ko-rem(xxl);

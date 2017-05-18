@@ -114,7 +114,7 @@ th {
 .responsiveTable {
 	@include media('<m') {
 		width: 100%;
-		margin-bottom: ($line-height-base * .75) + px;
+		margin-bottom: #{ko-multiply($baseline, 0.75)}px;
 		overflow-y: hidden;
 		overflow-x: auto;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
