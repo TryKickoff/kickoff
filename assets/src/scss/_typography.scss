@@ -62,6 +62,13 @@ h6 {
 	margin-bottom: $baseline;
 }
 
+// Uncomment to include font-size helper classes
+// See https://github.com/TryKickoff/kickoff-utils.scss#_type-sizesscss
+// for more info
+// Usage:
+@include ko-type-sizes();
+// @include ko-type-sizes($type, (h1: xxl, h2: xl, h3: l, h4: m));
+
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
 h1 {
