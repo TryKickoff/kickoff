@@ -64,6 +64,7 @@
     "kickoff-welcome.js": "1.4.0",
     "lite-ready": "1.0.4",
     "normalize-scss": "^7.0.0",
+    "postcss-pxtorem": "^4.0.1",
     "svg4everybody": "2.1.8"
   },
   "devDependencies": {

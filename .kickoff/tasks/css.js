@@ -16,6 +16,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
+const pxtorem = require('postcss-pxtorem');
 
 const config = require('../config');
 
@@ -30,7 +31,13 @@ gulp.task('css', () => {
 		// Sass Compilation
 		.pipe(
 			sass(
-				eyeglass()
+				eyeglass({
+					// put node-sass options you need here.
+
+					eyeglass: { // eyeglass options
+						root: __dirname,
+					}
+				})
 			).on('error', sass.logError)
 		)
 
