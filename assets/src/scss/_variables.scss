@@ -20,26 +20,34 @@ $leading-base: 1.4;
 $line-height-base: round($font-size-base * $leading-base); // 20 * 1.4
 $baseline: $line-height-base * 1px;
 
-$type-scale: 1.25; // 1.25 === Major third. See modularscale.com
+$modularscale: ( // From https://github.com/modularscale/modularscale-sass/
+	base: 20px 25px,
+	ratio: 1.5 // 1.25 === Major third. See modularscale.com
+);
 
 /**
- * Type sizes
+ * Type sizes $map
  * =================================
- * Set using a modular scale by default.
- * Values can be changed to px, rem etc if needed
+ * Kickoff's type is set using sizes defined in this
+ * Sass map. They are set using a modular scale by
+ * default, but values can be changed to px, rem etc if needed
  *
  * Usage:
  * font-size: ko-font-size(base);
  * font-size: ko-font-size(xl);
+ *
+ * Use the ms() function if you want to size fonts
+ * indepently using the modular scale. See
+ * https://github.com/modularscale/modularscale-sass for more info
  */
 $type: (
-	xs: ko-ms(-2),
-	s: ko-ms(-1),
-	base: ko-ms(0), // [default] p, h5, h6
-	m: ko-ms(1), // h4
-	l: ko-ms(2), // h3
-	xl: ko-ms(3), // h2
-	xxl: ko-ms(4) // h1
+	xs: ms(-2),
+	s: ms(-1),
+	base: ms(0), // [default] p, h5, h6
+	m: ms(1), // h4
+	l: ms(2), // h3
+	xl: ms(3), // h2
+	xxl: ms(4) // h1
 );
 
 /**
