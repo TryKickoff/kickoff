@@ -76,13 +76,13 @@
  */
 .l-mb0 { margin-bottom: 0 !important; }
 .l-mb1 { margin-bottom: $baseline !important; }
-.l-mb2 { margin-bottom: ko-multiply($baseline, 2) !important; }
-.l-mb3 { margin-bottom: ko-multiply($baseline, 3) !important; }
+.l-mb2 { margin-bottom: ko-multiply(2) !important; }
+.l-mb3 { margin-bottom: ko-multiply(3) !important; }
 
 .l-mt0 { margin-top: 0 !important; }
 .l-mb1 { margin-top: $baseline !important; }
-.l-mb2 { margin-top: ko-multiply($baseline, 2) !important; }
-.l-mb3 { margin-top: ko-multiply($baseline, 3) !important; }
+.l-mb2 { margin-top: ko-multiply(2) !important; }
+.l-mb3 { margin-top: ko-multiply(3) !important; }
 
 /**
  * Typography helpers

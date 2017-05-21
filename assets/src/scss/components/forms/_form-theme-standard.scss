@@ -75,8 +75,8 @@ $color-info: $blue;               // base colour for info input state
  * Form inputs and groups
  */
 .form-controlGroup {
-	margin-top: ko-multiply($baseline, 1.5);
-	margin-bottom: ko-multiply($baseline, 1.5);
+	margin-top: ko-multiply(1.5);
+	margin-bottom: ko-multiply(1.5);
 }
 
 // Legend collapses margin, so next element is responsible for spacing
@@ -86,7 +86,7 @@ $color-info: $blue;               // base colour for info input state
 
 // Identify controls by their labels
 .form-label {
-	// margin-bottom: ko-multiply($baseline, 0.5);
+	// margin-bottom: ko-multiply(0.5);
 	color: $label-textColor;
 
 	small {
@@ -100,7 +100,7 @@ $color-info: $blue;               // base colour for info input state
 .form-input {
 	height: 2.5em;
 	padding: .5em;
-	font-size: ko-rem(m);
+	font-size: ko-font-size(m);
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $input-textColor;
