@@ -12,7 +12,7 @@
  */
 
 html {
-	font-size: #{$font-size-base - 2}px;
+	font-size: $font-size-base - 2;
 	-webkit-text-size-adjust: 100%;
 	// font-variant-ligatures: common-ligatures;
 	-webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ html {
   text-rendering: optimizeLegibility;
 
 	@include media('>m') {
-		font-size: #{$font-size-base}px;
+		font-size: $font-size-base;
 	}
 }
 
