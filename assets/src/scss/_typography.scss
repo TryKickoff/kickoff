@@ -20,8 +20,8 @@ html {
 	// This needs to come after -webkit-font-smoothing
 	// stylelint-disable-next-line declaration-block-properties-order
 	-moz-osx-font-smoothing: grayscale;
-  text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
 
 	@include media('>m') {
 		font-size: $font-size-base;

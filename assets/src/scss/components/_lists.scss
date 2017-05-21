@@ -18,7 +18,8 @@ ol {
 
 // Unordered and Ordered lists
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
-ul, ol {
+ul,
+ol {
 	padding: 0;
 	margin: 0 0 $baseline $baseline;
 
@@ -43,7 +44,8 @@ ul, ol {
 		}
 	}
 
-	ul, ol {
+	ul,
+	ol {
 		margin-bottom: 0;
 	}
 }
@@ -76,7 +78,8 @@ dd { margin-left: $baseline; }
 	</ul>
  */
 
-.l-list--centred, .l-list--centered {
+.l-list--centred,
+.l-list--centered {
 	text-align: center;
 
 	li {
@@ -97,7 +100,7 @@ dd { margin-left: $baseline; }
 	@include ko-clearfix;
 
 	li {
-		float: left;
+		// float: left;
 		display: inline-block;
 	}
 }
