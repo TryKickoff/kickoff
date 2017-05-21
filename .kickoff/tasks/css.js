@@ -46,6 +46,10 @@ gulp.task('css', () => {
 			postcss([
 				flexbugsFixes(),
 				autoprefixer({browsers: config.css.browsers}),
+				pxtorem({ // See other options at https://github.com/cuth/postcss-pxtorem#options
+					rootValue: 20,
+					selectorBlackList: ['html'],
+				}),
 			])
 		)
 
