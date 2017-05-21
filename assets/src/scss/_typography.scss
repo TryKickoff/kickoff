@@ -153,39 +153,6 @@ abbr[title] {
 	cursor: help;
 }
 
-/**
- * Blockquotes
- */
-blockquote {
-	padding-left: 10px;
-	margin: $baseline;
-	border-left: 4px solid lighten(#000, 80%);
-
-	p {
-		margin-bottom: 0;
-		font-size: ko-rem(m);
-		font-weight: 300;
-	}
-
-	small {
-		display: block;
-		color: lighten(#000, 70%);
-
-		&::before {
-			content: '\2014 \00A0';
-		}
-	}
-}
-
-// Quotes
-q,
-blockquote {
-	&::before,
-	&::after {
-		content: "";
-	}
-}
-
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
 sub,
