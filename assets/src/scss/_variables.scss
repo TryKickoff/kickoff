@@ -7,18 +7,18 @@
  * - App-specific
  */
 
+// stylelint-disable indentation
+
 /**
  * Typography
  * =================================
  *
- * Base sizes:
- * Set this in pixels (but do not add px),
- * the font-size mixin will convert to REMS
+ * 🚨 If you change the $font-size-base value, you will also need
+ * to update the pxtorem `rootValue` in `.kickoff/css.js`
  */
-$font-size-base: 20;
+$font-size-base: 20px; // 🚨 Read above if you change this
 $leading-base: 1.4;
-$line-height-base: round($font-size-base * $leading-base); // 20 * 1.4
-$baseline: $line-height-base * 1px;
+$baseline: round($font-size-base * $leading-base); // 20 * 1.4
 
 $modularscale: ( // From https://github.com/modularscale/modularscale-sass/
 	base: 20px 25px,
