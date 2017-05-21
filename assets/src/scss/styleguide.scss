@@ -67,7 +67,7 @@ body {
 	padding: 30px;
 	margin-top: 30px;
 	font-family: ko-font(mono);
-	font-size: ko-rem(12);
+	font-size: 12px;
 
 	h1 {
 		margin-bottom: 0.2em;
@@ -122,7 +122,7 @@ body {
 code {
 	border: 0;
 	background-color: transparent;
-	font-size: ko-rem(12);
+	font-size: 12px;
 }
 
 [data-copy] {
@@ -136,11 +136,11 @@ code {
 
 @mixin ko-sgTypeTest($size) {
 	.sg-type-item {
-		font-size: ko-rem($size);
+		font-size: ko-font-size($size);
 
 		&::after {
-			content: 'Name: #{$size} // Size: #{ko-getValue($size, $type)}px // Use: font-size: ko-rem(#{$size}) ';
-			font-size: ko-rem(s);
+			content: '* #{$size} =  #{ko-font-size($size)} | font-size: ko-font-size(#{$size})';
+			font-size: 12px;
 			display: block;
 			font-weight: normal;
 			font-family: ko-font(mono);
@@ -166,7 +166,7 @@ code {
 		display: block;
 		@extend .sg-interfaceType;
 		@extend .sg-interfaceType--subtle;
-		font-size: ko-rem(m);
+		font-size: ko-font-size(m);
 		margin-top: 5px;
 		border-top: 1px solid #ddd;
 		font-weight: normal;
@@ -177,17 +177,17 @@ code {
 // p.typeSpecimen::after  { content: "Font stack: #{ko-font(base)}"; }
 
 .sg-typeSpecimen--body {
-	font-size: ko-rem(30);
+	font-size: 30px;
 	font-family: $font-family-base;
 }
 
 .sg-typeSpecimen--headings {
-	font-size: ko-rem(30);
+	font-size: 30px;
 	font-family: $font-family-headings;
 }
 
 .sg-typeSpecimen--giant {
-	font-size: ko-rem(120);
+	font-size: 120px;
 	line-height: 1;
 }
 
@@ -227,18 +227,13 @@ code {
 	line-height: 2;
 	font-family: ko-font(mono);
 	border-bottom: 1px solid rgba(#000, 0.1);
-	font-size: ko-rem(12);
+	font-size: 12px;
 
 	strong {
 		opacity: 0.6;
 		text-transform: uppercase;
 		display: block;
 		user-select: none;
-
-		@include media('>m') {
-			width: 20%;
-			display: inline-block;
-		}
 	}
 
 	&::after {

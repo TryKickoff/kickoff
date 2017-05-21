@@ -72,45 +72,45 @@ h6 {
 // Use the helper classes to emulate styles for another element
 // For example: h3.h1 or h3.alpha
 h1 {
-	font-size: ko-rem(xl);
-	margin-bottom: ko-multiply($baseline, 2);
+	font-size: ko-font-size(xl);
+	margin-bottom: ko-multiply(2);
 
 	@include media('>m') {
-		font-size: ko-rem(xxl);
+		font-size: ko-font-size(xxl);
 	}
 }
 
 h2 {
-	font-size: ko-rem(l);
+	font-size: ko-font-size(l);
 
 	@include media('>m') {
-		font-size: ko-rem(xl);
+		font-size: ko-font-size(xl);
 	}
 }
 
 h3 {
-	font-size: ko-rem(m);
+	font-size: ko-font-size(m);
 
 	@include media('>m') {
-		font-size: ko-rem(l);
+		font-size: ko-font-size(l);
 	}
 }
 
 h4 {
-	font-size: ko-rem(s);
+	font-size: ko-font-size(s);
 
 	@include media('>m') {
-		font-size: ko-rem(m);
+		font-size: ko-font-size(m);
 	}
 }
 
 h5,
 h6 {
-	font-size: ko-rem(s);
+	font-size: ko-font-size(s);
 	margin-bottom: 0;
 
 	@include media('>m') {
-		font-size: ko-rem(m);
+		font-size: ko-font-size(m);
 	}
 }
 

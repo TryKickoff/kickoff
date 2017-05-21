@@ -58,7 +58,7 @@ $color-info: $blue;               // base colour for info input state
 .form-legend {
 	padding: 0;
 	margin-bottom: $baseline;
-	font-size: ko-rem(m);
+	font-size: ko-font-size(m);
 	line-height: $leading-base;
 	color: $label-textColor;
 	border: 0;
@@ -161,7 +161,7 @@ $color-info: $blue;               // base colour for info input state
 }
 
 .form-input-file {
-	font-size: ko-rem(m);
+	font-size: ko-font-size(m);
 }
 
 
