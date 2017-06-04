@@ -16,9 +16,9 @@
  * @kickoff/utils also includes a mixin version of this
  */
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /**
@@ -27,110 +27,144 @@
 
 // Hide from both screenreaders and browsers: h5bp.com/u
 .is-hidden {
-	display: none !important;
-	visibility: hidden !important;
+  display: none !important;
+  visibility: hidden !important;
 }
 
-.is-shown { display: block !important; }
-.is-visible { visibility: visible !important; }
+.is-shown {
+  display: block !important;
+}
+.is-visible {
+  visibility: visible !important;
+}
 
 // Hide visually and from screenreaders, but maintain layout
-.is-invisible { visibility: hidden !important; }
+.is-invisible {
+  visibility: hidden !important;
+}
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 .is-visuallyHidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 
-	// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
-	&.focusable:active,
-	&.focusable:focus {
-		clip: auto;
-		height: auto;
-		margin: 0;
-		overflow: visible;
-		position: static;
-		width: auto;
-	}
+  // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+  &.focusable:active, &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
 }
 
 /**
  * Layout helpers
  */
-.l-floatLeft { float: left; }
-.l-floatRight { float: right; }
+.l-floatLeft {
+  float: left;
+}
+.l-floatRight {
+  float: right;
+}
 
 .l-clear {
-	clear: both;
-	float: none;
+  clear: both;
+  float: none;
 }
 
 /**
  * Margin helpers
  */
-.l-mb0 { margin-bottom: 0 !important; }
-.l-mb1 { margin-bottom: $baseline !important; }
-.l-mb2 { margin-bottom: ko-multiply(2) !important; }
-.l-mb3 { margin-bottom: ko-multiply(3) !important; }
+.l-mb0 {
+  margin-bottom: 0 !important;
+}
+.l-mb1 {
+  margin-bottom: $baseline !important;
+}
+.l-mb2 {
+  margin-bottom: ko-multiply(2) !important;
+}
+.l-mb3 {
+  margin-bottom: ko-multiply(3) !important;
+}
 
-.l-mt0 { margin-top: 0 !important; }
-.l-mb1 { margin-top: $baseline !important; }
-.l-mb2 { margin-top: ko-multiply(2) !important; }
-.l-mb3 { margin-top: ko-multiply(3) !important; }
+.l-mt0 {
+  margin-top: 0 !important;
+}
+.l-mb1 {
+  margin-top: $baseline !important;
+}
+.l-mb2 {
+  margin-top: ko-multiply(2) !important;
+}
+.l-mb3 {
+  margin-top: ko-multiply(3) !important;
+}
 
 /**
  * Typography helpers
  */
-.text-centre,
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-uppercase { text-transform: uppercase; }
-.text-lowercase { text-transform: lowercase; }
+.text-centre, .text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
 
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
 .text-hyphenate {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /**
  * Misc helpers
  */
 * {
-	-webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 // For background image replacement
 .ir {
-	background-color: transparent;
-	background-repeat: no-repeat;
-	border: 0;
-	direction: ltr;
-	display: block;
-	overflow: hidden;
-	text-align: left;
-	text-indent: -999em;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
 
-	br {
-		display: none;
-	}
+  br {
+    display: none;
+  }
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
 textarea[contenteditable] {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .promote-layer {
-	/*
+  /*
 	This may promote the layer to a composited
 	layer.
 
@@ -138,23 +172,16 @@ textarea[contenteditable] {
 
 	#perfmatters
 	*/
-	backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 // Add the default transition to any element
 .transition {
-	transition: $default-transition;
+  transition: $default-transition;
 }
 
 // Faster taps on mobile devices
 // See https://adactio.com/journal/10019 for more info
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-	touch-action: manipulation;
+a, area, button, input, label, select, textarea, [tabindex] {
+  touch-action: manipulation;
 }

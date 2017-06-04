@@ -9,31 +9,29 @@
  </blockquote>
  */
 blockquote {
-	padding-left: 10px;
-	margin: $baseline;
-	border-left: 4px solid ko-color(text, light);
+  padding-left: 10px;
+  margin: $baseline;
+  border-left: 4px solid ko-color(text, light);
 
-	p {
-		margin-bottom: 0;
-		font-size: ko-font-size(m);
-		font-weight: 300;
-	}
+  p {
+    margin-bottom: 0;
+    font-size: ko-font-size(m);
+    font-weight: 300;
+  }
 
-	small {
-		display: block;
-		color: ko-color(text, light);
+  small {
+    display: block;
+    color: ko-color(text, light);
 
-		&::before {
-			content: '\2014 \00A0';
-		}
-	}
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
 }
 
 // Remove quotation marks if something else is adding them
-q,
-blockquote {
-	&::before,
-	&::after {
-		content: "";
-	}
+q, blockquote {
+  &::before, &::after {
+    content: "";
+  }
 }

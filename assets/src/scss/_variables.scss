@@ -20,10 +20,7 @@ $font-size-base: 20px; // 🚨 Read above if you change this
 $leading-base: 1.4;
 $baseline: round($font-size-base * $leading-base); // 20 * 1.4
 
-$modularscale: ( // From https://github.com/modularscale/modularscale-sass/
-	base: 20px 25px,
-	ratio: 1.5 // 1.25 === Major third. See modularscale.com
-);
+$modularscale: (base: 20px 25px, ratio: 1.5);
 
 /**
  * Type sizes $map
@@ -41,13 +38,13 @@ $modularscale: ( // From https://github.com/modularscale/modularscale-sass/
  * https://github.com/modularscale/modularscale-sass for more info
  */
 $type: (
-	xs: ms(-2),
-	s: ms(-1),
-	base: ms(0), // [default] p, h5, h6
-	m: ms(1), // h4
-	l: ms(2), // h3
-	xl: ms(3), // h2
-	xxl: ms(4) // h1
+  xs: ms(-2),
+  s: ms(-1),
+  base: ms(0),
+  m: ms(1),
+  l: ms(2),
+  xl: ms(3),
+  xxl: ms(4)
 );
 
 /**
@@ -57,10 +54,27 @@ $type: (
  * Usage: ko-font(system), ko-font(sans)
  */
 $font-family: (
-	system: #{-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans"},
-	sans: #{"Helvetica Neue", Helvetica, Arial, sans-serif},
-	serif: #{Georgia, "Times New Roman", Times, serif},
-	mono: #{Menlo, Monaco, "Courier New", monospace}
+  system: #{-apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  "Fira Sans",
+  "Droid Sans"},
+  sans: #{"Helvetica Neue",
+  Helvetica,
+  Arial,
+  sans-serif},
+  serif: #{Georgia,
+  "Times New Roman",
+  Times,
+  serif},
+  mono: #{Menlo,
+  Monaco,
+  "Courier New",
+  monospace}
 );
 
 $font-family-base: ko-font(system);
@@ -69,7 +83,6 @@ $line-height-headings: 1.1;
 $font-weight-normal: 300; // Useful to set here if using anything other than `normal`
 $font-weight-bold: bold; // Useful to set here when bold webfonts come as 400 font-weight.
 $font-weight-headings: bold; // instead of browser default, bold
-
 
 /**
  * Breakpoints
@@ -80,21 +93,14 @@ $font-weight-headings: bold; // instead of browser default, bold
  * Used in the Kickoff grid
  * Usage: ko-bp(100)
  */
-$breakpoints: (
-	s: 400px,
-	m: 750px,
-	l: 1000px,
-	xl: 1250px
-);
-
+$breakpoints: (s: 400px, m: 750px, l: 1000px, xl: 1250px);
 
 // Setup layout max-width
 $layout-margin: 0; // [in pixels] Space outside the grid
 $layout-max-width: 1000; // [in pixels]
-$layout-min-width: 960;  // [in pixels] Minimum width for layout in <IE9
+$layout-min-width: 960; // [in pixels] Minimum width for layout in <IE9
 $layout-max-width--huge: 1100; // [in pixels]
 $layout-min-width--huge: 1100; // [in pixels] Minimum width for layout in <IE9
-
 
 /**
  * Grid
@@ -110,19 +116,13 @@ $grid-gutter-width: 20; // [in pixels]
 $responsive-grid-sizes: true; // Disable this if you don't want grid sizes for each breakpoint
 $use-legacy-grid: false; // Disable this is you on’t want to output .no-flexbox classes for older browsers to use
 
-
 /**
  * Z-index variables
  * =================================
  *
  * Usage: ko-zIndex(low)
  */
-$z-index: (
-	low: 10,
-	mid: 100,
-	high: 1000
-);
-
+$z-index: (low: 10, mid: 100, high: 1000);
 
 /**
  * App-specific variables
@@ -130,7 +130,9 @@ $z-index: (
  */
 $default-transition-timing: cubic-bezier(0.77, 0, 0.175, 1);
 $default-transition-duration: 300ms;
-$default-transition: all $default-transition-duration $default-transition-timing;
+$default-transition: all
+  $default-transition-duration
+  $default-transition-timing;
 
 $img-path: "/assets/dist/img"; // Usage: background-image: url('#{$img-path}/img.jpg');
 // Add your own :)

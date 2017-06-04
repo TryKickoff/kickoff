@@ -9,13 +9,11 @@
 // https://github.com/JohnAlbin/normalize-scss (Sass port of normalize.css)
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 @include normalize();

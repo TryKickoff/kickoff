@@ -12,108 +12,96 @@
  */
 
 html {
-	font-size: $font-size-base - 2;
-	-webkit-text-size-adjust: 100%;
-	// font-variant-ligatures: common-ligatures;
-	-webkit-font-smoothing: antialiased;
+  font-size: $font-size-base - 2;
+  -webkit-text-size-adjust: 100%;
+  // font-variant-ligatures: common-ligatures;
+  -webkit-font-smoothing: antialiased;
 
-	// This needs to come after -webkit-font-smoothing
-	// stylelint-disable-next-line declaration-block-properties-order
-	-moz-osx-font-smoothing: grayscale;
-	text-size-adjust: 100%;
-	text-rendering: optimizeLegibility;
+  // This needs to come after -webkit-font-smoothing
+  // stylelint-disable-next-line declaration-block-properties-order
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 
-	@include media('>m') {
-		font-size: $font-size-base;
-	}
+  @include media('>m') {
+    font-size: $font-size-base;
+  }
 }
 
-html,
-body {
-	font-family: $font-family-base;
-	line-height: $leading-base;
-	color: ko-color(text);
-	font-weight: $font-weight-normal;
+html, body {
+  font-family: $font-family-base;
+  line-height: $leading-base;
+  color: ko-color(text);
+  font-weight: $font-weight-normal;
 }
 
 /**
  * Paragraphs
  */
 p {
-	margin-top: 0;
-	margin-bottom: $baseline;
+  margin-top: 0;
+  margin-bottom: $baseline;
 
-	// Measure - ideally about 65 chars per line
-	// max-width: #{type(base) * 30}px;
+  // Measure - ideally about 65 chars per line
+  // max-width: #{type(base) * 30}px;
 }
 
 /**
  * Headings
  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $font-family-headings;
-	font-weight: $font-weight-headings;
-	line-height: $line-height-headings;
-	margin-top: 0;
-	margin-bottom: $baseline;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+  line-height: $line-height-headings;
+  margin-top: 0;
+  margin-bottom: $baseline;
 }
 
 h1 {
-	font-size: ko-font-size(xl);
-	margin-bottom: ko-multiply(2);
+  font-size: ko-font-size(xl);
+  margin-bottom: ko-multiply(2);
 
-	@include media('>m') {
-		font-size: ko-font-size(xxl);
-	}
+  @include media('>m') {
+    font-size: ko-font-size(xxl);
+  }
 }
 
 h2 {
-	font-size: ko-font-size(l);
+  font-size: ko-font-size(l);
 
-	@include media('>m') {
-		font-size: ko-font-size(xl);
-	}
+  @include media('>m') {
+    font-size: ko-font-size(xl);
+  }
 }
 
 h3 {
-	font-size: ko-font-size(m);
+  font-size: ko-font-size(m);
 
-	@include media('>m') {
-		font-size: ko-font-size(l);
-	}
+  @include media('>m') {
+    font-size: ko-font-size(l);
+  }
 }
 
 h4 {
-	font-size: ko-font-size(s);
+  font-size: ko-font-size(s);
 
-	@include media('>m') {
-		font-size: ko-font-size(m);
-	}
+  @include media('>m') {
+    font-size: ko-font-size(m);
+  }
 }
 
-h5,
-h6 {
-	font-size: ko-font-size(s);
-	margin-bottom: 0;
+h5, h6 {
+  font-size: ko-font-size(s);
+  margin-bottom: 0;
 
-	@include media('>m') {
-		font-size: ko-font-size(m);
-	}
+  @include media('>m') {
+    font-size: ko-font-size(m);
+  }
 }
 
 // Only give headings a margin-top if they are after other elements
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6 {
-	margin-top: $baseline;
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: $baseline;
 }
 
 /**
@@ -130,7 +118,7 @@ h6 {
 // @include ko-type-sizes();
 
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -138,42 +126,45 @@ small {
  */
 
 // Emphasis
-strong,
-b {
-	font-weight: $font-weight-bold;
+strong, b {
+  font-weight: $font-weight-bold;
 }
 
-em,
-i {
-	font-style: italic;
+em, i {
+  font-style: italic;
 }
 
 // Abbreviations and acronyms
 abbr[title] {
-	border-bottom: 1px dotted #ddd;
-	cursor: help;
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
 }
 
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-samp { font-family: ko-font(mono); }
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+samp {
+  font-family: ko-font(mono);
+}
 
 @include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules
 hr {
-	margin: $baseline 0;
-	border: 0;
-	height: 1px;
-	background-color: ko-color(dark);
+  margin: $baseline 0;
+  border: 0;
+  height: 1px;
+  background-color: ko-color(dark);
 }

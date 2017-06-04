@@ -8,7 +8,6 @@
  *   – btn--block
  */
 
-
 /**
  * Define associated Button variables
  */
@@ -18,7 +17,6 @@ $btn-default-bgColor--highlight: darken($btn-default-bgColor, 10%);
 
 $btn-primary-bgColor: ko-color(link);
 $btn-primary-bgColor--highlight: darken($btn-primary-bgColor, 10%);
-
 
 /**
  * Base button styles – Based on csswizardry.com/beautons
@@ -38,101 +36,84 @@ $btn-primary-bgColor--highlight: darken($btn-primary-bgColor, 10%);
  */
 
 .btn {
-	display: inline-block;      /* [1] */
-	vertical-align: middle;     /* [2] */
-	white-space: nowrap;        /* [3] */
-	font-family: inherit;       /* [4] */
-	font-size: 100%;            /* [4] */
-	cursor: pointer;            /* [5] */
-	border: none;               /* [6] */
-	margin: 0;                  /* [6] */
-	padding-top:    0;          /* [6] */
-	padding-bottom: 0;          /* [6] */
-	line-height: 2.5;           /* [7] */
-	height: 2.5em;              /* [7] */
-	padding-right: 1.5em;       /* [7] */
-	padding-left: 1.5em;        /* [7] */
-	overflow: visible;          /* [8] */
-	text-align: center;
-	border-radius: $btn-borderRadius;
-	user-select: none;
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  white-space: nowrap; /* [3] */
+  font-family: inherit; /* [4] */
+  font-size: 100%; /* [4] */
+  cursor: pointer; /* [5] */
+  border: none; /* [6] */
+  margin: 0; /* [6] */
+  padding-top: 0; /* [6] */
+  padding-bottom: 0; /* [6] */
+  line-height: 2.5; /* [7] */
+  height: 2.5em; /* [7] */
+  padding-right: 1.5em; /* [7] */
+  padding-left: 1.5em; /* [7] */
+  overflow: visible; /* [8] */
+  text-align: center;
+  border-radius: $btn-borderRadius;
+  user-select: none;
 
-	// You may want to change this
-	background-color: $btn-default-bgColor;
+  // You may want to change this
+  background-color: $btn-default-bgColor;
 
-	&,
-	&:link,
-	&:visited {
-		color: ko-color(bright);
-	}
+  &, &:link, &:visited {
+    color: ko-color(bright);
+  }
 
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: $btn-default-bgColor--highlight;
-	}
+  &:hover, &:active, &:focus {
+    background-color: $btn-default-bgColor--highlight;
+  }
 
-	&,
-	&:hover,
-	&:active,
-	&:focus,
-	&:visited {
-		text-decoration: none;
-	}
+  &, &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+  }
 
-	&:active,
-	&:focus {
-		outline: none;
-	}
+  &:active, &:focus {
+    outline: none;
+  }
 
-	// Disabled state
-	&.disabled,
-	&[disabled] {
-		cursor: default;
-		background-image: none;
-		opacity: .5;
-	}
+  // Disabled state
+  &.disabled, &[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: .5;
+  }
 }
 
 // Set the backgrounds
 // -------------------------
 .btn--primary {
-	background-color: $btn-primary-bgColor;
+  background-color: $btn-primary-bgColor;
 
-	&,
-	&:link,
-	&:visited {
-		color: ko-color(bright);
-	}
+  &, &:link, &:visited {
+    color: ko-color(bright);
+  }
 
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: $btn-primary-bgColor--highlight;
-	}
+  &:hover, &:active, &:focus {
+    background-color: $btn-primary-bgColor--highlight;
+  }
 }
 
 // Block button
 // -------------------------
 .btn--block {
-	display: block;
-	width: 100%;
-	padding-left: 0;
-	padding-right: 0;
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 
-	// Vertically space out multiple block buttons
-	// same ad .btn--block + .btn--block
-	& + & {
-		margin-top: 10px;
-	}
+  // Vertically space out multiple block buttons
+  // same ad .btn--block + .btn--block
+  & + & {
+    margin-top: 10px;
+  }
 }
 
-
 // Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-	&.btn--block {
-		width: 100%;
-	}
+input[type="submit"], input[type="reset"], input[type="button"] {
+  &.btn--block {
+    width: 100%;
+  }
 }

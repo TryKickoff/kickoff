@@ -32,13 +32,11 @@
  *
  */
 
-
 /*
  * Mixins, helpers and functions
  */
 @import "kickoff-utils"; // From github.com/TryKickoff/kickoff-utils.scss
 @import "include-media"; // From include-media.com
-
 
 /**
  * Core variables
@@ -47,19 +45,16 @@
 @import "color-palette";
 @import "variables";
 
-
 /**
  * CSS resets
  */
 @import "reset";
-
 
 /**
  * Typography styles
  * See https://trykickoff.com/demos/typography.html for more info
  */
 @import "typography";
-
 
 /**
  * Components
@@ -82,7 +77,6 @@
 // yo:start -- component
 // yo:end -- component
 
-
 /**
  * Partials
  */
@@ -92,7 +86,6 @@
 // yo:start -- partial
 // yo:end -- partial
 
-
 /**
  * Views
  */
@@ -101,12 +94,10 @@
 // yo:start -- view
 // yo:end -- view
 
-
 /**
  * Global styles
  */
 @import "global";
-
 
 /**
  * Helper/utility classes

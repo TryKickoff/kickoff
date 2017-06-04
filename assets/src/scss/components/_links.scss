@@ -4,21 +4,18 @@
  */
 
 a {
-	transition: $default-transition;
+  transition: $default-transition;
 
-	&,
-	&:link,
-	&:visited {
-		color: ko-color(link);
-		text-decoration: none;
-	}
+  &, &:link, &:visited {
+    color: ko-color(link);
+    text-decoration: none;
+  }
 
-	&:hover,
-	&:focus {
-		color: ko-color(link, over);
-	}
+  &:hover, &:focus {
+    color: ko-color(link, over);
+  }
 
-	&:active {
-		color: ko-color(link, over);
-	}
+  &:active {
+    color: ko-color(link, over);
+  }
 }

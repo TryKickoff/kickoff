@@ -33,138 +33,132 @@ $custom-input-borderColor--focus: ko-color(primary) !default;
 $checkbox-indicator-width: 0.1em;
 
 .control--custom {
-	position: relative;
-	display: block;
-	cursor: pointer;
-	user-select: none;
-	padding-left: $custom-input-length + 1em;
-	height: $custom-input-length;
-	line-height: $custom-input-length !important;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: $custom-input-length + 1em;
+  height: $custom-input-length;
+  line-height: $custom-input-length !important;
 }
 
 // Give inline elements some space to the right
 .control--custom--inline {
-	display: inline-block;
-	padding-right: 2em;
+  display: inline-block;
+  padding-right: 2em;
 }
 
 // The hidden input
 .control--custom-input {
-	position: absolute;
-	opacity: 0;
-	z-index: -1; // Put the input behind the label so it doesn't overlay text
+  position: absolute;
+  opacity: 0;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
 }
 
 // The new checkbox/radio
 .control-indicator {
-	position: absolute;
-	left: 0;
-	display: inline-block;
-	width: $custom-input-length;
-	height: $custom-input-length;
-	transition: $default-transition;
-	border: $custom-input-border-width solid $custom-input-borderColor;
-	background-color: $custom-input-borderColor;
-	vertical-align: middle;
-	margin-top: 0;
-	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: $custom-input-length;
+  height: $custom-input-length;
+  transition: $default-transition;
+  border: $custom-input-border-width solid $custom-input-borderColor;
+  background-color: $custom-input-borderColor;
+  vertical-align: middle;
+  margin-top: 0;
+  box-shadow: 0 0 0 2px transparent,
+    0 0 0 0 transparent; // Used to animate from when element is in :focus
 }
 
 // :focus styles
 .control--custom-input:focus ~ .control-indicator {
-	box-shadow: 0 0 0 2px ko-color(background), 0 0 0 3px $custom-input-borderColor--focus;
+  box-shadow: 0 0 0 2px ko-color(background),
+    0 0 0 3px $custom-input-borderColor--focus;
 }
 
 // Checkbox modifiers
-.control-indicator--checkbox,
-.control-indicator--tickbox {
-	border-radius: .2em; // Change to 50% to make them circular
+.control-indicator--checkbox, .control-indicator--tickbox {
+  border-radius: .2em; // Change to 50% to make them circular
 
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 90%;
-		display: block;
-		opacity: 0; // indicator will be faded out when deselected
-		transition: all 250ms ease-in-out;
-	}
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    display: block;
+    opacity: 0; // indicator will be faded out when deselected
+    transition: all 250ms ease-in-out;
+  }
 }
 
 .control-indicator--checkbox {
+  &:before, &:after {
+    top: 50%;
+    width: 90%;
+    height: 0.1em;
+    background-color: $custom-input-selected-color;
+  }
 
-	&:before,
-	&:after {
-		top: 50%;
-		width: 90%;
-		height: 0.1em;
-		background-color: $custom-input-selected-color;
-	}
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  }
 
-	&:before {
-		transform: translate(-50%, -50%) rotate(45deg) scale(0);
-	}
-
-	&:after {
-		transform: translate(-50%, -50%) rotate(-45deg) scale(0);
-	}
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+  }
 }
 
 .control-indicator--tickbox {
+  &:before {
+    top: 0;
+    transform: translateX(-50%) rotate(45deg) scale(0);
+    border: $checkbox-indicator-width solid $custom-input-selected-color;
+    background-color: transparent;
+    width: 40%;
+    height: 80%;
+    border-top: 0;
+    border-left: 0;
+  }
 
-	&:before {
-		top: 0;
-		transform: translateX(-50%) rotate(45deg) scale(0);
-		border: $checkbox-indicator-width solid $custom-input-selected-color;
-		background-color: transparent;
-		width: 40%;
-		height: 80%;
-		border-top: 0;
-		border-left: 0;
-	}
-
-	&:after {
-		display: none;
-	}
+  &:after {
+    display: none;
+  }
 }
 
 .control--custom-input:checked ~ .control-indicator--checkbox,
 .control--custom-input:checked ~ .control-indicator--tickbox {
-	background-color: $custom-input-color;
-	border: $checkbox-indicator-width solid $custom-input-color;
+  background-color: $custom-input-color;
+  border: $checkbox-indicator-width solid $custom-input-color;
 
-	&:before,
-	&:after {
-		opacity: 1;
-	}
+  &:before, &:after {
+    opacity: 1;
+  }
 }
 
 .control--custom-input:checked ~ .control-indicator--tickbox {
-	&:before,
-	&:after {
-		transform: translateX(-50%) rotate(45deg) scale(1);
-	}
+  &:before, &:after {
+    transform: translateX(-50%) rotate(45deg) scale(1);
+  }
 }
 
 .control--custom-input:checked ~ .control-indicator--checkbox {
-	&:before {
-		transform: translate(-50%, -50%) rotate(45deg) scale(1);
-	}
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
 
-	&:after {
-		transform: translate(-50%, -50%) rotate(-45deg) scale(1);
-	}
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
 }
-
 
 // Radio modifiers
 .control-indicator--radio {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .control--custom-input:checked ~ .control-indicator--radio {
-	background-color: $custom-input-selected-color;
-	border: .3em solid $custom-input-color;
+  background-color: $custom-input-selected-color;
+  border: .3em solid $custom-input-color;
 }

@@ -39,7 +39,10 @@
     "copy": "gulp copy",
     "lint:js": "xo",
     "lint:css": "gulp test:css",
-    "fix:js": "xo --fix"
+    "fix:js": "xo --fix && npm run format:js",
+    "format:js": "prettier --use-tabs --trailing-comma all --single-quote --write \"assets/src/js/**/*.js\"",
+    "format:scss": "prettier --parser postcss --use-tabs --write \"assets/src/scss/**/*.scss\"",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -90,9 +93,12 @@
     "gulp-svgstore": "6.1.0",
     "gulp-tap": "1.0.1",
     "gulp-util": "3.0.8",
+    "husky": "0.13.4",
     "imagemin-pngquant": "5.0.0",
+    "lint-staged": "3.6.0",
     "opn": "5.0.0",
     "postcss-flexbugs-fixes": "^3.0.0",
+    "prettier": "1.4.2",
     "stylelint": "7.10.1",
     "stylelint-config-standard": "16.0.0",
     "webpack": "^2.5.1",
@@ -113,6 +119,16 @@
     ],
     "plugins": [
       "transform-object-assign"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "git add"
     ]
   },
   "xo": {

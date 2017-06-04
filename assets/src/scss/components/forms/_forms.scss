@@ -35,7 +35,6 @@
 @import "forms-custom-select"; // Select element
 @import "forms-custom-file"; // File input
 
-
 /**
  * Base form styles
  * =================================
@@ -50,126 +49,117 @@
   	</div>
  */
 
-
 .form-legend {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 
 /**
  * Form inputs and groups
  */
-.form-controlGroup {}
+.form-controlGroup {
+}
 
 // Legend collapses margin, so next element is responsible for spacing
 .form-legend + .form-controlGroup {
-	// margin-top: $baseline; // Add this to theme
-	-webkit-margin-top-collapse: separate;
+  // margin-top: $baseline; // Add this to theme
+  -webkit-margin-top-collapse: separate;
 }
 
 // Identify controls by their labels
 .form-label {
-	display: block;
+  display: block;
 }
 
 // Any form inputs
 .form-input {
-	display: block;
-	width: 100%;
-	vertical-align: baseline;
+  display: block;
+  width: 100%;
+  vertical-align: baseline;
 
-	&:focus {
-		outline: 0;
-		outline: thin dotted \9; // IE6-9
-	}
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; // IE6-9
+  }
 
-	&[type="image"],
-	&[type="checkbox"],
-	&[type="radio"],
-	&[type="range"] {
-		width: auto;
-		height: auto;
-		padding: 0;
-		line-height: normal;
-		cursor: pointer;
-		border-radius: 0;
-		box-sizing: border-box;
-		// border: 0 \9; // IE9 and down
-	}
+  &[type="image"], &[type="checkbox"], &[type="radio"], &[type="range"] {
+    width: auto;
+    height: auto;
+    padding: 0;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 0;
+    box-sizing: border-box;
+    // border: 0 \9; // IE9 and down
+  }
 
-	&[type="image"] {
-		border: 0;
-	}
+  &[type="image"] {
+    border: 0;
+  }
 
-	// Reset the file input to browser defaults
-	&[type="file"] {
-		width: auto;
-		height: 28px;
-		padding: initial;
-		line-height: initial;
-		border: initial;
-		background-color: initial;
-	}
+  // Reset the file input to browser defaults
+  &[type="file"] {
+    width: auto;
+    height: 28px;
+    padding: initial;
+    line-height: initial;
+    border: initial;
+    background-color: initial;
+  }
 
-	// Hidden inputs
-	&[type="hidden"] {
-		display: none;
-	}
+  // Hidden inputs
+  &[type="hidden"] {
+    display: none;
+  }
 
-	// See http://martineau.tv/2013/05/hidden-characters-in-password-inputs/
-	&[type="password"] {
-		font-family: sans-serif;
-	}
+  // See http://martineau.tv/2013/05/hidden-characters-in-password-inputs/
+  &[type="password"] {
+    font-family: sans-serif;
+  }
 
-	&[type="range"] {
-		width: 100%;
-	}
+  &[type="range"] {
+    width: 100%;
+  }
 
-	> .radio:first-child,
-	> .checkbox:first-child {
-		padding-top: 5px; // has to be padding because margin collapses
-	}
+  > .radio:first-child, > .checkbox:first-child {
+    padding-top: 5px; // has to be padding because margin collapses
+  }
 
-	// Disabled State
-	&[disabled],
-	&[readonly] {
-		cursor: not-allowed;
-	}
+  // Disabled State
+  &[disabled], &[readonly] {
+    cursor: not-allowed;
+  }
 }
 
 .form-input--textarea {
-	height: auto;
-	min-height: 5em;
-	resize: vertical;
+  height: auto;
+  min-height: 5em;
+  resize: vertical;
 }
 
 .form-input--textarea--uneditable {
-	width: auto;
-	height: auto;
+  width: auto;
+  height: auto;
 }
 
 .form-input-file {
-	display: inline-block;
-	width: 100%;
-	margin: 0;
-	vertical-align: middle;
-	line-height: 1em;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1em;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 // Help out input buttons
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	width: auto;
-	cursor: pointer;
-	-webkit-appearance: button;
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
 }
-
 
 /**
  * Checkboxes:
@@ -195,36 +185,35 @@ input[type="submit"] {
 	</label>
  */
 .control {
-	display: block;
-	line-height: 1;
+  display: block;
+  line-height: 1;
 
-	& + & {
-		margin-top: ko-multiply(0.5);
-	}
+  & + & {
+    margin-top: ko-multiply(0.5);
+  }
 
-	input {
-		vertical-align: top;
-		display: inline;
-		line-height: 1;
-		margin-right: 0.5em;
-	}
+  input {
+    vertical-align: top;
+    display: inline;
+    line-height: 1;
+    margin-right: 0.5em;
+  }
 }
 
 // Radios and checkboxes on same line
 .control--inline {
-	display: inline-block;
-	vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 
-	& + & {
-		margin-top: 0;
-		margin-left: 1.5em;
-	}
+  & + & {
+    margin-top: 0;
+    margin-left: 1.5em;
+  }
 }
-
 
 /**
  * Form validation messages
  */
 .form-controlGroup .form-message {
-	display: none;
+  display: none;
 }
