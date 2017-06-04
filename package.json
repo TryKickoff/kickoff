@@ -54,7 +54,7 @@
     "node": ">=6.0"
   },
   "dependencies": {
-    "@kickoff/utils.scss": "^2.1.1",
+    "@kickoff/utils.scss": "3.0.1",
     "console": "0.5.2",
     "copy-js": "0.1.1",
     "double-dollar": "1.0.0",
