@@ -66,6 +66,7 @@ $font-family: (
 $font-family-base: ko-font(system);
 $font-family-headings: ko-font(serif);
 $line-height-headings: 1.1;
+$font-weight-normal: 300; // Useful to set here if using anything other than `normal`
 $font-weight-bold: bold; // Useful to set here when bold webfonts come as 400 font-weight.
 $font-weight-headings: bold; // instead of browser default, bold
 
