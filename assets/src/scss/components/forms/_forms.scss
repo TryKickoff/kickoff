@@ -199,7 +199,7 @@ input[type="submit"] {
 	line-height: 1;
 
 	& + & {
-		margin-top: ko-multiply($baseline, 0.5);
+		margin-top: ko-multiply(0.5);
 	}
 
 	input {

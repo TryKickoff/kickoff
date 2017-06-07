@@ -2,7 +2,10 @@
 
 > A lightweight front-end framework for creating scalable and performant, responsive sites
 
-[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.png)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Build status](https://ci.appveyor.com/api/projects/status/g699smb2tsoakc8k/branch/master?svg=true)](https://ci.appveyor.com/project/mrmartineau/kickoff/branch/master) [![Dependency Status](https://dependencyci.com/github/TryKickoff/kickoff/badge)](https://dependencyci.com/github/TryKickoff/kickoff) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)  [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
+[![npm version](https://img.shields.io/npm/v/@kickoff/utils.scss.svg?style=flat-square)](https://www.npmjs.com/package/@kickoff/utils.scss)
+![](https://img.shields.io/badge/css-.scss-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/javascript-ES6-ffb400.svg?style=flat-square)  [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)
+[![Build status](https://ci.appveyor.com/api/projects/status/g699smb2tsoakc8k?svg=true)](https://ci.appveyor.com/project/mrmartineau/kickoff)
+[![devDependency Status](https://david-dm.org/trykickoff/kickoff/dev-status.svg)](https://david-dm.org/trykickoff/kickoff#info=devDependencies) [![Dependency Status](https://dependencyci.com/github/TryKickoff/kickoff/badge)](https://dependencyci.com/github/TryKickoff/kickoff) [![bitHound Overall Score](https://www.bithound.io/github/TryKickoff/kickoff/badges/score.svg)](https://www.bithound.io/github/TryKickoff/kickoff)
 
 Developed and maintained by [Ashley Nolan](https://github.com/ashleynolan) & [Zander Martineau](https://github.com/mrmartineau)
 
