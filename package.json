@@ -43,7 +43,9 @@
     "release-patch": "release-it --non-interactive patch",
     "release-minor": "release-it --non-interactive minor",
     "release-major": "release-it --non-interactive major",
-    "release-premajor": "release-it premajor --prereleaseId=\"beta\""
+    "release-premajor": "release-it premajor --prereleaseId=\"beta\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -67,7 +69,8 @@
     "kickoff-welcome.js": "1.4.0",
     "lite-ready": "1.0.4",
     "normalize-scss": "6.0.0",
-    "svg4everybody": "2.1.8"
+    "svg4everybody": "2.1.8",
+    "snyk": "^1.47.0"
   },
   "devDependencies": {
     "autoprefixer": "6.7.7",
@@ -175,5 +178,6 @@
       ],
       "max-empty-lines": 2
     }
-  }
+  },
+  "snyk": true
 }
