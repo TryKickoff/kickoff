@@ -25,6 +25,8 @@ const ConfigOptions = function () {
 		// We are supporting the last 2 browsers, any browsers with >5% market share,
 		// and ensuring we support IE9+ with prefixes
 		browsers: ['> 1%', 'last 1 versions', 'ie > 9', 'not ie <= 8', 'edge >= 12'], // config.css.browsers
+
+		rootFontSize: 20,
 	};
 
 	// Javascript-related vars

@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const config = require('../config');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const webpackConfig = {
 	entry: config.js.entryPoints,
@@ -28,6 +29,23 @@ const webpackConfig = {
 				query: {
 					cacheDirectory: true,
 				},
+			},
+			{
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								importLoaders: 1,
+								sourceMap: true
+							}
+						},
+						'postcss-loader',
+						'sass-loader',
+					]
+				})
 			},
 		],
 	},

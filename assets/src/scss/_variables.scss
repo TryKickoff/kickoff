@@ -14,7 +14,7 @@
  * =================================
  *
  * 🚨 If you change the $font-size-base value, you will also need
- * to update the pxtorem `rootValue` in `.kickoff/css.js`
+ * to update the pxtorem `rootValue` in `.kickoff/config.js:29`
  */
 $font-size-base: 20px; // 🚨 Read above if you change this
 $leading-base: 1.4;

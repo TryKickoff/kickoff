@@ -65,7 +65,7 @@ h6 {
 
 h1 {
 	font-size: ko-font-size(xl);
-	margin-bottom: ko-multiply(2);
+	margin-bottom: ko-multiply(2, $baseline);
 
 	@include media('>m') {
 		font-size: ko-font-size(xxl);

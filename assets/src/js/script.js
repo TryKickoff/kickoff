@@ -5,6 +5,7 @@
  *
  * Need help using JSDoc? Find out more at http://usejsdoc.org/
  */
+import '../scss/kickoff.scss';
 
 // their code e.g. npm modules
 import ready from 'lite-ready'; // https://github.com/nicbell/liteready
@@ -12,7 +13,7 @@ import svg4everybody from 'svg4everybody'; // https://github.com/jonathantneal/s
 
 // Global libs that don't return a value
 import 'console';
-import 'kickoff-welcome.js'; // The Kickoff message in the js console. Remove it if you like :)
+// import '@kickoff/welcome.js'; // The Kickoff message in the js console. Remove it if you like :)
 
 // our code
 // import moduleTest from './modules/module-test'; // this is a test, uncomment the line below to try it
