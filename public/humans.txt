@@ -14,7 +14,8 @@
     HTML
     CSS
     Sass
-    Grunt.js
+    Webpack
     BrowserSync
-    NPM
-    Browserify
+    npm
+		Babel
+

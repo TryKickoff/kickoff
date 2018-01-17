@@ -13,7 +13,7 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.yml]
+[*.yml,*.txt]
 indent_style = space
 
 [*.json]

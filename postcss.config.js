@@ -4,12 +4,13 @@ const flexbugsFixes = require('postcss-flexbugs-fixes');
 const pxtorem = require('postcss-pxtorem');
 
 module.exports = {
-  plugins: [
+	plugins: [
 		flexbugsFixes(),
-		autoprefixer({browsers: config.css.browsers}),
-		pxtorem({ // See other options at https://github.com/cuth/postcss-pxtorem#options
+		autoprefixer({ browsers: config.css.browsers }),
+		pxtorem({
+			// See other options at https://github.com/cuth/postcss-pxtorem#options
 			rootValue: config.css.rootFontSize,
 			selectorBlackList: ['html'],
 		}),
-	]
-}
+	],
+};
