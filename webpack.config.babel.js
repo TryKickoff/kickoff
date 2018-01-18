@@ -52,7 +52,7 @@ const webpackConfig = {
 	devtool: 'source-map',
 	plugins: [
 		new CaseSensitivePathsPlugin(),
-		new ExtractTextPlugin(`${config.css.distFile}.css`),
+		new ExtractTextPlugin('[name].css'),
 		new BrowserSyncPlugin({
 			// browse to http://localhost:3000/ during development,
 			// ./public directory is being served
