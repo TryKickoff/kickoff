@@ -28,11 +28,11 @@ const js = {
 	srcDir: `${srcDir}/js`, // config.js.srcDir
 
 	entryPoints: {
-		kickoff: [`${this.srcDir}/js/script.js`],
-		styleguide: [`${this.srcDir}/js/styleguide.js`],
+		kickoff: [`${srcDir}/js/script.js`],
+		styleguide: [`${srcDir}/js/styleguide.js`],
 
 		// Create more entry-points by adding to this array, e.g.
-		//foo: [`${this.srcDir}/js/bar.js`],
+		//foo: [`${srcDir}/js/bar.js`],
 	},
 
 	distDir: `${distDir}/js`, // config.js.distDir
@@ -76,6 +76,8 @@ const misc = {
 };
 
 const config = {
+	srcDir,
+	distDir,
 	css,
 	js,
 	img,
