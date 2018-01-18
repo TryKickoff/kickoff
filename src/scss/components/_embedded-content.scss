@@ -1,0 +1,19 @@
+/**
+ * Embedded content
+ * =================================
+ */
+
+img {
+	font-style: italic;
+	color: #c00;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+// Images, Flash & video
+img,
+object,
+embed,
+video {
+	max-width: 100%;
+}

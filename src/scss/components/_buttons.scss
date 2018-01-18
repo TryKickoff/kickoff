@@ -1,0 +1,140 @@
+/**
+ * Buttons
+ * =================================
+ * - Associated Button Variables
+ * - Base button styling
+ * – Button Modifiers
+ * 	 – btn--primary
+ *   – btn--block
+ */
+
+
+/**
+ * Define associated Button variables
+ */
+$btn-borderRadius: 5px;
+$btn-default-bgColor: $gray;
+$btn-default-bgColor--highlight: darken($btn-default-bgColor, 10%);
+
+$btn-primary-bgColor: ko-color(link);
+$btn-primary-bgColor--highlight: darken($btn-primary-bgColor, 10%);
+
+
+/**
+ * Base button styles – Based on csswizardry.com/beautons
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Fixes odd inner spacing in IE7.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ *10. Prevents from inheriting default anchor styles.
+ */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	font-family: inherit;
+	font-size: 100%;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding-top:    0;
+	padding-bottom: 0;
+	line-height: 2.5;
+	height: 2.5em;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	overflow: visible;
+	text-align: center;
+	border-radius: $btn-borderRadius;
+	user-select: none;
+
+	// You may want to change this
+	background-color: ko-color(bright);
+	border: 1px solid ko-color(bright, darker);
+
+	&,
+	&:link,
+	&:visited {
+		color: ko-color(text);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $btn-default-bgColor--highlight;
+	}
+
+	&,
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited {
+		text-decoration: none;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		background-image: none;
+		opacity: .5;
+	}
+}
+
+// Set the backgrounds
+// -------------------------
+.btn--primary {
+	background-color: $btn-primary-bgColor;
+	border: 0;
+
+	&,
+	&:link,
+	&:visited {
+		color: ko-color(bright);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $btn-primary-bgColor--highlight;
+	}
+}
+
+// Block button
+// -------------------------
+.btn--block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+	// Vertically space out multiple block buttons
+	// same ad .btn--block + .btn--block
+	& + & {
+		margin-top: 10px;
+	}
+}
+
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn--block {
+		width: 100%;
+	}
+}

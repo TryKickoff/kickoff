@@ -1,0 +1,75 @@
+/**
+ * Global color palette
+ * =================================
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Text selection
+ * - Any others..
+ */
+
+$color-palette: (
+	bright: (
+		base: #F9FAFB,
+		dark: #F4F6F8,
+		darker: #DFE4E8
+	),
+
+  dark: (
+    base: #212B35,
+		light: #454F5B,
+		lighter: #637381
+  ),
+
+  primary: (
+    base: #181830,
+    light: #292952,
+    dark: #0d0d19
+  ),
+
+  secondary: (
+    base: #fe7c08,
+    light: #fea04c,
+    dark: #d26401
+  ),
+
+	text: (
+		base: #212B35,
+		light: #454F5B
+	),
+
+	background: (
+		base: #f1f1f1
+	),
+
+	link: (
+		base: #fe7c08,
+		over: #fea04c
+	)
+);
+
+// Generic colors
+$blue: #288ad6;
+$green: #16c98d;
+$red: #fa5e5b;
+$yellow: #feef6d;
+$orange: #fe7c08;
+$pink: #ff708e;
+$purple: #8e44ad;
+$gray: #95a5a6;
+
+$color-kickoff-blue: #181830;
+$color-kickoff-orange: #fe7c08;
+
+// Text Selection
+$color-selection: ko-color(bright);
+$color-selection-bg: ko-color(primary);
+
+// 3rd party brand colors - find more at brandcolors.net
+$color-twitter: #55acee;
+$color-facebook: #3b5998;
+$color-youtube: #cd201f;
+$color-pinterest: #bd081c;
+$color-instagram: #e4405f;
+$color-whatsapp: #25d366;

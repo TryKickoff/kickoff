@@ -4,7 +4,8 @@
 
 
 # Comment these if we are building js/Sass on the server
-public/assets/**/*
+public/assets/*.css
+public/assets/*.js
 **/*.map
 
 

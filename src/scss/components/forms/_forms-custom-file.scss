@@ -1,0 +1,50 @@
+/**
+ * Custom file input
+ * =================================
+ * <div class="form-controlGroup">
+		<label class="form-label" for="file">File upload</label>
+
+		<div class="form-controlGroup-inputWrapper">
+			<label class="form-input form-input--file">
+				<span class="form-input--file-text">Choose file..</span>
+				<span class="form-input--file-button">Browse</span>
+				<input class="form-input--file-input" type="file" id="file" accept="image/*" size="14" />
+			</label>
+		</div>
+	</div>
+ */
+$custom-input-borderColor: #ccc !default;
+
+/**
+ * Custom file input
+ */
+.form-input--file {
+	position: relative;
+	overflow: hidden;
+	padding-right: 120px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.form-input--file-input {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.form-input--file-button {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: -1px;
+	bottom: 0;
+	padding: .44em 1em 0;
+	background-color: lighten($custom-input-borderColor, 5%);
+
+	&:hover {
+		background-color: $custom-input-borderColor;
+	}
+}

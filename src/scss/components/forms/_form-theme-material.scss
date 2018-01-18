@@ -1,0 +1,293 @@
+/**
+ * Kickoff forms: Material theme
+ * =================================
+ * This is an example theme and does not have the
+ * extensive support that the standard theme does
+ *
+ * Demo: https://codepen.io/mrmartineau/pen/QGwvdL?editors=1000
+ * Usage:
+		<div class="form-controlGroup">
+			<input class="form-input" type="text" name="firstname" id="firstname" required/>
+			<label class="form-label" for="firstname">First name</label>
+			<i class="form-inputBar"></i>
+		</div>
+ *
+ * Contents:
+ * - Theme variables
+ * - Theme styles
+ */
+
+// Form variables
+$input-bgColor: ko-color(background); // Colour of input background
+$input-borderColor: ko-color(dark); // Colour of input borders
+$input-borderColor--focus: ko-color(secondary); // Colour of input borders when focused
+$form-actions-bgColor: #f5f5f5; // Background colour of form actions container (i.e. submit)
+$label-textColor: ko-color(text, light); // Text colour of form labels and legends
+$input-textColor: ko-color(text); // Text colour of form inputs
+$placeholder-textColor: ko-color(text, light);  // Text colour of input placeholder
+$form-borderRadius: 0;
+// Messages & form states and alerts
+$color-warning: #f4aa47; // base colour for warning input state
+$color-error: #B94A4D; // base colour for error input state
+$color-success: $green; // base colour for success input state
+$color-info: $blue; // base colour for info input state
+
+
+.form {
+	margin: 0 0 $baseline;
+}
+
+.form-fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.form-legend {
+	padding: 0;
+	margin-bottom: $baseline;
+	font-size: ko-font-size(m);
+	line-height: $leading-base;
+	color: $label-textColor;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	small {
+		color: ko-color(text, light);
+	}
+}
+
+
+/**
+ * Form inputs and groups
+ */
+.form-controlGroup {
+	position: relative;
+	margin-top: ko-multiply(2);
+	margin-bottom: ko-multiply(2);
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+.form-legend + .form-controlGroup {
+	margin-top: $baseline;
+}
+
+// Identify controls by their labels
+.form-label {
+	color: $label-textColor;
+	font-weight: normal;
+	transition: $default-transition;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	// By default, all labels are above the input,
+	// not inside like true Material
+	// This is so that inputs that are
+	transform: translateY(-100%);
+	font-size: 70%;
+
+	small {
+		font-weight: normal;
+		color: lighten($label-textColor, 30%);
+	}
+}
+
+// Any form inputs
+.form-input {
+	height: 2.5em;
+	padding: .5em 0;
+	font-size: ko-font-size(m);
+	font-family: $font-family-base;
+	line-height: $leading-base;
+	color: $input-textColor;
+	font-weight: normal;
+	background-color: $input-bgColor;
+	border-radius: $form-borderRadius !important;
+	background-clip: padding-box;
+	border: 0;
+
+	&[type="image"],
+	&[type="checkbox"],
+	&[type="radio"],
+	&[type="range"] {
+		margin: 3px 0;
+	}
+
+	// Reset the file input to browser defaults
+	&[type="file"] {
+		background-color: $input-bgColor;
+	}
+
+	&[type="color"] {
+		width: 40px;
+		height: 40px;
+		overflow: hidden;
+		padding: 2px;
+	}
+
+	// Disabled State
+	&[disabled],
+	&[readonly] {
+		cursor: not-allowed;
+	}
+
+	// HTML5 invalid states
+	// Uncomment this if you need it
+	// &:focus:required:invalid {
+	// 	color: #b94a48;
+	// 	border-color: #ee5f5b;
+
+	// 	&:focus {
+	// 		border-color: darken(#ee5f5b, 10%);
+	// 	}
+	// }
+}
+
+.form-input--textarea {
+	min-height: 60px;
+}
+
+// On focus, position the labels above the input
+.form-input:focus:required,
+.form-input:valid:required {
+	~ .form-label {
+		transform: translateY(-100%);
+		font-size: 70%;
+	}
+}
+
+// Style required inputs
+// Position the .form-label down
+.form-input:required {
+	~ .form-label {
+		transform: translateY(0.5em);
+		font-size: 100%;
+	}
+}
+
+.form-input:focus {
+	~ .form-label {
+		color: $input-borderColor--focus;
+	}
+
+	~ .form-inputBar::before {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.form-inputBar {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid $input-borderColor;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -1px;
+		z-index: 2;
+		width: 0;
+		height: 2px;
+		background: $input-borderColor--focus;
+		transition: $default-transition;
+	}
+}
+
+// Set the height of select and file controls to match text inputs
+.form-input--select {
+	// Chrome on Linux and Mobile Safari need background-color
+	background-color: $input-bgColor;
+	border-right: 0;
+}
+
+.form-input-file {
+	font-size: ko-font-size(base);
+}
+
+
+/**
+ * Form actions
+ */
+.form-actions {
+	padding: $baseline 20px;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
+	background-color: $form-actions-bgColor;
+	border-top: 1px solid #ddd;
+
+	.btn {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+/**
+ * Form validation messages
+ */
+.form-message {
+
+	.form-controlGroup & {
+		padding-top: 0.5em;
+		padding-left: 0.5em;
+	}
+
+	.form-actions & {
+		padding: 0.5em;
+	}
+}
+
+
+/**
+ * Form field feedback states
+ */
+// Warning
+.has-warning {
+	color: $color-warning;
+}
+
+.form-controlGroup.has-warning {
+	@include ko-formFieldStateMaterial($color-warning);
+}
+
+// Error
+.has-error {
+	color: $color-error;
+}
+
+.form-controlGroup.has-error {
+	@include ko-formFieldStateMaterial($color-error);
+}
+
+// Success
+.has-success {
+	color: $color-success;
+}
+
+.form-controlGroup.has-success {
+	@include ko-formFieldStateMaterial($color-success);
+}
+
+// Info
+.has-info {
+	color: $color-info;
+}
+
+.form-controlGroup.has-info {
+	@include ko-formFieldStateMaterial($color-info);
+}
+
+
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
+@include ko-placeholder($placeholder-textColor);

@@ -1,0 +1,33 @@
+// Mixin for form field states
+@mixin ko-formFieldState($color) {
+	.form-label {
+		color: $color;
+	}
+
+	.form-input {
+		color: $color;
+		border-color: $color;
+
+		&:focus {
+			border-color: darken($color, 10%);
+		}
+	}
+
+	.form-message {
+		display: block;
+		color: $color;
+	}
+}
+
+
+// Mixin for form field states
+@mixin ko-formFieldStateMaterial($color) {
+	.form-inputBar {
+		border-color: $color;
+	}
+
+	.form-message {
+		display: block;
+		color: $color;
+	}
+}

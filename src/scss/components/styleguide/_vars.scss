@@ -1,0 +1,37 @@
+@mixin ko-sgVar($var) {
+	line-height: 2;
+	font-family: ko-font(mono);
+	border-bottom: 1px solid rgba(#000, 0.1);
+	font-size: 12px;
+
+	strong {
+		opacity: 0.6;
+		text-transform: uppercase;
+		display: block;
+		user-select: none;
+	}
+
+	&::after {
+		content: '#{$var}';
+	}
+}
+
+.sg-var-item {
+	color: ko-color(secondary);
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sg-var--baseFontSize { @include ko-sgVar($font-size-base); }
+.sg-var--leadingBase { @include ko-sgVar($leading-base); }
+.sg-var--baseline { @include ko-sgVar($baseline); }
+.sg-var--modularscale { @include ko-sgVar($modularscale); }
+.sg-var--fontFamilyMono { @include ko-sgVar(ko-font(mono)); }
+.sg-var--fontFamilySystem { @include ko-sgVar(ko-font(system)); }
+.sg-var--fontFamilySans { @include ko-sgVar(ko-font(sans)); }
+.sg-var--fontFamilySerif { @include ko-sgVar(ko-font(serif)); }
+.sg-var--breakpoints { @include ko-sgVar($breakpoints); }
+.sg-var--layoutWidth { @include ko-sgVar($layout-max-width); }
+.sg-var--gridColumns { @include ko-sgVar($grid-column-count); }
+.sg-var--gridGutter { @include ko-sgVar($grid-gutter-width); }
+.sg-var--zindex { @include ko-sgVar($z-index); }

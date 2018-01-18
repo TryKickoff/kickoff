@@ -1,0 +1,226 @@
+/**
+ * Kickoff Styleguide
+ * =================================
+ */
+ @import "~@kickoff/utils.scss/scss/index"; // From github.com/TryKickoff/kickoff-utils.scss
+ @import "~include-media/dist/include-media"; // From include-media.com
+@import "color-palette";
+@import "variables";
+@import "~@kickoff/grid.css/scss/index"; // https://github.com/TryKickoff/kickoff-grid.css - docs: trykickoff.com/docs/grid.html & demo: trykickoff.com/demos/grids.html
+
+$styleguide-color-primary: ko-color(primary);
+$styleguide-type: ko-font(system);
+
+@import "components/styleguide/swatch";
+@import "components/styleguide/vars";
+
+/**
+ * Styleguide styles
+ * Where possible, prefix all classnames with .sg
+ */
+body {
+	background-color: #fff;
+}
+
+/**
+ * Styleguide type styles
+ */
+.sg-interfaceType {
+	font-family: $styleguide-type;
+	font-weight: 300;
+}
+
+.sg-interfaceType--subtle {
+	color: #888;
+}
+
+.sg-sectionHeading {
+	@extend .sg-interfaceType;
+	color: $styleguide-color-primary;
+}
+
+
+/**
+ * Styleguide navigation style
+ */
+
+/**
+ * Styleguide .page styles
+ */
+.sg-page {
+	overflow: hidden;
+	padding: 8% 0;
+}
+
+.sg-page--start {
+	background-color: $styleguide-color-primary;
+	padding: 70px 0 60px;
+	color: #fff;
+}
+
+.sg-spacer {
+	padding: 20px;
+}
+
+.sg-footer {
+	background-color: #181830;
+	color: #fff;
+	padding: 30px;
+	margin-top: 30px;
+	font-family: ko-font(mono);
+	font-size: 12px;
+
+	h1 {
+		margin-bottom: 0.2em;
+	}
+
+	a {
+		color: #fff;
+		border-bottom: 2px dashed rgba(#fff, 0.3);
+
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.sg-kickoffLogo {
+	width: 200px;
+	height: 60px;
+	color: #fff;
+}
+
+.sg-logo {
+	padding: 1em;
+	text-align: center;
+	color: ko-color(primary);
+	fill: ko-color(dark, lighter);
+
+	&--dark {
+		background-color: ko-color(dark);
+		color: #fff;
+		fill: ko-color(secondary);
+	}
+
+	svg {
+		max-width: 100%;
+	}
+}
+
+
+/**
+ * Typography
+ */
+.sg-type {
+	margin-bottom: 1em;
+	overflow-x: auto;
+}
+
+code {
+	border: 0;
+	background-color: transparent;
+	font-size: 12px;
+}
+
+[data-copy] {
+	cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAWCAYAAAAinad/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA9xpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTYtMTItMzBUMTA6NDQ6MjJaIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxNi0xMi0zMFQxMDo1NDo0NyIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxNi0xMi0zMFQxMDo1NDo0NyIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjhERUY1NzlDNkEyMTFFNkE3NUU5RDQ3RUI5OEI5RkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjhERUY1N0FDNkEyMTFFNkE3NUU5RDQ3RUI5OEI5RkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCOERFRjU3N0M2QTIxMUU2QTc1RTlENDdFQjk4QjlGQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCOERFRjU3OEM2QTIxMUU2QTc1RTlENDdFQjk4QjlGQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqrLc8cAAACNSURBVHjaYmJgYHAA4vdA/J9EjAGYgHgBEAswUAGwALE8iPH//3+SNDIyMmJ1GdUAhmEHDhxgUFRUBNuMD6OF331o2EMEYICfn/8/GZEBNpAF3WUfP35kIDUMoS5VoG2YjRo2ahgNDAPlAEa0UuD/aJgRDDOMggOI+bGVpATAQ2wuC4AaSAoAqU8ACDAAGZA8XJlAypoAAAAASUVORK5CYII=) 13 10, auto !important;
+
+	&:hover,
+	&:active {
+		opacity: 0.8;
+	}
+}
+
+@mixin ko-sgTypeTest($size) {
+	.sg-type-item {
+		font-size: ko-font-size($size);
+
+		&::after {
+			content: '* #{$size} =  #{ko-font-size($size)} | font-size: ko-font-size(#{$size})';
+			font-size: 12px;
+			display: block;
+			font-weight: normal;
+			font-family: ko-font(mono);
+			opacity: 0.6;
+		}
+	}
+}
+
+.sg-type-xs { @include ko-sgTypeTest(xs); }
+.sg-type-s { @include ko-sgTypeTest(s); }
+.sg-type-m { @include ko-sgTypeTest(m); }
+.sg-type-l { @include ko-sgTypeTest(l); }
+.sg-type-xl { @include ko-sgTypeTest(xl); }
+.sg-type-xxl { @include ko-sgTypeTest(xxl); }
+
+.sg-typeSpecimen {
+	margin-bottom: 0;
+	margin-top: 0;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+
+	&::after {
+		display: block;
+		@extend .sg-interfaceType;
+		@extend .sg-interfaceType--subtle;
+		font-size: ko-font-size(m);
+		margin-top: 5px;
+		border-top: 1px solid #ddd;
+		font-weight: normal;
+	}
+}
+
+// h1.typeSpecimen::after { content: "Font stack: #{ko-font(headings)}"; }
+// p.typeSpecimen::after  { content: "Font stack: #{ko-font(base)}"; }
+
+.sg-typeSpecimen--body {
+	font-size: 30px;
+	font-family: $font-family-base;
+	font-weight: 200;
+}
+
+.sg-typeSpecimen--headings {
+	font-size: 30px;
+	font-family: $font-family-headings;
+}
+
+.sg-typeSpecimen--giant {
+	font-size: 120px;
+	line-height: 1;
+}
+
+
+/**
+ * Icons
+ */
+.icon-sg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.sg-favicon {
+	padding: 5px;
+
+	img {
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+}
+
+.sg-hr {
+	height: 3px;
+	margin: ko-multiply(2) 0;
+}
+
+.sg-hr--subtle {
+	height: 3px;
+	background-color: fade-out(ko-color(dark, light), 0.6);
+}

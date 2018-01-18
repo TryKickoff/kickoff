@@ -1,0 +1,106 @@
+/**
+ * Lists
+ * =================================
+ * - (Un)ordered lists
+ * - Unstyled lists
+ * - Definition lists
+ * - Centred lists
+ * - Floated lists
+ */
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+// Unordered and Ordered lists
+// Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
+ul,
+ol {
+	padding: 0;
+	margin: 0 0 $baseline $baseline;
+
+	ul,
+	ol {
+		margin-left: ko-multiply(2);
+	}
+
+	ul {
+		list-style-type: circle;
+
+		ul {
+			list-style-type: square;
+		}
+	}
+
+	ol {
+		list-style-type: upper-roman;
+
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+
+	ul,
+	ol {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * Unstyled lists
+ */
+.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+
+/**
+ * Definition lists
+ */
+dl { margin-bottom: $baseline; }
+dt { font-weight: $font-weight-bold; }
+dd { margin-left: $baseline; }
+
+
+/**
+ * Centred lists
+ *
+ * Usage:
+	<ul class="l-list--centred">
+		<li></li>
+	</ul>
+ */
+
+.l-list--centred,
+.l-list--centered {
+	text-align: center;
+
+	li {
+		display: inline;
+	}
+}
+
+
+/**
+ * Floated lists
+ * Usage:
+	<ul class="l-list--floated">
+		<li></li>
+	</ul>
+ */
+
+.l-list--floated {
+	@include ko-clearfix;
+
+	li {
+		// float: left;
+		display: inline-block;
+	}
+}

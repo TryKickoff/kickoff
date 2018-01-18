@@ -1,0 +1,286 @@
+/**
+ * Kickoff forms: Standard theme
+ * ================================= *
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ *
+ * Contents:
+ * - Theme variables
+ * - Theme styles
+ */
+
+// Form variables
+$input-bgColor: #fff;                // Colour of input background
+$input-borderColor: #ccc;                // Colour of input borders
+$input-borderColor--focus: ko-color(primary);      // Colour of input borders when focused
+$form-actions-bgColor: #f5f5f5;             // Background colour of form actions container (i.e. submit)
+$label-textColor: ko-color(text);         // Text colour of form labels and legends
+$input-textColor: ko-color(text);         // Text colour of form inputs
+$placeholder-textColor: ko-color(text, light);  // Text colour of input placeholder
+$form-borderRadius: 5px;
+// Messages & form states and alerts
+$color-warning: #f4aa47;             // base colour for warning input state
+$color-error: #B94A4D;             // base colour for error input state
+$color-success: $green;              // base colour for success input state
+$color-info: $blue;               // base colour for info input state
+
+/**
+ * Generic form styles
+ * =================================
+ * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-above
+ * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
+ * Usage:
+  	<div class="form-controlGroup">
+  		<label for="name" class="form-label">Name</label>
+  		<div class="form-controlGroup-inputWrapper">
+  			<input type="text" id="name" placeholder="Zander Martineau" class="form-input"/>
+  		</div>
+  	</div>
+ */
+
+.form {
+	margin: 0 0 $baseline;
+}
+
+.form-fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.form-legend {
+	padding: 0;
+	margin-bottom: $baseline;
+	font-size: ko-font-size(m);
+	line-height: $leading-base;
+	color: $label-textColor;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	small {
+		color: ko-color(text, light);
+	}
+}
+
+/**
+ * Form inputs and groups
+ */
+.form-controlGroup {
+	margin-top: ko-multiply(1.5);
+	margin-bottom: ko-multiply(1.5);
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+.form-legend + .form-controlGroup {
+	margin-top: $baseline;
+}
+
+// Identify controls by their labels
+.form-label {
+	// margin-bottom: ko-multiply(0.5);
+	color: $label-textColor;
+
+	small {
+		font-weight: normal;
+		color: lighten($label-textColor, 30%);
+	}
+}
+
+
+// Any form inputs
+.form-input {
+	height: 2.5em;
+	padding: .5em;
+	font-size: ko-font-size(m);
+	font-family: $font-family-base;
+	line-height: $leading-base;
+	color: $input-textColor;
+	font-weight: normal;
+	background-color: $input-bgColor;
+	border: 2px solid $input-borderColor;
+	border-radius: $form-borderRadius;
+	background-clip: padding-box;
+	transition: border 200ms ease-in-out;
+
+	&:focus {
+		border-color: $input-borderColor--focus;
+	}
+
+	&[type="image"],
+	&[type="checkbox"],
+	&[type="radio"],
+	&[type="range"] {
+		margin: 3px 0;
+	}
+
+	// Reset the file input to browser defaults
+	&[type="file"] {
+		background-color: $input-bgColor;
+	}
+
+	&[type="color"] {
+		width: 40px;
+		height: 40px;
+		overflow: hidden;
+		padding: 2px;
+	}
+
+	// Disabled State
+	&[disabled],
+	&[readonly] {
+		cursor: not-allowed;
+	}
+
+	// HTML5 invalid states
+	// Uncomment this if you need it
+	// &:focus:required:invalid {
+	// 	color: #b94a48;
+	// 	border-color: #ee5f5b;
+
+	// 	&:focus {
+	// 		border-color: darken(#ee5f5b, 10%);
+	// 	}
+	// }
+}
+
+.form-input--textarea {}
+
+// Set the height of select and file controls to match text inputs
+.form-input--select {
+	// Chrome on Linux and Mobile Safari need background-color
+	background-color: $input-bgColor;
+}
+
+.form-input-file {
+	font-size: ko-font-size(m);
+}
+
+
+/**
+ * Form actions
+ */
+.form-actions {
+	padding: $baseline 20px;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
+	background-color: $form-actions-bgColor;
+	border-top: 1px solid #ddd;
+
+	.btn {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+/**
+ * Form validation messages
+ */
+.form-message {
+
+	.form-controlGroup & {
+		padding-top: 0.5em;
+		padding-left: 0.5em;
+	}
+
+	.form-actions & {
+		padding: 0.5em;
+	}
+}
+
+
+/**
+ * Form field feedback states
+ */
+
+// Warning
+.has-warning {
+	color: $color-warning;
+}
+
+.form-controlGroup.has-warning {
+	@include ko-formFieldState($color-warning);
+}
+
+// Error
+.has-error {
+	color: $color-error;
+}
+
+.form-controlGroup.has-error {
+	@include ko-formFieldState($color-error);
+}
+
+// Success
+.has-success {
+	color: $color-success;
+}
+
+.form-controlGroup.has-success {
+	@include ko-formFieldState($color-success);
+}
+
+// Info
+.has-info {
+	color: $color-info;
+}
+
+.form-controlGroup.has-info {
+	@include ko-formFieldState($color-info);
+}
+
+
+/**
+ * Placeholder text
+ * =================================
+ * Gets special styles; can't be bundled together though for some reason
+ */
+@include ko-placeholder($placeholder-textColor);
+
+
+// === <mid ===
+@include media('>m') {
+	/**
+	 * Horizontal-specific styles
+	 * =================================
+	 * add .form--horizontal to the <form> element
+	 * Demo: http://trykickoff.com/demos/forms.html#layout-example-labels-inline
+	 * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
+	 */
+	.form--horizontal {
+		// Increase spacing between groups
+		.form-controlGroup {
+			display: flex;
+
+			> .form-controlGroup-inputWrapper {
+				width: 100%;
+			}
+		}
+
+		// Float the labels left
+		.form-label {
+			width: 140px;
+			margin-right: $baseline;
+			padding-top: 0.6em;
+		}
+
+		// Move over buttons in .form-actions to align with .form-controlGroup-inputWrapper
+		.form-actions {
+			padding-left: 140px + $baseline;
+		}
+	}
+}
+
+// === end <mid ===
