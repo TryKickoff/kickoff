@@ -1,0 +1,12 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - kickoff-fluidVideo.css > release-it > repo-path-parse > dox > jsdoctypeparser > lodash:
+        patched: '2018-07-04T01:06:08.359Z'
+    - kickoff-utils.scss > release-it > repo-path-parse > dox > jsdoctypeparser > lodash:
+        patched: '2018-07-04T01:06:08.359Z'
+    - kickoff-grid.css > release-it > repo-path-parse > dox > jsdoctypeparser > lodash:
+        patched: '2018-07-04T01:06:08.359Z'
